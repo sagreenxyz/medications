@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Medications - Home">
+  <div class="hero min-h-64 bg-base-200 rounded-box mb-8">
+    <div class="hero-content text-center">
+      <div class="max-w-md">
+        <h1 class="text-5xl font-bold">💊 Medications</h1>
+        <p class="py-6">
+          Your comprehensive guide to medication information. Safe, accurate, and easy to understand.
+        </p>
+        <button class="btn btn-primary">Get Started</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="card bg-base-100 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">🔍 Search</h2>
+        <p>Find detailed information about any medication quickly and easily.</p>
+        <div class="card-actions justify-end">
+          <button class="btn btn-primary btn-sm">Search Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="card bg-base-100 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">📋 Categories</h2>
+        <p>Browse medications by category, condition, or drug class.</p>
+        <div class="card-actions justify-end">
+          <button class="btn btn-secondary btn-sm">Browse</button>
+        </div>
+      </div>
+    </div>
+    <div class="card bg-base-100 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">⚠️ Interactions</h2>
+        <p>Check for potential drug interactions before taking medications together.</p>
+        <div class="card-actions justify-end">
+          <button class="btn btn-accent btn-sm">Check</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
