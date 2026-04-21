@@ -1,0 +1,15 @@
+---
+export interface Props {
+  name: string;
+  drugClass: string;
+  slug: string;
+}
+const { name, drugClass, slug } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+<div class="card bg-base-100 shadow-sm border border-base-200">
+  <div class="card-body p-4">
+    <h3 class="card-title text-base"><a href={`${base}drugs/${slug}`} class="hover:underline">{name}</a></h3>
+    <p class="text-sm text-base-content/70">{drugClass}</p>
+  </div>
+</div>

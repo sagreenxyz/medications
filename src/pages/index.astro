@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout title="Home">
+  <Nav />
+  <main class="container mx-auto px-4 py-16 text-center">
+    <h1 class="text-4xl font-serif font-bold mb-4">PharmRef</h1>
+    <p class="text-lg mb-8">A comprehensive pharmacology reference for medical and nursing students.</p>
+    <a href={`${base}drug-index`} class="btn btn-primary mr-2">Browse Drugs</a>
+    <a href={`${base}schemas/01-organ-systems/`} class="btn btn-outline">Explore Schemas</a>
+  </main>
+</BaseLayout>

@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout title="Drug Index">
+  <Nav />
+  <main class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-serif font-bold mb-6">Drug Index</h1>
+    <p class="text-base-content/70">Drug index will be available after Phase 1 data generation is complete.</p>
+  </main>
+</BaseLayout>
