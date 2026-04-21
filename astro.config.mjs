@@ -4,6 +4,6 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   output: 'static',
-  base: '/medications',
+  base: '/medications/',
   integrations: [svelte(), tailwind()],
 });
