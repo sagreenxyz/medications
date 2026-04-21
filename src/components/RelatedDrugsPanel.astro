@@ -1,0 +1,20 @@
+---
+export interface Props {
+  drugs: Array<{ name: string; slug: string; relationship: string }>;
+}
+const { drugs } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+<div class="card bg-base-200 mt-4">
+  <div class="card-body">
+    <h2 class="card-title text-lg">Related Drugs</h2>
+    <ul class="space-y-2">
+      {drugs.map(d => (
+        <li>
+          <a href={`${base}drugs/${d.slug}`} class="font-medium hover:underline">{d.name}</a>
+          <span class="text-sm text-base-content/70"> — {d.relationship}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>

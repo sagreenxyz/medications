@@ -1,0 +1,46 @@
+---
+const base = import.meta.env.BASE_URL;
+const schemas = [
+  { id: '01-organ-systems', label: 'Organ Systems' },
+  { id: '02-therapeutic-classes', label: 'Therapeutic Classes' },
+  { id: '03-organ-by-class', label: 'Organ × Class Matrix' },
+  { id: '04-mechanism-first', label: 'Mechanism-First' },
+  { id: '05-prototype-class', label: 'Prototype + Class' },
+  { id: '06-adme', label: 'ADME' },
+  { id: '07-clinical-presentations', label: 'Clinical Presentations' },
+  { id: '08-adverse-effects', label: 'Adverse Effects' },
+  { id: '09-drug-interactions', label: 'Drug Interactions' },
+];
+---
+<div class="navbar bg-base-100 shadow-sm sticky top-0 z-50">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <label tabindex="0" class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+        </svg>
+      </label>
+      <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+        {schemas.map(s => (
+          <li><a href={`${base}schemas/${s.id}/`}>{s.label}</a></li>
+        ))}
+      </ul>
+    </div>
+    <a href={base} class="btn btn-ghost normal-case text-xl font-serif">PharmRef</a>
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <div class="dropdown dropdown-hover">
+      <label tabindex="0" class="btn btn-ghost">Schemas ▾</label>
+      <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-64 z-50">
+        {schemas.map(s => (
+          <li><a href={`${base}schemas/${s.id}/`}>{s.label}</a></li>
+        ))}
+      </ul>
+    </div>
+    <a href={`${base}drug-index`} class="btn btn-ghost">Drug Index</a>
+    <a href={`${base}about`} class="btn btn-ghost">About</a>
+  </div>
+  <div class="navbar-end">
+    <kbd class="kbd kbd-sm hidden md:inline-flex">⌘K</kbd>
+  </div>
+</div>

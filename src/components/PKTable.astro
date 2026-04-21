@@ -1,0 +1,18 @@
+---
+export interface Props {
+  pk: Record<string, string>;
+}
+const { pk } = Astro.props;
+---
+<div class="overflow-x-auto">
+  <table class="table table-zebra w-full">
+    <tbody>
+      {Object.entries(pk).map(([key, value]) => (
+        <tr>
+          <th class="capitalize">{key.replace(/_/g, ' ')}</th>
+          <td class="font-mono">{value}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

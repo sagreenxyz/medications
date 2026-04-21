@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Schema accent color overrides */
+[data-schema="organ-systems"]          { --schema-accent: #1d4ed8; }
+[data-schema="therapeutic-classes"]    { --schema-accent: #7c3aed; }
+[data-schema="organ-by-class"]         { --schema-accent: #0f766e; }
+[data-schema="mechanism-first"]        { --schema-accent: #0369a1; }
+[data-schema="prototype-class"]        { --schema-accent: #15803d; }
+[data-schema="adme"]                   { --schema-accent: #b45309; }
+[data-schema="clinical-presentations"] { --schema-accent: #be123c; }
+[data-schema="adverse-effects"]        { --schema-accent: #7f1d1d; }
+[data-schema="drug-interactions"]      { --schema-accent: #c2410c; }
