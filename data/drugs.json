@@ -20650,5 +20650,2811 @@
         "CYP2E1-substrate"
       ]
     }
+  },
+  {
+    "id": "penicillin-g",
+    "generic_name": "penicillin G",
+    "brand_names": [
+      "Pfizerpen",
+      "Bicillin (benzathine formulation)"
+    ],
+    "drug_class": "antibiotic",
+    "subclass": "natural penicillin / beta-lactam",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "penicillin-binding proteins (PBPs)",
+      "transpeptidase"
+    ],
+    "mechanism_summary": "Binds and inhibits PBPs (transpeptidases) on the inner bacterial cell membrane, blocking cross-linking of peptidoglycan strands in the bacterial cell wall; bactericidal; time-dependent killing (efficacy depends on time above MIC).",
+    "indications": [
+      "syphilis (drug of choice \u2014 benzathine penicillin G IM)",
+      "streptococcal pharyngitis",
+      "pneumococcal pneumonia (susceptible strains)",
+      "meningococcal meningitis",
+      "infective endocarditis (streptococcal)",
+      "anthrax",
+      "neurosyphilis (aqueous penicillin G IV)"
+    ],
+    "contraindications": [
+      "penicillin allergy (anaphylaxis \u2014 cross-reactivity with cephalosporins ~1\u20132%)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "hypersensitivity reactions (maculopapular rash)",
+        "diarrhea",
+        "injection site pain (IM)"
+      ],
+      "serious": [
+        "anaphylaxis (rare, 0.01\u20130.05%)",
+        "Jarisch-Herxheimer reaction (syphilis treatment)",
+        "neurotoxicity/seizures (high doses in renal failure)",
+        "interstitial nephritis"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "Not absorbed orally (penicillin V is the acid-stable oral form); IM/IV only",
+      "distribution": "Protein binding ~60%; does not cross intact BBB but crosses inflamed meninges (CSF levels ~5\u201310% of serum)",
+      "metabolism": "Minimal hepatic metabolism; partially hydrolyzed to penicilloic acid",
+      "excretion": "Renal via tubular secretion (probenecid blocks and increases levels); dose reduction needed in severe CKD",
+      "half_life": "30\u201360 minutes (aqueous); benzathine: days to weeks",
+      "onset": "IV: immediate",
+      "peak": "IV: end of infusion; IM benzathine: 12\u201324 hours",
+      "duration": "IV q4\u20136h; benzathine IM: 2\u20134 weeks",
+      "protein_binding": "60%",
+      "vd": "~0.35 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "probenecid",
+        "mechanism": "inhibits renal tubular secretion of penicillin, increasing levels and duration",
+        "severity": "moderate"
+      },
+      {
+        "drug": "methotrexate",
+        "mechanism": "penicillins reduce methotrexate renal excretion; methotrexate toxicity risk",
+        "severity": "major"
+      },
+      {
+        "drug": "warfarin",
+        "mechanism": "large doses of penicillin may alter gut flora and reduce vitamin K absorption",
+        "severity": "minor"
+      }
+    ],
+    "nursing_considerations": [
+      "Obtain allergy history before administration; skin testing should be performed in patients with history of severe penicillin reactions when penicillin is required (e.g., syphilis in pregnancy)",
+      "Benzathine penicillin G is only for IM injection \u2014 IV administration is fatal; verify formulation and route before administration",
+      "Monitor for Jarisch-Herxheimer reaction 2\u20138 hours after first syphilis treatment dose: fever, chills, myalgia, headache \u2014 self-limited; not an allergic reaction",
+      "For high-dose IV penicillin G (meningitis, endocarditis): monitor serum sodium (penicillin G sodium contains 1.7 mEq Na/million units) and potassium (penicillin G potassium)"
+    ],
+    "clinical_pearls": [
+      "Benzathine penicillin G (Bicillin L-A) and benzathine/procaine combination (Bicillin C-R) look identical \u2014 Bicillin C-R is NOT appropriate for syphilis treatment; always verify the correct formulation",
+      "Penicillin remains the drug of choice for syphilis \u2014 there is no acceptable alternative for penicillin-allergic pregnant patients with syphilis (desensitization is required)"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category B",
+    "lactation_safety": "safe",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "syphilis",
+      "streptococcal-infection",
+      "meningitis",
+      "endocarditis"
+    ],
+    "adverse_effect_tags": [
+      "anaphylaxis",
+      "Jarisch-Herxheimer",
+      "seizures"
+    ],
+    "interaction_tags": [
+      "renally-cleared",
+      "tubular-secretion"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "beta-lactam"
+      ],
+      "prototype_class": "Penicillins",
+      "adme_profile": "renally-cleared-tubular-secretion",
+      "presentation_cluster": [
+        "syphilis",
+        "meningitis",
+        "endocarditis"
+      ],
+      "adverse_cluster": [
+        "anaphylaxis"
+      ],
+      "interaction_cluster": [
+        "renal-tubular-secretion"
+      ]
+    }
+  },
+  {
+    "id": "amoxicillin",
+    "generic_name": "amoxicillin",
+    "brand_names": [
+      "Amoxil",
+      "Trimox"
+    ],
+    "drug_class": "antibiotic",
+    "subclass": "aminopenicillin / beta-lactam",
+    "prototype_for": false,
+    "prototype_drug": "penicillin-g",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "penicillin-binding proteins (PBPs)"
+    ],
+    "mechanism_summary": "Binds PBPs and inhibits bacterial cell wall synthesis; broader spectrum than penicillin G/V, covering gram-negative organisms (H. influenzae, E. coli) in addition to gram-positive coverage; susceptible to beta-lactamase hydrolysis.",
+    "indications": [
+      "community-acquired pneumonia",
+      "otitis media (first-line)",
+      "streptococcal pharyngitis",
+      "sinusitis",
+      "H. pylori eradication (component of triple therapy)",
+      "UTI (susceptible organisms)",
+      "Lyme disease (early localized)",
+      "endocarditis prophylaxis"
+    ],
+    "contraindications": [
+      "penicillin or amoxicillin allergy"
+    ],
+    "adverse_effects": {
+      "common": [
+        "diarrhea",
+        "nausea",
+        "rash (maculopapular \u2014 especially in EBV mononucleosis)",
+        "candidal overgrowth"
+      ],
+      "serious": [
+        "anaphylaxis",
+        "Stevens-Johnson syndrome",
+        "Clostridioides difficile colitis",
+        "drug-induced hepatitis"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "Well absorbed orally (~80%); not affected by food",
+      "distribution": "Protein binding ~20%; Vd ~0.26 L/kg",
+      "metabolism": "Minimal hepatic metabolism",
+      "excretion": "Renal; ~60% excreted unchanged; dose adjustment for CrCl <30 mL/min",
+      "half_life": "1\u20131.5 hours",
+      "onset": "30\u201360 minutes",
+      "peak": "1\u20132 hours",
+      "duration": "8\u201312 hours",
+      "protein_binding": "20%",
+      "vd": "~0.26 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "allopurinol",
+        "mechanism": "increases risk of amoxicillin rash (mechanism unclear)",
+        "severity": "moderate"
+      },
+      {
+        "drug": "warfarin",
+        "mechanism": "gut flora alteration reduces vitamin K synthesis; INR may rise",
+        "severity": "moderate"
+      },
+      {
+        "drug": "oral contraceptives",
+        "mechanism": "theoretical reduction in enterohepatic recycling of estrogen (clinical significance debated)",
+        "severity": "minor"
+      }
+    ],
+    "nursing_considerations": [
+      "Amoxicillin rash in EBV mononucleosis: nearly all patients with mono who receive ampicillin/amoxicillin develop a characteristic maculopapular rash \u2014 this is not a true penicillin allergy",
+      "Administer with or without food; suspensions should be refrigerated after reconstitution and discarded after 14 days",
+      "For H. pylori eradication: amoxicillin is part of standard triple therapy (amoxicillin + clarithromycin + PPI) or quadruple therapy \u2014 take at evenly spaced intervals with meals",
+      "Oral suspension: shake well before each dose; use calibrated measuring device, not household spoons"
+    ],
+    "clinical_pearls": [
+      "Amoxicillin is the drug of choice for uncomplicated community-acquired pneumonia in outpatient adults (ATS/IDSA guidelines 2019) because of excellent activity against Streptococcus pneumoniae with high oral bioavailability",
+      "The amoxicillin-mononucleosis rash is not a true penicillin hypersensitivity reaction \u2014 it is immune-complex mediated and does not predict future penicillin allergic reactions"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category B",
+    "lactation_safety": "safe",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "pneumonia",
+      "otitis-media",
+      "sinusitis",
+      "H-pylori",
+      "UTI",
+      "Lyme-disease"
+    ],
+    "adverse_effect_tags": [
+      "rash",
+      "anaphylaxis",
+      "C-diff",
+      "diarrhea"
+    ],
+    "interaction_tags": [
+      "renally-cleared",
+      "antibiotic"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "beta-lactam"
+      ],
+      "prototype_class": "Penicillins",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "pneumonia",
+        "otitis-media",
+        "H-pylori"
+      ],
+      "adverse_cluster": [
+        "anaphylaxis",
+        "C-diff"
+      ],
+      "interaction_cluster": [
+        "antibiotic"
+      ]
+    }
+  },
+  {
+    "id": "amoxicillin-clavulanate",
+    "generic_name": "amoxicillin-clavulanate",
+    "brand_names": [
+      "Augmentin",
+      "Augmentin ES",
+      "Augmentin XR"
+    ],
+    "drug_class": "antibiotic",
+    "subclass": "aminopenicillin + beta-lactamase inhibitor",
+    "prototype_for": false,
+    "prototype_drug": "penicillin-g",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "penicillin-binding proteins (PBPs)",
+      "beta-lactamase enzymes"
+    ],
+    "mechanism_summary": "Amoxicillin inhibits PBPs; clavulanate is a suicide inhibitor of bacterial beta-lactamases (especially class A enzymes such as TEM-1, SHV-1), protecting amoxicillin from hydrolytic inactivation and extending spectrum to beta-lactamase-producing organisms.",
+    "indications": [
+      "community-acquired pneumonia (mild-moderate)",
+      "sinusitis (moderate-severe)",
+      "otitis media (treatment failure)",
+      "skin and soft tissue infections",
+      "diabetic foot infections (mild-moderate)",
+      "bite wounds (animal/human)"
+    ],
+    "contraindications": [
+      "penicillin allergy",
+      "cholestatic jaundice/hepatic dysfunction from prior amoxicillin-clavulanate use"
+    ],
+    "adverse_effects": {
+      "common": [
+        "diarrhea (more common than amoxicillin alone due to clavulanate)",
+        "nausea",
+        "vomiting",
+        "rash"
+      ],
+      "serious": [
+        "cholestatic hepatitis (clavulanate-associated; occurs more commonly in older adults and male patients)",
+        "anaphylaxis",
+        "C. difficile colitis"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "Amoxicillin: ~80%; clavulanate: ~75%; take with food to improve tolerance and clavulanate absorption",
+      "distribution": "Both components widely distributed; similar Vd to amoxicillin",
+      "metabolism": "Both partially metabolized; clavulanate to inactive products",
+      "excretion": "Renal",
+      "half_life": "Amoxicillin: 1\u20131.5 hours; clavulanate: ~1 hour",
+      "onset": "1\u20132 hours",
+      "peak": "1\u20132.5 hours",
+      "duration": "8\u201312 hours",
+      "protein_binding": "~20%",
+      "vd": "~0.3 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "warfarin",
+        "mechanism": "may increase INR via gut flora alteration",
+        "severity": "moderate"
+      },
+      {
+        "drug": "allopurinol",
+        "mechanism": "increased rash risk",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer with food to reduce GI side effects (nausea, diarrhea) from clavulanate \u2014 the most common reason for intolerance",
+      "Note that Augmentin 250 mg and Augmentin 500 mg tabs contain the same amount of clavulanate (125 mg) \u2014 do NOT double up on 250 mg tablets to make an 'equivalent' of 500 mg; use the appropriate tablet size",
+      "Monitor for jaundice or RUQ pain, especially in elderly male patients \u2014 hepatotoxicity can occur up to 6 weeks after completing the course",
+      "Augmentin ES (600 mg/5 mL) is for resistant otitis media in children; Augmentin XR (2000/125 mg) is for community-acquired pneumonia \u2014 verify formulation and dose by indication"
+    ],
+    "clinical_pearls": [
+      "Clavulanate inhibits class A beta-lactamases but NOT AmpC (class C) or class B metallo-beta-lactamases \u2014 organisms like Pseudomonas and MRSA remain intrinsically resistant",
+      "The diarrhea associated with Augmentin is partly due to clavulanate's prokinetic effects on gut motility, not just antibiotic-associated dysbiosis; can be partially mitigated by dosing with food"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category B",
+    "lactation_safety": "safe",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "pneumonia",
+      "sinusitis",
+      "skin-infection",
+      "bite-wound",
+      "diabetic-foot"
+    ],
+    "adverse_effect_tags": [
+      "hepatotoxicity",
+      "diarrhea",
+      "anaphylaxis",
+      "C-diff"
+    ],
+    "interaction_tags": [
+      "antibiotic",
+      "renally-cleared"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "beta-lactam"
+      ],
+      "prototype_class": "Penicillins",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "pneumonia",
+        "sinusitis",
+        "skin-infection"
+      ],
+      "adverse_cluster": [
+        "hepatotoxicity",
+        "C-diff"
+      ],
+      "interaction_cluster": [
+        "antibiotic"
+      ]
+    }
+  },
+  {
+    "id": "piperacillin-tazobactam",
+    "generic_name": "piperacillin-tazobactam",
+    "brand_names": [
+      "Zosyn"
+    ],
+    "drug_class": "antibiotic",
+    "subclass": "antipseudomonal penicillin + beta-lactamase inhibitor",
+    "prototype_for": false,
+    "prototype_drug": "penicillin-g",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "penicillin-binding proteins (PBPs)",
+      "class A and C beta-lactamases"
+    ],
+    "mechanism_summary": "Piperacillin is an extended-spectrum penicillin with antipseudomonal activity; tazobactam is a beta-lactamase inhibitor protecting piperacillin from class A and some class C enzymes; broad spectrum includes Pseudomonas aeruginosa, most enterobacteriaceae, anaerobes, and streptococci.",
+    "indications": [
+      "hospital-acquired pneumonia",
+      "complicated intra-abdominal infections",
+      "complicated urinary tract infections",
+      "complicated skin and soft tissue infections",
+      "sepsis (empiric broad-spectrum therapy)",
+      "febrile neutropenia (in combination with aminoglycoside or fluoroquinolone)"
+    ],
+    "contraindications": [
+      "penicillin allergy",
+      "severe penicillin anaphylaxis"
+    ],
+    "adverse_effects": {
+      "common": [
+        "diarrhea",
+        "nausea",
+        "rash",
+        "electrolyte abnormalities (hypokalemia \u2014 piperacillin contains sodium)"
+      ],
+      "serious": [
+        "Clostridioides difficile colitis",
+        "hepatotoxicity (elevated LFTs)",
+        "neurotoxicity (high doses, renal failure \u2014 encephalopathy, seizures)",
+        "thrombocytopenia and platelet dysfunction (especially prolonged courses)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IV only (oral absorption is poor)",
+      "distribution": "Protein binding 16\u201348%; Vd ~0.2 L/kg",
+      "metabolism": "Minimal; both components excreted largely unchanged",
+      "excretion": "Renal; tazobactam requires dose adjustment for CrCl <40 mL/min",
+      "half_life": "Piperacillin: 1 hour; tazobactam: 1 hour",
+      "onset": "End of infusion (30\u201360 min infusion typical; extended infusion 3\u20134h maximizes PD target attainment)",
+      "peak": "End of infusion",
+      "duration": "6\u20138 hours (q6h or q8h dosing); extended infusion over 4h improves time>MIC",
+      "protein_binding": "16\u201348%",
+      "vd": "~0.2 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "methotrexate",
+        "mechanism": "piperacillin inhibits methotrexate tubular secretion; methotrexate toxicity",
+        "severity": "major"
+      },
+      {
+        "drug": "aminoglycosides",
+        "mechanism": "physically incompatible in IV line; separate infusions; synergistic antibiotic effect",
+        "severity": "moderate"
+      },
+      {
+        "drug": "vecuronium/neuromuscular blockers",
+        "mechanism": "piperacillin may potentiate neuromuscular blockade",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Do not mix piperacillin-tazobactam in the same IV line as aminoglycosides (gentamicin, tobramycin, amikacin) \u2014 they are physically incompatible and the aminoglycoside will be inactivated",
+      "Extended infusion (4-hour infusion) achieves better pharmacodynamic target attainment against Pseudomonas and other less-susceptible organisms \u2014 used in some institutions for severe infections",
+      "Monitor renal function, electrolytes (Na, K), CBC with platelets, and LFTs on prolonged courses (>7\u201310 days)",
+      "Each 3.375 g vial contains 4.69 mEq (108 mg) sodium \u2014 relevant in fluid-restricted patients (HF, ESRD)"
+    ],
+    "clinical_pearls": [
+      "Extended-infusion piperacillin-tazobactam (4-hour infusion instead of 30-minute) exploits its time-dependent pharmacodynamics to increase the percentage of time drug concentrations exceed the MIC, improving outcomes in critically ill patients with resistant organisms",
+      "Piperacillin-tazobactam does NOT reliably cover MRSA, ESBL-producing organisms, or Acinetobacter; empiric coverage must account for local antibiogram and patient risk factors"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category B",
+    "lactation_safety": "safe",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "hospital-acquired-pneumonia",
+      "sepsis",
+      "intra-abdominal-infection",
+      "febrile-neutropenia"
+    ],
+    "adverse_effect_tags": [
+      "C-diff",
+      "neurotoxicity",
+      "thrombocytopenia",
+      "hepatotoxicity"
+    ],
+    "interaction_tags": [
+      "aminoglycoside-incompatibility",
+      "renally-cleared"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "beta-lactam"
+      ],
+      "prototype_class": "Penicillins",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "sepsis",
+        "hospital-acquired-pneumonia",
+        "intra-abdominal-infection"
+      ],
+      "adverse_cluster": [
+        "C-diff",
+        "neurotoxicity"
+      ],
+      "interaction_cluster": [
+        "antibiotic",
+        "renal-tubular-secretion"
+      ]
+    }
+  },
+  {
+    "id": "cephalexin",
+    "generic_name": "cephalexin",
+    "brand_names": [
+      "Keflex"
+    ],
+    "drug_class": "antibiotic",
+    "subclass": "first-generation cephalosporin / beta-lactam",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "penicillin-binding proteins (PBPs)"
+    ],
+    "mechanism_summary": "Beta-lactam antibiotic inhibiting bacterial PBPs and cell wall synthesis; first-generation cephalosporins have excellent gram-positive coverage (MSSA, streptococci) with modest gram-negative activity (E. coli, Klebsiella, Proteus mirabilis); not active against MRSA.",
+    "indications": [
+      "uncomplicated skin and soft tissue infections (MSSA)",
+      "streptococcal pharyngitis (penicillin alternative)",
+      "uncomplicated UTI (susceptible E. coli)",
+      "surgical prophylaxis (alternative)",
+      "bone/joint infections (step-down therapy)"
+    ],
+    "contraindications": [
+      "severe cephalosporin or penicillin allergy (anaphylaxis \u2014 <1% cross-reactivity with penicillins)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "diarrhea",
+        "nausea",
+        "rash"
+      ],
+      "serious": [
+        "anaphylaxis",
+        "C. difficile colitis",
+        "neutropenia (prolonged high-dose)",
+        "elevated LFTs"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "Well absorbed orally (~90%); not significantly affected by food",
+      "distribution": "Protein binding ~15%",
+      "metabolism": "Not significantly metabolized",
+      "excretion": "Renal; dose adjustment for CrCl <30 mL/min",
+      "half_life": "0.9\u20131.2 hours",
+      "onset": "1 hour",
+      "peak": "1 hour",
+      "duration": "6 hours",
+      "protein_binding": "15%",
+      "vd": "~0.26 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "probenecid",
+        "mechanism": "reduces renal tubular secretion; increases cephalexin levels",
+        "severity": "minor"
+      },
+      {
+        "drug": "warfarin",
+        "mechanism": "possible INR elevation; monitor",
+        "severity": "minor"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer with food if GI side effects occur; suspension must be refrigerated and discarded after 14 days",
+      "For mild-moderate SSTI: cephalexin is first-line per IDSA skin/soft tissue infection guidelines \u2014 covering MSSA and streptococci; if MRSA suspected (risk factors: prior MRSA, failed cephalexin), use TMP-SMX or doxycycline",
+      "Dose adjustments are required in renal impairment (CrCl <30 mL/min); monitor renal function in elderly patients",
+      "Complete full course of therapy even if symptoms resolve; incomplete courses promote antimicrobial resistance"
+    ],
+    "clinical_pearls": [
+      "Cross-reactivity between cephalosporins and penicillins is determined by the R1 side chain, not the beta-lactam ring \u2014 modern estimates of true cross-allergy are 1\u20132% (not the historically quoted 10%), and the risk is concentrated in patients with documented anaphylaxis to penicillin",
+      "Cephalexin does NOT cover MRSA \u2014 for skin infections where MRSA is suspected (abscesses, failure of cephalexin), TMP-SMX or doxycycline should be used"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category B",
+    "lactation_safety": "safe",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "skin-infection",
+      "SSTI",
+      "UTI",
+      "pharyngitis"
+    ],
+    "adverse_effect_tags": [
+      "anaphylaxis",
+      "C-diff",
+      "diarrhea"
+    ],
+    "interaction_tags": [
+      "renally-cleared",
+      "antibiotic"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "beta-lactam"
+      ],
+      "prototype_class": "Cephalosporins",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "skin-infection",
+        "UTI"
+      ],
+      "adverse_cluster": [
+        "anaphylaxis",
+        "C-diff"
+      ],
+      "interaction_cluster": [
+        "antibiotic"
+      ]
+    }
+  },
+  {
+    "id": "ceftriaxone",
+    "generic_name": "ceftriaxone",
+    "brand_names": [
+      "Rocephin"
+    ],
+    "drug_class": "antibiotic",
+    "subclass": "third-generation cephalosporin / beta-lactam",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "penicillin-binding proteins (PBPs)"
+    ],
+    "mechanism_summary": "Third-generation cephalosporin with expanded gram-negative coverage including Neisseria meningitidis, N. gonorrhoeae, Haemophilus influenzae, and most Enterobacteriaceae; poor anti-MRSA and anti-enterococcal activity; penetrates CSF well.",
+    "indications": [
+      "community-acquired pneumonia (hospitalized patients)",
+      "bacterial meningitis",
+      "gonorrhea (drug of choice \u2014 IM)",
+      "Lyme disease (disseminated/severe)",
+      "typhoid fever",
+      "pelvic inflammatory disease",
+      "spontaneous bacterial peritonitis prophylaxis/treatment",
+      "sepsis (empiric)"
+    ],
+    "contraindications": [
+      "neonates with hyperbilirubinemia (displaces bilirubin from albumin)",
+      "concurrent IV calcium in neonates (precipitation in lungs/kidneys)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "diarrhea",
+        "rash",
+        "elevated LFTs",
+        "biliary sludge (pseudolithiasis \u2014 especially with high doses/prolonged use)"
+      ],
+      "serious": [
+        "anaphylaxis",
+        "C. difficile colitis",
+        "hemolytic anemia (Coombs-positive)",
+        "biliary sludge/cholelithiasis",
+        "calcium-ceftriaxone precipitates in neonates"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IV or IM only",
+      "distribution": "Highly protein-bound (~93\u201396%); Vd ~0.12 L/kg; excellent CSF penetration in meningitis",
+      "metabolism": "Not significantly metabolized",
+      "excretion": "Dual \u2014 renal (~33\u201365%) and biliary (~35\u201345%); dose adjustment NOT typically required in renal failure (unlike most cephalosporins)",
+      "half_life": "5\u20139 hours \u2014 allows once-daily dosing",
+      "onset": "End of infusion",
+      "peak": "End of infusion",
+      "duration": "24 hours",
+      "protein_binding": "93\u201396%",
+      "vd": "~0.12 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "calcium-containing IV fluids (neonates)",
+        "mechanism": "calcium-ceftriaxone precipitation in lungs and kidneys \u2014 potentially fatal in neonates",
+        "severity": "major"
+      },
+      {
+        "drug": "warfarin",
+        "mechanism": "may prolong prothrombin time; monitor INR",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Reconstitute with appropriate diluent \u2014 do NOT use calcium-containing solutions (including Ringer's lactate) in neonates; may use in adults if infused at separate times",
+      "Once-daily dosing (1\u20132 g q24h) is appropriate for most indications; bacterial meningitis requires 2 g q12h for adequate CSF concentrations",
+      "Monitor for biliary sludge with prolonged use (>7\u201314 days) \u2014 present as RUQ pain; usually resolves after discontinuation",
+      "For gonorrhea: current CDC guidelines recommend ceftriaxone 500 mg IM single dose (1 g if weight >150 kg) \u2014 azithromycin is no longer routinely added due to GC resistance"
+    ],
+    "clinical_pearls": [
+      "Ceftriaxone's unique dual hepatic-renal elimination means it does NOT require dose adjustment in renal failure alone \u2014 a key prescribing advantage over most beta-lactams",
+      "Ceftriaxone remains first-line for bacterial meningitis (with dexamethasone) because of its excellent CSF penetration, once-daily dosing, and broad gram-negative coverage including N. meningitidis and H. influenzae"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category B",
+    "lactation_safety": "safe",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "pneumonia",
+      "meningitis",
+      "gonorrhea",
+      "Lyme-disease",
+      "sepsis"
+    ],
+    "adverse_effect_tags": [
+      "biliary-sludge",
+      "anaphylaxis",
+      "C-diff"
+    ],
+    "interaction_tags": [
+      "antibiotic",
+      "bilirubin-displacement"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "beta-lactam"
+      ],
+      "prototype_class": "Cephalosporins",
+      "adme_profile": "dual-hepatic-renal",
+      "presentation_cluster": [
+        "pneumonia",
+        "meningitis",
+        "gonorrhea"
+      ],
+      "adverse_cluster": [
+        "anaphylaxis",
+        "C-diff"
+      ],
+      "interaction_cluster": [
+        "antibiotic"
+      ]
+    }
+  },
+  {
+    "id": "cefepime",
+    "generic_name": "cefepime",
+    "brand_names": [
+      "Maxipime"
+    ],
+    "drug_class": "antibiotic",
+    "subclass": "fourth-generation cephalosporin / beta-lactam",
+    "prototype_for": false,
+    "prototype_drug": "ceftriaxone",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "penicillin-binding proteins (PBPs)"
+    ],
+    "mechanism_summary": "Fourth-generation cephalosporin with expanded spectrum; zwitterionic structure enables penetration through outer membrane of gram-negatives more efficiently; maintains activity against AmpC-expressing Enterobacteriaceae and has antipseudomonal activity; does not cover MRSA or enterococci.",
+    "indications": [
+      "hospital-acquired pneumonia / ventilator-associated pneumonia",
+      "febrile neutropenia",
+      "complicated UTI (Pseudomonas)",
+      "intra-abdominal infections (with metronidazole)",
+      "empiric therapy for severe gram-negative infections"
+    ],
+    "contraindications": [
+      "cephalosporin or severe penicillin allergy"
+    ],
+    "adverse_effects": {
+      "common": [
+        "diarrhea",
+        "nausea",
+        "rash",
+        "elevated LFTs"
+      ],
+      "serious": [
+        "neurotoxicity / encephalopathy (especially in renal impairment \u2014 dose-dependent accumulation)",
+        "C. difficile colitis",
+        "anaphylaxis",
+        "seizures (in renal failure with inadequate dose adjustment)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IV or IM",
+      "distribution": "Protein binding 20%; good CNS penetration",
+      "metabolism": "Minimal",
+      "excretion": "Renal; significant dose reduction required for CrCl <60 mL/min",
+      "half_life": "2 hours",
+      "onset": "End of infusion",
+      "peak": "End of infusion",
+      "duration": "8\u201312 hours",
+      "protein_binding": "20%",
+      "vd": "~0.28 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "aminoglycosides",
+        "mechanism": "additive nephrotoxicity; separate IV lines",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Strict renal dosing is critical \u2014 cefepime neurotoxicity (encephalopathy, myoclonus, seizures) occurs when doses are not adjusted for CrCl; obtain renal function before and during therapy",
+      "Cefepime neurotoxicity can be mistaken for worsening septic encephalopathy in ICU patients \u2014 suspect cefepime as cause in any ICU patient with unexplained neurological deterioration",
+      "Monitor renal function (SCr, BUN) every 48\u201372 hours in ICU patients; adjust dose proactively as renal function changes",
+      "EEG may show triphasic waves consistent with metabolic encephalopathy during cefepime neurotoxicity; treatment is discontinuation and supportive care"
+    ],
+    "clinical_pearls": [
+      "Cefepime neurotoxicity (CEFNE) is increasingly recognized in the ICU \u2014 it is dose-dependent, occurs most often in patients with renal impairment receiving standard doses, and manifests as confusion, myoclonus, and non-convulsive status epilepticus",
+      "Unlike third-generation cephalosporins, cefepime is stable to AmpC beta-lactamases (produced by chromosomal derepression in Enterobacter, Citrobacter, Serratia), making it the preferred agent when these organisms are suspected"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category B",
+    "lactation_safety": "safe",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "hospital-acquired-pneumonia",
+      "febrile-neutropenia",
+      "sepsis",
+      "UTI"
+    ],
+    "adverse_effect_tags": [
+      "neurotoxicity",
+      "encephalopathy",
+      "C-diff",
+      "seizures"
+    ],
+    "interaction_tags": [
+      "renally-cleared",
+      "antibiotic"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "beta-lactam"
+      ],
+      "prototype_class": "Cephalosporins",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "hospital-acquired-pneumonia",
+        "febrile-neutropenia"
+      ],
+      "adverse_cluster": [
+        "neurotoxicity",
+        "C-diff"
+      ],
+      "interaction_cluster": [
+        "antibiotic"
+      ]
+    }
+  },
+  {
+    "id": "vancomycin",
+    "generic_name": "vancomycin",
+    "brand_names": [
+      "Vancocin"
+    ],
+    "drug_class": "antibiotic",
+    "subclass": "glycopeptide",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "D-Ala-D-Ala terminus of peptidoglycan precursors"
+    ],
+    "mechanism_summary": "Binds with high affinity to the D-Ala-D-Ala terminus of peptidoglycan precursors (Lipid II), preventing transglycosylation and transpeptidation; cell wall synthesis is inhibited; bactericidal against most gram-positive organisms; does not cross the lipid-rich outer membrane of gram-negatives.",
+    "indications": [
+      "MRSA infections (bacteremia, pneumonia, endocarditis, osteomyelitis \u2014 IV)",
+      "severe skin/soft tissue infections (MRSA)",
+      "Clostridioides difficile colitis (oral \u2014 not absorbed)",
+      "beta-lactam-allergic patient with serious gram-positive infections",
+      "empiric therapy in high-risk hospital patients"
+    ],
+    "contraindications": [
+      "allergy to vancomycin"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nephrotoxicity (AUC/MIC-guided dosing reduces risk)",
+        "ototoxicity (trough >20 mg/L)",
+        "red man syndrome (infusion reaction \u2014 flushing, pruritus, erythema of face/neck/trunk \u2014 not an allergy)"
+      ],
+      "serious": [
+        "acute kidney injury",
+        "ototoxicity (tinnitus, hearing loss)",
+        "DRESS syndrome",
+        "neutropenia and thrombocytopenia (prolonged courses)"
+      ]
+    },
+    "black_box_warnings": [
+      "nephrotoxicity \u2014 monitor renal function and serum concentrations; ototoxicity"
+    ],
+    "pharmacokinetics": {
+      "absorption": "IV: near complete distribution; oral formulation is NOT absorbed \u2014 used only for C. diff in gut lumen",
+      "distribution": "Protein binding 30\u201355%; Vd 0.4\u20131 L/kg; crosses inflamed meninges",
+      "metabolism": "Not metabolized",
+      "excretion": "Entirely renal (glomerular filtration); dramatic dose reduction required in CKD; supplement dose after dialysis",
+      "half_life": "4\u20136 hours (normal renal function); 7\u20139 days (anuric patients)",
+      "onset": "End of infusion",
+      "peak": "End of infusion (avoid measuring peak \u2014 not used for monitoring)",
+      "duration": "q8\u201312h (normal renal function)",
+      "protein_binding": "30\u201355%",
+      "vd": "0.4\u20131 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "aminoglycosides",
+        "mechanism": "additive nephrotoxicity and ototoxicity",
+        "severity": "major"
+      },
+      {
+        "drug": "loop diuretics (furosemide)",
+        "mechanism": "additive nephrotoxicity and ototoxicity",
+        "severity": "moderate"
+      },
+      {
+        "drug": "NSAIDs",
+        "mechanism": "additive nephrotoxicity",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Infuse over minimum 60 minutes (1\u20132 g doses); faster infusion causes red man syndrome \u2014 if occurs, slow infusion and administer antihistamine (diphenhydramine); this is not an allergy",
+      "AUC/MIC-guided monitoring is now standard per 2020 guidelines: target AUC24/MIC 400\u2013600 mg\u00b7h/L for serious MRSA infections; this replaces trough-only monitoring",
+      "Monitor renal function (SCr, BUN) and urine output every 24\u201348 hours; hold and notify prescriber if SCr rises >0.5 mg/dL from baseline or urine output <0.5 mL/kg/h",
+      "Oral vancomycin for C. diff is NOT interchangeable with IV vancomycin \u2014 oral vancomycin stays in the gut (not absorbed) and has no systemic effect; IV vancomycin is not effective for C. diff"
+    ],
+    "clinical_pearls": [
+      "The 2020 ASHP/IDSA/SIDP consensus guidelines recommend replacing trough-only monitoring with AUC/MIC-guided monitoring for vancomycin to minimize nephrotoxicity while maintaining efficacy against MRSA",
+      "Vancomycin-resistant enterococci (VRE) have modified the D-Ala-D-Ala to D-Ala-D-Lac, reducing vancomycin affinity 1000-fold \u2014 this is a major resistance mechanism that has spread widely in healthcare settings"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category C",
+    "lactation_safety": "use with caution",
+    "tdm_required": true,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "MRSA-infection",
+      "C-diff",
+      "endocarditis",
+      "sepsis"
+    ],
+    "adverse_effect_tags": [
+      "nephrotoxicity",
+      "ototoxicity",
+      "red-man-syndrome"
+    ],
+    "interaction_tags": [
+      "renally-cleared",
+      "nephrotoxic-combinations",
+      "narrow-therapeutic-index"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "cell-wall-D-Ala-D-Ala-inhibition"
+      ],
+      "prototype_class": "Glycopeptides",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "MRSA-infection",
+        "C-diff"
+      ],
+      "adverse_cluster": [
+        "nephrotoxicity",
+        "ototoxicity"
+      ],
+      "interaction_cluster": [
+        "nephrotoxic-combinations",
+        "narrow-therapeutic-index"
+      ]
+    }
+  },
+  {
+    "id": "ciprofloxacin",
+    "generic_name": "ciprofloxacin",
+    "brand_names": [
+      "Cipro",
+      "Cipro XR"
+    ],
+    "drug_class": "antibiotic",
+    "subclass": "fluoroquinolone / second-generation",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "DNA gyrase (topoisomerase II)",
+      "topoisomerase IV"
+    ],
+    "mechanism_summary": "Inhibits bacterial DNA gyrase (gram-negatives) and topoisomerase IV (gram-positives), enzymes required to relieve DNA supercoiling during replication; bactericidal; concentration-dependent killing.",
+    "indications": [
+      "complicated UTI and pyelonephritis",
+      "anthrax (drug of choice)",
+      "typhoid fever",
+      "gonorrhea (no longer first-line due to resistance)",
+      "traveler's diarrhea",
+      "prostatitis",
+      "bone/joint infections (Pseudomonas)",
+      "febrile neutropenia (with beta-lactam)"
+    ],
+    "contraindications": [
+      "concurrent tizanidine (CYP1A2 inhibition \u2014 severe hypotension)",
+      "myasthenia gravis (fluoroquinolone may exacerbate)",
+      "children <18 (except anthrax/inhalation therapy)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "diarrhea",
+        "headache",
+        "rash",
+        "QTc prolongation"
+      ],
+      "serious": [
+        "tendinopathy / tendon rupture (Achilles \u2014 especially elderly, corticosteroid use)",
+        "peripheral neuropathy (potentially irreversible)",
+        "CNS effects (dizziness, seizures, psychosis)",
+        "hypoglycemia (especially in diabetics on oral hypoglycemics)",
+        "aortic aneurysm/dissection (FDA warning 2018)"
+      ]
+    },
+    "black_box_warnings": [
+      "tendinitis and tendon rupture \u2014 increased in elderly and with corticosteroid use; peripheral neuropathy \u2014 may be irreversible; CNS effects; myasthenia gravis exacerbation; aortic aneurysm and aortic dissection"
+    ],
+    "pharmacokinetics": {
+      "absorption": "Oral bioavailability ~70%; reduced by divalent cations (antacids, calcium, iron, zinc)",
+      "distribution": "Protein binding 20\u201340%; Vd ~2\u20133.5 L/kg; excellent tissue penetration including prostate and bone",
+      "metabolism": "CYP1A2 inhibitor; hepatic partial metabolism to active desethylene-ciprofloxacin",
+      "excretion": "Renal 40\u201350%; fecal; dose adjustment for CrCl <30 mL/min",
+      "half_life": "3.5\u20135 hours",
+      "onset": "1\u20132 hours",
+      "peak": "1\u20132 hours",
+      "duration": "12 hours (q12h dosing)",
+      "protein_binding": "20\u201340%",
+      "vd": "2\u20133.5 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "multivalent cations (antacids, calcium, iron, sucralfate, dairy)",
+        "mechanism": "chelation reduces ciprofloxacin oral absorption by 50\u201390%; separate by 2\u20134 hours",
+        "severity": "major"
+      },
+      {
+        "drug": "theophylline",
+        "mechanism": "CYP1A2 inhibition increases theophylline levels; risk of toxicity",
+        "severity": "major"
+      },
+      {
+        "drug": "warfarin",
+        "mechanism": "CYP1A2 inhibition reduces warfarin metabolism; INR elevation",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer oral ciprofloxacin at least 2 hours before or 6 hours after antacids, calcium supplements, iron, zinc, sucralfate, or dairy products \u2014 chelation dramatically reduces absorption",
+      "Instruct patients to report tendon pain or swelling immediately \u2014 discontinue and restrict activity; risk is highest in elderly patients and those on corticosteroids",
+      "Monitor blood glucose in diabetic patients on antidiabetic medications \u2014 fluoroquinolones can cause hypoglycemia (especially with sulfonylureas) or hyperglycemia",
+      "Avoid fluoroquinolones when alternatives are appropriate \u2014 reserve for serious gram-negative infections to preserve efficacy and minimize serious adverse effects"
+    ],
+    "clinical_pearls": [
+      "Ciprofloxacin has the strongest gram-negative activity of the fluoroquinolones including activity against Pseudomonas aeruginosa \u2014 but fluoroquinolone resistance in Pseudomonas has become common in many hospitals, limiting empiric use",
+      "The FDA's 2016 boxed warning revision and 2018 aortic aneurysm warning reflect growing evidence that fluoroquinolones have serious systemic toxicities \u2014 they should not be used for uncomplicated UTIs, sinusitis, or bronchitis when safer alternatives exist"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category C \u2014 animal studies show cartilage damage; avoid if alternatives exist",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "UTI",
+      "pyelonephritis",
+      "anthrax",
+      "prostatitis",
+      "bone-infection"
+    ],
+    "adverse_effect_tags": [
+      "tendon-rupture",
+      "peripheral-neuropathy",
+      "QTc-prolongation",
+      "aortic-aneurysm"
+    ],
+    "interaction_tags": [
+      "CYP1A2-inhibitor",
+      "chelation-interaction",
+      "QTc-prolonging"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "topoisomerase-inhibition"
+      ],
+      "prototype_class": "Fluoroquinolones",
+      "adme_profile": "hepatic-renal-mixed",
+      "presentation_cluster": [
+        "UTI",
+        "pyelonephritis"
+      ],
+      "adverse_cluster": [
+        "tendon-rupture",
+        "peripheral-neuropathy"
+      ],
+      "interaction_cluster": [
+        "CYP1A2-inhibitor",
+        "chelation"
+      ]
+    }
+  },
+  {
+    "id": "azithromycin",
+    "generic_name": "azithromycin",
+    "brand_names": [
+      "Zithromax",
+      "Z-Pak",
+      "Zmax"
+    ],
+    "drug_class": "antibiotic",
+    "subclass": "macrolide",
+    "prototype_for": false,
+    "prototype_drug": "erythromycin",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "50S ribosomal subunit (23S rRNA)"
+    ],
+    "mechanism_summary": "Binds the 50S ribosomal subunit, inhibiting translocation and elongation of the growing peptide chain; bacteriostatic (sometimes bactericidal at high concentrations); has anti-inflammatory properties beyond antibiotic activity.",
+    "indications": [
+      "community-acquired pneumonia (outpatient)",
+      "atypical pneumonia (Mycoplasma, Chlamydophila)",
+      "sinusitis",
+      "acute exacerbation of chronic bronchitis",
+      "chlamydia (1 g single dose)",
+      "gonorrhea (with ceftriaxone \u2014 no longer routinely added)",
+      "MAC prophylaxis/treatment (HIV)",
+      "pediatric otitis media (5-day pack)"
+    ],
+    "contraindications": [
+      "history of cholestatic jaundice/hepatic impairment with prior azithromycin",
+      "known QTc prolongation"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "diarrhea",
+        "abdominal pain",
+        "vomiting"
+      ],
+      "serious": [
+        "QTc prolongation and torsades de pointes (dose-dependent)",
+        "hepatotoxicity (rare)",
+        "drug-induced liver injury",
+        "sensorineural hearing loss (high doses/prolonged use)",
+        "C. difficile colitis"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "~37% oral bioavailability; largely independent of food for tablets (dairy may reduce absorption of oral suspension)",
+      "distribution": "Highly protein-bound to tissues (not plasma) \u2014 Vd ~31 L/kg; concentrates intracellularly (leukocytes carry drug to sites of infection); very low serum concentrations",
+      "metabolism": "Hepatic (not CYP) via demethylation",
+      "excretion": "Biliary/fecal primarily",
+      "half_life": "68 hours (tissue); 40\u201368 hours",
+      "onset": "2\u20134 hours",
+      "peak": "2\u20133 hours",
+      "duration": "24 hours; tissue levels maintained for days after oral course completion",
+      "protein_binding": "Extensively tissue-bound; serum ~51%",
+      "vd": "~31 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "QTc-prolonging drugs (hydroxychloroquine, antipsychotics, fluoroquinolones)",
+        "mechanism": "additive QTc prolongation",
+        "severity": "major"
+      },
+      {
+        "drug": "warfarin",
+        "mechanism": "can increase INR; mechanism incompletely understood",
+        "severity": "moderate"
+      },
+      {
+        "drug": "colchicine",
+        "mechanism": "azithromycin inhibits P-glycoprotein; colchicine toxicity in renal impairment",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Obtain baseline ECG and electrolytes in patients with risk factors for QTc prolongation (electrolyte abnormalities, cardiac disease, concurrent QTc-prolonging drugs) before initiating azithromycin",
+      "The 'Z-Pak' (5-day course with loading dose) achieves high tissue concentrations that persist for 7\u201310 days after completion due to the long tissue half-life \u2014 this is the rationale for short courses",
+      "IV azithromycin: infuse over 1 hour minimum (500 mg dose); venous irritation is common; dilute in 250 mL NS or D5W",
+      "Azithromycin is a first-line treatment for chlamydia \u2014 1 g PO single observed dose is equally effective to 7-day doxycycline and preferred for compliance"
+    ],
+    "clinical_pearls": [
+      "Azithromycin's extraordinarily high tissue-to-plasma ratio (tissue Vd ~31 L/kg vs. serum ~0.15 L/kg) means serum levels are poor indicators of efficacy \u2014 the drug concentrates in macrophages and is delivered to infection sites",
+      "A 2012 NEJM study found a small but statistically significant increase in cardiovascular death with a 5-day azithromycin course \u2014 this led to FDA safety communication; the absolute risk remains very low in healthy patients but deserves consideration in high-risk cardiac patients"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category B",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "pneumonia",
+      "atypical-pneumonia",
+      "chlamydia",
+      "sinusitis"
+    ],
+    "adverse_effect_tags": [
+      "QTc-prolongation",
+      "hepatotoxicity",
+      "C-diff"
+    ],
+    "interaction_tags": [
+      "QTc-prolonging",
+      "P-gp-inhibitor"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "ribosomal-50S-inhibition"
+      ],
+      "prototype_class": "Macrolides",
+      "adme_profile": "hepatic-biliary",
+      "presentation_cluster": [
+        "pneumonia",
+        "chlamydia"
+      ],
+      "adverse_cluster": [
+        "QTc-prolongation"
+      ],
+      "interaction_cluster": [
+        "QTc-prolonging"
+      ]
+    }
+  },
+  {
+    "id": "doxycycline",
+    "generic_name": "doxycycline",
+    "brand_names": [
+      "Vibramycin",
+      "Doryx",
+      "Oracea",
+      "Monodox"
+    ],
+    "drug_class": "antibiotic",
+    "subclass": "tetracycline",
+    "prototype_for": false,
+    "prototype_drug": "tetracycline",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "30S ribosomal subunit"
+    ],
+    "mechanism_summary": "Binds reversibly to the 30S ribosomal subunit, blocking binding of aminoacyl-tRNA to the acceptor (A) site; prevents peptide chain elongation; bacteriostatic; also has anti-inflammatory properties; broader spectrum than older tetracyclines.",
+    "indications": [
+      "community-acquired pneumonia (atypical organisms)",
+      "chlamydia (drug of choice)",
+      "Lyme disease (early localized \u2014 drug of choice)",
+      "rickettsial diseases (Rocky Mountain spotted fever \u2014 drug of choice)",
+      "malaria prophylaxis",
+      "acne vulgaris",
+      "anthrax (alternative to ciprofloxacin)",
+      "rosacea"
+    ],
+    "contraindications": [
+      "children <8 years (permanent tooth discoloration)",
+      "pregnancy (second/third trimester)",
+      "severe hepatic impairment"
+    ],
+    "adverse_effects": {
+      "common": [
+        "esophagitis/esophageal ulceration (if not taken with adequate water)",
+        "nausea",
+        "vomiting",
+        "photosensitivity",
+        "tooth discoloration (children <8 years)"
+      ],
+      "serious": [
+        "hepatotoxicity (high doses)",
+        "pseudotumor cerebri (intracranial hypertension)",
+        "C. difficile colitis",
+        "Jarisch-Herxheimer reaction (spirochete infections)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "~93% oral bioavailability; reduced by divalent cations but less so than older tetracyclines",
+      "distribution": "Protein binding 80\u201390%; Vd ~0.75 L/kg; concentrates in liver, kidney, bone, skin",
+      "metabolism": "Not significantly metabolized",
+      "excretion": "Biliary/fecal (50%); renal (40%); does NOT require dose adjustment in renal failure (unlike older tetracyclines)",
+      "half_life": "18\u201322 hours \u2014 allows once-daily dosing (100\u2013200 mg qd for most infections)",
+      "onset": "1\u20134 hours",
+      "peak": "1.5\u20134 hours",
+      "duration": "12\u201324 hours",
+      "protein_binding": "80\u201390%",
+      "vd": "~0.75 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "divalent cations (antacids, calcium, iron, dairy, sucralfate)",
+        "mechanism": "chelation reduces absorption; separate by 2 hours",
+        "severity": "major"
+      },
+      {
+        "drug": "isotretinoin",
+        "mechanism": "additive pseudotumor cerebri risk",
+        "severity": "major"
+      },
+      {
+        "drug": "warfarin",
+        "mechanism": "may increase INR via gut flora alteration",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Instruct patient to take with a full glass of water and remain upright for 30\u201360 minutes after ingestion to prevent esophagitis and ulceration \u2014 a significant and preventable adverse effect",
+      "Separate doxycycline administration from antacids, calcium, iron, magnesium, or dairy products by at least 2 hours; these chelate and reduce absorption",
+      "Counsel patients about photosensitivity \u2014 use sunscreen, protective clothing; avoid prolonged sun exposure during therapy",
+      "Doxycycline does not require renal dose adjustment (unlike older tetracyclines which accumulate in CKD due to renal elimination) \u2014 an important advantage"
+    ],
+    "clinical_pearls": [
+      "Doxycycline is the drug of choice for Rocky Mountain Spotted Fever (RMSF) even in children <8 years when RMSF is suspected \u2014 the risk of untreated RMSF (30% mortality) far outweighs the risk of dental staining from a short course",
+      "Doxycycline is uniquely safe in renal failure among tetracyclines because it uses biliary/fecal elimination \u2014 it actually replaces older tetracyclines in CKD patients"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category D (second/third trimester) \u2014 tooth/bone effects; safe in first trimester",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "atypical-pneumonia",
+      "chlamydia",
+      "Lyme-disease",
+      "RMSF",
+      "acne"
+    ],
+    "adverse_effect_tags": [
+      "esophagitis",
+      "photosensitivity",
+      "pseudotumor-cerebri",
+      "tooth-discoloration"
+    ],
+    "interaction_tags": [
+      "chelation-interaction",
+      "biliary-excreted"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "ribosomal-30S-inhibition"
+      ],
+      "prototype_class": "Tetracyclines",
+      "adme_profile": "hepatic-biliary",
+      "presentation_cluster": [
+        "pneumonia",
+        "chlamydia",
+        "Lyme-disease"
+      ],
+      "adverse_cluster": [
+        "photosensitivity"
+      ],
+      "interaction_cluster": [
+        "chelation"
+      ]
+    }
+  },
+  {
+    "id": "metronidazole",
+    "generic_name": "metronidazole",
+    "brand_names": [
+      "Flagyl",
+      "Metro"
+    ],
+    "drug_class": "antibiotic / antiprotozoal",
+    "subclass": "nitroimidazole",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "microbial DNA (reactive intermediate)"
+    ],
+    "mechanism_summary": "Prodrug reduced in anaerobic organisms to a cytotoxic nitro radical anion, which damages microbial DNA and causes strand breaks; bactericidal against obligate anaerobes and protozoa; aerobic organisms cannot reduce the drug to its active form.",
+    "indications": [
+      "Clostridioides difficile colitis (vancomycin or fidaxomicin preferred for severe cases)",
+      "bacterial vaginosis",
+      "trichomoniasis (drug of choice)",
+      "intra-abdominal infections (with cephalosporin for aerobic coverage)",
+      "amoebic liver abscess",
+      "H. pylori eradication (component)",
+      "anaerobic wound infections"
+    ],
+    "contraindications": [
+      "first trimester of pregnancy (teratogenicity concerns)",
+      "disulfiram reaction (concurrent disulfiram or within 2 weeks)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "metallic taste",
+        "nausea",
+        "headache",
+        "dizziness"
+      ],
+      "serious": [
+        "peripheral neuropathy (dose-dependent; prolonged use)",
+        "CNS neurotoxicity (encephalopathy, cerebellar dysfunction, seizures \u2014 mainly high-dose IV)",
+        "disulfiram-like reaction with alcohol",
+        "Clostridioides difficile superinfection (paradoxically)"
+      ]
+    },
+    "black_box_warnings": [
+      "carcinogenic in rodents \u2014 avoid unnecessary prolonged use or high doses"
+    ],
+    "pharmacokinetics": {
+      "absorption": "~100% oral bioavailability",
+      "distribution": "Protein binding <20%; Vd ~0.25\u20130.85 L/kg; excellent CSF penetration",
+      "metabolism": "Hepatic CYP2C9 and CYP3A4 (minor) to active hydroxy-metabolite",
+      "excretion": "Renal (~60\u201380%) and fecal",
+      "half_life": "6\u201312 hours",
+      "onset": "1\u20132 hours",
+      "peak": "1\u20132 hours",
+      "duration": "8\u201312 hours",
+      "protein_binding": "<20%",
+      "vd": "0.25\u20130.85 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "alcohol",
+        "mechanism": "disulfiram-like reaction (flushing, nausea, tachycardia, hypotension) \u2014 avoid alcohol during and 48 hours after therapy",
+        "severity": "major"
+      },
+      {
+        "drug": "warfarin",
+        "mechanism": "CYP2C9 inhibition increases warfarin levels; INR may double",
+        "severity": "major"
+      },
+      {
+        "drug": "lithium",
+        "mechanism": "may reduce renal lithium clearance; toxicity risk",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Counsel patients emphatically about the disulfiram-like reaction with alcohol \u2014 avoid all alcohol (including mouthwash, food preparations) during therapy and for 48\u201372 hours after completion",
+      "For trichomoniasis: treat both partners simultaneously regardless of symptoms; use 2 g single-dose regimen or 500 mg BID x7 days; retest at 3 months",
+      "Monitor for peripheral neuropathy (tingling, numbness in extremities) with prolonged courses \u2014 generally reversible but can persist; report immediately",
+      "IV metronidazole for severe C. diff or intra-abdominal anaerobic infections: infuse over 30\u201360 minutes; IV formulation contains significant propylene glycol (monitor for toxicity with extended infusions)"
+    ],
+    "clinical_pearls": [
+      "Metronidazole is unique among antibiotics in its complete selectivity for obligate anaerobes \u2014 aerobic organisms cannot reduce the drug to its toxic intermediate, meaning aerobes are completely unaffected",
+      "The disulfiram-like reaction is not a drug allergy \u2014 it is a predictable pharmacodynamic interaction from acetaldehyde accumulation; the interaction is severe enough to warrant strict counseling and documentation"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category B \u2014 avoid in first trimester due to historical teratogenicity concerns; acceptable in second/third trimesters",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "C-diff",
+      "bacterial-vaginosis",
+      "trichomoniasis",
+      "intra-abdominal-infection",
+      "H-pylori"
+    ],
+    "adverse_effect_tags": [
+      "peripheral-neuropathy",
+      "disulfiram-reaction",
+      "metallic-taste",
+      "neurotoxicity"
+    ],
+    "interaction_tags": [
+      "alcohol-interaction",
+      "CYP2C9-inhibitor",
+      "warfarin-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "nitroimidazole-DNA-damage"
+      ],
+      "prototype_class": "Nitroimidazoles",
+      "adme_profile": "hepatically-metabolized-CYP",
+      "presentation_cluster": [
+        "C-diff",
+        "bacterial-vaginosis",
+        "trichomoniasis"
+      ],
+      "adverse_cluster": [
+        "peripheral-neuropathy",
+        "neurotoxicity"
+      ],
+      "interaction_cluster": [
+        "alcohol-interaction",
+        "CYP2C9-inhibitor"
+      ]
+    }
+  },
+  {
+    "id": "meropenem",
+    "generic_name": "meropenem",
+    "brand_names": [
+      "Merrem"
+    ],
+    "drug_class": "antibiotic",
+    "subclass": "carbapenem / beta-lactam",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "penicillin-binding proteins (PBPs)"
+    ],
+    "mechanism_summary": "Carbapenem beta-lactam with the broadest antibacterial spectrum; stable to most beta-lactamases including AmpC and ESBLs (not carbapenemases); covers gram-positives (not MRSA), gram-negatives including Pseudomonas, and anaerobes.",
+    "indications": [
+      "carbapenem-spectrum infections: ESBL-producing Enterobacteriaceae",
+      "Pseudomonas aeruginosa infections (susceptible)",
+      "complicated intra-abdominal infections",
+      "complicated UTI",
+      "hospital-acquired pneumonia",
+      "febrile neutropenia",
+      "bacterial meningitis (pediatric/adult)"
+    ],
+    "contraindications": [
+      "severe penicillin or carbapenem allergy"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "diarrhea",
+        "rash",
+        "elevated LFTs",
+        "headache"
+      ],
+      "serious": [
+        "seizures (less common than imipenem; still a risk \u2014 especially in CNS disease, renal failure)",
+        "C. difficile colitis",
+        "anaphylaxis",
+        "thrombocytopenia and neutropenia"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IV only",
+      "distribution": "Protein binding 2%; excellent CSF penetration for meningitis dosing; Vd ~0.3 L/kg",
+      "metabolism": "Minimal; hydrolysis by renal dehydropeptidase-I (DHP-I) \u2014 cilastatin not required (unlike imipenem) because meropenem has some inherent DHP-I stability",
+      "excretion": "Renal (~70% unchanged); significant dose reduction for CrCl <26 mL/min",
+      "half_life": "1 hour",
+      "onset": "End of infusion",
+      "peak": "End of infusion",
+      "duration": "q8h standard; extended 3-4h infusion used for PD optimization",
+      "protein_binding": "2%",
+      "vd": "~0.3 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "valproate",
+        "mechanism": "carbapenems markedly reduce valproate levels (>50%) via inhibiting valproate's glucuronidation re-conversion; seizures may recur",
+        "severity": "major"
+      },
+      {
+        "drug": "probenecid",
+        "mechanism": "reduces meropenem renal tubular secretion; avoid combination",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Meropenem dramatically reduces valproate levels \u2014 if a patient on valproate requires carbapenem therapy, expect seizure breakthrough; anticipate need for alternative anticonvulsant",
+      "Renal dose adjustment is critical; meropenem accumulates in renal failure; calculate CrCl before initiation and reassess every 48 hours in critically ill patients",
+      "Extended infusion (3\u20134 hours) improves pharmacodynamic target attainment (time above MIC) for less-susceptible organisms \u2014 used increasingly in ICU settings",
+      "Carbapenems are reserved for serious infections caused by resistant organisms; inappropriate use drives carbapenem-resistant Enterobacteriaceae (CRE) \u2014 antimicrobial stewardship consultation recommended"
+    ],
+    "clinical_pearls": [
+      "Carbapenems are the drug of choice for ESBL-producing Enterobacteriaceae \u2014 however, carbapenem-resistant Enterobacteriaceae (CRE) are increasing globally, requiring tigecycline, colistin, or novel beta-lactam/beta-lactamase inhibitor combinations",
+      "Unlike imipenem-cilastatin, meropenem does not require cilastatin co-formulation and has a lower seizure risk \u2014 it is preferred for meningitis and patients with seizure disorders"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category B",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "hospital-acquired-pneumonia",
+      "ESBL-infection",
+      "sepsis",
+      "meningitis"
+    ],
+    "adverse_effect_tags": [
+      "seizures",
+      "C-diff",
+      "anaphylaxis"
+    ],
+    "interaction_tags": [
+      "valproate-interaction",
+      "renally-cleared"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "beta-lactam"
+      ],
+      "prototype_class": "Carbapenems",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "sepsis",
+        "hospital-acquired-pneumonia"
+      ],
+      "adverse_cluster": [
+        "seizures",
+        "C-diff"
+      ],
+      "interaction_cluster": [
+        "valproate-interaction"
+      ]
+    }
+  },
+  {
+    "id": "gentamicin",
+    "generic_name": "gentamicin",
+    "brand_names": [
+      "Garamycin"
+    ],
+    "drug_class": "antibiotic",
+    "subclass": "aminoglycoside",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "30S ribosomal subunit"
+    ],
+    "mechanism_summary": "Irreversibly binds the 30S ribosomal subunit, causing misreading of mRNA and production of aberrant proteins; requires active transport into bacteria requiring oxygen \u2014 ineffective against obligate anaerobes; bactericidal and concentration-dependent.",
+    "indications": [
+      "serious gram-negative infections (bacteremia, pneumonia, UTI)",
+      "synergistic therapy for gram-positive endocarditis (with penicillin or ampicillin)",
+      "gentamicin-susceptible Pseudomonas infections",
+      "prophylaxis in high-risk cardiac procedures (with ampicillin)"
+    ],
+    "contraindications": [
+      "severe aminoglycoside hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nephrotoxicity (reversible, proximal tubular injury)",
+        "accumulation with multiple doses without monitoring"
+      ],
+      "serious": [
+        "nephrotoxicity (AKI \u2014 especially with concurrent nephrotoxins or pre-existing CKD)",
+        "ototoxicity \u2014 cochlear (hearing loss, tinnitus) and vestibular (vertigo, imbalance) \u2014 may be irreversible",
+        "neuromuscular blockade (high doses, especially with neuromuscular blocking agents)"
+      ]
+    },
+    "black_box_warnings": [
+      "nephrotoxicity \u2014 monitor renal function; ototoxicity \u2014 monitoring does not reliably prevent; neuromuscular blockade \u2014 respiratory paralysis possible"
+    ],
+    "pharmacokinetics": {
+      "absorption": "IV or IM; not absorbed orally (used topically for ocular/skin infections)",
+      "distribution": "Protein binding <10%; Vd 0.2\u20130.35 L/kg (increased in sepsis/burns); does not cross BBB",
+      "metabolism": "Not metabolized",
+      "excretion": "Entirely renal; half-life dramatically prolonged in renal failure",
+      "half_life": "2\u20133 hours (normal renal function)",
+      "onset": "End of infusion",
+      "peak": "30\u201360 minutes post-infusion",
+      "duration": "q8h (traditional); q24h (extended interval; preferred)",
+      "protein_binding": "<10%",
+      "vd": "0.2\u20130.35 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "vancomycin",
+        "mechanism": "additive nephrotoxicity and ototoxicity",
+        "severity": "major"
+      },
+      {
+        "drug": "loop diuretics (furosemide)",
+        "mechanism": "additive ototoxicity; loop diuretics alone are ototoxic",
+        "severity": "major"
+      },
+      {
+        "drug": "neuromuscular blocking agents",
+        "mechanism": "aminoglycosides potentiate neuromuscular blockade",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Extended-interval dosing (extended interval gentamicin: 5\u20137 mg/kg q24h) is now the preferred approach in most institutions; it exploits concentration-dependent killing and post-antibiotic effect while reducing nephrotoxicity",
+      "Therapeutic drug monitoring: for traditional q8h dosing, target peak 5\u201310 mcg/mL and trough <2 mcg/mL; for extended interval, use Hartford nomogram to assess trough at 6\u201314h post-infusion",
+      "Monitor SCr and BUN every 24\u201348 hours; assess audiometric function if prolonged therapy (>5 days) or in patients with risk factors; question patients about tinnitus and balance",
+      "Do not mix with penicillins in the same IV line \u2014 aminoglycosides are inactivated by penicillins in vitro; administer separately"
+    ],
+    "clinical_pearls": [
+      "Extended-interval aminoglycoside dosing (once-daily dosing) is as effective and less nephrotoxic than traditional dosing for most indications, exploiting concentration-dependent killing and the post-antibiotic effect",
+      "Ototoxicity from aminoglycosides preferentially affects cochlear outer hair cells and vestibular hair cells \u2014 hearing loss may be irreversible and can continue progressing after drug discontinuation due to ongoing cellular damage"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category D \u2014 ototoxicity in fetus",
+    "lactation_safety": "use with caution",
+    "tdm_required": true,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "gram-negative-bacteremia",
+      "endocarditis-synergy",
+      "UTI",
+      "Pseudomonas-infection"
+    ],
+    "adverse_effect_tags": [
+      "nephrotoxicity",
+      "ototoxicity",
+      "neuromuscular-blockade"
+    ],
+    "interaction_tags": [
+      "nephrotoxic-combinations",
+      "ototoxic-combinations",
+      "narrow-therapeutic-index"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "ribosomal-30S-inhibition"
+      ],
+      "prototype_class": "Aminoglycosides",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "gram-negative-bacteremia",
+        "endocarditis"
+      ],
+      "adverse_cluster": [
+        "nephrotoxicity",
+        "ototoxicity"
+      ],
+      "interaction_cluster": [
+        "nephrotoxic-combinations",
+        "narrow-therapeutic-index"
+      ]
+    }
+  },
+  {
+    "id": "trimethoprim-sulfamethoxazole",
+    "generic_name": "trimethoprim-sulfamethoxazole (TMP-SMX)",
+    "brand_names": [
+      "Bactrim",
+      "Bactrim DS",
+      "Septra"
+    ],
+    "drug_class": "antibiotic",
+    "subclass": "sulfonamide + dihydrofolate reductase inhibitor combination",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "dihydropteroate synthase (sulfamethoxazole)",
+      "dihydrofolate reductase (trimethoprim)"
+    ],
+    "mechanism_summary": "Sequential blockade of bacterial folate synthesis \u2014 sulfamethoxazole inhibits dihydropteroate synthase (PABA incorporation step) and trimethoprim inhibits dihydrofolate reductase; synergistic combination depletes tetrahydrofolate required for nucleotide synthesis; bactericidal.",
+    "indications": [
+      "UTI (E. coli, community-acquired \u2014 first-line if local resistance <20%)",
+      "MRSA skin/soft tissue infections (mild-moderate)",
+      "Pneumocystis jirovecii pneumonia (PCP) treatment and prophylaxis",
+      "Nocardia infections",
+      "community-acquired MRSA decolonization",
+      "traveler's diarrhea"
+    ],
+    "contraindications": [
+      "severe sulfonamide allergy",
+      "megaloblastic anemia from folate deficiency",
+      "third trimester of pregnancy (kernicterus risk)",
+      "CrCl <15 mL/min (TMP-SMX accumulation)",
+      "concurrent methotrexate (additive antifolate)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "vomiting",
+        "rash (maculopapular)",
+        "megaloblastic anemia (impairs folate)",
+        "hyperkalemia (trimethoprim blocks renal potassium secretion \u2014 similar to potassium-sparing diuretics)",
+        "elevated SCr (trimethoprim blocks creatinine secretion \u2014 false elevation, not true GFR change)"
+      ],
+      "serious": [
+        "Stevens-Johnson syndrome/TEN",
+        "agranulocytosis",
+        "aplastic anemia",
+        "severe hyperkalemia in patients on RAAS inhibitors or with CKD",
+        "hepatotoxicity"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "~100% oral bioavailability; IV formulation available for PCP",
+      "distribution": "Widely distributed; Vd 1.6 L/kg; crosses BBB; protein binding 44\u201370%",
+      "metabolism": "SMX by CYP2C9 to acetyl-SMX; TMP minimal metabolism",
+      "excretion": "Renal; dose adjustment for CrCl <30 mL/min",
+      "half_life": "TMP 8\u201310 hours; SMX 9\u201311 hours",
+      "onset": "1\u20134 hours",
+      "peak": "1\u20134 hours",
+      "duration": "12 hours (BID dosing)",
+      "protein_binding": "44\u201370%",
+      "vd": "1.6 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "warfarin",
+        "mechanism": "CYP2C9 inhibition increases warfarin levels; major bleeding risk",
+        "severity": "major"
+      },
+      {
+        "drug": "ACE inhibitors/ARBs/potassium-sparing diuretics",
+        "mechanism": "additive hyperkalemia \u2014 trimethoprim blocks ENaC; can be life-threatening in CKD",
+        "severity": "major"
+      },
+      {
+        "drug": "methotrexate",
+        "mechanism": "additive dihydrofolate reductase inhibition; bone marrow suppression",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor serum potassium closely, especially in patients taking ACE inhibitors, ARBs, or spironolactone \u2014 trimethoprim's potassium-sparing effect can cause severe, life-threatening hyperkalemia",
+      "TMP-SMX causes a false elevation in serum creatinine by ~0.1\u20130.2 mg/dL by inhibiting tubular creatinine secretion \u2014 this does not represent true renal injury; GFR (cystatin C or creatinine clearance using cystatin) is not affected",
+      "Ensure adequate hydration during therapy to prevent crystalluria; patients with sulfonamide allergy should be asked about nature of reaction before prescribing",
+      "For PCP prophylaxis (HIV with CD4 <200): SS tablet (TMP 80 mg / SMX 400 mg) once daily is first-line; monitor CBC monthly for hematologic toxicity"
+    ],
+    "clinical_pearls": [
+      "Trimethoprim is structurally similar to potassium-sparing diuretics (amiloride) \u2014 it blocks ENaC in the collecting duct, reducing potassium excretion; this interaction with RAAS inhibitors and CKD causes clinically significant and sometimes fatal hyperkalemia",
+      "TMP-SMX is the preferred antibiotic for community-acquired MRSA soft tissue infections (IDSA guidelines) \u2014 clinical trials demonstrated equivalence or superiority to doxycycline for MRSA SSTIs"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category C \u2014 folate antagonist; avoid in first trimester and near term",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "UTI",
+      "MRSA-SSTI",
+      "PCP-prophylaxis",
+      "PCP-treatment"
+    ],
+    "adverse_effect_tags": [
+      "hyperkalemia",
+      "Stevens-Johnson",
+      "agranulocytosis",
+      "rash"
+    ],
+    "interaction_tags": [
+      "CYP2C9-inhibitor",
+      "potassium-elevating",
+      "MAOI-contraindication"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "folate-synthesis-inhibition"
+      ],
+      "prototype_class": "Sulfonamides",
+      "adme_profile": "renally-cleared",
+      "presentation_cluster": [
+        "UTI",
+        "MRSA-SSTI",
+        "PCP"
+      ],
+      "adverse_cluster": [
+        "hyperkalemia",
+        "Stevens-Johnson"
+      ],
+      "interaction_cluster": [
+        "potassium-elevating",
+        "CYP2C9-inhibitor"
+      ]
+    }
+  },
+  {
+    "id": "acyclovir",
+    "generic_name": "acyclovir",
+    "brand_names": [
+      "Zovirax"
+    ],
+    "drug_class": "antiviral",
+    "subclass": "acyclic nucleoside analogue / herpesvirus antiviral",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "herpesvirus thymidine kinase",
+      "viral DNA polymerase"
+    ],
+    "mechanism_summary": "Prodrug selectively phosphorylated by herpesvirus-encoded thymidine kinase (TK) to acyclovir monophosphate; cellular kinases convert to acyclovir triphosphate, which competitively inhibits viral DNA polymerase and acts as an obligate chain terminator; selectivity is due to viral TK specificity.",
+    "indications": [
+      "herpes simplex virus (HSV) infections: genital herpes (treatment/suppression), herpes labialis, mucocutaneous HSV",
+      "herpes zoster (shingles)",
+      "varicella (chickenpox)",
+      "HSV encephalitis (IV \u2014 first-line)",
+      "neonatal HSV (IV)"
+    ],
+    "contraindications": [
+      "severe acyclovir hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "headache",
+        "diarrhea (oral)",
+        "injection site phlebitis (IV)"
+      ],
+      "serious": [
+        "nephrotoxicity (IV \u2014 crystalline nephropathy from acyclovir crystal precipitation; prevent with adequate hydration)",
+        "neurotoxicity (IV, especially in renal failure: tremor, confusion, agitation, hallucinations)",
+        "thrombotic thrombocytopenic purpura (rare, immunocompromised patients)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "Oral bioavailability 10\u201330% (poor; valacyclovir provides higher levels)",
+      "distribution": "Protein binding 9\u201333%; Vd ~0.8 L/kg; good CNS penetration",
+      "metabolism": "Minimal; 9-carboxymethoxymethylguanine is the primary metabolite",
+      "excretion": "Renal via glomerular filtration and tubular secretion; dose adjustment required for CrCl <50 mL/min",
+      "half_life": "2.5\u20133.5 hours (normal renal function); prolonged in CKD",
+      "onset": "1\u20132 hours",
+      "peak": "1.5\u20132 hours (oral)",
+      "duration": "5\u20138 hours (q8h dosing for IV HSV encephalitis; oral q12\u201324h for suppression)",
+      "protein_binding": "9\u201333%",
+      "vd": "~0.8 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "nephrotoxic drugs (NSAIDs, aminoglycosides, cyclosporine)",
+        "mechanism": "additive nephrotoxicity; crystal deposition risk",
+        "severity": "major"
+      },
+      {
+        "drug": "probenecid",
+        "mechanism": "reduces renal tubular secretion of acyclovir; higher levels",
+        "severity": "moderate"
+      },
+      {
+        "drug": "zidovudine",
+        "mechanism": "additive neurotoxicity (somnolence, lethargy)",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "IV acyclovir: infuse over 1 hour minimum; ensure adequate pre-hydration (IV fluids) and maintain adequate urine output (>0.5 mL/kg/h) to prevent acyclovir crystal precipitation in renal tubules",
+      "Dose MUST be adjusted for renal function \u2014 check CrCl before and during IV therapy; acyclovir neurotoxicity (tremor, confusion, encephalopathy) is a sign of accumulation in renal failure",
+      "Oral acyclovir has very low bioavailability; for recurrent herpes, valacyclovir (prodrug with 55% bioavailability) or famciclovir are preferred because of better and more consistent drug levels",
+      "HSV encephalitis requires IV acyclovir 10 mg/kg q8h for 14\u201321 days \u2014 subtherapeutic dosing is associated with relapse; empiric treatment should not be delayed pending PCR results"
+    ],
+    "clinical_pearls": [
+      "Acyclovir's selectivity is its most elegant pharmacological property \u2014 it requires viral thymidine kinase for initial phosphorylation; cells not infected with herpesvirus cannot activate it, minimizing host cell toxicity",
+      "IV acyclovir nephrotoxicity is due to crystal precipitation in tubular lumens at physiologic urinary pH \u2014 this is entirely preventable with adequate hydration (not merely a toxicity to avoid post-hoc)"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category B \u2014 acyclovir registry data reassuring; HSV encephalitis treatment takes precedence",
+    "lactation_safety": "safe",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "herpes-simplex",
+      "herpes-zoster",
+      "HSV-encephalitis",
+      "varicella"
+    ],
+    "adverse_effect_tags": [
+      "nephrotoxicity",
+      "neurotoxicity",
+      "crystalline-nephropathy"
+    ],
+    "interaction_tags": [
+      "nephrotoxic-combinations",
+      "renally-cleared"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "viral-DNA-polymerase-inhibition"
+      ],
+      "prototype_class": "Herpesvirus antivirals",
+      "adme_profile": "renally-cleared",
+      "presentation_cluster": [
+        "herpes-simplex",
+        "herpes-zoster"
+      ],
+      "adverse_cluster": [
+        "nephrotoxicity"
+      ],
+      "interaction_cluster": [
+        "nephrotoxic-combinations"
+      ]
+    }
+  },
+  {
+    "id": "oseltamivir",
+    "generic_name": "oseltamivir",
+    "brand_names": [
+      "Tamiflu"
+    ],
+    "drug_class": "antiviral",
+    "subclass": "neuraminidase inhibitor",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "influenza neuraminidase"
+    ],
+    "mechanism_summary": "Prodrug converted by hepatic esterases to oseltamivir carboxylate, which competitively inhibits influenza A and B neuraminidase; neuraminidase is required for viral budding and release from infected cells, limiting viral spread.",
+    "indications": [
+      "influenza A and B treatment (within 48 hours of symptom onset)",
+      "influenza prophylaxis (post-exposure and seasonal)",
+      "treatment of serious influenza in hospitalized patients (regardless of symptom duration)",
+      "H5N1 avian influenza (treatment and prophylaxis)"
+    ],
+    "contraindications": [
+      "known hypersensitivity to oseltamivir"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "vomiting (take with food to minimize)",
+        "headache",
+        "diarrhea"
+      ],
+      "serious": [
+        "neuropsychiatric events (confusion, hallucinations, self-injury \u2014 reported mainly in pediatric patients in Japan; causality uncertain)",
+        "bronchospasm (rare)",
+        "serious skin reactions"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "~75% oral bioavailability as oseltamivir carboxylate; food does not affect bioavailability",
+      "distribution": "Oseltamivir carboxylate: protein binding 3%; widely distributed",
+      "metabolism": "Prodrug hydrolyzed by hepatic esterases (primarily CES1) to active carboxylate",
+      "excretion": "Renal; dose adjustment for CrCl <30 mL/min",
+      "half_life": "6\u201310 hours (carboxylate)",
+      "onset": "1\u20132 hours",
+      "peak": "3\u20134 hours",
+      "duration": "12 hours (q12h dosing x5 days for treatment)",
+      "protein_binding": "3%",
+      "vd": "~23 L",
+      "absorption_note": "75% as active metabolite"
+    },
+    "drug_interactions": [
+      {
+        "drug": "probenecid",
+        "mechanism": "reduces renal tubular secretion of oseltamivir carboxylate; doubles levels",
+        "severity": "minor"
+      },
+      {
+        "drug": "influenza live attenuated vaccine (LAIV)",
+        "mechanism": "oseltamivir may reduce LAIV efficacy \u2014 separate by 48 hours before and 2 weeks after LAIV",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer within 48 hours of symptom onset for maximum benefit; treatment beyond 48 hours may still be beneficial in severe illness, hospitalized patients, or immunocompromised hosts",
+      "Take with food to reduce GI side effects; suspension can be prepared from capsules if needed for patients who cannot swallow capsules",
+      "Renal dose adjustment: for CrCl 10\u201330 mL/min, reduce to 75 mg once daily (treatment) or 30 mg once daily (prophylaxis); for CrCl <10 or ESRD on dialysis, specific dosing protocols apply",
+      "For post-exposure prophylaxis: 75 mg once daily x10 days; for seasonal prophylaxis: 75 mg once daily for up to 6 weeks during outbreak period"
+    ],
+    "clinical_pearls": [
+      "Oseltamivir reduces duration of influenza by approximately 1 day and reduces risk of complications (pneumonia, hospitalization) \u2014 benefits are most pronounced in high-risk patients (elderly, immunocompromised, pregnant) even when started late",
+      "Oseltamivir resistance in influenza A (H275Y mutation in neuraminidase) has been documented in seasonal H1N1 strains and in immunocompromised patients on prolonged therapy \u2014 peramivir IV or inhaled zanamivir may be alternatives"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category C \u2014 benefits likely outweigh risks for influenza treatment in pregnancy",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "influenza-treatment",
+      "influenza-prophylaxis"
+    ],
+    "adverse_effect_tags": [
+      "nausea",
+      "vomiting",
+      "neuropsychiatric"
+    ],
+    "interaction_tags": [
+      "renally-cleared"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "neuraminidase-inhibition"
+      ],
+      "prototype_class": "Influenza antivirals",
+      "adme_profile": "renally-cleared",
+      "presentation_cluster": [
+        "influenza"
+      ],
+      "adverse_cluster": [
+        "nausea"
+      ],
+      "interaction_cluster": [
+        "renal-clearance"
+      ]
+    }
+  },
+  {
+    "id": "fluconazole",
+    "generic_name": "fluconazole",
+    "brand_names": [
+      "Diflucan"
+    ],
+    "drug_class": "antifungal",
+    "subclass": "triazole antifungal",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "lanosterol 14-alpha-demethylase (CYP51)"
+    ],
+    "mechanism_summary": "Inhibits fungal CYP51 (lanosterol 14-alpha-demethylase), preventing conversion of lanosterol to ergosterol; depletion of ergosterol disrupts fungal cell membrane integrity; fungistatic against Candida; does not affect human cholesterol synthesis significantly at therapeutic doses.",
+    "indications": [
+      "oropharyngeal and esophageal candidiasis",
+      "vulvovaginal candidiasis (single 150 mg dose)",
+      "candidemia (non-neutropenic \u2014 second-line after echinocandin)",
+      "cryptococcal meningitis (consolidation/maintenance therapy)",
+      "candida UTI",
+      "antifungal prophylaxis in high-risk immunocompromised patients"
+    ],
+    "contraindications": [
+      "concurrent QTc-prolonging drugs with narrow therapeutic index (astemizole, terfenadine, cisapride)",
+      "concomitant voriconazole (both CYP2C19/CYP3A4 inhibitors)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "headache",
+        "rash",
+        "elevated LFTs"
+      ],
+      "serious": [
+        "hepatotoxicity (rare but serious)",
+        "QTc prolongation",
+        "Stevens-Johnson syndrome (rare)",
+        "drug interactions via CYP inhibition"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "~90% oral bioavailability \u2014 equivalent oral/IV dosing",
+      "distribution": "Protein binding 11\u201312%; Vd ~0.6 L/kg; excellent CSF penetration (~80% of serum levels)",
+      "metabolism": "CYP2C9, CYP2C19, CYP3A4 inhibitor; minimal hepatic metabolism of fluconazole itself",
+      "excretion": "Renal; ~80% excreted unchanged; dose reduction for CrCl <50 mL/min",
+      "half_life": "30 hours \u2014 allows once-daily dosing",
+      "onset": "1\u20132 hours",
+      "peak": "1\u20132 hours",
+      "duration": "24 hours",
+      "protein_binding": "11\u201312%",
+      "vd": "~0.6 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "warfarin",
+        "mechanism": "CYP2C9 inhibition increases warfarin AUC by ~44%; major bleeding risk",
+        "severity": "major"
+      },
+      {
+        "drug": "QTc-prolonging drugs",
+        "mechanism": "fluconazole prolongs QTc via hERG potassium channel blockade and CYP inhibition of QTc-prolonging drugs",
+        "severity": "major"
+      },
+      {
+        "drug": "tacrolimus/cyclosporine",
+        "mechanism": "CYP3A4 inhibition doubles tacrolimus/cyclosporine levels",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor LFTs at baseline and with prolonged use; fluconazole hepatotoxicity is rare but potentially serious",
+      "Review medication list for CYP interactions before initiating \u2014 fluconazole inhibits CYP2C9, CYP2C19, and CYP3A4, affecting warfarin, phenytoin, cyclosporine, tacrolimus, and dozens of other drugs",
+      "Single-dose 150 mg (Diflucan) for vaginal candidiasis is safe for most women; advise patient that symptoms may take 2\u20133 days to resolve",
+      "Dose must be halved when CrCl <50 mL/min (once daily to once every 48 hours); in HD patients, give one dose after each dialysis session"
+    ],
+    "clinical_pearls": [
+      "Fluconazole has no activity against Candida krusei (intrinsically resistant) and Candida glabrata (dose-dependent susceptibility); candidemia in ICU patients should initially be treated with echinocandin (anidulafungin, micafungin, caspofungin) regardless of species, then step down to fluconazole for susceptible species",
+      "The oral bioavailability of fluconazole (~90%) is essentially equivalent to IV \u2014 switching from IV to oral fluconazole on the same dose provides identical drug exposure at significantly lower cost"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category D (high-dose prolonged use) \u2014 single-dose 150 mg appears safe; prolonged high-dose therapy associated with fetal anomalies",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "candidiasis",
+      "cryptococcal-meningitis",
+      "fungal-prophylaxis"
+    ],
+    "adverse_effect_tags": [
+      "hepatotoxicity",
+      "QTc-prolongation",
+      "drug-interactions"
+    ],
+    "interaction_tags": [
+      "CYP2C9-inhibitor",
+      "CYP3A4-inhibitor",
+      "QTc-prolonging"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "ergosterol-synthesis-inhibition"
+      ],
+      "prototype_class": "Triazole antifungals",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "candidiasis",
+        "fungal-prophylaxis"
+      ],
+      "adverse_cluster": [
+        "hepatotoxicity",
+        "QTc-prolongation"
+      ],
+      "interaction_cluster": [
+        "CYP2C9-inhibitor",
+        "CYP3A4-inhibitor"
+      ]
+    }
+  },
+  {
+    "id": "isoniazid",
+    "generic_name": "isoniazid",
+    "brand_names": [
+      "INH",
+      "Nydrazid"
+    ],
+    "drug_class": "antibiotic",
+    "subclass": "antimycobacterial",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "InhA (enoyl-ACP reductase)",
+      "KasA (beta-ketoacyl-ACP synthase)"
+    ],
+    "mechanism_summary": "Prodrug activated by mycobacterial catalase-peroxidase (KatG); active intermediate inhibits InhA and KasA, enzymes required for mycolic acid synthesis (a unique component of mycobacterial cell walls); bactericidal against actively dividing mycobacteria.",
+    "indications": [
+      "tuberculosis treatment (first-line; always combined with other agents)",
+      "latent TB infection (LTBI) \u2014 9 months or 3 months with rifapentine/rifampin short-course"
+    ],
+    "contraindications": [
+      "severe isoniazid-induced liver disease",
+      "severe hypersensitivity to isoniazid"
+    ],
+    "adverse_effects": {
+      "common": [
+        "peripheral neuropathy (dose-dependent; prevented by pyridoxine B6 supplementation)",
+        "hepatotoxicity (transient LFT elevation in 10\u201320%; clinical hepatitis 0.1\u20132%)",
+        "rash"
+      ],
+      "serious": [
+        "hepatotoxicity (drug-induced hepatitis \u2014 fatal cases reported; risk increases with age, alcohol use, pre-existing liver disease)",
+        "peripheral neuropathy (irreversible without pyridoxine)",
+        "lupus-like syndrome",
+        "psychosis"
+      ]
+    },
+    "black_box_warnings": [
+      "severe and sometimes fatal hepatitis \u2014 monitor LFTs; discontinue if ALT >3\u20135x ULN with symptoms or >5x ULN without symptoms"
+    ],
+    "pharmacokinetics": {
+      "absorption": "Nearly complete oral absorption; reduced by food and antacids",
+      "distribution": "Protein binding 10\u201315%; widely distributed including CSF, caseous tissue; Vd ~0.6 L/kg",
+      "metabolism": "NAT2 (N-acetyltransferase 2) acetylation \u2014 pharmacogenomic: slow acetylators have higher drug levels and more neuropathy; fast acetylators may have lower efficacy and more acetylhydrazine hepatotoxicity",
+      "excretion": "Renal; metabolites excreted in urine",
+      "half_life": "1\u20134 hours (fast acetylators); 2\u20135 hours (slow acetylators)",
+      "onset": "Antituberculous effect: weeks",
+      "peak": "1\u20132 hours",
+      "duration": "24 hours",
+      "protein_binding": "10\u201315%",
+      "vd": "~0.6 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "phenytoin",
+        "mechanism": "isoniazid inhibits CYP2C9, increasing phenytoin levels and toxicity",
+        "severity": "major"
+      },
+      {
+        "drug": "pyridoxine (B6)",
+        "mechanism": "isoniazid depletes pyridoxine; supplementation prevents peripheral neuropathy",
+        "severity": "moderate"
+      },
+      {
+        "drug": "rifampin",
+        "mechanism": "combined with isoniazid in TB therapy; rifampin induces isoniazid metabolism via CYP but they are used together for synergy",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer pyridoxine (vitamin B6) 25\u201350 mg/day concurrently to prevent peripheral neuropathy \u2014 especially important in patients with diabetes, malnutrition, HIV, pregnancy, and renal failure",
+      "Monitor LFTs at baseline and monthly in patients with risk factors (age >35, daily alcohol use, chronic liver disease, concurrent hepatotoxic drugs); hold INH if ALT >5x ULN (asymptomatic) or >3x ULN with symptoms",
+      "Administer on empty stomach (1 hour before or 2 hours after meals) for maximum absorption; antacids also reduce absorption",
+      "Instruct patients not to consume alcohol during TB treatment; report nausea, vomiting, abdominal pain, jaundice, or tingling/numbness in extremities immediately"
+    ],
+    "clinical_pearls": [
+      "Isoniazid peripheral neuropathy is caused by competitive inhibition of pyridoxine phosphokinase \u2014 it is entirely preventable with pyridoxine 25\u201350 mg/day; neuropathy that does develop may be irreversible",
+      "NAT2 acetylator status (pharmacogenomic variation) significantly affects isoniazid pharmacokinetics and toxicity profile \u2014 slow acetylators have 3\u20135x higher drug levels with greater neuropathy risk; fast acetylators may have lower efficacy"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category C \u2014 used in pregnancy when benefit outweighs risk (active TB); pyridoxine supplementation essential",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "tuberculosis",
+      "latent-TB"
+    ],
+    "adverse_effect_tags": [
+      "hepatotoxicity",
+      "peripheral-neuropathy",
+      "lupus-like"
+    ],
+    "interaction_tags": [
+      "CYP2C9-inhibitor",
+      "NAT2-substrate",
+      "pyridoxine-depletion"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "mycolic-acid-synthesis-inhibition"
+      ],
+      "prototype_class": "Antimycobacterials",
+      "adme_profile": "hepatically-metabolized-NAT2",
+      "presentation_cluster": [
+        "tuberculosis"
+      ],
+      "adverse_cluster": [
+        "hepatotoxicity",
+        "peripheral-neuropathy"
+      ],
+      "interaction_cluster": [
+        "CYP2C9-inhibitor"
+      ]
+    }
+  },
+  {
+    "id": "rifampin",
+    "generic_name": "rifampin",
+    "brand_names": [
+      "Rifadin",
+      "Rimactane"
+    ],
+    "drug_class": "antibiotic",
+    "subclass": "rifamycin / antimycobacterial",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "bacterial DNA-dependent RNA polymerase (beta subunit)"
+    ],
+    "mechanism_summary": "Inhibits the beta subunit of bacterial DNA-dependent RNA polymerase, blocking RNA synthesis and gene transcription; bactericidal; also penetrates biofilms and kills intracellular organisms; one of the most potent CYP inducers in pharmacology.",
+    "indications": [
+      "tuberculosis (always combined \u2014 never monotherapy to prevent resistance)",
+      "LTBI (3-4 months with isoniazid or 4 months alone)",
+      "Staphylococcal prosthetic joint/device infection (adjunctive \u2014 not monotherapy)",
+      "meningococcal prophylaxis (close contacts)",
+      "Legionella (combination therapy)"
+    ],
+    "contraindications": [
+      "concurrent saquinavir or ritonavir-boosted saquinavir",
+      "hypersensitivity to rifamycins"
+    ],
+    "adverse_effects": {
+      "common": [
+        "hepatotoxicity (elevated LFTs)",
+        "orange-red discoloration of body fluids (urine, sweat, tears, saliva \u2014 benign, expected)",
+        "nausea",
+        "rash",
+        "flu-like syndrome (intermittent dosing)"
+      ],
+      "serious": [
+        "fulminant hepatitis (rare)",
+        "thrombocytopenia (intermittent high-dose therapy)",
+        "drug interactions via CYP induction (most significant pharmacological property)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "Well absorbed orally (~90%); significantly reduced by food; administer on empty stomach",
+      "distribution": "Protein binding 80%; Vd ~1 L/kg; excellent intracellular penetration; crosses BBB",
+      "metabolism": "Hepatic hydrolysis and autoinduction of CYP3A4, CYP2C9, CYP2C19, CYP1A2, CYP2B6 \u2014 rifampin is THE most potent CYP inducer",
+      "excretion": "Biliary/fecal (60%) and renal (30%)",
+      "half_life": "2\u20135 hours (shortens with autoinduction over 1\u20132 weeks)",
+      "onset": "CYP induction begins within 24 hours; maximum at 5\u20137 days",
+      "peak": "2\u20134 hours",
+      "duration": "24 hours",
+      "protein_binding": "80%",
+      "vd": "~1 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "warfarin",
+        "mechanism": "CYP2C9/CYP3A4 induction reduces warfarin levels by 60\u201380%; requires dose doubling; major bleeding risk when stopped",
+        "severity": "major"
+      },
+      {
+        "drug": "oral contraceptives",
+        "mechanism": "CYP3A4 induction reduces estrogen/progestin levels; contraceptive failure",
+        "severity": "major"
+      },
+      {
+        "drug": "antiretrovirals (protease inhibitors, integrase inhibitors)",
+        "mechanism": "CYP3A4 induction dramatically reduces levels of most antiretrovirals",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Counsel patients that orange-red discoloration of urine, tears, sweat, and saliva is expected and harmless \u2014 but may permanently stain soft contact lenses",
+      "Rifampin is the most potent CYP inducer in clinical practice \u2014 review ALL medications before initiating; critical interactions include oral contraceptives, warfarin, antiretrovirals, immunosuppressants, antifungals, and antiepileptics",
+      "Administer 1 hour before or 2 hours after meals for maximum absorption; take at the same time each day",
+      "For TB therapy: NEVER prescribe rifampin as monotherapy \u2014 resistance develops within days; always use in combination (RIPE regimen: Rifampin + Isoniazid + Pyrazinamide + Ethambutol)"
+    ],
+    "clinical_pearls": [
+      "Rifampin autoinduces its own CYP3A4-mediated metabolism \u2014 within the first 1\u20132 weeks of therapy, its half-life shortens by 40% as autoinduction reaches maximum, requiring reassessment of dosing intervals",
+      "The CYP induction from rifampin persists for 2\u20134 weeks after stopping \u2014 drug interactions with warfarin and other narrow therapeutic index drugs must be actively managed through the washout period"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category C \u2014 used in TB treatment when benefit outweighs risk",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "tuberculosis",
+      "latent-TB",
+      "meningococcal-prophylaxis",
+      "staph-device-infection"
+    ],
+    "adverse_effect_tags": [
+      "hepatotoxicity",
+      "drug-interactions",
+      "orange-discoloration"
+    ],
+    "interaction_tags": [
+      "CYP3A4-inducer",
+      "CYP2C9-inducer",
+      "CYP1A2-inducer",
+      "CYP2B6-inducer"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "RNA-polymerase-inhibition"
+      ],
+      "prototype_class": "Rifamycins",
+      "adme_profile": "hepatic-biliary",
+      "presentation_cluster": [
+        "tuberculosis"
+      ],
+      "adverse_cluster": [
+        "hepatotoxicity"
+      ],
+      "interaction_cluster": [
+        "CYP-inducer"
+      ]
+    }
+  },
+  {
+    "id": "dolutegravir",
+    "generic_name": "dolutegravir",
+    "brand_names": [
+      "Tivicay",
+      "Dovato (with lamivudine)",
+      "Triumeq (with abacavir/lamivudine)"
+    ],
+    "drug_class": "antiretroviral",
+    "subclass": "HIV integrase strand transfer inhibitor (INSTI)",
+    "prototype_for": false,
+    "prototype_drug": "raltegravir",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "HIV integrase"
+    ],
+    "mechanism_summary": "Inhibits HIV integrase by binding to the active site and blocking the strand transfer step, preventing integration of HIV cDNA into the host chromosome; highly potent with a high genetic barrier to resistance.",
+    "indications": [
+      "HIV-1 infection (treatment-naive and treatment-experienced adults and children \u22654 weeks)",
+      "component of preferred initial antiretroviral regimens"
+    ],
+    "contraindications": [
+      "concurrent dofetilide (CYP3A4/renal transporter interactions)",
+      "concurrent pilsicainide (similar)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "insomnia",
+        "headache",
+        "nausea",
+        "elevated creatinine (inhibits tubular secretion \u2014 not true nephrotoxicity)",
+        "elevated creatine kinase"
+      ],
+      "serious": [
+        "hypersensitivity reactions (rare \u2014 discontinue if suspected)",
+        "neural tube defects (periconceptional exposure)",
+        "immune reconstitution inflammatory syndrome (IRIS) upon initiation in advanced HIV",
+        "hepatotoxicity (in those with HBV/HCV co-infection)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "~70% bioavailability with or without food; take with food for highest levels",
+      "distribution": "Protein binding >98.9%; Vd ~17.4 L",
+      "metabolism": "UGT1A1 (primary), CYP3A4 (minor)",
+      "excretion": "Fecal (~53%) and renal (~31%); no renal dose adjustment needed",
+      "half_life": "14 hours",
+      "onset": "Days to weeks for viral suppression",
+      "peak": "2\u20133 hours",
+      "duration": "24 hours",
+      "protein_binding": ">98.9%",
+      "vd": "~17.4 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "polyvalent cations (antacids, calcium, iron, supplements)",
+        "mechanism": "chelation reduces dolutegravir absorption; take dolutegravir 2h before or 6h after cation-containing products",
+        "severity": "major"
+      },
+      {
+        "drug": "rifampin",
+        "mechanism": "UGT1A1/CYP3A4 induction reduces dolutegravir levels by ~54%; increase dose to 50 mg BID when co-administered with rifampin",
+        "severity": "major"
+      },
+      {
+        "drug": "metformin",
+        "mechanism": "dolutegravir inhibits renal OCT2/MATE1 transporters, increasing metformin levels up to 79%; adjust metformin dose",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Take with food (especially for resistant strains requiring twice-daily dosing); take 2 hours before or 6 hours after antacids, calcium, iron, or magnesium to prevent chelation-mediated absorption reduction",
+      "For HIV-positive women who may become pregnant: counsel about the small (0.1%) but real risk of neural tube defects with periconceptional dolutegravir exposure; discuss risk-benefit; folic acid supplementation",
+      "Apparent creatinine rise of 0.1\u20130.2 mg/dL is expected \u2014 dolutegravir inhibits tubular creatinine secretion without affecting true GFR; this should be recognized and not lead to dose adjustment",
+      "Ensure HBV and HCV status are known before initiating antiretroviral therapy \u2014 coinfection significantly increases risk of hepatic complications"
+    ],
+    "clinical_pearls": [
+      "Dolutegravir has the highest genetic barrier to resistance of the INSTIs, owing to stacking interactions with Q148, G140, and Y143 residues \u2014 resistance mutations significantly impair viral fitness, making dolutegravir a preferred first-line agent per WHO global guidelines",
+      "The Triumeq fixed-dose combination (dolutegravir/abacavir/lamivudine) requires HLA-B*5701 testing before initiation \u2014 HLA-B*5701-positive patients have a 5\u20138% risk of potentially fatal abacavir hypersensitivity reaction"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category \u2014 neural tube defect risk with periconceptional exposure (~0.1%); WHO recommends continuation but informed consent required",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "HIV-treatment"
+    ],
+    "adverse_effect_tags": [
+      "insomnia",
+      "neural-tube-defect",
+      "IRIS"
+    ],
+    "interaction_tags": [
+      "UGT1A1-substrate",
+      "chelation-interaction",
+      "OCT2-inhibitor"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "HIV-integrase-inhibition"
+      ],
+      "prototype_class": "Integrase inhibitors (INSTIs)",
+      "adme_profile": "hepatically-metabolized-UGT1A1",
+      "presentation_cluster": [
+        "HIV-treatment"
+      ],
+      "adverse_cluster": [
+        "neural-tube-defect"
+      ],
+      "interaction_cluster": [
+        "chelation",
+        "UGT1A1-substrate"
+      ]
+    }
   }
 ]
