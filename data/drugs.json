@@ -43949,5 +43949,1249 @@
         "serotonergic"
       ]
     }
+  },
+  {
+    "id": "chlorpromazine",
+    "generic_name": "chlorpromazine",
+    "brand_names": [
+      "Thorazine"
+    ],
+    "drug_class": "first-generation antipsychotic (FGA)",
+    "subclass": "low-potency phenothiazine",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "D2 dopamine receptor",
+      "alpha-1 adrenergic receptor",
+      "H1 histamine receptor",
+      "muscarinic receptors",
+      "5-HT2A receptor"
+    ],
+    "mechanism_summary": "Blocks D2 dopamine receptors in the mesolimbic pathway (antipsychotic effect) and tuberoinfundibular pathway (hyperprolactinemia). Wide receptor promiscuity including alpha-1, H1, and muscarinic blockade accounts for its extensive side effect profile. The first antipsychotic drug, developed in 1952.",
+    "indications": [
+      "schizophrenia",
+      "acute agitation",
+      "intractable hiccups",
+      "nausea and vomiting",
+      "off-label: mania"
+    ],
+    "contraindications": [
+      "concurrent CNS depressants (relative)",
+      "bone marrow depression",
+      "QT prolongation"
+    ],
+    "adverse_effects": {
+      "common": [
+        "sedation (prominent)",
+        "orthostatic hypotension",
+        "anticholinergic effects",
+        "photosensitivity",
+        "weight gain",
+        "hyperprolactinemia"
+      ],
+      "serious": [
+        "extrapyramidal symptoms (EPS)",
+        "tardive dyskinesia",
+        "neuroleptic malignant syndrome (NMS)",
+        "QT prolongation",
+        "agranulocytosis (rare)"
+      ]
+    },
+    "black_box_warnings": [
+      "increased mortality in elderly patients with dementia-related psychosis"
+    ],
+    "pharmacokinetics": {
+      "absorption": "variable oral bioavailability (~32%); IM absorption more reliable",
+      "distribution": "highly lipophilic; protein binding ~95-98%; large Vd; accumulates in tissues",
+      "metabolism": "extensively hepatic via CYP2D6 and CYP1A2; >10 metabolites",
+      "excretion": "renal and biliary",
+      "half_life": "8-35 hours",
+      "onset": "30-60 minutes (IM); 30-60 minutes (oral)",
+      "peak": "2-4 hours (oral)",
+      "duration": "4-6 hours per dose",
+      "protein_binding": "95-98%",
+      "vd": "~20 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CNS depressants",
+        "mechanism": "additive sedation",
+        "severity": "major"
+      },
+      {
+        "drug": "antihypertensives",
+        "mechanism": "additive hypotension via alpha-1 blockade",
+        "severity": "moderate"
+      },
+      {
+        "drug": "anticholinergics",
+        "mechanism": "additive anticholinergic effects",
+        "severity": "moderate"
+      },
+      {
+        "drug": "lithium",
+        "mechanism": "increased neurotoxicity risk",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor blood pressure for orthostatic hypotension; low-potency phenothiazines have the highest alpha-1 blockade among antipsychotics \u2014 have patient sit before standing.",
+      "Assess for extrapyramidal symptoms: akathisia (subjective restlessness), parkinsonian tremor/rigidity, acute dystonia (neck stiffness, tongue protrusion) \u2014 report immediately as dystonia responds to diphenhydramine or benztropine.",
+      "Protect patient from sunlight; photosensitivity can cause severe burns \u2014 apply SPF 30+ sunscreen when outdoors.",
+      "Neuroleptic malignant syndrome (NMS) may occur at any time: fever, muscle rigidity, altered consciousness, and autonomic instability \u2014 discontinue immediately and treat as emergency."
+    ],
+    "clinical_pearls": [
+      "Chlorpromazine's discovery in 1952 revolutionized psychiatry, enabling deinstitutionalization of millions of patients with schizophrenia; it is the 'prototype' of all antipsychotic drugs.",
+      "Low-potency antipsychotics like chlorpromazine cause more sedation, hypotension, and anticholinergic effects but fewer EPS compared to high-potency drugs like haloperidol \u2014 a clinically useful distinction."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use with caution; neonatal EPS and withdrawal reported",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "schizophrenia",
+      "acute agitation",
+      "nausea",
+      "hiccups"
+    ],
+    "adverse_effect_tags": [
+      "EPS",
+      "tardive dyskinesia",
+      "NMS",
+      "sedation",
+      "orthostatic hypotension"
+    ],
+    "interaction_tags": [
+      "CYP2D6-substrate",
+      "anticholinergic",
+      "CNS-depression"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "D2-antagonism"
+      ],
+      "prototype_class": "first-generation antipsychotics",
+      "adme_profile": "CYP2D6-metabolized",
+      "presentation_cluster": [
+        "acute-psychosis"
+      ],
+      "adverse_cluster": [
+        "EPS",
+        "NMS",
+        "anticholinergic-toxidrome"
+      ],
+      "interaction_cluster": [
+        "CNS-depressants",
+        "anticholinergic"
+      ]
+    }
+  },
+  {
+    "id": "fluphenazine",
+    "generic_name": "fluphenazine",
+    "brand_names": [
+      "Prolixin"
+    ],
+    "drug_class": "first-generation antipsychotic (FGA)",
+    "subclass": "high-potency phenothiazine",
+    "prototype_for": false,
+    "prototype_drug": "haloperidol",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "D2 dopamine receptor"
+    ],
+    "mechanism_summary": "High-potency D2 receptor antagonist with tight D2 binding and minimal alpha-1, H1, or muscarinic receptor affinity, resulting in more EPS but less sedation and orthostatic hypotension than low-potency phenothiazines. Available as long-acting decanoate depot injection for adherence-challenged patients.",
+    "indications": [
+      "schizophrenia",
+      "off-label: Tourette syndrome"
+    ],
+    "contraindications": [
+      "subcortical brain damage",
+      "blood dyscrasias",
+      "hepatic impairment"
+    ],
+    "adverse_effects": {
+      "common": [
+        "extrapyramidal symptoms (high rate)",
+        "akathisia",
+        "hyperprolactinemia"
+      ],
+      "serious": [
+        "tardive dyskinesia",
+        "NMS",
+        "acute dystonia"
+      ]
+    },
+    "black_box_warnings": [
+      "increased mortality in elderly patients with dementia-related psychosis"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability variable; IM decanoate provides sustained release over 2-4 weeks",
+      "distribution": "highly lipophilic; protein binding ~91-99%",
+      "metabolism": "hepatic via CYP2D6",
+      "excretion": "renal and biliary",
+      "half_life": "10-20 hours (oral); 6.8-9.6 days (decanoate)",
+      "onset": "oral: within hours; decanoate: 24-72 hours with peak effect at 48-96 hours",
+      "peak": "2-4 hours (oral); 24-72 hours (decanoate)",
+      "duration": "oral: 6-8 hours; decanoate: 2-4 weeks",
+      "protein_binding": "91-99%",
+      "vd": "not well characterized"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CNS depressants",
+        "mechanism": "additive sedation",
+        "severity": "moderate"
+      },
+      {
+        "drug": "anticholinergics",
+        "mechanism": "additive anticholinergic effects; may mask EPS",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Fluphenazine decanoate is a long-acting depot injection given every 2-4 weeks; this improves medication adherence in patients who cannot reliably take daily oral medication.",
+      "EPS risk is highest among all phenothiazines due to high D2 binding affinity; have anticholinergic agents (benztropine, diphenhydramine) available for acute dystonic reactions.",
+      "Assess for akathisia at every visit: patients experience an overwhelming urge to move, which can be mistaken for psychotic agitation and incorrectly prompt dose increases.",
+      "Monitor for tardive dyskinesia at every visit using AIMS scale; this risk accumulates over months to years of treatment and may be irreversible."
+    ],
+    "clinical_pearls": [
+      "The development of fluphenazine decanoate as a long-acting injectable (LAI) represented a major advancement in managing schizophrenia in patients with poor medication adherence, which is the primary predictor of relapse.",
+      "High-potency FGAs like fluphenazine and haloperidol cause more EPS but less sedation, orthostatic hypotension, and weight gain than low-potency agents \u2014 this allows for safer use in medically ill patients."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use with caution; neonatal EPS reported",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "schizophrenia",
+      "psychosis"
+    ],
+    "adverse_effect_tags": [
+      "EPS",
+      "tardive dyskinesia",
+      "NMS",
+      "akathisia"
+    ],
+    "interaction_tags": [
+      "CYP2D6-substrate",
+      "CNS-depression"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "D2-antagonism"
+      ],
+      "prototype_class": "first-generation antipsychotics",
+      "adme_profile": "CYP2D6-metabolized",
+      "presentation_cluster": [
+        "acute-psychosis"
+      ],
+      "adverse_cluster": [
+        "EPS",
+        "tardive-dyskinesia",
+        "NMS"
+      ],
+      "interaction_cluster": [
+        "CNS-depressants"
+      ]
+    }
+  },
+  {
+    "id": "ziprasidone",
+    "generic_name": "ziprasidone",
+    "brand_names": [
+      "Geodon"
+    ],
+    "drug_class": "second-generation antipsychotic (SGA)",
+    "subclass": "benzisothiazolyl piperazine",
+    "prototype_for": false,
+    "prototype_drug": "risperidone",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "D2 dopamine receptor",
+      "5-HT2A receptor",
+      "5-HT1A receptor (partial agonist)",
+      "SERT",
+      "NET"
+    ],
+    "mechanism_summary": "Blocks D2 and 5-HT2A receptors (SGA mechanism); uniquely has serotonin reuptake inhibition and 5-HT1A partial agonism, theoretically conferring antidepressant and anxiolytic properties. Notable for QT prolongation potential among SGAs.",
+    "indications": [
+      "schizophrenia",
+      "acute agitation in schizophrenia (IM)",
+      "bipolar I disorder (acute mania and maintenance)"
+    ],
+    "contraindications": [
+      "QT prolongation",
+      "concurrent QT-prolonging agents",
+      "recent MI or uncompensated heart failure"
+    ],
+    "adverse_effects": {
+      "common": [
+        "somnolence",
+        "headache",
+        "dizziness",
+        "nausea",
+        "constipation"
+      ],
+      "serious": [
+        "QT prolongation",
+        "neuroleptic malignant syndrome",
+        "tardive dyskinesia",
+        "hyperglycemia/metabolic effects (less than other SGAs)"
+      ]
+    },
+    "black_box_warnings": [
+      "increased mortality in elderly patients with dementia-related psychosis"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~60% with food; food doubles absorption \u2014 must be taken with food",
+      "distribution": "protein binding ~99%; Vd ~1.5 L/kg",
+      "metabolism": "primarily aldehyde oxidase (60%), with CYP3A4 contribution (40%)",
+      "excretion": "fecal (~66%) and renal (~20%)",
+      "half_life": "6.6 hours (oral); 2-5 hours (IM)",
+      "onset": "IM: within 15-20 minutes; oral: 1-3 days",
+      "peak": "6-8 hours (oral); 60 minutes (IM)",
+      "duration": "12 hours",
+      "protein_binding": "99%",
+      "vd": "1.5 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "QT-prolonging agents",
+        "mechanism": "additive QT prolongation \u2014 contraindicated combinations",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "CYP3A4 inducers (carbamazepine)",
+        "mechanism": "decrease ziprasidone levels by ~35%",
+        "severity": "moderate"
+      },
+      {
+        "drug": "CYP3A4 inhibitors (ketoconazole)",
+        "mechanism": "increase ziprasidone AUC by ~40%",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Ziprasidone must be taken with food (at least 500 calories) \u2014 absorption is 60% higher with food; medication adherence teaching must include this requirement.",
+      "Obtain baseline ECG and QTc; contraindicated if QTc >500 ms; reassess ECG after dose increases and in patients with hypokalemia or hypomagnesemia.",
+      "Ziprasidone has the lowest metabolic burden (weight gain, glucose, lipid effects) among SGAs, making it a clinical choice for patients at high metabolic risk.",
+      "IM ziprasidone is not compatible with diazepam or ketorolac IM; do not mix in the same syringe."
+    ],
+    "clinical_pearls": [
+      "Ziprasidone's favorable metabolic profile (minimal weight gain, no significant effects on glucose or lipids) makes it a preferred SGA in patients with obesity, diabetes, or metabolic syndrome.",
+      "Its requirement for food with administration is a common adherence barrier; patients who take ziprasidone without food receive approximately half the expected drug exposure, simulating a dose reduction."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use with caution",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "schizophrenia",
+      "bipolar mania",
+      "acute agitation"
+    ],
+    "adverse_effect_tags": [
+      "QT prolongation",
+      "EPS",
+      "NMS"
+    ],
+    "interaction_tags": [
+      "QT-prolongation",
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "D2-antagonism",
+        "5-HT2A-antagonism"
+      ],
+      "prototype_class": "second-generation antipsychotics",
+      "adme_profile": "hepatically-metabolized",
+      "presentation_cluster": [
+        "acute-psychosis",
+        "bipolar-disorder"
+      ],
+      "adverse_cluster": [
+        "QT-prolongation",
+        "EPS",
+        "NMS"
+      ],
+      "interaction_cluster": [
+        "QT-prolonging-combinations"
+      ]
+    }
+  },
+  {
+    "id": "paliperidone",
+    "generic_name": "paliperidone",
+    "brand_names": [
+      "Invega",
+      "Invega Sustenna",
+      "Invega Trinza"
+    ],
+    "drug_class": "second-generation antipsychotic (SGA)",
+    "subclass": "benzisoxazole derivative",
+    "prototype_for": false,
+    "prototype_drug": "risperidone",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "D2 dopamine receptor",
+      "5-HT2A receptor",
+      "alpha-1 adrenergic receptor",
+      "H1 histamine receptor"
+    ],
+    "mechanism_summary": "Active 9-hydroxy metabolite of risperidone; blocks D2 and 5-HT2A receptors (SGA mechanism) plus alpha-1 and H1 receptors. Unlike risperidone, paliperidone is not significantly metabolized by CYP enzymes because it is already the active form, offering more predictable pharmacokinetics.",
+    "indications": [
+      "schizophrenia",
+      "schizoaffective disorder",
+      "long-acting injectable (LAI) formulations for maintenance therapy"
+    ],
+    "contraindications": [
+      "hypersensitivity to risperidone or paliperidone",
+      "QT prolongation"
+    ],
+    "adverse_effects": {
+      "common": [
+        "EPS (dose-dependent)",
+        "hyperprolactinemia",
+        "somnolence",
+        "tachycardia",
+        "orthostatic hypotension",
+        "weight gain"
+      ],
+      "serious": [
+        "NMS",
+        "tardive dyskinesia",
+        "QT prolongation",
+        "metabolic effects"
+      ]
+    },
+    "black_box_warnings": [
+      "increased mortality in elderly patients with dementia-related psychosis"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral ER formulation releases drug over 24 hours via osmotic push; food increases Cmax by 50-60%",
+      "distribution": "protein binding ~74%; Vd ~487 L",
+      "metabolism": "limited hepatic metabolism; ~59% excreted unchanged renally \u2014 renal dose adjustment required",
+      "excretion": "primarily renal (~80% unchanged)",
+      "half_life": "23 hours (oral); 25-49 days (LAI 1-month); 84-95 days (LAI 3-month)",
+      "onset": "oral: days to weeks; LAI: weeks",
+      "peak": "24 hours (oral)",
+      "duration": "oral: 24 hours; LAI: 1-3 months depending on formulation",
+      "protein_binding": "74%",
+      "vd": "487 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "carbamazepine (CYP3A4/P-gp inducer)",
+        "mechanism": "decreases paliperidone levels ~37%",
+        "severity": "moderate"
+      },
+      {
+        "drug": "QT-prolonging agents",
+        "mechanism": "additive QT prolongation",
+        "severity": "major"
+      },
+      {
+        "drug": "antihypertensives",
+        "mechanism": "additive hypotension via alpha-1 blockade",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Paliperidone extended-release (ER) tablet osmotic shell is excreted intact in stool \u2014 reassure patients that seeing the tablet ghost in the stool is normal and does not indicate lack of absorption.",
+      "Dose reduction is required in renal impairment; paliperidone is 59% renally cleared unchanged, unlike most antipsychotics.",
+      "Long-acting injectable (Invega Sustenna) requires two loading doses (days 1 and 8 as deltoid injections) before transitioning to monthly dosing; this loading protocol is critical for maintaining therapeutic levels.",
+      "Monitor prolactin levels in patients with breast tenderness, galactorrhea, menstrual irregularities, or sexual dysfunction \u2014 paliperidone causes significant hyperprolactinemia due to D2 blockade in the tuberoinfundibular pathway."
+    ],
+    "clinical_pearls": [
+      "Paliperidone has the most available long-acting injectable formulations (monthly and 3-monthly) among SGAs, making it particularly valuable for adherence management in schizophrenia.",
+      "Its minimal hepatic metabolism (largely renally excreted unchanged) makes it predictable in patients with hepatic impairment but requires dose adjustment in CKD."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "use with caution; neonatal EPS reported",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "schizophrenia",
+      "schizoaffective disorder"
+    ],
+    "adverse_effect_tags": [
+      "EPS",
+      "hyperprolactinemia",
+      "NMS",
+      "weight gain"
+    ],
+    "interaction_tags": [
+      "P-gp substrate",
+      "QT-prolongation",
+      "renal-clearance"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "D2-antagonism",
+        "5-HT2A-antagonism"
+      ],
+      "prototype_class": "second-generation antipsychotics",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "acute-psychosis"
+      ],
+      "adverse_cluster": [
+        "EPS",
+        "hyperprolactinemia",
+        "NMS"
+      ],
+      "interaction_cluster": [
+        "QT-prolonging-combinations",
+        "renal-clearance"
+      ]
+    }
+  },
+  {
+    "id": "lurasidone",
+    "generic_name": "lurasidone",
+    "brand_names": [
+      "Latuda"
+    ],
+    "drug_class": "second-generation antipsychotic (SGA)",
+    "subclass": "benzisothiazol derivative",
+    "prototype_for": false,
+    "prototype_drug": "risperidone",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "D2 dopamine receptor",
+      "5-HT2A receptor",
+      "5-HT7 receptor (antagonist)",
+      "5-HT1A receptor (partial agonist)",
+      "alpha-2C adrenergic receptor"
+    ],
+    "mechanism_summary": "Blocks D2 and 5-HT2A receptors (standard SGA mechanism); additionally antagonizes 5-HT7 receptors (may enhance cognitive and depressive symptom improvement) and partially agonizes 5-HT1A (anxiolytic potential). One of the few antipsychotics with FDA approval for bipolar depression.",
+    "indications": [
+      "schizophrenia",
+      "bipolar I depression (as monotherapy or adjunct to lithium/valproate)"
+    ],
+    "contraindications": [
+      "concurrent strong CYP3A4 inhibitors or inducers"
+    ],
+    "adverse_effects": {
+      "common": [
+        "akathisia",
+        "somnolence",
+        "nausea",
+        "extrapyramidal symptoms",
+        "agitation"
+      ],
+      "serious": [
+        "NMS",
+        "tardive dyskinesia",
+        "metabolic effects (low weight gain risk)"
+      ]
+    },
+    "black_box_warnings": [
+      "increased mortality in elderly patients with dementia-related psychosis"
+    ],
+    "pharmacokinetics": {
+      "absorption": "bioavailability ~9-19%; food requirement \u2014 must be taken with \u2265350 calories; food increases AUC by 2-3 fold",
+      "distribution": "protein binding ~99%; Vd ~6173 L",
+      "metabolism": "primarily CYP3A4; active metabolites ID-14283 and ID-14326",
+      "excretion": "fecal (~80%) and renal (~9%)",
+      "half_life": "18 hours",
+      "onset": "several days to weeks",
+      "peak": "1-3 hours",
+      "duration": "24 hours",
+      "protein_binding": "99%",
+      "vd": "6173 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "strong CYP3A4 inhibitors (ketoconazole, clarithromycin, ritonavir)",
+        "mechanism": "dramatically increase lurasidone levels; contraindicated",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "strong CYP3A4 inducers (rifampin, carbamazepine)",
+        "mechanism": "dramatically decrease lurasidone levels; contraindicated",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "moderate CYP3A4 inhibitors",
+        "mechanism": "reduce maximum lurasidone dose to 40 mg/day",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Must be taken with food (\u2265350 calories); insufficient caloric co-administration reduces AUC by 50%; patient education on this requirement is essential for therapeutic drug levels.",
+      "Contraindicated with strong CYP3A4 inhibitors and inducers \u2014 verify all concurrent medications before administration; grapefruit juice is also contraindicated.",
+      "Lurasidone has a favorable metabolic profile with minimal weight gain, making it preferred in metabolically vulnerable patients.",
+      "For bipolar depression (a rare FDA indication for an antipsychotic), educate patients that lurasidone treats the depressive phase; it is not indicated for acute mania."
+    ],
+    "clinical_pearls": [
+      "Lurasidone is one of only three SGAs with FDA approval specifically for bipolar depression (along with quetiapine and cariprazine), filling an important gap since most antipsychotics are approved only for mania.",
+      "Its 5-HT7 antagonism is thought to contribute to antidepressant and pro-cognitive effects, potentially explaining some of its efficacy in bipolar depression beyond D2 blockade."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use with caution",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "schizophrenia",
+      "bipolar depression"
+    ],
+    "adverse_effect_tags": [
+      "akathisia",
+      "EPS",
+      "NMS"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "D2-antagonism",
+        "5-HT2A-antagonism"
+      ],
+      "prototype_class": "second-generation antipsychotics",
+      "adme_profile": "CYP3A4-metabolized",
+      "presentation_cluster": [
+        "acute-psychosis",
+        "bipolar-disorder"
+      ],
+      "adverse_cluster": [
+        "EPS",
+        "NMS"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "brexpiprazole",
+    "generic_name": "brexpiprazole",
+    "brand_names": [
+      "Rexulti"
+    ],
+    "drug_class": "second-generation antipsychotic (SGA)",
+    "subclass": "serotonin-dopamine activity modulator (SDAM)",
+    "prototype_for": false,
+    "prototype_drug": "aripiprazole",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "D2 dopamine receptor (partial agonist)",
+      "D3 receptor (partial agonist)",
+      "5-HT1A receptor (partial agonist)",
+      "5-HT2A receptor (antagonist)",
+      "alpha-1 adrenergic receptor"
+    ],
+    "mechanism_summary": "Structural analog of aripiprazole with similar partial agonism at D2 and 5-HT1A receptors, but greater 5-HT2A antagonism and alpha-1 blockade. The balanced partial agonism produces antipsychotic effects with lower EPS risk and may enhance serotonergic neurotransmission relevant to adjunct antidepressant use.",
+    "indications": [
+      "schizophrenia",
+      "adjunct to antidepressants for major depressive disorder",
+      "agitation associated with Alzheimer's dementia (FDA-approved 2023)"
+    ],
+    "contraindications": [
+      "no absolute contraindications (beyond hypersensitivity)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "weight gain",
+        "somnolence",
+        "akathisia (lower than FGAs)",
+        "headache"
+      ],
+      "serious": [
+        "NMS",
+        "tardive dyskinesia",
+        "metabolic effects",
+        "impulse control disorders"
+      ]
+    },
+    "black_box_warnings": [
+      "increased mortality in elderly patients with dementia-related psychosis",
+      "suicidal thoughts and behaviors (as adjunct antidepressant in pediatric and young adult patients)"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~95%; food has minimal effect",
+      "distribution": "protein binding >99%; Vd ~1.56 L/kg",
+      "metabolism": "primarily CYP2D6 and CYP3A4",
+      "excretion": "fecal (~46%) and renal (~25%)",
+      "half_life": "91 hours",
+      "onset": "several days to weeks",
+      "peak": "4 hours",
+      "duration": "once-daily dosing",
+      "protein_binding": ">99%",
+      "vd": "1.56 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "strong CYP2D6 inhibitors (fluoxetine, paroxetine)",
+        "mechanism": "increase brexpiprazole exposure; reduce dose by 50%",
+        "severity": "major"
+      },
+      {
+        "drug": "strong CYP3A4 inhibitors",
+        "mechanism": "increase brexpiprazole exposure; reduce dose by 50%",
+        "severity": "major"
+      },
+      {
+        "drug": "strong CYP3A4 inducers",
+        "mechanism": "decrease brexpiprazole levels; double dose",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor weight and metabolic parameters (glucose, lipids) at baseline and quarterly; brexpiprazole causes moderate weight gain.",
+      "As an adjunct antidepressant, assess for suicidal ideation in children, adolescents, and young adults per the antidepressant BBW.",
+      "Dose reduction required with concurrent CYP2D6 or CYP3A4 inhibitors; verify the complete medication list before administration.",
+      "Brexpiprazole was approved in 2023 for Alzheimer's-related agitation with improved evidence versus risperidone for this indication; monitor for falls and orthostatic hypotension in this population."
+    ],
+    "clinical_pearls": [
+      "Brexpiprazole represents the second FDA approval of a dopamine partial agonist (after aripiprazole) with comparable efficacy but potentially improved tolerability in the adjunct antidepressant role.",
+      "Its FDA approval for agitation in Alzheimer's dementia (2023) is notable because all antipsychotics still carry the dementia-related psychosis BBW \u2014 brexpiprazole is the only one with positive Phase III data specifically for this indication."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use with caution",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "schizophrenia",
+      "adjunct antidepressant",
+      "Alzheimer's agitation"
+    ],
+    "adverse_effect_tags": [
+      "weight gain",
+      "akathisia",
+      "NMS"
+    ],
+    "interaction_tags": [
+      "CYP2D6-substrate",
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "D2-partial-agonism",
+        "5-HT1A-partial-agonism"
+      ],
+      "prototype_class": "second-generation antipsychotics",
+      "adme_profile": "CYP2D6-metabolized",
+      "presentation_cluster": [
+        "acute-psychosis",
+        "major-depression"
+      ],
+      "adverse_cluster": [
+        "weight-gain",
+        "EPS",
+        "NMS"
+      ],
+      "interaction_cluster": [
+        "CYP2D6-substrate",
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "cariprazine",
+    "generic_name": "cariprazine",
+    "brand_names": [
+      "Vraylar"
+    ],
+    "drug_class": "second-generation antipsychotic (SGA)",
+    "subclass": "dopamine-serotonin receptor modulator",
+    "prototype_for": false,
+    "prototype_drug": "aripiprazole",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "D2 dopamine receptor (partial agonist)",
+      "D3 receptor (partial agonist, high affinity)",
+      "5-HT2A receptor (antagonist)",
+      "5-HT2B receptor",
+      "5-HT1A receptor (partial agonist)"
+    ],
+    "mechanism_summary": "Partial agonist at D2 and D3 receptors with particularly high D3 receptor affinity; D3 receptor modulation may specifically target negative symptoms of schizophrenia and depressive symptoms. 5-HT2A antagonism contributes to standard SGA antipsychotic mechanism.",
+    "indications": [
+      "schizophrenia",
+      "bipolar I mania and mixed episodes",
+      "bipolar depression (FDA-approved)",
+      "adjunct for major depressive disorder (FDA-approved 2023)"
+    ],
+    "contraindications": [
+      "concurrent strong CYP3A4 inhibitors or inducers"
+    ],
+    "adverse_effects": {
+      "common": [
+        "EPS/akathisia (higher than other SGAs)",
+        "weight gain (moderate)",
+        "somnolence",
+        "nausea"
+      ],
+      "serious": [
+        "NMS",
+        "tardive dyskinesia",
+        "metabolic effects",
+        "suicidal ideation (MDD adjunct use)"
+      ]
+    },
+    "black_box_warnings": [
+      "increased mortality in elderly patients with dementia-related psychosis",
+      "suicidal thoughts and behaviors (MDD adjunct use)"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral; food has no significant effect on absorption",
+      "distribution": "protein binding ~91-97%",
+      "metabolism": "primarily CYP3A4; two active metabolites (DCAR and DDCAR) with similar pharmacology; very long effective half-life due to active metabolites",
+      "excretion": "fecal (~21%) and renal (~21%)",
+      "half_life": "2-5 days (parent); 1-3 weeks (active metabolites collectively)",
+      "onset": "days to weeks; full effect may require 3-4 weeks",
+      "peak": "3-6 hours",
+      "duration": "once-daily dosing",
+      "protein_binding": "91-97%",
+      "vd": "not well characterized"
+    },
+    "drug_interactions": [
+      {
+        "drug": "strong CYP3A4 inhibitors (clarithromycin, ketoconazole)",
+        "mechanism": "increase cariprazine exposure; reduce dose by 50%",
+        "severity": "major"
+      },
+      {
+        "drug": "strong CYP3A4 inducers (rifampin, carbamazepine)",
+        "mechanism": "decrease cariprazine levels",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Cariprazine and its active metabolites have an extremely long effective half-life (weeks); dose changes or discontinuation effects may not be apparent for 2-4 weeks.",
+      "Akathisia is more common with cariprazine than with most SGAs \u2014 assess for subjective motor restlessness at every visit; do not confuse with psychotic agitation.",
+      "FDA approved in 2023 for adjunct treatment of MDD; when used for this indication, monitor for suicidal ideation per the antidepressant BBW.",
+      "CYP3A4 inhibitors require dose reduction to 50%; verify all medications and supplement use including CYP3A4-inhibiting substances."
+    ],
+    "clinical_pearls": [
+      "Cariprazine is one of three SGAs FDA-approved for bipolar depression (along with lurasidone and quetiapine), with its high D3 receptor affinity thought to contribute to antidepressant efficacy via reward circuitry modulation.",
+      "The very long half-life of its active metabolites (effectively weeks) means washout of cariprazine after discontinuation takes far longer than its nominal half-life suggests, with clinical implications for drug interactions and adverse effect resolution."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use with caution",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "schizophrenia",
+      "bipolar mania",
+      "bipolar depression",
+      "adjunct antidepressant"
+    ],
+    "adverse_effect_tags": [
+      "akathisia",
+      "EPS",
+      "NMS",
+      "weight gain"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "D2-partial-agonism",
+        "D3-partial-agonism"
+      ],
+      "prototype_class": "second-generation antipsychotics",
+      "adme_profile": "CYP3A4-metabolized",
+      "presentation_cluster": [
+        "acute-psychosis",
+        "bipolar-disorder",
+        "major-depression"
+      ],
+      "adverse_cluster": [
+        "EPS",
+        "NMS"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "clozapine",
+    "generic_name": "clozapine",
+    "brand_names": [
+      "Clozaril",
+      "FazaClo",
+      "Versacloz"
+    ],
+    "drug_class": "second-generation antipsychotic (SGA)",
+    "subclass": "dibenzodiazepine; atypical antipsychotic",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "D4 dopamine receptor (high affinity)",
+      "D1 receptor",
+      "D2 receptor (low affinity)",
+      "5-HT2A receptor",
+      "muscarinic receptors (M1-M4)",
+      "H1 histamine receptor",
+      "alpha-1 adrenergic receptor",
+      "GABA-B receptor"
+    ],
+    "mechanism_summary": "Unique antipsychotic with weak D2 blockade but potent D4, 5-HT2A, and broad receptor binding. Low D2 occupancy explains near-zero EPS risk. Its precise mechanism of action for treatment-resistant schizophrenia remains incompletely understood but likely involves complex multimodal effects across dopaminergic, serotonergic, and other systems.",
+    "indications": [
+      "treatment-resistant schizophrenia (defined as failure of \u22652 adequate antipsychotic trials)",
+      "reducing suicidal behavior in patients with schizophrenia or schizoaffective disorder"
+    ],
+    "contraindications": [
+      "history of clozapine-induced agranulocytosis",
+      "myeloproliferative disorders",
+      "paralytic ileus",
+      "concurrent drugs that markedly suppress bone marrow"
+    ],
+    "adverse_effects": {
+      "common": [
+        "sedation",
+        "hypersalivation (paradoxical)",
+        "weight gain (most among SGAs)",
+        "constipation",
+        "tachycardia",
+        "hypotension"
+      ],
+      "serious": [
+        "agranulocytosis (1-2%; fatal if untreated)",
+        "myocarditis and cardiomyopathy (especially in first month)",
+        "seizures (dose-dependent; 3-5% at doses >600 mg)",
+        "metabolic syndrome",
+        "ileus and bowel obstruction"
+      ]
+    },
+    "black_box_warnings": [
+      "agranulocytosis",
+      "seizures",
+      "myocarditis",
+      "other adverse cardiovascular and respiratory effects",
+      "increased mortality in elderly with dementia-related psychosis",
+      "REMS program required"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~60-70%; food has minimal effect",
+      "distribution": "protein binding ~97%; Vd ~1.6 L/kg; crosses BBB readily",
+      "metabolism": "primarily CYP1A2 (major) and CYP3A4; active metabolites include norclozapine",
+      "excretion": "renal (~50%) and fecal (~30%)",
+      "half_life": "8-16 hours",
+      "onset": "therapeutic response 6-8 weeks; clinical trial minimum 6 months",
+      "peak": "2.5 hours",
+      "duration": "12-24 hours",
+      "protein_binding": "97%",
+      "vd": "1.6 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "fluvoxamine",
+        "mechanism": "potent CYP1A2 inhibition increases clozapine levels 5-10 fold",
+        "severity": "major"
+      },
+      {
+        "drug": "carbamazepine",
+        "mechanism": "CYP3A4 induction reduces clozapine levels AND additive agranulocytosis risk",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "smoking (tobacco)",
+        "mechanism": "CYP1A2 induction reduces clozapine levels by ~50%; smoking cessation increases levels",
+        "severity": "major"
+      },
+      {
+        "drug": "benzodiazepines",
+        "mechanism": "excessive sedation and respiratory depression, especially at initiation",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Clozapine requires enrollment in the FDA REMS program; absolute neutrophil count (ANC) must be measured at baseline and weekly for 6 months, then biweekly for 6 months, then monthly \u2014 clozapine must not be dispensed without documented current ANC.",
+      "ANC thresholds: ANC \u22651500/\u03bcL to initiate; hold if ANC <1000/\u03bcL; permanently discontinue if ANC <500/\u03bcL (agranulocytosis); educate patient to report any fever, sore throat, or infection immediately.",
+      "Smoking status dramatically affects clozapine levels; if a patient stops smoking while on clozapine, levels can increase by 50-100%, potentially causing toxicity \u2014 document and report any smoking status changes.",
+      "Hypersalivation is paradoxical (muscarinic agonism via active metabolites) and may be addressed with low-dose anticholinergics or alpha-2 agonists; monitor for aspiration risk in sedated patients."
+    ],
+    "clinical_pearls": [
+      "Clozapine is the most effective antipsychotic for treatment-resistant schizophrenia and the only drug shown to reduce suicidality in schizophrenia, yet it is vastly underused due to monitoring burden and fear of agranulocytosis.",
+      "The clozapine REMS system allows real-time monitoring of ANC across all prescribers and pharmacies; the dispensing pharmacy cannot release clozapine without a confirmed current ANC \u2014 this is a safety system of exceptional rigor."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use with caution; neonatal EPS, metabolic effects",
+    "lactation_safety": "avoid; infant sedation and agranulocytosis risk",
+    "tdm_required": true,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "treatment-resistant schizophrenia",
+      "suicidality in schizophrenia"
+    ],
+    "adverse_effect_tags": [
+      "agranulocytosis",
+      "seizures",
+      "myocarditis",
+      "weight gain",
+      "metabolic syndrome"
+    ],
+    "interaction_tags": [
+      "CYP1A2-substrate",
+      "CYP3A4-substrate",
+      "smoking-CYP1A2"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "D2-antagonism",
+        "D4-antagonism"
+      ],
+      "prototype_class": "second-generation antipsychotics",
+      "adme_profile": "CYP1A2-metabolized",
+      "presentation_cluster": [
+        "acute-psychosis"
+      ],
+      "adverse_cluster": [
+        "myelosuppression",
+        "metabolic-syndrome",
+        "myocarditis"
+      ],
+      "interaction_cluster": [
+        "CYP1A2-substrate",
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "pimavanserin",
+    "generic_name": "pimavanserin",
+    "brand_names": [
+      "Nuplazid"
+    ],
+    "drug_class": "atypical antipsychotic",
+    "subclass": "selective serotonin 5-HT2A inverse agonist/antagonist",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "5-HT2A receptor (inverse agonist/antagonist)",
+      "5-HT2C receptor (inverse agonist)"
+    ],
+    "mechanism_summary": "First antipsychotic with no dopamine receptor activity; acts exclusively via 5-HT2A receptor inverse agonism/antagonism. This mechanism reduces hallucinations and delusions without worsening the motor symptoms of Parkinson's disease, unlike dopamine antagonist antipsychotics.",
+    "indications": [
+      "hallucinations and delusions associated with Parkinson's disease psychosis"
+    ],
+    "contraindications": [
+      "concurrent strong CYP3A4 inducers"
+    ],
+    "adverse_effects": {
+      "common": [
+        "peripheral edema",
+        "confusion",
+        "hallucinations (paradoxically in some patients)",
+        "gait disturbance"
+      ],
+      "serious": [
+        "QT prolongation",
+        "increased mortality in elderly dementia patients",
+        "somnolence"
+      ]
+    },
+    "black_box_warnings": [
+      "increased mortality in elderly patients with dementia-related psychosis"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; not significantly affected by food",
+      "distribution": "protein binding ~95%; large Vd",
+      "metabolism": "primarily CYP3A4 and CYP3A5; active metabolite AC-279",
+      "excretion": "primarily fecal",
+      "half_life": "57 hours (parent); 200 hours (active metabolite); effective half-life ~3 weeks",
+      "onset": "4-6 weeks for significant therapeutic effect",
+      "peak": "6 hours",
+      "duration": "once-daily dosing",
+      "protein_binding": "95%",
+      "vd": "not well characterized"
+    },
+    "drug_interactions": [
+      {
+        "drug": "strong CYP3A4 inducers (rifampin, carbamazepine)",
+        "mechanism": "contraindicated; decreases pimavanserin levels by ~90%",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "strong CYP3A4 inhibitors (ketoconazole)",
+        "mechanism": "reduce dose to 10 mg; increases exposure",
+        "severity": "major"
+      },
+      {
+        "drug": "QT-prolonging agents",
+        "mechanism": "additive QT prolongation",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Pimavanserin is the only antipsychotic that does not worsen motor symptoms in Parkinson's disease; it is the drug of choice when antipsychotic treatment is needed in PD.",
+      "Obtain baseline ECG for QT assessment; pimavanserin prolongs QT interval \u2014 monitor in patients with cardiac disease or on other QT-prolonging drugs.",
+      "Onset of therapeutic effect may require 4-6 weeks; manage caregiver and family expectations about timeline for symptom improvement.",
+      "Due to the very long effective half-life (weeks from active metabolite), drug interactions and adverse effects may persist long after discontinuation."
+    ],
+    "clinical_pearls": [
+      "Pimavanserin represents the first mechanistically distinct antipsychotic in decades; by avoiding dopamine receptor blockade entirely, it addresses a critical unmet need \u2014 treating psychosis in conditions where dopamine blockade is harmful (Parkinson's disease).",
+      "Despite its clean mechanism, pimavanserin carries the same dementia-related psychosis BBW as other antipsychotics, reflecting the class-wide trial finding of increased mortality in elderly patients with dementia."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use with caution; limited data",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "Parkinson's disease psychosis",
+      "hallucinations",
+      "delusions"
+    ],
+    "adverse_effect_tags": [
+      "QT prolongation",
+      "peripheral edema",
+      "confusion"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate",
+      "QT-prolongation"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "5-HT2A-antagonism"
+      ],
+      "prototype_class": "selective serotonin antipsychotics",
+      "adme_profile": "CYP3A4-metabolized",
+      "presentation_cluster": [
+        "acute-psychosis"
+      ],
+      "adverse_cluster": [
+        "QT-prolongation"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate",
+        "QT-prolonging-combinations"
+      ]
+    }
   }
 ]
