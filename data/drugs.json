@@ -45193,5 +45193,1104 @@
         "QT-prolonging-combinations"
       ]
     }
+  },
+  {
+    "id": "hydromorphone",
+    "generic_name": "hydromorphone",
+    "brand_names": [
+      "Dilaudid",
+      "Exalgo"
+    ],
+    "drug_class": "opioid analgesic",
+    "subclass": "semi-synthetic mu-opioid agonist",
+    "prototype_for": false,
+    "prototype_drug": "morphine",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "mu-opioid receptor (MOR)",
+      "kappa-opioid receptor (KOR)"
+    ],
+    "mechanism_summary": "Potent full agonist at mu-opioid receptors; 5-8 times more potent than morphine on a weight-for-weight basis. Rapidly crosses the blood-brain barrier due to higher lipophilicity compared to morphine, contributing to its rapid onset and potential for euphoria.",
+    "indications": [
+      "moderate to severe pain",
+      "post-operative pain"
+    ],
+    "contraindications": [
+      "respiratory depression without resuscitation equipment",
+      "acute or severe asthma",
+      "gastrointestinal obstruction",
+      "concurrent MAOI use"
+    ],
+    "adverse_effects": {
+      "common": [
+        "sedation",
+        "nausea",
+        "vomiting",
+        "constipation",
+        "pruritus",
+        "dizziness"
+      ],
+      "serious": [
+        "respiratory depression (dose-limiting toxicity)",
+        "opioid use disorder",
+        "hypotension",
+        "seizures at high doses"
+      ]
+    },
+    "black_box_warnings": [
+      "respiratory depression and death",
+      "risk of opioid addiction, abuse, and misuse",
+      "REMS program",
+      "neonatal opioid withdrawal syndrome",
+      "cytochrome P450 3A4 interaction with extended-release"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well absorbed; IV/SC/IM/oral routes available; oral bioavailability ~24% due to first-pass",
+      "distribution": "protein binding ~8-19%; crosses BBB rapidly",
+      "metabolism": "hepatic glucuronidation (not CYP-dependent); active metabolite hydromorphone-6-glucuronide (neuroexcitatory at high doses)",
+      "excretion": "primarily renal",
+      "half_life": "2-3 hours",
+      "onset": "IV: 5 minutes; oral: 15-30 minutes",
+      "peak": "IV: 15-30 minutes; oral: 30-60 minutes",
+      "duration": "4-5 hours",
+      "protein_binding": "8-19%",
+      "vd": "4 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CNS depressants (benzodiazepines, alcohol)",
+        "mechanism": "additive respiratory depression and CNS depression",
+        "severity": "major"
+      },
+      {
+        "drug": "MAOIs",
+        "mechanism": "excitatory serotonin-like syndrome",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "naloxone/naltrexone",
+        "mechanism": "reversal of opioid effects; precipitation of withdrawal",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Equianalgesic dosing: IV hydromorphone 0.2 mg = IV morphine 1 mg = PO morphine 3 mg; use equianalgesic tables when rotating opioids to avoid under- or over-dosing.",
+      "Monitor respiratory rate and oxygen saturation; withhold and notify prescriber if respiratory rate <10/min or SpO2 <92%.",
+      "Hydromorphone is the most common opioid involved in 10-fold IV dosing errors due to its potency and vial concentration variability; double-check vial concentration and dose calculation with a second nurse.",
+      "Reassess pain at 30-60 minutes after IV administration and at peak effect time to evaluate efficacy and guide next dosing interval."
+    ],
+    "clinical_pearls": [
+      "Hydromorphone 0.2 mg IV is equianalgesic to morphine 1 mg IV; this 5-fold potency difference makes dose calculation errors particularly dangerous \u2014 organizations have implemented double-check policies specifically for hydromorphone.",
+      "Unlike morphine, hydromorphone lacks active metabolites that accumulate in renal failure at equianalgesic doses, making it preferred in patients with moderate renal impairment when parenteral opioid is required."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid unless benefit outweighs risk; neonatal opioid withdrawal",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "acute pain",
+      "post-operative pain",
+      "cancer pain"
+    ],
+    "adverse_effect_tags": [
+      "respiratory depression",
+      "opioid use disorder",
+      "constipation"
+    ],
+    "interaction_tags": [
+      "CNS-depression",
+      "MAOI-interaction",
+      "opioid-interactions"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "mu-opioid-agonism"
+      ],
+      "prototype_class": "opioid analgesics",
+      "adme_profile": "hepatically-metabolized",
+      "presentation_cluster": [
+        "acute-pain",
+        "chronic-pain"
+      ],
+      "adverse_cluster": [
+        "opioid-toxidrome",
+        "opioid-use-disorder"
+      ],
+      "interaction_cluster": [
+        "CNS-depressants"
+      ]
+    }
+  },
+  {
+    "id": "oxycodone",
+    "generic_name": "oxycodone",
+    "brand_names": [
+      "OxyContin",
+      "Roxicodone",
+      "Percocet (with acetaminophen)"
+    ],
+    "drug_class": "opioid analgesic",
+    "subclass": "semi-synthetic mu-opioid agonist",
+    "prototype_for": false,
+    "prototype_drug": "morphine",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "mu-opioid receptor (MOR)",
+      "kappa-opioid receptor (KOR)"
+    ],
+    "mechanism_summary": "Full agonist at mu-opioid receptors; approximately 1.5 times more potent than oral morphine. Available in immediate-release (IR) and extended-release (ER) formulations; the ER formulation was at the center of the opioid epidemic when its misuse potential (crushing/snorting) was exploited.",
+    "indications": [
+      "moderate to severe pain"
+    ],
+    "contraindications": [
+      "significant respiratory depression",
+      "acute or severe asthma",
+      "paralytic ileus"
+    ],
+    "adverse_effects": {
+      "common": [
+        "constipation",
+        "nausea",
+        "somnolence",
+        "dizziness",
+        "pruritus"
+      ],
+      "serious": [
+        "respiratory depression",
+        "opioid use disorder",
+        "overdose death",
+        "neonatal opioid withdrawal syndrome"
+      ]
+    },
+    "black_box_warnings": [
+      "addiction, abuse, and misuse with potential for overdose and death",
+      "life-threatening respiratory depression",
+      "accidental ingestion can be fatal to children",
+      "neonatal opioid withdrawal syndrome",
+      "interaction with benzodiazepines and CNS depressants"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~60-87%; food has minimal effect on IR; high-fat meal may increase ER peak concentration",
+      "distribution": "protein binding ~45%; Vd ~2.6 L/kg",
+      "metabolism": "primarily CYP3A4 (to inactive noroxycodone) and CYP2D6 (to active oxymorphone); CYP2D6 poor metabolizers may have reduced analgesia",
+      "excretion": "primarily renal",
+      "half_life": "IR: 3-5 hours; ER: 4.5 hours (but designed for 12-hour dosing)",
+      "onset": "IR: 10-30 minutes; ER: 1 hour",
+      "peak": "IR: 1-2 hours; ER: 4-5 hours",
+      "duration": "IR: 4-6 hours; ER: 12 hours",
+      "protein_binding": "45%",
+      "vd": "2.6 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CNS depressants (especially benzodiazepines)",
+        "mechanism": "additive respiratory depression; major contributor to overdose death",
+        "severity": "major"
+      },
+      {
+        "drug": "CYP3A4 inhibitors",
+        "mechanism": "increase oxycodone levels; increase respiratory depression risk",
+        "severity": "major"
+      },
+      {
+        "drug": "CYP3A4 inducers",
+        "mechanism": "decrease oxycodone levels; may precipitate withdrawal or inadequate pain control",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Extended-release oxycodone tablets must NOT be crushed, chewed, or dissolved \u2014 this destroys the controlled-release mechanism, causing rapid absorption of the full dose with potentially fatal respiratory depression.",
+      "Combination products (Percocet) contain acetaminophen; verify total daily acetaminophen dose from all sources does not exceed 4000 mg/day (3000 mg/day in elderly or those with hepatic disease).",
+      "Document pain scores, sedation level (Pasero Opioid-Induced Sedation Scale), and respiratory rate before each dose; hold and notify prescriber if sedation scale \u22653.",
+      "The combination of oxycodone with benzodiazepines is the most common cause of prescription opioid overdose death \u2014 perform medication reconciliation and alert prescriber to concurrent use."
+    ],
+    "clinical_pearls": [
+      "OxyContin's extended-release formulation, initially marketed as abuse-deterrent because the coating supposedly prevented crushing, was misused by dissolving \u2014 this contributed significantly to the opioid epidemic of the 2000s.",
+      "Oxycodone's activation to oxymorphone via CYP2D6 is clinically less important than codeine's similar conversion; oxycodone itself is a potent analgesic independent of CYP2D6 metabolizer status."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid unless benefit outweighs risk; neonatal opioid withdrawal",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "moderate-severe pain",
+      "chronic pain"
+    ],
+    "adverse_effect_tags": [
+      "respiratory depression",
+      "opioid use disorder",
+      "constipation"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate",
+      "CYP2D6-substrate",
+      "CNS-depression"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "mu-opioid-agonism"
+      ],
+      "prototype_class": "opioid analgesics",
+      "adme_profile": "CYP3A4-metabolized",
+      "presentation_cluster": [
+        "acute-pain",
+        "chronic-pain"
+      ],
+      "adverse_cluster": [
+        "opioid-toxidrome",
+        "opioid-use-disorder"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate",
+        "CNS-depressants"
+      ]
+    }
+  },
+  {
+    "id": "remifentanil",
+    "generic_name": "remifentanil",
+    "brand_names": [
+      "Ultiva"
+    ],
+    "drug_class": "opioid analgesic",
+    "subclass": "ultra-short-acting mu-opioid agonist",
+    "prototype_for": false,
+    "prototype_drug": "morphine",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "mu-opioid receptor (MOR)"
+    ],
+    "mechanism_summary": "Potent, selective mu-opioid agonist with a unique ester linkage in its structure that is hydrolyzed by nonspecific blood and tissue esterases, producing an ultra-short duration of action independent of hepatic or renal function \u2014 context-sensitive half-time remains constant regardless of infusion duration.",
+    "indications": [
+      "induction and maintenance of general anesthesia",
+      "analgesia in mechanically ventilated ICU patients (short-term)",
+      "procedural sedation/analgesia"
+    ],
+    "contraindications": [
+      "epidural or intrathecal administration (formulation contains glycine, a neurotoxin)",
+      "use as sole anesthetic (without consciousness-ablating agent)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "apnea",
+        "respiratory depression",
+        "hypotension",
+        "bradycardia",
+        "muscle rigidity (chest wall rigidity at high doses)"
+      ],
+      "serious": [
+        "respiratory arrest without mechanical ventilation support",
+        "opioid-induced hyperalgesia (with prolonged use)",
+        "acute opioid tolerance"
+      ]
+    },
+    "black_box_warnings": [
+      "respiratory depression and death (requires monitoring and resuscitation equipment)"
+    ],
+    "pharmacokinetics": {
+      "absorption": "IV only; no oral formulation",
+      "distribution": "protein binding ~70%; Vd ~0.35 L/kg",
+      "metabolism": "ester hydrolysis by nonspecific blood and tissue esterases; independent of liver and kidney function",
+      "excretion": "primarily renal (as inactive metabolites)",
+      "half_life": "3-10 minutes (context-sensitive half-time constant at 3-4 minutes regardless of infusion duration)",
+      "onset": "30-60 seconds IV",
+      "peak": "1-3 minutes",
+      "duration": "5-10 minutes (offset driven by metabolism, not distribution)",
+      "protein_binding": "70%",
+      "vd": "0.35 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CNS depressants (propofol, benzodiazepines)",
+        "mechanism": "synergistic respiratory depression; dose reduction of both required",
+        "severity": "major"
+      },
+      {
+        "drug": "volatile anesthetics",
+        "mechanism": "synergistic anesthetic and respiratory depression",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Remifentanil must only be administered in settings with full resuscitation capabilities (mechanical ventilation, naloxone, crash cart); never administer without these resources immediately available.",
+      "The ultra-short duration means analgesia terminates abruptly within 5-10 minutes of stopping the infusion; transition to alternative analgesia before discontinuation to avoid uncontrolled pain.",
+      "Chest wall rigidity ('wooden chest') at high infusion rates can impede ventilation and must be managed with succinylcholine or rocuronium.",
+      "Do not dilute in or administer with lactated Ringer's solution \u2014 incompatible; use normal saline or D5W for dilution."
+    ],
+    "clinical_pearls": [
+      "Remifentanil is the only opioid whose pharmacokinetics are independent of organ function; because plasma esterases metabolize it, its elimination is unaffected by hepatic or renal failure.",
+      "The clinical consequence of remifentanil's ultra-short action is that analgesia ends abruptly upon discontinuation \u2014 failure to pre-emptively establish alternative analgesia (multimodal or longer-acting opioid) results in severe acute pain."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "use only as needed intraoperatively; neonatal respiratory depression",
+    "lactation_safety": "single dose unlikely to harm infant",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "procedural analgesia",
+      "intraoperative analgesia",
+      "ICU analgesia"
+    ],
+    "adverse_effect_tags": [
+      "respiratory depression",
+      "chest wall rigidity",
+      "opioid hyperalgesia"
+    ],
+    "interaction_tags": [
+      "CNS-depression",
+      "anesthetic-synergy"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "mu-opioid-agonism"
+      ],
+      "prototype_class": "opioid analgesics",
+      "adme_profile": "esterase-hydrolysis",
+      "presentation_cluster": [
+        "perioperative-anesthesia"
+      ],
+      "adverse_cluster": [
+        "opioid-toxidrome"
+      ],
+      "interaction_cluster": [
+        "CNS-depressants"
+      ]
+    }
+  },
+  {
+    "id": "codeine",
+    "generic_name": "codeine",
+    "brand_names": [
+      "Tylenol with Codeine",
+      "Robitussin AC (with guaifenesin)"
+    ],
+    "drug_class": "opioid analgesic and antitussive",
+    "subclass": "natural opioid prodrug",
+    "prototype_for": false,
+    "prototype_drug": "morphine",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "mu-opioid receptor (MOR, via morphine metabolite)"
+    ],
+    "mechanism_summary": "Prodrug requiring CYP2D6-mediated conversion to morphine for analgesic activity; approximately 10% of codeine is converted to morphine. Inhibits cough reflex via central mechanisms. Ultrarapid CYP2D6 metabolizers produce dangerously high morphine levels; poor metabolizers receive no analgesic benefit.",
+    "indications": [
+      "mild to moderate pain",
+      "antitussive (cough suppression)"
+    ],
+    "contraindications": [
+      "children <12 years old (FDA safety communication 2013)",
+      "post-tonsillectomy/adenoidectomy pain in children",
+      "ultrarapid CYP2D6 metabolizers (relative)",
+      "breastfeeding (risk of infant death from morphine in milk of ultrarapid metabolizer mothers)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "constipation",
+        "nausea",
+        "sedation",
+        "dizziness"
+      ],
+      "serious": [
+        "respiratory depression (especially in ultrarapid CYP2D6 metabolizers)",
+        "death in pediatric patients",
+        "dependence and addiction"
+      ]
+    },
+    "black_box_warnings": [
+      "respiratory depression and death in children; contraindicated in children <12 years for pain; FDA safety communication expanded to prohibit in patients <18 years for cough and cold"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; bioavailability ~90%",
+      "distribution": "protein binding ~7-25%",
+      "metabolism": "CYP2D6 converts ~10% to morphine (active); CYP3A4 converts ~80% to norcodeine (inactive); glucuronidation produces codeine-6-glucuronide",
+      "excretion": "primarily renal",
+      "half_life": "3-4 hours",
+      "onset": "30-45 minutes",
+      "peak": "1-1.5 hours",
+      "duration": "4-6 hours",
+      "protein_binding": "7-25%",
+      "vd": "3-4 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CYP2D6 inhibitors (fluoxetine, paroxetine, bupropion)",
+        "mechanism": "block conversion to morphine; reduce analgesic efficacy",
+        "severity": "moderate"
+      },
+      {
+        "drug": "CNS depressants",
+        "mechanism": "additive respiratory and CNS depression",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Codeine is contraindicated in patients under 18 years for cough/cold (FDA 2017) and under 12 years for pain; verify patient age before administration and clarify orders for pediatric patients.",
+      "Breastfeeding mothers who are CYP2D6 ultrarapid metabolizers (prevalence 1-7% in most populations, up to 29% in North African populations) produce milk with high morphine concentrations; monitor breastfed infants for respiratory depression.",
+      "The variability in codeine response based on CYP2D6 genotype (from no effect to life-threatening toxicity) makes it one of the clearest examples of pharmacogenomics influencing clinical practice.",
+      "A combination product with acetaminophen (Tylenol #3, #4) requires verification that total acetaminophen dose from all sources does not exceed safe limits."
+    ],
+    "clinical_pearls": [
+      "Codeine's 'prodrug' status means that its entire analgesic effect depends on CYP2D6 conversion to morphine; poor metabolizers (7-10% of Caucasians) receive essentially no analgesia, while ultrarapid metabolizers receive dangerous morphine levels.",
+      "Several deaths in pediatric patients after tonsillectomy led to codeine's pediatric restriction; the deaths occurred in children who were CYP2D6 ultrarapid metabolizers \u2014 a pharmacogenomic disaster that changed FDA labeling."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid unless benefit outweighs risk",
+    "lactation_safety": "avoid (risk of fatal morphine exposure in infant)",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "mild-moderate pain",
+      "cough"
+    ],
+    "adverse_effect_tags": [
+      "respiratory depression",
+      "constipation",
+      "opioid use disorder"
+    ],
+    "interaction_tags": [
+      "CYP2D6-substrate",
+      "CNS-depression",
+      "pharmacogenomics"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "mu-opioid-agonism"
+      ],
+      "prototype_class": "opioid analgesics",
+      "adme_profile": "CYP2D6-metabolized",
+      "presentation_cluster": [
+        "acute-pain"
+      ],
+      "adverse_cluster": [
+        "opioid-toxidrome"
+      ],
+      "interaction_cluster": [
+        "CYP2D6-substrate",
+        "CNS-depressants"
+      ]
+    }
+  },
+  {
+    "id": "tramadol",
+    "generic_name": "tramadol",
+    "brand_names": [
+      "Ultram",
+      "ConZip",
+      "Ultracet (with acetaminophen)"
+    ],
+    "drug_class": "opioid analgesic (atypical) / SNRI-like analgesic",
+    "subclass": "centrally acting analgesic",
+    "prototype_for": false,
+    "prototype_drug": "morphine",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "mu-opioid receptor (MOR, via O-desmethyltramadol)",
+      "SERT (serotonin transporter)",
+      "NET (norepinephrine transporter)"
+    ],
+    "mechanism_summary": "Dual mechanism: weak mu-opioid receptor agonism via itself and its CYP2D6-derived active metabolite O-desmethyltramadol (M1), plus inhibition of serotonin and norepinephrine reuptake (SNRI-like). Considered a Schedule IV substance, reflecting lower addiction potential than Schedule II opioids, though dependence still occurs.",
+    "indications": [
+      "moderate to moderately severe pain",
+      "off-label: fibromyalgia",
+      "off-label: restless leg syndrome"
+    ],
+    "contraindications": [
+      "concurrent MAOI use",
+      "seizure disorders",
+      "acute intoxication with alcohol or opioids",
+      "children <12 years"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "constipation",
+        "dizziness",
+        "headache",
+        "somnolence",
+        "pruritus"
+      ],
+      "serious": [
+        "seizures (dose-dependent; lower seizure threshold)",
+        "serotonin syndrome (particularly with SSRIs/SNRIs/MAOIs)",
+        "respiratory depression (less than full opioids)",
+        "dependence and withdrawal"
+      ]
+    },
+    "black_box_warnings": [
+      "addiction, abuse, misuse",
+      "life-threatening respiratory depression",
+      "neonatal opioid withdrawal",
+      "interaction with benzodiazepines and CNS depressants",
+      "seizure risk",
+      "serotonin syndrome risk"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; bioavailability ~75%; food has minimal effect",
+      "distribution": "protein binding ~20%; Vd ~2.6 L/kg",
+      "metabolism": "CYP2D6 converts tramadol to active M1 (O-desmethyltramadol); CYP3A4 produces inactive N-desmethyltramadol",
+      "excretion": "primarily renal; dose adjustment required in CrCl <30 mL/min",
+      "half_life": "6-7 hours (parent); 7-9 hours (M1)",
+      "onset": "30-60 minutes",
+      "peak": "1-4 hours",
+      "duration": "4-6 hours",
+      "protein_binding": "20%",
+      "vd": "2.6 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "serotonin syndrome; potentially fatal",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "SSRIs/SNRIs",
+        "mechanism": "serotonin syndrome risk via additive serotonergic activity",
+        "severity": "major"
+      },
+      {
+        "drug": "CYP2D6 inhibitors",
+        "mechanism": "reduce M1 formation and analgesic efficacy",
+        "severity": "moderate"
+      },
+      {
+        "drug": "benzodiazepines/CNS depressants",
+        "mechanism": "additive respiratory depression",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Tramadol's dual mechanism makes it subject to serotonin syndrome with SSRIs, SNRIs, TCAs, and MAOIs \u2014 perform complete medication reconciliation before administration and assess for serotonin syndrome symptoms.",
+      "Seizure risk is dose-dependent and highest in patients with seizure history, CNS disorders, or concurrent use of other drugs that lower the seizure threshold.",
+      "Tramadol is often perceived as 'safe' because it is Schedule IV; educate staff that respiratory depression, dependence, and serotonin syndrome are still serious risks.",
+      "Dose reduction required in renal impairment (CrCl <30 mL/min: max 200 mg/day; CrCl <10 mL/min: administer every 12 hours); creatinine clearance must be assessed in all patients."
+    ],
+    "clinical_pearls": [
+      "Tramadol's serotonin syndrome risk with SSRIs is one of the most clinically important drug interactions in outpatient prescribing; the combination is extremely common in patients with concurrent depression and pain, yet many prescribers are unaware of this interaction.",
+      "The Schedule IV classification reflects tramadol's lower abuse potential compared to Schedule II opioids, yet physical dependence is common and withdrawal can be complex \u2014 including both opioid-type symptoms and SNRI discontinuation-type symptoms simultaneously."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid; neonatal opioid withdrawal and serotonin syndrome",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "moderate pain",
+      "fibromyalgia"
+    ],
+    "adverse_effect_tags": [
+      "serotonin syndrome",
+      "seizures",
+      "respiratory depression",
+      "opioid use disorder"
+    ],
+    "interaction_tags": [
+      "CYP2D6-substrate",
+      "MAOI-interaction",
+      "serotonergic",
+      "CNS-depression"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "mu-opioid-agonism",
+        "SERT-inhibition",
+        "NET-inhibition"
+      ],
+      "prototype_class": "atypical opioid analgesics",
+      "adme_profile": "CYP2D6-metabolized",
+      "presentation_cluster": [
+        "acute-pain",
+        "chronic-pain"
+      ],
+      "adverse_cluster": [
+        "serotonin-syndrome",
+        "opioid-toxidrome"
+      ],
+      "interaction_cluster": [
+        "serotonergic",
+        "CNS-depressants",
+        "CYP2D6-substrate"
+      ]
+    }
+  },
+  {
+    "id": "tapentadol",
+    "generic_name": "tapentadol",
+    "brand_names": [
+      "Nucynta",
+      "Nucynta ER"
+    ],
+    "drug_class": "opioid analgesic (atypical) / centrally acting analgesic",
+    "subclass": "mu-opioid agonist and norepinephrine reuptake inhibitor (MOR-NRI)",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "mu-opioid receptor (MOR)",
+      "NET (norepinephrine transporter)"
+    ],
+    "mechanism_summary": "Combines mu-opioid receptor agonism with norepinephrine reuptake inhibition in a single molecule; does not require hepatic activation. The dual mechanism provides analgesia with potentially fewer opioid-mediated side effects (less nausea, constipation) compared to equianalgesic doses of pure opioids, particularly for neuropathic pain.",
+    "indications": [
+      "moderate to severe acute pain",
+      "neuropathic pain associated with diabetic peripheral neuropathy (ER formulation)"
+    ],
+    "contraindications": [
+      "concurrent MAOI use",
+      "significant respiratory depression",
+      "paralytic ileus"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "dizziness",
+        "somnolence",
+        "constipation (less than equianalgesic oxycodone)",
+        "headache"
+      ],
+      "serious": [
+        "respiratory depression",
+        "serotonin syndrome (due to NRI component)",
+        "dependence and addiction"
+      ]
+    },
+    "black_box_warnings": [
+      "addiction, abuse, misuse",
+      "life-threatening respiratory depression",
+      "neonatal opioid withdrawal",
+      "interaction with benzodiazepines and CNS depressants"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~32% due to first-pass; food increases AUC by 25%",
+      "distribution": "protein binding ~20%; Vd ~540 L",
+      "metabolism": "primarily glucuronidation to inactive metabolites; minimal CYP involvement \u2014 drug interactions via CYP are minimal",
+      "excretion": "primarily renal (70% as glucuronide conjugates)",
+      "half_life": "4 hours",
+      "onset": "30-60 minutes",
+      "peak": "1.25 hours",
+      "duration": "4-6 hours (IR); 12 hours (ER)",
+      "protein_binding": "20%",
+      "vd": "540 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "serotonin syndrome via NRI component",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "CNS depressants",
+        "mechanism": "additive respiratory and CNS depression",
+        "severity": "major"
+      },
+      {
+        "drug": "SSRIs/SNRIs",
+        "mechanism": "serotonin syndrome risk via noradrenergic component",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "MAOI contraindication is absolute; tapentadol's NRI mechanism creates the same serotonin syndrome risk as tramadol with concurrent MAOIs.",
+      "Less constipation and nausea compared to equivalent oxycodone doses in clinical trials; this may improve patient adherence and quality of life in chronic pain patients.",
+      "Minimal CYP-mediated drug interactions due to glucuronidation metabolism; this simplifies medication reconciliation in patients on multiple medications.",
+      "Schedule II controlled substance (same as morphine, oxycodone); apply same controlled substance monitoring and documentation protocols."
+    ],
+    "clinical_pearls": [
+      "Tapentadol is the first approved MOR-NRI (mu-opioid receptor-norepinephrine reuptake inhibitor); its dual mechanism may explain its efficacy in neuropathic pain conditions where pure opioids have limited benefit.",
+      "Despite its theoretical advantages, clinical trials comparing tapentadol to oxycodone have not consistently shown superior efficacy; its clinical niche is primarily neuropathic pain and patients who do not tolerate typical opioid GI side effects."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid unless benefit outweighs risk",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "moderate-severe pain",
+      "neuropathic pain",
+      "diabetic neuropathy"
+    ],
+    "adverse_effect_tags": [
+      "respiratory depression",
+      "serotonin syndrome",
+      "opioid use disorder"
+    ],
+    "interaction_tags": [
+      "MAOI-interaction",
+      "serotonergic",
+      "CNS-depression"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "mu-opioid-agonism",
+        "NET-inhibition"
+      ],
+      "prototype_class": "MOR-NRI analgesics",
+      "adme_profile": "glucuronidation",
+      "presentation_cluster": [
+        "acute-pain",
+        "neuropathic-pain"
+      ],
+      "adverse_cluster": [
+        "opioid-toxidrome",
+        "serotonin-syndrome"
+      ],
+      "interaction_cluster": [
+        "MAOI-interaction",
+        "CNS-depressants"
+      ]
+    }
+  },
+  {
+    "id": "methadone",
+    "generic_name": "methadone",
+    "brand_names": [
+      "Dolophine",
+      "Methadose"
+    ],
+    "drug_class": "opioid analgesic / opioid use disorder treatment",
+    "subclass": "synthetic long-acting mu-opioid agonist",
+    "prototype_for": false,
+    "prototype_drug": "morphine",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "mu-opioid receptor (MOR)",
+      "NMDA receptor (antagonist)",
+      "SERT (serotonin transporter)",
+      "NET (norepinephrine transporter)"
+    ],
+    "mechanism_summary": "Full mu-opioid agonist with additional NMDA receptor antagonism (contributing to efficacy in neuropathic pain and reducing opioid tolerance) and weak monoamine reuptake inhibition. Unique among opioids: highly lipophilic, very long and unpredictable half-life (8-59 hours), and substantial QT prolongation risk.",
+    "indications": [
+      "opioid use disorder (OUD) \u2014 maintenance and detoxification",
+      "severe chronic pain (when other options inadequate)",
+      "neonatal opioid withdrawal syndrome (off-label)"
+    ],
+    "contraindications": [
+      "concurrent QT-prolonging agents (relative)",
+      "severe respiratory compromise",
+      "concomitant MAOI use"
+    ],
+    "adverse_effects": {
+      "common": [
+        "sedation",
+        "constipation",
+        "sweating",
+        "nausea",
+        "sexual dysfunction"
+      ],
+      "serious": [
+        "QT prolongation and torsades de pointes",
+        "respiratory depression (delayed with accumulation)",
+        "fatal overdose (particularly during dose initiation/rotation)",
+        "diaphoresis and hypogonadism"
+      ]
+    },
+    "black_box_warnings": [
+      "QT prolongation and torsades de pointes",
+      "cardiac conduction effects",
+      "respiratory depression (cumulative; deaths reported during initiation)",
+      "REMS program"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; bioavailability ~36-100% (highly variable)",
+      "distribution": "highly lipophilic; protein binding ~86%; large Vd ~4-5 L/kg; accumulates in tissues and released slowly",
+      "metabolism": "primarily CYP3A4 and CYP2B6; inactive metabolites; CYP2B6 genetic polymorphisms significantly affect levels",
+      "excretion": "primarily fecal",
+      "half_life": "8-59 hours (average ~24 hours, but range extraordinarily wide); tissue accumulation extends effective duration",
+      "onset": "30-60 minutes oral; analgesia 2-4 hours",
+      "peak": "2.5-4 hours (analgesic effect); tissue accumulation continues for days",
+      "duration": "analgesic 4-8 hours; total drug effect 24-36 hours due to accumulation",
+      "protein_binding": "86%",
+      "vd": "4-5 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "QT-prolonging drugs (multiple)",
+        "mechanism": "additive QT prolongation; torsades de pointes",
+        "severity": "major"
+      },
+      {
+        "drug": "CYP3A4 inducers (rifampin, carbamazepine)",
+        "mechanism": "precipitate withdrawal by reducing methadone levels",
+        "severity": "major"
+      },
+      {
+        "drug": "CYP3A4 inhibitors",
+        "mechanism": "increase methadone levels; respiratory depression and QT prolongation",
+        "severity": "major"
+      },
+      {
+        "drug": "CNS depressants",
+        "mechanism": "additive respiratory depression",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Baseline ECG required before initiating methadone; QTc >450 ms warrants cardiology consultation; QTc >500 ms is a relative contraindication; reassess ECG after dose escalations.",
+      "Methadone for OUD in the US can only be dispensed by federally licensed opioid treatment programs (OTPs); prescribing rules are different from those for pain management \u2014 verify the clinical context of the order.",
+      "Dose accumulation occurs over 3-5 days of initiation; overdose deaths cluster in the first week; 'start low, go slow' and reassess sedation daily during initiation.",
+      "Monitor for signs of respiratory depression throughout the 24-36 hour effective duration, not just at the first few hours post-dose; this is the most common fatal error with methadone."
+    ],
+    "clinical_pearls": [
+      "Methadone's uniquely wide variation in half-life (8-59 hours, average 24 hours) makes it treacherous for opioid rotation; what appears to be an equianalgesic dose can accumulate to toxic levels over 3-5 days \u2014 methadone conversions should be managed only by experienced pain or addiction specialists.",
+      "For opioid use disorder, methadone's long half-life prevents withdrawal symptoms for 24-36 hours, eliminating the cycle of repeated withdrawals; its high lipophilicity and tissue accumulation contribute to its pharmacological suitability as a maintenance agent."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use in OUD \u2014 benefits outweigh risks; neonatal opioid withdrawal syndrome expected; monitor neonate",
+    "lactation_safety": "use with caution; low milk transfer; monitor infant",
+    "tdm_required": true,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "opioid use disorder",
+      "severe chronic pain",
+      "neuropathic pain"
+    ],
+    "adverse_effect_tags": [
+      "QT prolongation",
+      "respiratory depression",
+      "opioid use disorder"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate",
+      "QT-prolongation",
+      "CNS-depression"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "mu-opioid-agonism",
+        "NMDA-antagonism"
+      ],
+      "prototype_class": "opioid analgesics",
+      "adme_profile": "CYP3A4-metabolized",
+      "presentation_cluster": [
+        "opioid-use-disorder",
+        "chronic-pain"
+      ],
+      "adverse_cluster": [
+        "QT-prolongation",
+        "opioid-toxidrome"
+      ],
+      "interaction_cluster": [
+        "QT-prolonging-combinations",
+        "CYP3A4-substrate",
+        "CNS-depressants"
+      ]
+    }
+  },
+  {
+    "id": "naltrexone",
+    "generic_name": "naltrexone",
+    "brand_names": [
+      "ReVia",
+      "Vivitrol (extended-release injectable)"
+    ],
+    "drug_class": "opioid antagonist",
+    "subclass": "full mu- and kappa-opioid receptor antagonist",
+    "prototype_for": false,
+    "prototype_drug": "naloxone",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "mu-opioid receptor (MOR)",
+      "kappa-opioid receptor (KOR)",
+      "delta-opioid receptor (DOR)"
+    ],
+    "mechanism_summary": "Competitively blocks all opioid receptor subtypes with high affinity and no intrinsic agonist activity; unlike naloxone, naltrexone has a long half-life suitable for once-daily oral or monthly injectable use. Also reduces alcohol craving by blocking endogenous opioid-mediated reward pathways in the limbic system.",
+    "indications": [
+      "opioid use disorder (maintenance treatment after detoxification)",
+      "alcohol use disorder"
+    ],
+    "contraindications": [
+      "current opioid use or acute opioid withdrawal",
+      "anticipated need for opioid analgesia within 7-10 days (oral) or 30 days (injectable)",
+      "hepatic failure"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "headache",
+        "fatigue",
+        "insomnia",
+        "anxiety",
+        "injection site reactions (Vivitrol)"
+      ],
+      "serious": [
+        "precipitated opioid withdrawal (if opioids present when naltrexone initiated)",
+        "hepatotoxicity (at supratherapeutic doses)",
+        "depression and suicidal ideation (rare)"
+      ]
+    },
+    "black_box_warnings": [
+      "hepatotoxicity at excessive doses; not approved for non-opioid-dependent patients"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral: bioavailability ~5-12% due to first-pass; injectable: sustained release over 30 days",
+      "distribution": "protein binding ~21%; Vd ~1350 L",
+      "metabolism": "hepatic reduction to 6-beta-naltrexol (active); glucuronidation",
+      "excretion": "primarily renal",
+      "half_life": "4 hours (naltrexone); 13 hours (6-beta-naltrexol); injectable: 5-10 days effective",
+      "onset": "oral: within hours; injectable: 2-3 hours",
+      "peak": "oral: 1 hour",
+      "duration": "oral: 24-72 hours; injectable: 30 days",
+      "protein_binding": "21%",
+      "vd": "1350 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "opioid analgesics",
+        "mechanism": "complete blockade of opioid-mediated analgesia; large doses of opioids may overcome blockade with dangerous respiratory depression",
+        "severity": "major"
+      },
+      {
+        "drug": "opioid-containing medications (cough preparations, antidiarrheals)",
+        "mechanism": "loss of opioid effect",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Patient must be opioid-free for a minimum of 7-10 days (oral short-acting opioids) or 10-14 days (long-acting opioids, methadone) before initiating naltrexone; naloxone challenge test confirms opioid-free status before first dose.",
+      "Educate patients that their opioid tolerance is lost while on naltrexone; if they relapse and use their previous opioid dose, it will not work initially (blocked), but once the drug clears they face full lethal risk without tolerance.",
+      "For alcohol use disorder, naltrexone reduces craving and the reinforcing effects of alcohol; it works best combined with counseling and does not require abstinence to initiate.",
+      "Vivitrol (monthly injectable) greatly improves adherence for OUD treatment; ensure gluteal injection technique is correct \u2014 this is a deep IM injection that should not be administered subcutaneously."
+    ],
+    "clinical_pearls": [
+      "Naltrexone's efficacy for alcohol use disorder, though modest, is achieved through a completely different mechanism than alcohol \u2014 by blocking endorphin-mediated reward from alcohol, it reduces the positive reinforcement that drives continued drinking.",
+      "The combination of naltrexone with acamprosate (targets GABA/glutamate) for alcohol use disorder is supported by the COMBINE trial, showing additive benefit compared to either alone."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use with caution; benefits in OUD may outweigh risks",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "opioid use disorder",
+      "alcohol use disorder"
+    ],
+    "adverse_effect_tags": [
+      "precipitated withdrawal",
+      "hepatotoxicity",
+      "nausea"
+    ],
+    "interaction_tags": [
+      "opioid-interactions"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "mu-opioid-antagonism"
+      ],
+      "prototype_class": "opioid antagonists",
+      "adme_profile": "hepatically-metabolized",
+      "presentation_cluster": [
+        "opioid-use-disorder"
+      ],
+      "adverse_cluster": [
+        "opioid-withdrawal"
+      ],
+      "interaction_cluster": [
+        "opioid-interactions"
+      ]
+    }
   }
 ]
