@@ -23456,5 +23456,1327 @@
         "UGT1A1-substrate"
       ]
     }
+  },
+  {
+    "id": "insulin-glargine",
+    "generic_name": "insulin glargine",
+    "brand_names": [
+      "Lantus",
+      "Basaglar",
+      "Toujeo"
+    ],
+    "drug_class": "insulin",
+    "subclass": "long-acting insulin analogue",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "insulin receptor (IR)",
+      "IGF-1 receptor"
+    ],
+    "mechanism_summary": "Recombinant human insulin analogue with amino acid substitutions creating a microprecipitate at physiologic pH after SC injection; slowly dissolves and is absorbed, providing a relatively flat (peakless) 24-hour basal insulin profile without pronounced peaks.",
+    "indications": [
+      "type 1 diabetes mellitus (basal insulin)",
+      "type 2 diabetes mellitus (basal insulin)"
+    ],
+    "contraindications": [
+      "hypoglycemic episodes (withhold and reassess)",
+      "hypersensitivity to insulin glargine"
+    ],
+    "adverse_effects": {
+      "common": [
+        "hypoglycemia",
+        "injection site reactions (lipohypertrophy, lipoatrophy)",
+        "weight gain"
+      ],
+      "serious": [
+        "severe hypoglycemia (altered consciousness, seizure, coma)",
+        "hypokalemia",
+        "anaphylaxis (rare)",
+        "local allergic reactions"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "SC only; forms subcutaneous depot; onset 2\u20134 hours, peak minimal, duration 20\u201324+ hours",
+      "distribution": "Protein binding minimal in circulation",
+      "metabolism": "Cleaved to active metabolites at B-chain carboxy terminus in peripheral tissues",
+      "excretion": "Renal",
+      "half_life": "~12 hours (SC absorption-limited)",
+      "onset": "2\u20134 hours",
+      "peak": "No pronounced peak",
+      "duration": "~24 hours (Lantus/Basaglar); ~36 hours (Toujeo 300 units/mL)",
+      "protein_binding": "minimal",
+      "vd": "N/A (SC depot)"
+    },
+    "drug_interactions": [
+      {
+        "drug": "beta-blockers",
+        "mechanism": "mask tachycardia (not sweating) as hypoglycemia warning sign; non-selective beta-blockers may also impair glycogenolysis",
+        "severity": "moderate"
+      },
+      {
+        "drug": "corticosteroids / thiazides / atypical antipsychotics",
+        "mechanism": "increase blood glucose; may require insulin dose increase",
+        "severity": "moderate"
+      },
+      {
+        "drug": "ACE inhibitors / salicylates",
+        "mechanism": "may increase insulin sensitivity; hypoglycemia risk",
+        "severity": "minor"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer at the same time each day \u2014 always SC, never IV; do NOT mix with other insulins or inject in the same syringe as other insulin preparations",
+      "Rotate injection sites within the same region to prevent lipohypertrophy \u2014 injecting into hypertrophied tissue causes erratic absorption and poor glycemic control",
+      "Monitor fasting blood glucose and bedtime glucose; target fasting glucose typically 80\u2013130 mg/dL per ADA guidelines; adjust dose by 2 units every 3 days based on fasting glucose pattern",
+      "Educate patient about signs/symptoms of hypoglycemia and 15-15 rule: if glucose <70 mg/dL, treat with 15g fast-acting carbohydrate and recheck in 15 minutes"
+    ],
+    "clinical_pearls": [
+      "Glargine cannot be mixed with other insulins \u2014 its unique pH-dependent precipitation mechanism is disrupted by mixing, resulting in altered kinetics and loss of the peakless profile",
+      "Toujeo (300 units/mL) has an even longer duration (\u226536 hours) than Lantus (100 units/mL) due to a more concentrated and slowly-dissolving depot \u2014 useful for patients needing once-daily dosing with extended coverage"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category C \u2014 insulin is required for diabetes management in pregnancy; glargine is used but regular insulin and NPH have more safety data",
+    "lactation_safety": "safe",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "type-1-diabetes",
+      "type-2-diabetes",
+      "hyperglycemia"
+    ],
+    "adverse_effect_tags": [
+      "hypoglycemia",
+      "weight-gain",
+      "lipohypertrophy"
+    ],
+    "interaction_tags": [
+      "insulin",
+      "hypoglycemia-risk"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "insulin-receptor-activation"
+      ],
+      "prototype_class": "Long-acting insulins",
+      "adme_profile": "SC-depot-absorption",
+      "presentation_cluster": [
+        "type-1-diabetes",
+        "type-2-diabetes"
+      ],
+      "adverse_cluster": [
+        "hypoglycemia"
+      ],
+      "interaction_cluster": [
+        "insulin-interactions"
+      ]
+    }
+  },
+  {
+    "id": "insulin-aspart",
+    "generic_name": "insulin aspart",
+    "brand_names": [
+      "NovoLog",
+      "Fiasp"
+    ],
+    "drug_class": "insulin",
+    "subclass": "rapid-acting insulin analogue",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "insulin receptor"
+    ],
+    "mechanism_summary": "Rapid-acting insulin analogue with aspartate substitution at B28 reducing self-association and enabling faster absorption; activates insulin receptor, stimulating glucose uptake, glycogen synthesis, lipogenesis, and protein synthesis while suppressing gluconeogenesis and glycogenolysis.",
+    "indications": [
+      "type 1 diabetes (bolus/mealtime insulin)",
+      "type 2 diabetes (mealtime insulin)",
+      "continuous subcutaneous insulin infusion (insulin pump)"
+    ],
+    "contraindications": [
+      "hypoglycemia",
+      "hypersensitivity to insulin aspart"
+    ],
+    "adverse_effects": {
+      "common": [
+        "hypoglycemia (most common)",
+        "injection site reactions",
+        "weight gain",
+        "hypokalemia"
+      ],
+      "serious": [
+        "severe hypoglycemia",
+        "anaphylaxis (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "SC: onset 10\u201320 minutes; IV: immediate onset (100% bioavailability)",
+      "distribution": "Widely distributed",
+      "metabolism": "Cleaved by insulin-degrading enzyme in liver, kidney, and peripheral tissues",
+      "excretion": "Renal",
+      "half_life": "~81 minutes (SC)",
+      "onset": "SC: 10\u201320 minutes; IV: immediate",
+      "peak": "40\u201350 minutes (SC)",
+      "duration": "3\u20135 hours",
+      "protein_binding": "minimal",
+      "vd": "N/A (SC)"
+    },
+    "drug_interactions": [
+      {
+        "drug": "beta-blockers",
+        "mechanism": "mask hypoglycemia symptoms (tachycardia)",
+        "severity": "moderate"
+      },
+      {
+        "drug": "alcohol",
+        "mechanism": "may potentiate hypoglycemia",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer 5\u201310 minutes before a meal (Fiasp can be given at meal start or up to 20 minutes after starting meal); onset must match meal absorption to prevent hypo/hyperglycemia",
+      "IV insulin aspart must be used at 0.05\u20131 unit/mL concentration in NS; insulin adsorbs to IV tubing \u2014 flush before use",
+      "Monitor glucose every 1\u20132 hours in patients on insulin infusion protocols; adjust infusion rate per protocol",
+      "Rotate injection sites; abdomen has fastest absorption, followed by arms, thighs, and buttocks"
+    ],
+    "clinical_pearls": [
+      "Rapid-acting insulin analogues (aspart, lispro, glulisine) should be administered 5\u201315 minutes before meals \u2014 their rapid onset requires meal-to-injection timing to avoid hypoglycemia from timing mismatch",
+      "Fiasp (faster-acting aspart) contains vitamin B3 and L-arginine to accelerate absorption, achieving onset in 2\u20134 minutes and peak in 60\u201390 minutes \u2014 useful for post-meal dosing flexibility"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category B \u2014 preferred rapid-acting insulin in pregnancy",
+    "lactation_safety": "safe",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "type-1-diabetes",
+      "type-2-diabetes",
+      "DKA"
+    ],
+    "adverse_effect_tags": [
+      "hypoglycemia",
+      "weight-gain"
+    ],
+    "interaction_tags": [
+      "insulin",
+      "hypoglycemia-risk"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "insulin-receptor-activation"
+      ],
+      "prototype_class": "Rapid-acting insulins",
+      "adme_profile": "SC-absorption",
+      "presentation_cluster": [
+        "type-1-diabetes",
+        "type-2-diabetes"
+      ],
+      "adverse_cluster": [
+        "hypoglycemia"
+      ],
+      "interaction_cluster": [
+        "insulin-interactions"
+      ]
+    }
+  },
+  {
+    "id": "metformin",
+    "generic_name": "metformin",
+    "brand_names": [
+      "Glucophage",
+      "Glumetza",
+      "Fortamet",
+      "Riomet"
+    ],
+    "drug_class": "antidiabetic",
+    "subclass": "biguanide",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "AMP-activated protein kinase (AMPK)",
+      "Complex I of mitochondrial respiratory chain"
+    ],
+    "mechanism_summary": "Inhibits hepatic gluconeogenesis (primary effect, via mitochondrial complex I inhibition and AMPK activation); reduces intestinal glucose absorption; modestly increases peripheral insulin sensitivity; does not stimulate insulin secretion \u2014 no hypoglycemia risk as monotherapy.",
+    "indications": [
+      "type 2 diabetes mellitus (first-line)",
+      "polycystic ovary syndrome (off-label)",
+      "prevention of type 2 diabetes in high-risk patients (prediabetes)"
+    ],
+    "contraindications": [
+      "eGFR <30 mL/min/1.73m\u00b2 (hold for eGFR 30\u201345 when initiating; reassess at 45)",
+      "iodinated contrast media (hold 48 hours peri-procedure in patients with renal risk)",
+      "decompensated heart failure",
+      "hepatic failure",
+      "alcohol dependence (lactic acidosis risk)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "GI side effects (nausea, diarrhea, abdominal discomfort \u2014 in ~30% at initiation; reduced by titration and extended-release formulation)",
+        "metallic taste",
+        "vitamin B12 deficiency (chronic use)"
+      ],
+      "serious": [
+        "lactic acidosis (rare, ~3/100,000 patient-years; risk increases with renal/hepatic failure, tissue hypoxia, contrast media, alcohol)"
+      ]
+    },
+    "black_box_warnings": [
+      "lactic acidosis \u2014 fatal cases have occurred; risk increased in renal impairment, hepatic disease, heart failure with reduced cardiac output, excessive alcohol intake, and radiographic procedures with iodinated contrast"
+    ],
+    "pharmacokinetics": {
+      "absorption": "Oral bioavailability ~50\u201360%; not affected by food (extended-release improves GI tolerability)",
+      "distribution": "Not protein-bound; Vd ~654 L; accumulates in gut wall, liver, kidney",
+      "metabolism": "Not metabolized \u2014 excreted unchanged",
+      "excretion": "Entirely renal via active tubular secretion (OCT2); dose adjustment for CrCl/eGFR <45 mL/min",
+      "half_life": "4\u20139 hours (plasma); 17.6 hours (blood)",
+      "onset": "~1 week for glucose lowering; HbA1c effect at 6\u20138 weeks",
+      "peak": "2.5 hours (IR)",
+      "duration": "12 hours (IR); 24 hours (ER)",
+      "protein_binding": "0%",
+      "vd": "~654 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "iodinated contrast media",
+        "mechanism": "contrast-induced nephropathy increases metformin accumulation and lactic acidosis risk; hold before and 48 hours after contrast in patients with eGFR <60",
+        "severity": "major"
+      },
+      {
+        "drug": "dolutegravir (antiretroviral)",
+        "mechanism": "OCT2 inhibition increases metformin levels by up to 79%",
+        "severity": "major"
+      },
+      {
+        "drug": "cimetidine / trimethoprim",
+        "mechanism": "renal OCT2 inhibition reduces metformin excretion, increasing levels",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Start low (500 mg BID or 850 mg QD with meals) and titrate over 4\u20138 weeks to minimize GI side effects; most GI effects resolve within 4 weeks of initiation",
+      "Hold metformin before procedures using iodinated contrast in patients with eGFR <60 or high contrast volume; restart 48 hours after procedure if renal function is stable",
+      "Monitor vitamin B12 levels every 2\u20133 years on long-term therapy; deficiency occurs in ~10% and can cause neuropathy, anemia, and cognitive dysfunction",
+      "Metformin is associated with cardiovascular benefit beyond glucose lowering (UKPDS evidence) \u2014 it is preferred first-line even in patients with established CVD, provided renal function is adequate"
+    ],
+    "clinical_pearls": [
+      "Lactic acidosis from metformin is a medical emergency but is extremely rare in patients with normal renal function \u2014 the risk is concentrated in those with eGFR <30 and/or tissue hypoperfusion (sepsis, cardiac shock)",
+      "Metformin does not cause hypoglycemia as monotherapy \u2014 it works by reducing hepatic glucose production and does not stimulate insulin secretion, making it safe for patients who drive or operate machinery"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category B \u2014 used in GDM; evidence suggests safety; insulin is still preferred by most guidelines for T2DM in pregnancy",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "type-2-diabetes",
+      "prediabetes",
+      "PCOS"
+    ],
+    "adverse_effect_tags": [
+      "lactic-acidosis",
+      "GI-side-effects",
+      "B12-deficiency"
+    ],
+    "interaction_tags": [
+      "OCT2-substrate",
+      "renally-cleared",
+      "contrast-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "AMPK-activation"
+      ],
+      "prototype_class": "Biguanides",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "type-2-diabetes"
+      ],
+      "adverse_cluster": [
+        "lactic-acidosis"
+      ],
+      "interaction_cluster": [
+        "OCT2-substrate",
+        "contrast-interaction"
+      ]
+    }
+  },
+  {
+    "id": "glipizide",
+    "generic_name": "glipizide",
+    "brand_names": [
+      "Glucotrol",
+      "Glucotrol XL"
+    ],
+    "drug_class": "antidiabetic",
+    "subclass": "sulfonylurea / second-generation",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "ion-channel"
+    ],
+    "mechanism_targets": [
+      "ATP-sensitive potassium channels (K-ATP) on pancreatic beta cells"
+    ],
+    "mechanism_summary": "Binds and closes K-ATP channels on pancreatic beta cells, causing membrane depolarization; voltage-gated calcium channels open, calcium influx triggers exocytosis of insulin-containing granules; stimulates insulin secretion independent of blood glucose \u2014 mechanism underlying hypoglycemia risk.",
+    "indications": [
+      "type 2 diabetes mellitus (monotherapy or combination)"
+    ],
+    "contraindications": [
+      "type 1 diabetes mellitus",
+      "diabetic ketoacidosis"
+    ],
+    "adverse_effects": {
+      "common": [
+        "hypoglycemia (most significant \u2014 can be severe and prolonged)",
+        "weight gain",
+        "nausea",
+        "epigastric discomfort"
+      ],
+      "serious": [
+        "severe hypoglycemia (especially in elderly, renal impairment, irregular meal schedule)",
+        "hemolytic anemia (cross-reactivity with sulfonamide allergy)",
+        "hepatotoxicity (rare)",
+        "SIADH/hyponatremia"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "~100% oral; take 30 minutes before meals",
+      "distribution": "Protein binding >98%; Vd ~0.2 L/kg; does not cross BBB",
+      "metabolism": "CYP2C9 to inactive metabolites",
+      "excretion": "Renal (~68%) and fecal; shorter half-life and inactive metabolites make glipizide preferred over glyburide in elderly",
+      "half_life": "2\u20134 hours (IR); 24 hours (XL due to delivery system)",
+      "onset": "30 minutes",
+      "peak": "1\u20133 hours",
+      "duration": "12\u201324 hours",
+      "protein_binding": ">98%",
+      "vd": "~0.2 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "fluconazole / miconazole",
+        "mechanism": "CYP2C9 inhibition increases glipizide levels; severe hypoglycemia risk",
+        "severity": "major"
+      },
+      {
+        "drug": "beta-blockers",
+        "mechanism": "mask tachycardia hypoglycemia warning; non-selective agents also impair glycogen release",
+        "severity": "moderate"
+      },
+      {
+        "drug": "NSAIDs / sulfonamides / fibrates",
+        "mechanism": "displace from protein binding or enhance hypoglycemic effect",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer 30 minutes before first meal of the day; skipping a meal after taking sulfonylurea is a major hypoglycemia risk \u2014 counsel patients about consistent meal timing",
+      "Preferred sulfonylurea in elderly and CKD patients (compared to glyburide, which has active metabolites that accumulate in renal failure) \u2014 however, all sulfonylureas should be used with caution in the elderly",
+      "Monitor blood glucose closely when adding or removing CYP2C9 inhibitors/inducers; dose adjustment frequently required",
+      "For severe hypoglycemia: IV dextrose (D50W) 25 mL bolus followed by D10W infusion; monitor glucose q30 min; prolonged hypoglycemia from sulfonylureas may require octreotide"
+    ],
+    "clinical_pearls": [
+      "Sulfonylurea hypoglycemia is more dangerous than insulin hypoglycemia in terms of duration \u2014 the long-acting nature of K-ATP channel closure and continued insulin release means hypoglycemia can recur after initial glucose treatment without a continuous glucose infusion",
+      "Among sulfonylureas, glipizide is preferred over glyburide in elderly patients because glyburide is metabolized to active metabolites that accumulate with renal dysfunction, dramatically increasing hypoglycemia risk"
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category C \u2014 insulin preferred in pregnancy",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "type-2-diabetes",
+      "hyperglycemia"
+    ],
+    "adverse_effect_tags": [
+      "hypoglycemia",
+      "weight-gain"
+    ],
+    "interaction_tags": [
+      "CYP2C9-substrate",
+      "hypoglycemia-risk"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "ion-channel"
+      ],
+      "mechanism_family": [
+        "K-ATP-channel-blockade"
+      ],
+      "prototype_class": "Sulfonylureas",
+      "adme_profile": "hepatically-metabolized-CYP2C9",
+      "presentation_cluster": [
+        "type-2-diabetes"
+      ],
+      "adverse_cluster": [
+        "hypoglycemia"
+      ],
+      "interaction_cluster": [
+        "CYP2C9-substrate",
+        "hypoglycemia-risk"
+      ]
+    }
+  },
+  {
+    "id": "empagliflozin",
+    "generic_name": "empagliflozin",
+    "brand_names": [
+      "Jardiance"
+    ],
+    "drug_class": "antidiabetic",
+    "subclass": "SGLT2 inhibitor",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine",
+      "cardiovascular",
+      "renal"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "sodium-glucose cotransporter 2 (SGLT2)"
+    ],
+    "mechanism_summary": "Inhibits SGLT2 in the proximal renal tubule, reducing renal glucose reabsorption and causing glucosuria; glucose-lowering is insulin-independent; also reduces tubular sodium reabsorption (natriuresis), reducing preload and afterload, and has direct cardiac and renal protective effects beyond glycemic control.",
+    "indications": [
+      "type 2 diabetes mellitus (glycemic control + CV risk reduction)",
+      "heart failure with reduced ejection fraction (HFrEF) \u2014 reduces HF hospitalization and CV death",
+      "chronic kidney disease (CKD) \u2014 reduces progression",
+      "off-label: heart failure with preserved ejection fraction (HFpEF)"
+    ],
+    "contraindications": [
+      "eGFR <20 mL/min (for CV/HF benefit; no longer specified for T2DM glycemic indication)",
+      "active genital mycotic infections",
+      "type 1 diabetes (risk of DKA without significant hyperglycemia \u2014 euglycemic DKA)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "genital mycotic infections (yeast infections \u2014 most common in women)",
+        "urinary tract infections",
+        "polyuria",
+        "dehydration/orthostatic hypotension"
+      ],
+      "serious": [
+        "euglycemic diabetic ketoacidosis (DKA) \u2014 blood glucose may be <250 mg/dL; high anion gap metabolic acidosis",
+        "lower limb amputations (canagliflozin > empagliflozin)",
+        "Fournier's gangrene (necrotizing fasciitis of perineum \u2014 rare)",
+        "acute kidney injury (volume depletion)",
+        "urosepsis and pyelonephritis"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "~86% oral bioavailability; take with or without food",
+      "distribution": "Protein binding 86%; Vd ~73 L",
+      "metabolism": "UGT2B7 and UGT1A3 (glucuronidation); minimal CYP involvement",
+      "excretion": "Renal (~41% unchanged) and fecal (~41%)",
+      "half_life": "~12 hours",
+      "onset": "24 hours for glucose lowering; weeks for CV/renal effects",
+      "peak": "1.5 hours",
+      "duration": "24 hours",
+      "protein_binding": "86%",
+      "vd": "~73 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "insulin / insulin secretagogues (sulfonylureas)",
+        "mechanism": "additive hypoglycemia; reduce insulin/sulfonylurea dose when adding SGLT2i",
+        "severity": "moderate"
+      },
+      {
+        "drug": "diuretics",
+        "mechanism": "additive volume depletion and hypotension risk",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Counsel patients about genital mycotic infections (most common in women with history of candidiasis) \u2014 maintain genital hygiene; may require antifungal treatment; drug holiday if recurrent",
+      "Hold SGLT2 inhibitors 3\u20134 days before surgery or major procedures due to euglycemic DKA risk in fasting patients on insulin; instruct patient to report nausea, vomiting, abdominal pain, and difficult breathing (DKA symptoms)",
+      "Monitor for signs of UTI; obtain urine culture and treat promptly; SGLT2 inhibitors cause glucosuria which predisposes to urinary tract infections",
+      "For HF indication (Jardiance): empagliflozin demonstrated 25% relative risk reduction in CV death/HF hospitalization in EMPA-REG OUTCOME trial; now standard of care in HFrEF per AHA/ACC guidelines"
+    ],
+    "clinical_pearls": [
+      "Euglycemic DKA is the most dangerous and underrecognized SGLT2 inhibitor complication \u2014 patients present with DKA symptoms but blood glucose may be only mildly elevated (200\u2013250 mg/dL), leading to missed or delayed diagnosis",
+      "SGLT2 inhibitors have emerged as the most impactful drug class in cardiology and nephrology this decade \u2014 they reduce HF hospitalization, CV death, and CKD progression through mechanisms beyond glycemic control (osmotic diuresis, tubuloglomerular feedback, anti-inflammatory effects)"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category C \u2014 avoid; neonatal renal toxicity in animal studies",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "type-2-diabetes",
+      "heart-failure",
+      "CKD"
+    ],
+    "adverse_effect_tags": [
+      "genital-mycotic-infection",
+      "euglycemic-DKA",
+      "Fournier-gangrene",
+      "UTI"
+    ],
+    "interaction_tags": [
+      "hypoglycemia-risk",
+      "diuretic-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine",
+        "cardiovascular",
+        "renal"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "SGLT2-inhibition"
+      ],
+      "prototype_class": "SGLT2 inhibitors",
+      "adme_profile": "glucuronidation",
+      "presentation_cluster": [
+        "type-2-diabetes",
+        "heart-failure",
+        "CKD"
+      ],
+      "adverse_cluster": [
+        "DKA",
+        "genital-mycotic-infection"
+      ],
+      "interaction_cluster": [
+        "hypoglycemia-risk"
+      ]
+    }
+  },
+  {
+    "id": "semaglutide",
+    "generic_name": "semaglutide",
+    "brand_names": [
+      "Ozempic (SC weekly)",
+      "Rybelsus (oral)",
+      "Wegovy (SC weight management)"
+    ],
+    "drug_class": "antidiabetic / weight management",
+    "subclass": "GLP-1 receptor agonist",
+    "prototype_for": false,
+    "prototype_drug": "liraglutide",
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "glucagon-like peptide-1 receptor (GLP-1R)"
+    ],
+    "mechanism_summary": "Activates GLP-1 receptors on pancreatic beta cells (stimulating glucose-dependent insulin secretion), alpha cells (suppressing glucagon), and hypothalamic centers (reducing appetite); also slows gastric emptying; long half-life of weekly SC formulation achieved through albumin binding via C-18 fatty acid modification.",
+    "indications": [
+      "type 2 diabetes mellitus (glycemic control)",
+      "cardiovascular risk reduction in T2DM with established CVD (Ozempic)",
+      "chronic weight management (Wegovy)",
+      "non-alcoholic steatohepatitis (emerging: NASH/MASH)"
+    ],
+    "contraindications": [
+      "personal or family history of medullary thyroid carcinoma or MEN 2 syndrome",
+      "history of serious hypersensitivity to semaglutide"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea (very common \u2014 especially at initiation and dose escalation)",
+        "vomiting",
+        "diarrhea",
+        "constipation",
+        "injection site reactions"
+      ],
+      "serious": [
+        "pancreatitis (rare; hold if suspected)",
+        "gastroparesis and delayed gastric emptying (major anesthesia concern)",
+        "acute gallbladder disease (cholelithiasis, cholecystitis)",
+        "thyroid C-cell tumors (rodent data; human significance unclear)",
+        "diabetic retinopathy progression (rapid glycemic improvement)"
+      ]
+    },
+    "black_box_warnings": [
+      "thyroid C-cell tumors \u2014 risk in rodents; contraindicated in personal/family history of MTC or MEN 2; human relevance unknown; advise patients of potential risk"
+    ],
+    "pharmacokinetics": {
+      "absorption": "SC Ozempic: ~89% bioavailability; oral Rybelsus: ~1% bioavailability (significant first-pass; take 30 min before first food with no more than 4 oz water)",
+      "distribution": "~99% albumin-bound; Vd ~12.5 L",
+      "metabolism": "Proteolytic cleavage and fatty acid beta-oxidation",
+      "excretion": "Renal (~3%) and fecal",
+      "half_life": "~1 week (SC) \u2014 enables once-weekly dosing",
+      "onset": "Weeks for full effect; glucose-lowering within days",
+      "peak": "1\u20133 days (SC)",
+      "duration": "1 week (SC)",
+      "protein_binding": "~99%",
+      "vd": "~12.5 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "oral medications with narrow therapeutic index (warfarin, phenytoin)",
+        "mechanism": "delayed gastric emptying reduces absorption rate of oral drugs \u2014 monitor levels closely",
+        "severity": "moderate"
+      },
+      {
+        "drug": "insulin / sulfonylureas",
+        "mechanism": "additive hypoglycemia risk; reduce insulin/SU dose by 20\u201340% when adding semaglutide",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Titrate dose slowly (starting at 0.25 mg weekly for Ozempic) to minimize GI side effects \u2014 nausea is dose-dependent and usually improves after 4\u20138 weeks at each dose level",
+      "Inform anesthesiology team before any elective surgery \u2014 GLP-1 receptor agonists cause gastroparesis and significantly increase aspiration risk; many institutions recommend holding for 1 week before surgery with standard fasting intervals",
+      "Educate patients about pancreatitis warning signs (persistent severe abdominal pain radiating to the back, nausea, vomiting) \u2014 hold and seek emergency care",
+      "For Wegovy (weight management): indications include BMI \u226530 or \u226527 with weight-related comorbidity; set realistic expectations \u2014 average ~15% weight loss with Wegovy vs. ~2.5% with placebo"
+    ],
+    "clinical_pearls": [
+      "Semaglutide is the first oral GLP-1 receptor agonist (Rybelsus) \u2014 this required overcoming the GLP-1 peptide's susceptibility to GI degradation via co-formulation with the SNAC (sodium N-[8-(2-hydroxybenzoyl)amino]caprylate) absorption enhancer",
+      "The SELECT trial (2023) demonstrated that semaglutide (Wegovy) reduces major adverse cardiovascular events in overweight/obese non-diabetic patients with established CVD \u2014 the first evidence of GLP-1 RA CV benefit independent of diabetes"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category \u2014 discontinue 2 months before planned pregnancy",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "type-2-diabetes",
+      "obesity",
+      "cardiovascular-risk-reduction"
+    ],
+    "adverse_effect_tags": [
+      "nausea",
+      "pancreatitis",
+      "gastroparesis",
+      "thyroid-tumor"
+    ],
+    "interaction_tags": [
+      "gastric-emptying-delay",
+      "hypoglycemia-risk"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "GLP-1-receptor-agonism"
+      ],
+      "prototype_class": "GLP-1 receptor agonists",
+      "adme_profile": "proteolytic-cleavage",
+      "presentation_cluster": [
+        "type-2-diabetes",
+        "obesity"
+      ],
+      "adverse_cluster": [
+        "nausea",
+        "pancreatitis"
+      ],
+      "interaction_cluster": [
+        "gastric-emptying-delay"
+      ]
+    }
+  },
+  {
+    "id": "levothyroxine",
+    "generic_name": "levothyroxine sodium",
+    "brand_names": [
+      "Synthroid",
+      "Levoxyl",
+      "Tirosint",
+      "Unithroid",
+      "Euthyrox"
+    ],
+    "drug_class": "thyroid hormone",
+    "subclass": "synthetic T4 (thyroxine)",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "thyroid hormone receptors (TR-alpha, TR-beta)"
+    ],
+    "mechanism_summary": "Synthetic T4 is converted to T3 (triiodothyronine) in peripheral tissues by iodothyronine deiodinases; T3 binds nuclear thyroid hormone receptors, modulating transcription of hundreds of genes controlling metabolic rate, thermogenesis, cardiac output, and development.",
+    "indications": [
+      "hypothyroidism (drug of choice)",
+      "myxedema coma (IV)",
+      "thyroid cancer (suppression therapy)",
+      "euthyroid goiter"
+    ],
+    "contraindications": [
+      "thyrotoxicosis",
+      "uncorrected adrenal insufficiency (must treat concurrent AI before giving thyroid hormone to prevent adrenal crisis)",
+      "acute MI (relative; titrate very carefully)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "signs of hyperthyroidism with excessive dose: tachycardia, palpitations, tremor, weight loss, insomnia, heat intolerance"
+      ],
+      "serious": [
+        "atrial fibrillation",
+        "cardiac ischemia (in elderly/CAD with excessive dose)",
+        "osteoporosis (suppression of TSH below normal \u2014 promotes bone resorption)",
+        "adrenal crisis (if started before treating concurrent adrenal insufficiency)"
+      ]
+    },
+    "black_box_warnings": [
+      "thyroid hormones, including levothyroxine, should not be used for weight loss in patients with normal thyroid function \u2014 serious toxic effects can occur, particularly cardiac, with doses within or exceeding the normal range"
+    ],
+    "pharmacokinetics": {
+      "absorption": "Oral: 40\u201380% depending on formulation and administration; significantly reduced by food, calcium, iron, antacids \u2014 take on empty stomach, 30\u201360 min before food",
+      "distribution": "Highly protein-bound (>99%); thyroxine-binding globulin (TBG) is primary carrier",
+      "metabolism": "Peripheral deiodination to active T3 (by deiodinase type 1 and 2) and inactive reverse T3; hepatic glucuronidation and sulfation",
+      "excretion": "Fecal (biliary) and renal",
+      "half_life": "7 days \u2014 allows once-daily dosing; levels stabilize after 5\u20136 weeks",
+      "onset": "Several weeks",
+      "peak": "2\u20134 hours",
+      "duration": "1 week",
+      "protein_binding": ">99%",
+      "vd": "~10 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "calcium, iron, antacids (aluminum/magnesium), sucralfate, proton pump inhibitors",
+        "mechanism": "reduce levothyroxine oral absorption; separate by 4 hours",
+        "severity": "major"
+      },
+      {
+        "drug": "cholestyramine / colestipol",
+        "mechanism": "bind levothyroxine in gut, reducing absorption; separate by 4\u20136 hours",
+        "severity": "major"
+      },
+      {
+        "drug": "warfarin",
+        "mechanism": "thyroid hormones increase catabolism of vitamin K-dependent clotting factors; INR rises with hypothyroid-to-euthyroid transition",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer on an empty stomach 30\u201360 minutes before the first meal of the day; avoid calcium, iron, multivitamins, and antacids within 4 hours of levothyroxine",
+      "Do not switch between brand names without monitoring \u2014 levothyroxine brands are not considered bioequivalent by the FDA; switching requires TSH recheck in 4\u20136 weeks",
+      "Monitor TSH every 4\u20136 weeks after initiation or dose change until stable; target TSH range 0.5\u20132.5 mIU/L for most hypothyroid patients; lower targets (0.1\u20130.5) for thyroid cancer suppression",
+      "In elderly patients or those with cardiac disease: initiate at 25\u201350 mcg/day and increase by 12.5\u201325 mcg every 4\u20136 weeks; aggressive initiation can precipitate angina or arrhythmias"
+    ],
+    "clinical_pearls": [
+      "The 7-day half-life of levothyroxine means TSH will not fully reflect a new dose until 5\u20136 weeks after the change \u2014 checking TSH too early provides misleading results and leads to unnecessary dose adjustments",
+      "Adrenal insufficiency must be addressed before starting levothyroxine replacement in patients with secondary hypothyroidism \u2014 thyroid hormone accelerates cortisol metabolism and can precipitate addisonian crisis in patients with untreated AI"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category A \u2014 dose requirements increase ~30% in pregnancy; monitor TSH every trimester",
+    "lactation_safety": "safe",
+    "tdm_required": true,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "hypothyroidism",
+      "myxedema",
+      "thyroid-cancer"
+    ],
+    "adverse_effect_tags": [
+      "tachycardia",
+      "atrial-fibrillation",
+      "osteoporosis"
+    ],
+    "interaction_tags": [
+      "absorption-interaction",
+      "calcium-iron-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "thyroid-receptor-activation"
+      ],
+      "prototype_class": "Thyroid hormones",
+      "adme_profile": "hepatic-enterohepatic",
+      "presentation_cluster": [
+        "hypothyroidism"
+      ],
+      "adverse_cluster": [
+        "cardiac-arrhythmia"
+      ],
+      "interaction_cluster": [
+        "absorption-interaction"
+      ]
+    }
+  },
+  {
+    "id": "prednisone",
+    "generic_name": "prednisone",
+    "brand_names": [
+      "Deltasone",
+      "Rayos"
+    ],
+    "drug_class": "corticosteroid",
+    "subclass": "synthetic glucocorticoid (intermediate-acting)",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine",
+      "immunology"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "glucocorticoid receptor (GR)"
+    ],
+    "mechanism_summary": "Prodrug converted to active prednisolone by 11-beta-HSD1; activates cytosolic glucocorticoid receptors, translocating to nucleus to transactivate anti-inflammatory genes (lipocortin-1) and transrepress pro-inflammatory transcription factors (NF-kB, AP-1); reduces synthesis of prostaglandins, leukotrienes, and cytokines.",
+    "indications": [
+      "autoimmune diseases (rheumatoid arthritis, lupus, IBD, vasculitis)",
+      "allergic reactions and anaphylaxis (adjunct)",
+      "asthma exacerbations",
+      "COPD exacerbations",
+      "adrenal insufficiency (with fludrocortisone)",
+      "organ transplant rejection prophylaxis",
+      "anti-emetic (CINV \u2014 high-dose)",
+      "cerebral edema (IV dexamethasone preferred for brain tumors)"
+    ],
+    "contraindications": [
+      "systemic fungal infections (without concurrent antifungal therapy)",
+      "live vaccines in immunocompromised doses"
+    ],
+    "adverse_effects": {
+      "common": [
+        "hyperglycemia",
+        "weight gain / increased appetite",
+        "insomnia",
+        "mood changes (euphoria, anxiety, depression)",
+        "GI irritation",
+        "fluid retention / hypertension"
+      ],
+      "serious": [
+        "HPA axis suppression (adrenal insufficiency on abrupt withdrawal)",
+        "osteoporosis (long-term)",
+        "Cushing's syndrome (iatrogenic)",
+        "immunosuppression / opportunistic infections",
+        "myopathy",
+        "avascular necrosis of the femoral head",
+        "cataracts and glaucoma (long-term)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "Well absorbed orally; converted to prednisolone in liver",
+      "distribution": "Widely distributed; protein binding ~70%; crosses placenta, BBB",
+      "metabolism": "Converted to prednisolone by hepatic 11-beta-HSD1; further metabolism by CYP3A4",
+      "excretion": "Renal",
+      "half_life": "Biological half-life 18\u201336 hours (HPA suppression); plasma half-life ~3\u20134 hours (prednisolone)",
+      "onset": "1\u20132 hours",
+      "peak": "2 hours",
+      "duration": "12\u201336 hours (biological effect)",
+      "protein_binding": "70%",
+      "vd": "~1 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CYP3A4 inducers (rifampin, phenytoin, carbamazepine)",
+        "mechanism": "reduce prednisolone levels by 50\u201360%; may require dose doubling",
+        "severity": "major"
+      },
+      {
+        "drug": "NSAIDs",
+        "mechanism": "additive GI irritation and peptic ulcer risk",
+        "severity": "moderate"
+      },
+      {
+        "drug": "live vaccines",
+        "mechanism": "immunosuppression increases risk of vaccine-strain dissemination; avoid with doses >20 mg/day for >14 days",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer with food to reduce GI irritation; take in the morning to mimic physiologic cortisol peak and minimize insomnia and HPA suppression",
+      "Never abruptly discontinue after more than 2 weeks of therapy \u2014 taper dose gradually to allow HPA axis recovery; warn patient about signs of adrenal insufficiency (fatigue, nausea, dizziness) during tapering",
+      "Monitor blood glucose, blood pressure, weight, electrolytes, and mood; screen for osteoporosis with DEXA scan for long-term therapy; prescribe calcium and vitamin D with any chronic steroid course",
+      "Patient education: take with food; don't abruptly stop; avoid sick contacts; report any signs of infection; stress dosing may be needed during major illness or surgery"
+    ],
+    "clinical_pearls": [
+      "Prednisone is a prodrug that requires hepatic conversion to prednisolone \u2014 in severe hepatic disease, prednisolone should be used directly to ensure reliable drug activation",
+      "The Beers-like maxim of 'lowest dose for shortest duration' applies strictly to glucocorticoids \u2014 even short burst courses (1 week of 40 mg) cause measurable bone density loss and insulin resistance; these effects accumulate with repeated courses"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category C \u2014 cleft palate in animal studies; safer than undertreated inflammatory disease in most cases",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "autoimmune-disease",
+      "asthma",
+      "COPD-exacerbation",
+      "adrenal-insufficiency"
+    ],
+    "adverse_effect_tags": [
+      "hyperglycemia",
+      "osteoporosis",
+      "Cushing-syndrome",
+      "adrenal-suppression",
+      "immunosuppression"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate",
+      "immunosuppressant"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine",
+        "immunology"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "glucocorticoid-receptor-activation"
+      ],
+      "prototype_class": "Systemic corticosteroids",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "autoimmune-disease",
+        "asthma",
+        "COPD-exacerbation"
+      ],
+      "adverse_cluster": [
+        "hyperglycemia",
+        "osteoporosis",
+        "Cushing-syndrome"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate",
+        "immunosuppressant"
+      ]
+    }
+  },
+  {
+    "id": "methimazole",
+    "generic_name": "methimazole",
+    "brand_names": [
+      "Tapazole"
+    ],
+    "drug_class": "antithyroid",
+    "subclass": "thionamide",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "thyroid peroxidase"
+    ],
+    "mechanism_summary": "Inhibits thyroid peroxidase, blocking oxidation of iodide to iodine and organification (coupling of iodine to tyrosine residues) \u2014 thereby preventing thyroid hormone (T3, T4) synthesis; does NOT affect existing thyroid hormone stores (delayed onset of effect).",
+    "indications": [
+      "hyperthyroidism (Graves' disease \u2014 first-line antithyroid therapy)",
+      "preparation for thyroid surgery or radioiodine therapy",
+      "thyroid storm (high doses)"
+    ],
+    "contraindications": [
+      "first trimester of pregnancy (use PTU instead \u2014 methimazole causes aplasia cutis and choanal atresia)",
+      "hypersensitivity to methimazole"
+    ],
+    "adverse_effects": {
+      "common": [
+        "rash",
+        "pruritus",
+        "nausea",
+        "arthralgias",
+        "mild leukopenia"
+      ],
+      "serious": [
+        "agranulocytosis (0.1\u20130.5% \u2014 most dangerous; usually within first 3 months)",
+        "hepatotoxicity (cholestatic jaundice)",
+        "hypothyroidism (with excessive dosing)",
+        "ANCA-positive vasculitis (rare, usually with PTU)",
+        "teratogenicity (aplasia cutis with first-trimester exposure)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "Rapid and complete oral absorption",
+      "distribution": "Concentrates in thyroid gland; protein binding minimal",
+      "metabolism": "Hepatic",
+      "excretion": "Renal",
+      "half_life": "4\u20136 hours; but biological effect lasts much longer (dosing every 8\u201324 hours depending on dose)",
+      "onset": "1\u20132 weeks for clinical effect (existing thyroid hormone must be consumed)",
+      "peak": "0.5\u20131 hour",
+      "duration": "8\u201324 hours",
+      "protein_binding": "minimal",
+      "vd": "~0.6 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "warfarin",
+        "mechanism": "hyperthyroid state increases warfarin metabolism; normalization with methimazole increases warfarin effect \u2014 INR may rise significantly",
+        "severity": "major"
+      },
+      {
+        "drug": "beta-blockers",
+        "mechanism": "hyperthyroid state increases beta-blocker clearance; levels normalize as euthyroidism is achieved",
+        "severity": "moderate"
+      },
+      {
+        "drug": "digoxin",
+        "mechanism": "hypothyroidism increases digoxin sensitivity; monitor digoxin levels",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Instruct patient to report sore throat, fever, or mouth sores immediately \u2014 these are signs of agranulocytosis; obtain CBC with differential urgently; hold methimazole pending results",
+      "Monitor CBC and LFTs at baseline and periodically; CBC before initiation establishes baseline WBC",
+      "Monitor thyroid function tests (TSH, free T4) every 4\u20136 weeks during initial titration; TSH may remain suppressed for months after achieving euthyroidism \u2014 use free T4 to guide dose adjustments initially",
+      "Use PTU (not methimazole) in first trimester of pregnancy; switch to methimazole after first trimester (PTU carries hepatotoxicity risk)"
+    ],
+    "clinical_pearls": [
+      "Methimazole is preferred over PTU except in first-trimester pregnancy because it has once-daily dosing (vs PTU TID), lower hepatotoxicity risk, and equivalent efficacy \u2014 the ATA guidelines recommend methimazole as first-line for Graves' disease",
+      "Agranulocytosis from methimazole is idiosyncratic (not dose-dependent), can develop suddenly, and is potentially life-threatening \u2014 patients must be educated about this risk and instructed to present immediately for CBC if febrile or ill"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category D (first trimester) \u2014 aplasia cutis; use PTU in first trimester; can resume methimazole in second/third trimester",
+    "lactation_safety": "use with caution at lowest effective dose",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "hyperthyroidism",
+      "Graves-disease",
+      "thyroid-storm"
+    ],
+    "adverse_effect_tags": [
+      "agranulocytosis",
+      "hepatotoxicity",
+      "teratogenicity"
+    ],
+    "interaction_tags": [
+      "warfarin-interaction",
+      "thyroid-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "thyroid-peroxidase-inhibition"
+      ],
+      "prototype_class": "Antithyroid agents",
+      "adme_profile": "hepatically-metabolized",
+      "presentation_cluster": [
+        "hyperthyroidism",
+        "thyroid-storm"
+      ],
+      "adverse_cluster": [
+        "agranulocytosis",
+        "hepatotoxicity"
+      ],
+      "interaction_cluster": [
+        "warfarin-interaction"
+      ]
+    }
+  },
+  {
+    "id": "dexamethasone",
+    "generic_name": "dexamethasone",
+    "brand_names": [
+      "Decadron",
+      "DexPak",
+      "Baycadron"
+    ],
+    "drug_class": "corticosteroid",
+    "subclass": "synthetic glucocorticoid (long-acting) / no mineralocorticoid activity",
+    "prototype_for": false,
+    "prototype_drug": "prednisone",
+    "organ_systems": [
+      "endocrine",
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "glucocorticoid receptor (GR)"
+    ],
+    "mechanism_summary": "Long-acting glucocorticoid with approximately 25x the anti-inflammatory potency of cortisol; no mineralocorticoid activity (unlike prednisone); crosses BBB well; 5 mg dexamethasone equivalent to ~35 mg prednisone or ~175 mg hydrocortisone.",
+    "indications": [
+      "cerebral edema (brain tumors, head injury)",
+      "anaphylaxis (adjunct after epinephrine)",
+      "acute asthma exacerbation (outpatient single dose)",
+      "croup (single IM/oral dose)",
+      "CINV prevention (first-line component)",
+      "septic shock (low-dose adjunctive \u2014 refractory shock)",
+      "COVID-19 (patients requiring oxygen \u2014 RECOVERY trial)",
+      "adrenal insufficiency testing (dexamethasone suppression test)",
+      "multiple myeloma (component of treatment regimens)"
+    ],
+    "contraindications": [
+      "systemic fungal infections without antifungal coverage",
+      "live vaccines with immunosuppressive doses"
+    ],
+    "adverse_effects": {
+      "common": [
+        "hyperglycemia",
+        "insomnia",
+        "psychosis / mood changes",
+        "GI irritation",
+        "increased appetite"
+      ],
+      "serious": [
+        "HPA axis suppression (even short high-dose courses)",
+        "immunosuppression",
+        "avascular necrosis (prolonged use)",
+        "Cushing's syndrome (chronic use)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "Well absorbed orally; IV/IM formulation available",
+      "distribution": "Excellent CNS penetration; protein binding 77%; Vd ~0.8 L/kg",
+      "metabolism": "CYP3A4 to inactive metabolites",
+      "excretion": "Renal",
+      "half_life": "3.5 hours (plasma); biological half-life 36\u201354 hours",
+      "onset": "Rapid (IV/IM); 1\u20132 hours (oral)",
+      "peak": "1 hour (IV); 1\u20132 hours (oral)",
+      "duration": "36\u201354 hours",
+      "protein_binding": "77%",
+      "vd": "~0.8 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CYP3A4 inducers",
+        "mechanism": "reduce dexamethasone levels",
+        "severity": "moderate"
+      },
+      {
+        "drug": "diabetes medications",
+        "mechanism": "hyperglycemia from dexamethasone increases insulin requirements dramatically (especially high-dose pulse)",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "For cerebral edema: 10 mg IV loading dose followed by 4 mg IV q6h; reduces peritumoral vasogenic edema (not cytotoxic edema from stroke); onset of benefit 12\u201324 hours",
+      "Single-dose IM or oral dexamethasone (0.6 mg/kg) is now preferred for croup \u2014 long duration of action allows single dosing with equivalent efficacy to multiple doses of oral prednisolone",
+      "Monitor blood glucose closely, especially in diabetic patients \u2014 dexamethasone causes significant hyperglycemia peaking 4\u20138 hours after dosing; insulin adjustments are almost always required",
+      "Unlike prednisone, dexamethasone has no mineralocorticoid activity \u2014 it does NOT raise blood pressure or cause sodium/water retention at typical doses"
+    ],
+    "clinical_pearls": [
+      "The RECOVERY trial (2020) established dexamethasone 6 mg/day for 10 days as standard of care for COVID-19 patients requiring supplemental oxygen or mechanical ventilation \u2014 the first treatment shown to reduce mortality (22% relative risk reduction)",
+      "Dexamethasone is used as the reference steroid for CINV prophylaxis because of its long half-life (once-daily dosing), potency, and ability to cross the BBB (central anti-emetic mechanisms)"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category C \u2014 used for fetal lung maturation in preterm delivery (24\u201334 weeks)",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "cerebral-edema",
+      "CINV",
+      "asthma",
+      "septic-shock",
+      "COVID-19"
+    ],
+    "adverse_effect_tags": [
+      "hyperglycemia",
+      "immunosuppression",
+      "Cushing-syndrome"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine",
+        "cns"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "glucocorticoid-receptor-activation"
+      ],
+      "prototype_class": "Systemic corticosteroids",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "cerebral-edema",
+        "CINV",
+        "septic-shock"
+      ],
+      "adverse_cluster": [
+        "hyperglycemia",
+        "immunosuppression"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate"
+      ]
+    }
   }
 ]
