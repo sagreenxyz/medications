@@ -39794,5 +39794,885 @@
         "CYP2D6-inhibition"
       ]
     }
+  },
+  {
+    "id": "fosphenytoin",
+    "generic_name": "fosphenytoin",
+    "brand_names": [
+      "Cerebyx"
+    ],
+    "drug_class": "antiepileptic drug",
+    "subclass": "phenytoin prodrug",
+    "prototype_for": false,
+    "prototype_drug": "phenytoin",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "ion-channel"
+    ],
+    "mechanism_targets": [
+      "voltage-gated sodium channels (Nav)"
+    ],
+    "mechanism_summary": "Water-soluble phosphate ester prodrug of phenytoin that is rapidly converted to phenytoin by phosphatases in blood and tissues. Phenytoin blocks voltage-gated Na+ channels in their inactivated state, preventing repetitive neuronal firing. Preferred over IV phenytoin as fosphenytoin is water-soluble, causes less infusion-site toxicity, and can be given IM.",
+    "indications": [
+      "status epilepticus",
+      "prevention and treatment of perioperative seizures",
+      "loading dose replacement for oral phenytoin when oral route is unavailable"
+    ],
+    "contraindications": [
+      "second or third degree heart block",
+      "sinus bradycardia",
+      "sinoatrial block",
+      "Adams-Stokes syndrome",
+      "hypersensitivity to phenytoin"
+    ],
+    "adverse_effects": {
+      "common": [
+        "pruritus",
+        "paresthesias (perineal itching \u2014 classic)",
+        "dizziness",
+        "nystagmus",
+        "headache"
+      ],
+      "serious": [
+        "cardiac arrhythmias",
+        "hypotension (if infused too rapidly)",
+        "purple glove syndrome (less likely than phenytoin IV)",
+        "IV site reactions",
+        "CNS depression"
+      ]
+    },
+    "black_box_warnings": [
+      "cardiac arrhythmias and hypotension may occur with rapid infusion; cardiac monitoring required; maximum infusion rate 150 mg phenytoin equivalents/minute"
+    ],
+    "pharmacokinetics": {
+      "absorption": "IV or IM; complete conversion to phenytoin within 15 minutes (IV) or 30 minutes (IM)",
+      "distribution": "same as phenytoin; 90% protein bound (albumin)",
+      "metabolism": "phosphatases convert to phenytoin; phenytoin metabolized by CYP2C9/CYP2C19",
+      "excretion": "renal (as phenytoin metabolites)",
+      "half_life": "8\u201315 minutes (fosphenytoin); ~22 hours (phenytoin)",
+      "onset": "immediate (IV)",
+      "peak": "15\u201330 minutes post-conversion",
+      "duration": "varies with phenytoin levels",
+      "protein_binding": "90% (as phenytoin)",
+      "vd": "same as phenytoin"
+    },
+    "drug_interactions": [
+      {
+        "drug": "warfarin",
+        "mechanism": "phenytoin inhibits and induces CYP2C9; complex bidirectional interaction; monitor INR closely",
+        "severity": "major"
+      },
+      {
+        "drug": "oral contraceptives",
+        "mechanism": "phenytoin induces CYP3A4, reducing OCP efficacy",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Dose expressed in phenytoin equivalents (PE); 1 mg PE = 1 mg phenytoin; double-check units.",
+      "Maximum IV rate: 150 mg PE/min; monitor blood pressure and ECG continuously during infusion.",
+      "Pruritus and paresthesias (especially perineal) are common during infusion \u2014 reassure patient, do not stop infusion unless severe.",
+      "Monitor serum phenytoin levels after conversion; target total phenytoin 10\u201320 mcg/mL (adjust for albumin)."
+    ],
+    "clinical_pearls": [
+      "Fosphenytoin largely replaced IV phenytoin because it can be given IM (useful when IV access is difficult), is compatible with most IV solutions, and eliminates the propylene glycol toxicity and local tissue necrosis ('purple glove syndrome') associated with IV phenytoin.",
+      "The characteristic perineal pruritus and paresthesias during fosphenytoin infusion are a predictable (though uncomfortable) pharmacodynamic effect of phosphate release; they are not allergic reactions."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "teratogenic (category D); risk of fetal hydantoin syndrome; use if benefit outweighs risk",
+    "lactation_safety": "phenytoin excreted in breast milk; monitor infant",
+    "tdm_required": true,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "status-epilepticus",
+      "seizure"
+    ],
+    "adverse_effect_tags": [
+      "arrhythmia",
+      "hypotension",
+      "teratogenicity"
+    ],
+    "interaction_tags": [
+      "CYP2C9-inducer-inhibitor",
+      "CYP3A4-inducer"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "ion-channel"
+      ],
+      "mechanism_family": [
+        "sodium-channel-blockade"
+      ],
+      "prototype_class": "phenytoin analogs",
+      "adme_profile": "hepatically-metabolized-CYP2C9",
+      "presentation_cluster": [
+        "status-epilepticus",
+        "seizure"
+      ],
+      "adverse_cluster": [
+        "cardiac-arrhythmia",
+        "teratogen"
+      ],
+      "interaction_cluster": [
+        "CYP-inducer-inhibitor"
+      ]
+    }
+  },
+  {
+    "id": "oxcarbazepine",
+    "generic_name": "oxcarbazepine",
+    "brand_names": [
+      "Trileptal",
+      "Oxtellar XR"
+    ],
+    "drug_class": "antiepileptic drug",
+    "subclass": "voltage-gated Na+ channel blocker (carbamazepine analog)",
+    "prototype_for": false,
+    "prototype_drug": "carbamazepine",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "ion-channel"
+    ],
+    "mechanism_targets": [
+      "voltage-gated sodium channels (Nav)"
+    ],
+    "mechanism_summary": "Active 10-monohydroxy metabolite (MHD) blocks voltage-gated Na+ channels in a use-dependent manner, reducing repetitive neuronal firing. No CYP autoinduction (unlike carbamazepine) and produces fewer CYP-mediated drug interactions.",
+    "indications": [
+      "partial (focal) seizures (monotherapy and adjunctive therapy)",
+      "bipolar disorder (off-label)"
+    ],
+    "contraindications": [
+      "hypersensitivity to carbamazepine (25\u201330% cross-reactivity)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "dizziness",
+        "somnolence",
+        "diplopia",
+        "nausea",
+        "headache",
+        "ataxia"
+      ],
+      "serious": [
+        "hyponatremia (more common than carbamazepine \u2014 up to 25%)",
+        "SJS/TEN (lower risk than carbamazepine; may still occur in HLA-B*1502 carriers)",
+        "aplastic anemia (less common than carbamazepine)",
+        "teratogenicity"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral; bioavailability >95% as the active MHD metabolite",
+      "distribution": "40% protein bound (MHD)",
+      "metabolism": "hepatic; reduced to MHD (primary active metabolite); no epoxide formation",
+      "excretion": "renal (>95%)",
+      "half_life": "9\u201311 hours (MHD)",
+      "onset": "days",
+      "peak": "4\u20136 hours (MHD)",
+      "duration": "continuous",
+      "protein_binding": "40%",
+      "vd": "0.7 L/kg (MHD)"
+    },
+    "drug_interactions": [
+      {
+        "drug": "oral contraceptives",
+        "mechanism": "mild CYP3A4 induction reduces OCP levels; additional contraception advised",
+        "severity": "major"
+      },
+      {
+        "drug": "carbamazepine",
+        "mechanism": "increased carbamazepine toxicity due to metabolic interactions",
+        "severity": "moderate"
+      },
+      {
+        "drug": "verapamil",
+        "mechanism": "CYP3A4 induction by oxcarbazepine may reduce verapamil levels",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor serum sodium levels; hyponatremia is frequent (up to 25% of patients) and may be symptomatic; particularly monitor in elderly and in patients taking diuretics.",
+      "Lower risk of drug interactions than carbamazepine, but patients still need additional contraception methods (enzyme induction reduces OCP efficacy).",
+      "Cross-reactivity with carbamazepine rash is 25\u201330%; do not use as substitution without careful evaluation in patients with carbamazepine skin reactions.",
+      "No need for CBC monitoring (lower hematologic toxicity than carbamazepine), but periodic electrolytes are required."
+    ],
+    "clinical_pearls": [
+      "Oxcarbazepine has a cleaner metabolic profile than carbamazepine (no toxic epoxide metabolite, no autoinduction) but shares its major risk of hyponatremia, which is actually more common with oxcarbazepine.",
+      "As a structural analog of carbamazepine, oxcarbazepine can be used in many of the same indications with a more predictable pharmacokinetic profile."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "teratogenic risk similar to carbamazepine; use folate supplementation",
+    "lactation_safety": "excreted in breast milk; monitor infant",
+    "tdm_required": true,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "focal-seizure",
+      "epilepsy"
+    ],
+    "adverse_effect_tags": [
+      "hyponatremia",
+      "SJS",
+      "teratogenicity"
+    ],
+    "interaction_tags": [
+      "CYP3A4-mild-inducer"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "ion-channel"
+      ],
+      "mechanism_family": [
+        "sodium-channel-blockade"
+      ],
+      "prototype_class": "sodium channel AEDs",
+      "adme_profile": "renally-cleared-MHD-metabolite",
+      "presentation_cluster": [
+        "seizure"
+      ],
+      "adverse_cluster": [
+        "hyponatremia"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-mild-inducer"
+      ]
+    }
+  },
+  {
+    "id": "topiramate",
+    "generic_name": "topiramate",
+    "brand_names": [
+      "Topamax",
+      "Trokendi XR",
+      "Qudexy XR"
+    ],
+    "drug_class": "antiepileptic drug",
+    "subclass": "broad-spectrum AED with multiple mechanisms",
+    "prototype_for": false,
+    "prototype_drug": "valproate",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "ion-channel"
+    ],
+    "mechanism_targets": [
+      "voltage-gated Na+ channels",
+      "GABA-A receptors (enhancement)",
+      "AMPA/kainate glutamate receptors (blockade)",
+      "carbonic anhydrase isoforms II and IV"
+    ],
+    "mechanism_summary": "Multiple complementary mechanisms: (1) blocks voltage-gated Na+ channels; (2) enhances GABA-A receptor activity; (3) antagonizes AMPA/kainate glutamate receptors; (4) inhibits carbonic anhydrase, which contributes to both anti-seizure effects and weight loss/metabolic acidosis adverse effects.",
+    "indications": [
+      "partial and generalized seizures",
+      "Lennox-Gastaut syndrome",
+      "migraine prophylaxis",
+      "obesity (Qsymia \u2014 combination with phentermine)"
+    ],
+    "contraindications": [
+      "renal calculi (carbonic anhydrase inhibition increases kidney stone risk)",
+      "metabolic acidosis (non-anion gap) in setting requiring alkali reserves",
+      "pregnancy for migraine prevention (category D \u2014 oral cleft risk)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "cognitive impairment (word-finding difficulty \u2014 called 'Dopamax')",
+        "somnolence",
+        "dizziness",
+        "weight loss",
+        "paresthesias",
+        "fatigue"
+      ],
+      "serious": [
+        "kidney stones (nephrolithiasis \u2014 carbonic anhydrase inhibition)",
+        "metabolic acidosis (hyperchloremic non-AG)",
+        "acute myopia with angle-closure glaucoma (rare; medical emergency)",
+        "oligohidrosis with hyperthermia (especially in children)",
+        "teratogenicity (oral clefts)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral; bioavailability ~80%; not significantly affected by food",
+      "distribution": "15% protein bound",
+      "metabolism": "minimal hepatic (20%); induces CYP3A4 at higher doses",
+      "excretion": "renal (70% unchanged)",
+      "half_life": "21 hours",
+      "onset": "days to weeks",
+      "peak": "1\u20134 hours",
+      "duration": "12\u201324 hours",
+      "protein_binding": "15%",
+      "vd": "0.6\u20130.8 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "oral contraceptives",
+        "mechanism": "CYP3A4 induction at high doses reduces OCP efficacy",
+        "severity": "moderate"
+      },
+      {
+        "drug": "valproate",
+        "mechanism": "combination increases hyperammonemia risk; both drugs impair urea cycle",
+        "severity": "moderate"
+      },
+      {
+        "drug": "metformin",
+        "mechanism": "additive metabolic acidosis risk",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Hydrate adequately to reduce kidney stone risk; educate patients to drink 2\u20133 L fluid daily.",
+      "Counsel on word-finding difficulty ('Dopamax') and cognitive effects; reassure that these are dose-dependent and may improve with slower titration.",
+      "For children in hot weather: monitor for decreased sweating and hyperthermia; instruct parents to assess sweat production.",
+      "Check serum bicarbonate periodically; metabolic acidosis occurs in 10\u201325% of patients; monitor more closely if patient is also on metformin."
+    ],
+    "clinical_pearls": [
+      "Topiramate produces clinically significant weight loss (5\u20138 kg average) \u2014 a unique advantage in overweight epileptic patients, but limiting in underweight patients.",
+      "The rare acute-onset myopia with angle-closure glaucoma is a medical emergency requiring immediate discontinuation and treatment; patients should be warned to seek emergency care for sudden visual changes, eye pain, or redness."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid for migraine; use with caution in epilepsy; oral cleft risk",
+    "lactation_safety": "excreted in breast milk; monitor infant",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "epilepsy",
+      "migraine-prevention",
+      "obesity"
+    ],
+    "adverse_effect_tags": [
+      "kidney-stones",
+      "metabolic-acidosis",
+      "cognitive-effects",
+      "acute-angle-closure-glaucoma",
+      "teratogenicity"
+    ],
+    "interaction_tags": [
+      "CYP3A4-mild-inducer"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "ion-channel"
+      ],
+      "mechanism_family": [
+        "sodium-channel-blockade",
+        "GABA-enhancement",
+        "carbonic-anhydrase-inhibition"
+      ],
+      "prototype_class": "broad-spectrum AEDs",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "epilepsy",
+        "migraine-prevention"
+      ],
+      "adverse_cluster": [
+        "kidney-stones",
+        "metabolic-acidosis",
+        "cognitive-impairment"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "zonisamide",
+    "generic_name": "zonisamide",
+    "brand_names": [
+      "Zonegran"
+    ],
+    "drug_class": "antiepileptic drug",
+    "subclass": "sulfonamide-derived AED with multiple mechanisms",
+    "prototype_for": false,
+    "prototype_drug": "topiramate",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "ion-channel"
+    ],
+    "mechanism_targets": [
+      "voltage-gated Na+ channels",
+      "T-type Ca2+ channels",
+      "carbonic anhydrase"
+    ],
+    "mechanism_summary": "Blocks voltage-gated Na+ and T-type Ca2+ channels, reducing repetitive neuronal firing and absence-type activity. Also inhibits carbonic anhydrase (similar to topiramate). Has unique free radical scavenging activity. Sulfonamide derivative \u2014 potential cross-reactivity with sulfonamide allergy.",
+    "indications": [
+      "adjunctive therapy for partial (focal) seizures in adults"
+    ],
+    "contraindications": [
+      "sulfonamide hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "somnolence",
+        "anorexia/weight loss",
+        "dizziness",
+        "cognitive impairment",
+        "ataxia"
+      ],
+      "serious": [
+        "kidney stones (sulfonamide-derived carbonic anhydrase inhibitor)",
+        "oligohidrosis with hyperthermia (rare but potentially fatal)",
+        "metabolic acidosis",
+        "SJS (rare)",
+        "agranulocytosis (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral; bioavailability ~100%",
+      "distribution": "40% protein bound",
+      "metabolism": "hepatic CYP3A4",
+      "excretion": "renal (62% as parent, 35% as SMAP metabolite)",
+      "half_life": "63 hours",
+      "onset": "days to weeks",
+      "peak": "2\u20135 hours",
+      "duration": "once-daily dosing",
+      "protein_binding": "40%",
+      "vd": "1.45 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "enzyme inducers (carbamazepine, phenytoin)",
+        "mechanism": "reduce zonisamide half-life from 63 to 27 hours; dose adjustments needed",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Hydrate patients well; at least 2 L fluid daily to minimize kidney stone risk (similar concern to topiramate).",
+      "Monitor for oligohidrosis (decreased sweating) and fever in children; educate families to assess sweating in heat.",
+      "Cross-reactivity with sulfonamide allergy requires careful assessment before prescribing.",
+      "Long half-life (63 hours) allows once-daily dosing in most patients; dose adjustments infrequent once therapeutic levels achieved."
+    ],
+    "clinical_pearls": [
+      "Zonisamide's 63-hour half-life is the longest among common AEDs, allowing true once-daily dosing and providing buffer against occasional missed doses.",
+      "Like topiramate, zonisamide causes significant weight loss (5\u20137 kg) due to anorexia; this is a notable differentiating feature from weight-gaining AEDs (valproate, carbamazepine, pregabalin)."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "teratogenic in animal studies; avoid if possible",
+    "lactation_safety": "excreted in breast milk; avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "epilepsy",
+      "focal-seizure"
+    ],
+    "adverse_effect_tags": [
+      "kidney-stones",
+      "metabolic-acidosis",
+      "oligohidrosis"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "ion-channel"
+      ],
+      "mechanism_family": [
+        "sodium-channel-blockade",
+        "calcium-channel-blockade",
+        "carbonic-anhydrase-inhibition"
+      ],
+      "prototype_class": "broad-spectrum AEDs",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "epilepsy"
+      ],
+      "adverse_cluster": [
+        "kidney-stones",
+        "metabolic-acidosis"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "lacosamide",
+    "generic_name": "lacosamide",
+    "brand_names": [
+      "Vimpat"
+    ],
+    "drug_class": "antiepileptic drug",
+    "subclass": "selective sodium channel slow inactivation enhancer",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "ion-channel"
+    ],
+    "mechanism_targets": [
+      "voltage-gated sodium channels (selective enhancement of slow inactivation)"
+    ],
+    "mechanism_summary": "Novel mechanism of sodium channel modulation: selectively enhances slow inactivation of voltage-gated Na+ channels (vs. fast inactivation targeted by phenytoin, carbamazepine) and binds CRMP-2 (collapsin response mediator protein-2), reducing neuronal hyperexcitability in a manner complementary to other Na+ channel blockers.",
+    "indications": [
+      "partial (focal) seizures (adjunctive or monotherapy in adults)",
+      "primary generalized tonic-clonic seizures (adjunctive)"
+    ],
+    "contraindications": [
+      "hypersensitivity to lacosamide"
+    ],
+    "adverse_effects": {
+      "common": [
+        "diplopia",
+        "headache",
+        "dizziness",
+        "nausea",
+        "ataxia"
+      ],
+      "serious": [
+        "PR interval prolongation (cardiac conduction); monitor ECG",
+        "cardiac arrhythmias (in patients with cardiac conduction disorders)",
+        "suicidal ideation (class AED effect)",
+        "drug reaction with eosinophilia and systemic symptoms (DRESS)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral or IV; bioavailability ~100%",
+      "distribution": "<15% protein bound",
+      "metabolism": "hepatic via CYP2C19 (minor); mainly excreted unchanged",
+      "excretion": "renal (95%)",
+      "half_life": "13 hours",
+      "onset": "rapid",
+      "peak": "1\u20134 hours",
+      "duration": "12 hours (BID dosing)",
+      "protein_binding": "<15%",
+      "vd": "0.6 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "drugs prolonging PR interval (carbamazepine, lidocaine, beta-blockers)",
+        "mechanism": "additive PR prolongation; risk of AV block",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Obtain baseline ECG; lacosamide prolongs PR interval; use with caution in patients with cardiac conduction disorders or on other PR-prolonging drugs.",
+      "IV form available for patients unable to take oral medications (1:1 dose conversion); infuse over 30\u201360 minutes.",
+      "Minimal drug interactions due to low protein binding and minimal CYP metabolism; good choice in complex polypharmacy patients.",
+      "Monitor for dizziness and diplopia, especially with initiation; start at low doses and titrate slowly."
+    ],
+    "clinical_pearls": [
+      "Lacosamide's unique mechanism targeting slow Na+ channel inactivation means it works via a different molecular mechanism than phenytoin and carbamazepine, making combination with these agents pharmacodynamically complementary rather than redundant.",
+      "The IV formulation with 1:1 oral bioequivalence makes lacosamide practical for hospitalized patients who cannot take oral medications \u2014 an advantage over many other AEDs."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "limited data; use cautiously",
+    "lactation_safety": "limited data",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "focal-seizure",
+      "epilepsy"
+    ],
+    "adverse_effect_tags": [
+      "PR-prolongation",
+      "cardiac-conduction"
+    ],
+    "interaction_tags": [
+      "PR-prolonging-drugs"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "ion-channel"
+      ],
+      "mechanism_family": [
+        "sodium-channel-slow-inactivation"
+      ],
+      "prototype_class": "selective Na+ channel slow-inactivation enhancers",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "epilepsy"
+      ],
+      "adverse_cluster": [
+        "cardiac-conduction"
+      ],
+      "interaction_cluster": [
+        "PR-prolonging-drugs"
+      ]
+    }
+  },
+  {
+    "id": "ethosuximide",
+    "generic_name": "ethosuximide",
+    "brand_names": [
+      "Zarontin"
+    ],
+    "drug_class": "antiepileptic drug",
+    "subclass": "T-type calcium channel blocker \u2014 absence seizure specific",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "ion-channel"
+    ],
+    "mechanism_targets": [
+      "T-type (transient) voltage-gated Ca2+ channels in thalamic neurons"
+    ],
+    "mechanism_summary": "Selectively inhibits T-type Ca2+ channels in thalamic relay neurons, suppressing the rhythmic thalamocortical discharge that is the electrophysiological basis of absence seizures. This mechanism is specific to absence epilepsy and ethosuximide has NO effect on other seizure types.",
+    "indications": [
+      "absence epilepsy (ONLY \u2014 drug of first choice for pure absence seizures)"
+    ],
+    "contraindications": [
+      "hypersensitivity to succinimide-class AEDs"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "GI upset (take with food)",
+        "drowsiness",
+        "dizziness",
+        "hiccups",
+        "headache"
+      ],
+      "serious": [
+        "blood dyscrasias (aplastic anemia, agranulocytosis \u2014 rare but serious)",
+        "SJS (rare)",
+        "psychiatric reactions (agitation, aggression)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral; bioavailability ~100%",
+      "distribution": "low protein binding (<10%)",
+      "metabolism": "hepatic via CYP3A4 and CYP2E1 to inactive metabolites",
+      "excretion": "renal (20% unchanged; 80% as metabolites)",
+      "half_life": "60 hours (adults); 30 hours (children)",
+      "onset": "days",
+      "peak": "1\u20134 hours",
+      "duration": "once-daily or BID dosing",
+      "protein_binding": "<10%",
+      "vd": "0.62 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "valproate",
+        "mechanism": "valproate inhibits CYP2E1, potentially increasing ethosuximide levels; monitor for toxicity",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer with food or milk to minimize GI side effects.",
+      "Monitor CBC periodically; rare but serious risk of aplastic anemia; instruct to report sore throat, fever, unusual bleeding.",
+      "Ethosuximide is the first-line drug for PURE absence epilepsy; if the patient also has generalized tonic-clonic seizures, valproate is preferred (dual coverage).",
+      "Therapeutic drug monitoring: target serum level 40\u2013100 mcg/mL."
+    ],
+    "clinical_pearls": [
+      "Ethosuximide is highly specific for T-type calcium channels in the thalamus, making it uniquely effective for absence seizures \u2014 however, it is completely ineffective for any other seizure type (focal, GTC, myoclonic).",
+      "The CHILDHOOD Absence Epilepsy study showed ethosuximide superior to both valproate and lamotrigine for cognitive outcomes in children with absence epilepsy, making it the first-line drug for this specific indication."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "risk; folate supplementation recommended",
+    "lactation_safety": "present in breast milk; monitor infant",
+    "tdm_required": true,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "absence-seizure",
+      "epilepsy"
+    ],
+    "adverse_effect_tags": [
+      "blood-dyscrasia",
+      "GI-adverse"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "ion-channel"
+      ],
+      "mechanism_family": [
+        "T-type-calcium-channel-blockade"
+      ],
+      "prototype_class": "T-type Ca2+ channel blockers",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "absence-seizure"
+      ],
+      "adverse_cluster": [
+        "blood-dyscrasia"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "phenobarbital",
+    "generic_name": "phenobarbital",
+    "brand_names": [
+      "Luminal"
+    ],
+    "drug_class": "antiepileptic drug / barbiturate",
+    "subclass": "barbiturate GABA-A potentiator",
+    "prototype_for": false,
+    "prototype_drug": "diazepam",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "ion-channel"
+    ],
+    "mechanism_targets": [
+      "GABA-A receptor (barbiturate site \u2014 beta subunit)",
+      "AMPA glutamate receptors (blockade at high doses)"
+    ],
+    "mechanism_summary": "Binds the barbiturate site on GABA-A receptors, increasing the DURATION of chloride channel opening (distinct from benzodiazepines which increase frequency). At high doses, can directly gate the channel independently of GABA. Profound CNS depression; also a potent inducer of CYP enzymes.",
+    "indications": [
+      "epilepsy (focal and generalized seizures)",
+      "neonatal seizures (drug of choice)",
+      "status epilepticus (IV)",
+      "febrile seizures (prophylaxis \u2014 historical; less preferred now)",
+      "alcohol/benzodiazepine withdrawal (off-label)",
+      "sedation (perioperative)"
+    ],
+    "contraindications": [
+      "porphyria",
+      "severe hepatic impairment",
+      "severe respiratory depression"
+    ],
+    "adverse_effects": {
+      "common": [
+        "sedation",
+        "cognitive impairment",
+        "nystagmus",
+        "ataxia",
+        "hyperactivity (children)",
+        "rash"
+      ],
+      "serious": [
+        "respiratory depression (overdose)",
+        "physical dependence and withdrawal (potentially fatal)",
+        "cognitive decline with long-term use",
+        "cardiovascular depression (overdose)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral or IV; bioavailability ~80%",
+      "distribution": "20\u201345% protein bound",
+      "metabolism": "hepatic via CYP2C9, CYP2C19; potent enzyme inducer",
+      "excretion": "renal (25% unchanged)",
+      "half_life": "53\u2013140 hours (adult); 45\u2013100 hours (neonate \u2014 longer)",
+      "onset": "15\u201330 minutes (IV)",
+      "peak": "varies",
+      "duration": "4\u201310 hours (sedation); continuous (AED effect)",
+      "protein_binding": "20\u201345%",
+      "vd": "0.5\u20130.9 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "oral contraceptives",
+        "mechanism": "potent CYP3A4 induction reduces OCP levels",
+        "severity": "major"
+      },
+      {
+        "drug": "warfarin",
+        "mechanism": "CYP2C9 induction reduces warfarin levels; dose adjustment required when adding or stopping phenobarbital",
+        "severity": "major"
+      },
+      {
+        "drug": "many CNS depressants",
+        "mechanism": "additive CNS/respiratory depression",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Therapeutic level for seizures: 15\u201340 mcg/mL (total serum); toxicity usually occurs at >40\u201360 mcg/mL.",
+      "Neonatal seizures: phenobarbital remains first-line; monitor respiratory function closely in neonates who require high doses.",
+      "Tolerance to sedation develops over weeks but tolerance to anticonvulsant effects is minimal.",
+      "Abrupt discontinuation after long-term use can cause life-threatening withdrawal seizures; taper slowly (over months)."
+    ],
+    "clinical_pearls": [
+      "Phenobarbital is the world's most widely used AED due to its low cost and global availability; it remains first-line in resource-limited settings despite its side effect profile.",
+      "As a neonatal seizure treatment, phenobarbital has unique advantages: IV administration, broad efficacy, and extensive safety data in this fragile population."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "category D; teratogenic; neonatal withdrawal; vitamin K for neonate at delivery",
+    "lactation_safety": "present in breast milk; monitor for sedation and poor feeding",
+    "tdm_required": true,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "epilepsy",
+      "neonatal-seizure",
+      "status-epilepticus",
+      "febrile-seizure"
+    ],
+    "adverse_effect_tags": [
+      "sedation",
+      "cognitive-impairment",
+      "respiratory-depression",
+      "dependence",
+      "teratogenicity"
+    ],
+    "interaction_tags": [
+      "CYP3A4-inducer",
+      "CYP2C9-inducer",
+      "CYP2C19-inducer"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "ion-channel"
+      ],
+      "mechanism_family": [
+        "GABA-A-positive-modulation"
+      ],
+      "prototype_class": "barbiturates",
+      "adme_profile": "hepatically-metabolized-CYP",
+      "presentation_cluster": [
+        "epilepsy",
+        "neonatal-seizure"
+      ],
+      "adverse_cluster": [
+        "sedation",
+        "dependence",
+        "respiratory-depression"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-inducer"
+      ]
+    }
   }
 ]
