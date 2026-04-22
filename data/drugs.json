@@ -30216,5 +30216,3384 @@
         "no-significant-interactions"
       ]
     }
+  },
+  {
+    "id": "rabeprazole",
+    "generic_name": "rabeprazole",
+    "brand_names": [
+      "Aciphex"
+    ],
+    "drug_class": "proton pump inhibitor",
+    "subclass": "second-generation PPI",
+    "prototype_for": false,
+    "prototype_drug": "omeprazole",
+    "organ_systems": [
+      "gastrointestinal"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "H+/K+-ATPase (proton pump)"
+    ],
+    "mechanism_summary": "Irreversibly inhibits the gastric H+/K+-ATPase enzyme in parietal cells, blocking the final step of acid secretion regardless of stimulus.",
+    "indications": [
+      "GERD",
+      "duodenal ulcer",
+      "H. pylori eradication (combination therapy)",
+      "hypersecretory conditions (Zollinger-Ellison syndrome)"
+    ],
+    "contraindications": [
+      "hypersensitivity to PPIs or benzimidazoles"
+    ],
+    "adverse_effects": {
+      "common": [
+        "headache",
+        "diarrhea",
+        "nausea",
+        "abdominal pain"
+      ],
+      "serious": [
+        "Clostridium difficile infection",
+        "hypomagnesemia (long-term use)",
+        "bone fracture risk (long-term use)",
+        "acute interstitial nephritis"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "enteric-coated; absorbed in small intestine; bioavailability ~52%",
+      "distribution": "96% protein bound",
+      "metabolism": "hepatic via CYP2C19 and CYP3A4; less CYP2C19-dependent than omeprazole",
+      "excretion": "renal (~90%) and fecal",
+      "half_life": "1\u20132 hours",
+      "onset": "1 hour",
+      "peak": "2\u20135 hours",
+      "duration": "24 hours",
+      "protein_binding": "96%",
+      "vd": "0.34 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "methotrexate",
+        "mechanism": "reduced renal excretion of methotrexate",
+        "severity": "major"
+      },
+      {
+        "drug": "clopidogrel",
+        "mechanism": "minimal CYP2C19 interaction compared to omeprazole",
+        "severity": "minor"
+      },
+      {
+        "drug": "atazanavir",
+        "mechanism": "reduced absorption of atazanavir due to increased gastric pH",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer 30 minutes before meals for optimal efficacy; swallow tablet whole without crushing.",
+      "Monitor for signs of hypomagnesemia (muscle cramps, tremors, irregular heartbeat) in patients on long-term therapy.",
+      "Assess for concurrent use of clopidogrel; rabeprazole has less CYP2C19 interaction than omeprazole.",
+      "Educate patients that PPIs are for short-term use unless otherwise prescribed; review indication at each visit."
+    ],
+    "clinical_pearls": [
+      "Among PPIs, rabeprazole has the least dependence on CYP2C19 genotype, making it more predictable in poor metabolizers.",
+      "Avoid concomitant use with atazanavir or rilpivirine as increased gastric pH dramatically reduces their absorption."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "category B (limited data; use only if clearly needed)",
+    "lactation_safety": "avoid; excreted in breast milk",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "GERD",
+      "PUD",
+      "H. pylori",
+      "heartburn"
+    ],
+    "adverse_effect_tags": [
+      "C. difficile",
+      "hypomagnesemia",
+      "fracture risk"
+    ],
+    "interaction_tags": [
+      "CYP2C19-substrate",
+      "CYP3A4-substrate",
+      "gastric-pH-dependent-absorption"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "proton-pump-inhibition"
+      ],
+      "prototype_class": "proton pump inhibitors",
+      "adme_profile": "hepatically-metabolized-CYP2C19",
+      "presentation_cluster": [
+        "GERD",
+        "PUD",
+        "H. pylori"
+      ],
+      "adverse_cluster": [
+        "GI-infection",
+        "electrolyte-disturbance"
+      ],
+      "interaction_cluster": [
+        "gastric-pH-dependent-absorption"
+      ]
+    }
+  },
+  {
+    "id": "dexlansoprazole",
+    "generic_name": "dexlansoprazole",
+    "brand_names": [
+      "Dexilant"
+    ],
+    "drug_class": "proton pump inhibitor",
+    "subclass": "R-enantiomer PPI with dual delayed-release",
+    "prototype_for": false,
+    "prototype_drug": "omeprazole",
+    "organ_systems": [
+      "gastrointestinal"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "H+/K+-ATPase (proton pump)"
+    ],
+    "mechanism_summary": "R-enantiomer of lansoprazole that irreversibly inhibits gastric H+/K+-ATPase. Unique dual-release formulation produces two plasma concentration peaks, extending acid suppression.",
+    "indications": [
+      "GERD",
+      "erosive esophagitis (healing and maintenance)",
+      "non-erosive GERD"
+    ],
+    "contraindications": [
+      "hypersensitivity to PPIs",
+      "concurrent rilpivirine use"
+    ],
+    "adverse_effects": {
+      "common": [
+        "diarrhea",
+        "abdominal pain",
+        "nausea",
+        "flatulence"
+      ],
+      "serious": [
+        "Clostridium difficile-associated diarrhea",
+        "hypomagnesemia",
+        "acute interstitial nephritis",
+        "bone fractures (long-term)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "dual delayed-release capsule yields two Tmax peaks (~1\u20132 h and 4\u20135 h); can be taken without regard to food",
+      "distribution": "96\u201399% protein bound",
+      "metabolism": "hepatic via CYP2C19 (primary) and CYP3A4",
+      "excretion": "renal and fecal",
+      "half_life": "1\u20132 hours",
+      "onset": "1\u20132 hours",
+      "peak": "dual peak at 1\u20132 h and 4\u20135 h",
+      "duration": "24 hours",
+      "protein_binding": "96\u201399%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "atazanavir",
+        "mechanism": "reduced absorption at increased gastric pH",
+        "severity": "major"
+      },
+      {
+        "drug": "methotrexate",
+        "mechanism": "PPI class effect on renal methotrexate clearance",
+        "severity": "major"
+      },
+      {
+        "drug": "clopidogrel",
+        "mechanism": "CYP2C19 inhibition reduces active metabolite of clopidogrel",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Unique advantage: capsule may be taken without regard to meals, improving patient adherence.",
+      "Capsules may be opened and granules sprinkled on applesauce for patients unable to swallow whole; do not crush granules.",
+      "Monitor serum magnesium in patients on long-term therapy or those also taking digoxin or diuretics.",
+      "Educate patient that this formulation has two release phases to provide longer acid control throughout the day."
+    ],
+    "clinical_pearls": [
+      "The dual delayed-release technology delivers two separate absorption peaks, maintaining elevated gastric pH for a longer duration than standard PPIs.",
+      "Can be taken without regard to food, which is a practical advantage over other PPIs that require pre-meal dosing."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "category B",
+    "lactation_safety": "use caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "GERD",
+      "erosive esophagitis",
+      "heartburn"
+    ],
+    "adverse_effect_tags": [
+      "C. difficile",
+      "hypomagnesemia",
+      "fracture risk"
+    ],
+    "interaction_tags": [
+      "CYP2C19-substrate",
+      "gastric-pH-dependent-absorption"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "proton-pump-inhibition"
+      ],
+      "prototype_class": "proton pump inhibitors",
+      "adme_profile": "hepatically-metabolized-CYP2C19",
+      "presentation_cluster": [
+        "GERD"
+      ],
+      "adverse_cluster": [
+        "GI-infection",
+        "electrolyte-disturbance"
+      ],
+      "interaction_cluster": [
+        "gastric-pH-dependent-absorption"
+      ]
+    }
+  },
+  {
+    "id": "vonoprazan",
+    "generic_name": "vonoprazan",
+    "brand_names": [
+      "Voquezna"
+    ],
+    "drug_class": "potassium-competitive acid blocker (P-CAB)",
+    "subclass": "potassium-competitive acid blocker",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "gastrointestinal"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "H+/K+-ATPase (proton pump)"
+    ],
+    "mechanism_summary": "Competitively and reversibly inhibits gastric H+/K+-ATPase by competing with potassium ions at the enzyme's potassium-binding site, achieving rapid, potent, and sustained acid suppression without requiring an acidic environment for activation.",
+    "indications": [
+      "erosive esophagitis",
+      "H. pylori eradication (combination therapy)",
+      "GERD"
+    ],
+    "contraindications": [
+      "hypersensitivity to vonoprazan",
+      "concurrent rilpivirine use",
+      "concurrent atazanavir use"
+    ],
+    "adverse_effects": {
+      "common": [
+        "diarrhea",
+        "nausea",
+        "abdominal pain",
+        "upper respiratory tract infection"
+      ],
+      "serious": [
+        "Clostridium difficile infection",
+        "hypomagnesemia",
+        "acute interstitial nephritis"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~83%; not significantly affected by food",
+      "distribution": "80% protein bound",
+      "metabolism": "hepatic via CYP3A4 (major) and CYP2B6/2C19 (minor)",
+      "excretion": "renal and fecal",
+      "half_life": "9 hours",
+      "onset": "0.5\u20131 hour",
+      "peak": "1.5\u20132 hours",
+      "duration": "24+ hours",
+      "protein_binding": "80%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "atazanavir",
+        "mechanism": "markedly reduced atazanavir absorption due to elevated gastric pH",
+        "severity": "major"
+      },
+      {
+        "drug": "rilpivirine",
+        "mechanism": "reduced rilpivirine absorption; contraindicated combination",
+        "severity": "major"
+      },
+      {
+        "drug": "strong CYP3A4 inhibitors",
+        "mechanism": "increased vonoprazan exposure",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Vonoprazan achieves more rapid and consistent acid suppression than PPIs; educate patients it works differently from traditional PPIs.",
+      "Does not require activation by acid, so timing relative to meals is less critical than for PPIs.",
+      "Monitor for C. difficile infection, particularly in hospitalized patients or those on antibiotics.",
+      "Assess for concurrent use of HIV medications (rilpivirine, atazanavir) as these are absolute contraindications."
+    ],
+    "clinical_pearls": [
+      "Unlike PPIs, vonoprazan acts via reversible potassium-competitive inhibition and does not require acid activation, resulting in a faster onset and more complete acid suppression.",
+      "FDA-approved in combination with amoxicillin (dual therapy) or amoxicillin plus clarithromycin (triple therapy) for H. pylori eradication."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "insufficient data; avoid unless necessary",
+    "lactation_safety": "insufficient data; avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "GERD",
+      "H. pylori",
+      "erosive esophagitis"
+    ],
+    "adverse_effect_tags": [
+      "C. difficile",
+      "hypomagnesemia"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate",
+      "gastric-pH-dependent-absorption"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "potassium-competitive-acid-blockade"
+      ],
+      "prototype_class": "potassium-competitive acid blockers",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "GERD",
+        "H. pylori"
+      ],
+      "adverse_cluster": [
+        "GI-infection"
+      ],
+      "interaction_cluster": [
+        "gastric-pH-dependent-absorption"
+      ]
+    }
+  },
+  {
+    "id": "misoprostol",
+    "generic_name": "misoprostol",
+    "brand_names": [
+      "Cytotec"
+    ],
+    "drug_class": "prostaglandin E1 analog",
+    "subclass": "synthetic prostaglandin (GI and obstetric)",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "gastrointestinal",
+      "reproductive"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "EP1, EP3 prostaglandin receptors (gastric)",
+      "EP2, EP3 receptors (uterine)"
+    ],
+    "mechanism_summary": "Binds to prostaglandin EP receptors on gastric parietal cells to inhibit acid secretion and on surface epithelial cells to stimulate mucus and bicarbonate secretion, enhancing mucosal defense. In the uterus, EP2/EP3 receptor activation induces myometrial contractions and cervical ripening.",
+    "indications": [
+      "prevention of NSAID-induced gastric ulcers",
+      "cervical ripening and labor induction",
+      "postpartum hemorrhage",
+      "medication abortion (with mifepristone)",
+      "missed or incomplete miscarriage management"
+    ],
+    "contraindications": [
+      "pregnancy (GI indication only \u2014 causes uterine contractions)",
+      "allergy to prostaglandins"
+    ],
+    "adverse_effects": {
+      "common": [
+        "diarrhea",
+        "abdominal cramping",
+        "nausea",
+        "flatulence"
+      ],
+      "serious": [
+        "uterine hyperstimulation (obstetric use)",
+        "uterine rupture (prior uterine surgery)",
+        "anaphylaxis"
+      ]
+    },
+    "black_box_warnings": [
+      "contraindicated in pregnant women for GI indications due to abortifacient properties; women of childbearing potential must use effective contraception"
+    ],
+    "pharmacokinetics": {
+      "absorption": "rapidly and extensively absorbed orally; sublingual and vaginal routes also effective",
+      "distribution": "protein binding ~85%",
+      "metabolism": "rapid de-esterification to active misoprostol acid; no CYP450 involvement",
+      "excretion": "renal (primarily as metabolites)",
+      "half_life": "20\u201340 minutes",
+      "onset": "30 minutes (oral)",
+      "peak": "12\u201315 minutes (oral)",
+      "duration": "3\u20136 hours",
+      "protein_binding": "85%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "oxytocin",
+        "mechanism": "additive uterotonic effect; risk of uterine hyperstimulation",
+        "severity": "major"
+      },
+      {
+        "drug": "magnesium antacids",
+        "mechanism": "may potentiate diarrhea",
+        "severity": "minor"
+      }
+    ],
+    "nursing_considerations": [
+      "For GI prophylaxis: confirm patient is not pregnant before initiating; provide contraception counseling.",
+      "For obstetric use: perform continuous fetal heart rate monitoring; misoprostol must not be given within 4 hours of oxytocin due to hyperstimulation risk.",
+      "Store at room temperature away from heat and moisture.",
+      "Educate patients using misoprostol for NSAID prophylaxis that diarrhea (most common side effect) is dose-related and usually resolves; taking with food may reduce GI side effects."
+    ],
+    "clinical_pearls": [
+      "The only FDA-approved agent for prevention of NSAID-induced gastric ulcers, though PPIs are now more widely used due to better tolerability.",
+      "Sublingual misoprostol achieves faster uterine response than oral administration but with higher rates of GI side effects."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "contraindicated (GI indication); used therapeutically in obstetrics under supervision",
+    "lactation_safety": "use with caution; excreted in breast milk",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "PUD-prophylaxis",
+      "labor-induction",
+      "postpartum-hemorrhage",
+      "medication-abortion"
+    ],
+    "adverse_effect_tags": [
+      "diarrhea",
+      "uterine-hyperstimulation",
+      "teratogen"
+    ],
+    "interaction_tags": [
+      "uterotonic-additive"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal",
+        "reproductive"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "prostaglandin-receptor-agonism"
+      ],
+      "prototype_class": "prostaglandin analogs",
+      "adme_profile": "non-CYP-metabolized",
+      "presentation_cluster": [
+        "PUD-prophylaxis",
+        "obstetric-indications"
+      ],
+      "adverse_cluster": [
+        "teratogen",
+        "GI-adverse"
+      ],
+      "interaction_cluster": [
+        "uterotonic-combinations"
+      ]
+    }
+  },
+  {
+    "id": "bismuth-subsalicylate",
+    "generic_name": "bismuth subsalicylate",
+    "brand_names": [
+      "Pepto-Bismol"
+    ],
+    "drug_class": "GI protective agent / antidiarrheal",
+    "subclass": "bismuth salt",
+    "prototype_for": false,
+    "prototype_drug": null,
+    "organ_systems": [
+      "gastrointestinal"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "gastric mucosa",
+      "Helicobacter pylori (bactericidal)",
+      "enterotoxin (antisecretory)"
+    ],
+    "mechanism_summary": "Exerts multiple mechanisms: bismuth ions have direct bactericidal activity against H. pylori and inhibit its urease; salicylate component inhibits prostaglandin synthesis, reducing intestinal secretions; bismuth also coats the gastric mucosa, providing a protective barrier.",
+    "indications": [
+      "H. pylori eradication (quadruple therapy)",
+      "traveler's diarrhea (prophylaxis and treatment)",
+      "nausea",
+      "indigestion",
+      "heartburn"
+    ],
+    "contraindications": [
+      "aspirin allergy (salicylate component)",
+      "children/teenagers with viral illness (Reye's syndrome risk)",
+      "renal impairment (bismuth accumulation)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "darkening of stools and tongue (harmless)",
+        "constipation",
+        "nausea"
+      ],
+      "serious": [
+        "salicylate toxicity (high doses or renal impairment)",
+        "bismuth encephalopathy (excessive prolonged use)",
+        "Reye's syndrome in children with viral illness"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "bismuth is minimally absorbed (<1%); salicylate is well absorbed",
+      "distribution": "bismuth poorly distributed systemically; salicylate distributed widely",
+      "metabolism": "salicylate metabolized hepatically; bismuth not significantly metabolized",
+      "excretion": "bismuth excreted in feces; salicylate renally excreted",
+      "half_life": "salicylate: 2\u20133 hours; bismuth: 21\u201372 days (tissue accumulation possible)",
+      "onset": "30\u201360 minutes",
+      "peak": "variable",
+      "duration": "4\u20136 hours",
+      "protein_binding": "salicylate ~90%",
+      "vd": "low (bismuth)"
+    },
+    "drug_interactions": [
+      {
+        "drug": "aspirin or NSAIDs",
+        "mechanism": "additive salicylate toxicity",
+        "severity": "moderate"
+      },
+      {
+        "drug": "warfarin",
+        "mechanism": "salicylate displaces warfarin from protein binding; antiplatelet effect",
+        "severity": "major"
+      },
+      {
+        "drug": "tetracyclines",
+        "mechanism": "bismuth chelates tetracyclines, reducing absorption",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Warn patients that black/gray stools and dark tongue discoloration are harmless and expected side effects.",
+      "Do not administer to children or teenagers with flu or chickenpox due to Reye's syndrome risk.",
+      "Separate administration from tetracyclines by at least 2 hours as bismuth chelates and reduces their absorption.",
+      "Monitor for salicylate toxicity (tinnitus, dizziness) in patients taking concurrent aspirin, NSAIDs, or anticoagulants."
+    ],
+    "clinical_pearls": [
+      "A component of bismuth quadruple therapy for H. pylori eradication: bismuth subsalicylate + metronidazole + tetracycline + PPI.",
+      "The dark stool discoloration results from bismuth sulfide formed in the GI tract when bismuth reacts with hydrogen sulfide; this should be distinguished from melena."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "avoid; salicylate risk in third trimester",
+    "lactation_safety": "avoid; salicylate excreted in breast milk",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "H. pylori",
+      "traveler's diarrhea",
+      "nausea",
+      "indigestion"
+    ],
+    "adverse_effect_tags": [
+      "salicylate-toxicity",
+      "Reye's-syndrome",
+      "dark-stool"
+    ],
+    "interaction_tags": [
+      "chelation",
+      "antiplatelet",
+      "salicylate-additive"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "mucosal-protection",
+        "antimicrobial"
+      ],
+      "prototype_class": "bismuth compounds",
+      "adme_profile": "minimally-absorbed-GI",
+      "presentation_cluster": [
+        "H. pylori",
+        "diarrhea"
+      ],
+      "adverse_cluster": [
+        "salicylate-toxicity"
+      ],
+      "interaction_cluster": [
+        "chelation",
+        "antiplatelet"
+      ]
+    }
+  },
+  {
+    "id": "granisetron",
+    "generic_name": "granisetron",
+    "brand_names": [
+      "Kytril",
+      "Sancuso",
+      "Sustol"
+    ],
+    "drug_class": "5-HT3 receptor antagonist",
+    "subclass": "second-generation serotonin antagonist antiemetic",
+    "prototype_for": false,
+    "prototype_drug": "ondansetron",
+    "organ_systems": [
+      "gastrointestinal"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "5-HT3 receptors (vagal afferents, CTZ, GI tract)"
+    ],
+    "mechanism_summary": "Selectively antagonizes 5-HT3 receptors on vagal afferents in the GI tract and in the chemoreceptor trigger zone, blocking serotonin-mediated emetic signaling triggered by chemotherapy, radiation, and surgery.",
+    "indications": [
+      "chemotherapy-induced nausea and vomiting (CINV)",
+      "postoperative nausea and vomiting (PONV)",
+      "radiation-induced nausea and vomiting"
+    ],
+    "contraindications": [
+      "hypersensitivity to granisetron"
+    ],
+    "adverse_effects": {
+      "common": [
+        "headache",
+        "constipation",
+        "asthenia",
+        "injection site reactions (IV)"
+      ],
+      "serious": [
+        "QT prolongation",
+        "serotonin syndrome (with other serotonergic agents)",
+        "hypersensitivity reactions"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~60%; transdermal patch (Sancuso) and extended-release SC injection (Sustol) also available",
+      "distribution": "65% protein bound; widely distributed",
+      "metabolism": "hepatic via CYP3A4",
+      "excretion": "renal (12%) and fecal (48%)",
+      "half_life": "3\u201314 hours (IV); up to 10 days (Sustol extended-release)",
+      "onset": "30\u201360 minutes",
+      "peak": "variable by route",
+      "duration": "24 hours",
+      "protein_binding": "65%",
+      "vd": "3 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "QT-prolonging agents",
+        "mechanism": "additive QT prolongation risk",
+        "severity": "major"
+      },
+      {
+        "drug": "serotonergic drugs",
+        "mechanism": "serotonin syndrome risk",
+        "severity": "major"
+      },
+      {
+        "drug": "ketoconazole",
+        "mechanism": "CYP3A4 inhibition increases granisetron levels",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer IV granisetron 30 minutes before chemotherapy; oral form given 1 hour before chemo.",
+      "Monitor ECG in patients with cardiac disease or on other QT-prolonging medications.",
+      "The Sancuso transdermal patch is applied 24\u201348 hours before chemotherapy and worn for up to 7 days.",
+      "Educate patients that constipation is a common side effect; recommend adequate fluid intake and fiber."
+    ],
+    "clinical_pearls": [
+      "Granisetron has a longer half-life than ondansetron, allowing once-daily dosing for CINV prophylaxis.",
+      "The Sustol extended-release subcutaneous formulation maintains therapeutic levels for 5 days post-injection, ideal for multi-day chemotherapy regimens."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "category B",
+    "lactation_safety": "use caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "CINV",
+      "PONV",
+      "nausea",
+      "vomiting"
+    ],
+    "adverse_effect_tags": [
+      "QT-prolongation",
+      "constipation",
+      "serotonin-syndrome"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate",
+      "QT-prolonging",
+      "serotonergic"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "5-HT3-antagonism"
+      ],
+      "prototype_class": "5-HT3 receptor antagonists",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "nausea-vomiting",
+        "CINV"
+      ],
+      "adverse_cluster": [
+        "QT-prolongation"
+      ],
+      "interaction_cluster": [
+        "QT-prolonging",
+        "serotonergic"
+      ]
+    }
+  },
+  {
+    "id": "palonosetron",
+    "generic_name": "palonosetron",
+    "brand_names": [
+      "Aloxi"
+    ],
+    "drug_class": "5-HT3 receptor antagonist",
+    "subclass": "second-generation long-acting 5-HT3 antagonist",
+    "prototype_for": false,
+    "prototype_drug": "ondansetron",
+    "organ_systems": [
+      "gastrointestinal"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "5-HT3 receptors"
+    ],
+    "mechanism_summary": "Selectively antagonizes 5-HT3 receptors with 100-fold higher binding affinity than first-generation agents; also exhibits allosteric binding causing receptor internalization, which contributes to its prolonged antiemetic effect.",
+    "indications": [
+      "acute and delayed CINV (highly emetogenic chemotherapy)",
+      "PONV (prevention)"
+    ],
+    "contraindications": [
+      "hypersensitivity to palonosetron"
+    ],
+    "adverse_effects": {
+      "common": [
+        "headache",
+        "constipation",
+        "dizziness"
+      ],
+      "serious": [
+        "QT prolongation (less than first-generation agents)",
+        "serotonin syndrome"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IV administration (standard formulation); oral capsule available",
+      "distribution": "62% protein bound",
+      "metabolism": "50% metabolized hepatically; 50% excreted unchanged",
+      "excretion": "renal (~80%)",
+      "half_life": "40 hours",
+      "onset": "30 minutes",
+      "peak": "end of infusion",
+      "duration": "up to 5 days",
+      "protein_binding": "62%",
+      "vd": "8.3 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "QT-prolonging agents",
+        "mechanism": "additive QT prolongation (lower risk than first-generation)",
+        "severity": "moderate"
+      },
+      {
+        "drug": "serotonergic drugs",
+        "mechanism": "serotonin syndrome risk",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer IV palonosetron 30 minutes before chemotherapy as a single dose; single IV dose is effective for both acute and delayed CINV.",
+      "Unlike ondansetron, a single dose provides up to 5 days of antiemetic coverage, avoiding the need for additional antiemetic doses.",
+      "Monitor for constipation as a common adverse effect, particularly in oncology patients on opioids.",
+      "Assess for drug interactions with other serotonergic drugs to prevent serotonin syndrome."
+    ],
+    "clinical_pearls": [
+      "Palonosetron is the preferred 5-HT3 antagonist for highly emetogenic chemotherapy regimens because its 40-hour half-life covers both acute (0\u201324 h) and delayed (24\u2013120 h) CINV phases.",
+      "Unlike ondansetron, palonosetron uniquely allosterically modulates the 5-HT3 receptor, causing receptor internalization and contributing to its prolonged action."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "category B",
+    "lactation_safety": "use caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "CINV",
+      "PONV",
+      "delayed-nausea",
+      "chemotherapy"
+    ],
+    "adverse_effect_tags": [
+      "QT-prolongation",
+      "constipation",
+      "serotonin-syndrome"
+    ],
+    "interaction_tags": [
+      "QT-prolonging",
+      "serotonergic"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "5-HT3-antagonism"
+      ],
+      "prototype_class": "5-HT3 receptor antagonists",
+      "adme_profile": "partially-renally-cleared",
+      "presentation_cluster": [
+        "nausea-vomiting",
+        "CINV"
+      ],
+      "adverse_cluster": [
+        "QT-prolongation"
+      ],
+      "interaction_cluster": [
+        "QT-prolonging",
+        "serotonergic"
+      ]
+    }
+  },
+  {
+    "id": "fosaprepitant",
+    "generic_name": "fosaprepitant",
+    "brand_names": [
+      "Emend IV"
+    ],
+    "drug_class": "neurokinin-1 receptor antagonist",
+    "subclass": "NK1 antagonist prodrug (IV formulation)",
+    "prototype_for": false,
+    "prototype_drug": "aprepitant",
+    "organ_systems": [
+      "gastrointestinal"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "NK1 (substance P) receptors in brainstem"
+    ],
+    "mechanism_summary": "Prodrug of aprepitant; rapidly converted to aprepitant after IV administration. Aprepitant selectively antagonizes NK1 receptors in the brainstem vomiting center and GI tract, blocking substance P-mediated emesis, particularly the delayed phase of CINV.",
+    "indications": [
+      "prevention of acute and delayed CINV (combination therapy)",
+      "prevention of PONV"
+    ],
+    "contraindications": [
+      "concurrent use with pimozide (CYP3A4 inhibition increases pimozide risk)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "fatigue",
+        "hiccups",
+        "diarrhea",
+        "infusion site reactions"
+      ],
+      "serious": [
+        "infusion-site phlebitis/thrombophlebitis (less common with IV than older formulations)",
+        "Stevens-Johnson syndrome (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IV prodrug; converted to aprepitant within 30 minutes",
+      "distribution": "aprepitant: >95% protein bound",
+      "metabolism": "aprepitant metabolized via CYP3A4 (major), CYP1A2 and CYP2C19 (minor)",
+      "excretion": "renal (<5% unchanged); primarily fecal as metabolites",
+      "half_life": "aprepitant: 9\u201313 hours",
+      "onset": "within 30 minutes (IV conversion)",
+      "peak": "end of infusion",
+      "duration": "24 hours",
+      "protein_binding": ">95%",
+      "vd": "70 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "pimozide",
+        "mechanism": "CYP3A4 inhibition increases pimozide exposure; risk of fatal arrhythmia",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "dexamethasone",
+        "mechanism": "CYP3A4 inhibition increases dexamethasone levels; reduce dexamethasone dose by 50%",
+        "severity": "major"
+      },
+      {
+        "drug": "warfarin",
+        "mechanism": "CYP3A4 induction by aprepitant decreases warfarin levels 3\u20135 days after treatment",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer as a 30-minute IV infusion 30 minutes before chemotherapy.",
+      "Reduce dexamethasone dose by 50% when used in CINV combination regimens due to CYP3A4 interaction.",
+      "Monitor INR in patients on warfarin for 2 weeks after aprepitant/fosaprepitant use; warfarin levels may decrease.",
+      "Observe infusion site for thrombophlebitis; flush line thoroughly after administration."
+    ],
+    "clinical_pearls": [
+      "Fosaprepitant provides the convenience of IV administration in one dose compared to the 3-day oral aprepitant regimen, improving compliance in the clinical setting.",
+      "Blocking NK1 receptors specifically targets the delayed phase of CINV (24\u2013120 hours post-chemo), which is not well-controlled by 5-HT3 antagonists alone."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "category B",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "CINV",
+      "delayed-nausea",
+      "chemotherapy"
+    ],
+    "adverse_effect_tags": [
+      "infusion-site-reaction"
+    ],
+    "interaction_tags": [
+      "CYP3A4-inhibitor",
+      "CYP3A4-inducer",
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "NK1-receptor-antagonism"
+      ],
+      "prototype_class": "NK1 receptor antagonists",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "nausea-vomiting",
+        "CINV"
+      ],
+      "adverse_cluster": [
+        "infusion-reactions"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-inhibitor-inducer"
+      ]
+    }
+  },
+  {
+    "id": "promethazine",
+    "generic_name": "promethazine",
+    "brand_names": [
+      "Phenergan"
+    ],
+    "drug_class": "phenothiazine / antihistamine",
+    "subclass": "first-generation H1 antihistamine with dopamine antagonism",
+    "prototype_for": false,
+    "prototype_drug": null,
+    "organ_systems": [
+      "gastrointestinal",
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "H1 histamine receptors",
+      "D2 dopamine receptors (CTZ)",
+      "muscarinic receptors",
+      "alpha-1 adrenergic receptors"
+    ],
+    "mechanism_summary": "Blocks H1 receptors and D2 dopamine receptors in the chemoreceptor trigger zone to suppress nausea and vomiting; also has sedating antihistamine, anticholinergic, and alpha-1 adrenergic blocking properties contributing to its anti-nausea and sedative effects.",
+    "indications": [
+      "nausea and vomiting",
+      "motion sickness",
+      "allergic conditions",
+      "sedation (preoperative)",
+      "adjunct to analgesia"
+    ],
+    "contraindications": [
+      "children under 2 years (risk of fatal respiratory depression)",
+      "IV administration (tissue necrosis risk)",
+      "comatose patients",
+      "concurrent MAOIs"
+    ],
+    "adverse_effects": {
+      "common": [
+        "sedation",
+        "drowsiness",
+        "dry mouth",
+        "blurred vision",
+        "constipation",
+        "orthostatic hypotension"
+      ],
+      "serious": [
+        "respiratory depression (especially in children)",
+        "neuroleptic malignant syndrome",
+        "tardive dyskinesia",
+        "severe tissue damage with IV extravasation"
+      ]
+    },
+    "black_box_warnings": [
+      "respiratory depression; contraindicated in children under 2 years; use lowest effective dose in older children",
+      "severe tissue damage with IV administration (preferred route is deep IM or oral/rectal)"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral and rectal bioavailability ~25% due to first-pass; IM has higher bioavailability",
+      "distribution": "widely distributed; crosses BBB and placenta",
+      "metabolism": "hepatic via CYP2D6 and CYP2B6; extensively metabolized",
+      "excretion": "renal (as metabolites)",
+      "half_life": "16\u201319 hours",
+      "onset": "20 minutes (IM/PO)",
+      "peak": "varies",
+      "duration": "4\u20136 hours",
+      "protein_binding": "93%",
+      "vd": "9\u201317 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CNS depressants",
+        "mechanism": "additive sedation and respiratory depression",
+        "severity": "major"
+      },
+      {
+        "drug": "MAOIs",
+        "mechanism": "risk of hypertensive crisis and seizures",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "anticholinergic agents",
+        "mechanism": "additive anticholinergic toxicity",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "NEVER administer promethazine IV; administer only by deep IM injection or oral/rectal routes to prevent severe tissue necrosis and gangrene.",
+      "Do not administer to children under 2 years; use with extreme caution in children aged 2\u20136 due to risk of fatal respiratory depression.",
+      "Monitor respiratory rate and oxygen saturation, especially in elderly patients or those on concurrent CNS depressants.",
+      "Implement fall precautions due to significant sedation, orthostatic hypotension, and blurred vision."
+    ],
+    "clinical_pearls": [
+      "The FDA issued a boxed warning against IV administration following numerous reports of severe tissue necrosis and limb amputations from IV extravasation.",
+      "Promethazine is on the ISMP high-alert medication list due to its risk of serious patient harm; institutions are encouraged to restrict IV access."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use caution; may cause neonatal respiratory depression",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "nausea",
+      "vomiting",
+      "motion-sickness",
+      "sedation",
+      "allergy"
+    ],
+    "adverse_effect_tags": [
+      "sedation",
+      "respiratory-depression",
+      "anticholinergic",
+      "tissue-necrosis",
+      "tardive-dyskinesia"
+    ],
+    "interaction_tags": [
+      "CNS-depressant",
+      "anticholinergic",
+      "CYP2D6-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal",
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "H1-antagonism",
+        "D2-antagonism"
+      ],
+      "prototype_class": "phenothiazine antihistamines",
+      "adme_profile": "hepatically-metabolized-CYP2D6",
+      "presentation_cluster": [
+        "nausea-vomiting",
+        "allergic-conditions"
+      ],
+      "adverse_cluster": [
+        "CNS-depression",
+        "anticholinergic-toxidrome"
+      ],
+      "interaction_cluster": [
+        "CNS-depressant-additive",
+        "anticholinergic-additive"
+      ]
+    }
+  },
+  {
+    "id": "droperidol",
+    "generic_name": "droperidol",
+    "brand_names": [
+      "Inapsine"
+    ],
+    "drug_class": "butyrophenone / dopamine antagonist",
+    "subclass": "butyrophenone antipsychotic / antiemetic",
+    "prototype_for": false,
+    "prototype_drug": null,
+    "organ_systems": [
+      "gastrointestinal",
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "D2 dopamine receptors (CTZ)",
+      "alpha-1 adrenergic receptors"
+    ],
+    "mechanism_summary": "Potent D2 dopamine receptor antagonist in the chemoreceptor trigger zone, blocking dopamine-mediated emetic signaling. Also blocks alpha-1 adrenergic receptors, contributing to hypotension. At low doses, useful as an antiemetic; at higher doses, produces neuroleptic sedation.",
+    "indications": [
+      "PONV (prevention and treatment)",
+      "nausea and vomiting (adjunct)",
+      "agitation in emergency settings (off-label)"
+    ],
+    "contraindications": [
+      "known or suspected QT prolongation (QTc >440 ms men, >450 ms women)",
+      "hypokalemia",
+      "hypomagnesemia",
+      "concomitant class I or III antiarrhythmics"
+    ],
+    "adverse_effects": {
+      "common": [
+        "sedation",
+        "hypotension",
+        "extrapyramidal symptoms",
+        "anxiety/restlessness (akathisia)"
+      ],
+      "serious": [
+        "QT prolongation and torsades de pointes",
+        "neuroleptic malignant syndrome"
+      ]
+    },
+    "black_box_warnings": [
+      "QT prolongation and fatal cardiac arrhythmias (torsades de pointes) reported even at low doses; baseline ECG required; continuous cardiac monitoring required post-administration"
+    ],
+    "pharmacokinetics": {
+      "absorption": "IV and IM administration; rapid onset",
+      "distribution": "widely distributed; crosses BBB",
+      "metabolism": "hepatic via oxidative metabolism",
+      "excretion": "renal and fecal",
+      "half_life": "2.2 hours",
+      "onset": "3\u201310 minutes",
+      "peak": "30 minutes",
+      "duration": "2\u20134 hours",
+      "protein_binding": "85\u201390%",
+      "vd": "1.5 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "QT-prolonging agents",
+        "mechanism": "additive QT prolongation; contraindicated combination",
+        "severity": "major"
+      },
+      {
+        "drug": "CNS depressants",
+        "mechanism": "additive sedation and respiratory depression",
+        "severity": "major"
+      },
+      {
+        "drug": "antihypertensives",
+        "mechanism": "additive hypotension",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Obtain baseline ECG before administration; assess for QTc prolongation, hypokalemia, and hypomagnesemia.",
+      "Monitor cardiac rhythm continuously for 2\u20133 hours post-administration for QT changes and torsades de pointes.",
+      "Assess blood pressure frequently; orthostatic hypotension is common due to alpha-1 blockade.",
+      "Watch for extrapyramidal symptoms including akathisia, restlessness, and dystonia; diphenhydramine or benztropine may be used for treatment."
+    ],
+    "clinical_pearls": [
+      "Despite the black box warning, droperidol at low antiemetic doses (0.625\u20131.25 mg) has a favorable PONV benefit-risk profile and remains widely used in anesthesia.",
+      "Many anesthesiologists consider droperidol the most effective single agent for PONV prophylaxis, but the mandatory ECG and monitoring requirements have reduced its use in some settings."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use only if clearly needed",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "PONV",
+      "nausea",
+      "vomiting",
+      "agitation"
+    ],
+    "adverse_effect_tags": [
+      "QT-prolongation",
+      "torsades-de-pointes",
+      "extrapyramidal-symptoms",
+      "sedation"
+    ],
+    "interaction_tags": [
+      "QT-prolonging",
+      "D2-antagonist",
+      "CNS-depressant"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal",
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "D2-antagonism"
+      ],
+      "prototype_class": "butyrophenone antiemetics",
+      "adme_profile": "hepatically-metabolized",
+      "presentation_cluster": [
+        "nausea-vomiting",
+        "PONV"
+      ],
+      "adverse_cluster": [
+        "QT-prolongation",
+        "extrapyramidal-effects"
+      ],
+      "interaction_cluster": [
+        "QT-prolonging"
+      ]
+    }
+  },
+  {
+    "id": "dronabinol",
+    "generic_name": "dronabinol",
+    "brand_names": [
+      "Marinol",
+      "Syndros"
+    ],
+    "drug_class": "cannabinoid / antiemetic",
+    "subclass": "synthetic delta-9-tetrahydrocannabinol",
+    "prototype_for": false,
+    "prototype_drug": null,
+    "organ_systems": [
+      "gastrointestinal",
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "CB1 and CB2 cannabinoid receptors"
+    ],
+    "mechanism_summary": "Synthetic delta-9-THC that activates CB1 cannabinoid receptors in the vomiting center (dorsal vagal complex), cerebral cortex, and limbic system to suppress CINV. Also stimulates appetite via hypothalamic CB1 receptors, making it useful for anorexia in AIDS patients.",
+    "indications": [
+      "CINV refractory to conventional antiemetics",
+      "anorexia and weight loss in AIDS patients"
+    ],
+    "contraindications": [
+      "hypersensitivity to cannabinoids or sesame oil (capsule formulation)",
+      "history of significant psychiatric disorders",
+      "concurrent alcohol or CNS depressant use"
+    ],
+    "adverse_effects": {
+      "common": [
+        "euphoria",
+        "somnolence",
+        "dizziness",
+        "thinking abnormalities",
+        "increased appetite"
+      ],
+      "serious": [
+        "psychiatric symptoms (paranoia, hallucinations, psychosis)",
+        "cardiovascular effects (tachycardia, hypotension)",
+        "dependence and withdrawal"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "90\u201395% absorbed orally; extensive first-pass metabolism; bioavailability ~10\u201320%",
+      "distribution": "highly lipophilic; Vd ~10 L/kg; stored in adipose tissue; crosses BBB and placenta",
+      "metabolism": "extensive hepatic CYP2C9 and CYP3A4 metabolism; active metabolite (11-hydroxy-THC)",
+      "excretion": "fecal (50%) and renal (20%); may persist weeks due to adipose sequestration",
+      "half_life": "25\u201336 hours (terminal); active metabolite: 4\u20135 days",
+      "onset": "30\u201360 minutes",
+      "peak": "2\u20134 hours",
+      "duration": "4\u20136 hours (psychoactive); 24 hours (appetite effect)",
+      "protein_binding": "97%",
+      "vd": "10 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CNS depressants",
+        "mechanism": "additive CNS depression, sedation",
+        "severity": "major"
+      },
+      {
+        "drug": "anticholinergic agents",
+        "mechanism": "additive anticholinergic effects (tachycardia)",
+        "severity": "moderate"
+      },
+      {
+        "drug": "CYP2C9 inhibitors",
+        "mechanism": "increased dronabinol exposure",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer 1\u20133 hours before chemotherapy and continue every 2\u20134 hours after for CINV; for appetite stimulation, give before meals.",
+      "Assess psychiatric history before initiation; avoid in patients with schizophrenia or other psychotic disorders.",
+      "Implement fall precautions due to dizziness, somnolence, and potential disorientation.",
+      "Warn patients and caregivers about mood changes, paranoia, and judgment impairment; advise against operating machinery."
+    ],
+    "clinical_pearls": [
+      "Dronabinol is classified as a Schedule III controlled substance; its use for CINV has largely been supplanted by NK1 antagonists and newer combination regimens, but it remains a useful salvage option.",
+      "The prolonged adipose tissue sequestration means psychoactive effects and drug interactions can persist for days to weeks after discontinuation."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid; passes to fetus",
+    "lactation_safety": "contraindicated",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "CINV",
+      "anorexia",
+      "AIDS-wasting"
+    ],
+    "adverse_effect_tags": [
+      "CNS-effects",
+      "psychosis",
+      "dependence",
+      "tachycardia"
+    ],
+    "interaction_tags": [
+      "CNS-depressant",
+      "CYP2C9-substrate",
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal",
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "cannabinoid-receptor-agonism"
+      ],
+      "prototype_class": "cannabinoids",
+      "adme_profile": "hepatically-metabolized-CYP2C9-CYP3A4",
+      "presentation_cluster": [
+        "nausea-vomiting",
+        "CINV",
+        "anorexia"
+      ],
+      "adverse_cluster": [
+        "CNS-toxicity",
+        "psychiatric-effects"
+      ],
+      "interaction_cluster": [
+        "CNS-depressant-additive"
+      ]
+    }
+  },
+  {
+    "id": "scopolamine",
+    "generic_name": "scopolamine",
+    "brand_names": [
+      "Transderm Scop"
+    ],
+    "drug_class": "anticholinergic / antiemetic",
+    "subclass": "muscarinic antagonist (motion sickness)",
+    "prototype_for": false,
+    "prototype_drug": null,
+    "organ_systems": [
+      "gastrointestinal",
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "M1 muscarinic receptors (vestibular nucleus, vomiting center)"
+    ],
+    "mechanism_summary": "Competitive antagonist of muscarinic M1 receptors in the vestibular nucleus and vomiting center, blocking acetylcholine-mediated signals from the vestibular apparatus that trigger motion sickness. Also reduces GI motility and secretions via peripheral muscarinic blockade.",
+    "indications": [
+      "motion sickness (prevention)",
+      "PONV (prevention)",
+      "nausea associated with surgery"
+    ],
+    "contraindications": [
+      "narrow-angle glaucoma",
+      "urinary retention",
+      "pyloric obstruction",
+      "myasthenia gravis"
+    ],
+    "adverse_effects": {
+      "common": [
+        "dry mouth",
+        "drowsiness",
+        "blurred vision",
+        "urinary retention",
+        "constipation",
+        "confusion"
+      ],
+      "serious": [
+        "anticholinergic toxidrome (high doses)",
+        "acute angle-closure glaucoma",
+        "psychosis/hallucinations (elderly)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "transdermal patch delivers drug over 72 hours; also available oral and injectable",
+      "distribution": "highly lipophilic; crosses BBB readily",
+      "metabolism": "hepatic hydrolysis and conjugation",
+      "excretion": "renal (<10% unchanged)",
+      "half_life": "9.5 hours",
+      "onset": "4 hours (patch)",
+      "peak": "24 hours (patch)",
+      "duration": "72 hours (patch)",
+      "protein_binding": "~50%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "anticholinergic agents",
+        "mechanism": "additive anticholinergic toxicity",
+        "severity": "major"
+      },
+      {
+        "drug": "CNS depressants",
+        "mechanism": "additive sedation",
+        "severity": "moderate"
+      },
+      {
+        "drug": "antipsychotics",
+        "mechanism": "additive anticholinergic effects",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Apply transdermal patch behind the ear at least 4 hours before travel or surgery; each patch lasts 72 hours.",
+      "Wash hands thoroughly after handling patch to avoid inadvertent eye contact (causes pupil dilation and blurred vision).",
+      "Assess for glaucoma, urinary retention, and prostatic hypertrophy before prescribing; these are contraindications.",
+      "Advise patients on the Beers Criteria listing; avoid in elderly patients due to confusion, urinary retention, and fall risk."
+    ],
+    "clinical_pearls": [
+      "Scopolamine is highly effective for motion sickness because it targets the root cause \u2014 vestibular-to-vomiting center signaling \u2014 rather than the emetic response itself.",
+      "The transdermal formulation provides sustained drug delivery while avoiding first-pass metabolism, resulting in a convenient and effective delivery method."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "category C; use cautiously",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "motion-sickness",
+      "PONV",
+      "nausea"
+    ],
+    "adverse_effect_tags": [
+      "anticholinergic",
+      "dry-mouth",
+      "urinary-retention",
+      "confusion"
+    ],
+    "interaction_tags": [
+      "anticholinergic-additive",
+      "CNS-depressant"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal",
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "muscarinic-antagonism"
+      ],
+      "prototype_class": "anticholinergic antiemetics",
+      "adme_profile": "transdermal-hepatically-metabolized",
+      "presentation_cluster": [
+        "nausea-vomiting",
+        "motion-sickness",
+        "PONV"
+      ],
+      "adverse_cluster": [
+        "anticholinergic-toxidrome"
+      ],
+      "interaction_cluster": [
+        "anticholinergic-additive"
+      ]
+    }
+  },
+  {
+    "id": "diphenoxylate-atropine",
+    "generic_name": "diphenoxylate/atropine",
+    "brand_names": [
+      "Lomotil"
+    ],
+    "drug_class": "antidiarrheal / opioid agonist",
+    "subclass": "opioid-based antidiarrheal with anticholinergic",
+    "prototype_for": false,
+    "prototype_drug": null,
+    "organ_systems": [
+      "gastrointestinal"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "mu-opioid receptors (GI myenteric plexus)",
+      "muscarinic receptors (atropine component)"
+    ],
+    "mechanism_summary": "Diphenoxylate activates mu-opioid receptors in the GI myenteric plexus, reducing peristalsis and intestinal secretions to slow transit and allow more water absorption. Atropine is added in subtherapeutic doses to deter abuse; anticholinergic effects further reduce GI motility.",
+    "indications": [
+      "acute non-specific diarrhea",
+      "chronic diarrhea (adjunct)"
+    ],
+    "contraindications": [
+      "children under 2 years",
+      "infectious diarrhea (invasive bacteria, pseudomembranous colitis)",
+      "obstructive jaundice",
+      "diarrhea associated with organisms that penetrate intestinal mucosa"
+    ],
+    "adverse_effects": {
+      "common": [
+        "drowsiness",
+        "dizziness",
+        "constipation",
+        "nausea",
+        "dry mouth (atropine)"
+      ],
+      "serious": [
+        "toxic megacolon (with inflammatory bowel disease)",
+        "respiratory depression (overdose)",
+        "ileus"
+      ]
+    },
+    "black_box_warnings": [
+      "not recommended in children under 2; can cause respiratory depression, coma, and death"
+    ],
+    "pharmacokinetics": {
+      "absorption": "rapidly absorbed orally; diphenoxylate is converted to active metabolite difenoxin",
+      "distribution": "crosses BBB (at high doses)",
+      "metabolism": "hepatic; diphenoxylate converted to difenoxin (active)",
+      "excretion": "renal and fecal",
+      "half_life": "12\u201314 hours (diphenoxylate/difenoxin)",
+      "onset": "45\u201360 minutes",
+      "peak": "2 hours",
+      "duration": "3\u20134 hours",
+      "protein_binding": "moderate",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "hypertensive crisis risk",
+        "severity": "major"
+      },
+      {
+        "drug": "CNS depressants",
+        "mechanism": "additive sedation and respiratory depression",
+        "severity": "major"
+      },
+      {
+        "drug": "anticholinergics",
+        "mechanism": "additive anticholinergic effects from atropine component",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Do not use in infectious diarrhea (bacterial invasion or C. difficile) as reducing transit time can worsen infection by delaying clearance of pathogens.",
+      "Schedule II controlled substance due to diphenoxylate; assess abuse potential; dispensed in limited quantities.",
+      "Monitor for toxic megacolon in patients with IBD; discontinue if abdominal distension or decreased bowel sounds develop.",
+      "Warn patients about drowsiness; avoid alcohol and other CNS depressants during use."
+    ],
+    "clinical_pearls": [
+      "Atropine is added specifically to make the combination aversive at supratherapeutic doses \u2014 high diphenoxylate intake causes intolerable anticholinergic effects, discouraging misuse.",
+      "Unlike loperamide, diphenoxylate does cross the BBB, which is why it has Schedule V controlled substance status."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "category C; avoid",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "diarrhea",
+      "acute-diarrhea"
+    ],
+    "adverse_effect_tags": [
+      "CNS-depression",
+      "toxic-megacolon",
+      "anticholinergic"
+    ],
+    "interaction_tags": [
+      "CNS-depressant",
+      "anticholinergic",
+      "MAOI-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "opioid-receptor-agonism"
+      ],
+      "prototype_class": "antidiarrheals",
+      "adme_profile": "hepatically-metabolized",
+      "presentation_cluster": [
+        "diarrhea"
+      ],
+      "adverse_cluster": [
+        "CNS-depression"
+      ],
+      "interaction_cluster": [
+        "CNS-depressant-additive"
+      ]
+    }
+  },
+  {
+    "id": "bisacodyl",
+    "generic_name": "bisacodyl",
+    "brand_names": [
+      "Dulcolax",
+      "Correctol"
+    ],
+    "drug_class": "stimulant laxative",
+    "subclass": "diphenylmethane stimulant laxative",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "gastrointestinal"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "colonic epithelial cells (via deacetylation to BHPM)"
+    ],
+    "mechanism_summary": "After deacetylation by intestinal bacteria and mucosal esterases to the active form (BHPM), stimulates the colonic mucosa via irritation of the myenteric plexus, increasing peristaltic contractions and promoting fluid and electrolyte accumulation in the colon.",
+    "indications": [
+      "constipation",
+      "bowel preparation before procedures",
+      "postoperative constipation"
+    ],
+    "contraindications": [
+      "intestinal obstruction",
+      "acute abdomen",
+      "inflammatory bowel disease (flare)",
+      "abdominal pain of unknown origin"
+    ],
+    "adverse_effects": {
+      "common": [
+        "abdominal cramping",
+        "nausea",
+        "diarrhea",
+        "rectal irritation (suppository)"
+      ],
+      "serious": [
+        "electrolyte imbalances (chronic use)",
+        "melanosis coli (long-term use)",
+        "laxative dependence"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "minimally absorbed from GI tract (<5%); enteric-coated tablets designed to release in colon",
+      "distribution": "low systemic exposure",
+      "metabolism": "converted in colon to active BHPM by bacterial enzymes",
+      "excretion": "primarily fecal",
+      "half_life": "short",
+      "onset": "6\u201312 hours (oral); 15\u201360 minutes (rectal)",
+      "peak": "varies",
+      "duration": "varies",
+      "protein_binding": "minimal",
+      "vd": "minimal"
+    },
+    "drug_interactions": [
+      {
+        "drug": "milk or antacids",
+        "mechanism": "premature dissolution of enteric coating if taken within 1 hour",
+        "severity": "moderate"
+      },
+      {
+        "drug": "diuretics",
+        "mechanism": "additive electrolyte depletion with chronic use",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Do not crush or chew enteric-coated tablets; do not administer within 1 hour of milk, antacids, or acid-suppressing agents.",
+      "Intended for short-term use only; chronic use leads to laxative dependence and electrolyte imbalances.",
+      "Monitor electrolytes (sodium, potassium) with repeated use, particularly in elderly patients.",
+      "Educate patients that suppository onset is 15\u201360 minutes; optimal timing is prior to planned defecation."
+    ],
+    "clinical_pearls": [
+      "Bisacodyl is a commonly used component of bowel prep protocols (e.g., for colonoscopy) due to its reliable and predictable colonic stimulation.",
+      "Melanosis coli \u2014 brownish discoloration of the colonic mucosa \u2014 can develop with chronic stimulant laxative use and is visible on colonoscopy; it is generally benign and reversible."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "category C; use cautiously; avoid chronic use",
+    "lactation_safety": "generally safe in occasional use",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "constipation",
+      "bowel-prep"
+    ],
+    "adverse_effect_tags": [
+      "electrolyte-imbalance",
+      "laxative-dependence"
+    ],
+    "interaction_tags": [
+      "enteric-coating-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "colonic-stimulation"
+      ],
+      "prototype_class": "stimulant laxatives",
+      "adme_profile": "minimally-absorbed-GI",
+      "presentation_cluster": [
+        "constipation"
+      ],
+      "adverse_cluster": [
+        "electrolyte-disturbance"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "senna",
+    "generic_name": "senna / sennosides",
+    "brand_names": [
+      "Senokot",
+      "Ex-Lax"
+    ],
+    "drug_class": "stimulant laxative",
+    "subclass": "anthraquinone stimulant laxative",
+    "prototype_for": false,
+    "prototype_drug": "bisacodyl",
+    "organ_systems": [
+      "gastrointestinal"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "colonic myenteric plexus (via anthraquinone metabolites)"
+    ],
+    "mechanism_summary": "Sennosides are hydrolyzed by colonic bacteria to active anthraquinone metabolites (rhein anthrone), which stimulate the myenteric plexus, increase colonic motility, and promote water and electrolyte secretion into the colon.",
+    "indications": [
+      "constipation (short-term)",
+      "opioid-induced constipation (combined with docusate)",
+      "bowel preparation"
+    ],
+    "contraindications": [
+      "intestinal obstruction",
+      "acute abdomen",
+      "inflammatory conditions of the GI tract"
+    ],
+    "adverse_effects": {
+      "common": [
+        "abdominal cramping",
+        "diarrhea",
+        "nausea"
+      ],
+      "serious": [
+        "electrolyte imbalances (chronic use)",
+        "melanosis coli",
+        "laxative dependence"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "sennosides are not absorbed in the small intestine; converted to active metabolites in the colon",
+      "distribution": "minimal systemic distribution",
+      "metabolism": "colonic bacteria hydrolyze to active anthraquinones",
+      "excretion": "fecal",
+      "half_life": "not applicable (minimal absorption)",
+      "onset": "6\u201312 hours",
+      "peak": "varies",
+      "duration": "varies",
+      "protein_binding": "minimal",
+      "vd": "minimal"
+    },
+    "drug_interactions": [
+      {
+        "drug": "diuretics",
+        "mechanism": "additive electrolyte loss with chronic use",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Most commonly used as part of a senna-docusate combination for opioid-induced constipation in palliative care and chronic opioid users.",
+      "Advise patients to take at bedtime with a full glass of water; bowel movement typically occurs in 6\u201312 hours.",
+      "Not intended for chronic daily use; laxative dependence and hypokalemia can occur.",
+      "Warn patients that pink-red or brown urine discoloration may occur (harmless anthraquinone metabolite excretion)."
+    ],
+    "clinical_pearls": [
+      "Senna plus docusate (Senokot-S) is the first-line regimen for opioid-induced constipation; the combination addresses both decreased motility (senna) and dry stool consistency (docusate).",
+      "Routine prophylactic use in patients started on opioids is the standard of care in palliative medicine."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "generally considered safe for occasional use",
+    "lactation_safety": "generally considered safe",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "constipation",
+      "opioid-induced-constipation"
+    ],
+    "adverse_effect_tags": [
+      "electrolyte-imbalance",
+      "laxative-dependence"
+    ],
+    "interaction_tags": [],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "colonic-stimulation"
+      ],
+      "prototype_class": "stimulant laxatives",
+      "adme_profile": "minimally-absorbed-GI",
+      "presentation_cluster": [
+        "constipation"
+      ],
+      "adverse_cluster": [
+        "electrolyte-disturbance"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "psyllium",
+    "generic_name": "psyllium",
+    "brand_names": [
+      "Metamucil",
+      "Konsyl"
+    ],
+    "drug_class": "bulk-forming laxative / fiber supplement",
+    "subclass": "soluble dietary fiber",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "gastrointestinal",
+      "cardiovascular"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "GI tract (physical bulk mechanism)",
+      "bile acid resins (cholesterol lowering)"
+    ],
+    "mechanism_summary": "Absorbs water in the GI tract to form a viscous gel that increases fecal bulk, stimulates peristalsis, and softens stool. Also binds bile acids in the intestinal lumen, reducing their reabsorption and lowering LDL cholesterol through a mechanism similar to bile acid sequestrants.",
+    "indications": [
+      "constipation",
+      "irritable bowel syndrome (diarrhea-predominant)",
+      "hypercholesterolemia (adjunct)",
+      "prevention of hemorrhoid recurrence"
+    ],
+    "contraindications": [
+      "intestinal obstruction",
+      "difficulty swallowing (must be taken with adequate fluid)",
+      "phenylketonuria (some products contain aspartame)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "bloating",
+        "flatulence",
+        "abdominal cramping (initial use)"
+      ],
+      "serious": [
+        "esophageal or GI obstruction if taken without sufficient water",
+        "anaphylaxis (rare, psyllium allergy)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "not absorbed; acts entirely within GI lumen",
+      "distribution": "none (not systemically absorbed)",
+      "metabolism": "fermented by colonic bacteria",
+      "excretion": "fecal",
+      "half_life": "not applicable",
+      "onset": "12\u201372 hours",
+      "peak": "1\u20133 days",
+      "duration": "varies",
+      "protein_binding": "none",
+      "vd": "none"
+    },
+    "drug_interactions": [
+      {
+        "drug": "warfarin, digoxin, lithium",
+        "mechanism": "reduced absorption of orally administered drugs if taken simultaneously",
+        "severity": "moderate"
+      },
+      {
+        "drug": "diabetes medications",
+        "mechanism": "reduced postprandial glucose absorption may require adjustment",
+        "severity": "minor"
+      }
+    ],
+    "nursing_considerations": [
+      "Always administer with at least 8 oz (240 mL) of water to prevent esophageal and GI obstruction.",
+      "Separate administration from other oral medications by at least 2 hours to avoid impaired drug absorption.",
+      "Start with lower doses and titrate gradually to minimize GI bloating and gas during the first 1\u20132 weeks.",
+      "Educate patients with diabetes that psyllium reduces postprandial glucose spikes, which may require monitoring of blood glucose."
+    ],
+    "clinical_pearls": [
+      "Psyllium is the only FDA-approved fiber supplement with an approved cardiovascular disease risk-reduction claim, as studies demonstrate up to 10\u201315% reduction in LDL cholesterol.",
+      "Unlike stimulant laxatives, psyllium is safe for chronic long-term use and is appropriate for elderly patients with chronic constipation."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "generally safe",
+    "lactation_safety": "generally safe",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "constipation",
+      "IBS-D",
+      "hypercholesterolemia"
+    ],
+    "adverse_effect_tags": [
+      "bloating",
+      "GI-obstruction"
+    ],
+    "interaction_tags": [
+      "drug-absorption-reduction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal",
+        "cardiovascular"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "bulk-forming-laxative"
+      ],
+      "prototype_class": "bulk-forming laxatives",
+      "adme_profile": "not-absorbed",
+      "presentation_cluster": [
+        "constipation",
+        "dyslipidemia"
+      ],
+      "adverse_cluster": [],
+      "interaction_cluster": [
+        "drug-absorption-reduction"
+      ]
+    }
+  },
+  {
+    "id": "docusate",
+    "generic_name": "docusate sodium",
+    "brand_names": [
+      "Colace",
+      "Surfak"
+    ],
+    "drug_class": "stool softener / emollient laxative",
+    "subclass": "anionic surfactant",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "gastrointestinal"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "stool water content (surfactant action)"
+    ],
+    "mechanism_summary": "Functions as a surfactant (detergent), lowering surface tension between the aqueous and fatty components of stool, allowing water and fat to penetrate and soften the stool. Does not stimulate peristalsis or increase bowel movements but allows easier passage of softer stool.",
+    "indications": [
+      "constipation prevention (softening hard stools)",
+      "anorectal conditions (hemorrhoids, anal fissure)",
+      "opioid-induced constipation (combined with senna)"
+    ],
+    "contraindications": [
+      "intestinal obstruction",
+      "concomitant mineral oil use (enhances absorption of mineral oil to toxic levels)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "diarrhea",
+        "abdominal cramping (mild)",
+        "nausea"
+      ],
+      "serious": [
+        "hepatotoxicity (docusate calcium, rare)",
+        "mineral oil toxicity (if co-administered)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "minimal systemic absorption",
+      "distribution": "acts locally in GI tract",
+      "metabolism": "minimal",
+      "excretion": "fecal",
+      "half_life": "not applicable",
+      "onset": "12\u201372 hours",
+      "peak": "varies",
+      "duration": "varies",
+      "protein_binding": "minimal",
+      "vd": "minimal"
+    },
+    "drug_interactions": [
+      {
+        "drug": "mineral oil",
+        "mechanism": "docusate enhances intestinal absorption of mineral oil, causing lipoid pneumonia risk",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Docusate is primarily a preventive stool softener and should not be relied upon to treat established constipation; combine with senna for more effective relief.",
+      "Administer with adequate fluids; the surfactant effect is enhanced by hydration.",
+      "Do NOT administer with mineral oil; docusate increases mineral oil absorption, raising the risk of lipoid pneumonia.",
+      "In the palliative care context, the standard prescription is senna 2 tablets + docusate 100 mg twice daily to prevent opioid-induced constipation."
+    ],
+    "clinical_pearls": [
+      "Despite widespread use, clinical evidence supporting docusate's efficacy as a standalone laxative is weak; combination with senna is more evidence-based for opioid-induced constipation.",
+      "Docusate is not absorbed systemically and has an excellent safety profile, making it appropriate for pregnant women with constipation."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "generally safe",
+    "lactation_safety": "generally safe",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "constipation",
+      "opioid-induced-constipation",
+      "stool-softening"
+    ],
+    "adverse_effect_tags": [
+      "diarrhea"
+    ],
+    "interaction_tags": [
+      "mineral-oil-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "stool-softening-surfactant"
+      ],
+      "prototype_class": "emollient laxatives",
+      "adme_profile": "not-absorbed",
+      "presentation_cluster": [
+        "constipation"
+      ],
+      "adverse_cluster": [],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "lubiprostone",
+    "generic_name": "lubiprostone",
+    "brand_names": [
+      "Amitiza"
+    ],
+    "drug_class": "chloride channel activator",
+    "subclass": "bicyclic fatty acid (prostaglandin E1 derivative)",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "gastrointestinal"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "ClC-2 chloride channels (intestinal epithelium)"
+    ],
+    "mechanism_summary": "Activates type-2 chloride channels (ClC-2) in the apical membrane of intestinal epithelial cells, stimulating secretion of chloride-rich intestinal fluid. The resulting luminal fluid secretion softens stool and increases GI transit without affecting systemic electrolytes.",
+    "indications": [
+      "chronic idiopathic constipation",
+      "irritable bowel syndrome with constipation (IBS-C) in women \u226518 years",
+      "opioid-induced constipation (non-cancer patients)"
+    ],
+    "contraindications": [
+      "mechanical GI obstruction",
+      "known hypersensitivity to lubiprostone"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea (25% \u2014 most common)",
+        "diarrhea",
+        "abdominal discomfort",
+        "headache"
+      ],
+      "serious": [
+        "dyspnea (transient chest tightness within 1 hour of first dose)",
+        "syncope"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "low systemic bioavailability; acts locally",
+      "distribution": "minimal systemic distribution",
+      "metabolism": "rapidly metabolized locally in gastric epithelium by carbonyl reductase",
+      "excretion": "renal (primarily as metabolites)",
+      "half_life": "0.9\u20131.4 hours",
+      "onset": "24\u201348 hours",
+      "peak": "1\u20132 weeks (full effect)",
+      "duration": "varies",
+      "protein_binding": "~94%",
+      "vd": "minimal"
+    },
+    "drug_interactions": [
+      {
+        "drug": "methadone",
+        "mechanism": "methadone activates mu-opioid receptors reducing efficacy in opioid-induced constipation; titration may be needed",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer with food and water to reduce nausea, which is the most common side effect and often limits adherence.",
+      "Warn patients about transient dyspnea (chest tightness, shortness of breath) that may occur within 1 hour of the first few doses; usually self-limiting within 3 hours.",
+      "Female patients should have a negative pregnancy test before initiation; avoid use in pregnancy.",
+      "Monitor efficacy by frequency of spontaneous bowel movements and stool consistency; response typically occurs within 24\u201348 hours."
+    ],
+    "clinical_pearls": [
+      "Lubiprostone represents a unique mechanism \u2014 direct activation of intestinal chloride channels \u2014 that operates independently of the nervous system, making it effective even in neurogenic constipation.",
+      "The IBS-C approval is specifically for adult women \u226518 years because adequate data are not available in men for this indication."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "category C; avoid in women who may become pregnant",
+    "lactation_safety": "use caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "constipation",
+      "IBS-C",
+      "opioid-induced-constipation"
+    ],
+    "adverse_effect_tags": [
+      "nausea",
+      "dyspnea"
+    ],
+    "interaction_tags": [],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "chloride-channel-activation"
+      ],
+      "prototype_class": "chloride channel activators",
+      "adme_profile": "locally-metabolized-minimal-systemic",
+      "presentation_cluster": [
+        "constipation",
+        "IBS-C"
+      ],
+      "adverse_cluster": [],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "linaclotide",
+    "generic_name": "linaclotide",
+    "brand_names": [
+      "Linzess"
+    ],
+    "drug_class": "guanylate cyclase-C agonist",
+    "subclass": "GC-C agonist secretagogue",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "gastrointestinal"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "guanylate cyclase-C (GC-C) receptors on intestinal epithelium"
+    ],
+    "mechanism_summary": "Activates GC-C receptors on intestinal luminal surface, increasing intracellular cyclic GMP (cGMP). Elevated cGMP activates CFTR chloride channels to secrete chloride and bicarbonate into the intestinal lumen, followed by water, promoting secretion, accelerated transit, and reduced visceral pain via decreased nociceptor sensitivity.",
+    "indications": [
+      "chronic idiopathic constipation (CIC)",
+      "irritable bowel syndrome with constipation (IBS-C)"
+    ],
+    "contraindications": [
+      "children under 6 years (risk of serious dehydration and death)",
+      "known or suspected mechanical GI obstruction"
+    ],
+    "adverse_effects": {
+      "common": [
+        "diarrhea (most common; up to 20%)",
+        "abdominal pain",
+        "flatulence",
+        "headache"
+      ],
+      "serious": [
+        "severe diarrhea leading to dehydration",
+        "electrolyte abnormalities"
+      ]
+    },
+    "black_box_warnings": [
+      "contraindicated in patients less than 6 years of age; avoid in patients 6\u201317 years; diarrhea may cause serious dehydration"
+    ],
+    "pharmacokinetics": {
+      "absorption": "minimal systemic absorption; acts locally in GI lumen",
+      "distribution": "negligible systemic distribution",
+      "metabolism": "proteolytic cleavage within GI tract to active metabolite MM-419447",
+      "excretion": "fecal",
+      "half_life": "not meaningful (local action)",
+      "onset": "1\u20132 weeks",
+      "peak": "2\u20134 weeks",
+      "duration": "continuous dosing",
+      "protein_binding": "negligible",
+      "vd": "negligible"
+    },
+    "drug_interactions": [],
+    "nursing_considerations": [
+      "Administer on an empty stomach at least 30 minutes before the first meal of the day for optimal efficacy.",
+      "Counsel patient that diarrhea is the most common reason for discontinuation; dose should be withheld and prescriber notified if severe diarrhea with dehydration occurs.",
+      "Confirm there are no children under 6 years in the household (safety cap required; tablets should never be given to children <6).",
+      "Separate IBS-C dose (290 mcg) from CIC dose (145 mcg or 72 mcg); know which indication is being treated."
+    ],
+    "clinical_pearls": [
+      "Linaclotide's analgesic effect on visceral pain in IBS-C is mediated through intracellular cGMP activating submucosal afferent fibers \u2014 this dual action (pro-secretory and analgesic) distinguishes it from simple laxatives.",
+      "Differs from lubiprostone in mechanism: linaclotide activates GC-C receptors to trigger CFTR-mediated secretion, while lubiprostone activates ClC-2 chloride channels directly."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "avoid; adequate data not available",
+    "lactation_safety": "negligible systemic absorption; likely low risk",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "constipation",
+      "IBS-C",
+      "abdominal-pain"
+    ],
+    "adverse_effect_tags": [
+      "diarrhea",
+      "dehydration"
+    ],
+    "interaction_tags": [],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "GC-C-receptor-agonism"
+      ],
+      "prototype_class": "guanylate cyclase-C agonists",
+      "adme_profile": "not-systemically-absorbed",
+      "presentation_cluster": [
+        "constipation",
+        "IBS-C"
+      ],
+      "adverse_cluster": [],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "prucalopride",
+    "generic_name": "prucalopride",
+    "brand_names": [
+      "Motegrity"
+    ],
+    "drug_class": "selective serotonin type-4 (5-HT4) receptor agonist",
+    "subclass": "prokinetic agent",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "gastrointestinal"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "5-HT4 receptors (enteric nervous system)"
+    ],
+    "mechanism_summary": "Highly selective 5-HT4 receptor agonist in the enteric nervous system. Activating 5-HT4 receptors on cholinergic neurons in the myenteric plexus stimulates release of acetylcholine, which enhances peristaltic contractions throughout the colon, accelerating colonic transit.",
+    "indications": [
+      "chronic idiopathic constipation (adults)"
+    ],
+    "contraindications": [
+      "intestinal obstruction or perforation",
+      "severe hepatic impairment",
+      "dialysis patients"
+    ],
+    "adverse_effects": {
+      "common": [
+        "headache (22%)",
+        "nausea",
+        "diarrhea",
+        "abdominal pain",
+        "flatulence"
+      ],
+      "serious": [
+        "suicidal ideation (rare; FDA label)",
+        "cardiovascular effects (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~90%; not affected by food",
+      "distribution": "Vd 567 L; widely distributed",
+      "metabolism": "minimal hepatic metabolism; primarily unchanged",
+      "excretion": "renal (~60% unchanged)",
+      "half_life": "24 hours",
+      "onset": "days to 2 weeks",
+      "peak": "2\u20133 hours",
+      "duration": "24 hours",
+      "protein_binding": "30%",
+      "vd": "567 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "P-glycoprotein inhibitors (ketoconazole)",
+        "mechanism": "inhibit renal secretion of prucalopride, increasing exposure",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Prucalopride can be taken with or without food; once-daily dosing improves adherence.",
+      "Monitor for suicidal ideation or mood changes per the FDA label; assess patient mental health history before initiation.",
+      "Dose adjustment recommended in severe renal impairment (eGFR <30 mL/min): use 1 mg daily instead of 2 mg.",
+      "Advise patients that headache is common in the first few days but typically resolves with continued use."
+    ],
+    "clinical_pearls": [
+      "Unlike metoclopramide, prucalopride's high selectivity for 5-HT4 receptors over dopamine receptors eliminates the risk of extrapyramidal side effects and QT prolongation, making it significantly safer for long-term use.",
+      "Unlike cisapride (withdrawn for QT prolongation), prucalopride does not affect hERG channels, giving it a clean cardiac safety profile."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid; animal studies show reproductive toxicity",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "constipation",
+      "chronic-constipation",
+      "GI-motility"
+    ],
+    "adverse_effect_tags": [
+      "headache",
+      "nausea"
+    ],
+    "interaction_tags": [
+      "P-glycoprotein-inhibition"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "5-HT4-receptor-agonism"
+      ],
+      "prototype_class": "prokinetic agents",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "constipation"
+      ],
+      "adverse_cluster": [],
+      "interaction_cluster": [
+        "P-glycoprotein"
+      ]
+    }
+  },
+  {
+    "id": "alosetron",
+    "generic_name": "alosetron",
+    "brand_names": [
+      "Lotronex"
+    ],
+    "drug_class": "5-HT3 receptor antagonist (GI-selective)",
+    "subclass": "selective 5-HT3 antagonist for IBS",
+    "prototype_for": false,
+    "prototype_drug": "ondansetron",
+    "organ_systems": [
+      "gastrointestinal"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "5-HT3 receptors (enteric nervous system and visceral afferents)"
+    ],
+    "mechanism_summary": "Selectively antagonizes 5-HT3 receptors in the enteric nervous system and on visceral afferent neurons. This slows colonic transit, reduces intestinal secretion, and decreases visceral hypersensitivity, addressing both the diarrhea and pain components of IBS-D.",
+    "indications": [
+      "severe diarrhea-predominant IBS (IBS-D) in women who have not responded to conventional therapy"
+    ],
+    "contraindications": [
+      "IBS with constipation",
+      "chronic constipation",
+      "Crohn's disease",
+      "ulcerative colitis",
+      "ischemic colitis history",
+      "hypercoagulable state",
+      "severe hepatic impairment"
+    ],
+    "adverse_effects": {
+      "common": [
+        "constipation (up to 29%)",
+        "abdominal pain"
+      ],
+      "serious": [
+        "ischemic colitis",
+        "severe constipation requiring hospitalization or surgery"
+      ]
+    },
+    "black_box_warnings": [
+      "serious GI adverse events including ischemic colitis and severe constipation resulting in hospitalization, surgery, and death; prescribe only through a Risk Evaluation and Mitigation Strategy (REMS) program"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~50\u201360%; affected by gender (women have higher exposure)",
+      "distribution": "82% protein bound",
+      "metabolism": "hepatic via CYP1A2, CYP3A4, CYP2C9",
+      "excretion": "renal (~73%)",
+      "half_life": "1.5 hours",
+      "onset": "days",
+      "peak": "1 hour",
+      "duration": "continuous dosing",
+      "protein_binding": "82%",
+      "vd": "65\u201395 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "fluvoxamine",
+        "mechanism": "CYP1A2 inhibition increases alosetron exposure 6-fold; contraindicated",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "strong CYP1A2 inhibitors",
+        "mechanism": "markedly increased alosetron levels",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Only prescribers enrolled in the Lotronex REMS program may prescribe alosetron; verify enrollment status.",
+      "Discontinue immediately at first signs of ischemic colitis (rectal bleeding, bloody diarrhea, new or worsening abdominal pain); do not reinstate.",
+      "Instruct patient to stop use if constipation develops and resume only when constipation resolves at the lowest dose.",
+      "Approved only for women with severe IBS-D unresponsive to conventional therapy \u2014 confirm severity and refractoriness before prescribing."
+    ],
+    "clinical_pearls": [
+      "Alosetron was voluntarily withdrawn from the market in 2000 due to serious GI adverse events and re-introduced in 2002 under a REMS program with restricted prescribing \u2014 it is one of the few drugs reintroduced under a formal risk management program.",
+      "Its selectivity for 5-HT3 receptors in the enteric nervous system rather than the CTZ distinguishes its GI-targeted effects from antiemetic 5-HT3 antagonists."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "category B; use caution",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "IBS-D",
+      "diarrhea",
+      "abdominal-pain"
+    ],
+    "adverse_effect_tags": [
+      "ischemic-colitis",
+      "constipation",
+      "GI-adverse"
+    ],
+    "interaction_tags": [
+      "CYP1A2-substrate",
+      "REMS-required"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "5-HT3-antagonism"
+      ],
+      "prototype_class": "5-HT3 receptor antagonists",
+      "adme_profile": "hepatically-metabolized-CYP1A2",
+      "presentation_cluster": [
+        "IBS-D"
+      ],
+      "adverse_cluster": [
+        "ischemic-colitis",
+        "GI-obstruction"
+      ],
+      "interaction_cluster": [
+        "CYP1A2-substrate"
+      ]
+    }
+  },
+  {
+    "id": "balsalazide",
+    "generic_name": "balsalazide",
+    "brand_names": [
+      "Colazal",
+      "Giazo"
+    ],
+    "drug_class": "aminosalicylate (5-ASA prodrug)",
+    "subclass": "colonic 5-ASA prodrug",
+    "prototype_for": false,
+    "prototype_drug": "mesalamine",
+    "organ_systems": [
+      "gastrointestinal"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "COX and lipoxygenase pathways in colonic mucosa"
+    ],
+    "mechanism_summary": "Prodrug of mesalamine (5-aminosalicylic acid) linked to an inert carrier (4-aminobenzoyl-beta-alanine) by an azo bond, which is cleaved by colonic bacteria to release active 5-ASA locally. 5-ASA suppresses inflammatory mediators in the colonic mucosa without significant systemic absorption.",
+    "indications": [
+      "mild to moderately active ulcerative colitis"
+    ],
+    "contraindications": [
+      "hypersensitivity to salicylates or balsalazide",
+      "renal impairment (use with caution)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "headache",
+        "nausea",
+        "abdominal pain",
+        "diarrhea",
+        "fatigue"
+      ],
+      "serious": [
+        "renal toxicity (nephrotoxicity \u2014 class effect)",
+        "hepatotoxicity (rare)",
+        "pericarditis",
+        "pancreatitis (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "minimal systemic absorption; active 5-ASA released in colon",
+      "distribution": "primarily local colonic distribution",
+      "metabolism": "azo bond cleaved by colonic bacteria; 5-ASA acts locally; absorbed 5-ASA undergoes N-acetylation",
+      "excretion": "primarily fecal; minor renal",
+      "half_life": "~1 hour (5-ASA)",
+      "onset": "days to weeks",
+      "peak": "weeks",
+      "duration": "continuous dosing",
+      "protein_binding": ">99% (5-ASA if absorbed)",
+      "vd": "low"
+    },
+    "drug_interactions": [
+      {
+        "drug": "nephrotoxic agents",
+        "mechanism": "additive renal toxicity risk",
+        "severity": "moderate"
+      },
+      {
+        "drug": "azathioprine or 6-MP",
+        "mechanism": "aminosalicylates inhibit TPMT, increasing 6-MP/azathioprine toxicity",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor renal function (BUN, creatinine) before and periodically during therapy; aminosalicylates carry a class risk of renal impairment.",
+      "Administer with food to improve tolerability; capsules may be opened and sprinkled on food for patients with dysphagia.",
+      "Assess for and report symptoms of pericarditis (chest pain, fever, dyspnea) or exacerbation of colitis.",
+      "Educate patients that maintenance therapy reduces relapse risk in UC; non-compliance is a major risk factor for disease flare."
+    ],
+    "clinical_pearls": [
+      "Balsalazide delivers a high concentration of 5-ASA to the colon with minimal systemic exposure, making it well-tolerated and appropriate for long-term maintenance of UC remission.",
+      "Azathioprine and 6-mercaptopurine levels must be carefully monitored if combined with balsalazide, as 5-ASA inhibits TPMT (thiopurine methyltransferase), increasing risk of myelosuppression."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "generally acceptable; monitor infant for diarrhea",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "ulcerative-colitis",
+      "IBD"
+    ],
+    "adverse_effect_tags": [
+      "nephrotoxicity",
+      "hepatotoxicity"
+    ],
+    "interaction_tags": [
+      "TPMT-inhibition",
+      "nephrotoxic-combinations"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "5-ASA-anti-inflammatory"
+      ],
+      "prototype_class": "aminosalicylates",
+      "adme_profile": "locally-released-colon",
+      "presentation_cluster": [
+        "ulcerative-colitis"
+      ],
+      "adverse_cluster": [
+        "nephrotoxicity"
+      ],
+      "interaction_cluster": [
+        "nephrotoxic-combinations"
+      ]
+    }
+  },
+  {
+    "id": "olsalazine",
+    "generic_name": "olsalazine",
+    "brand_names": [
+      "Dipentum"
+    ],
+    "drug_class": "aminosalicylate (5-ASA dimer prodrug)",
+    "subclass": "colonic 5-ASA prodrug",
+    "prototype_for": false,
+    "prototype_drug": "mesalamine",
+    "organ_systems": [
+      "gastrointestinal"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "COX and lipoxygenase pathways in colonic mucosa"
+    ],
+    "mechanism_summary": "Dimer of two 5-ASA molecules linked by an azo bond. Colonic bacteria cleave the azo bond, releasing two molecules of 5-ASA locally in the colon, where they inhibit inflammatory mediator production and mucosal inflammation.",
+    "indications": [
+      "maintenance of remission in ulcerative colitis in patients intolerant to sulfasalazine"
+    ],
+    "contraindications": [
+      "hypersensitivity to salicylates",
+      "renal impairment"
+    ],
+    "adverse_effects": {
+      "common": [
+        "diarrhea (10\u201320% \u2014 more frequent than other 5-ASA agents)",
+        "abdominal pain",
+        "nausea",
+        "headache"
+      ],
+      "serious": [
+        "renal toxicity",
+        "hepatotoxicity",
+        "pericarditis (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "minimal systemic absorption; acts locally",
+      "distribution": "colonic",
+      "metabolism": "azo bond cleaved by colonic bacteria to yield two 5-ASA molecules",
+      "excretion": "fecal",
+      "half_life": "~0.9 hours (olsalazine); ~0.5\u20131.5 hours (5-ASA)",
+      "onset": "days to weeks",
+      "peak": "weeks",
+      "duration": "continuous",
+      "protein_binding": ">99%",
+      "vd": "low"
+    },
+    "drug_interactions": [
+      {
+        "drug": "azathioprine / 6-MP",
+        "mechanism": "TPMT inhibition by 5-ASA increases 6-MP toxicity",
+        "severity": "major"
+      },
+      {
+        "drug": "warfarin",
+        "mechanism": "5-ASA may increase anticoagulant effect",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Diarrhea is the most common adverse effect and may be dose-limiting; administer in divided doses with food to reduce incidence.",
+      "Monitor renal function periodically; aminosalicylates carry risk of interstitial nephritis.",
+      "Educate patients this is a maintenance medication and should not be stopped without consulting the prescriber.",
+      "Monitor CBC and LFTs periodically; report jaundice, fatigue, or pallor."
+    ],
+    "clinical_pearls": [
+      "Olsalazine produces more watery diarrhea than other aminosalicylates, likely due to colonic secretory effects of the dimer before cleavage; taking with food reduces this problem.",
+      "Specifically indicated for patients who cannot tolerate sulfasalazine, offering equivalent efficacy without the sulfa-related side effects."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "acceptable; monitor closely",
+    "lactation_safety": "caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "ulcerative-colitis",
+      "IBD"
+    ],
+    "adverse_effect_tags": [
+      "diarrhea",
+      "nephrotoxicity"
+    ],
+    "interaction_tags": [
+      "TPMT-inhibition"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "5-ASA-anti-inflammatory"
+      ],
+      "prototype_class": "aminosalicylates",
+      "adme_profile": "locally-released-colon",
+      "presentation_cluster": [
+        "ulcerative-colitis"
+      ],
+      "adverse_cluster": [
+        "nephrotoxicity"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "vedolizumab",
+    "generic_name": "vedolizumab",
+    "brand_names": [
+      "Entyvio"
+    ],
+    "drug_class": "integrin receptor antagonist (gut-selective biologic)",
+    "subclass": "anti-alpha4beta7 integrin monoclonal antibody",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "gastrointestinal",
+      "immunology"
+    ],
+    "therapeutic_classes": [
+      "biologics"
+    ],
+    "mechanism_targets": [
+      "alpha4beta7 integrin (on gut-homing T-lymphocytes)"
+    ],
+    "mechanism_summary": "Humanized monoclonal antibody that selectively binds alpha4beta7 integrin expressed on gut-homing T-lymphocytes, blocking interaction with mucosal addressin cell adhesion molecule-1 (MAdCAM-1) in the GI tract. This prevents lymphocyte trafficking into the GI mucosa, reducing mucosal inflammation in a gut-selective manner without systemic immune suppression.",
+    "indications": [
+      "moderate to severely active ulcerative colitis",
+      "moderate to severely active Crohn's disease"
+    ],
+    "contraindications": [
+      "active severe infection",
+      "hypersensitivity to vedolizumab"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nasopharyngitis",
+        "headache",
+        "arthralgia",
+        "nausea",
+        "infusion-related reactions"
+      ],
+      "serious": [
+        "serious infections (less common than systemic biologics due to gut selectivity)",
+        "progressive multifocal leukoencephalopathy (PML) \u2014 reported, though extremely rare",
+        "hepatotoxicity (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IV infusion; subcutaneous formulation also available",
+      "distribution": "low Vd; primarily intravascular distribution",
+      "metabolism": "proteolytic catabolism",
+      "excretion": "proteolytic degradation",
+      "half_life": "25 days",
+      "onset": "weeks (induction dosing)",
+      "peak": "end of infusion",
+      "duration": "weeks (maintenance every 8 weeks)",
+      "protein_binding": "not applicable (monoclonal antibody)",
+      "vd": "low"
+    },
+    "drug_interactions": [
+      {
+        "drug": "live vaccines",
+        "mechanism": "immunosuppressive effect may reduce vaccine efficacy and increase infection risk",
+        "severity": "major"
+      },
+      {
+        "drug": "natalizumab",
+        "mechanism": "both agents target integrin receptors; combined use not recommended",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer IV infusion over 30 minutes at 0, 2, and 6 weeks for induction, then every 8 weeks for maintenance.",
+      "Screen for active tuberculosis, viral hepatitis, and other serious infections before initiating; vedolizumab is gut-selective so systemic infection risk is lower than TNF inhibitors.",
+      "Monitor for infusion reactions during and for 1 hour after infusion; have resuscitation equipment available.",
+      "Avoid live vaccines during therapy; ensure patients are up to date on all vaccinations (including killed and live) before starting."
+    ],
+    "clinical_pearls": [
+      "Vedolizumab's gut-selective mechanism means it does not suppress systemic immunity, giving it a favorable safety profile compared to TNF inhibitors \u2014 particularly regarding opportunistic infections.",
+      "Response is typically slower than TNF inhibitors (12\u201314 weeks for clinical response), making it less ideal for patients in acute severe flare but preferred for those with comorbidities or recurrent infections."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "limited data; avoid unless benefit outweighs risk",
+    "lactation_safety": "use caution; IgG antibodies may transfer to milk",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "ulcerative-colitis",
+      "Crohn's-disease",
+      "IBD"
+    ],
+    "adverse_effect_tags": [
+      "infusion-reactions",
+      "infections"
+    ],
+    "interaction_tags": [
+      "live-vaccine-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal",
+        "immunology"
+      ],
+      "therapeutic_class": [
+        "biologics"
+      ],
+      "mechanism_family": [
+        "integrin-receptor-antagonism"
+      ],
+      "prototype_class": "integrin antagonists",
+      "adme_profile": "proteolytic-catabolism",
+      "presentation_cluster": [
+        "ulcerative-colitis",
+        "Crohn's-disease"
+      ],
+      "adverse_cluster": [
+        "infusion-reactions"
+      ],
+      "interaction_cluster": [
+        "live-vaccine-interaction"
+      ]
+    }
+  },
+  {
+    "id": "tofacitinib-gi",
+    "generic_name": "tofacitinib (GI indication)",
+    "brand_names": [
+      "Xeljanz"
+    ],
+    "drug_class": "Janus kinase (JAK) inhibitor",
+    "subclass": "pan-JAK inhibitor (JAK1/JAK3-preferring)",
+    "prototype_for": false,
+    "prototype_drug": "tofacitinib",
+    "organ_systems": [
+      "gastrointestinal",
+      "immunology"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "JAK1 and JAK3 (preferential)",
+      "JAK2 (less potent)"
+    ],
+    "mechanism_summary": "Small molecule inhibitor of JAK1 and JAK3 that blocks signal transduction downstream of multiple cytokine receptors (IL-2, IL-4, IL-6, IL-7, IL-15, IL-21, IFN-gamma). This reduces inflammatory cytokine signaling in the intestinal mucosa, suppressing the inflammatory cascade in ulcerative colitis.",
+    "indications": [
+      "moderately to severely active ulcerative colitis (adults)"
+    ],
+    "contraindications": [
+      "active serious infection",
+      "severe hepatic impairment",
+      "Hepatitis B or C without treatment"
+    ],
+    "adverse_effects": {
+      "common": [
+        "upper respiratory infections",
+        "nasopharyngitis",
+        "headache",
+        "diarrhea",
+        "nausea"
+      ],
+      "serious": [
+        "serious bacterial, viral, fungal, opportunistic infections",
+        "malignancy (lymphoma, lung cancer)",
+        "major adverse cardiovascular events (MACE)",
+        "deep vein thrombosis and pulmonary embolism",
+        "herpes zoster reactivation"
+      ]
+    },
+    "black_box_warnings": [
+      "serious infections; malignancy; thrombosis (DVT, PE, arterial thrombosis); cardiovascular events \u2014 increased risk vs TNF inhibitors in patients \u226550 years with CV risk factors or smoking history; use only if no suitable alternative"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~74%; not affected by food",
+      "distribution": "Vd ~87 L; moderately distributed",
+      "metabolism": "hepatic via CYP3A4 (major) and CYP2C19 (minor)",
+      "excretion": "renal (30%) and fecal (70%)",
+      "half_life": "~3 hours",
+      "onset": "weeks (clinical response)",
+      "peak": "0.5\u20131 hour",
+      "duration": "continuous dosing",
+      "protein_binding": "40%",
+      "vd": "87 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "strong CYP3A4 inhibitors (ketoconazole)",
+        "mechanism": "increased tofacitinib exposure; reduce dose",
+        "severity": "major"
+      },
+      {
+        "drug": "strong CYP3A4 inducers (rifampin)",
+        "mechanism": "decreased tofacitinib levels; reduced efficacy",
+        "severity": "major"
+      },
+      {
+        "drug": "immunosuppressants",
+        "mechanism": "additive immunosuppression and infection risk",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Screen for TB (latent and active), hepatitis B and C, and varicella before initiating; live vaccines are contraindicated.",
+      "Monitor CBC, lipids, and LFTs at baseline and periodically; lymphopenia and hyperlipidemia are common.",
+      "Counsel patients \u226550 years with cardiovascular risk factors or current/past smoking about the increased MACE and thrombosis risk per the 2021 FDA safety update.",
+      "Shingles (herpes zoster) vaccination is recommended prior to initiation if not previously vaccinated; tofacitinib significantly increases herpes zoster risk."
+    ],
+    "clinical_pearls": [
+      "For UC, induction dosing is 10 mg twice daily for \u22658 weeks, then reduce to 5 mg twice daily maintenance \u2014 this higher induction dose contributes to the increased risk profile.",
+      "Tofacitinib's oral administration and rapid onset (~2 weeks) are advantages over biologics in certain clinical scenarios, despite the more extensive black box warnings."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid; animal data show harm",
+    "lactation_safety": "contraindicated",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "ulcerative-colitis",
+      "IBD"
+    ],
+    "adverse_effect_tags": [
+      "serious-infections",
+      "malignancy",
+      "thrombosis",
+      "MACE",
+      "herpes-zoster"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate",
+      "immunosuppressive"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal",
+        "immunology"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "JAK-inhibition"
+      ],
+      "prototype_class": "JAK inhibitors",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "ulcerative-colitis"
+      ],
+      "adverse_cluster": [
+        "serious-infections",
+        "malignancy",
+        "thrombosis"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate",
+        "immunosuppressive"
+      ]
+    }
+  },
+  {
+    "id": "ustekinumab-gi",
+    "generic_name": "ustekinumab (GI indication)",
+    "brand_names": [
+      "Stelara"
+    ],
+    "drug_class": "IL-12/IL-23 inhibitor (monoclonal antibody)",
+    "subclass": "anti-p40 subunit antibody",
+    "prototype_for": false,
+    "prototype_drug": "ustekinumab",
+    "organ_systems": [
+      "gastrointestinal",
+      "immunology"
+    ],
+    "therapeutic_classes": [
+      "biologics"
+    ],
+    "mechanism_targets": [
+      "p40 subunit shared by IL-12 and IL-23"
+    ],
+    "mechanism_summary": "Human monoclonal antibody that binds the shared p40 subunit of IL-12 and IL-23, preventing these cytokines from binding to their receptors on T-cells and natural killer cells. This inhibits Th1 and Th17-mediated inflammatory responses important in IBD pathogenesis.",
+    "indications": [
+      "moderate to severely active Crohn's disease",
+      "moderate to severely active ulcerative colitis",
+      "plaque psoriasis",
+      "psoriatic arthritis"
+    ],
+    "contraindications": [
+      "active clinically important infection",
+      "hypersensitivity to ustekinumab"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nasopharyngitis",
+        "upper respiratory infection",
+        "headache",
+        "injection site reactions"
+      ],
+      "serious": [
+        "serious infections",
+        "reversible posterior leukoencephalopathy syndrome (RPLS \u2014 rare)",
+        "malignancy"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IV induction dose (weight-based); SC maintenance doses every 8\u201312 weeks",
+      "distribution": "Vd ~4.6 L; primarily intravascular",
+      "metabolism": "proteolytic catabolism",
+      "excretion": "proteolytic degradation",
+      "half_life": "~14.9\u201345.6 days",
+      "onset": "weeks (IBD response in 8 weeks)",
+      "peak": "end of infusion (IV) or 7\u201313 days (SC)",
+      "duration": "weeks (maintenance SC dosing)",
+      "protein_binding": "not applicable",
+      "vd": "4.6 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "live vaccines",
+        "mechanism": "immunosuppression increases risk of live vaccine infection",
+        "severity": "major"
+      },
+      {
+        "drug": "CYP450 substrates",
+        "mechanism": "normalization of CYP450 activity as inflammation resolves may alter drug levels",
+        "severity": "minor"
+      }
+    ],
+    "nursing_considerations": [
+      "For Crohn's and UC induction: single weight-based IV dose (260\u2013520 mg depending on weight); then SC 90 mg every 8\u201312 weeks for maintenance.",
+      "Screen for TB, viral hepatitis B/C, and other infections before initiating; update immunizations including live vaccines before starting.",
+      "Monitor for signs of infection throughout therapy; hold treatment and evaluate for serious infection before resuming.",
+      "Educate patients about injection technique for self-administered SC doses; proper storage at 2\u20138\u00b0C required."
+    ],
+    "clinical_pearls": [
+      "Ustekinumab has a favorable safety profile compared to TNF inhibitors, with lower rates of opportunistic infections and no increase in major cardiovascular events \u2014 making it preferred in patients with prior TB exposure or recurrent infections.",
+      "By targeting the upstream p40 subunit shared by both IL-12 and IL-23, ustekinumab blocks both Th1 and Th17 pathways simultaneously, addressing multiple inflammatory axes in IBD."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "limited data; avoid unless benefit outweighs risk",
+    "lactation_safety": "use caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "Crohn's-disease",
+      "ulcerative-colitis",
+      "IBD",
+      "psoriasis"
+    ],
+    "adverse_effect_tags": [
+      "infections",
+      "RPLS"
+    ],
+    "interaction_tags": [
+      "live-vaccine-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal",
+        "immunology"
+      ],
+      "therapeutic_class": [
+        "biologics"
+      ],
+      "mechanism_family": [
+        "IL-12-IL-23-inhibition"
+      ],
+      "prototype_class": "IL-12/IL-23 inhibitors",
+      "adme_profile": "proteolytic-catabolism",
+      "presentation_cluster": [
+        "Crohn's-disease",
+        "ulcerative-colitis"
+      ],
+      "adverse_cluster": [
+        "infections"
+      ],
+      "interaction_cluster": [
+        "live-vaccine-interaction"
+      ]
+    }
+  },
+  {
+    "id": "adalimumab-gi",
+    "generic_name": "adalimumab (GI indication)",
+    "brand_names": [
+      "Humira"
+    ],
+    "drug_class": "TNF-alpha inhibitor",
+    "subclass": "fully human anti-TNF monoclonal antibody",
+    "prototype_for": false,
+    "prototype_drug": "infliximab",
+    "organ_systems": [
+      "gastrointestinal",
+      "immunology"
+    ],
+    "therapeutic_classes": [
+      "biologics"
+    ],
+    "mechanism_targets": [
+      "TNF-alpha (soluble and transmembrane)"
+    ],
+    "mechanism_summary": "Fully human monoclonal IgG1 antibody that binds both soluble and membrane-bound TNF-alpha, neutralizing its pro-inflammatory signaling, reducing cytokine-driven inflammation in the intestinal mucosa, and inducing apoptosis of activated T-lymphocytes through transmembrane TNF binding.",
+    "indications": [
+      "moderate to severely active Crohn's disease",
+      "ulcerative colitis",
+      "rheumatoid arthritis",
+      "psoriatic arthritis",
+      "ankylosing spondylitis",
+      "plaque psoriasis",
+      "juvenile idiopathic arthritis"
+    ],
+    "contraindications": [
+      "active TB or other serious infections",
+      "sepsis",
+      "hypersensitivity to adalimumab"
+    ],
+    "adverse_effects": {
+      "common": [
+        "injection site reactions",
+        "upper respiratory infections",
+        "headache",
+        "nausea"
+      ],
+      "serious": [
+        "serious bacterial, viral, fungal opportunistic infections",
+        "TB reactivation",
+        "malignancy (lymphoma, especially hepatosplenic T-cell lymphoma)",
+        "demyelinating disease",
+        "CHF worsening (doses >5 mg/kg IV)",
+        "lupus-like syndrome"
+      ]
+    },
+    "black_box_warnings": [
+      "serious infections including TB reactivation and invasive fungal infections; malignancy (lymphoma and other cancers, especially in children/adolescents/young adults) \u2014 discontinue if serious infection or lymphoma develops"
+    ],
+    "pharmacokinetics": {
+      "absorption": "subcutaneous injection; bioavailability ~64%",
+      "distribution": "Vd ~5\u20136 L; primarily intravascular",
+      "metabolism": "proteolytic catabolism",
+      "excretion": "proteolytic degradation",
+      "half_life": "~2 weeks",
+      "onset": "weeks (clinical response in 4\u201312 weeks)",
+      "peak": "131 hours post-SC injection",
+      "duration": "biweekly SC dosing",
+      "protein_binding": "not applicable",
+      "vd": "5\u20136 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "live vaccines",
+        "mechanism": "increased risk of infection from live vaccines during immunosuppression",
+        "severity": "major"
+      },
+      {
+        "drug": "abatacept or anakinra",
+        "mechanism": "additive immunosuppression with increased serious infection risk; generally avoid combination",
+        "severity": "major"
+      },
+      {
+        "drug": "methotrexate",
+        "mechanism": "reduces immunogenicity/ADA formation, increasing drug levels; used therapeutically",
+        "severity": "beneficial combination"
+      }
+    ],
+    "nursing_considerations": [
+      "Screen for latent TB with TST or IGRA before starting; treat latent TB for at least 1 month before initiating adalimumab.",
+      "Teach patients subcutaneous self-injection technique; auto-injector pens require refrigeration at 2\u20138\u00b0C; allow to warm to room temperature before injection.",
+      "Monitor for signs of infection at every visit; hold adalimumab for serious active infections and do not restart until infection is resolved.",
+      "Inform patients that live vaccines must be avoided; ensure completion of recommended vaccinations (including herpes zoster and pneumococcal vaccines) before starting therapy."
+    ],
+    "clinical_pearls": [
+      "Adalimumab is the first fully human anti-TNF antibody, reducing the risk of immunogenicity compared to chimeric antibodies like infliximab; however, combination with immunomodulators (azathioprine, methotrexate) further reduces antibody formation.",
+      "The combination of adalimumab plus an immunomodulator (e.g., azathioprine) is more effective than either agent alone for maintaining IBD remission."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "generally acceptable in first two trimesters; avoid in third trimester",
+    "lactation_safety": "detectable in breast milk; minimal infant exposure expected; generally compatible",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "Crohn's-disease",
+      "ulcerative-colitis",
+      "IBD",
+      "rheumatoid-arthritis"
+    ],
+    "adverse_effect_tags": [
+      "serious-infections",
+      "TB-reactivation",
+      "malignancy",
+      "demyelinating-disease"
+    ],
+    "interaction_tags": [
+      "live-vaccine-interaction",
+      "immunosuppressive"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "gastrointestinal",
+        "immunology"
+      ],
+      "therapeutic_class": [
+        "biologics"
+      ],
+      "mechanism_family": [
+        "TNF-alpha-inhibition"
+      ],
+      "prototype_class": "TNF-alpha inhibitors",
+      "adme_profile": "proteolytic-catabolism",
+      "presentation_cluster": [
+        "Crohn's-disease",
+        "ulcerative-colitis"
+      ],
+      "adverse_cluster": [
+        "serious-infections",
+        "malignancy"
+      ],
+      "interaction_cluster": [
+        "live-vaccine-interaction",
+        "immunosuppressive"
+      ]
+    }
   }
 ]
