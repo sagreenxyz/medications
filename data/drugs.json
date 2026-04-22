@@ -46292,5 +46292,1056 @@
         "opioid-interactions"
       ]
     }
+  },
+  {
+    "id": "amphetamine",
+    "generic_name": "amphetamine (mixed amphetamine salts)",
+    "brand_names": [
+      "Adderall",
+      "Adderall XR",
+      "Mydayis"
+    ],
+    "drug_class": "CNS stimulant",
+    "subclass": "amphetamine",
+    "prototype_for": false,
+    "prototype_drug": "methylphenidate",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "VMAT2 (vesicular monoamine transporter)",
+      "DAT (dopamine transporter)",
+      "NET (norepinephrine transporter)"
+    ],
+    "mechanism_summary": "Enters presynaptic neurons and displaces dopamine and norepinephrine from vesicles (via VMAT2), causing reversal of DAT and NET to expel monoamines into the synapse \u2014 a fundamentally different mechanism from methylphenidate (which blocks reuptake without reverse transport). Net result is massive increase in synaptic dopamine and norepinephrine.",
+    "indications": [
+      "attention deficit hyperactivity disorder (ADHD)",
+      "narcolepsy"
+    ],
+    "contraindications": [
+      "concurrent or recent MAOI use",
+      "hyperthyroidism",
+      "advanced arteriosclerosis",
+      "moderate to severe hypertension",
+      "symptomatic cardiovascular disease"
+    ],
+    "adverse_effects": {
+      "common": [
+        "appetite suppression",
+        "insomnia",
+        "weight loss",
+        "headache",
+        "dry mouth",
+        "palpitations",
+        "irritability"
+      ],
+      "serious": [
+        "hypertension",
+        "tachyarrhythmias",
+        "sudden cardiac death (rare; pre-existing cardiac abnormality risk)",
+        "psychiatric symptoms (psychosis, mania, aggression)",
+        "growth suppression in children"
+      ]
+    },
+    "black_box_warnings": [
+      "high potential for abuse and dependence (Schedule II)",
+      "misuse may cause sudden death and serious cardiovascular adverse events"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; food has minimal effect on total absorption but delays peak for XR",
+      "distribution": "protein binding ~15-40%; Vd ~3-5 L/kg; crosses BBB extensively",
+      "metabolism": "CYP2D6 to active 4-hydroxyamphetamine; also direct oxidation; urinary pH significantly affects renal excretion",
+      "excretion": "renal; acidic urine increases elimination (t\u00bd shorter); alkaline urine decreases elimination (t\u00bd longer)",
+      "half_life": "10-13 hours (d-amphetamine); 13-14 hours (l-amphetamine)",
+      "onset": "30-60 minutes",
+      "peak": "3 hours (IR); 7 hours (XR)",
+      "duration": "4-6 hours (IR); 8-12 hours (XR)",
+      "protein_binding": "15-40%",
+      "vd": "3-5 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "hypertensive crisis and serotonin syndrome",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "urinary alkalinizers (sodium bicarbonate)",
+        "mechanism": "decrease amphetamine excretion; increase levels and duration",
+        "severity": "moderate"
+      },
+      {
+        "drug": "urinary acidifiers (vitamin C, ammonium chloride)",
+        "mechanism": "increase amphetamine excretion; may precipitate withdrawal",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Obtain baseline cardiovascular assessment (BP, HR, weight, height in children); perform ECG if family history of cardiac disease or arrhythmia before initiating.",
+      "Monitor growth parameters (height and weight) every 6 months in children; drug holidays during summer may partially mitigate growth suppression.",
+      "Assess for signs of psychiatric adverse effects (hallucinations, aggression, mania) at follow-up visits; discontinue if new psychiatric symptoms emerge.",
+      "Schedule II controlled substance requiring special prescribing requirements; document diversion screening, prescription monitoring program (PDMP) check, and drug supply reconciliation at each visit."
+    ],
+    "clinical_pearls": [
+      "The 'paradoxical calming' of amphetamines in ADHD is not paradoxical at the neurobiological level; increasing prefrontal cortical dopamine and norepinephrine strengthens top-down inhibitory control, reducing hyperactivity and impulsivity.",
+      "Urine pH significantly affects amphetamine half-life: alkalinizing urine (taking antacids) extends the half-life to 16-30 hours, while acidifying it shortens the half-life to 7-14 hours \u2014 dietary and supplement habits can alter clinical response."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "avoid; risk of premature delivery, growth restriction, and neonatal withdrawal",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "ADHD",
+      "narcolepsy"
+    ],
+    "adverse_effect_tags": [
+      "hypertension",
+      "insomnia",
+      "growth suppression",
+      "psychosis",
+      "cardiac toxicity"
+    ],
+    "interaction_tags": [
+      "MAOI-interaction",
+      "CYP2D6-substrate",
+      "sympathomimetic"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "monoamine-releasing"
+      ],
+      "prototype_class": "CNS stimulants",
+      "adme_profile": "CYP2D6-metabolized",
+      "presentation_cluster": [
+        "ADHD"
+      ],
+      "adverse_cluster": [
+        "sympathomimetic-toxidrome",
+        "hypertension"
+      ],
+      "interaction_cluster": [
+        "MAOI-interaction",
+        "sympathomimetic"
+      ]
+    }
+  },
+  {
+    "id": "lisdexamfetamine",
+    "generic_name": "lisdexamfetamine",
+    "brand_names": [
+      "Vyvanse"
+    ],
+    "drug_class": "CNS stimulant",
+    "subclass": "prodrug amphetamine",
+    "prototype_for": false,
+    "prototype_drug": "methylphenidate",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "DAT (dopamine transporter)",
+      "NET (norepinephrine transporter)",
+      "VMAT2"
+    ],
+    "mechanism_summary": "Prodrug: lisdexamfetamine (lysine-conjugated d-amphetamine) is inactive until enzymatic cleavage by peptidases in the blood releases d-amphetamine. This prodrug design slows conversion, extends duration, and reduces the rapid-onset euphoria that contributes to misuse potential \u2014 unlike standard amphetamine.",
+    "indications": [
+      "ADHD (adults and children \u22656 years)",
+      "moderate to severe binge eating disorder (adults)"
+    ],
+    "contraindications": [
+      "concurrent MAOI use",
+      "hyperthyroidism",
+      "structural cardiac abnormalities",
+      "arteriosclerosis"
+    ],
+    "adverse_effects": {
+      "common": [
+        "decreased appetite",
+        "insomnia",
+        "dry mouth",
+        "headache",
+        "irritability",
+        "weight loss"
+      ],
+      "serious": [
+        "cardiovascular effects (hypertension, tachycardia, sudden death risk)",
+        "psychiatric symptoms",
+        "growth suppression (children)",
+        "Raynaud's phenomenon"
+      ]
+    },
+    "black_box_warnings": [
+      "high potential for abuse; dependency (Schedule II)"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well absorbed; food does not affect bioavailability but may delay peak",
+      "distribution": "lisdexamfetamine protein binding <1%; d-amphetamine 15-40%",
+      "metabolism": "hydrolysis of lysine in blood (by peptidases) to d-amphetamine; not CYP-dependent for activation",
+      "excretion": "primarily renal (as d-amphetamine and hippuric acid)",
+      "half_life": "<1 hour (lisdexamfetamine prodrug); ~12 hours (d-amphetamine)",
+      "onset": "1-2 hours for therapeutic effect",
+      "peak": "3.8 hours (amphetamine peak)",
+      "duration": "10-14 hours",
+      "protein_binding": "<1% (prodrug)",
+      "vd": "unknown for prodrug"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "hypertensive crisis and serotonin syndrome",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "alkalinizing agents",
+        "mechanism": "decrease d-amphetamine excretion; increase levels",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Same cardiovascular and growth monitoring as other stimulants; baseline and periodic BP, HR, weight, and height.",
+      "The prodrug design means the capsule contents can be dissolved and taken by mouth but cannot be injected for misuse \u2014 discuss this safety feature with patients concerned about diversion.",
+      "FDA approved for binge eating disorder in adults; a unique indication among ADHD medications; clarify indication on medication reconciliation.",
+      "Insist on reviewing PDMP database before prescribing/dispensing as a Schedule II agent."
+    ],
+    "clinical_pearls": [
+      "Lisdexamfetamine's prodrug design is a regulatory and clinical strategy: by requiring enzymatic activation in blood, it eliminates IV misuse potential (inactive if injected) and attenuates the euphoric rush associated with rapid oral dissolution.",
+      "Its approval for binge eating disorder represents the first pharmacological treatment for this condition; the mechanism likely involves dopamine-mediated reduction in compulsive reward-seeking behavior."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "avoid; neonatal withdrawal risk",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "ADHD",
+      "binge eating disorder"
+    ],
+    "adverse_effect_tags": [
+      "appetite suppression",
+      "insomnia",
+      "hypertension",
+      "growth suppression"
+    ],
+    "interaction_tags": [
+      "MAOI-interaction",
+      "sympathomimetic"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "monoamine-releasing"
+      ],
+      "prototype_class": "CNS stimulants",
+      "adme_profile": "prodrug-hydrolysis",
+      "presentation_cluster": [
+        "ADHD"
+      ],
+      "adverse_cluster": [
+        "sympathomimetic-toxidrome"
+      ],
+      "interaction_cluster": [
+        "MAOI-interaction",
+        "sympathomimetic"
+      ]
+    }
+  },
+  {
+    "id": "atomoxetine",
+    "generic_name": "atomoxetine",
+    "brand_names": [
+      "Strattera"
+    ],
+    "drug_class": "selective norepinephrine reuptake inhibitor (NRI)",
+    "subclass": "non-stimulant ADHD medication",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "NET (norepinephrine transporter)"
+    ],
+    "mechanism_summary": "Selectively inhibits the norepinephrine transporter (NET) in the prefrontal cortex, increasing norepinephrine availability in circuits involved in attention and impulse control. Unlike stimulants, it also modestly increases dopamine in the prefrontal cortex through indirect NET-mediated mechanisms, without directly increasing striatal dopamine (therefore no significant abuse potential).",
+    "indications": [
+      "ADHD (children \u22656 years, adolescents, and adults)"
+    ],
+    "contraindications": [
+      "concurrent MAOI use",
+      "narrow-angle glaucoma",
+      "pheochromocytoma"
+    ],
+    "adverse_effects": {
+      "common": [
+        "decreased appetite",
+        "nausea",
+        "somnolence (especially at initiation)",
+        "headache",
+        "dry mouth",
+        "dizziness",
+        "urinary retention (adults)"
+      ],
+      "serious": [
+        "suicidal ideation (pediatric)",
+        "hepatotoxicity (rare)",
+        "serious cardiovascular effects (elevated HR and BP)",
+        "priapism (rare)"
+      ]
+    },
+    "black_box_warnings": [
+      "suicidal ideation in children and adolescents during initial treatment"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; bioavailability ~63-94% depending on CYP2D6 metabolizer status",
+      "distribution": "protein binding ~98%; primarily albumin",
+      "metabolism": "primarily CYP2D6; 4-hydroxyatomoxetine (equipotent active metabolite in extensive metabolizers); poor metabolizers have 10-fold higher AUC",
+      "excretion": "primarily renal",
+      "half_life": "5.2 hours (extensive metabolizers); 21.6 hours (poor metabolizers)",
+      "onset": "therapeutic effect may require 2-6 weeks (not immediate like stimulants)",
+      "peak": "1-2 hours",
+      "duration": "24 hours (once-daily dosing may work due to long half-life in PMs)",
+      "protein_binding": "98%",
+      "vd": "0.85 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "hypertensive crisis",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "CYP2D6 inhibitors (fluoxetine, paroxetine)",
+        "mechanism": "poor-metabolizer-like pharmacokinetics; dose reduction needed",
+        "severity": "major"
+      },
+      {
+        "drug": "albuterol",
+        "mechanism": "potential additive cardiovascular effects",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Onset of therapeutic effect takes 2-6 weeks \u2014 patients and families must be counseled that atomoxetine is not immediately effective like stimulants; premature discontinuation based on lack of immediate response is common.",
+      "Monitor liver function tests if patient develops jaundice, dark urine, or abdominal pain; rare hepatotoxicity has been reported.",
+      "Assess for suicidal ideation at every visit during the first weeks of therapy per the pediatric BBW; document assessment.",
+      "A key clinical advantage over stimulants is the lack of abuse potential (not a controlled substance); this makes it preferred in patients with substance use disorder or in situations where controlled substance access is difficult."
+    ],
+    "clinical_pearls": [
+      "Atomoxetine is the only non-stimulant ADHD medication approved for adults as well as children; its non-controlled status and once-daily dosing make it an important option in settings where stimulant diversion is a concern.",
+      "CYP2D6 poor metabolizers (7-10% of Caucasians) have 10-fold higher atomoxetine exposure than extensive metabolizers; starting at lower doses and monitoring for adverse effects is warranted when CYP2D6 metabolizer status is unknown or when CYP2D6 inhibitors are co-administered."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use with caution; limited human data",
+    "lactation_safety": "use with caution; limited data",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "ADHD"
+    ],
+    "adverse_effect_tags": [
+      "suicidal ideation",
+      "hepatotoxicity",
+      "cardiovascular effects"
+    ],
+    "interaction_tags": [
+      "CYP2D6-substrate",
+      "MAOI-interaction",
+      "noradrenergic"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "NET-inhibition"
+      ],
+      "prototype_class": "non-stimulant ADHD drugs",
+      "adme_profile": "CYP2D6-metabolized",
+      "presentation_cluster": [
+        "ADHD"
+      ],
+      "adverse_cluster": [
+        "suicidal-ideation",
+        "hepatotoxicity"
+      ],
+      "interaction_cluster": [
+        "CYP2D6-substrate",
+        "MAOI-interaction"
+      ]
+    }
+  },
+  {
+    "id": "guanfacine-adhd",
+    "generic_name": "guanfacine (extended-release, for ADHD)",
+    "brand_names": [
+      "Intuniv"
+    ],
+    "drug_class": "alpha-2A adrenergic agonist",
+    "subclass": "non-stimulant ADHD medication",
+    "prototype_for": false,
+    "prototype_drug": "clonidine",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "adrenergic"
+    ],
+    "mechanism_targets": [
+      "alpha-2A adrenergic receptor (postsynaptic)"
+    ],
+    "mechanism_summary": "Selectively stimulates postsynaptic alpha-2A adrenergic receptors in the prefrontal cortex, strengthening PFC network connections that regulate attention, impulsivity, and working memory. Unlike clonidine (which acts on alpha-2B and alpha-2C as well), guanfacine's selectivity for alpha-2A may produce less sedation and more targeted cognitive effects.",
+    "indications": [
+      "ADHD (monotherapy or adjunct to stimulants in children 6-17 years)",
+      "off-label: ADHD in adults",
+      "off-label: Tourette syndrome",
+      "off-label: PTSD-related hyperarousal and nightmares"
+    ],
+    "contraindications": [
+      "hypersensitivity to guanfacine"
+    ],
+    "adverse_effects": {
+      "common": [
+        "somnolence",
+        "headache",
+        "fatigue",
+        "upper abdominal pain",
+        "nausea",
+        "hypotension",
+        "bradycardia"
+      ],
+      "serious": [
+        "severe hypotension (especially with CYP3A4 inhibitors)",
+        "rebound hypertension on abrupt discontinuation",
+        "syncope"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "well absorbed; food increases Cmax by ~75% with high-fat meal \u2014 administer consistently with or without food",
+      "distribution": "protein binding ~70%; Vd ~6.3 L/kg",
+      "metabolism": "primarily CYP3A4; 3-hydroxy-guanfacine is main metabolite",
+      "excretion": "renal (80%)",
+      "half_life": "17-24 hours",
+      "onset": "therapeutic effect 2-4 weeks",
+      "peak": "5 hours",
+      "duration": "24 hours",
+      "protein_binding": "70%",
+      "vd": "6.3 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CYP3A4 inhibitors (ketoconazole, valproic acid)",
+        "mechanism": "increase guanfacine levels; reduce dose",
+        "severity": "major"
+      },
+      {
+        "drug": "CYP3A4 inducers (rifampin)",
+        "mechanism": "decrease guanfacine levels; increase dose",
+        "severity": "major"
+      },
+      {
+        "drug": "antihypertensives",
+        "mechanism": "additive hypotension",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor blood pressure and heart rate before and after dose changes; guanfacine can cause significant hypotension \u2014 hold dose and notify prescriber if BP is low.",
+      "Taper to discontinue; abrupt withdrawal can cause rebound hypertension and agitation; reduce dose every 3-7 days over 1-2 weeks.",
+      "Do not crush or chew extended-release tablet \u2014 this destroys the ER mechanism; a 20% higher Cmax occurs if crushed.",
+      "Administer consistently with respect to high-fat meals to ensure consistent drug levels."
+    ],
+    "clinical_pearls": [
+      "Guanfacine's mechanism targets the same alpha-2A receptors that naturally modulate PFC function during stress; in animal models, mild stress impairs PFC-mediated cognition through norepinephrine-mediated alpha-2A receptor internalization, and guanfacine reverses this effect.",
+      "The combination of guanfacine with a stimulant (methylphenidate or amphetamine) addresses different neurobiological circuits and is FDA-approved for pediatric ADHD, providing complementary mechanisms for complex cases."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use with caution; limited data",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "ADHD",
+      "PTSD",
+      "Tourette syndrome"
+    ],
+    "adverse_effect_tags": [
+      "somnolence",
+      "hypotension",
+      "bradycardia",
+      "rebound hypertension"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate",
+      "antihypertensive-interactions"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "adrenergic"
+      ],
+      "mechanism_family": [
+        "alpha-2-agonism"
+      ],
+      "prototype_class": "non-stimulant ADHD drugs",
+      "adme_profile": "CYP3A4-metabolized",
+      "presentation_cluster": [
+        "ADHD"
+      ],
+      "adverse_cluster": [
+        "hypotension"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate",
+        "antihypertensive"
+      ]
+    }
+  },
+  {
+    "id": "clonidine-adhd",
+    "generic_name": "clonidine (extended-release, for ADHD)",
+    "brand_names": [
+      "Kapvay"
+    ],
+    "drug_class": "alpha-2 adrenergic agonist",
+    "subclass": "non-stimulant ADHD medication",
+    "prototype_for": false,
+    "prototype_drug": "clonidine",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "adrenergic"
+    ],
+    "mechanism_targets": [
+      "alpha-2A adrenergic receptor",
+      "alpha-2B adrenergic receptor",
+      "alpha-2C adrenergic receptor",
+      "imidazoline receptor"
+    ],
+    "mechanism_summary": "Activates presynaptic and postsynaptic alpha-2 adrenergic receptors in the prefrontal cortex and locus coeruleus. Less selective for alpha-2A than guanfacine; broader alpha-2 and imidazoline receptor activity contributes to more sedation. Reduces norepinephrine release from locus coeruleus, attenuating the noradrenergic hyperarousal in ADHD and PTSD.",
+    "indications": [
+      "ADHD (children 6-17 years, monotherapy or adjunct)",
+      "off-label: tic disorders (Tourette syndrome)",
+      "off-label: PTSD-related nightmares and hyperarousal",
+      "off-label: opioid withdrawal adjunct"
+    ],
+    "contraindications": [
+      "hypersensitivity to clonidine"
+    ],
+    "adverse_effects": {
+      "common": [
+        "somnolence (more than guanfacine)",
+        "headache",
+        "fatigue",
+        "insomnia (paradoxically at low doses)",
+        "upper abdominal pain"
+      ],
+      "serious": [
+        "severe hypotension",
+        "bradycardia",
+        "heart block",
+        "rebound hypertension on abrupt discontinuation"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "well absorbed; extended-release achieves lower Cmax and later peak than IR",
+      "distribution": "protein binding ~20-40%; Vd ~2.1 L/kg",
+      "metabolism": "hepatic; ~50% excreted unchanged",
+      "excretion": "primarily renal",
+      "half_life": "12-16 hours (ER formulation)",
+      "onset": "therapeutic effect 2-4 weeks for ADHD",
+      "peak": "7-8 hours (ER)",
+      "duration": "12 hours per dose (ER)",
+      "protein_binding": "20-40%",
+      "vd": "2.1 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "antihypertensives",
+        "mechanism": "additive hypotension",
+        "severity": "moderate"
+      },
+      {
+        "drug": "CNS depressants",
+        "mechanism": "additive sedation",
+        "severity": "moderate"
+      },
+      {
+        "drug": "beta-blockers",
+        "mechanism": "rebound hypertension potentiated if both stopped simultaneously; bradycardia",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Must taper to discontinue \u2014 abrupt cessation causes rebound hypertension that can be severe; reduce dose by 0.1 mg every 3-7 days.",
+      "Somnolence is greater with clonidine ER than guanfacine; dose at bedtime to minimize daytime sedation while still achieving therapeutic effect.",
+      "Monitor blood pressure and heart rate; particularly important in children, who can experience significant hemodynamic effects.",
+      "Not to be confused with immediate-release clonidine (used for hypertension) \u2014 the extended-release formulation (Kapvay) is specifically titrated for ADHD dosing."
+    ],
+    "clinical_pearls": [
+      "Clonidine's broader alpha-2 subtype activity (not just alpha-2A) accounts for its greater sedation compared to guanfacine, but its imidazoline receptor activity (which reduces central sympathetic outflow more broadly) makes it more effective for opioid withdrawal management.",
+      "In ADHD, clonidine is particularly useful when ADHD co-occurs with tic disorders or sleep disturbances, as alpha-2 agonism can reduce both tics and sleep-onset difficulties."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "use with caution; limited data",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "ADHD",
+      "tic disorders",
+      "PTSD"
+    ],
+    "adverse_effect_tags": [
+      "somnolence",
+      "hypotension",
+      "rebound hypertension"
+    ],
+    "interaction_tags": [
+      "antihypertensive-interactions",
+      "CNS-depression"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "adrenergic"
+      ],
+      "mechanism_family": [
+        "alpha-2-agonism"
+      ],
+      "prototype_class": "non-stimulant ADHD drugs",
+      "adme_profile": "renally-cleared",
+      "presentation_cluster": [
+        "ADHD"
+      ],
+      "adverse_cluster": [
+        "hypotension"
+      ],
+      "interaction_cluster": [
+        "antihypertensive",
+        "CNS-depressants"
+      ]
+    }
+  },
+  {
+    "id": "rivastigmine",
+    "generic_name": "rivastigmine",
+    "brand_names": [
+      "Exelon",
+      "Exelon Patch"
+    ],
+    "drug_class": "cholinesterase inhibitor",
+    "subclass": "carbamate acetylcholinesterase and butyrylcholinesterase inhibitor",
+    "prototype_for": false,
+    "prototype_drug": "donepezil",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "acetylcholinesterase (AChE)",
+      "butyrylcholinesterase (BuChE)"
+    ],
+    "mechanism_summary": "Inhibits both acetylcholinesterase and butyrylcholinesterase, increasing acetylcholine availability at cholinergic synapses. Inhibits AChE via pseudo-irreversible carbamylation (slowly reversible over hours), distinguishing it from competitive inhibitors. The transdermal formulation achieves more consistent plasma levels with fewer GI side effects than oral formulations.",
+    "indications": [
+      "Alzheimer's disease dementia (mild to severe)",
+      "Parkinson's disease dementia (first FDA-approved treatment for this indication)"
+    ],
+    "contra_indications_note": "none absolute beyond hypersensitivity",
+    "contraindications": [
+      "hypersensitivity to rivastigmine or carbamate derivatives"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "vomiting",
+        "diarrhea",
+        "anorexia",
+        "weight loss",
+        "dizziness (oral worse than patch)",
+        "application site reactions (patch)"
+      ],
+      "serious": [
+        "severe vomiting with dehydration",
+        "bradycardia and syncope",
+        "gastric ulcer exacerbation",
+        "convulsions (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral: bioavailability ~36%; food delays and reduces peak concentration; transdermal: sustained steady-state levels",
+      "distribution": "protein binding ~40%; Vd ~1.8-2.7 L/kg; crosses BBB",
+      "metabolism": "hydrolysis by cholinesterases to inactive decarbamylated metabolite; minimal CYP involvement",
+      "excretion": "primarily renal (as metabolites)",
+      "half_life": "1.5 hours (but AChE inhibition lasts 9-12 hours)",
+      "onset": "weeks to months for clinical effect",
+      "peak": "1 hour (oral); sustained with transdermal",
+      "duration": "12-24 hours per dose/patch",
+      "protein_binding": "40%",
+      "vd": "1.8-2.7 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "anticholinergics",
+        "mechanism": "pharmacodynamic antagonism; reduces cholinesterase inhibitor efficacy",
+        "severity": "moderate"
+      },
+      {
+        "drug": "beta-blockers",
+        "mechanism": "additive bradycardia",
+        "severity": "moderate"
+      },
+      {
+        "drug": "NSAIDs",
+        "mechanism": "increased GI side effects and ulcer risk",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "GI side effects (nausea, vomiting, diarrhea) are the primary reason for discontinuation; administering oral doses with food and starting at the lowest dose with slow titration minimizes these effects.",
+      "The transdermal patch (Exelon Patch) significantly reduces GI adverse effects versus oral formulation; instruct on proper application (rotate sites, do not cut patch, remove old patch before applying new).",
+      "Patch dosing error: 4.6 mg/24h and 9.5 mg/24h are the therapeutic doses; the 13.3 mg/24h patch is for severe AD only \u2014 confirm the correct patch strength is prescribed and applied.",
+      "Monitor for bradycardia in patients with sick sinus syndrome or conduction disturbances; rivastigmine's cholinergic effect on the SA node can slow heart rate."
+    ],
+    "clinical_pearls": [
+      "Rivastigmine is the only cholinesterase inhibitor FDA-approved for Parkinson's disease dementia (PDD), where cholinergic deficit is particularly prominent; cognitive fluctuation and visual hallucinations may improve.",
+      "The patch formulation of rivastigmine achieves lower but more consistent plasma levels than oral dosing, resulting in clinically meaningful reductions in nausea and vomiting \u2014 the transdermal route is now strongly preferred."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "avoid unless essential",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "Alzheimer's dementia",
+      "Parkinson's disease dementia"
+    ],
+    "adverse_effect_tags": [
+      "nausea",
+      "vomiting",
+      "bradycardia",
+      "weight loss"
+    ],
+    "interaction_tags": [
+      "anticholinergic-antagonism",
+      "cholinergic"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "AChE-inhibition"
+      ],
+      "prototype_class": "cholinesterase inhibitors",
+      "adme_profile": "cholinesterase-hydrolysis",
+      "presentation_cluster": [
+        "Alzheimer's-dementia"
+      ],
+      "adverse_cluster": [
+        "cholinergic-toxidrome"
+      ],
+      "interaction_cluster": [
+        "anticholinergic-antagonism"
+      ]
+    }
+  },
+  {
+    "id": "galantamine",
+    "generic_name": "galantamine",
+    "brand_names": [
+      "Razadyne",
+      "Razadyne ER"
+    ],
+    "drug_class": "cholinesterase inhibitor / nicotinic receptor modulator",
+    "subclass": "competitive, reversible AChE inhibitor with allosteric potentiation of nicotinic receptors",
+    "prototype_for": false,
+    "prototype_drug": "donepezil",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "acetylcholinesterase (AChE)",
+      "nicotinic acetylcholine receptors (allosteric potentiation)"
+    ],
+    "mechanism_summary": "Competitively and reversibly inhibits AChE, increasing acetylcholine. Additionally acts as an allosteric potentiating ligand (APL) at nicotinic ACh receptors, sensitizing them to acetylcholine \u2014 a dual mechanism that may provide additional neuroprotective and cognitive benefits beyond AChE inhibition alone.",
+    "indications": [
+      "mild to moderate Alzheimer's disease dementia"
+    ],
+    "contraindications": [
+      "severe hepatic or renal impairment"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "vomiting",
+        "diarrhea",
+        "anorexia",
+        "weight loss"
+      ],
+      "serious": [
+        "bradycardia and syncope",
+        "gastric ulcer perforation (less than NSAIDs but possible)",
+        "convulsions (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; bioavailability ~88-100%; food delays absorption but not total extent",
+      "distribution": "protein binding ~18%; Vd ~175 L",
+      "metabolism": "CYP2D6 and CYP3A4; active metabolites of limited clinical significance",
+      "excretion": "renal (~32% unchanged)",
+      "half_life": "7 hours",
+      "onset": "weeks for clinically meaningful effect",
+      "peak": "1 hour (IR); 4.5-5 hours (ER)",
+      "duration": "12-24 hours",
+      "protein_binding": "18%",
+      "vd": "175 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "anticholinergics",
+        "mechanism": "pharmacodynamic antagonism reduces efficacy",
+        "severity": "moderate"
+      },
+      {
+        "drug": "CYP2D6 inhibitors",
+        "mechanism": "increase galantamine levels; may require dose reduction",
+        "severity": "moderate"
+      },
+      {
+        "drug": "neuromuscular blockers",
+        "mechanism": "may prolong action of depolarizing NMBAs",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer with food to reduce GI side effects; for ER capsule, administer once daily in the morning with food.",
+      "Dose titration is mandatory: start 4 mg twice daily for 4 weeks, then 8 mg twice daily for 4 weeks, then increase as tolerated; this titration schedule minimizes GI adverse effects.",
+      "Maintain adequate hydration \u2014 significant nausea/vomiting can cause dehydration; monitor fluid intake.",
+      "In severe renal impairment (CrCl <9 mL/min) or severe hepatic impairment, galantamine is contraindicated due to markedly reduced clearance."
+    ],
+    "clinical_pearls": [
+      "Galantamine's dual mechanism \u2014 AChE inhibition plus nicotinic receptor modulation \u2014 may theoretically provide superior cholinergic neurotransmission enhancement compared to pure AChE inhibitors, though head-to-head clinical data have not demonstrated superiority.",
+      "Galantamine is a naturally occurring alkaloid derived from snowdrop plants (Galanthus) and daffodils; its discovery represents a pharmacological lead from traditional botanical medicine."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid unless essential",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "Alzheimer's dementia"
+    ],
+    "adverse_effect_tags": [
+      "nausea",
+      "vomiting",
+      "bradycardia"
+    ],
+    "interaction_tags": [
+      "CYP2D6-substrate",
+      "CYP3A4-substrate",
+      "anticholinergic-antagonism"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "AChE-inhibition"
+      ],
+      "prototype_class": "cholinesterase inhibitors",
+      "adme_profile": "CYP2D6-metabolized",
+      "presentation_cluster": [
+        "Alzheimer's-dementia"
+      ],
+      "adverse_cluster": [
+        "cholinergic-toxidrome"
+      ],
+      "interaction_cluster": [
+        "anticholinergic-antagonism"
+      ]
+    }
+  },
+  {
+    "id": "memantine",
+    "generic_name": "memantine",
+    "brand_names": [
+      "Namenda",
+      "Namenda XR",
+      "Namzaric (with donepezil)"
+    ],
+    "drug_class": "NMDA receptor antagonist",
+    "subclass": "uncompetitive, low-affinity NMDA receptor antagonist",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "NMDA (N-methyl-D-aspartate) glutamate receptor"
+    ],
+    "mechanism_summary": "Uncompetitive, voltage-dependent NMDA receptor antagonist with moderate affinity; blocks the receptor only when it is chronically activated by excessive glutamate (pathological condition in AD), but allows normal physiological activation. Excessive glutamate activity (excitotoxicity) contributes to neuronal death in Alzheimer's disease; memantine reduces this neurotoxic signal while preserving normal glutamatergic neurotransmission.",
+    "indications": [
+      "moderate to severe Alzheimer's disease (monotherapy or combination with cholinesterase inhibitor)"
+    ],
+    "contraindications": [
+      "severe renal impairment (use with caution; dose adjustment required)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "dizziness",
+        "headache",
+        "constipation",
+        "confusion",
+        "agitation"
+      ],
+      "serious": [
+        "hallucinations",
+        "seizures (rare)",
+        "cardiac effects (AV block rarely reported)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; bioavailability ~100%; food has no effect",
+      "distribution": "protein binding ~45%; Vd ~9-11 L/kg",
+      "metabolism": "minimal hepatic metabolism (~57% excreted unchanged)",
+      "excretion": "primarily renal; alkaline urine decreases excretion; dose adjustment required for severe renal impairment",
+      "half_life": "60-80 hours",
+      "onset": "weeks for clinically meaningful cognitive effect",
+      "peak": "3-7 hours",
+      "duration": "24 hours",
+      "protein_binding": "45%",
+      "vd": "9-11 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "urinary alkalinizers (sodium bicarbonate, carbonic anhydrase inhibitors)",
+        "mechanism": "decrease renal clearance of memantine; increase levels",
+        "severity": "moderate"
+      },
+      {
+        "drug": "other NMDA antagonists (ketamine, amantadine, dextromethorphan)",
+        "mechanism": "additive NMDA blockade; psychosis risk",
+        "severity": "moderate"
+      },
+      {
+        "drug": "cholinesterase inhibitors",
+        "mechanism": "complementary mechanisms; combination is FDA-approved and synergistic in moderate-severe AD",
+        "severity": "beneficial combination"
+      }
+    ],
+    "nursing_considerations": [
+      "Dose adjustment required in severe renal impairment (CrCl 5-29 mL/min: target 5 mg twice daily rather than standard 10 mg twice daily); assess renal function before initiating.",
+      "Combination with donepezil (as Namzaric) targets both cholinergic deficit (donepezil) and glutamate excitotoxicity (memantine) simultaneously; this combination is the most commonly prescribed pharmacotherapy for moderate-severe AD.",
+      "Manage patient and family expectations: memantine slows cognitive decline rather than reversing it; benefits are measured in reduced rate of functional and cognitive deterioration.",
+      "Constipation is common in the elderly; ensure adequate hydration and dietary fiber; document bowel function at each assessment."
+    ],
+    "clinical_pearls": [
+      "Memantine is the only Alzheimer's drug with a mechanism targeting glutamatergic excitotoxicity rather than cholinergic deficiency, making it complementary (rather than redundant) to cholinesterase inhibitors \u2014 the rationale for the approved combination (Namzaric).",
+      "Memantine's low-affinity, voltage-dependent mechanism is crucial to its safety profile: it only blocks the NMDA receptor during pathologically prolonged activation, allowing normal synaptic transmission needed for learning and memory to proceed unimpeded."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "avoid unless essential",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "Alzheimer's dementia",
+      "moderate-severe dementia"
+    ],
+    "adverse_effect_tags": [
+      "dizziness",
+      "confusion",
+      "hallucinations"
+    ],
+    "interaction_tags": [
+      "renal-clearance",
+      "NMDA-antagonism"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "NMDA-antagonism"
+      ],
+      "prototype_class": "Alzheimer's disease drugs",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "Alzheimer's-dementia"
+      ],
+      "adverse_cluster": [
+        "CNS-neurotoxicity"
+      ],
+      "interaction_cluster": [
+        "renal-clearance",
+        "NMDA-antagonism"
+      ]
+    }
   }
 ]
