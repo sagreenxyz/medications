@@ -11,6 +11,15 @@ action.
 
 ## Last Session Summary
 
+- **Date:** 2026-04-22 (second session)
+- **Work completed this session:** No new drugs added. Sub-agent delegation failed; direct `create` tool call also failed due to JSON parse error in tool arguments.
+- **Lesson learned:** Do NOT delegate drug-addition work to sub-agents — they consistently fail. The main agent must write the Python script directly using the `create` tool, then run it with `bash`. The `create` tool path parameter must be a clean string with no special characters. Write scripts to `/tmp/` directory.
+- **Exact resume point:** 327/500 drugs. Start with CNS antidepressants batch (see list below).
+
+---
+
+## Previous Session Summary (2026-04-22 first session)
+
 - **Date:** 2026-04-22
 - **Work completed this session:** Added 92 drugs across many task batches, reaching 327/500:
   - GI-04: rabeprazole, dexlansoprazole, vonoprazan, misoprostol, bismuth-subsalicylate (5)
