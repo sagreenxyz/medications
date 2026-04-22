@@ -48382,5 +48382,979 @@
         "smoking-CYP1A2"
       ]
     }
+  },
+  {
+    "id": "propofol",
+    "generic_name": "propofol",
+    "brand_names": [
+      "Diprivan"
+    ],
+    "drug_class": "intravenous general anesthetic",
+    "subclass": "alkylphenol anesthetic",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "GABA-A receptor (positive allosteric modulator)"
+    ],
+    "mechanism_summary": "Enhances inhibitory neurotransmission by potentiating GABA-A receptor chloride conductance, producing anesthesia, sedation, and amnesia. Rapidly redistributes from brain to peripheral tissues, accounting for its ultra-short duration after single bolus. Also has antiemetic properties.",
+    "indications": [
+      "induction and maintenance of general anesthesia",
+      "ICU sedation for mechanically ventilated patients",
+      "procedural sedation"
+    ],
+    "contraindications": [
+      "hypersensitivity to propofol"
+    ],
+    "adverse_effects": {
+      "common": [
+        "injection site pain",
+        "apnea at induction",
+        "hypotension",
+        "bradycardia",
+        "respiratory depression"
+      ],
+      "serious": [
+        "propofol infusion syndrome (PRIS) \u2014 rare but fatal: metabolic acidosis, rhabdomyolysis, hyperkalemia, cardiac failure during prolonged high-dose infusion"
+      ]
+    },
+    "black_box_warnings": [
+      "should be administered only by trained personnel experienced in airway management and resuscitation"
+    ],
+    "pharmacokinetics": {
+      "absorption": "IV only",
+      "distribution": "highly lipophilic; protein binding >98%; Vd ~60 L/kg",
+      "metabolism": "hepatic glucuronidation and sulfation to inactive metabolites",
+      "excretion": "primarily renal as conjugates",
+      "half_life": "0.5-1.5 hours terminal; short context-sensitive half-time after brief infusions",
+      "onset": "15-45 seconds IV",
+      "peak": "1-2 minutes",
+      "duration": "5-10 minutes after single induction dose",
+      "protein_binding": ">98%",
+      "vd": "60 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "opioids",
+        "mechanism": "synergistic anesthetic effect; dose reduction of both needed",
+        "severity": "major"
+      },
+      {
+        "drug": "benzodiazepines",
+        "mechanism": "additive CNS and respiratory depression",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Propofol infusion syndrome (PRIS) risk is highest with doses >4-5 mg/kg/hour for >48 hours; monitor daily for metabolic acidosis, high anion gap, hypertriglyceridemia, and CK elevation.",
+      "Propofol is a lipid emulsion; strict aseptic technique is mandatory; discard any opened vials after 12 hours.",
+      "Monitor serum triglycerides in ICU patients on propofol infusion; lipid emulsion contributes 1.1 kcal/mL to caloric intake.",
+      "Injection site pain is common; administering through a large vein or pre-treating with lidocaine reduces pain."
+    ],
+    "clinical_pearls": [
+      "Propofol rapid onset and offset make it ideal for procedural sedation; antiemetic properties are an additional clinical benefit.",
+      "PRIS is rare but fatal; risk factors include high doses, prolonged infusion, critical illness with carbohydrate restriction, and mitochondrial dysfunction."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "use for procedures when benefit outweighs risk",
+    "lactation_safety": "discard milk for 24 hours after single dose",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "general anesthesia",
+      "procedural sedation",
+      "ICU sedation"
+    ],
+    "adverse_effect_tags": [
+      "propofol infusion syndrome",
+      "hypotension",
+      "respiratory depression"
+    ],
+    "interaction_tags": [
+      "CNS-depression",
+      "anesthetic-synergy"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "GABA-A-potentiation"
+      ],
+      "prototype_class": "IV general anesthetics",
+      "adme_profile": "hepatically-metabolized",
+      "presentation_cluster": [
+        "perioperative-anesthesia"
+      ],
+      "adverse_cluster": [
+        "propofol-infusion-syndrome"
+      ],
+      "interaction_cluster": [
+        "CNS-depressants"
+      ]
+    }
+  },
+  {
+    "id": "ketamine",
+    "generic_name": "ketamine",
+    "brand_names": [
+      "Ketalar"
+    ],
+    "drug_class": "dissociative anesthetic",
+    "subclass": "NMDA receptor antagonist",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "NMDA receptor",
+      "mu-opioid receptor (weak)",
+      "sigma receptor"
+    ],
+    "mechanism_summary": "Non-competitive NMDA receptor antagonist; blocks the receptor ion channel at the PCP site. Produces dissociative anesthesia: analgesia, amnesia, and trance-like state with preserved airway reflexes. Cardiovascular stimulant (unlike other anesthetics). Rapid antidepressant effects via NMDA antagonism.",
+    "indications": [
+      "anesthesia induction (especially hemodynamic instability)",
+      "procedural analgesia/sedation",
+      "treatment-resistant depression (esketamine/Spravato)",
+      "off-label: chronic pain, opioid-sparing analgesia"
+    ],
+    "contraindications": [
+      "uncontrolled hypertension",
+      "severe cardiovascular disease where BP increase is harmful"
+    ],
+    "adverse_effects": {
+      "common": [
+        "emergence reactions (dysphoria, hallucinations, vivid dreams)",
+        "tachycardia",
+        "hypertension",
+        "hypersalivation",
+        "nausea"
+      ],
+      "serious": [
+        "laryngospasm (rare)",
+        "respiratory depression at high doses",
+        "abuse potential (Schedule III)"
+      ]
+    },
+    "black_box_warnings": [
+      "emergence reactions; cardiovascular stimulation"
+    ],
+    "pharmacokinetics": {
+      "absorption": "IV, IM; intranasal for esketamine",
+      "distribution": "highly lipophilic; protein binding ~12-27%; rapidly crosses BBB",
+      "metabolism": "CYP3A4 and CYP2B6 to norketamine (active)",
+      "excretion": "renal",
+      "half_life": "2-3 hours (ketamine)",
+      "onset": "IV: 30-60 seconds; IM: 3-4 minutes",
+      "peak": "IV: 1-5 minutes",
+      "duration": "anesthetic: 10-15 minutes IV",
+      "protein_binding": "12-27%",
+      "vd": "3 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "benzodiazepines",
+        "mechanism": "reduce emergence reactions when co-administered",
+        "severity": "beneficial"
+      },
+      {
+        "drug": "CNS depressants",
+        "mechanism": "additive depression; respiratory depression risk at high doses",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer atropine or glycopyrrolate concurrently to reduce hypersalivation and bronchorrhea.",
+      "Keep stimulation minimal during recovery to reduce emergence reactions; calm environment reduces dysphoria.",
+      "Midazolam before ketamine markedly reduces emergence dysphoria and is standard practice.",
+      "Spravato (esketamine) for treatment-resistant depression requires in-office administration with 2-hour observation; patients cannot drive."
+    ],
+    "clinical_pearls": [
+      "Ketamine is the preferred induction agent in hemodynamically compromised patients because it is a cardiovascular stimulant, not a depressant.",
+      "Ketamine produces rapid antidepressant effects within hours to days via NMDA antagonism, making it the fastest-acting antidepressant known and driving research into glutamatergic depression targets."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use for procedures when benefit outweighs risk",
+    "lactation_safety": "discard milk for 24 hours after single dose",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "general anesthesia",
+      "procedural sedation",
+      "treatment-resistant depression"
+    ],
+    "adverse_effect_tags": [
+      "emergence reactions",
+      "hypertension",
+      "hallucinations"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate",
+      "CNS-depression"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "NMDA-antagonism"
+      ],
+      "prototype_class": "dissociative anesthetics",
+      "adme_profile": "CYP3A4-metabolized",
+      "presentation_cluster": [
+        "perioperative-anesthesia",
+        "treatment-resistant-depression"
+      ],
+      "adverse_cluster": [
+        "emergence-reactions"
+      ],
+      "interaction_cluster": [
+        "CNS-depressants"
+      ]
+    }
+  },
+  {
+    "id": "succinylcholine",
+    "generic_name": "succinylcholine",
+    "brand_names": [
+      "Anectine",
+      "Quelicin"
+    ],
+    "drug_class": "neuromuscular blocking agent (NMBA)",
+    "subclass": "depolarizing NMBA",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns",
+      "musculoskeletal"
+    ],
+    "therapeutic_classes": [
+      "cholinergic"
+    ],
+    "mechanism_targets": [
+      "nicotinic acetylcholine receptor at neuromuscular junction"
+    ],
+    "mechanism_summary": "Binds and activates nicotinic ACh receptors at the neuromuscular junction causing initial fasciculations followed by sustained depolarization that blocks further transmission. Terminated by plasma cholinesterase hydrolysis. Cannot be reversed by neostigmine.",
+    "indications": [
+      "rapid sequence intubation (RSI)",
+      "facilitation of endotracheal intubation where rapid onset and short duration are needed"
+    ],
+    "contraindications": [
+      "denervation or immobility >48-72 hours (hyperkalemia risk)",
+      "major burns >24-48 hours",
+      "motor neuron disorders",
+      "malignant hyperthermia susceptibility"
+    ],
+    "adverse_effects": {
+      "common": [
+        "muscle fasciculations",
+        "post-operative myalgia",
+        "transient hyperkalemia",
+        "increased intraocular pressure"
+      ],
+      "serious": [
+        "malignant hyperthermia (fatal if untreated)",
+        "life-threatening hyperkalemia in susceptible patients",
+        "prolonged paralysis in pseudocholinesterase deficiency"
+      ]
+    },
+    "black_box_warnings": [
+      "acute rhabdomyolysis and hyperkalemia followed by ventricular dysrhythmias, cardiac arrest, and death in pediatric patients with undiagnosed skeletal muscle myopathy"
+    ],
+    "pharmacokinetics": {
+      "absorption": "IV only for intubation",
+      "distribution": "rapidly distributes to NMJ",
+      "metabolism": "hydrolysis by plasma cholinesterase (pseudocholinesterase)",
+      "excretion": "renal",
+      "half_life": "2-4 minutes",
+      "onset": "30-60 seconds IV",
+      "peak": "60 seconds IV",
+      "duration": "6-10 minutes IV in normal patients",
+      "protein_binding": "minimal",
+      "vd": "0.2 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "aminoglycosides",
+        "mechanism": "potentiate neuromuscular blockade",
+        "severity": "moderate"
+      },
+      {
+        "drug": "cholinesterase inhibitors (neostigmine)",
+        "mechanism": "inhibit plasma cholinesterase; prolong succinylcholine duration",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Agent of choice for RSI due to ultra-rapid onset (30-60 seconds) and short duration (6-10 minutes); identify contraindications before administration.",
+      "Malignant hyperthermia: rising temperature, rigidity returning after paralysis, or hypercapnia despite ventilation require immediate dantrolene and MH protocol.",
+      "Pseudocholinesterase deficiency causes prolonged paralysis lasting hours; ensure ventilatory support is available.",
+      "Do not use in patients with burns, denervation, or prolonged immobility due to life-threatening hyperkalemia from upregulated AChR."
+    ],
+    "clinical_pearls": [
+      "Succinylcholine unique niche is RSI: 30-60 second onset is faster than any non-depolarizing NMBA, and 6-10 minute duration allows reassessment if intubation fails.",
+      "Rocuronium at 1.2 mg/kg produces comparable onset and is used as succinylcholine alternative when malignant hyperthermia susceptibility is a concern, requiring sugammadex for reversal."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "use only when benefit clearly outweighs risk",
+    "lactation_safety": "single dose considered compatible",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "rapid sequence intubation",
+      "endotracheal intubation"
+    ],
+    "adverse_effect_tags": [
+      "malignant hyperthermia",
+      "hyperkalemia",
+      "prolonged paralysis"
+    ],
+    "interaction_tags": [
+      "neuromuscular-blockade",
+      "cholinergic"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns",
+        "musculoskeletal"
+      ],
+      "therapeutic_class": [
+        "cholinergic"
+      ],
+      "mechanism_family": [
+        "nicotinic-agonism"
+      ],
+      "prototype_class": "neuromuscular blocking agents",
+      "adme_profile": "cholinesterase-hydrolysis",
+      "presentation_cluster": [
+        "perioperative-anesthesia"
+      ],
+      "adverse_cluster": [
+        "malignant-hyperthermia",
+        "hyperkalemia"
+      ],
+      "interaction_cluster": [
+        "neuromuscular-blockade"
+      ]
+    }
+  },
+  {
+    "id": "rocuronium",
+    "generic_name": "rocuronium",
+    "brand_names": [
+      "Zemuron"
+    ],
+    "drug_class": "neuromuscular blocking agent (NMBA)",
+    "subclass": "non-depolarizing NMBA (aminosteroid)",
+    "prototype_for": false,
+    "prototype_drug": "succinylcholine",
+    "organ_systems": [
+      "cns",
+      "musculoskeletal"
+    ],
+    "therapeutic_classes": [
+      "cholinergic"
+    ],
+    "mechanism_targets": [
+      "nicotinic acetylcholine receptor at neuromuscular junction (competitive antagonist)"
+    ],
+    "mechanism_summary": "Competitively blocks nicotinic receptors at the NMJ, preventing acetylcholine binding and producing flaccid muscle paralysis. At high doses (1.2 mg/kg), onset approaches that of succinylcholine. Fully reversible by sugammadex via encapsulation.",
+    "indications": [
+      "facilitation of endotracheal intubation",
+      "intraoperative skeletal muscle relaxation",
+      "RSI when succinylcholine is contraindicated (with sugammadex available)"
+    ],
+    "contraindications": [
+      "hypersensitivity to rocuronium"
+    ],
+    "adverse_effects": {
+      "common": [
+        "residual neuromuscular blockade",
+        "injection site pain"
+      ],
+      "serious": [
+        "anaphylaxis (more common than other NMBAs)",
+        "prolonged blockade",
+        "respiratory failure from residual paralysis"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IV only",
+      "distribution": "protein binding ~30%; Vd ~0.2 L/kg",
+      "metabolism": "minimal hepatic; primarily excreted unchanged",
+      "excretion": "biliary (50%) and renal (30%)",
+      "half_life": "1-2 hours",
+      "onset": "60-90 seconds at 0.6 mg/kg; 60 seconds at 1.2 mg/kg",
+      "peak": "1-3 minutes",
+      "duration": "30-60 minutes at 0.6 mg/kg; 60-90 minutes at 1.2 mg/kg",
+      "protein_binding": "30%",
+      "vd": "0.2 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "volatile anesthetics",
+        "mechanism": "potentiate neuromuscular blockade",
+        "severity": "moderate"
+      },
+      {
+        "drug": "aminoglycosides",
+        "mechanism": "potentiate neuromuscular blockade",
+        "severity": "moderate"
+      },
+      {
+        "drug": "sugammadex",
+        "mechanism": "complete reversal within 3 minutes at 16 mg/kg",
+        "severity": "reversal agent"
+      }
+    ],
+    "nursing_considerations": [
+      "Assess train-of-four (TOF) neuromuscular monitoring before reversal; reverse with neostigmine only when TOF ratio >0.25, or with sugammadex at any depth.",
+      "Rocuronium is a known trigger of perioperative anaphylaxis; epinephrine and resuscitation must be immediately available.",
+      "Residual neuromuscular blockade is a patient safety concern; confirm complete reversal (TOF ratio >0.9) before extubation.",
+      "In cannot-intubate-cannot-oxygenate scenario after RSI with rocuronium, sugammadex 16 mg/kg reverses paralysis within 3 minutes."
+    ],
+    "clinical_pearls": [
+      "Rocuronium at 1.2 mg/kg is used as alternative to succinylcholine for RSI when succinylcholine is contraindicated, requiring sugammadex availability for rapid reversal if intubation fails.",
+      "Rocuronium has higher perioperative anaphylaxis rate than most NMBAs; the reaction may be cross-reactive across aminosteroid NMBAs via IgE-mediated sensitization."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use only when benefit clearly outweighs risk",
+    "lactation_safety": "single dose considered compatible",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "endotracheal intubation",
+      "surgical muscle relaxation",
+      "RSI"
+    ],
+    "adverse_effect_tags": [
+      "anaphylaxis",
+      "residual paralysis",
+      "neuromuscular blockade"
+    ],
+    "interaction_tags": [
+      "neuromuscular-blockade",
+      "sugammadex-reversal"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns",
+        "musculoskeletal"
+      ],
+      "therapeutic_class": [
+        "cholinergic"
+      ],
+      "mechanism_family": [
+        "nicotinic-antagonism"
+      ],
+      "prototype_class": "neuromuscular blocking agents",
+      "adme_profile": "biliary-renal",
+      "presentation_cluster": [
+        "perioperative-anesthesia"
+      ],
+      "adverse_cluster": [
+        "anaphylaxis"
+      ],
+      "interaction_cluster": [
+        "neuromuscular-blockade"
+      ]
+    }
+  },
+  {
+    "id": "vecuronium",
+    "generic_name": "vecuronium",
+    "brand_names": [
+      "Norcuron"
+    ],
+    "drug_class": "neuromuscular blocking agent (NMBA)",
+    "subclass": "non-depolarizing NMBA (aminosteroid)",
+    "prototype_for": false,
+    "prototype_drug": "succinylcholine",
+    "organ_systems": [
+      "cns",
+      "musculoskeletal"
+    ],
+    "therapeutic_classes": [
+      "cholinergic"
+    ],
+    "mechanism_targets": [
+      "nicotinic acetylcholine receptor at NMJ (competitive antagonist)"
+    ],
+    "mechanism_summary": "Intermediate-duration non-depolarizing NMBA; competitive nicotinic antagonist at the NMJ. Minimal cardiovascular effects (no histamine release, no ganglionic blockade). Partially reversed by neostigmine and fully reversed by sugammadex.",
+    "indications": [
+      "facilitation of endotracheal intubation",
+      "intraoperative skeletal muscle relaxation",
+      "facilitation of mechanical ventilation in ICU"
+    ],
+    "contraindications": [
+      "hypersensitivity to vecuronium"
+    ],
+    "adverse_effects": {
+      "common": [
+        "residual neuromuscular blockade"
+      ],
+      "serious": [
+        "prolonged paralysis in liver/renal impairment",
+        "anaphylaxis (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IV only",
+      "distribution": "protein binding ~30%; Vd ~0.27 L/kg",
+      "metabolism": "hepatic; active metabolite 3-desacetylvecuronium (50-70% potency of parent)",
+      "excretion": "biliary (~40-75%) and renal (25%)",
+      "half_life": "65-75 minutes",
+      "onset": "2-3 minutes at 0.1 mg/kg",
+      "peak": "3-5 minutes",
+      "duration": "25-40 minutes at 0.1 mg/kg",
+      "protein_binding": "30%",
+      "vd": "0.27 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "aminoglycosides",
+        "mechanism": "potentiate blockade",
+        "severity": "moderate"
+      },
+      {
+        "drug": "succinylcholine (priming)",
+        "mechanism": "prior succinylcholine enhances subsequent vecuronium effect",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Prolonged blockade occurs in hepatic impairment due to accumulation of active 3-desacetylvecuronium metabolite; monitor carefully in liver disease.",
+      "Vecuronium can be reversed by neostigmine (with anticholinergic) or sugammadex depending on depth of blockade.",
+      "Assess TOF before reversal; ensure respiratory muscle function (TOF ratio >0.9) before extubation.",
+      "Dilute in compatible IV fluid; stable in NS, D5W, LR for 24 hours."
+    ],
+    "clinical_pearls": [
+      "Vecuronium has minimal cardiovascular effects making it preferred in cardiac patients where tachycardia or histamine release are concerns.",
+      "The 3-desacetylvecuronium active metabolite accumulates in renal and hepatic failure, causing prolonged blockade (ICU myopathy if combined with corticosteroids)."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use only when benefit clearly outweighs risk",
+    "lactation_safety": "single dose considered compatible",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "endotracheal intubation",
+      "surgical muscle relaxation"
+    ],
+    "adverse_effect_tags": [
+      "prolonged paralysis",
+      "residual blockade"
+    ],
+    "interaction_tags": [
+      "neuromuscular-blockade"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns",
+        "musculoskeletal"
+      ],
+      "therapeutic_class": [
+        "cholinergic"
+      ],
+      "mechanism_family": [
+        "nicotinic-antagonism"
+      ],
+      "prototype_class": "neuromuscular blocking agents",
+      "adme_profile": "biliary-renal",
+      "presentation_cluster": [
+        "perioperative-anesthesia"
+      ],
+      "adverse_cluster": [
+        "prolonged-paralysis"
+      ],
+      "interaction_cluster": [
+        "neuromuscular-blockade"
+      ]
+    }
+  },
+  {
+    "id": "cisatracurium",
+    "generic_name": "cisatracurium",
+    "brand_names": [
+      "Nimbex"
+    ],
+    "drug_class": "neuromuscular blocking agent (NMBA)",
+    "subclass": "non-depolarizing NMBA (benzylisoquinolinium)",
+    "prototype_for": false,
+    "prototype_drug": "succinylcholine",
+    "organ_systems": [
+      "cns",
+      "musculoskeletal"
+    ],
+    "therapeutic_classes": [
+      "cholinergic"
+    ],
+    "mechanism_targets": [
+      "nicotinic acetylcholine receptor at NMJ (competitive antagonist)"
+    ],
+    "mechanism_summary": "Intermediate-duration non-depolarizing NMBA that undergoes organ-independent Hofmann elimination at physiological pH and temperature, producing laudanosine and monoquaternary acrylate as inactive metabolites. This unique elimination pathway makes it ideal for patients with organ failure.",
+    "indications": [
+      "facilitation of endotracheal intubation",
+      "intraoperative skeletal muscle relaxation",
+      "facilitation of mechanical ventilation in ICU (preferred in organ failure)"
+    ],
+    "contraindications": [
+      "hypersensitivity to cisatracurium"
+    ],
+    "adverse_effects": {
+      "common": [
+        "bradycardia (minimal histamine release unlike atracurium)"
+      ],
+      "serious": [
+        "laudanosine accumulation (CNS stimulant in theory at very high doses; clinical significance unclear)",
+        "anaphylaxis (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IV only",
+      "distribution": "protein binding ~<1%; Vd ~0.16 L/kg",
+      "metabolism": "Hofmann elimination (organ-independent) at physiological pH and temperature; also some ester hydrolysis",
+      "excretion": "renal and fecal (inactive metabolites)",
+      "half_life": "22-31 minutes",
+      "onset": "1.5-2 minutes",
+      "peak": "3-5 minutes",
+      "duration": "45-75 minutes",
+      "protein_binding": "<1%",
+      "vd": "0.16 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "aminoglycosides",
+        "mechanism": "potentiate neuromuscular blockade",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Preferred NMBA in ICU patients with renal and hepatic failure because Hofmann elimination does not depend on organ function.",
+      "Stable in refrigerator; once removed from refrigerator, use within 21 days at room temperature.",
+      "Reverse with neostigmine (with anticholinergic) when TOF count 2 or more; can also be reversed by sugammadex off-label.",
+      "No histamine release at standard doses; less cardiovascular effect than atracurium \u2014 preferred in hemodynamically sensitive patients."
+    ],
+    "clinical_pearls": [
+      "Cisatracurium is the NMBA of choice in critically ill patients with multiorgan failure: organ-independent Hofmann elimination ensures predictable pharmacokinetics regardless of renal or hepatic dysfunction.",
+      "The ACURASYS and ROSE trials evaluated cisatracurium infusion in ARDS; the evidence for routine use is now considered insufficient, but it remains used for specific indications like facilitation of prone positioning."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "use only when benefit clearly outweighs risk",
+    "lactation_safety": "single dose considered compatible",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "endotracheal intubation",
+      "ICU ventilation",
+      "organ failure"
+    ],
+    "adverse_effect_tags": [
+      "residual paralysis"
+    ],
+    "interaction_tags": [
+      "neuromuscular-blockade"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns",
+        "musculoskeletal"
+      ],
+      "therapeutic_class": [
+        "cholinergic"
+      ],
+      "mechanism_family": [
+        "nicotinic-antagonism"
+      ],
+      "prototype_class": "neuromuscular blocking agents",
+      "adme_profile": "hofmann-elimination",
+      "presentation_cluster": [
+        "perioperative-anesthesia"
+      ],
+      "adverse_cluster": [
+        "prolonged-paralysis"
+      ],
+      "interaction_cluster": [
+        "neuromuscular-blockade"
+      ]
+    }
+  },
+  {
+    "id": "sugammadex",
+    "generic_name": "sugammadex",
+    "brand_names": [
+      "Bridion"
+    ],
+    "drug_class": "neuromuscular blockade reversal agent",
+    "subclass": "selective relaxant binding agent; modified gamma-cyclodextrin",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns",
+      "musculoskeletal"
+    ],
+    "therapeutic_classes": [
+      "other"
+    ],
+    "mechanism_targets": [
+      "rocuronium (encapsulation)",
+      "vecuronium (encapsulation)"
+    ],
+    "mechanism_summary": "Modified gamma-cyclodextrin that forms tight inclusion complexes with rocuronium and vecuronium, encapsulating the NMBA molecule and preventing NMJ binding. Creates concentration gradient pulling NMBAs away from NMJ into plasma, achieving complete reversal at any depth of blockade.",
+    "indications": [
+      "reversal of rocuronium-induced neuromuscular blockade (any depth)",
+      "reversal of vecuronium-induced blockade",
+      "emergency reversal of profound rocuronium blockade"
+    ],
+    "contraindications": [
+      "hypersensitivity to sugammadex"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "vomiting",
+        "dysgeusia",
+        "headache"
+      ],
+      "serious": [
+        "anaphylaxis (rare; estimated 0.039%)",
+        "bradycardia",
+        "recurrence of blockade if dose is insufficient"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IV only",
+      "distribution": "minimal protein binding; Vd ~11-14 L",
+      "metabolism": "not metabolized; excreted as rocuronium-sugammadex complex",
+      "excretion": "renal (primarily as intact complex)",
+      "half_life": "1.8 hours",
+      "onset": "TOF recovery within 3 minutes (16 mg/kg) to 15 minutes (2-4 mg/kg)",
+      "peak": "minutes after administration",
+      "duration": "dose-dependent",
+      "protein_binding": "minimal",
+      "vd": "11-14 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "progestogen-only contraceptives",
+        "mechanism": "sugammadex can bind and reduce efficacy; use additional contraception for 7 days",
+        "severity": "moderate"
+      },
+      {
+        "drug": "hormonal contraceptives (oral)",
+        "mechanism": "requires extra non-hormonal contraception for 7 days",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Dose-dependent: 2 mg/kg for moderate blockade (2 twitches on TOF), 4 mg/kg for shallow, 16 mg/kg for immediate/deep reversal.",
+      "Instruct female patients to use additional non-hormonal contraception for 7 days after receiving sugammadex.",
+      "Assess airway, respiratory rate, SpO2, and TOF after administration to confirm adequate reversal.",
+      "Anaphylaxis risk is low but epinephrine must be available in all anesthesia settings."
+    ],
+    "clinical_pearls": [
+      "Sugammadex revolutionized anesthesia by providing rapid, complete reversal of rocuronium at any depth; in cannot-intubate-cannot-oxygenate scenario, 16 mg/kg reverses RSI-dose rocuronium within 3 minutes.",
+      "Unlike neostigmine, sugammadex does not require anticholinergic co-administration (no muscarinic effects), simplifying the reversal process."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "use only when benefit clearly outweighs risk; reduces hormonal contraception efficacy",
+    "lactation_safety": "single dose considered compatible",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "neuromuscular blockade reversal",
+      "perioperative",
+      "RSI"
+    ],
+    "adverse_effect_tags": [
+      "anaphylaxis",
+      "bradycardia"
+    ],
+    "interaction_tags": [
+      "hormonal-contraceptive-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns",
+        "musculoskeletal"
+      ],
+      "therapeutic_class": [
+        "other"
+      ],
+      "mechanism_family": [
+        "drug-encapsulation"
+      ],
+      "prototype_class": "NMBA reversal agents",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "perioperative-anesthesia"
+      ],
+      "adverse_cluster": [
+        "anaphylaxis"
+      ],
+      "interaction_cluster": [
+        "hormonal-contraceptives"
+      ]
+    }
+  },
+  {
+    "id": "neostigmine",
+    "generic_name": "neostigmine",
+    "brand_names": [
+      "Prostigmin",
+      "Bloxiverz"
+    ],
+    "drug_class": "cholinesterase inhibitor",
+    "subclass": "reversible acetylcholinesterase inhibitor",
+    "prototype_for": false,
+    "prototype_drug": "donepezil",
+    "organ_systems": [
+      "cns",
+      "musculoskeletal"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "acetylcholinesterase (AChE)"
+    ],
+    "mechanism_summary": "Reversibly inhibits acetylcholinesterase at the NMJ, increasing acetylcholine concentration and overcoming competitive NMBA blockade. Does not cross the BBB (quaternary ammonium). Must be co-administered with anticholinergic (glycopyrrolate or atropine) to counter muscarinic side effects.",
+    "indications": [
+      "reversal of non-depolarizing NMBA (moderate depth)",
+      "myasthenia gravis (symptomatic treatment)",
+      "postoperative ileus",
+      "urinary retention"
+    ],
+    "contraindications": [
+      "peritonitis",
+      "mechanical urinary or GI obstruction",
+      "succinylcholine blockade (worsens)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "bradycardia",
+        "nausea",
+        "vomiting",
+        "increased secretions",
+        "bronchoconstriction"
+      ],
+      "serious": [
+        "severe bradycardia and heart block without anticholinergic pre-treatment",
+        "cholinergic crisis"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IV for anesthesia; oral for myasthenia gravis",
+      "distribution": "minimal CNS penetration (quaternary ammonium)",
+      "metabolism": "hydrolysis by cholinesterases and hepatic degradation",
+      "excretion": "renal",
+      "half_life": "1-2 hours",
+      "onset": "IV: 1-20 minutes",
+      "peak": "7-10 minutes IV",
+      "duration": "1-2 hours",
+      "protein_binding": "minimal",
+      "vd": "0.8 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "anticholinergics (glycopyrrolate, atropine)",
+        "mechanism": "counter muscarinic side effects; must be co-administered",
+        "severity": "beneficial"
+      },
+      {
+        "drug": "succinylcholine",
+        "mechanism": "potentiates and prolongs depolarizing blockade by inhibiting plasma cholinesterase",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Always administer glycopyrrolate 0.2 mg per 1 mg neostigmine (or atropine) to prevent bradycardia, bronchospasm, and hypersalivation.",
+      "Use only when TOF ratio >0.25 (at least 2 twitches); reversal at deeper blockade is unreliable and risks residual paralysis.",
+      "In myasthenia gravis, too much neostigmine causes cholinergic crisis (weakness, secretions, bradycardia) which can mimic myasthenic crisis \u2014 distinguish by the edrophonium test.",
+      "Sugammadex has replaced neostigmine for rocuronium/vecuronium reversal in many settings; neostigmine remains relevant for other NMBAs and myasthenia gravis."
+    ],
+    "clinical_pearls": [
+      "Neostigmine does not cross the BBB (quaternary ammonium) making it safer than physostigmine for NMJ reversal without CNS stimulation risk.",
+      "Incomplete reversal with neostigmine is a leading cause of postoperative respiratory complications; quantitative TOF monitoring confirming ratio >0.9 is required before extubation."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "use with caution; neonatal muscular weakness",
+    "lactation_safety": "compatible",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "neuromuscular blockade reversal",
+      "myasthenia gravis",
+      "postoperative ileus"
+    ],
+    "adverse_effect_tags": [
+      "bradycardia",
+      "bronchoconstriction",
+      "cholinergic crisis"
+    ],
+    "interaction_tags": [
+      "cholinergic",
+      "neuromuscular-blockade"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns",
+        "musculoskeletal"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "AChE-inhibition"
+      ],
+      "prototype_class": "cholinesterase inhibitors",
+      "adme_profile": "cholinesterase-hydrolysis",
+      "presentation_cluster": [
+        "perioperative-anesthesia"
+      ],
+      "adverse_cluster": [
+        "cholinergic-toxidrome"
+      ],
+      "interaction_cluster": [
+        "cholinergic",
+        "neuromuscular-blockade"
+      ]
+    }
   }
 ]
