@@ -11,19 +11,32 @@ action.
 
 ## Last Session Summary
 
-- **Date:** 2026-04-23
-- **Work completed this session:** Added 43 drugs across 5 task batches:
-  - CV-17: lovastatin, pitavastatin, fluvastatin, niacin, inclisiran, icosapent-ethyl (6)
-  - CV-20: edoxaban, alteplase, tenecteplase, reteplase (4)
-  - CV-22: dipyridamole, cilostazol, abciximab, eptifibatide, tirofiban (5)
-  - RN-02: conivaptan, sodium-zirconium-cyclosilicate, calcium-acetate, sevelamer, lanthanum-carbonate, sodium-bicarbonate (6)
-  - RS-10: levalbuterol, vilanterol, indacaterol, umeclidinium, glycopyrrolate-inhaled, aclidinium, fluticasone-furoate, beclomethasone, mometasone-inhaled, ciclesonide, zafirlukast, zileuton, benralizumab, mepolizumab, reslizumab, tezepelumab, dornase-alfa, ivacaftor, tezacaftor-ivacaftor-elexacaftor, guaifenesin, dextromethorphan, cromolyn-sodium (22)
-- **Work started but not finished:** N/A — all 5 tasks completed in full.
-- **Exact resume point:** Next agent should claim the first ❌ Not started
-  task in the Phase 1 Drug Data Task Table below (GI-04 is next priority).
+- **Date:** 2026-04-22
+- **Work completed this session:** Added 92 drugs across many task batches, reaching 327/500:
+  - GI-04: rabeprazole, dexlansoprazole, vonoprazan, misoprostol, bismuth-subsalicylate (5)
+  - GI-05: granisetron, palonosetron, fosaprepitant, promethazine, droperidol, dronabinol, scopolamine (7)
+  - GI-07: diphenoxylate-atropine, bisacodyl, senna, psyllium, docusate, lubiprostone, linaclotide, prucalopride, alosetron (9)
+  - GI-09: balsalazide, olsalazine, vedolizumab, tofacitinib-gi, ustekinumab-gi, adalimumab-gi (6)
+  - EN-03/06/07/09/11: insulin types, glipizide/glyburide/glimepiride, repaglinide/nateglinide, pioglitazone, sitagliptin, exenatide/liraglutide/dulaglutide/tirzepatide, dapagliflozin/canagliflozin/ertugliflozin, acarbose, pramlintide, rosiglitazone, saxagliptin, alogliptin, linagliptin (25)
+  - EN-13/15: liothyronine, propylthiouracil, potassium-iodide, hydrocortisone, methylprednisolone, betamethasone, fludrocortisone (7)
+  - EN-16/20: octreotide, teriparatide, alendronate, zoledronic-acid, denosumab, allopurinol, febuxostat, probenecid (8)
+  - RE-01/07: estradiol, medroxyprogesterone, levonorgestrel, norethindrone, etonogestrel, oxytocin, testosterone, sildenafil, tamsulosin, mirabegron (10)
+  - CNS-AED batch: fosphenytoin, oxcarbazepine, topiramate, zonisamide, lacosamide, ethosuximide, phenobarbital (7)
+  - CNS-Sleep/Anxiolytic: alprazolam, temazepam, zaleplon, eszopiclone, ramelteon, suvorexant, buspirone, hydroxyzine (8)
+- **Work started but not finished:** N/A — all batches committed.
+- **Exact resume point:** Next agent should continue CNS antidepressants.
+  Currently at 327/500. Next task IDs:
+  - CNS antidepressants: sertraline, paroxetine, citalopram, escitalopram, fluvoxamine, venlafaxine, duloxetine, desvenlafaxine, bupropion, mirtazapine, trazodone, vilazodone, vortioxetine, amitriptyline, nortriptyline, imipramine, desipramine, clomipramine, phenelzine, tranylcypromine, selegiline-maoi
+  - CNS antipsychotics: haloperidol, chlorpromazine, fluphenazine, risperidone, olanzapine, quetiapine, ziprasidone, aripiprazole, paliperidone, lurasidone, brexpiprazole, cariprazine, clozapine, pimavanserin
+  - CNS lithium/bipolar: lithium
+  - CNS opioids: morphine, hydromorphone, oxycodone, fentanyl, remifentanil, codeine, tramadol, tapentadol, buprenorphine, methadone, naloxone, naltrexone
+  - CNS ADHD: methylphenidate, amphetamine, lisdexamfetamine, atomoxetine, guanfacine-adhd, clonidine-adhd
+  - CNS Alzheimer/Parkinson: donepezil, rivastigmine, galantamine, memantine, levodopa-carbidopa, pramipexole, ropinirole, rotigotine, amantadine, rasagiline, entacapone, tolcapone, benztropine, tetrabenazine, deutetrabenazine, valbenazine, riluzole
+  - CNS anesthetics/NMBAs: propofol, etomidate, isoflurane, sevoflurane, nitrous-oxide, succinylcholine, rocuronium, vecuronium, cisatracurium, neostigmine, sugammadex
+  - CNS migraine/pain: sumatriptan, rizatriptan, lasmiditan, ubrogepant, rimegepant, atogepant, erenumab, fremanezumab, galcanezumab, ergotamine, acetaminophen, ibuprofen, naproxen, ketorolac, celecoxib, indomethacin, diclofenac, meloxicam
+  - After CNS: still need more ID drugs (see task table below)
 - **Files modified:** `data/drugs.json`, `STATUS.md`
 - **Known issues introduced:** None.
-- **fluticasone-furoate note:** Added as a separate entry from fluticasone-propionate (already present) — verify no duplication.
 
 ---
 
@@ -32,7 +45,7 @@ action.
 | Phase | Name | Status |
 |-------|------|--------|
 | Phase 0 | Scaffold | ✅ Complete |
-| Phase 1 | Master Data | 🔶 Partial — 235/500 drugs; see task table below |
+| Phase 1 | Master Data | 🔶 Partial — 327/500 drugs; see task table below |
 | Phase 2 | Core Pages and Navigation | 🔶 Partial — see component table below |
 | Phase 3 | Schema Pages | 🔶 Partial — index stubs only; no sub-pages |
 | Phase 4 | Individual Drug Profile Pages | ❌ Not started |
