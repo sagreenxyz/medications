@@ -47343,5 +47343,1044 @@
         "NMDA-antagonism"
       ]
     }
+  },
+  {
+    "id": "pramipexole",
+    "generic_name": "pramipexole",
+    "brand_names": [
+      "Mirapex",
+      "Mirapex ER"
+    ],
+    "drug_class": "dopamine agonist",
+    "subclass": "non-ergot D2/D3 dopamine receptor agonist",
+    "prototype_for": false,
+    "prototype_drug": "levodopa-carbidopa",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "adrenergic"
+    ],
+    "mechanism_targets": [
+      "D2 dopamine receptor",
+      "D3 dopamine receptor (high affinity)"
+    ],
+    "mechanism_summary": "Directly stimulates dopamine D2 and D3 receptors in the striatum and limbic system, bypassing the need for presynaptic dopamine synthesis. D3 receptor preference may contribute to antidepressant effects and response in restless legs syndrome. Does not require conversion by remaining dopaminergic neurons.",
+    "indications": [
+      "Parkinson's disease (early and advanced, as monotherapy or adjunct to levodopa)",
+      "restless legs syndrome (moderate to severe)"
+    ],
+    "contraindications": [
+      "no absolute contraindications beyond hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "somnolence",
+        "dizziness",
+        "orthostatic hypotension",
+        "peripheral edema",
+        "hallucinations"
+      ],
+      "serious": [
+        "sudden onset sleep (sleep attacks; patient may fall asleep while driving)",
+        "impulse control disorders (gambling, hypersexuality, binge eating)",
+        "hallucinations and psychosis (higher risk in elderly)",
+        "augmentation syndrome (in RLS)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; bioavailability >90%; food delays but does not reduce absorption",
+      "distribution": "protein binding ~15%; Vd ~500 L",
+      "metabolism": "minimal hepatic metabolism; primarily excreted unchanged",
+      "excretion": "renal (>90% unchanged); dose adjustment required in renal impairment",
+      "half_life": "8-12 hours (IR); 12 hours (ER)",
+      "onset": "weeks for Parkinson's symptom improvement",
+      "peak": "2 hours (IR); 6 hours (ER)",
+      "duration": "8-12 hours (IR); 24 hours (ER)",
+      "protein_binding": "15%",
+      "vd": "500 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "dopamine antagonists (antipsychotics, metoclopramide)",
+        "mechanism": "pharmacodynamic antagonism; reduces pramipexole efficacy",
+        "severity": "major"
+      },
+      {
+        "drug": "cimetidine",
+        "mechanism": "reduces renal secretion of pramipexole; increases levels 50%",
+        "severity": "moderate"
+      },
+      {
+        "drug": "alcohol/CNS depressants",
+        "mechanism": "additive somnolence; increases risk of sleep attacks",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Warn patients about sudden-onset sleep (sleep attacks) that can occur without warning, particularly when driving; prohibit driving until tolerability is established.",
+      "Assess for impulse control disorders at every visit: ask specifically about new gambling urges, increased sexual behavior, binge eating, or compulsive shopping \u2014 these may not be spontaneously reported.",
+      "Orthostatic hypotension is prominent; measure BP lying and standing before and after dose titration; instruct patients to rise slowly.",
+      "Renal dose adjustment is required; calculate CrCl before initiating and periodically; dose reduction proportional to degree of impairment."
+    ],
+    "clinical_pearls": [
+      "Dopamine agonists are associated with impulse control disorders (ICDs) in up to 14% of patients; these ICDs (pathological gambling, hypersexuality, compulsive shopping, binge eating) are reversible on dose reduction or discontinuation and require systematic screening at every visit.",
+      "Pramipexole's high D3 receptor affinity drives its efficacy in RLS; D3 receptors are concentrated in limbic areas involved in reward and sleep regulation, both relevant to RLS pathophysiology."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "avoid unless essential",
+    "lactation_safety": "avoid (inhibits lactation via dopaminergic effects)",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "Parkinson's disease",
+      "restless legs syndrome"
+    ],
+    "adverse_effect_tags": [
+      "sleep attacks",
+      "impulse control disorders",
+      "hallucinations",
+      "orthostatic hypotension"
+    ],
+    "interaction_tags": [
+      "renal-clearance",
+      "dopamine-antagonist-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "adrenergic"
+      ],
+      "mechanism_family": [
+        "D2-agonism",
+        "D3-agonism"
+      ],
+      "prototype_class": "dopamine agonists",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "Parkinson's-disease"
+      ],
+      "adverse_cluster": [
+        "sleep-attacks",
+        "impulse-control-disorders"
+      ],
+      "interaction_cluster": [
+        "dopamine-antagonist-interactions"
+      ]
+    }
+  },
+  {
+    "id": "ropinirole",
+    "generic_name": "ropinirole",
+    "brand_names": [
+      "Requip",
+      "Requip XL"
+    ],
+    "drug_class": "dopamine agonist",
+    "subclass": "non-ergot D2/D3 dopamine receptor agonist",
+    "prototype_for": false,
+    "prototype_drug": "levodopa-carbidopa",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "adrenergic"
+    ],
+    "mechanism_targets": [
+      "D2 dopamine receptor",
+      "D3 dopamine receptor"
+    ],
+    "mechanism_summary": "Selective agonist at D2 and D3 dopamine receptors in the striatum; pharmacological profile and clinical use very similar to pramipexole, but metabolized by CYP1A2 (vs. pramipexole's renal elimination), creating different drug interaction concerns.",
+    "indications": [
+      "Parkinson's disease (early and advanced)",
+      "restless legs syndrome (moderate to severe)"
+    ],
+    "contraindications": [
+      "no absolute contraindications beyond hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "somnolence",
+        "dizziness",
+        "syncope",
+        "hallucinations",
+        "peripheral edema"
+      ],
+      "serious": [
+        "sudden onset sleep",
+        "impulse control disorders",
+        "hypotension",
+        "psychosis"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; bioavailability ~55%; food has minimal effect on extent",
+      "distribution": "protein binding ~40%; Vd ~7.5 L/kg",
+      "metabolism": "primarily CYP1A2; inactive metabolites",
+      "excretion": "renal (~88% as metabolites)",
+      "half_life": "6 hours",
+      "onset": "weeks for Parkinson's effect",
+      "peak": "1-2 hours (IR); 6 hours (XL)",
+      "duration": "8 hours (IR); 24 hours (XL)",
+      "protein_binding": "40%",
+      "vd": "7.5 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CYP1A2 inhibitors (fluvoxamine, ciprofloxacin, estrogens)",
+        "mechanism": "increase ropinirole levels significantly",
+        "severity": "major"
+      },
+      {
+        "drug": "tobacco smoking (CYP1A2 inducer)",
+        "mechanism": "decreases ropinirole levels by ~30-40%; smoking cessation increases levels",
+        "severity": "moderate"
+      },
+      {
+        "drug": "dopamine antagonists",
+        "mechanism": "pharmacodynamic antagonism",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Same monitoring for impulse control disorders, sudden onset sleep, and orthostatic hypotension as pramipexole.",
+      "Smoking status affects ropinirole levels via CYP1A2 induction; if a patient on ropinirole stops smoking, levels will increase significantly \u2014 monitor for increased adverse effects.",
+      "Ciprofloxacin and fluvoxamine (common drugs in hospital settings) are CYP1A2 inhibitors that can increase ropinirole levels 2-3 fold \u2014 perform medication reconciliation.",
+      "For RLS, take 1-3 hours before bedtime; dose late in the day to match therapeutic coverage to symptom timing."
+    ],
+    "clinical_pearls": [
+      "Ropinirole's CYP1A2 dependence creates a clinically important interaction with smoking cessation; patients who stop smoking during ropinirole therapy need monitoring for toxicity as CYP1A2 induction reverses.",
+      "Both pramipexole and ropinirole are equally effective for Parkinson's disease and RLS; the choice between them is largely based on renal function (pramipexole requires renal dose adjustment), drug interactions, and tolerability."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid unless essential",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "Parkinson's disease",
+      "restless legs syndrome"
+    ],
+    "adverse_effect_tags": [
+      "sleep attacks",
+      "impulse control disorders",
+      "hallucinations"
+    ],
+    "interaction_tags": [
+      "CYP1A2-substrate",
+      "smoking-CYP1A2",
+      "dopamine-antagonist-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "adrenergic"
+      ],
+      "mechanism_family": [
+        "D2-agonism"
+      ],
+      "prototype_class": "dopamine agonists",
+      "adme_profile": "CYP1A2-metabolized",
+      "presentation_cluster": [
+        "Parkinson's-disease"
+      ],
+      "adverse_cluster": [
+        "sleep-attacks",
+        "impulse-control-disorders"
+      ],
+      "interaction_cluster": [
+        "CYP1A2-substrate",
+        "dopamine-antagonist-interactions"
+      ]
+    }
+  },
+  {
+    "id": "rotigotine",
+    "generic_name": "rotigotine",
+    "brand_names": [
+      "Neupro"
+    ],
+    "drug_class": "dopamine agonist",
+    "subclass": "non-ergot transdermal dopamine agonist",
+    "prototype_for": false,
+    "prototype_drug": "levodopa-carbidopa",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "adrenergic"
+    ],
+    "mechanism_targets": [
+      "D1 dopamine receptor",
+      "D2 dopamine receptor",
+      "D3 dopamine receptor",
+      "alpha-2 adrenergic receptor",
+      "5-HT1A receptor"
+    ],
+    "mechanism_summary": "Broadest receptor profile among non-ergot dopamine agonists; activates D1-D3 receptors with alpha-2 and 5-HT1A activity. Transdermal delivery provides continuous dopaminergic stimulation, avoiding the pulsatile peaks of oral formulations, which is theoretically advantageous for minimizing motor fluctuations.",
+    "indications": [
+      "Parkinson's disease (early and advanced)",
+      "moderate to severe restless legs syndrome"
+    ],
+    "contraindications": [
+      "MRI incompatibility (patch contains metal foil; must remove before MRI)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "application site reactions (most common)",
+        "nausea",
+        "somnolence",
+        "dizziness"
+      ],
+      "serious": [
+        "sudden onset sleep",
+        "impulse control disorders",
+        "symptomatic hypotension",
+        "hallucinations"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "transdermal; continuous absorption over 24 hours; bioavailability ~37%",
+      "distribution": "protein binding ~92%; Vd ~84 L/kg",
+      "metabolism": "extensive first-pass if oral; transdermal delivery avoids this; primarily conjugation",
+      "excretion": "renal (~71%) and fecal (~23%)",
+      "half_life": "5-7 hours (but continuous transdermal delivery maintains steady-state)",
+      "onset": "steady-state achieved within 2-3 days of patch use",
+      "peak": "continuous (no peak with patch)",
+      "duration": "24 hours per patch",
+      "protein_binding": "92%",
+      "vd": "84 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "dopamine antagonists",
+        "mechanism": "pharmacodynamic antagonism",
+        "severity": "major"
+      },
+      {
+        "drug": "CNS depressants",
+        "mechanism": "additive somnolence",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Instruct patient to remove the patch before MRI; the patch contains metal backing that can cause burns during MRI.",
+      "Apply to clean, dry, hairless skin; rotate sites daily; avoid applying to oily skin or areas with inflammation \u2014 poor adhesion or skin reactions are the most common reasons for discontinuation.",
+      "Patients with RLS should apply the patch in the evening; for Parkinson's, morning application is recommended to maintain daytime dopaminergic coverage.",
+      "Monitor for same impulse control disorders, sleep attacks, and orthostatic hypotension as with other dopamine agonists."
+    ],
+    "clinical_pearls": [
+      "Rotigotine's transdermal delivery provides 24-hour continuous dopaminergic stimulation, which is theoretically closer to physiological tonic dopamine release than pulsatile oral dosing \u2014 this may reduce wearing-off phenomena in Parkinson's disease.",
+      "For patients with dysphagia who cannot take oral Parkinson's medications, the rotigotine patch offers a non-oral route that bypasses swallowing difficulty."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid unless essential",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "Parkinson's disease",
+      "restless legs syndrome"
+    ],
+    "adverse_effect_tags": [
+      "application site reactions",
+      "sleep attacks",
+      "impulse control disorders"
+    ],
+    "interaction_tags": [
+      "dopamine-antagonist-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "adrenergic"
+      ],
+      "mechanism_family": [
+        "D2-agonism"
+      ],
+      "prototype_class": "dopamine agonists",
+      "adme_profile": "transdermal",
+      "presentation_cluster": [
+        "Parkinson's-disease"
+      ],
+      "adverse_cluster": [
+        "impulse-control-disorders"
+      ],
+      "interaction_cluster": [
+        "dopamine-antagonist-interactions"
+      ]
+    }
+  },
+  {
+    "id": "amantadine",
+    "generic_name": "amantadine",
+    "brand_names": [
+      "Symmetrel",
+      "Gocovri (ER for dyskinesia)",
+      "Osmolex ER"
+    ],
+    "drug_class": "antiviral / antiparkinson agent",
+    "subclass": "NMDA receptor antagonist / dopamine releaser",
+    "prototype_for": false,
+    "prototype_drug": "levodopa-carbidopa",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "NMDA glutamate receptor",
+      "DAT (dopamine transporter)",
+      "sigma receptor"
+    ],
+    "mechanism_summary": "Multiple mechanisms: blocks NMDA receptors (reducing glutamatergic excitotoxicity), promotes dopamine release from presynaptic terminals, and inhibits dopamine reuptake. The NMDA antagonism is responsible for its use in levodopa-induced dyskinesia (LID). Originally discovered as an antiviral for influenza A.",
+    "indications": [
+      "Parkinson's disease (adjunct for motor symptoms)",
+      "levodopa-induced dyskinesia (ER formulation)",
+      "influenza A prophylaxis/treatment (historical; now largely replaced by oseltamivir)",
+      "drug-induced extrapyramidal symptoms"
+    ],
+    "contraindications": [
+      "end-stage renal disease",
+      "concurrent live influenza vaccine"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "dizziness",
+        "insomnia",
+        "confusion",
+        "livedo reticularis (mottled skin discoloration)",
+        "edema",
+        "hallucinations"
+      ],
+      "serious": [
+        "psychosis (especially in elderly)",
+        "QT prolongation",
+        "suicidal ideation (extended-release)",
+        "neuroleptic malignant syndrome-like syndrome on abrupt discontinuation"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; bioavailability ~86-90%; ER Gocovri formulation has delayed absorption designed for bedtime dosing",
+      "distribution": "protein binding ~67%; Vd ~6.6 L/kg; crosses BBB",
+      "metabolism": "minimal hepatic metabolism; primarily excreted unchanged",
+      "excretion": "renal (>90% unchanged); dose adjustment critical in renal impairment",
+      "half_life": "10-14 hours (varies with age and renal function)",
+      "onset": "days for antiparkinson effect",
+      "peak": "2-4 hours",
+      "duration": "8-12 hours",
+      "protein_binding": "67%",
+      "vd": "6.6 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "anticholinergics",
+        "mechanism": "additive anticholinergic CNS effects; confusion and hallucinations",
+        "severity": "moderate"
+      },
+      {
+        "drug": "live influenza vaccine",
+        "mechanism": "amantadine may inhibit replication of vaccine virus",
+        "severity": "moderate"
+      },
+      {
+        "drug": "trimethoprim/sulfamethoxazole",
+        "mechanism": "decreases renal tubular secretion of amantadine; increases levels",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Dose adjustment is critical and proportional to renal function; creatinine clearance determines maximum safe dose (CrCl <15 mL/min: alternate-day dosing; dialysis patients: 200 mg after each dialysis session).",
+      "Livedo reticularis \u2014 a mottled, blueish-purple lace-like skin discoloration primarily on the legs \u2014 is a benign but concerning-appearing adverse effect; reassure patients this is not a serious finding.",
+      "Gocovri ER (extended-release amantadine) is specifically designed for levodopa-induced dyskinesia at doses higher than traditional amantadine; do not substitute IR amantadine for Gocovri without dose conversion.",
+      "Do not abruptly stop amantadine in Parkinson's patients; withdrawal can precipitate NMS-like syndrome with fever, rigidity, and altered consciousness."
+    ],
+    "clinical_pearls": [
+      "Amantadine was discovered in 1966 when a patient taking it for influenza prophylaxis noticed improvement in her Parkinson's symptoms \u2014 a classic serendipitous pharmacological discovery.",
+      "Extended-release amantadine (Gocovri) at 274 mg once daily at bedtime is the only FDA-approved treatment specifically for levodopa-induced dyskinesia; its delayed-release design achieves peak plasma levels during the hours when levodopa-related dyskinesias are most prominent (late morning through evening)."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "avoid; teratogenic in animal studies",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "Parkinson's disease",
+      "levodopa-induced dyskinesia",
+      "drug-induced EPS"
+    ],
+    "adverse_effect_tags": [
+      "hallucinations",
+      "livedo reticularis",
+      "confusion",
+      "QT prolongation"
+    ],
+    "interaction_tags": [
+      "anticholinergic",
+      "renal-clearance"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "NMDA-antagonism",
+        "dopamine-releasing"
+      ],
+      "prototype_class": "antiparkinson drugs",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "Parkinson's-disease"
+      ],
+      "adverse_cluster": [
+        "CNS-neurotoxicity"
+      ],
+      "interaction_cluster": [
+        "anticholinergic",
+        "renal-clearance"
+      ]
+    }
+  },
+  {
+    "id": "rasagiline",
+    "generic_name": "rasagiline",
+    "brand_names": [
+      "Azilect"
+    ],
+    "drug_class": "monoamine oxidase B inhibitor (MAO-B inhibitor)",
+    "subclass": "irreversible selective MAO-B inhibitor",
+    "prototype_for": false,
+    "prototype_drug": "levodopa-carbidopa",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "MAO-B (monoamine oxidase B)"
+    ],
+    "mechanism_summary": "Irreversibly and selectively inhibits MAO-B, the primary enzyme responsible for dopamine breakdown in the striatum. By preserving striatal dopamine, rasagiline reduces Parkinson's motor symptoms. At therapeutic doses, it is highly selective for MAO-B over MAO-A, avoiding the tyramine interactions of non-selective MAOIs.",
+    "indications": [
+      "Parkinson's disease (monotherapy early-stage or adjunct to levodopa)"
+    ],
+    "contraindications": [
+      "concurrent non-selective MAOIs",
+      "concurrent meperidine",
+      "concurrent tramadol, methadone, propoxyphene",
+      "concurrent sympathomimetic amines",
+      "concurrent dextromethorphan",
+      "concurrent St. John's wort"
+    ],
+    "adverse_effects": {
+      "common": [
+        "headache",
+        "nausea",
+        "orthostatic hypotension",
+        "dyskinesia (when used with levodopa)",
+        "weight loss"
+      ],
+      "serious": [
+        "serotonin syndrome (particularly with serotonergic drugs)",
+        "hypertension (usually mild at therapeutic doses, but possible)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; bioavailability ~36% (first-pass); food does not significantly affect extent",
+      "distribution": "protein binding ~88-94%",
+      "metabolism": "primarily CYP1A2; active metabolite aminoindan (weak MAO-B inhibitor)",
+      "excretion": "primarily renal",
+      "half_life": "3 hours (but enzyme inhibition is irreversible)",
+      "onset": "enzyme inhibition within hours; clinical Parkinson's effect weeks",
+      "peak": "1 hour",
+      "duration": "irreversible; restored by enzyme synthesis over weeks",
+      "protein_binding": "88-94%",
+      "vd": "not well characterized"
+    },
+    "drug_interactions": [
+      {
+        "drug": "meperidine",
+        "mechanism": "excitatory serotonin syndrome; potentially fatal",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "SSRIs/SNRIs",
+        "mechanism": "serotonin syndrome risk via combined serotonergic effect",
+        "severity": "major"
+      },
+      {
+        "drug": "CYP1A2 inhibitors (ciprofloxacin, fluvoxamine)",
+        "mechanism": "increase rasagiline levels; maximum dose 0.5 mg/day",
+        "severity": "major"
+      },
+      {
+        "drug": "sympathomimetics",
+        "mechanism": "potential hypertensive reaction (less than non-selective MAOIs)",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Rasagiline is MAO-B selective at therapeutic doses and therefore has minimal tyramine dietary interaction; however, excessive tyramine-rich food intake (very aged cheeses, concentrated yeast extracts) should still be moderated.",
+      "Meperidine is absolutely contraindicated; ensure surgical teams are aware of MAO-B inhibitor use before any procedure that may involve opioid administration.",
+      "When used with levodopa, rasagiline may exacerbate dyskinesia due to increased dopamine availability; dose reduction of levodopa may be needed.",
+      "CYP1A2 inhibitors (including ciprofloxacin, a commonly prescribed antibiotic) require dose reduction to rasagiline 0.5 mg/day; verify for antibiotic prescriptions."
+    ],
+    "clinical_pearls": [
+      "Rasagiline is one of two MAO-B inhibitors used in Parkinson's (the other is selegiline); rasagiline has no amphetamine metabolites (unlike selegiline), making it preferred in patients concerned about stimulant side effects.",
+      "Some clinical data suggest neuroprotective properties of MAO-B inhibitors in PD beyond symptomatic benefit; while not definitively proven, this contributed to their use in early PD monotherapy before levodopa is required."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid unless essential",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "Parkinson's disease"
+    ],
+    "adverse_effect_tags": [
+      "serotonin syndrome",
+      "dyskinesia",
+      "orthostatic hypotension"
+    ],
+    "interaction_tags": [
+      "CYP1A2-substrate",
+      "MAOI-interaction",
+      "serotonergic"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "MAO-B-inhibition"
+      ],
+      "prototype_class": "MAO-B inhibitors",
+      "adme_profile": "CYP1A2-metabolized",
+      "presentation_cluster": [
+        "Parkinson's-disease"
+      ],
+      "adverse_cluster": [
+        "serotonin-syndrome"
+      ],
+      "interaction_cluster": [
+        "MAOI-interaction",
+        "serotonergic"
+      ]
+    }
+  },
+  {
+    "id": "entacapone",
+    "generic_name": "entacapone",
+    "brand_names": [
+      "Comtan",
+      "Stalevo (with levodopa/carbidopa)"
+    ],
+    "drug_class": "COMT inhibitor",
+    "subclass": "catechol-O-methyltransferase (COMT) inhibitor",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "COMT (catechol-O-methyltransferase)"
+    ],
+    "mechanism_summary": "Peripherally-acting COMT inhibitor; blocks the enzyme responsible for methylating levodopa to 3-O-methyldopa (an inactive metabolite that competes with levodopa for transport across the BBB). By inhibiting peripheral COMT, entacapone increases the bioavailability of levodopa that reaches the brain by approximately 30-50%, extending and enhancing its effect.",
+    "indications": [
+      "Parkinson's disease with end-of-dose motor fluctuations (wearing off) as adjunct to levodopa/carbidopa"
+    ],
+    "contraindications": [
+      "concurrent non-selective MAOIs",
+      "pheochromocytoma"
+    ],
+    "adverse_effects": {
+      "common": [
+        "dyskinesia (from enhanced levodopa effect)",
+        "nausea",
+        "diarrhea",
+        "urine discoloration (orange-brown; harmless)",
+        "abdominal pain"
+      ],
+      "serious": [
+        "severe diarrhea requiring hospitalization",
+        "rhabdomyolysis (rare)",
+        "neuroleptic malignant syndrome-like syndrome if abruptly stopped with levodopa"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "well absorbed; bioavailability ~35%; food has no significant effect",
+      "distribution": "protein binding ~98%; Vd ~20 L",
+      "metabolism": "hepatic glucuronidation; peripheral COMT inhibition only (does not cross BBB at therapeutic doses)",
+      "excretion": "primarily fecal (90%)",
+      "half_life": "0.4-0.7 hours (but COMT inhibition lasts several hours)",
+      "onset": "within the first levodopa dose",
+      "peak": "1 hour",
+      "duration": "administered with each levodopa dose",
+      "protein_binding": "98%",
+      "vd": "20 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "non-selective MAOIs",
+        "mechanism": "blockade of both MAO and COMT pathways causes major catecholamine accumulation; hypertensive crisis",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "drugs metabolized by COMT (epinephrine, dobutamine, methyldopa)",
+        "mechanism": "increased catecholamine exposure",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Entacapone must be administered with each dose of levodopa/carbidopa \u2014 it has no effect when taken alone.",
+      "Warn patients that urine may turn orange-brown or brownish-yellow; this is harmless pigmentation from entacapone metabolites and not hematuria.",
+      "When starting entacapone, levodopa dose may need to be decreased by 10-30% to prevent increased dyskinesia from enhanced levodopa bioavailability.",
+      "Diarrhea is dose-limiting in up to 10% of patients and may cause significant dehydration; monitor fluid status and report severe diarrhea."
+    ],
+    "clinical_pearls": [
+      "Entacapone extends the clinical effect of each levodopa dose by 30-50 minutes, a clinically meaningful benefit in patients experiencing 'wearing off' (end-of-dose deterioration) in advanced Parkinson's disease.",
+      "Stalevo (levodopa/carbidopa/entacapone) combines all three agents in one tablet to simplify the dosing regimen, though it cannot be used for flexible levodopa dose adjustments without changing all three components simultaneously."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid unless essential",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "Parkinson's disease",
+      "motor fluctuations",
+      "wearing off"
+    ],
+    "adverse_effect_tags": [
+      "dyskinesia",
+      "diarrhea",
+      "urine discoloration"
+    ],
+    "interaction_tags": [
+      "MAOI-interaction",
+      "COMT-inhibition"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "COMT-inhibition"
+      ],
+      "prototype_class": "COMT inhibitors",
+      "adme_profile": "hepatically-metabolized",
+      "presentation_cluster": [
+        "Parkinson's-disease"
+      ],
+      "adverse_cluster": [
+        "GI-effects",
+        "dyskinesia"
+      ],
+      "interaction_cluster": [
+        "MAOI-interaction"
+      ]
+    }
+  },
+  {
+    "id": "benztropine",
+    "generic_name": "benztropine",
+    "brand_names": [
+      "Cogentin"
+    ],
+    "drug_class": "anticholinergic antiparkinson agent",
+    "subclass": "muscarinic receptor antagonist",
+    "prototype_for": false,
+    "prototype_drug": "atropine",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "cholinergic"
+    ],
+    "mechanism_targets": [
+      "muscarinic acetylcholine receptors (M1)"
+    ],
+    "mechanism_summary": "Blocks muscarinic receptors in the striatum, restoring the dopamine-acetylcholine balance disrupted by dopaminergic neuron loss in Parkinson's disease. Also blocks histamine H1 receptors (contributing to sedation) and inhibits dopamine reuptake slightly. Used primarily for drug-induced EPS where dopaminergic therapy is not appropriate.",
+    "indications": [
+      "drug-induced extrapyramidal symptoms (particularly acute dystonia and parkinsonism)",
+      "Parkinson's disease (mild cases or adjunct)",
+      "off-label: hypersalivation in antipsychotic-treated patients"
+    ],
+    "contraindications": [
+      "narrow-angle glaucoma",
+      "obstructive uropathy",
+      "myasthenia gravis",
+      "elderly patients with cognitive impairment (Beers Criteria)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "dry mouth",
+        "blurred vision",
+        "constipation",
+        "urinary retention",
+        "tachycardia",
+        "sedation",
+        "confusion"
+      ],
+      "serious": [
+        "anticholinergic toxidrome (fever, delirium, ileus, urinary retention)",
+        "hyperthermia in hot weather (impaired sweating)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally and via IM/IV",
+      "distribution": "highly lipophilic; crosses BBB readily; protein binding not well characterized",
+      "metabolism": "hepatic; minimal CYP involvement",
+      "excretion": "renal",
+      "half_life": "~36 hours",
+      "onset": "IM/IV: 15 minutes; oral: 1-2 hours",
+      "peak": "IM: 2-3 hours",
+      "duration": "6-12 hours (oral); 12-24 hours (IM)",
+      "protein_binding": "not well characterized",
+      "vd": "not well characterized"
+    },
+    "drug_interactions": [
+      {
+        "drug": "anticholinergic drugs (including TCAs, antihistamines, bladder drugs)",
+        "mechanism": "additive anticholinergic toxidrome",
+        "severity": "major"
+      },
+      {
+        "drug": "antipsychotics",
+        "mechanism": "may mask EPS while additive anticholinergic effects occur",
+        "severity": "moderate"
+      },
+      {
+        "drug": "clozapine",
+        "mechanism": "potentiated anticholinergic ileus risk",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "For acute dystonic reaction (emergency): administer benztropine 1-2 mg IM or IV; relief within 15 minutes; oral maintenance may follow.",
+      "Elderly patients are at highest risk for anticholinergic complications (delirium, urinary retention, constipation) \u2014 Beers Criteria recommends against use in patients \u226565; avoid if possible.",
+      "Warn about reduced sweating in hot weather; patients cannot thermoregulate effectively \u2014 advise to stay cool, hydrated, and avoid excessive heat exposure.",
+      "Avoid concurrent use with clozapine or other anticholinergics; the combination can cause fatal anticholinergic ileus."
+    ],
+    "clinical_pearls": [
+      "Benztropine 1-2 mg IM or IV is the first-line treatment for acute dystonic reactions from antipsychotics or metoclopramide; it provides rapid relief within 15 minutes and should be available in every nursing unit that uses antipsychotics.",
+      "The concept of 'prophylactic anticholinergic prescribing' with every antipsychotic initiation is controversial and no longer recommended routinely; it is reserved for patients at high EPS risk."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "use with caution",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "drug-induced EPS",
+      "acute dystonia",
+      "Parkinson's disease"
+    ],
+    "adverse_effect_tags": [
+      "anticholinergic",
+      "delirium",
+      "urinary retention",
+      "ileus"
+    ],
+    "interaction_tags": [
+      "anticholinergic",
+      "cholinergic-antagonism"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "cholinergic"
+      ],
+      "mechanism_family": [
+        "muscarinic-antagonism"
+      ],
+      "prototype_class": "anticholinergic antiparkinson drugs",
+      "adme_profile": "hepatically-metabolized",
+      "presentation_cluster": [
+        "drug-induced-EPS",
+        "Parkinson's-disease"
+      ],
+      "adverse_cluster": [
+        "anticholinergic-toxidrome"
+      ],
+      "interaction_cluster": [
+        "anticholinergic"
+      ]
+    }
+  },
+  {
+    "id": "riluzole",
+    "generic_name": "riluzole",
+    "brand_names": [
+      "Rilutek",
+      "Tiglutik (oral suspension)",
+      "Exservan (oral film)"
+    ],
+    "drug_class": "neuroprotective agent / glutamate antagonist",
+    "subclass": "benzothiazole antiglutamatergic agent",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "ion-channel"
+    ],
+    "mechanism_targets": [
+      "glutamate release inhibitor (presynaptic)",
+      "voltage-gated sodium channels",
+      "NMDA receptor"
+    ],
+    "mechanism_summary": "Reduces glutamatergic neurotransmission by inhibiting glutamate release, blocking sodium channels, and partially antagonizing NMDA receptors. Motor neurons in ALS are selectively vulnerable to glutamate excitotoxicity; riluzole reduces this excitotoxic neurodegeneration, modestly slowing disease progression. It was the first FDA-approved treatment for ALS.",
+    "indications": [
+      "amyotrophic lateral sclerosis (ALS) \u2014 delays disease progression and extends tracheostomy-free survival"
+    ],
+    "contraindications": [
+      "severe hepatic impairment (ALT >5x ULN)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "asthenia",
+        "nausea",
+        "diarrhea",
+        "dizziness",
+        "decreased respiratory function"
+      ],
+      "serious": [
+        "hepatotoxicity (elevated ALT/AST \u2014 monitor LFTs)",
+        "neutropenia (rare)",
+        "interstitial lung disease (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; bioavailability ~60%; high-fat meals decrease absorption by 20%",
+      "distribution": "protein binding ~96%",
+      "metabolism": "primarily CYP1A2; active metabolite OHRILUZOLE; smoking induces CYP1A2 and reduces riluzole levels",
+      "excretion": "renal (approximately 90% as metabolites)",
+      "half_life": "12 hours",
+      "onset": "weeks to months for clinical effect",
+      "peak": "1-1.5 hours",
+      "duration": "12 hours",
+      "protein_binding": "96%",
+      "vd": "245 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CYP1A2 inhibitors (fluvoxamine, ciprofloxacin)",
+        "mechanism": "increase riluzole levels; liver toxicity risk",
+        "severity": "major"
+      },
+      {
+        "drug": "tobacco smoking (CYP1A2 inducer)",
+        "mechanism": "decreases riluzole levels significantly; reduced efficacy",
+        "severity": "major"
+      },
+      {
+        "drug": "hepatotoxic drugs",
+        "mechanism": "additive liver injury risk",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Liver function tests must be monitored at baseline, monthly for first 3 months, then quarterly for first year, then periodically \u2014 discontinue if ALT exceeds 5x ULN.",
+      "Administer on an empty stomach (1 hour before or 2 hours after meals) for optimal absorption; high-fat meals reduce riluzole absorption.",
+      "Smoking induces CYP1A2 and significantly reduces riluzole plasma levels \u2014 document smoking status and counsel patients about the interaction with their ALS medication.",
+      "Provide clear expectations: riluzole extends tracheostomy-free survival by approximately 2-3 months on average and delays time to mechanical ventilation; it does not reverse or dramatically slow functional decline."
+    ],
+    "clinical_pearls": [
+      "Riluzole is the longest-established ALS treatment (FDA-approved 1995) with an effect size of approximately 2-3 months extension in tracheostomy-free survival \u2014 modest but statistically significant, and clinically meaningful to patients and families.",
+      "CYP1A2 induction by tobacco smoking is clinically significant; ALS patients who smoke have substantially lower riluzole plasma levels than non-smokers, potentially nullifying the modest survival benefit."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid unless essential",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "ALS",
+      "amyotrophic lateral sclerosis"
+    ],
+    "adverse_effect_tags": [
+      "hepatotoxicity",
+      "neutropenia",
+      "nausea"
+    ],
+    "interaction_tags": [
+      "CYP1A2-substrate",
+      "smoking-CYP1A2",
+      "hepatotoxic-combinations"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "ion-channel"
+      ],
+      "mechanism_family": [
+        "glutamate-inhibition",
+        "sodium-channel-blockade"
+      ],
+      "prototype_class": "neuroprotective agents",
+      "adme_profile": "CYP1A2-metabolized",
+      "presentation_cluster": [
+        "ALS"
+      ],
+      "adverse_cluster": [
+        "hepatotoxicity"
+      ],
+      "interaction_cluster": [
+        "CYP1A2-substrate",
+        "smoking-CYP1A2"
+      ]
+    }
   }
 ]
