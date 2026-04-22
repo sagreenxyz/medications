@@ -40674,5 +40674,976 @@
         "CYP3A4-inducer"
       ]
     }
+  },
+  {
+    "id": "alprazolam",
+    "generic_name": "alprazolam",
+    "brand_names": [
+      "Xanax",
+      "Xanax XR",
+      "Niravam"
+    ],
+    "drug_class": "benzodiazepine",
+    "subclass": "short-to-intermediate acting benzodiazepine",
+    "prototype_for": false,
+    "prototype_drug": "diazepam",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "ion-channel"
+    ],
+    "mechanism_targets": [
+      "GABA-A receptor (benzodiazepine site)"
+    ],
+    "mechanism_summary": "Binds the benzodiazepine site (alpha subunit/gamma subunit interface) on GABA-A receptors, increasing the FREQUENCY of chloride channel opening in response to GABA, enhancing inhibitory neurotransmission. Produces anxiolytic, sedative, anticonvulsant, and muscle-relaxant effects.",
+    "indications": [
+      "generalized anxiety disorder (GAD)",
+      "panic disorder",
+      "anxiety associated with depression"
+    ],
+    "contraindications": [
+      "acute narrow-angle glaucoma",
+      "concurrent ketoconazole or itraconazole",
+      "pregnancy",
+      "severe hepatic impairment"
+    ],
+    "adverse_effects": {
+      "common": [
+        "sedation",
+        "drowsiness",
+        "cognitive impairment",
+        "coordination difficulty",
+        "anterograde amnesia"
+      ],
+      "serious": [
+        "physical dependence and severe withdrawal",
+        "respiratory depression (with opioids)",
+        "paradoxical disinhibition (rage)",
+        "suicidal ideation"
+      ]
+    },
+    "black_box_warnings": [
+      "concomitant use with opioids: concomitant use of benzodiazepines and opioids may result in profound sedation, respiratory depression, coma, and death"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral; bioavailability ~80\u201390%",
+      "distribution": "80% protein bound",
+      "metabolism": "hepatic via CYP3A4 to inactive metabolites",
+      "excretion": "renal",
+      "half_life": "6\u201326 hours",
+      "onset": "15\u201330 minutes",
+      "peak": "1\u20132 hours",
+      "duration": "4\u20136 hours",
+      "protein_binding": "80%",
+      "vd": "0.8\u20131.2 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "opioids",
+        "mechanism": "additive CNS and respiratory depression; risk of fatal respiratory arrest",
+        "severity": "major"
+      },
+      {
+        "drug": "CYP3A4 inhibitors (ketoconazole)",
+        "mechanism": "dramatically increase alprazolam levels \u2014 ketoconazole 3.98-fold; contraindicated",
+        "severity": "major"
+      },
+      {
+        "drug": "alcohol",
+        "mechanism": "additive CNS depression",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Assess respiratory rate and level of sedation before administration; do not administer if respiratory rate <12/min.",
+      "Instruct patients never to combine with alcohol or opioids; this combination can be fatal.",
+      "Tolerance and dependence develop rapidly with regular use; NOT recommended for long-term anxiety management.",
+      "Discontinue by tapering slowly (no more than 0.5 mg decrease every 3 days); abrupt withdrawal can cause life-threatening seizures."
+    ],
+    "clinical_pearls": [
+      "Alprazolam has one of the highest abuse and dependence potentials among benzodiazepines due to its rapid onset and short half-life, which produce pronounced pharmacological reinforcement.",
+      "The FDA's black box warning for concurrent opioid use reflects epidemic numbers of overdose deaths from benzodiazepine-opioid combinations; if both must be prescribed, prescribe lowest doses and monitor closely."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "category D; associated with neonatal withdrawal and cleft palate (disputed)",
+    "lactation_safety": "excreted in breast milk; avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "anxiety",
+      "panic-disorder"
+    ],
+    "adverse_effect_tags": [
+      "dependence",
+      "withdrawal-seizures",
+      "respiratory-depression",
+      "cognitive-impairment"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate",
+      "CNS-depression-additive"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "ion-channel"
+      ],
+      "mechanism_family": [
+        "GABA-A-positive-modulation"
+      ],
+      "prototype_class": "benzodiazepines",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "anxiety"
+      ],
+      "adverse_cluster": [
+        "dependence",
+        "respiratory-depression"
+      ],
+      "interaction_cluster": [
+        "CNS-depression-additive",
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "temazepam",
+    "generic_name": "temazepam",
+    "brand_names": [
+      "Restoril"
+    ],
+    "drug_class": "benzodiazepine",
+    "subclass": "intermediate-acting benzodiazepine hypnotic",
+    "prototype_for": false,
+    "prototype_drug": "diazepam",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "ion-channel"
+    ],
+    "mechanism_targets": [
+      "GABA-A receptor (benzodiazepine site)"
+    ],
+    "mechanism_summary": "Benzodiazepine GABA-A receptor positive allosteric modulator that enhances chloride conductance; used specifically as a hypnotic for short-term management of insomnia. Intermediate half-life minimizes morning sedation compared to long-acting benzodiazepines.",
+    "indications": [
+      "short-term treatment of insomnia"
+    ],
+    "contraindications": [
+      "sleep apnea",
+      "severe hepatic impairment",
+      "concurrent opioids (relative)",
+      "pregnancy"
+    ],
+    "adverse_effects": {
+      "common": [
+        "drowsiness",
+        "dizziness",
+        "hangover effect",
+        "anterograde amnesia",
+        "rebound insomnia on discontinuation"
+      ],
+      "serious": [
+        "respiratory depression",
+        "paradoxical excitement",
+        "dependence and withdrawal",
+        "complex sleep behaviors (sleepwalking, sleep-driving \u2014 rare)"
+      ]
+    },
+    "black_box_warnings": [
+      "concomitant use with opioids may result in profound sedation, respiratory depression, coma, and death"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral; well absorbed; bioavailability ~96%",
+      "distribution": "96% protein bound",
+      "metabolism": "hepatic glucuronidation (NOT CYP); no active metabolites",
+      "excretion": "renal",
+      "half_life": "8\u201325 hours",
+      "onset": "30 minutes",
+      "peak": "1\u20132 hours",
+      "duration": "6\u20138 hours",
+      "protein_binding": "96%",
+      "vd": "1.4 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "opioids",
+        "mechanism": "additive CNS and respiratory depression",
+        "severity": "major"
+      },
+      {
+        "drug": "alcohol and CNS depressants",
+        "mechanism": "additive CNS depression",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer 30 minutes before bedtime; ensure patient has 7\u20138 hours available for sleep to minimize morning sedation.",
+      "Beers Criteria medication in elderly: avoid in all but carefully considered situations; fall risk is significant.",
+      "Limit to short-term use (7\u201310 days); rebound insomnia occurs on discontinuation.",
+      "Unlike most benzodiazepines, temazepam is glucuronidated (not CYP450 metabolized), making it less susceptible to CYP drug interactions."
+    ],
+    "clinical_pearls": [
+      "Temazepam's glucuronidation metabolism (avoiding CYP450) means it has fewer pharmacokinetic drug interactions than other benzodiazepines; it is preferred in elderly patients who require benzodiazepine hypnosis (if use cannot be avoided).",
+      "However, as a Beers Criteria medication in elderly, temazepam still significantly increases fall and fracture risk; non-pharmacological insomnia treatment (CBT-I) should be first-line in older adults."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "insomnia"
+    ],
+    "adverse_effect_tags": [
+      "dependence",
+      "fall-risk",
+      "respiratory-depression"
+    ],
+    "interaction_tags": [
+      "CNS-depression-additive"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "ion-channel"
+      ],
+      "mechanism_family": [
+        "GABA-A-positive-modulation"
+      ],
+      "prototype_class": "benzodiazepines",
+      "adme_profile": "glucuronidation-non-CYP",
+      "presentation_cluster": [
+        "insomnia"
+      ],
+      "adverse_cluster": [
+        "dependence",
+        "fall-risk"
+      ],
+      "interaction_cluster": [
+        "CNS-depression-additive"
+      ]
+    }
+  },
+  {
+    "id": "zaleplon",
+    "generic_name": "zaleplon",
+    "brand_names": [
+      "Sonata"
+    ],
+    "drug_class": "non-benzodiazepine hypnotic (Z-drug)",
+    "subclass": "pyrazolopyrimidine GABA-A BZ1 modulator",
+    "prototype_for": false,
+    "prototype_drug": "zolpidem",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "ion-channel"
+    ],
+    "mechanism_targets": [
+      "GABA-A receptor (alpha1 subunit \u2014 BZ1 site)"
+    ],
+    "mechanism_summary": "Pyrazolopyrimidine that selectively binds the BZ1 site on GABA-A receptors containing alpha1 subunits, producing sedation. Shortest-acting Z-drug \u2014 ultra-short half-life of 1 hour; minimal residual sedation.",
+    "indications": [
+      "short-term treatment of insomnia (sleep onset only; not sleep maintenance)"
+    ],
+    "contraindications": [
+      "severe hepatic impairment"
+    ],
+    "adverse_effects": {
+      "common": [
+        "drowsiness",
+        "headache",
+        "dizziness",
+        "memory impairment"
+      ],
+      "serious": [
+        "complex sleep behaviors (rare)",
+        "dependence",
+        "respiratory depression"
+      ]
+    },
+    "black_box_warnings": [
+      "complex sleep behaviors including sleepwalking, sleep-driving; discontinue if complex sleep behavior occurs"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral; food significantly delays absorption; avoid with heavy meal",
+      "distribution": "60% protein bound",
+      "metabolism": "hepatic via CYP3A4 and aldehyde oxidase to inactive metabolites",
+      "excretion": "renal",
+      "half_life": "1 hour",
+      "onset": "15\u201330 minutes",
+      "peak": "1 hour",
+      "duration": "3\u20134 hours",
+      "protein_binding": "60%",
+      "vd": "1.4 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CYP3A4 inhibitors",
+        "mechanism": "increase zaleplon levels",
+        "severity": "moderate"
+      },
+      {
+        "drug": "cimetidine",
+        "mechanism": "inhibits both CYP3A4 and aldehyde oxidase; 85% increase in zaleplon AUC",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Zaleplon's 1-hour half-life allows it to be taken in the middle of the night as long as 4 hours of sleep remain; unique attribute among hypnotics.",
+      "Avoid heavy meals before taking; food delays absorption significantly.",
+      "Risk of dependence and complex sleep behaviors are similar to zolpidem despite shorter half-life.",
+      "Not suitable for sleep maintenance insomnia (waking in the middle of the night); only benefits sleep onset."
+    ],
+    "clinical_pearls": [
+      "Zaleplon's ultra-short half-life (1 hour) is its defining pharmacokinetic feature, enabling middle-of-the-night dosing without morning impairment \u2014 however, it provides no sleep maintenance benefit.",
+      "Among Z-drugs (zaleplon, zolpidem, eszopiclone), zaleplon has the least evidence for sleep maintenance and shortest duration, but carries the same complex sleep behavior risk."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "insomnia",
+      "sleep-onset"
+    ],
+    "adverse_effect_tags": [
+      "complex-sleep-behavior",
+      "dependence"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "ion-channel"
+      ],
+      "mechanism_family": [
+        "GABA-A-positive-modulation"
+      ],
+      "prototype_class": "Z-drugs (non-benzodiazepine hypnotics)",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "insomnia"
+      ],
+      "adverse_cluster": [
+        "dependence"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "eszopiclone",
+    "generic_name": "eszopiclone",
+    "brand_names": [
+      "Lunesta"
+    ],
+    "drug_class": "non-benzodiazepine hypnotic (Z-drug)",
+    "subclass": "cyclopyrrolone GABA-A positive allosteric modulator",
+    "prototype_for": false,
+    "prototype_drug": "zolpidem",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "ion-channel"
+    ],
+    "mechanism_targets": [
+      "GABA-A receptor (benzodiazepine site)"
+    ],
+    "mechanism_summary": "S-isomer of zopiclone; binds GABA-A receptors at the benzodiazepine site without absolute selectivity for alpha1 subunit; produces sedation and hypnosis. Longer acting than zaleplon and zolpidem IR, providing both sleep onset and maintenance benefit.",
+    "indications": [
+      "insomnia (sleep onset and maintenance)",
+      "approved for long-term use (unlike zolpidem IR)"
+    ],
+    "contraindications": [
+      "severe hepatic impairment"
+    ],
+    "adverse_effects": {
+      "common": [
+        "unpleasant bitter/metallic taste (very common)",
+        "headache",
+        "dizziness",
+        "drowsiness",
+        "anterograde amnesia"
+      ],
+      "serious": [
+        "complex sleep behaviors",
+        "dependence",
+        "respiratory depression"
+      ]
+    },
+    "black_box_warnings": [
+      "complex sleep behaviors; discontinue if complex sleep behavior occurs"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral; food delays absorption; avoid with high-fat meal",
+      "distribution": "52\u201359% protein bound",
+      "metabolism": "hepatic via CYP3A4 and CYP2E1",
+      "excretion": "renal (75%)",
+      "half_life": "6 hours",
+      "onset": "15\u201330 minutes",
+      "peak": "1 hour",
+      "duration": "6\u20138 hours",
+      "protein_binding": "52\u201359%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CYP3A4 inhibitors",
+        "mechanism": "increase eszopiclone levels; reduce dose to 1 mg with strong CYP3A4 inhibitors",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Eszopiclone is the only FDA-approved hypnotic without a time-limited labeling restriction; however, long-term use should still be re-evaluated periodically.",
+      "Bitter/metallic taste is the most bothersome and common adverse effect (46%); advise patients this is a known and harmless side effect.",
+      "Doses greater than 2 mg may impair driving the next morning; assess driving capability.",
+      "Do not take with high-fat meal; delays absorption and may reduce efficacy."
+    ],
+    "clinical_pearls": [
+      "Eszopiclone is differentiated from zolpidem and zaleplon by its longer half-life (6 hours), making it effective for both sleep onset AND sleep maintenance \u2014 the only Z-drug without explicit time limitation in its labeling.",
+      "The distinctive bitter taste of eszopiclone (reported by ~46% of patients) may actually help reduce misuse potential by making the drug recognizable."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "insomnia"
+    ],
+    "adverse_effect_tags": [
+      "complex-sleep-behavior",
+      "dependence",
+      "metallic-taste"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "ion-channel"
+      ],
+      "mechanism_family": [
+        "GABA-A-positive-modulation"
+      ],
+      "prototype_class": "Z-drugs (non-benzodiazepine hypnotics)",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "insomnia"
+      ],
+      "adverse_cluster": [
+        "dependence"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "ramelteon",
+    "generic_name": "ramelteon",
+    "brand_names": [
+      "Rozerem"
+    ],
+    "drug_class": "melatonin receptor agonist",
+    "subclass": "MT1/MT2 receptor agonist hypnotic",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "melatonin MT1 and MT2 receptors (suprachiasmatic nucleus)"
+    ],
+    "mechanism_summary": "Highly selective agonist of MT1 and MT2 melatonin receptors in the suprachiasmatic nucleus (SCN), the brain's circadian pacemaker. Activation of MT1 inhibits the firing rate of SCN neurons (sleep-promoting), while MT2 activation shifts the circadian clock phase. Does not act on GABA-A receptors; no dependence potential.",
+    "indications": [
+      "insomnia characterized by difficulty with sleep onset",
+      "jet lag / circadian rhythm disruption"
+    ],
+    "contraindications": [
+      "severe hepatic impairment (fluvoxamine interaction \u2014 contraindicated)",
+      "concurrent fluvoxamine"
+    ],
+    "adverse_effects": {
+      "common": [
+        "somnolence",
+        "fatigue",
+        "dizziness",
+        "nausea"
+      ],
+      "serious": [
+        "complex sleep behaviors (rare; class effect of any hypnotic?)",
+        "prolactin elevation (testosterone reduction \u2014 monitor reproductive hormones)",
+        "worsening depression or suicidal ideation (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral; bioavailability ~1.8% (extensive first-pass metabolism); take on empty stomach",
+      "distribution": "82% protein bound",
+      "metabolism": "hepatic via CYP1A2 (major) and CYP3A4, CYP2C9",
+      "excretion": "renal (84%)",
+      "half_life": "1\u20132.6 hours",
+      "onset": "30 minutes",
+      "peak": "0.75 hours",
+      "duration": "3\u20134 hours",
+      "protein_binding": "82%",
+      "vd": "73.6 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "fluvoxamine",
+        "mechanism": "potent CYP1A2 inhibitor; increases ramelteon AUC 190-fold; CONTRAINDICATED",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "rifampin",
+        "mechanism": "CYP induction reduces ramelteon levels significantly",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer 30 minutes before bedtime on an empty stomach (food reduces absorption).",
+      "Safe for use in elderly without fall risk concerns (no benzodiazepine mechanism).",
+      "Not a controlled substance \u2014 no dependence, no withdrawal, no rebound insomnia on discontinuation.",
+      "Monitor prolactin and testosterone levels in patients using ramelteon long-term; elevated prolactin and decreased testosterone have been reported."
+    ],
+    "clinical_pearls": [
+      "Ramelteon is the only FDA-approved insomnia agent without Schedule IV or abuse potential; it is not a controlled substance, making it uniquely appropriate for patients with substance use disorders.",
+      "The fluvoxamine-ramelteon interaction is one of the most extreme CYP1A2 inhibition examples: a 190-fold increase in AUC that represents a true absolute contraindication."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "insufficient data; avoid",
+    "lactation_safety": "insufficient data",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "insomnia",
+      "circadian-rhythm-disorder"
+    ],
+    "adverse_effect_tags": [
+      "prolactin-elevation"
+    ],
+    "interaction_tags": [
+      "CYP1A2-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "melatonin-receptor-agonism"
+      ],
+      "prototype_class": "melatonin receptor agonists",
+      "adme_profile": "hepatically-metabolized-CYP1A2",
+      "presentation_cluster": [
+        "insomnia"
+      ],
+      "adverse_cluster": [],
+      "interaction_cluster": [
+        "CYP1A2-substrate"
+      ]
+    }
+  },
+  {
+    "id": "suvorexant",
+    "generic_name": "suvorexant",
+    "brand_names": [
+      "Belsomra"
+    ],
+    "drug_class": "orexin receptor antagonist",
+    "subclass": "dual orexin receptor antagonist (DORA)",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "orexin OX1R and OX2R receptors (hypocretin receptors)"
+    ],
+    "mechanism_summary": "Blocks orexin (hypocretin) 1 and 2 receptors in the hypothalamus. Orexin normally promotes wakefulness; antagonism reduces arousal and promotes sleep. Novel mechanism completely distinct from GABA-A modulators, without significant dependence potential and preserving natural sleep architecture.",
+    "indications": [
+      "insomnia (sleep onset and sleep maintenance)"
+    ],
+    "contraindications": [
+      "narcolepsy",
+      "severe hepatic impairment"
+    ],
+    "adverse_effects": {
+      "common": [
+        "next-day somnolence",
+        "headache",
+        "dizziness"
+      ],
+      "serious": [
+        "next-day impaired driving and cognitive function",
+        "complex sleep behaviors (rare)",
+        "suicidal ideation (class effect)",
+        "narcolepsy-like symptoms (sleep paralysis, hypnagogic hallucinations)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral; bioavailability ~82%; high-fat meal delays absorption",
+      "distribution": "96% protein bound",
+      "metabolism": "hepatic via CYP3A4 (major) and CYP2C19 (minor)",
+      "excretion": "fecal (66%) and renal (23%)",
+      "half_life": "12 hours",
+      "onset": "30 minutes",
+      "peak": "2 hours",
+      "duration": "6\u20138 hours",
+      "protein_binding": "96%",
+      "vd": "49 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "strong CYP3A4 inhibitors",
+        "mechanism": "significantly increase suvorexant exposure; reduce to 5 mg with strong inhibitors",
+        "severity": "major"
+      },
+      {
+        "drug": "CNS depressants",
+        "mechanism": "additive sedation and next-day impairment",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer within 30 minutes of bedtime; take only when at least 7 hours available for sleep.",
+      "Significant next-day drowsiness may impair driving; counsel patients.",
+      "Unlike GABA-A modulators, suvorexant targets wakefulness pathways, making it a mechanistically distinct option for patients with prior dependence on benzodiazepines or Z-drugs.",
+      "Dose reduction is mandatory with strong CYP3A4 inhibitors (maximum 5 mg)."
+    ],
+    "clinical_pearls": [
+      "Suvorexant's orexin antagonism mechanism provides sleep by 'turning off wakefulness' rather than by inducing sedation \u2014 a conceptual advantage that may translate to more preserved sleep architecture and lower dependence potential.",
+      "Lemborexant (a newer dual orexin antagonist) has a shorter half-life than suvorexant, potentially reducing next-day impairment; both work via the same mechanism."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "insufficient data; avoid",
+    "lactation_safety": "insufficient data",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "insomnia"
+    ],
+    "adverse_effect_tags": [
+      "next-day-impairment",
+      "complex-sleep-behavior"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "orexin-receptor-antagonism"
+      ],
+      "prototype_class": "dual orexin receptor antagonists",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "insomnia"
+      ],
+      "adverse_cluster": [
+        "next-day-impairment"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "buspirone",
+    "generic_name": "buspirone",
+    "brand_names": [
+      "Buspar"
+    ],
+    "drug_class": "non-benzodiazepine anxiolytic",
+    "subclass": "azapirone serotonin partial agonist",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "adrenergic"
+    ],
+    "mechanism_targets": [
+      "5-HT1A serotonin receptor (partial agonist)",
+      "D2 dopamine receptor (presynaptic)"
+    ],
+    "mechanism_summary": "Partial agonist at 5-HT1A receptors (both pre- and post-synaptic); presynaptic 5-HT1A autoreceptor activation reduces serotonin release initially, while postsynaptic effects develop over 2\u20134 weeks (explaining delayed onset). Also acts as a presynaptic D2 dopamine receptor agonist.",
+    "indications": [
+      "generalized anxiety disorder (GAD)"
+    ],
+    "contraindications": [
+      "concurrent MAOI use (serotonin syndrome risk)",
+      "severe hepatic or renal impairment"
+    ],
+    "adverse_effects": {
+      "common": [
+        "dizziness",
+        "headache",
+        "nausea",
+        "nervousness",
+        "paresthesias"
+      ],
+      "serious": [
+        "serotonin syndrome (with MAOIs or other serotonergic drugs)",
+        "dizziness and falls (in elderly)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral; bioavailability ~4% (extensive first-pass); food increases bioavailability",
+      "distribution": "86\u201395% protein bound",
+      "metabolism": "hepatic via CYP3A4 to active metabolite (1-PP \u2014 contributes to efficacy and alpha2 antagonism)",
+      "excretion": "renal (29\u201363%) and fecal (18\u201338%)",
+      "half_life": "2\u20133 hours",
+      "onset": "2\u20134 weeks (significant delay)",
+      "peak": "0.7\u20131.5 hours",
+      "duration": "ongoing with daily dosing",
+      "protein_binding": "86\u201395%",
+      "vd": "5.3 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "risk of serotonin syndrome; contraindicated",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "CYP3A4 inhibitors (diltiazem, verapamil)",
+        "mechanism": "increase buspirone levels significantly; reduce dose",
+        "severity": "major"
+      },
+      {
+        "drug": "rifampin",
+        "mechanism": "CYP3A4 induction reduces buspirone levels by 90%",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Counsel patients that buspirone requires 2\u20134 weeks for full anxiolytic effect; unlike benzodiazepines, immediate relief is NOT expected.",
+      "Patients switched from benzodiazepines to buspirone must be tapered off benzodiazepines gradually; buspirone does NOT cross-react with benzodiazepine receptors.",
+      "Take consistently with or without food (food increases bioavailability 2-fold; consistency reduces variability).",
+      "Buspirone does not cause sedation, respiratory depression, or dependence \u2014 major advantages over benzodiazepines for long-term anxiety management."
+    ],
+    "clinical_pearls": [
+      "Buspirone's most important clinical characteristic is that it has NO cross-tolerance with benzodiazepines \u2014 patients switching from benzodiazepines to buspirone will not be protected from benzodiazepine withdrawal and will not experience immediate anxiolysis.",
+      "Unlike SSRIs and SNRIs, buspirone's efficacy appears limited to GAD; it is not effective for panic disorder, social anxiety, PTSD, or OCD \u2014 a limitation that restricts its use to a narrower anxiety profile."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "limited data; avoid if possible",
+    "lactation_safety": "insufficient data",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "generalized-anxiety-disorder"
+    ],
+    "adverse_effect_tags": [
+      "dizziness"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate",
+      "serotonergic-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "adrenergic"
+      ],
+      "mechanism_family": [
+        "5-HT1A-partial-agonism"
+      ],
+      "prototype_class": "azapirone anxiolytics",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "anxiety"
+      ],
+      "adverse_cluster": [
+        "serotonin-syndrome"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "hydroxyzine",
+    "generic_name": "hydroxyzine",
+    "brand_names": [
+      "Atarax",
+      "Vistaril"
+    ],
+    "drug_class": "antihistamine / anxiolytic / antiemetic",
+    "subclass": "first-generation H1 receptor antagonist with CNS effects",
+    "prototype_for": false,
+    "prototype_drug": "diphenhydramine",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "H1 histamine receptors (CNS and peripheral)",
+      "muscarinic receptors (anticholinergic)",
+      "alpha-1 adrenergic receptors"
+    ],
+    "mechanism_summary": "Centrally active first-generation H1 antihistamine with anxiolytic, antipruritic, antiemetic, and sedative properties. CNS histamine H1 blockade produces sedation; anxiolytic effect is incompletely understood but may involve mild serotonin antagonism. Also blocks muscarinic receptors (anticholinergic effects) and alpha-1 adrenergic receptors.",
+    "indications": [
+      "anxiety and tension (short-term)",
+      "pruritus (allergic and non-allergic)",
+      "nausea and vomiting (preoperative, pregnancy)",
+      "sedation (preoperative, procedural)"
+    ],
+    "contraindications": [
+      "early pregnancy (Vistaril \u2014 risk of fetal abnormalities)",
+      "prolonged QT interval"
+    ],
+    "adverse_effects": {
+      "common": [
+        "sedation",
+        "dry mouth",
+        "constipation",
+        "urinary retention",
+        "blurred vision"
+      ],
+      "serious": [
+        "QT prolongation (rare)",
+        "anticholinergic toxidrome (overdose)",
+        "paradoxical excitation (rare in children)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral or IM; well absorbed",
+      "distribution": "crosses BBB extensively; high Vd",
+      "metabolism": "hepatic; active metabolite cetirizine",
+      "excretion": "renal",
+      "half_life": "20\u201325 hours (increased in elderly)",
+      "onset": "15\u201330 minutes (IM)",
+      "peak": "2 hours",
+      "duration": "4\u20136 hours",
+      "protein_binding": "93%",
+      "vd": "16\u201320 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CNS depressants",
+        "mechanism": "additive sedation",
+        "severity": "moderate"
+      },
+      {
+        "drug": "anticholinergic drugs",
+        "mechanism": "additive anticholinergic effects",
+        "severity": "moderate"
+      },
+      {
+        "drug": "QT-prolonging drugs",
+        "mechanism": "additive QT prolongation risk",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "IM injection must be given into a large muscle (gluteal or lateral thigh); NEVER administer IV or subcutaneous \u2014 tissue necrosis, thrombosis, and inadvertent intra-arterial injection can cause severe harm.",
+      "Advise patients about sedation; avoid driving.",
+      "Monitor for anticholinergic effects in elderly; Beers Criteria \u2014 avoid in older adults.",
+      "Safe alternative to benzodiazepines for acute anxiety in patients with substance use disorders \u2014 no abuse potential."
+    ],
+    "clinical_pearls": [
+      "Hydroxyzine's daughter metabolite cetirizine (Zyrtec) is a widely used second-generation antihistamine with much less CNS penetration \u2014 cetirizine lacks the anxiolytic and sedative effects of hydroxyzine because it crosses the BBB poorly.",
+      "Hydroxyzine is increasingly popular as an acute anxiety treatment in emergency settings for patients with opioid or benzodiazepine use disorder, as it provides sedation and anxiolysis without dependence or abuse potential."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid in first trimester; use with caution thereafter",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "anxiety",
+      "pruritus",
+      "nausea",
+      "preoperative-sedation"
+    ],
+    "adverse_effect_tags": [
+      "sedation",
+      "anticholinergic-effects",
+      "QT-prolongation"
+    ],
+    "interaction_tags": [
+      "anticholinergic",
+      "CNS-depression-additive"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "H1-antihistamine"
+      ],
+      "prototype_class": "first-generation antihistamines",
+      "adme_profile": "hepatically-metabolized",
+      "presentation_cluster": [
+        "anxiety",
+        "pruritus"
+      ],
+      "adverse_cluster": [
+        "anticholinergic-effects"
+      ],
+      "interaction_cluster": [
+        "anticholinergic"
+      ]
+    }
   }
 ]
