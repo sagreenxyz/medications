@@ -11,17 +11,19 @@ action.
 
 ## Last Session Summary
 
-- **Date:** 2026-04-22
-- **Work completed this session:** Updated CLAUDE.md with Agent Session
-  Protocol (Section 12) and Drug Data Entry Protocol (Section 13). Rewrote
-  STATUS.md to add Last Session Summary block, per-file component completion
-  table, and Phase 1 drug data task breakdown by drug class.
-- **Work started but not finished:** N/A — documentation update only.
+- **Date:** 2026-04-23
+- **Work completed this session:** Added 43 drugs across 5 task batches:
+  - CV-17: lovastatin, pitavastatin, fluvastatin, niacin, inclisiran, icosapent-ethyl (6)
+  - CV-20: edoxaban, alteplase, tenecteplase, reteplase (4)
+  - CV-22: dipyridamole, cilostazol, abciximab, eptifibatide, tirofiban (5)
+  - RN-02: conivaptan, sodium-zirconium-cyclosilicate, calcium-acetate, sevelamer, lanthanum-carbonate, sodium-bicarbonate (6)
+  - RS-10: levalbuterol, vilanterol, indacaterol, umeclidinium, glycopyrrolate-inhaled, aclidinium, fluticasone-furoate, beclomethasone, mometasone-inhaled, ciclesonide, zafirlukast, zileuton, benralizumab, mepolizumab, reslizumab, tezepelumab, dornase-alfa, ivacaftor, tezacaftor-ivacaftor-elexacaftor, guaifenesin, dextromethorphan, cromolyn-sodium (22)
+- **Work started but not finished:** N/A — all 5 tasks completed in full.
 - **Exact resume point:** Next agent should claim the first ❌ Not started
-  task in the Phase 1 Drug Data Task Table below (GI-04 or CNS-01, whichever
-  is higher priority for the session).
-- **Files modified:** `CLAUDE.md`, `STATUS.md`
+  task in the Phase 1 Drug Data Task Table below (GI-04 is next priority).
+- **Files modified:** `data/drugs.json`, `STATUS.md`
 - **Known issues introduced:** None.
+- **fluticasone-furoate note:** Added as a separate entry from fluticasone-propionate (already present) — verify no duplication.
 
 ---
 
@@ -30,7 +32,7 @@ action.
 | Phase | Name | Status |
 |-------|------|--------|
 | Phase 0 | Scaffold | ✅ Complete |
-| Phase 1 | Master Data | 🔶 Partial — 192/500 drugs; see task table below |
+| Phase 1 | Master Data | 🔶 Partial — 235/500 drugs; see task table below |
 | Phase 2 | Core Pages and Navigation | 🔶 Partial — see component table below |
 | Phase 3 | Schema Pages | 🔶 Partial — index stubs only; no sub-pages |
 | Phase 4 | Individual Drug Profile Pages | ❌ Not started |
@@ -61,8 +63,8 @@ All scaffolding work is done:
 
 ## Phase 1 — Master Data 🔶 Partial
 
-**Current count:** 192 / 500 drug entries in `data/drugs.json`.
-**Remaining:** 308 entries.
+**Current count:** 235 / 500 drug entries in `data/drugs.json`.
+**Remaining:** 265 entries.
 
 ### How to resume Phase 1 work
 
@@ -95,12 +97,12 @@ All scaffolding work is done:
 | CV-14 | Nitrates + nesiritide | nitroglycerin, isosorbide-mononitrate, isosorbide-dinitrate, nesiritide | 4 | ✅ Complete |
 | CV-15 | Statins | atorvastatin, rosuvastatin, simvastatin, pravastatin | 4 | ✅ Complete |
 | CV-16 | Other lipid-lowering | ezetimibe, evolocumab, alirocumab, fenofibrate, gemfibrozil | 5 | ✅ Complete |
-| CV-17 | Missing lipid-lowering agents | lovastatin, pitavastatin, fluvastatin, niacin, inclisiran, icosapent ethyl | 0 | ❌ Not started |
+| CV-17 | Missing lipid-lowering agents | lovastatin, pitavastatin, fluvastatin, niacin, inclisiran, icosapent-ethyl | 6 | ✅ Complete |
 | CV-18 | Anticoagulants (parenteral) | heparin, enoxaparin, dalteparin, fondaparinux, bivalirudin, argatroban | 6 | ✅ Complete |
 | CV-19 | Anticoagulants (oral) | warfarin, dabigatran, rivaroxaban, apixaban | 4 | ✅ Complete |
-| CV-20 | Missing anticoagulants | edoxaban, alteplase, tenecteplase, reteplase | 0 | ❌ Not started |
+| CV-20 | Missing anticoagulants | edoxaban, alteplase, tenecteplase, reteplase | 4 | ✅ Complete |
 | CV-21 | Antiplatelets | clopidogrel, ticagrelor, prasugrel, aspirin | 4 | ✅ Complete |
-| CV-22 | Missing antiplatelets + GPIIb/IIIa | dipyridamole, cilostazol, abciximab, eptifibatide, tirofiban | 0 | ❌ Not started |
+| CV-22 | Missing antiplatelets + GPIIb/IIIa | dipyridamole, cilostazol, abciximab, eptifibatide, tirofiban | 5 | ✅ Complete |
 | CV-23 | Anticoagulant reversal | protamine-sulfate, idarucizumab, andexanet-alfa, phytonadione | 4 | ✅ Complete |
 | CV-24 | Miscellaneous CV | colchicine-cv, empagliflozin (CV), desmopressin, tolvaptan | 4 | ✅ Complete |
 
@@ -109,7 +111,7 @@ All scaffolding work is done:
 | Task ID | Drug Class | Drugs Present | Count | Status |
 |---------|-----------|---------------|-------|--------|
 | RN-01 | Renal-acting drugs (misc) | patiromer, acetazolamide, mannitol, cinacalcet, desmopressin, tolvaptan, vasopressin | 7+ | ✅ Complete |
-| RN-02 | Missing renal agents | conivaptan, sodium-zirconium-cyclosilicate, calcium-acetate, sevelamer, lanthanum-carbonate, sodium-bicarbonate | 0 | ❌ Not started |
+| RN-02 | Missing renal agents | conivaptan, sodium-zirconium-cyclosilicate, calcium-acetate, sevelamer, lanthanum-carbonate, sodium-bicarbonate | 6 | ✅ Complete |
 
 #### Respiratory (14 drugs present — requirement ≥25; ~11 missing)
 
@@ -124,7 +126,7 @@ All scaffolding work is done:
 | RS-07 | Methylxanthine | theophylline | 1 | ✅ Complete |
 | RS-08 | Biologics (respiratory) | omalizumab, dupilumab, benralizumab (missing), mepolizumab (missing), reslizumab (missing), tezepelumab (missing) | 2 | 🔶 Partial |
 | RS-09 | Mucolytics + CFTR modulators | acetylcysteine, dornase-alfa (missing), ivacaftor (missing), tezacaftor-ivacaftor-elexacaftor (missing) | 1 | 🔶 Partial |
-| RS-10 | Missing respiratory agents | levalbuterol, vilanterol, indacaterol, umeclidinium, glycopyrrolate-inhaled, aclidinium, beclomethasone, mometasone-inhaled, ciclesonide, zafirlukast, zileuton, benralizumab, mepolizumab, reslizumab, tezepelumab, dornase-alfa, ivacaftor, tezacaftor-ivacaftor-elexacaftor, guaifenesin, dextromethorphan, cromolyn-sodium | 0 | ❌ Not started |
+| RS-10 | Missing respiratory agents | levalbuterol, vilanterol, indacaterol, umeclidinium, glycopyrrolate-inhaled, aclidinium, beclomethasone, mometasone-inhaled, ciclesonide, zafirlukast, zileuton, benralizumab, mepolizumab, reslizumab, tezepelumab, dornase-alfa, ivacaftor, tezacaftor-ivacaftor-elexacaftor, guaifenesin, dextromethorphan, cromolyn-sodium (+ fluticasone-furoate) | 22 | ✅ Complete |
 
 #### Gastrointestinal (17 drugs present — requirement ≥25; ~8 missing)
 
