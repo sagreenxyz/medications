@@ -88,6 +88,7 @@
       "Cough due to bradykinin accumulation; switch to ARB if intolerable"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "contraindicated",
@@ -225,6 +226,7 @@
       "Prodrug requiring hepatic activation unlike lisinopril"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "contraindicated",
@@ -352,6 +354,7 @@
       "High tissue ACE binding"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "contraindicated",
@@ -487,6 +490,7 @@
       "Short half-life useful for rapid-acting hypertensive urgency management"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "contraindicated",
@@ -615,6 +619,7 @@
       "High protein binding"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "contraindicated",
@@ -738,6 +743,7 @@
       "Balanced 50/50 renal-hepatic clearance preferred in severe CKD/ESRD"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "contraindicated",
@@ -861,6 +867,7 @@
       "Tablet contains magnesium carbonate \u2014 chelates tetracyclines"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "contraindicated",
@@ -996,6 +1003,7 @@
       "Uricosuric effect \u2014 lowers uric acid (unique among ARBs)"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "contraindicated",
@@ -1124,6 +1132,7 @@
       "Combined with sacubitril as Entresto \u2014 first-line HFrEF therapy"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "contraindicated",
@@ -1242,6 +1251,7 @@
       "Sprue-like enteropathy: distinctive, potentially severe GI adverse effect"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "contraindicated",
@@ -1361,6 +1371,7 @@
       "Non-competitive binding distinguishes from losartan"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "contraindicated",
@@ -1482,6 +1493,7 @@
       "Insurmountable AT1 blockade \u2014 efficacy not overcome by high angiotensin II"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "contraindicated",
@@ -1603,6 +1615,7 @@
       "Partial PPAR-gamma agonism may provide metabolic benefits"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "contraindicated",
@@ -1735,6 +1748,7 @@
       "Raises BNP but reduces NT-proBNP \u2014 use NT-proBNP for monitoring, not BNP"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "contraindicated",
@@ -1878,6 +1892,7 @@
       "XL formulation specifically studied in HF; IR (tartrate) is NOT preferred for HF"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "use with caution (Category C/D at term)",
@@ -2009,6 +2024,7 @@
       "NOT the preferred formulation for chronic HF (succinate XL has the evidence)"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "use with caution",
@@ -2144,6 +2160,7 @@
       "Take with food to avoid first-dose hypotension"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "use with caution",
@@ -2273,6 +2290,7 @@
       "Requires renal dose adjustment unlike lipophilic agents"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution (IUGR risk at high doses)",
@@ -2397,6 +2415,7 @@
       "90% bioavailability \u2014 minimal variability unlike metoprolol"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "use with caution",
@@ -2545,6 +2564,7 @@
       "Performance anxiety: acute pre-event dosing used off-label"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "use with caution",
@@ -2690,6 +2710,7 @@
       "Unique in maintaining cardiac output due to alpha-1 vasodilation"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "safe (drug of choice IV in pregnancy)",
@@ -2818,6 +2839,7 @@
       "CYP2D6 poor metabolizers (7-10% of Caucasians) may require lower doses"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "use with caution",
@@ -2946,6 +2968,7 @@
       "Safe in HF unlike non-dihydropyridines"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "limited data, use if clearly needed",
@@ -3075,6 +3098,7 @@
       "XL formulation created to overcome reflex tachycardia of IR form"
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "tocolysis use; avoid antihypertensive use in first trimester",
@@ -3224,6 +3248,7 @@
       "Calcium gluconate reverses CCB toxicity"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid",
@@ -3382,6 +3407,7 @@
       "Contraindicated in WPW + AF (blocks AV node, forces conduction via accessory pathway)"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "use with caution",
@@ -3516,6 +3542,7 @@
       "Arteriolar selectivity only \u2014 venous capacitance unaffected (unlike nitrates)"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "safe (IV, second/third trimester)",
@@ -3636,6 +3663,7 @@
       "Hypertrichosis (mechanism of Rogaine topical)"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "avoid",
@@ -3767,6 +3795,7 @@
       "Useful adjunct in opioid/alcohol withdrawal (reduces adrenergic symptoms)"
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution",
@@ -3893,6 +3922,7 @@
       "Dual indication: hypertension + BPH \u2014 useful in male patients with both conditions"
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid",
@@ -4008,6 +4038,7 @@
       "Shorter half-life than doxazosin \u2014 requires TID dosing"
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution",
@@ -4118,6 +4149,7 @@
       "IFIS risk same as all alpha-1 blockers"
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "avoid",
@@ -4250,6 +4282,7 @@
       "Steroidal MRA: crosses androgen/progesterone receptors \u2014 replaced by eplerenone or finerenone in HF where side effects problematic"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "use with caution",
@@ -4378,6 +4411,7 @@
       "EPHESUS trial: reduced CV mortality in post-MI LV dysfunction"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid",
@@ -4504,6 +4538,7 @@
       "No gynecomastia or menstrual effects unlike spironolactone"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid",
@@ -4644,6 +4679,7 @@
       "IV bioavailability > oral in acute HF (gut wall edema impairs oral absorption \u2014 double the oral dose for IV equivalent)"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution",
@@ -4773,6 +4809,7 @@
       "More consistent oral bioavailability than furosemide in HF"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "use with caution",
@@ -4891,6 +4928,7 @@
       "Not a sulfonamide derivative \u2014 no sulfa cross-reactivity"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "use with caution",
@@ -5025,6 +5063,7 @@
       "Reduces urinary calcium \u2014 protective against kidney stones and osteoporosis"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution (neonatal electrolyte disturbances)",
@@ -5149,6 +5188,7 @@
       "40-55h half-life provides smoother, more sustained BP control than HCTZ"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution",
@@ -5257,6 +5297,7 @@
       "Active in mild CKD (GFR 30-60) unlike HCTZ"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution",
@@ -5372,6 +5413,7 @@
       "Sequential nephron blockade: add 30 min before loop diuretic for profound diuresis in refractory HF"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution",
@@ -5500,6 +5542,7 @@
       "Weak diuretic alone \u2014 used primarily for K+ protection"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "avoid",
@@ -5618,6 +5661,7 @@
       "Minimal protein binding \u2014 few displacement interactions"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution",
@@ -5752,6 +5796,7 @@
       "Digoxin toxicity triad: GI symptoms (nausea, vomiting, anorexia), cardiac arrhythmias, CNS/visual (yellow-green halos, scotomas)"
     ],
     "beers_criteria": true,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution",
@@ -5881,6 +5926,7 @@
       "Visual phosphenes in 14.5%: describe as brief window blindness/light flashes \u2014 benign, often resolve"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid",
@@ -6030,6 +6076,7 @@
       "Most effective antiarrhythmic but toxicity limits chronic use"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid (fetal thyroid toxicity)",
@@ -6174,6 +6221,7 @@
       "Proarrhythmia risk (TdP) highest at low heart rates (reverse use-dependence) and hypokalemia"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "avoid",
@@ -6307,6 +6355,7 @@
       "1:1 flutter: flecainide slows atrial flutter rate from 300 to 240 bpm but AV node may conduct all impulses"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid",
@@ -6440,6 +6489,7 @@
       "Propafenone pill-in-pocket for AF cardioversion"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid",
@@ -6566,6 +6616,7 @@
       "Amide local anesthetic: not metabolized by plasma cholinesterase (unlike ester-type); cross-allergy within amide class"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "use with caution",
@@ -6688,6 +6739,7 @@
       "Smoking dramatically reduces effectiveness via CYP1A2 induction"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "use with caution",
@@ -6813,6 +6865,7 @@
       "Not effective in non-AV-node-dependent arrhythmias (VT, AF, flutter)"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution",
@@ -6941,6 +6994,7 @@
       "Physostigmine reverses central anticholinergic effects (crosses BBB)"
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution",
@@ -7067,6 +7121,7 @@
       "'Renal dose dopamine' (1-5 mcg/kg/min) for renoprotection is NOT supported by evidence"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "avoid",
@@ -7184,6 +7239,7 @@
       "Stress echo: dobutamine stress test to detect ischemic wall motion abnormalities at 5-40 mcg/kg/min"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "avoid",
@@ -7304,6 +7360,7 @@
       "SOAP II: fewer arrhythmias than dopamine in septic shock"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "avoid",
@@ -7442,6 +7499,7 @@
       "Auto-injector threshold: \u226530 kg \u2192 0.3 mg adult; 15-30 kg \u2192 0.15 mg junior"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use in life-threatening emergency",
@@ -7571,6 +7629,7 @@
       "Septic shock: endogenous vasopressin levels fall \u2014 physiologic replacement rationale"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use in emergency",
@@ -7686,6 +7745,7 @@
       "OPTIME-CHF: increased arrhythmias and hospitalization vs placebo in ADHF \u2014 use only when other measures exhausted"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "avoid",
@@ -7806,6 +7866,7 @@
       "Light-sensitive: must wrap infusion bag and tubing in opaque cover"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid",
@@ -7938,6 +7999,7 @@
       "PDE-5 inhibitors: absolutely contraindicated \u2014 additive cGMP accumulation causes severe hypotension; 24h for sildenafil, 48h for tadalafil"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution",
@@ -8060,6 +8122,7 @@
       "Eccentric dosing: once-daily or BID with 8-hour nitrate-free interval is essential"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution",
@@ -8169,6 +8232,7 @@
       "A-HeFT trial: BiDil (ISDN + hydralazine fixed dose) \u2014 43% relative risk reduction in all-cause mortality in Black HFrEF patients"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution",
@@ -8278,6 +8342,7 @@
       "Mechanism similar to sacubitril (raises natriuretic peptides) but exogenous replacement rather than enzyme inhibition"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "avoid",
@@ -8414,6 +8479,7 @@
       "High-intensity statin: \u226550% LDL reduction \u2014 atorvastatin 40-80 mg, rosuvastatin 20-40 mg"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "contraindicated",
@@ -8553,6 +8619,7 @@
       "Most hydrophilic statin \u2014 theoretically reduced risk of muscle/CNS side effects vs lipophilic agents (not proven)"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "contraindicated",
@@ -8687,6 +8754,7 @@
       "80 mg dose: FDA requires dose cap with many drugs; generally avoided"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "contraindicated",
@@ -8806,6 +8874,7 @@
       "Moderate intensity: 40-80 mg"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "contraindicated",
@@ -8920,6 +8989,7 @@
       "Monotherapy: modest LDL reduction (~20%); most effective as statin add-on"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "limited data, avoid",
@@ -9029,6 +9099,7 @@
       "Biologic mechanism: PCSK9 naturally promotes LDL receptor degradation; inhibition prevents this"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "insufficient data, avoid",
@@ -9136,6 +9207,7 @@
       "First PCSK9 inhibitor to show mortality reduction"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "insufficient data, avoid",
@@ -9258,6 +9330,7 @@
       "Safer combination with statins than gemfibrozil (does not inhibit CYP2C8 or OATP1B1)"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "avoid",
@@ -9380,6 +9453,7 @@
       "More drug interactions than fenofibrate due to CYP2C8 and OATP1B1 inhibition \u2014 fenofibrate preferred for combination with statins"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "avoid",
@@ -9513,6 +9587,7 @@
       "Anti-NLRP3 inflammasome mechanism: reduces IL-1\u03b2 driven vascular inflammation"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid",
@@ -9661,6 +9736,7 @@
       "INR therapeutic range: anticoagulation without excessive bleeding"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "contraindicated (teratogen)",
@@ -9799,6 +9875,7 @@
       "Weight-based dosing nomogram reduces time outside therapeutic range"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "safe (does not cross placenta)",
@@ -9932,6 +10009,7 @@
       "ESSENCE/TIMI 11B: superior to UFH for NSTEMI outcomes"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "safe (does not cross placenta)",
@@ -10051,6 +10129,7 @@
       "LMWH preferred over warfarin for cancer-associated thrombosis per ACCP/ASCO guidelines"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "safe",
@@ -10163,6 +10242,7 @@
       "OASIS-5: as effective as enoxaparin in NSTEMI with less bleeding"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution",
@@ -10274,6 +10354,7 @@
       "Short half-life useful when brief predictable anticoagulation needed"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution",
@@ -10383,6 +10464,7 @@
       "Falsely elevates INR: chromogenic factor X assay used to monitor warfarin during transition"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "use with caution",
@@ -10504,6 +10586,7 @@
       "GI bleeding higher than warfarin despite lower intracranial bleeding"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "avoid",
@@ -10633,6 +10716,7 @@
       "Food requirement unique: 15/20 mg doses require meal for absorption"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid",
@@ -10760,6 +10844,7 @@
       "AMPLIFY: as effective as LMWH/warfarin for DVT/PE with less bleeding"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid",
@@ -10891,6 +10976,7 @@
       "COMMIT/CLARITY-TIMI 28: benefit in STEMI"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "use with caution",
@@ -11024,6 +11110,7 @@
       "Direct-acting: no CYP2C19 activation needed \u2014 consistent efficacy regardless of metabolizer status"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid",
@@ -11146,6 +11233,7 @@
       "TRITON-TIMI 38: reduced stent thrombosis and CV events but increased fatal bleeding, including intracranial hemorrhage in prior TIA/stroke patients"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid",
@@ -11285,6 +11373,7 @@
       "Dose-dependent metabolism: low doses \u2014 first-order; high doses \u2014 zero-order (Michaelis-Menten)"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "avoid (third trimester; Reye in children)",
@@ -11415,6 +11504,7 @@
       "Heparin rebound: heparin re-released from tissue stores hours after protamine reversal \u2014 monitor INR/aPTT"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use in emergency only",
@@ -11534,6 +11624,7 @@
       "Warfarin resistance: large doses saturate VKORC1 for days/weeks; use lower doses when re-anticoagulation planned"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "generally safe",
@@ -11643,6 +11734,7 @@
       "Dabigatran can be restarted 24 hours after reversal when thrombosis risk resumes"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "insufficient data",
@@ -11744,6 +11836,7 @@
       "ANNEXA-4: hemostatic efficacy in 82% for apixaban, 79% for rivaroxaban \u2014 30-day thrombosis rate elevated vs historical"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "insufficient data",
@@ -11862,6 +11955,7 @@
       "Tachyphylaxis develops with repeated dosing due to receptor downregulation"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution",
@@ -11996,6 +12090,7 @@
       "TEMPO 3:4 trial: tolvaptan (Jynarque) slowed ADPKD progression but hepatotoxicity risk limits use"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid",
@@ -12129,6 +12224,7 @@
       "Altitude sickness mechanism: increases respiratory drive by creating mild metabolic acidosis (normalizes chemoreceptor sensitivity to hypoxia)"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "use with caution",
@@ -12254,6 +12350,7 @@
       "ICP reduction: draws water from brain tissue reducing cerebral edema; onset 15-30 minutes"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use only in life-threatening emergency",
@@ -12367,6 +12464,7 @@
       "Approved to allow continuation of RAAS inhibitors in CKD by controlling hyperkalemia"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "insufficient data",
@@ -12485,6 +12583,7 @@
       "EVOLVE trial: no significant reduction in CV mortality but reduced parathyroid surgery rate and calcium/phosphorus levels"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid",
@@ -12615,6 +12714,7 @@
       "GINA 2024: SABA alone as primary reliever no longer recommended \u2014 use ICS-formoterol as preferred reliever in mild asthma"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use only when clearly needed",
@@ -12738,6 +12838,7 @@
       "Safe in COPD as monotherapy (different pathophysiology \u2014 TORCH, SUMMIT trials)"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution",
@@ -12852,6 +12953,7 @@
       "MART strategy (Maintenance and Reliever Therapy): single ICS-formoterol inhaler for both maintenance and relief"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution",
@@ -12966,6 +13068,7 @@
       "Kinetically selective: long dissociation from M3 (slow-off) while fast dissociation from cardiac M2 (safety)"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution",
@@ -13078,6 +13181,7 @@
       "Fixed combination with albuterol (Combivent) provides complementary mechanisms in COPD"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution",
@@ -13194,6 +13298,7 @@
       "Oral candidiasis: Candida colonizes with inhaled steroid \u2014 spacer and mouth rinse are preventive"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "lowest effective dose",
@@ -13313,6 +13418,7 @@
       "High first-pass effect: lower systemic exposure than fluticasone propionate at equivalent doses"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution",
@@ -13430,6 +13536,7 @@
       "Neuropsychiatric BBW: mood changes, suicidal ideation \u2014 FDA mandated Black Box Warning 2020"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "use with caution",
@@ -13556,6 +13663,7 @@
       "REACT/RE(2)SPOND trials: reduces exacerbations in chronic bronchitis phenotype COPD"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid",
@@ -13693,6 +13801,7 @@
       "Smoking induction of CYP1A2: smokers require higher doses; quitting raises levels dangerously \u2014 monitor closely"
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "use with caution (premature labor risk at term)",
@@ -13818,6 +13927,7 @@
       "Delayed anaphylaxis: up to 24 hours post-injection \u2014 educate patient and prescribe epinephrine auto-injector"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "insufficient data",
@@ -13942,6 +14052,7 @@
       "LIBERTY ASTHMA QUEST: reduces exacerbations and OCS dependence in moderate-severe eosinophilic asthma"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "insufficient data",
@@ -14062,6 +14173,7 @@
       "Rumack-Matthew nomogram: acetaminophen level vs time of ingestion determines treatment need"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution",
@@ -14200,6 +14312,7 @@
       "PPIs reduce clopidogrel activation: use pantoprazole (less CYP2C19 inhibition) if PPI required with clopidogrel"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "generally safe with caution",
@@ -14326,6 +14439,7 @@
       "Clinically equivalent to omeprazole despite pharmacokinetic differences"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "generally safe",
@@ -14435,6 +14549,7 @@
       "Available as orally-disintegrating tablet (Prevacid SoluTab) \u2014 useful for NG tubes and patients who cannot swallow"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "generally safe",
@@ -14553,6 +14668,7 @@
       "IV pantoprazole: useful in upper GI bleeding and NPO patients"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "generally safe",
@@ -14668,6 +14784,7 @@
       "COVID-19 anecdotal use: famotidine was investigated but evidence not established"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "generally safe",
@@ -14791,6 +14908,7 @@
       "Physical barrier rather than acid suppression \u2014 preferred when acid suppression contraindicated"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "generally considered safe",
@@ -14925,6 +15043,7 @@
       "Central D2 antagonism crosses BBB: causes CNS side effects (unlike domperidone \u2014 peripheral-only)"
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution",
@@ -15056,6 +15175,7 @@
       "Pregnancy nausea: widely used off-label; no teratogenicity signal but avoid first-trimester if possible"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "use with caution (avoid first trimester if possible)",
@@ -15184,6 +15304,7 @@
       "IV administration increases EPS risk \u2014 IM preferred for parenteral use"
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid",
@@ -15311,6 +15432,7 @@
       "CYP3A4 net inhibitor then inducer over time: immediate inhibition, then induction \u2014 reduces OC efficacy with prolonged use"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid",
@@ -15434,6 +15556,7 @@
       "FDA QT warning: supra-therapeutic doses (misuse) can cause life-threatening arrhythmias and cardiac arrest"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "use with caution",
@@ -15541,6 +15664,7 @@
       "GoLYTELY (high-dose PEG + electrolytes) for bowel prep: maintains electrolyte balance unlike plain PEG"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "generally safe",
@@ -15644,6 +15768,7 @@
       "Titrate to 2-3 stools/day \u2014 too few bowel movements means under-treated, too many risks dehydration"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "generally safe",
@@ -15771,6 +15896,7 @@
       "Slow acetylators (NAT2 polymorphism) accumulate more sulfapyridine \u2014 more side effects in slow acetylators"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "risk of neonatal hemolysis near term",
@@ -15896,6 +16022,7 @@
       "TPMT inhibition: mesalamine + azathioprine combination \u2014 monitor CBC for myelosuppression"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "limited data, generally considered safe",
@@ -16004,6 +16131,7 @@
       "Minimal systemic absorption: safe profile, no significant drug interactions"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "use with caution (systemic rifamycin effects minimal)",
@@ -16121,6 +16249,7 @@
       "PBC: reduces LFTs and slows disease progression but does not normalize liver histology in all patients"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution",
@@ -16253,6 +16382,7 @@
       "Fosphenytoin is a prodrug preferred IV/IM because it avoids the propylene glycol toxicity and injection site reactions of phenytoin"
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category D \u2014 associated with fetal hydantoin syndrome",
@@ -16396,6 +16526,7 @@
       "First-line for trigeminal neuralgia; the number needed to treat (NNT) for pain relief is approximately 2"
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category D \u2014 associated with neural tube defects and facial anomalies",
@@ -16542,6 +16673,7 @@
       "Valproate inhibits lamotrigine metabolism \u2014 when adding lamotrigine to valproate, start at half the usual dose to prevent lamotrigine toxicity (Stevens-Johnson syndrome)"
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category X for migraine; Category D for epilepsy \u2014 highest teratogenic risk of all AEDs",
@@ -16674,6 +16806,7 @@
       "Behavioral side effects (irritability, aggression) are the main limiting factor; sometimes called 'Keppra rage' \u2014 pyridoxine (vitamin B6) supplementation may reduce these effects"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category C \u2014 pregnancy registry data suggest low teratogenic risk relative to other AEDs",
@@ -16810,6 +16943,7 @@
       "Unlike most AEDs, lamotrigine is effective for bipolar depression \u2014 a common unmet need given that most mood stabilizers target mania preferentially"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category C \u2014 preferred AED option in pregnancy; monitor levels which fall 50% during pregnancy",
@@ -16946,6 +17080,7 @@
       "Despite its name, gabapentin does not act on GABA receptors \u2014 it binds to voltage-gated calcium channel subunits, making it distinct mechanistically from benzodiazepines and barbiturates"
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category C \u2014 limited human data; neonatal withdrawal reported",
@@ -17083,6 +17218,7 @@
       "FDA-approved for fibromyalgia \u2014 one of only three drugs approved for this indication (along with duloxetine and milnacipran)"
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category C",
@@ -17223,6 +17359,7 @@
       "In status epilepticus, IV lorazepam is often preferred over diazepam due to its longer CNS duration of action despite diazepam's faster onset"
     ],
     "beers_criteria": true,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category D \u2014 neonatal withdrawal and floppy infant syndrome",
@@ -17363,6 +17500,7 @@
       "The LOC (Lorazepam Over Conazepam) rule: Lorazepam is preferred in the elderly and hepatically impaired because it has no active metabolites and does not require Phase I hepatic metabolism"
     ],
     "beers_criteria": true,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category D",
@@ -17502,6 +17640,7 @@
       "Midazolam IM is the preferred route for prehospital status epilepticus treatment (RAMPART trial) \u2014 equal efficacy to IV lorazepam with faster administration time"
     ],
     "beers_criteria": true,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category D",
@@ -17644,6 +17783,7 @@
       "Fluoxetine/olanzapine combination (Symbyax) is FDA-approved for bipolar I depression \u2014 an uncommon but important indication"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category C \u2014 neonatal adaptation syndrome reported; PPHN risk disputed",
@@ -17790,6 +17930,7 @@
       "Among SSRIs, sertraline is considered to have the fewest drug interactions because it has the least potent CYP inhibitory profile at standard doses"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category C \u2014 most data available; preferred SSRI in pregnancy",
@@ -17927,6 +18068,7 @@
       "The FDA issued a safety communication limiting citalopram (not escitalopram) to 40 mg/day due to QTc concerns \u2014 escitalopram has a similar but less severe QTc dose-response relationship"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category C",
@@ -18066,6 +18208,7 @@
       "Among the most severe discontinuation syndromes of any antidepressant \u2014 'brain zaps,' dizziness, nausea, and flu-like symptoms; structured taper is mandatory"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category C \u2014 neonatal adaptation syndrome; PPHN risk similar to SSRIs",
@@ -18215,6 +18358,7 @@
       "Unlike venlafaxine, duloxetine has balanced SERT:NET inhibition ratios even at low doses, meaning noradrenergic analgesia is present throughout the dose range"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category C",
@@ -18365,6 +18509,7 @@
       "The ceiling dose limit exists strictly for seizure prevention; splitting doses and using the SR/XL formulations are pharmacokinetically designed to keep peak levels below seizure threshold"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category C \u2014 neonatal seizures reported",
@@ -18510,6 +18655,7 @@
       "The sodium-lithium competition in the proximal tubule explains the many drug interactions: anything that depletes sodium (diuretics, low-sodium diet, vomiting, diarrhea) will cause lithium retention and toxicity"
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category D \u2014 Ebstein's anomaly risk with first-trimester exposure (smaller than historical estimates)",
@@ -18650,6 +18796,7 @@
       "Haloperidol has the most evidence for treating delirium in ICU patients of all antipsychotics, though it does not reduce duration or mortality \u2014 use lowest effective dose"
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category C \u2014 neonatal EPS reported with third-trimester exposure",
@@ -18796,6 +18943,7 @@
       "Risperidone has the highest risk of hyperprolactinemia among atypical antipsychotics (comparable to typicals) because unlike quetiapine and clozapine, it maintains high D2 receptor occupancy at tuberoinfundibular dopamine neurons"
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category C \u2014 neonatal EPS and withdrawal reported",
@@ -18939,6 +19087,7 @@
       "At low doses (25\u2013100 mg), quetiapine's H1 and alpha-1 blockade dominate clinical effects (sedation, hypotension) with minimal D2 occupancy \u2014 the drug is increasingly used off-label as a sleep aid, raising concerns about off-label prescribing and metabolic risk"
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category C",
@@ -19082,6 +19231,7 @@
       "Olanzapine + lorazepam IM for acute agitation is highly effective but the combination is specifically contraindicated due to risk of respiratory depression and cardiovascular collapse \u2014 the sequential administration (separate by \u22651 hour) is permissible"
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category C \u2014 neonatal EPS and metabolic effects reported",
@@ -19226,6 +19376,7 @@
       "Aripiprazole lauroxil (Aristada) and aripiprazole monohydrate (Maintena) are long-acting injectable formulations dosed monthly or every 6 weeks, dramatically improving adherence in chronic schizophrenia"
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category C",
@@ -19372,6 +19523,7 @@
       "Morphine releases histamine from mast cells (not an IgE-mediated allergy), causing pruritus and flushing \u2014 true morphine allergy is rare; codeine and meperidine also release histamine; fentanyl does not"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category C (D with prolonged use/high doses near term) \u2014 neonatal opioid withdrawal syndrome",
@@ -19517,6 +19669,7 @@
       "The transdermal fentanyl patch is only appropriate for opioid-tolerant patients with stable, chronic pain \u2014 it is NOT for acute pain, opioid-naive patients, or intermittent/PRN use"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category C \u2014 neonatal withdrawal with chronic use",
@@ -19649,6 +19802,7 @@
       "In full opioid reversal, use small IV doses (0.04\u20130.1 mg) rather than full 0.4 mg to avoid precipitating severe withdrawal, agitation, and pulmonary edema"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category B \u2014 may precipitate withdrawal in opioid-dependent mother/fetus",
@@ -19784,6 +19938,7 @@
       "The high mu receptor affinity of buprenorphine means it will displace other opioids from receptors \u2014 administering buprenorphine too early in an opioid-dependent patient precipitates severe acute withdrawal (precipitated withdrawal)"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category C \u2014 buprenorphine is preferred over methadone for OUD in pregnancy per current guidelines; neonatal withdrawal expected",
@@ -19920,6 +20075,7 @@
       "Morning 'hangover' impairment is significant enough that the FDA requires women to take half the dose of men due to demonstrably slower clearance \u2014 a rare example of sex-based dosing"
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category C \u2014 neonatal withdrawal and respiratory depression reported",
@@ -20055,6 +20211,7 @@
       "Levodopa is the most effective antiparkinsonian drug, but long-term use (>5 years) invariably leads to motor complications (wearing-off, dyskinesias) \u2014 debate continues about whether delaying levodopa initiation preserves longer honeymoon period"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category C",
@@ -20188,6 +20345,7 @@
       "Cholinesterase inhibitors are the only FDA-approved treatments for Alzheimer's disease cognition and are entirely symptomatic \u2014 they modestly improve cognitive test scores and delay nursing home placement but do not modify the underlying amyloid/tau pathology"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category C",
@@ -20330,6 +20488,7 @@
       "Treatment holidays during weekends or summers can help mitigate growth suppression in children but may impair social and academic functioning during those periods \u2014 individualize based on severity of ADHD impact"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category C",
@@ -20468,6 +20627,7 @@
       "Triptans are contraindicated in hemiplegic and basilar migraine (uncommon migraine variants) because 5-HT1B-mediated vasoconstriction in the posterior circulation could worsen these aura variants"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category C \u2014 pregnancy registry available; avoid if possible especially in first trimester",
@@ -20605,6 +20765,7 @@
       "Unlike NSAIDs, acetaminophen lacks anti-inflammatory activity and does not inhibit platelet aggregation \u2014 it is therefore safe in patients who cannot tolerate NSAIDs (GI bleeding risk, renal insufficiency, anticoagulation) but ineffective for inflammatory pain"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category B \u2014 preferred analgesic/antipyretic in pregnancy; recent debate about prenatal exposure and neurodevelopmental effects requires monitoring",
@@ -20739,6 +20900,7 @@
       "Penicillin remains the drug of choice for syphilis \u2014 there is no acceptable alternative for penicillin-allergic pregnant patients with syphilis (desensitization is required)"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category B",
@@ -20874,6 +21036,7 @@
       "The amoxicillin-mononucleosis rash is not a true penicillin hypersensitivity reaction \u2014 it is immune-complex mediated and does not predict future penicillin allergic reactions"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category B",
@@ -21008,6 +21171,7 @@
       "The diarrhea associated with Augmentin is partly due to clavulanate's prokinetic effects on gut motility, not just antibiotic-associated dysbiosis; can be partially mitigated by dosing with food"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category B",
@@ -21145,6 +21309,7 @@
       "Piperacillin-tazobactam does NOT reliably cover MRSA, ESBL-producing organisms, or Acinetobacter; empiric coverage must account for local antibiogram and patient risk factors"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category B",
@@ -21273,6 +21438,7 @@
       "Cephalexin does NOT cover MRSA \u2014 for skin infections where MRSA is suspected (abscesses, failure of cephalexin), TMP-SMX or doxycycline should be used"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category B",
@@ -21404,6 +21570,7 @@
       "Ceftriaxone remains first-line for bacterial meningitis (with dexamethasone) because of its excellent CSF penetration, once-daily dosing, and broad gram-negative coverage including N. meningitidis and H. influenzae"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category B",
@@ -21527,6 +21694,7 @@
       "Unlike third-generation cephalosporins, cefepime is stable to AmpC beta-lactamases (produced by chromosomal derepression in Enterobacter, Citrobacter, Serratia), making it the preferred agent when these organisms are suspected"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category B",
@@ -21660,6 +21828,7 @@
       "Vancomycin-resistant enterococci (VRE) have modified the D-Ala-D-Ala to D-Ala-D-Lac, reducing vancomycin affinity 1000-fold \u2014 this is a major resistance mechanism that has spread widely in healthcare settings"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category C",
@@ -21804,6 +21973,7 @@
       "The FDA's 2016 boxed warning revision and 2018 aortic aneurysm warning reflect growing evidence that fluoroquinolones have serious systemic toxicities \u2014 they should not be used for uncomplicated UTIs, sinusitis, or bronchitis when safer alternatives exist"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category C \u2014 animal studies show cartilage damage; avoid if alternatives exist",
@@ -21946,6 +22116,7 @@
       "A 2012 NEJM study found a small but statistically significant increase in cardiovascular death with a 5-day azithromycin course \u2014 this led to FDA safety communication; the absolute risk remains very low in healthy patients but deserves consideration in high-risk cardiac patients"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category B",
@@ -22085,6 +22256,7 @@
       "Doxycycline is uniquely safe in renal failure among tetracyclines because it uses biliary/fecal elimination \u2014 it actually replaces older tetracyclines in CKD patients"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category D (second/third trimester) \u2014 tooth/bone effects; safe in first trimester",
@@ -22224,6 +22396,7 @@
       "The disulfiram-like reaction is not a drug allergy \u2014 it is a predictable pharmacodynamic interaction from acetaldehyde accumulation; the interaction is severe enough to warrant strict counseling and documentation"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category B \u2014 avoid in first trimester due to historical teratogenicity concerns; acceptable in second/third trimesters",
@@ -22358,6 +22531,7 @@
       "Unlike imipenem-cilastatin, meropenem does not require cilastatin co-formulation and has a lower seizure risk \u2014 it is preferred for meningitis and patients with seizure disorders"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category B",
@@ -22487,6 +22661,7 @@
       "Ototoxicity from aminoglycosides preferentially affects cochlear outer hair cells and vestibular hair cells \u2014 hearing loss may be irreversible and can continue progressing after drug discontinuation due to ongoing cellular damage"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category D \u2014 ototoxicity in fetus",
@@ -22631,6 +22806,7 @@
       "TMP-SMX is the preferred antibiotic for community-acquired MRSA soft tissue infections (IDSA guidelines) \u2014 clinical trials demonstrated equivalence or superiority to doxycycline for MRSA SSTIs"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category C \u2014 folate antagonist; avoid in first trimester and near term",
@@ -22766,6 +22942,7 @@
       "IV acyclovir nephrotoxicity is due to crystal precipitation in tubular lumens at physiologic urinary pH \u2014 this is entirely preventable with adequate hydration (not merely a toxicity to avoid post-hoc)"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category B \u2014 acyclovir registry data reassuring; HSV encephalitis treatment takes precedence",
@@ -22890,6 +23067,7 @@
       "Oseltamivir resistance in influenza A (H275Y mutation in neuraminidase) has been documented in seasonal H1N1 strains and in immunocompromised patients on prolonged therapy \u2014 peramivir IV or inhaled zanamivir may be alternatives"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category C \u2014 benefits likely outweigh risks for influenza treatment in pregnancy",
@@ -23018,6 +23196,7 @@
       "The oral bioavailability of fluconazole (~90%) is essentially equivalent to IV \u2014 switching from IV to oral fluconazole on the same dose provides identical drug exposure at significantly lower cost"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category D (high-dose prolonged use) \u2014 single-dose 150 mg appears safe; prolonged high-dose therapy associated with fetal anomalies",
@@ -23151,6 +23330,7 @@
       "NAT2 acetylator status (pharmacogenomic variation) significantly affects isoniazid pharmacokinetics and toxicity profile \u2014 slow acetylators have 3\u20135x higher drug levels with greater neuropathy risk; fast acetylators may have lower efficacy"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category C \u2014 used in pregnancy when benefit outweighs risk (active TB); pyridoxine supplementation essential",
@@ -23282,6 +23462,7 @@
       "The CYP induction from rifampin persists for 2\u20134 weeks after stopping \u2014 drug interactions with warfarin and other narrow therapeutic index drugs must be actively managed through the washout period"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category C \u2014 used in TB treatment when benefit outweighs risk",
@@ -23414,6 +23595,7 @@
       "The Triumeq fixed-dose combination (dolutegravir/abacavir/lamivudine) requires HLA-B*5701 testing before initiation \u2014 HLA-B*5701-positive patients have a 5\u20138% risk of potentially fatal abacavir hypersensitivity reaction"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category \u2014 neural tube defect risk with periconceptional exposure (~0.1%); WHO recommends continuation but informed consent required",
@@ -23542,6 +23724,7 @@
       "Toujeo (300 units/mL) has an even longer duration (\u226536 hours) than Lantus (100 units/mL) due to a more concentrated and slowly-dissolving depot \u2014 useful for patients needing once-daily dosing with extended coverage"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category C \u2014 insulin is required for diabetes management in pregnancy; glargine is used but regular insulin and NPH have more safety data",
@@ -23664,6 +23847,7 @@
       "Fiasp (faster-acting aspart) contains vitamin B3 and L-arginine to accelerate absorption, achieving onset in 2\u20134 minutes and peak in 60\u201390 minutes \u2014 useful for post-meal dosing flexibility"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category B \u2014 preferred rapid-acting insulin in pregnancy",
@@ -23796,6 +23980,7 @@
       "Metformin does not cause hypoglycemia as monotherapy \u2014 it works by reducing hepatic glucose production and does not stimulate insulin secretion, making it safe for patients who drive or operate machinery"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category B \u2014 used in GDM; evidence suggests safety; insulin is still preferred by most guidelines for T2DM in pregnancy",
@@ -23924,6 +24109,7 @@
       "Among sulfonylureas, glipizide is preferred over glyburide in elderly patients because glyburide is metabolized to active metabolites that accumulate with renal dysfunction, dramatically increasing hypoglycemia risk"
     ],
     "beers_criteria": true,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category C \u2014 insulin preferred in pregnancy",
@@ -24050,6 +24236,7 @@
       "SGLT2 inhibitors have emerged as the most impactful drug class in cardiology and nephrology this decade \u2014 they reduce HF hospitalization, CV death, and CKD progression through mechanisms beyond glycemic control (osmotic diuresis, tubuloglomerular feedback, anti-inflammatory effects)"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category C \u2014 avoid; neonatal renal toxicity in animal studies",
@@ -24185,6 +24372,7 @@
       "The SELECT trial (2023) demonstrated that semaglutide (Wegovy) reduces major adverse cardiovascular events in overweight/obese non-diabetic patients with established CVD \u2014 the first evidence of GLP-1 RA CV benefit independent of diabetes"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category \u2014 discontinue 2 months before planned pregnancy",
@@ -24320,6 +24508,7 @@
       "Adrenal insufficiency must be addressed before starting levothyroxine replacement in patients with secondary hypothyroidism \u2014 thyroid hormone accelerates cortisol metabolism and can precipitate addisonian crisis in patients with untreated AI"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category A \u2014 dose requirements increase ~30% in pregnancy; monitor TSH every trimester",
@@ -24459,6 +24648,7 @@
       "The Beers-like maxim of 'lowest dose for shortest duration' applies strictly to glucocorticoids \u2014 even short burst courses (1 week of 40 mg) cause measurable bone density loss and insulin resistance; these effects accumulate with repeated courses"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category C \u2014 cleft palate in animal studies; safer than undertreated inflammatory disease in most cases",
@@ -24597,6 +24787,7 @@
       "Agranulocytosis from methimazole is idiosyncratic (not dose-dependent), can develop suddenly, and is potentially life-threatening \u2014 patients must be educated about this risk and instructed to present immediately for CBC if febrile or ill"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "Category D (first trimester) \u2014 aplasia cutis; use PTU in first trimester; can resume methimazole in second/third trimester",
@@ -24731,6 +24922,7 @@
       "Dexamethasone is used as the reference steroid for CINV prophylaxis because of its long half-life (once-daily dosing), potency, and ability to cross the BBB (central anti-emetic mechanisms)"
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "Category C \u2014 used for fetal lung maturation in preterm delivery (24\u201334 weeks)",
@@ -24871,6 +25063,7 @@
       "The dose ceiling for lovastatin is lower when used with amiodarone (40 mg/day maximum) due to CYP3A4 interactions; prescribers frequently overlook this constraint in cardiology patients."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "contraindicated (category X)",
@@ -25001,6 +25194,7 @@
       "Unlike most statins, pitavastatin does not significantly affect insulin sensitivity; some evidence suggests it may be less diabetogenic than other statins at equivalent doses."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "contraindicated (category X)",
@@ -25137,6 +25331,7 @@
       "CYP2C9 metabolism means fluvastatin interacts with azole antifungals and warfarin more prominently than CYP3A4-metabolized statins \u2014 an important nursing medication reconciliation point."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "contraindicated (category X)",
@@ -25279,6 +25474,7 @@
       "The extended-release formulation (Niaspan) is preferred over immediate-release for lipid management, but it carries paradoxically higher hepatotoxicity risk than the immediate-release form due to metabolic pathway saturation."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "category C; use only if clearly needed",
@@ -25394,6 +25590,7 @@
       "Unlike PCSK9 monoclonal antibodies (evolocumab, alirocumab) which inhibit circulating PCSK9 protein, inclisiran prevents PCSK9 synthesis at the mRNA level \u2014 effectively reducing PCSK9 for months per injection."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "avoid \u2014 insufficient data; potential fetal harm cannot be excluded",
@@ -25516,6 +25713,7 @@
       "Unlike mixed omega-3 preparations (fish oil with EPA+DHA), icosapent ethyl contains purified EPA only; DHA may raise LDL-C, and the cardiovascular benefit appears EPA-specific in current evidence."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category C; use only if benefit outweighs risk",
@@ -25649,6 +25847,7 @@
       "The requirement for 5-10 days of initial parenteral anticoagulation before transitioning to edoxaban for VTE treatment distinguishes its dosing sequence from rivaroxaban and apixaban, which can be started directly."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid \u2014 inadequate data; animal studies suggest fetal harm",
@@ -25789,6 +25988,7 @@
       "Alteplase doses differ significantly by indication: 0.9 mg/kg (max 90 mg) for stroke, 100 mg over 2 hours for massive PE \u2014 nursing staff must confirm the indication and correct dosing regimen before administration."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category C; use in life-threatening situations only",
@@ -25920,6 +26120,7 @@
       "Weight-based dosing of tenecteplase (30-50 mg based on body weight) reduces systemic bleeding compared with the fixed alteplase STEMI dose while maintaining equivalent coronary reperfusion rates."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category C; use in life-threatening situations only",
@@ -26051,6 +26252,7 @@
       "Lower fibrin specificity compared with alteplase results in greater systemic plasminogen depletion ('lytic state'), which may contribute to efficacy but also increases systemic bleeding risk."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category C; use in life-threatening situations only",
@@ -26183,6 +26385,7 @@
       "Theophylline is the specific reversal agent for IV dipyridamole adverse effects (bronchospasm, severe chest pain, hypotension) and should always be readily available when performing pharmacologic stress testing."
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "category B",
@@ -26316,6 +26519,7 @@
       "The class contraindication in heart failure derives from the increased mortality seen with other PDE3 inhibitors (milrinone, amrinone) in heart failure trials; cilostazol was never studied in HF but shares the mechanism-based risk."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category C",
@@ -26451,6 +26655,7 @@
       "The chimeric structure of abciximab (part murine) can elicit human anti-chimeric antibodies (HACA), making re-administration potentially less effective and potentially more immunogenic than with the small-molecule GP IIb/IIIa inhibitors."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category C",
@@ -26586,6 +26791,7 @@
       "Renal dosing adjustments are critical; CrCl-based dose modification (infusion rate reduction, not bolus change) prevents drug accumulation and excess bleeding in patients with renal impairment \u2014 a common oversight in clinical settings."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category B",
@@ -26718,6 +26924,7 @@
       "The high-dose bolus regimen of tirofiban achieves greater than 90% platelet inhibition immediately and has largely replaced older low-dose regimens in contemporary PCI practice based on ADVANCE trial evidence."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category B",
@@ -26847,6 +27054,7 @@
       "The dual V1a/V2 blockade distinguishes conivaptan from tolvaptan (V2-selective); V1a blockade causes vasodilation and may lower blood pressure, a clinically relevant consideration in hypotensive or borderline-hypotensive patients."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "category C",
@@ -26969,6 +27177,7 @@
       "The rapid onset distinguishes it from patiromer, which typically requires 7+ hours for meaningful potassium reduction; however, sodium zirconium cyclosilicate also raises serum bicarbonate slightly due to hydrogen exchange, which can be beneficial in CKD-related metabolic acidosis."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category not established; not systemically absorbed but avoid in pregnancy without clear indication",
@@ -27100,6 +27309,7 @@
       "Guidelines (KDIGO) recommend limiting calcium-based phosphate binders due to concerns about positive calcium balance and vascular calcification; non-calcium binders (sevelamer, lanthanum) are preferred when hypercalcemia is present or calcium load is a concern."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "generally considered safe; monitor serum calcium",
@@ -27235,6 +27445,7 @@
       "Sevelamer's modest LDL-lowering effect (approximately 20-30% reduction) occurs via bile acid binding in the GI tract, potentially providing additional cardiovascular benefit beyond phosphate control in CKD patients."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category C",
@@ -27356,6 +27567,7 @@
       "Among all phosphate binders, lanthanum binds phosphate most potently across the widest pH range (effective in both acidic gastric and neutral intestinal environments), potentially allowing lower pill burden than calcium-based binders."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category C; avoid if possible",
@@ -27498,6 +27710,7 @@
       "The first-line use of IV sodium bicarbonate for routine metabolic acidosis in septic shock is no longer recommended in current guidelines; its use is reserved for severe acidemia (pH <7.1) when benefits of improved hemodynamics outweigh sodium and fluid loading risks."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category C; use with caution \u2014 sodium load relevant",
@@ -27630,6 +27843,7 @@
       "Clinical evidence has not consistently demonstrated a significant advantage of levalbuterol over racemic albuterol in efficacy or tolerability; most guidelines consider them therapeutically equivalent at equipotent doses."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category C",
@@ -27762,6 +27976,7 @@
       "The combination of vilanterol with umeclidinium (LAMA) in Anoro Ellipta provides dual bronchodilation via complementary mechanisms \u2014 beta-2 agonism and muscarinic antagonism \u2014 representing a cornerstone triple COPD therapy option when ICS is added."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "category C",
@@ -27889,6 +28104,7 @@
       "The post-inhalation cough associated with indacaterol is due to transient sensory nerve stimulation in the upper airway and does not represent bronchospasm or inadequate drug delivery; patient education prevents unnecessary discontinuation."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "category C",
@@ -28008,6 +28224,7 @@
       "In combination with vilanterol (Anoro Ellipta), umeclidinium provides dual bronchodilation with complementary mechanisms; clinical trials demonstrate greater bronchodilation than either agent alone without additive adverse effects."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category C",
@@ -28127,6 +28344,7 @@
       "In combination with formoterol (Bevespi Aerosphere), inhaled glycopyrrolate provides dual bronchodilation comparable to tiotropium-based combinations while offering the convenience of a metered-dose inhaler platform."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category C",
@@ -28238,6 +28456,7 @@
       "Head-to-head trials show aclidinium and tiotropium provide similar bronchodilation and symptom control in COPD; twice-daily dosing may offer more consistent 24-hour symptom coverage for patients with nighttime or early-morning symptom burden."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category C",
@@ -28360,6 +28579,7 @@
       "In COPD patients, ICS therapy including fluticasone furoate is associated with increased pneumonia risk; the ACC/AHA and GOLD guidelines recommend reserving ICS use for COPD patients with frequent exacerbations and blood eosinophil counts above 100-300 cells/mcL."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "category C",
@@ -28484,6 +28704,7 @@
       "The extrafine HFA formulation of beclomethasone (QVAR) delivers particles to peripheral airways below 5 microns and provides effective asthma control at approximately half the microgram dose of older CFC formulations \u2014 patients switching between formulations must have doses adjusted."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category C; considered relatively safe for asthma maintenance",
@@ -28610,6 +28831,7 @@
       "Mometasone is available in both inhaled (Asmanex) and intranasal (Nasonex) formulations; the doses and devices are different \u2014 nurses and pharmacists must verify the intended route when reviewing prescriptions to avoid confusion."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "category C; used when benefit outweighs risk in asthma",
@@ -28731,6 +28953,7 @@
       "The very high lipid solubility and protein binding of des-ciclesonide creates a pulmonary depot effect \u2014 the drug concentrates in lung tissue and is slowly released, supporting once-daily dosing despite a relatively short plasma half-life."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category C",
@@ -28855,6 +29078,7 @@
       "The CYP2C9 inhibitory effect of zafirlukast on warfarin metabolism is clinically significant and has caused serious bleeding events; the warfarin interaction is a key differentiator from montelukast and a priority patient safety consideration."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "category B",
@@ -28982,6 +29206,7 @@
       "The combination of high dosing frequency (4 times daily for IR), required hepatic monitoring, and multiple significant drug interactions (theophylline, warfarin, propranolol) makes zileuton the least frequently used controller asthma medication among the options available."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "category C",
@@ -29095,6 +29320,7 @@
       "The every-8-week maintenance dosing schedule (after loading) is one of the least frequent injection schedules among biologics for asthma, improving real-world adherence relative to monthly injection regimens."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category not established; potential fetal harm based on mechanism; avoid unless clearly needed",
@@ -29214,6 +29440,7 @@
       "Patient selection requires blood eosinophil count at or above 150 cells/mcL (at baseline) or history suggesting eosinophilic asthma; patients with eosinophil counts below 150 cells/mcL generally do not respond to anti-IL-5 therapy."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category not established; avoid unless benefit clearly outweighs risk",
@@ -29329,6 +29556,7 @@
       "The black box warning for anaphylaxis with reslizumab (occurring after any dose, not just first dose) is a critical safety differentiator from mepolizumab; this requirement for healthcare setting administration has limited its adoption compared with the subcutaneous anti-IL-5 agents."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category not established; avoid unless clearly needed",
@@ -29444,6 +29672,7 @@
       "Unlike anti-IL-5 agents (mepolizumab, benralizumab, reslizumab) which require eosinophilic phenotype for efficacy, tezepelumab demonstrated significant exacerbation reduction in patients with low eosinophil counts \u2014 expanding the eligible population to non-eosinophilic asthma."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category not established; avoid unless clearly needed",
@@ -29556,6 +29785,7 @@
       "The therapeutic target of dornase alfa is neutrophil-derived extracellular DNA, not mucus glycoproteins \u2014 this distinguishes it from non-specific mucolytics like acetylcysteine and explains its specific efficacy in CF, where airway neutrophilia is a defining pathological feature."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category B",
@@ -29679,6 +29909,7 @@
       "Despite remarkable efficacy in gating mutation patients, ivacaftor alone does not benefit the 85% of CF patients with F508del mutations \u2014 the CFTR protein is misfolded and degraded before reaching the cell surface; correctors (lumacaftor, tezacaftor, elexacaftor) are needed to address this problem."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "category B",
@@ -29805,6 +30036,7 @@
       "Trikafta addresses the underlying molecular defect in approximately 85-90% of CF patients carrying at least one F508del allele; it does not cure CF (CFTR-mediated chloride transport remains subnormal) but transforms CF from a lethal disease of short life expectancy to a manageable chronic condition."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "category not established; animal studies concerning; use only if benefit clearly outweighs risk",
@@ -29922,6 +30154,7 @@
       "High-dose guaifenesin (2400 mg/day) has been used investigationally for fibromyalgia (the 'guaifenesin protocol') \u2014 this use is not supported by controlled clinical evidence and should not be recommended by healthcare professionals."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category C; commonly used in pregnancy though controlled data limited",
@@ -30050,6 +30283,7 @@
       "Despite widespread OTC use, systematic reviews find dextromethorphan provides only modest cough suppression in acute upper respiratory infections compared with placebo, particularly in children under 12 where guidelines recommend against its use."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category C; generally avoided in first trimester",
@@ -30173,6 +30407,7 @@
       "Oral cromolyn sodium (Gastrocrom) for mastocytosis and food allergy-associated GI symptoms is unique \u2014 the drug is virtually unabsorbed when taken orally, acting entirely within the GI lumen to stabilize mucosal mast cells without any systemic effect."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category B; considered safe for asthma prophylaxis in pregnancy",
@@ -30301,6 +30536,7 @@
       "Avoid concomitant use with atazanavir or rilpivirine as increased gastric pH dramatically reduces their absorption."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "category B (limited data; use only if clearly needed)",
@@ -30433,6 +30669,7 @@
       "Can be taken without regard to food, which is a practical advantage over other PPIs that require pre-meal dosing."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "category B",
@@ -30561,6 +30798,7 @@
       "FDA-approved in combination with amoxicillin (dual therapy) or amoxicillin plus clarithromycin (triple therapy) for H. pylori eradication."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "insufficient data; avoid unless necessary",
@@ -30688,6 +30926,7 @@
       "Sublingual misoprostol achieves faster uterine response than oral administration but with higher rates of GI side effects."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "contraindicated (GI indication); used therapeutically in obstetrics under supervision",
@@ -30821,6 +31060,7 @@
       "The dark stool discoloration results from bismuth sulfide formed in the GI tract when bismuth reacts with hydrogen sulfide; this should be distinguished from melena."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "avoid; salicylate risk in third trimester",
@@ -30953,6 +31193,7 @@
       "The Sustol extended-release subcutaneous formulation maintains therapeutic levels for 5 days post-injection, ideal for multi-day chemotherapy regimens."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "category B",
@@ -31074,6 +31315,7 @@
       "Unlike ondansetron, palonosetron uniquely allosterically modulates the 5-HT3 receptor, causing receptor internalization and contributing to its prolonged action."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "category B",
@@ -31200,6 +31442,7 @@
       "Blocking NK1 receptors specifically targets the delayed phase of CINV (24\u2013120 hours post-chemo), which is not well-controlled by 5-HT3 antagonists alone."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "category B",
@@ -31340,6 +31583,7 @@
       "Promethazine is on the ISMP high-alert medication list due to its risk of serious patient harm; institutions are encouraged to restrict IV access."
     ],
     "beers_criteria": true,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "use caution; may cause neonatal respiratory depression",
@@ -31481,6 +31725,7 @@
       "Many anesthesiologists consider droperidol the most effective single agent for PONV prophylaxis, but the mandatory ECG and monitoring requirements have reduced its use in some settings."
     ],
     "beers_criteria": true,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "use only if clearly needed",
@@ -31616,6 +31861,7 @@
       "The prolonged adipose tissue sequestration means psychoactive effects and drug interactions can persist for days to weeks after discontinuation."
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid; passes to fetus",
@@ -31753,6 +31999,7 @@
       "The transdermal formulation provides sustained drug delivery while avoiding first-pass metabolism, resulting in a convenient and effective delivery method."
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category C; use cautiously",
@@ -31888,6 +32135,7 @@
       "Unlike loperamide, diphenoxylate does cross the BBB, which is why it has Schedule V controlled substance status."
     ],
     "beers_criteria": true,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "category C; avoid",
@@ -32012,6 +32260,7 @@
       "Melanosis coli \u2014 brownish discoloration of the colonic mucosa \u2014 can develop with chronic stimulant laxative use and is visible on colonoscopy; it is generally benign and reversible."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "category C; use cautiously; avoid chronic use",
@@ -32124,6 +32373,7 @@
       "Routine prophylactic use in patients started on opioids is the standard of care in palliative medicine."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "generally considered safe for occasional use",
@@ -32241,6 +32491,7 @@
       "Unlike stimulant laxatives, psyllium is safe for chronic long-term use and is appropriate for elderly patients with chronic constipation."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "generally safe",
@@ -32354,6 +32605,7 @@
       "Docusate is not absorbed systemically and has an excellent safety profile, making it appropriate for pregnant women with constipation."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "generally safe",
@@ -32462,6 +32714,7 @@
       "The IBS-C approval is specifically for adult women \u226518 years because adequate data are not available in men for this indication."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "category C; avoid in women who may become pregnant",
@@ -32565,6 +32818,7 @@
       "Differs from lubiprostone in mechanism: linaclotide activates GC-C receptors to trigger CFTR-mediated secretion, while lubiprostone activates ClC-2 chloride channels directly."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "avoid; adequate data not available",
@@ -32673,6 +32927,7 @@
       "Unlike cisapride (withdrawn for QT prolongation), prucalopride does not affect hERG channels, giving it a clean cardiac safety profile."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid; animal studies show reproductive toxicity",
@@ -32792,6 +33047,7 @@
       "Its selectivity for 5-HT3 receptors in the enteric nervous system rather than the CTZ distinguishes its GI-targeted effects from antiemetic 5-HT3 antagonists."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "category B; use caution",
@@ -32915,6 +33171,7 @@
       "Azathioprine and 6-mercaptopurine levels must be carefully monitored if combined with balsalazide, as 5-ASA inhibits TPMT (thiopurine methyltransferase), increasing risk of myelosuppression."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "generally acceptable; monitor infant for diarrhea",
@@ -33032,6 +33289,7 @@
       "Specifically indicated for patients who cannot tolerate sulfasalazine, offering equivalent efficacy without the sulfa-related side effects."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "acceptable; monitor closely",
@@ -33149,6 +33407,7 @@
       "Response is typically slower than TNF inhibitors (12\u201314 weeks for clinical response), making it less ideal for patients in acute severe flare but preferred for those with comorbidities or recurrent infections."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "limited data; avoid unless benefit outweighs risk",
@@ -33281,6 +33540,7 @@
       "Tofacitinib's oral administration and rapid onset (~2 weeks) are advantages over biologics in certain clinical scenarios, despite the more extensive black box warnings."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid; animal data show harm",
@@ -33409,6 +33669,7 @@
       "By targeting the upstream p40 subunit shared by both IL-12 and IL-23, ustekinumab blocks both Th1 and Th17 pathways simultaneously, addressing multiple inflammatory axes in IBD."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "limited data; avoid unless benefit outweighs risk",
@@ -33547,6 +33808,7 @@
       "The combination of adalimumab plus an immunomodulator (e.g., azathioprine) is more effective than either agent alone for maintaining IBD remission."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "generally acceptable in first two trimesters; avoid in third trimester",
@@ -33678,6 +33940,7 @@
       "At lower doses, duration of action is only 16\u201318 hours, sometimes necessitating twice-daily dosing in type 1 diabetes \u2014 an important distinction from glargine and degludec."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "preferred over NPH in some guidelines; monitor closely",
@@ -33799,6 +34062,7 @@
       "The flexible dosing window (shift of up to 8 hours permitted between doses) offers a practical advantage for patients with irregular schedules."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "limited data; use insulin human or detemir preferentially",
@@ -33916,6 +34180,7 @@
       "The 4\u20138 hour peak creates a predictable window of hypoglycemia risk, particularly nocturnal if given at bedtime, requiring coordinated meal timing \u2014 a limitation compared to peakless analogs."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "preferred in pregnancy (along with regular insulin)",
@@ -34037,6 +34302,7 @@
       "The combination of regular insulin plus dextrose is used to shift potassium intracellularly in hyperkalemia emergencies \u2014 a life-saving non-antihypertensive use of insulin."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "preferred (along with NPH)",
@@ -34157,6 +34423,7 @@
       "Insulin lispro U-200 (Humalog U-200) contains twice the concentration of standard U-100; ensure correct concentration is prescribed and dispensed."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "generally considered safe; preferred over regular in some guidelines",
@@ -34264,6 +34531,7 @@
       "Like other rapid-acting analogs, glulisine helps mimic physiological postprandial insulin secretion peaks when used in a basal-bolus regimen."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "limited data; use cautiously",
@@ -34385,6 +34653,7 @@
       "Glyburide has a disulfiram-like interaction with alcohol, producing flushing, nausea, and tachycardia; advise patients to limit alcohol consumption."
     ],
     "beers_criteria": true,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid; may cause neonatal hypoglycemia",
@@ -34504,6 +34773,7 @@
       "Among sulfonylureas, glimepiride has the most evidence for cardiovascular safety and is often considered the preferred sulfonylurea when one is needed."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid",
@@ -34620,6 +34890,7 @@
       "The gemfibrozil-repaglinide interaction is a landmark CYP2C8/OATP interaction used frequently in pharmacology education \u2014 coadministration is absolutely contraindicated."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid",
@@ -34736,6 +35007,7 @@
       "Among meglitinides, nateglinide has the shortest duration of action and lowest HbA1c-lowering potency, making it most suitable for isolated postprandial hyperglycemia."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid",
@@ -34863,6 +35135,7 @@
       "Rosiglitazone (another TZD) was restricted due to increased myocardial infarction risk; pioglitazone does not share this risk and is now the preferred TZD."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "category C; avoid",
@@ -34987,6 +35260,7 @@
       "The TECOS trial confirmed cardiovascular safety for sitagliptin; unlike GLP-1 agonists, there is no CV benefit beyond safety, but there is also no CV harm."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "limited data; use metformin or insulin preferentially",
@@ -35107,6 +35381,7 @@
       "Unlike liraglutide and semaglutide, the immediate-release exenatide does not have demonstrated cardiovascular benefit (EXSCEL trial: CV-neutral), though Bydureon has demonstrated potential benefits."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "avoid",
@@ -35237,6 +35512,7 @@
       "At the higher dose (3 mg; Saxenda), liraglutide achieves approximately 5\u20138% average body weight loss independent of glucose lowering \u2014 the first FDA-approved injectable weight-loss medication since orlistat."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "contraindicated",
@@ -35360,6 +35636,7 @@
       "The REWIND cardiovascular outcomes trial included a broader population (CV risk factors without established CVD) than other GLP-1 outcome trials, extending the benefit to primary prevention."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "avoid",
@@ -35488,6 +35765,7 @@
       "The dual GIP/GLP-1 agonism is clinically meaningful: GIP receptors in the CNS and adipose tissue synergize with GLP-1 signaling to produce additive metabolic effects not achievable with GLP-1 agonism alone."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "contraindicated",
@@ -35618,6 +35896,7 @@
       "The cardiorenal benefits of SGLT-2 inhibitors appear to be independent of glucose-lowering, operating through hemodynamic, anti-inflammatory, and direct renal tubular effects."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "avoid in second and third trimester",
@@ -35752,6 +36031,7 @@
       "The CREDENCE trial established canagliflozin as the first agent to show significant renal protection in diabetic nephropathy since the ACE inhibitor/ARB trials of the 1990s."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "avoid in second and third trimester",
@@ -35869,6 +36149,7 @@
       "Available as fixed-dose combinations with metformin (Segluromet) and sitagliptin (Steglujan)."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "avoid in second and third trimester",
@@ -35984,6 +36265,7 @@
       "Acarbose has a favorable safety profile (minimal systemic absorption) but is limited in clinical use by its GI side effects; it is more commonly used in Asia than in the United States."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "insufficient data; insulin preferred",
@@ -36102,6 +36384,7 @@
       "The black box warning of severe hypoglycemia with mealtime insulin is the most important safety concern \u2014 the insulin dose reduction protocol at initiation is mandatory."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "insufficient data; avoid",
@@ -36216,6 +36499,7 @@
       "Pioglitazone is now strongly preferred over rosiglitazone because pioglitazone's cardiovascular data (PROactive trial) suggest benefit rather than harm."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid",
@@ -36332,6 +36616,7 @@
       "Despite its cardiovascular signal, saxagliptin remains used clinically, particularly when it's already part of an established regimen."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "insufficient data; avoid",
@@ -36437,6 +36722,7 @@
       "The EXAMINE trial showed CV non-inferiority for alogliptin, with a mild signal for heart failure hospitalization similar to saxagliptin."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "insufficient data",
@@ -36544,6 +36830,7 @@
       "The CARMELINA trial demonstrated CV and renal safety without CV benefit or harm, making linagliptin safe but without the added cardiorenal protection offered by GLP-1 agonists or SGLT-2 inhibitors."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "insufficient data",
@@ -36669,6 +36956,7 @@
       "Some thyroid cancer protocols use liothyronine to prepare for radioiodine scanning: T3 suppression is faster to achieve and reverse than T4 suppression."
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use levothyroxine in pregnancy; T3 does not cross placenta well",
@@ -36793,6 +37081,7 @@
       "The FDA issued a black box warning for hepatotoxicity in 2010; PTU should now be reserved for specific indications (thyroid storm, first-trimester pregnancy, methimazole allergy) rather than as a routine first-line agent."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "preferred in first trimester; switch to methimazole after first trimester",
@@ -36915,6 +37204,7 @@
       "Potassium iodide for radiation emergencies provides thyroidal uptake saturation \u2014 it protects the thyroid by blocking the uptake of radioactive iodine I-131, not by blocking all radiation."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use cautiously; large doses may cause fetal goiter",
@@ -37045,6 +37335,7 @@
       "In septic shock, physiologic-dose hydrocortisone (200 mg/day) is recommended by the 2021 Surviving Sepsis Campaign for patients not responsive to fluids and vasopressors."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "acceptable for adrenal replacement; avoid supraphysiologic doses",
@@ -37187,6 +37478,7 @@
       "Depo-Medrol (methylprednisolone acetate) is a depot formulation used for intra-articular or intramuscular injections; it should NEVER be injected IV or intrathecally (fatal neurotoxicity)."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "use with caution; associated with cleft palate at high doses in first trimester",
@@ -37313,6 +37605,7 @@
       "A single course of antenatal betamethasone remains one of the most evidence-based interventions in perinatology, reducing neonatal RDS, IVH, NEC, and mortality in preterm infants."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "used therapeutically for fetal lung maturation; avoid repeated courses",
@@ -37439,6 +37732,7 @@
       "Adequate mineralocorticoid replacement (avoiding hyponatremia and hyperkalemia) is essential for hemodynamic stability in Addison's disease \u2014 insufficient fludrocortisone dosing contributes to orthostatic hypotension and salt-wasting crisis."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "acceptable for adrenal replacement in Addison's",
@@ -37569,6 +37863,7 @@
       "The LAR (long-acting repeatable) depot form delivered IM monthly dramatically improves compliance for long-term management of acromegaly and carcinoid syndrome."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "limited data; use cautiously",
@@ -37694,6 +37989,7 @@
       "After teriparatide therapy, transition to an antiresorptive agent (bisphosphonate or denosumab) is essential to preserve bone density gains, as benefits regress after discontinuation."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "avoid",
@@ -37818,6 +38114,7 @@
       "Osteonecrosis of the jaw is rare but serious; risk is highest in cancer patients receiving IV bisphosphonates (not oral alendronate for osteoporosis), where the incidence is 1\u20132%."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "avoid (bisphosphonates accumulate in fetal bone)",
@@ -37948,6 +38245,7 @@
       "Malignant hypercalcemia is the oncologic emergency indication: IV zoledronic acid works within 2\u20134 days and provides longer normocalcemia than pamidronate."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "avoid",
@@ -38080,6 +38378,7 @@
       "The rebound fracture phenomenon upon denosumab discontinuation is unique among osteoporosis treatments; transition planning to bisphosphonate or other agent is mandatory when stopping denosumab."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "contraindicated",
@@ -38211,6 +38510,7 @@
       "The HLA-B*5801 allele is found in 6\u20138% of Han Chinese patients and is associated with an approximately 100-fold increased risk of allopurinol-induced SJS/TEN; pharmacogenomic testing before prescribing is now recommended in relevant populations."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "limited data; use with caution",
@@ -38337,6 +38637,7 @@
       "Unlike allopurinol, febuxostat does not require dose adjustment in mild-to-moderate CKD, which can be clinically advantageous in gout patients with concurrent renal disease."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "insufficient data",
@@ -38463,6 +38764,7 @@
       "The penicillin interaction is clinically used: probenecid prolongs serum penicillin levels by blocking tubular secretion, enabling less frequent dosing in certain infections (historically used in gonorrhea therapy)."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "limited data; avoid",
@@ -38608,6 +38910,7 @@
       "Transdermal estradiol avoids first-pass hepatic metabolism, produces less effect on hepatic synthesis of clotting factors and inflammatory proteins, and is associated with lower VTE risk than oral estrogens."
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "contraindicated",
@@ -38741,6 +39044,7 @@
       "Bone density loss with Depo-Provera is reversible after discontinuation but may not completely return to baseline in adolescents who start and continue during peak bone mass accumulation years."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "contraindicated",
@@ -38871,6 +39175,7 @@
       "In overweight/obese women (>165 lbs), levonorgestrel emergency contraception has reduced efficacy; ulipristal acetate (ella) or copper IUD insertion are more reliable options."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "contraindicated",
@@ -38995,6 +39300,7 @@
       "Norethindrone has moderate androgenic activity, which may contribute to acne in sensitive individuals \u2014 unlike desogestrel or norgestimate, which are preferred for patients with androgenic side effects."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "contraindicated",
@@ -39114,6 +39420,7 @@
       "Etonogestrel's low androgenic activity (compared to older levonorgestrel-based progestogens) makes it less likely to cause androgenic side effects (acne, hirsutism) in sensitive patients."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "contraindicated",
@@ -39238,6 +39545,7 @@
       "At doses used for postpartum hemorrhage, oxytocin has significant antidiuretic (ADH-like) properties; large volumes of hypotonic IV fluids with high-dose oxytocin can cause life-threatening dilutional hyponatremia."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": true,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "indicated for labor induction; monitor for hyperstimulation",
@@ -39372,6 +39680,7 @@
       "Oral 17-alpha-alkylated testosterone (methyltestosterone) should be avoided due to significant hepatotoxicity; transdermal, injectable, and buccal forms are preferred."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "contraindicated (virilization of female fetus)",
@@ -39506,6 +39815,7 @@
       "The absolute contraindication with nitrates is the most important clinical safety rule: even if nitrates are needed urgently for chest pain in a patient who took sildenafil, nitrates must be withheld for 24\u201348 hours (or longer with tadalafil)."
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "not indicated in women (Revatio: limited data; use cautiously in PAH)",
@@ -39632,6 +39942,7 @@
       "Alpha-1 blockers provide rapid symptomatic relief of BPH (within days), while 5-alpha reductase inhibitors (finasteride, dutasteride) require months for effect but reduce prostate volume and long-term risk of urinary retention."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "not indicated in women",
@@ -39753,6 +40064,7 @@
       "The Beers criteria recommend antimuscarinics for OAB be avoided in elderly patients due to cognitive effects; mirabegron is increasingly preferred as the first-line OAB treatment in older adults."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "limited data; avoid",
@@ -39881,6 +40193,7 @@
       "The characteristic perineal pruritus and paresthesias during fosphenytoin infusion are a predictable (though uncomfortable) pharmacodynamic effect of phosphate release; they are not allergic reactions."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "teratogenic (category D); risk of fetal hydantoin syndrome; use if benefit outweighs risk",
@@ -40010,6 +40323,7 @@
       "As a structural analog of carbamazepine, oxcarbazepine can be used in many of the same indications with a more predictable pharmacokinetic profile."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": false,
     "pregnancy_safety": "teratogenic risk similar to carbamazepine; use folate supplementation",
@@ -40145,6 +40459,7 @@
       "The rare acute-onset myopia with angle-closure glaucoma is a medical emergency requiring immediate discontinuation and treatment; patients should be warned to seek emergency care for sudden visual changes, eye pain, or redness."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid for migraine; use with caution in epilepsy; oral cleft risk",
@@ -40267,6 +40582,7 @@
       "Like topiramate, zonisamide causes significant weight loss (5\u20137 kg) due to anorexia; this is a notable differentiating feature from weight-gaining AEDs (valproate, carbamazepine, pregabalin)."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "teratogenic in animal studies; avoid if possible",
@@ -40384,6 +40700,7 @@
       "The IV formulation with 1:1 oral bioequivalence makes lacosamide practical for hospitalized patients who cannot take oral medications \u2014 an advantage over many other AEDs."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "limited data; use cautiously",
@@ -40496,6 +40813,7 @@
       "The CHILDHOOD Absence Epilepsy study showed ethosuximide superior to both valproate and lamotrigine for cognitive outcomes in children with absence epilepsy, making it the first-line drug for this specific indication."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "risk; folate supplementation recommended",
@@ -40625,6 +40943,7 @@
       "As a neonatal seizure treatment, phenobarbital has unique advantages: IV administration, broad efficacy, and extensive safety data in this fragile population."
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "category D; teratogenic; neonatal withdrawal; vitamin K for neonate at delivery",
@@ -40766,6 +41085,7 @@
       "The FDA's black box warning for concurrent opioid use reflects epidemic numbers of overdose deaths from benzodiazepine-opioid combinations; if both must be prescribed, prescribe lowest doses and monitor closely."
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "category D; associated with neonatal withdrawal and cleft palate (disputed)",
@@ -40893,6 +41213,7 @@
       "However, as a Beers Criteria medication in elderly, temazepam still significantly increases fall and fracture risk; non-pharmacological insomnia treatment (CBT-I) should be first-line in older adults."
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid",
@@ -41011,6 +41332,7 @@
       "Among Z-drugs (zaleplon, zolpidem, eszopiclone), zaleplon has the least evidence for sleep maintenance and shortest duration, but carries the same complex sleep behavior risk."
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid",
@@ -41123,6 +41445,7 @@
       "The distinctive bitter taste of eszopiclone (reported by ~46% of patients) may actually help reduce misuse potential by making the drug recognizable."
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid",
@@ -41240,6 +41563,7 @@
       "The fluvoxamine-ramelteon interaction is one of the most extreme CYP1A2 inhibition examples: a 190-fold increase in AUC that represents a true absolute contraindication."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "insufficient data; avoid",
@@ -41353,6 +41677,7 @@
       "Lemborexant (a newer dual orexin antagonist) has a shorter half-life than suvorexant, potentially reducing next-day impairment; both work via the same mechanism."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "insufficient data; avoid",
@@ -41474,6 +41799,7 @@
       "Unlike SSRIs and SNRIs, buspirone's efficacy appears limited to GAD; it is not effective for panic disorder, social anxiety, PTSD, or OCD \u2014 a limitation that restricts its use to a narrower anxiety profile."
     ],
     "beers_criteria": false,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": true,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "limited data; avoid if possible",
@@ -41601,6 +41927,7 @@
       "Hydroxyzine is increasingly popular as an acute anxiety treatment in emergency settings for patients with opioid or benzodiazepine use disorder, as it provides sedation and anxiolysis without dependence or abuse potential."
     ],
     "beers_criteria": true,
+    "ismp_high_alert": false,
     "renal_dose_adjustment": false,
     "hepatic_dose_adjustment": true,
     "pregnancy_safety": "avoid in first trimester; use with caution thereafter",
