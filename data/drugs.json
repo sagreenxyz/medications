@@ -49356,5 +49356,2093 @@
         "neuromuscular-blockade"
       ]
     }
+  },
+  {
+    "id": "rizatriptan",
+    "generic_name": "rizatriptan",
+    "brand_names": [
+      "Maxalt",
+      "Maxalt-MLT"
+    ],
+    "drug_class": "triptan (serotonin 5-HT1B/1D agonist)",
+    "subclass": "second-generation triptan",
+    "prototype_for": false,
+    "prototype_drug": "sumatriptan",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "adrenergic"
+    ],
+    "mechanism_targets": [
+      "5-HT1B receptor",
+      "5-HT1D receptor"
+    ],
+    "mechanism_summary": "Selective agonist at 5-HT1B (causes cranial vasoconstriction) and 5-HT1D (inhibits trigeminal nerve neuropeptide release) receptors, aborting migraine through dual vasoconstriction and neuronal inhibition mechanisms.",
+    "indications": [
+      "acute migraine (with or without aura)"
+    ],
+    "contraindications": [
+      "ischemic heart disease",
+      "coronary artery vasospasm",
+      "cerebrovascular disease",
+      "peripheral vascular disease",
+      "concurrent MAOI use (within 14 days)",
+      "hemiplegic or basilar migraine",
+      "concurrent other triptans or ergotamine within 24 hours"
+    ],
+    "adverse_effects": {
+      "common": [
+        "pain/pressure/tightness in chest, neck, jaw (non-cardiac in most cases)",
+        "somnolence",
+        "dizziness",
+        "nausea",
+        "paresthesias"
+      ],
+      "serious": [
+        "coronary artery vasospasm",
+        "myocardial infarction",
+        "serotonin syndrome (with MAOIs)",
+        "stroke"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~45%; food delays but does not reduce absorption",
+      "distribution": "protein binding ~14%; Vd ~140 L",
+      "metabolism": "primarily MAO-A oxidative deamination; CYP3A4 minor",
+      "excretion": "renal (82%) and fecal (12%)",
+      "half_life": "2-3 hours",
+      "onset": "30-60 minutes",
+      "peak": "1-1.5 hours",
+      "duration": "2-12 hours per dose",
+      "protein_binding": "14%",
+      "vd": "140 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAO inhibitors",
+        "mechanism": "decreased rizatriptan metabolism; increased levels; serotonin syndrome",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "propranolol",
+        "mechanism": "inhibits MAO-A; increases rizatriptan levels 70%; reduce dose to 5 mg",
+        "severity": "major"
+      },
+      {
+        "drug": "other triptans/ergotamine",
+        "mechanism": "additive vasospasm; 24-hour separation required",
+        "severity": "contraindicated"
+      }
+    ],
+    "nursing_considerations": [
+      "Cardiac risk assessment before prescribing; first dose should be administered in monitored setting for patients with cardiac risk factors.",
+      "Propranolol interaction: reduce rizatriptan dose to 5 mg (maximum 10 mg/day) in patients on propranolol due to 70% increased AUC.",
+      "Do not use for hemiplegic migraine or migraine with brainstem aura (basilar migraine) due to vasospasm risk in posterior circulation.",
+      "Not a preventive treatment; for acute treatment only; do not use >10 days/month to avoid medication overuse headache."
+    ],
+    "clinical_pearls": [
+      "Rizatriptan has a faster onset than sumatriptan tablets and comparable efficacy to zolmitriptan, making it one of the most commonly prescribed oral triptans for acute migraine.",
+      "The orally-disintegrating tablet (MLT) does not require water and offers the same pharmacokinetics as the conventional tablet; useful for patients with migraine-associated nausea who find swallowing difficult."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use with caution; limited human data",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "acute migraine",
+      "migraine with aura"
+    ],
+    "adverse_effect_tags": [
+      "chest tightness",
+      "coronary vasospasm",
+      "serotonin syndrome"
+    ],
+    "interaction_tags": [
+      "MAOI-interaction",
+      "MAO-A-substrate",
+      "serotonergic"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "adrenergic"
+      ],
+      "mechanism_family": [
+        "5-HT1B-agonism",
+        "5-HT1D-agonism"
+      ],
+      "prototype_class": "triptans",
+      "adme_profile": "MAO-A-metabolized",
+      "presentation_cluster": [
+        "migraine"
+      ],
+      "adverse_cluster": [
+        "coronary-vasospasm"
+      ],
+      "interaction_cluster": [
+        "MAOI-interaction",
+        "serotonergic"
+      ]
+    }
+  },
+  {
+    "id": "lasmiditan",
+    "generic_name": "lasmiditan",
+    "brand_names": [
+      "Reyvow"
+    ],
+    "drug_class": "serotonin 5-HT1F receptor agonist (ditan)",
+    "subclass": "first-in-class ditan",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "adrenergic"
+    ],
+    "mechanism_targets": [
+      "5-HT1F receptor"
+    ],
+    "mechanism_summary": "Highly selective 5-HT1F receptor agonist; unlike triptans, it has no 5-HT1B activity (no vasoconstriction) and no clinically significant 5-HT1D activity. 5-HT1F receptors are expressed on trigeminal neurons; inhibiting trigeminal activation aborts migraine without vascular effects.",
+    "indications": [
+      "acute migraine with or without aura"
+    ],
+    "contraindications": [
+      "no absolute contraindications related to cardiovascular disease (unlike triptans)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "dizziness",
+        "somnolence",
+        "paresthesia",
+        "fatigue",
+        "nausea"
+      ],
+      "serious": [
+        "CNS depression (driving impairment for 8 hours after dose)",
+        "serotonin syndrome (theoretical with serotonergic drugs)",
+        "Schedule V controlled substance (abuse potential)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral; bioavailability ~40%; food delays but does not reduce absorption",
+      "distribution": "protein binding ~55-60%",
+      "metabolism": "hepatic; multiple CYP and non-CYP pathways",
+      "excretion": "renal (~74%)",
+      "half_life": "5.7 hours",
+      "onset": "1-2 hours",
+      "peak": "1.8 hours",
+      "duration": "24 hours (once per migraine attack)",
+      "protein_binding": "55-60%",
+      "vd": "not well characterized"
+    },
+    "drug_interactions": [
+      {
+        "drug": "P-glycoprotein inhibitors",
+        "mechanism": "increase lasmiditan exposure",
+        "severity": "moderate"
+      },
+      {
+        "drug": "serotonergic agents",
+        "mechanism": "theoretical serotonin syndrome risk",
+        "severity": "moderate"
+      },
+      {
+        "drug": "CNS depressants",
+        "mechanism": "additive CNS depression; driving impairment",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Patients must not drive or operate heavy machinery for at least 8 hours after lasmiditan administration due to CNS impairment risk.",
+      "Does not cause vasoconstriction; can be used in migraine patients with cardiovascular contraindications to triptans.",
+      "Schedule V controlled substance; diversion and abuse screening per PDMP as with other controlled substances.",
+      "Maximum 1 dose per 24 hours; do not use more than 1 lasmiditan dose per migraine attack."
+    ],
+    "clinical_pearls": [
+      "Lasmiditan represents the first mechanistically distinct acute migraine therapy in decades; its lack of vasoconstriction via 5-HT1F selectivity opens triptan-type acute treatment to patients with cardiovascular contraindications.",
+      "The drivability restriction (8 hours) significantly affects patient lifestyle compared to triptans; this pharmacodynamic property must be incorporated into patient counseling and medication selection."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid; limited data",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "acute migraine",
+      "migraine with cardiovascular contraindications"
+    ],
+    "adverse_effect_tags": [
+      "somnolence",
+      "dizziness",
+      "CNS depression"
+    ],
+    "interaction_tags": [
+      "P-gp-substrate",
+      "CNS-depression",
+      "serotonergic"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "adrenergic"
+      ],
+      "mechanism_family": [
+        "5-HT1F-agonism"
+      ],
+      "prototype_class": "ditans",
+      "adme_profile": "hepatically-metabolized",
+      "presentation_cluster": [
+        "migraine"
+      ],
+      "adverse_cluster": [
+        "CNS-sedation"
+      ],
+      "interaction_cluster": [
+        "serotonergic",
+        "CNS-depressants"
+      ]
+    }
+  },
+  {
+    "id": "rimegepant",
+    "generic_name": "rimegepant",
+    "brand_names": [
+      "Nurtec ODT"
+    ],
+    "drug_class": "CGRP receptor antagonist (gepant)",
+    "subclass": "small-molecule CGRP receptor antagonist",
+    "prototype_for": false,
+    "prototype_drug": "ubrogepant",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "CGRP receptor (calcitonin gene-related peptide receptor)"
+    ],
+    "mechanism_summary": "Competitively antagonizes the CGRP receptor, blocking the actions of CGRP \u2014 a potent vasodilatory neuropeptide released from trigeminal nerve endings during migraine. By blocking CGRP receptor activation, rimegepant reduces trigeminal neuroinflammation and vasodilation. Unlike triptans, has no vasoconstrictive activity.",
+    "indications": [
+      "acute treatment of migraine with or without aura (adults)",
+      "preventive treatment of episodic migraine (adults) \u2014 first oral drug approved for both acute and preventive migraine in same formulation"
+    ],
+    "contraindications": [
+      "strong CYP3A4 inhibitors (increase rimegepant levels 4-fold)",
+      "strong CYP3A4 inducers (reduce efficacy)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "abdominal pain",
+        "urinary tract infection"
+      ],
+      "serious": [
+        "hepatotoxicity (rare in clinical trials)",
+        "hypersensitivity reactions"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral (ODT); bioavailability ~64%; food has minimal effect",
+      "distribution": "protein binding ~96%",
+      "metabolism": "primarily CYP3A4; moderate CYP2C9",
+      "excretion": "fecal (~77%) and renal (~24%)",
+      "half_life": "11 hours",
+      "onset": "1-2 hours for acute migraine",
+      "peak": "1.5 hours",
+      "duration": "24 hours",
+      "protein_binding": "96%",
+      "vd": "not well characterized"
+    },
+    "drug_interactions": [
+      {
+        "drug": "strong CYP3A4 inhibitors (clarithromycin, itraconazole)",
+        "mechanism": "increase rimegepant AUC 4-fold; maximum 1 dose per 48 hours",
+        "severity": "major"
+      },
+      {
+        "drug": "strong CYP3A4 inducers (rifampin)",
+        "mechanism": "substantially reduce rimegepant levels; avoid",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Unique dual indication: 75 mg acutely for migraine attack; 75 mg every other day for prevention \u2014 verify which indication the drug is being used for.",
+      "No cardiovascular contraindications unlike triptans; suitable for patients with CAD, stroke history, or uncontrolled hypertension.",
+      "ODT formulation is placed on/under tongue and dissolves without water; useful for patients with nausea.",
+      "CYP3A4 inhibitors (including many antifungals, macrolide antibiotics) require reducing to 1 dose per 48 hours."
+    ],
+    "clinical_pearls": [
+      "Rimegepant is the first and only drug FDA-approved for both acute and preventive migraine treatment in the same formulation and dose, eliminating the need for separate medications for patients who need both.",
+      "CGRP pathway drugs represent the first migraine-specific class developed based on understanding of migraine pathophysiology; triptans were discovered before the CGRP mechanism was understood."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid; based on animal data",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "acute migraine",
+      "migraine prevention"
+    ],
+    "adverse_effect_tags": [
+      "nausea",
+      "hypersensitivity"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "CGRP-receptor-antagonism"
+      ],
+      "prototype_class": "gepants",
+      "adme_profile": "CYP3A4-metabolized",
+      "presentation_cluster": [
+        "migraine"
+      ],
+      "adverse_cluster": [],
+      "interaction_cluster": [
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "ubrogepant",
+    "generic_name": "ubrogepant",
+    "brand_names": [
+      "Ubrelvy"
+    ],
+    "drug_class": "CGRP receptor antagonist (gepant)",
+    "subclass": "small-molecule CGRP receptor antagonist",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "CGRP receptor"
+    ],
+    "mechanism_summary": "First FDA-approved small-molecule CGRP receptor antagonist for acute migraine; blocks CGRP-mediated trigeminal neuroinflammation and vasodilation without vasoconstriction. First gepant approved, establishing the class.",
+    "indications": [
+      "acute treatment of migraine with or without aura (adults)"
+    ],
+    "contraindications": [
+      "concurrent strong CYP3A4 inhibitors",
+      "concurrent strong CYP3A4 inducers"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "somnolence",
+        "dry mouth"
+      ],
+      "serious": [
+        "hypersensitivity reactions",
+        "hepatotoxicity (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral; bioavailability ~47%; food has minimal effect",
+      "distribution": "protein binding ~87%",
+      "metabolism": "primarily CYP3A4",
+      "excretion": "fecal (~42%) and renal (~42%)",
+      "half_life": "5-7 hours",
+      "onset": "1-2 hours",
+      "peak": "1.5 hours",
+      "duration": "24 hours",
+      "protein_binding": "87%",
+      "vd": "not well characterized"
+    },
+    "drug_interactions": [
+      {
+        "drug": "strong CYP3A4 inhibitors",
+        "mechanism": "increase ubrogepant exposure; use 50 mg dose and no repeat dose within 24 hours",
+        "severity": "major"
+      },
+      {
+        "drug": "moderate CYP3A4 inhibitors",
+        "mechanism": "increase ubrogepant; use 50 mg dose",
+        "severity": "moderate"
+      },
+      {
+        "drug": "strong/moderate CYP3A4 inducers",
+        "mechanism": "decrease ubrogepant efficacy; avoid",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "No cardiovascular contraindications; suitable alternative to triptans in patients with vascular disease.",
+      "Can be taken with or without food; second dose may be taken 2 hours after first if migraine persists.",
+      "Drug interaction with CYP3A4 inhibitors requires dose adjustment; verify all concurrent medications before prescribing.",
+      "Distinguish from preventive CGRP therapies (erenumab, fremanezumab, galcanezumab); ubrogepant is for acute treatment only."
+    ],
+    "clinical_pearls": [
+      "Ubrogepant established the gepant class as effective acute migraine therapy without cardiovascular concerns of triptans; its approval in 2019 represented the first CGRP pathway drug approved for acute treatment.",
+      "Unlike erenumab and other anti-CGRP monoclonal antibodies (which block the ligand or receptor for prevention), gepants work acutely as small-molecule antagonists."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "acute migraine"
+    ],
+    "adverse_effect_tags": [
+      "nausea",
+      "somnolence"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "CGRP-receptor-antagonism"
+      ],
+      "prototype_class": "gepants",
+      "adme_profile": "CYP3A4-metabolized",
+      "presentation_cluster": [
+        "migraine"
+      ],
+      "adverse_cluster": [],
+      "interaction_cluster": [
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "atogepant",
+    "generic_name": "atogepant",
+    "brand_names": [
+      "Qulipta"
+    ],
+    "drug_class": "CGRP receptor antagonist (gepant)",
+    "subclass": "small-molecule CGRP receptor antagonist",
+    "prototype_for": false,
+    "prototype_drug": "ubrogepant",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "CGRP receptor"
+    ],
+    "mechanism_summary": "Daily oral CGRP receptor antagonist for migraine prevention; blocks CGRP-mediated trigeminal sensitization chronically to reduce migraine frequency. First oral preventive migraine treatment with CGRP mechanism.",
+    "indications": [
+      "preventive treatment of episodic migraine (adults)",
+      "preventive treatment of chronic migraine (adults \u2014 FDA approved 2023)"
+    ],
+    "contraindications": [
+      "concurrent strong CYP3A4 inhibitors (reduce dose)",
+      "concurrent strong CYP3A4 inducers (increase dose)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "constipation",
+        "fatigue"
+      ],
+      "serious": [
+        "hepatotoxicity (rare)",
+        "hypersensitivity reactions"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral; food has no significant effect",
+      "distribution": "protein binding ~99%",
+      "metabolism": "primarily CYP3A4",
+      "excretion": "fecal (~42%) and renal (~42%)",
+      "half_life": "11 hours",
+      "onset": "preventive effect over weeks to months",
+      "peak": "1-2 hours",
+      "duration": "24 hours per dose",
+      "protein_binding": "99%",
+      "vd": "not well characterized"
+    },
+    "drug_interactions": [
+      {
+        "drug": "strong CYP3A4 inhibitors",
+        "mechanism": "increase atogepant levels; use lower dose (10 mg)",
+        "severity": "major"
+      },
+      {
+        "drug": "strong CYP3A4 inducers",
+        "mechanism": "decrease atogepant levels; use higher dose (60 mg)",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Once-daily preventive treatment; distinguish clearly from acute migraine treatments.",
+      "CYP3A4 interactions require dose adjustment; verify all concurrent medications.",
+      "Constipation is a class-wide CGRP antagonist effect; encourage adequate hydration and dietary fiber.",
+      "Approved for both episodic and chronic migraine prevention; review migraine frequency to confirm appropriate indication."
+    ],
+    "clinical_pearls": [
+      "Atogepant is the first daily oral CGRP receptor antagonist for migraine prevention, offering an oral alternative to the injectable anti-CGRP monoclonal antibodies.",
+      "The CGRP pathway is now the foundation of migraine pharmacology for both acute (triptans, gepants, ditans) and preventive (gepants, monoclonal antibodies) treatment \u2014 a landmark in migraine-targeted drug development."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "migraine prevention",
+      "chronic migraine prevention"
+    ],
+    "adverse_effect_tags": [
+      "nausea",
+      "constipation"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "CGRP-receptor-antagonism"
+      ],
+      "prototype_class": "gepants",
+      "adme_profile": "CYP3A4-metabolized",
+      "presentation_cluster": [
+        "migraine"
+      ],
+      "adverse_cluster": [],
+      "interaction_cluster": [
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "erenumab",
+    "generic_name": "erenumab",
+    "brand_names": [
+      "Aimovig"
+    ],
+    "drug_class": "anti-CGRP receptor monoclonal antibody",
+    "subclass": "fully human IgG2 anti-CGRP receptor antibody",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "biologics"
+    ],
+    "mechanism_targets": [
+      "CGRP receptor (calcitonin gene-related peptide receptor)"
+    ],
+    "mechanism_summary": "Fully human monoclonal antibody that specifically binds and blocks the CGRP receptor, preventing CGRP-mediated vasodilation and trigeminal sensitization. Unlike gepants (small molecules), erenumab is a biologic with monthly subcutaneous dosing and a prolonged effect due to antibody half-life. First CGRP pathway-targeted migraine prevention drug approved.",
+    "indications": [
+      "preventive treatment of migraine in adults (episodic and chronic)"
+    ],
+    "contraindications": [
+      "hypersensitivity to erenumab"
+    ],
+    "adverse_effects": {
+      "common": [
+        "injection site reactions",
+        "constipation",
+        "pruritus",
+        "nasopharyngitis"
+      ],
+      "serious": [
+        "severe constipation requiring hospitalization (rare)",
+        "hypertension (rarely significant)",
+        "hypersensitivity reactions"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "subcutaneous; bioavailability ~82%",
+      "distribution": "Vd ~3.86 L",
+      "metabolism": "proteolytic degradation to peptides and amino acids (monoclonal antibody catabolism)",
+      "excretion": "not renally cleared to significant extent",
+      "half_life": "28 days",
+      "onset": "clinical benefit may begin within 1-3 months",
+      "peak": "6 days after SC injection",
+      "duration": "monthly dosing (70 mg or 140 mg SC)",
+      "protein_binding": "not applicable for mAb",
+      "vd": "3.86 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "none significant CYP-based",
+        "mechanism": "no CYP450-mediated interactions (monoclonal antibody)",
+        "severity": "none"
+      }
+    ],
+    "nursing_considerations": [
+      "Self-administered SC injection monthly; teach injection technique, site rotation (abdomen, thigh, upper arm), and cold chain storage.",
+      "Constipation can be severe and may require dose reduction or discontinuation; educate about hydration, dietary fiber, and laxatives.",
+      "Allow autoinjector to reach room temperature 30 minutes before administration; do not shake; inspect for particulates before injection.",
+      "Clinical response assessment at 3-6 months; discontinue if no meaningful reduction in migraine frequency."
+    ],
+    "clinical_pearls": [
+      "Erenumab was the first FDA-approved drug developed specifically targeting CGRP pathophysiology for migraine prevention, representing a disease-mechanism-specific therapy rather than drugs repurposed from other indications (beta-blockers, anticonvulsants, tricyclics).",
+      "The anti-CGRP antibody class (erenumab, fremanezumab, galcanezumab, eptinezumab) has transformed migraine prevention by offering monthly or quarterly dosing with better tolerability than traditional preventives."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "avoid; CGRP important in pregnancy physiology",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "migraine prevention",
+      "episodic migraine",
+      "chronic migraine"
+    ],
+    "adverse_effect_tags": [
+      "constipation",
+      "injection site reactions"
+    ],
+    "interaction_tags": [],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "biologics"
+      ],
+      "mechanism_family": [
+        "CGRP-receptor-antagonism"
+      ],
+      "prototype_class": "anti-CGRP monoclonal antibodies",
+      "adme_profile": "proteolytic-degradation",
+      "presentation_cluster": [
+        "migraine"
+      ],
+      "adverse_cluster": [
+        "biologic-infusion-reactions"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "fremanezumab",
+    "generic_name": "fremanezumab",
+    "brand_names": [
+      "Ajovy"
+    ],
+    "drug_class": "anti-CGRP monoclonal antibody",
+    "subclass": "humanized IgG2a anti-CGRP ligand antibody",
+    "prototype_for": false,
+    "prototype_drug": "erenumab",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "biologics"
+    ],
+    "mechanism_targets": [
+      "CGRP ligand (calcitonin gene-related peptide)"
+    ],
+    "mechanism_summary": "Binds directly to the CGRP ligand (not the receptor), preventing it from activating its receptor. Unlike erenumab (which targets the receptor), fremanezumab neutralizes the neuropeptide itself. Monthly or quarterly SC dosing options.",
+    "indications": [
+      "preventive treatment of migraine in adults"
+    ],
+    "contraindications": [
+      "hypersensitivity to fremanezumab"
+    ],
+    "adverse_effects": {
+      "common": [
+        "injection site reactions",
+        "constipation",
+        "fatigue"
+      ],
+      "serious": [
+        "hypersensitivity reactions"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "subcutaneous; bioavailability ~57%",
+      "distribution": "Vd ~3.6 L",
+      "metabolism": "proteolytic degradation",
+      "excretion": "catabolism",
+      "half_life": "31 days",
+      "onset": "clinical benefit within 1-3 months",
+      "peak": "5-7 days",
+      "duration": "monthly (225 mg) or quarterly (675 mg)",
+      "protein_binding": "not applicable",
+      "vd": "3.6 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "none significant",
+        "mechanism": "no CYP450-mediated interactions",
+        "severity": "none"
+      }
+    ],
+    "nursing_considerations": [
+      "Two dosing regimens: 225 mg monthly or 675 mg (3 injections of 225 mg) quarterly; clarify which regimen is prescribed.",
+      "Allow to warm to room temperature 30 minutes before injecting; rotate injection sites.",
+      "Assess for constipation at every visit; rare severe cases require holding treatment.",
+      "Response assessment at 3-6 months; 50% responder rate in clinical trials."
+    ],
+    "clinical_pearls": [
+      "Fremanezumab targets the CGRP ligand directly (vs. erenumab targeting the receptor); clinically the efficacy and adverse effects are similar across the class.",
+      "Quarterly dosing option (675 mg q3 months) is unique among anti-CGRP mAbs and may improve adherence for patients with needle aversion or difficulty with monthly injections."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "avoid",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "migraine prevention"
+    ],
+    "adverse_effect_tags": [
+      "injection site reactions",
+      "constipation"
+    ],
+    "interaction_tags": [],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "biologics"
+      ],
+      "mechanism_family": [
+        "CGRP-ligand-neutralization"
+      ],
+      "prototype_class": "anti-CGRP monoclonal antibodies",
+      "adme_profile": "proteolytic-degradation",
+      "presentation_cluster": [
+        "migraine"
+      ],
+      "adverse_cluster": [
+        "biologic-infusion-reactions"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "galcanezumab",
+    "generic_name": "galcanezumab",
+    "brand_names": [
+      "Emgality"
+    ],
+    "drug_class": "anti-CGRP monoclonal antibody",
+    "subclass": "humanized IgG4 anti-CGRP ligand antibody",
+    "prototype_for": false,
+    "prototype_drug": "erenumab",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "biologics"
+    ],
+    "mechanism_targets": [
+      "CGRP ligand"
+    ],
+    "mechanism_summary": "Humanized monoclonal antibody that binds CGRP ligand, preventing receptor activation and downstream trigeminal sensitization. Also has an FDA indication for episodic cluster headache \u2014 the first pharmacological preventive for this condition.",
+    "indications": [
+      "preventive treatment of migraine in adults",
+      "preventive treatment of episodic cluster headache (adults)"
+    ],
+    "contraindications": [
+      "hypersensitivity to galcanezumab"
+    ],
+    "adverse_effects": {
+      "common": [
+        "injection site reactions",
+        "constipation",
+        "pruritus"
+      ],
+      "serious": [
+        "hypersensitivity reactions"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "subcutaneous; bioavailability ~90%",
+      "distribution": "Vd ~7.3 L",
+      "metabolism": "proteolytic degradation",
+      "excretion": "catabolism",
+      "half_life": "27 days",
+      "onset": "migraine benefit within 1 month",
+      "peak": "5 days",
+      "duration": "monthly dosing (120 mg; loading dose 240 mg first month)",
+      "protein_binding": "not applicable",
+      "vd": "7.3 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "none significant",
+        "mechanism": "no CYP450 interactions",
+        "severity": "none"
+      }
+    ],
+    "nursing_considerations": [
+      "Loading dose of 240 mg (2 x 120 mg injections) required at initiation for migraine; thereafter 120 mg monthly.",
+      "For cluster headache: 300 mg/month (3 x 100 mg injections) during cluster period.",
+      "Allow autoinjector to warm to room temperature 30 minutes before use; do not shake.",
+      "Assess therapeutic response at 3 months; about 50% of patients achieve >50% reduction in monthly migraine days."
+    ],
+    "clinical_pearls": [
+      "Galcanezumab is the only anti-CGRP monoclonal antibody with FDA approval for episodic cluster headache, offering the first pharmacological preventive specifically approved for this exquisitely painful headache disorder.",
+      "The loading dose of 240 mg at initiation of migraine prevention with galcanezumab accelerates achievement of therapeutic CGRP neutralization, providing faster onset of migraine frequency reduction than waiting for monthly dosing to reach steady state."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "avoid",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "migraine prevention",
+      "cluster headache prevention"
+    ],
+    "adverse_effect_tags": [
+      "injection site reactions",
+      "constipation"
+    ],
+    "interaction_tags": [],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "biologics"
+      ],
+      "mechanism_family": [
+        "CGRP-ligand-neutralization"
+      ],
+      "prototype_class": "anti-CGRP monoclonal antibodies",
+      "adme_profile": "proteolytic-degradation",
+      "presentation_cluster": [
+        "migraine"
+      ],
+      "adverse_cluster": [
+        "biologic-infusion-reactions"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "ergotamine",
+    "generic_name": "ergotamine",
+    "brand_names": [
+      "Ergomar",
+      "Cafergot (with caffeine)"
+    ],
+    "drug_class": "ergot alkaloid / vasoconstrictor",
+    "subclass": "ergot alkaloid migraine agent",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns",
+      "cardiovascular"
+    ],
+    "therapeutic_classes": [
+      "adrenergic"
+    ],
+    "mechanism_targets": [
+      "5-HT1B receptor",
+      "5-HT1D receptor",
+      "alpha-adrenergic receptor",
+      "dopamine receptor"
+    ],
+    "mechanism_summary": "Partial agonist/antagonist at serotonin, adrenergic, and dopaminergic receptors; produces cranial vasoconstriction via serotonergic and adrenergic mechanisms. Less receptor selective than triptans; the broader receptor activity explains more adverse effects and potential for ergotism.",
+    "indications": [
+      "acute migraine (historical; now largely replaced by triptans due to superior tolerability)",
+      "cluster headache (second-line)"
+    ],
+    "contraindications": [
+      "coronary artery disease",
+      "peripheral vascular disease",
+      "severe hypertension",
+      "renal/hepatic impairment",
+      "pregnancy (strong oxytocic \u2014 causes uterine contraction)",
+      "concurrent CYP3A4 inhibitors",
+      "concurrent triptans within 24 hours"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "vomiting",
+        "peripheral paresthesias",
+        "weakness",
+        "vasoconstriction",
+        "muscle cramps"
+      ],
+      "serious": [
+        "ergotism (gangrene of extremities from severe, prolonged vasoconstriction)",
+        "ergotamine overuse headache/rebound",
+        "cardiac ischemia",
+        "peripheral ischemia"
+      ]
+    },
+    "black_box_warnings": [
+      "serious or life-threatening peripheral ischemia with potent CYP3A4 inhibitors including macrolide antibiotics and protease inhibitors"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~1-3% (very poor); sublingual: ~2%; inhalation: better",
+      "distribution": "protein binding ~98%; Vd very large",
+      "metabolism": "primarily CYP3A4; active metabolites with prolonged vasoconstrictive activity",
+      "excretion": "fecal (90%)",
+      "half_life": "2 hours (but ergotism can persist for days due to prolonged tissue binding)",
+      "onset": "sublingual: 20-30 minutes",
+      "peak": "1-2 hours",
+      "duration": "hours to days with prolonged binding",
+      "protein_binding": "98%",
+      "vd": "very large"
+    },
+    "drug_interactions": [
+      {
+        "drug": "strong CYP3A4 inhibitors (macrolides, protease inhibitors, azole antifungals)",
+        "mechanism": "markedly increase ergotamine levels; severe peripheral ischemia and gangrene (BBW)",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "triptans",
+        "mechanism": "additive vasospasm; 24-hour separation required",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "beta-blockers",
+        "mechanism": "potentiate peripheral vasoconstriction",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Ergotamine is contraindicated in pregnancy as a strong uterotonic; verify pregnancy status before dispensing.",
+      "CYP3A4 inhibitor BBW is critical: clarithromycin, erythromycin, ritonavir, and azole antifungals are absolutely contraindicated \u2014 verify complete medication list.",
+      "Assess extremities for signs of ischemia (cold, pale, pulseless): ergotism is a medical emergency requiring immediate discontinuation and vasodilator therapy.",
+      "Ergotamine overuse headache develops with use >10 days/month; assess frequency of use at every visit."
+    ],
+    "clinical_pearls": [
+      "Ergotamine was the primary migraine treatment for decades before triptans; it is now considered second-line due to its narrow therapeutic index and the superior tolerability of triptans.",
+      "The interaction with CYP3A4 inhibitors is one of the most clinically dangerous in all of pharmacology: macrolide antibiotics (a common drug class) can cause life-threatening ergotism in ergotamine-treated patients within days of concurrent use."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "absolutely contraindicated (uterotonic; fetal ischemia)",
+    "lactation_safety": "absolutely contraindicated",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "acute migraine",
+      "cluster headache"
+    ],
+    "adverse_effect_tags": [
+      "ergotism",
+      "peripheral ischemia",
+      "ergotamine overuse headache"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate",
+      "vasoconstriction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns",
+        "cardiovascular"
+      ],
+      "therapeutic_class": [
+        "adrenergic"
+      ],
+      "mechanism_family": [
+        "5-HT1B-agonism",
+        "alpha-adrenergic-agonism"
+      ],
+      "prototype_class": "ergot alkaloids",
+      "adme_profile": "CYP3A4-metabolized",
+      "presentation_cluster": [
+        "migraine",
+        "acute-pain"
+      ],
+      "adverse_cluster": [
+        "peripheral-ischemia"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "ibuprofen",
+    "generic_name": "ibuprofen",
+    "brand_names": [
+      "Advil",
+      "Motrin"
+    ],
+    "drug_class": "nonsteroidal anti-inflammatory drug (NSAID)",
+    "subclass": "non-selective COX inhibitor (propionic acid derivative)",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns",
+      "musculoskeletal"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "COX-1 (cyclooxygenase-1)",
+      "COX-2 (cyclooxygenase-2)"
+    ],
+    "mechanism_summary": "Non-selective inhibitor of COX-1 and COX-2; blocks conversion of arachidonic acid to prostaglandins and thromboxane. Reduced prostaglandin synthesis accounts for analgesia, antipyresis, and anti-inflammatory effects. COX-1 inhibition contributes to GI toxicity and antiplatelet effect.",
+    "indications": [
+      "pain (mild to moderate)",
+      "fever",
+      "inflammation",
+      "dysmenorrhea",
+      "osteoarthritis",
+      "rheumatoid arthritis"
+    ],
+    "contraindications": [
+      "active peptic ulcer disease",
+      "severe renal impairment",
+      "aspirin sensitivity/asthma triad",
+      "perioperative pain after CABG",
+      "third trimester of pregnancy (premature closure of ductus arteriosus)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "GI upset",
+        "dyspepsia",
+        "nausea",
+        "heartburn",
+        "fluid retention"
+      ],
+      "serious": [
+        "GI bleeding/ulceration",
+        "acute kidney injury",
+        "cardiovascular events (MI, stroke) with prolonged use",
+        "hypertension",
+        "acute liver injury (rare)",
+        "anaphylaxis in aspirin-sensitive patients"
+      ]
+    },
+    "black_box_warnings": [
+      "serious cardiovascular thrombotic events",
+      "serious gastrointestinal adverse events",
+      "contraindicated for perioperative pain in setting of CABG"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; bioavailability ~80%; food delays but does not reduce absorption",
+      "distribution": "protein binding >99%; Vd ~0.14-0.2 L/kg",
+      "metabolism": "primarily CYP2C9; inactive hydroxylated metabolites",
+      "excretion": "renal (90%)",
+      "half_life": "2 hours",
+      "onset": "30-60 minutes",
+      "peak": "1-2 hours",
+      "duration": "4-6 hours",
+      "protein_binding": ">99%",
+      "vd": "0.14-0.2 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "aspirin",
+        "mechanism": "ibuprofen may competitively block aspirin from binding COX-1 platelet site; take aspirin before ibuprofen if both needed",
+        "severity": "moderate"
+      },
+      {
+        "drug": "anticoagulants (warfarin, DOACs)",
+        "mechanism": "additive bleeding risk and GI ulceration",
+        "severity": "major"
+      },
+      {
+        "drug": "ACE inhibitors/ARBs",
+        "mechanism": "antagonize antihypertensive effect; AKI risk via reduced renal prostaglandin synthesis",
+        "severity": "major"
+      },
+      {
+        "drug": "lithium",
+        "mechanism": "reduce renal lithium clearance; increase lithium levels",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer with food or milk to reduce GI irritation; consider proton pump inhibitor in patients with GI risk factors.",
+      "Monitor renal function in patients with CKD, heart failure, cirrhosis, dehydration, or concurrent nephrotoxic agents; NSAIDs reduce renal prostaglandin-mediated afferent arteriolar dilation and can precipitate AKI.",
+      "Avoid in patients with aspirin-exacerbated respiratory disease (AERD/Samter triad: aspirin sensitivity + asthma + nasal polyps) due to cross-reactivity via COX-1 inhibition.",
+      "Third trimester pregnancy: NSAIDs cause premature closure of the ductus arteriosus and neonatal renal dysfunction; absolutely contraindicated."
+    ],
+    "clinical_pearls": [
+      "Ibuprofen is the NSAID prototype for pharmacology education; understanding its mechanism, GI toxicity (COX-1), and cardiovascular risk (COX-2) provides the framework for understanding the entire NSAID class and the rationale for COX-2 selective inhibitors.",
+      "The ibuprofen-aspirin interaction is clinically important: ibuprofen taken before aspirin can interfere with the irreversible COX-1 binding needed for aspirin antiplatelet effect; patients on cardioprotective aspirin should take aspirin first and wait 30-60 minutes before taking ibuprofen."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid in third trimester; use with caution in first/second trimester",
+    "lactation_safety": "compatible (considered one of the preferred NSAIDs)",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "pain",
+      "fever",
+      "arthritis",
+      "dysmenorrhea",
+      "inflammation"
+    ],
+    "adverse_effect_tags": [
+      "GI bleeding",
+      "peptic ulcer",
+      "AKI",
+      "cardiovascular events",
+      "hypertension"
+    ],
+    "interaction_tags": [
+      "CYP2C9-substrate",
+      "anticoagulant-interactions",
+      "ACE-inhibitor-antagonism",
+      "lithium"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns",
+        "musculoskeletal"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "COX-inhibition"
+      ],
+      "prototype_class": "NSAIDs",
+      "adme_profile": "CYP2C9-metabolized",
+      "presentation_cluster": [
+        "acute-pain",
+        "chronic-pain"
+      ],
+      "adverse_cluster": [
+        "GI-bleeding",
+        "nephrotoxicity",
+        "cardiovascular-events"
+      ],
+      "interaction_cluster": [
+        "anticoagulant",
+        "ACE-inhibitor",
+        "nephrotoxic-combinations"
+      ]
+    }
+  },
+  {
+    "id": "naproxen",
+    "generic_name": "naproxen",
+    "brand_names": [
+      "Aleve",
+      "Naprosyn",
+      "Anaprox"
+    ],
+    "drug_class": "nonsteroidal anti-inflammatory drug (NSAID)",
+    "subclass": "non-selective COX inhibitor (propionic acid derivative)",
+    "prototype_for": false,
+    "prototype_drug": "ibuprofen",
+    "organ_systems": [
+      "cns",
+      "musculoskeletal"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "COX-1",
+      "COX-2"
+    ],
+    "mechanism_summary": "Non-selective COX-1 and COX-2 inhibitor in the propionic acid class with longer duration than ibuprofen due to longer half-life. Maintains anti-inflammatory, analgesic, and antipyretic effects through prostaglandin synthesis inhibition. Among NSAIDs, has the most favorable cardiovascular risk profile.",
+    "indications": [
+      "pain",
+      "fever",
+      "dysmenorrhea",
+      "osteoarthritis",
+      "rheumatoid arthritis",
+      "acute gout",
+      "ankylosing spondylitis"
+    ],
+    "contraindications": [
+      "active GI bleeding/ulceration",
+      "severe renal impairment",
+      "aspirin sensitivity",
+      "perioperative CABG pain",
+      "third trimester pregnancy"
+    ],
+    "adverse_effects": {
+      "common": [
+        "GI upset",
+        "dyspepsia",
+        "nausea",
+        "edema"
+      ],
+      "serious": [
+        "GI bleeding/ulceration",
+        "AKI",
+        "cardiovascular events (lower risk than other NSAIDs)",
+        "hypertension"
+      ]
+    },
+    "black_box_warnings": [
+      "serious cardiovascular thrombotic events",
+      "serious GI adverse events",
+      "contraindicated for CABG perioperative pain"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; bioavailability ~95%; food slows absorption minimally",
+      "distribution": "protein binding >99%; Vd ~0.16 L/kg",
+      "metabolism": "hepatic CYP1A2 and CYP2C9; inactive metabolites",
+      "excretion": "renal (95%)",
+      "half_life": "12-17 hours (twice daily dosing)",
+      "onset": "1 hour",
+      "peak": "2-4 hours",
+      "duration": "8-12 hours",
+      "protein_binding": ">99%",
+      "vd": "0.16 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "anticoagulants",
+        "mechanism": "additive bleeding risk",
+        "severity": "major"
+      },
+      {
+        "drug": "antihypertensives (ACE inhibitors/ARBs/diuretics)",
+        "mechanism": "reduce antihypertensive efficacy; AKI risk",
+        "severity": "major"
+      },
+      {
+        "drug": "lithium",
+        "mechanism": "reduce renal lithium clearance",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Longer half-life (12-17 hours) allows twice-daily dosing, improving patient adherence compared to every-4-to-6-hour ibuprofen.",
+      "Naproxen has the most favorable cardiovascular risk profile among non-selective NSAIDs; preferred for patients requiring NSAID who have moderate cardiovascular risk.",
+      "Same GI and renal precautions as ibuprofen; use lowest effective dose for shortest duration.",
+      "OTC naproxen sodium (Aleve 220 mg) and prescription naproxen are different salt forms; 220 mg naproxen sodium = 200 mg naproxen base."
+    ],
+    "clinical_pearls": [
+      "Naproxen has a paradoxically favorable cardiovascular profile relative to other NSAIDs, possibly because its COX-1 antiplatelet effect is prolonged due to its long half-life, partially offsetting COX-2-mediated cardiovascular risk.",
+      "For acute gout, high-dose naproxen (750 mg loading dose, then 250 mg every 8 hours) is equivalent to colchicine and preferred in patients with contraindications to colchicine."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid in third trimester; caution in first/second",
+    "lactation_safety": "use with caution; short courses acceptable",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "pain",
+      "arthritis",
+      "acute gout",
+      "dysmenorrhea"
+    ],
+    "adverse_effect_tags": [
+      "GI bleeding",
+      "AKI",
+      "cardiovascular events"
+    ],
+    "interaction_tags": [
+      "CYP1A2-substrate",
+      "CYP2C9-substrate",
+      "anticoagulant-interactions"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns",
+        "musculoskeletal"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "COX-inhibition"
+      ],
+      "prototype_class": "NSAIDs",
+      "adme_profile": "CYP2C9-metabolized",
+      "presentation_cluster": [
+        "acute-pain",
+        "acute-gout",
+        "arthritis"
+      ],
+      "adverse_cluster": [
+        "GI-bleeding",
+        "nephrotoxicity"
+      ],
+      "interaction_cluster": [
+        "anticoagulant",
+        "ACE-inhibitor"
+      ]
+    }
+  },
+  {
+    "id": "ketorolac",
+    "generic_name": "ketorolac",
+    "brand_names": [
+      "Toradol"
+    ],
+    "drug_class": "nonsteroidal anti-inflammatory drug (NSAID)",
+    "subclass": "non-selective COX inhibitor (pyrrolizine carboxylic acid)",
+    "prototype_for": false,
+    "prototype_drug": "ibuprofen",
+    "organ_systems": [
+      "cns",
+      "musculoskeletal"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "COX-1",
+      "COX-2"
+    ],
+    "mechanism_summary": "Potent non-selective COX inhibitor with analgesic potency comparable to opioids at recommended doses; available in IV/IM/oral/intranasal formulations. Inhibits prostaglandin synthesis to produce analgesia without direct opioid receptor activity.",
+    "indications": [
+      "moderate to severe pain (short-term, up to 5 days only)",
+      "post-operative pain",
+      "renal colic"
+    ],
+    "contraindications": [
+      "active peptic ulcer",
+      "renal impairment",
+      "cerebrovascular bleeding",
+      "third trimester pregnancy",
+      "pre- or intraoperative use when hemostasis is critical",
+      "labor and delivery"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "dyspepsia",
+        "GI pain",
+        "drowsiness",
+        "injection site pain (IM)"
+      ],
+      "serious": [
+        "GI bleeding/ulceration (higher risk than oral NSAIDs due to parenteral route and potency)",
+        "AKI",
+        "bleeding (impairs platelet function)"
+      ]
+    },
+    "black_box_warnings": [
+      "GI toxicity",
+      "renal toxicity",
+      "cardiovascular thrombotic events",
+      "risk of bleeding",
+      "use limited to 5 days",
+      "contraindicated in labor/delivery and perioperative CABG"
+    ],
+    "pharmacokinetics": {
+      "absorption": "IV: complete; IM: complete; oral: ~80%; intranasal: ~36%",
+      "distribution": "protein binding >99%; Vd ~0.23 L/kg",
+      "metabolism": "hepatic glucuronidation and para-hydroxylation",
+      "excretion": "renal (92%)",
+      "half_life": "5-6 hours",
+      "onset": "IV: 10-15 minutes; IM: 30-60 minutes",
+      "peak": "IV: 1-2 hours; IM: 45 minutes",
+      "duration": "4-6 hours",
+      "protein_binding": ">99%",
+      "vd": "0.23 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "anticoagulants",
+        "mechanism": "additive bleeding risk; major concern",
+        "severity": "major"
+      },
+      {
+        "drug": "ACE inhibitors/ARBs",
+        "mechanism": "AKI risk; antihypertensive antagonism",
+        "severity": "major"
+      },
+      {
+        "drug": "probenecid",
+        "mechanism": "inhibits ketorolac renal clearance; increase in ketorolac levels",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Maximum treatment duration is 5 days total (IV + IM + oral combined); document start date and calculated end date on the medication administration record.",
+      "Parenteral ketorolac provides opioid-comparable analgesia for moderate-severe pain; it is an important opioid-sparing or opioid-alternative analgesic in appropriate patients.",
+      "IM injection must be given deep into large muscle mass (ventrogluteal or vastus lateralis); painful injection if given subcutaneously.",
+      "Absolute contraindication in third trimester pregnancy and active bleeding; verify pregnancy status and recent labs before administration."
+    ],
+    "clinical_pearls": [
+      "Ketorolac is the only parenteral (IV/IM) NSAID available in the US, occupying a unique niche as a non-opioid parenteral analgesic for moderate-severe pain when opioids are undesirable.",
+      "The 5-day treatment limit is not merely a caution \u2014 it is a hard FDA requirement based on clinical trial data showing sharply increased GI toxicity beyond 5 days; prescriptions should not exceed this duration."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "contraindicated in third trimester; avoid in first/second",
+    "lactation_safety": "use with caution; short-term compatible",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "moderate-severe pain",
+      "post-operative pain",
+      "renal colic"
+    ],
+    "adverse_effect_tags": [
+      "GI bleeding",
+      "AKI",
+      "bleeding"
+    ],
+    "interaction_tags": [
+      "anticoagulant-interactions",
+      "nephrotoxic-combinations"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns",
+        "musculoskeletal"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "COX-inhibition"
+      ],
+      "prototype_class": "NSAIDs",
+      "adme_profile": "hepatically-metabolized",
+      "presentation_cluster": [
+        "acute-pain"
+      ],
+      "adverse_cluster": [
+        "GI-bleeding",
+        "nephrotoxicity",
+        "bleeding"
+      ],
+      "interaction_cluster": [
+        "anticoagulant",
+        "nephrotoxic-combinations"
+      ]
+    }
+  },
+  {
+    "id": "celecoxib",
+    "generic_name": "celecoxib",
+    "brand_names": [
+      "Celebrex"
+    ],
+    "drug_class": "nonsteroidal anti-inflammatory drug (NSAID)",
+    "subclass": "selective COX-2 inhibitor (coxib)",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns",
+      "musculoskeletal"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "COX-2 (cyclooxygenase-2 selective inhibitor)"
+    ],
+    "mechanism_summary": "Selectively inhibits COX-2 (the inducible isoform induced by inflammation) while sparing COX-1 (the constitutive isoform responsible for GI mucosal protection and platelet thromboxane synthesis). Reduced GI toxicity compared to non-selective NSAIDs, but greater cardiovascular thromboembolic risk due to unopposed prostacyclin reduction without compensatory thromboxane reduction.",
+    "indications": [
+      "osteoarthritis",
+      "rheumatoid arthritis",
+      "acute pain",
+      "dysmenorrhea",
+      "ankylosing spondylitis",
+      "familial adenomatous polyposis (FAP)"
+    ],
+    "contraindications": [
+      "sulfonamide allergy (structural similarity)",
+      "perioperative CABG pain",
+      "third trimester pregnancy"
+    ],
+    "adverse_effects": {
+      "common": [
+        "GI upset (less than non-selective NSAIDs)",
+        "hypertension",
+        "peripheral edema",
+        "headache"
+      ],
+      "serious": [
+        "cardiovascular events (MI, stroke \u2014 class effect elevated vs. no NSAID use)",
+        "AKI",
+        "hepatotoxicity (rare)",
+        "Stevens-Johnson syndrome (rare)"
+      ]
+    },
+    "black_box_warnings": [
+      "cardiovascular thrombotic events",
+      "serious GI adverse events (lower than non-selective NSAIDs but not zero)",
+      "contraindicated for CABG perioperative pain"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; bioavailability ~40%",
+      "distribution": "protein binding ~97%; Vd ~429 L",
+      "metabolism": "primarily CYP2C9; inactive metabolites",
+      "excretion": "fecal (~57%) and renal (~27%)",
+      "half_life": "11 hours",
+      "onset": "1-2 hours for analgesia",
+      "peak": "3 hours",
+      "duration": "12 hours (twice-daily dosing)",
+      "protein_binding": "97%",
+      "vd": "429 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CYP2C9 inhibitors (fluconazole)",
+        "mechanism": "increase celecoxib levels",
+        "severity": "moderate"
+      },
+      {
+        "drug": "CYP2C9 substrates (warfarin)",
+        "mechanism": "celecoxib may inhibit CYP2C9; monitor INR",
+        "severity": "moderate"
+      },
+      {
+        "drug": "lithium",
+        "mechanism": "reduce lithium clearance",
+        "severity": "moderate"
+      },
+      {
+        "drug": "ACE inhibitors/ARBs",
+        "mechanism": "AKI risk; antihypertensive antagonism",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Sulfonamide allergy cross-reactivity: celecoxib contains a sulfonamide group; use with caution in patients with sulfonamide hypersensitivity (risk debated but real).",
+      "GI advantage of celecoxib over non-selective NSAIDs is reduced but not eliminated; GI protection is important in high-risk patients.",
+      "Cardiovascular risk is a class effect of COX-2 inhibitors; avoid in patients with recent MI or established cardiovascular disease.",
+      "Celecoxib has no antiplatelet activity (does not affect COX-1-mediated thromboxane in platelets); no aspirin interaction and no protective antiplatelet effect."
+    ],
+    "clinical_pearls": [
+      "The development of COX-2 selective inhibitors was based on the hypothesis that separating anti-inflammatory COX-2 inhibition from GI-protective COX-1 inhibition would improve safety; the GI benefit was real, but cardiovascular risk was a consequence of unbalancing the prostacyclin/thromboxane ratio.",
+      "Rofecoxib (Vioxx) was withdrawn in 2004 after demonstrating increased MI risk; celecoxib was retained with cardiovascular BBW; the PRECISION trial showed celecoxib comparable cardiovascular risk to ibuprofen and naproxen in arthritis patients."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid in third trimester; caution in first/second",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "arthritis",
+      "pain",
+      "dysmenorrhea"
+    ],
+    "adverse_effect_tags": [
+      "cardiovascular events",
+      "AKI",
+      "hypertension"
+    ],
+    "interaction_tags": [
+      "CYP2C9-substrate",
+      "ACE-inhibitor-antagonism"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns",
+        "musculoskeletal"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "COX-2-selective-inhibition"
+      ],
+      "prototype_class": "COX-2 selective NSAIDs",
+      "adme_profile": "CYP2C9-metabolized",
+      "presentation_cluster": [
+        "acute-pain",
+        "arthritis"
+      ],
+      "adverse_cluster": [
+        "GI-bleeding",
+        "nephrotoxicity",
+        "cardiovascular-events"
+      ],
+      "interaction_cluster": [
+        "CYP2C9-substrate",
+        "ACE-inhibitor"
+      ]
+    }
+  },
+  {
+    "id": "indomethacin",
+    "generic_name": "indomethacin",
+    "brand_names": [
+      "Indocin"
+    ],
+    "drug_class": "nonsteroidal anti-inflammatory drug (NSAID)",
+    "subclass": "non-selective COX inhibitor (indoleacetic acid)",
+    "prototype_for": false,
+    "prototype_drug": "ibuprofen",
+    "organ_systems": [
+      "cns",
+      "musculoskeletal"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "COX-1",
+      "COX-2"
+    ],
+    "mechanism_summary": "Potent non-selective COX inhibitor with particularly strong COX-1 activity; one of the most potent NSAIDs. Also inhibits phospholipase A2 and neutrophil migration at higher concentrations. Notable for closing the patent ductus arteriosus in premature neonates via prostaglandin synthesis inhibition.",
+    "indications": [
+      "acute gout (highly effective)",
+      "osteoarthritis",
+      "rheumatoid arthritis",
+      "ankylosing spondylitis",
+      "patent ductus arteriosus closure in premature neonates (IV)",
+      "pericarditis",
+      "Bartter syndrome"
+    ],
+    "contraindications": [
+      "active GI disease",
+      "aspirin sensitivity",
+      "severe renal impairment",
+      "third trimester pregnancy",
+      "pre-existing CV disease (for regular use)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "GI toxicity (highest among NSAIDs)",
+        "headache",
+        "dizziness",
+        "CNS effects (confusion, dizziness \u2014 higher than other NSAIDs)",
+        "nausea"
+      ],
+      "serious": [
+        "GI bleeding/ulceration (higher rate than other NSAIDs)",
+        "AKI",
+        "hepatotoxicity",
+        "aplastic anemia (rare)",
+        "cardiovascular events"
+      ]
+    },
+    "black_box_warnings": [
+      "cardiovascular thrombotic events",
+      "serious GI adverse events (highest GI risk among commonly used NSAIDs)"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; bioavailability ~90-100%; food slows absorption",
+      "distribution": "protein binding ~99%; Vd ~0.34-1.57 L/kg",
+      "metabolism": "hepatic CYP2C9 and glucuronidation; enterohepatic recirculation",
+      "excretion": "renal (30%) and fecal (33-60%)",
+      "half_life": "2.6-11.2 hours",
+      "onset": "30-60 minutes",
+      "peak": "1-2 hours",
+      "duration": "4-6 hours (immediate-release)",
+      "protein_binding": "99%",
+      "vd": "0.34-1.57 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "triamterene",
+        "mechanism": "acute renal failure reported with this combination",
+        "severity": "major"
+      },
+      {
+        "drug": "anticoagulants",
+        "mechanism": "additive bleeding risk",
+        "severity": "major"
+      },
+      {
+        "drug": "diflunisal",
+        "mechanism": "increases indomethacin levels significantly",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Among NSAIDs, indomethacin has the highest rates of CNS adverse effects (headache, dizziness, confusion) and GI toxicity \u2014 use with caution in elderly patients.",
+      "Preferred NSAID for acute gouty arthritis due to its particularly potent anti-inflammatory effect; used at 50 mg three times daily for 2-3 days.",
+      "IV indomethacin for patent ductus arteriosus in premature neonates requires careful fluid management and monitoring for renal function and necrotizing enterocolitis risk.",
+      "Extended-release capsules should not be used for acute gout (too slow onset); immediate-release formulation required."
+    ],
+    "clinical_pearls": [
+      "Indomethacin is the historical gold standard for acute gout treatment despite its high adverse effect profile; modern guidelines prefer naproxen, colchicine, or corticosteroids for most patients due to better tolerability.",
+      "The pharmacological basis for IV indomethacin to close PDA is elegant: ductal patency depends on prostaglandin E2; blocking prostaglandin synthesis causes ductal constriction in premature neonates without the need for surgical ligation."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "contraindicated in third trimester; avoid in second trimester; brief use acceptable in first",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "acute gout",
+      "arthritis",
+      "pericarditis",
+      "patent ductus arteriosus"
+    ],
+    "adverse_effect_tags": [
+      "GI bleeding",
+      "CNS effects",
+      "AKI",
+      "aplastic anemia"
+    ],
+    "interaction_tags": [
+      "CYP2C9-substrate",
+      "anticoagulant-interactions",
+      "nephrotoxic-combinations"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns",
+        "musculoskeletal"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "COX-inhibition"
+      ],
+      "prototype_class": "NSAIDs",
+      "adme_profile": "CYP2C9-metabolized",
+      "presentation_cluster": [
+        "acute-gout",
+        "acute-pain"
+      ],
+      "adverse_cluster": [
+        "GI-bleeding",
+        "nephrotoxicity"
+      ],
+      "interaction_cluster": [
+        "anticoagulant",
+        "nephrotoxic-combinations"
+      ]
+    }
+  },
+  {
+    "id": "diclofenac",
+    "generic_name": "diclofenac",
+    "brand_names": [
+      "Voltaren",
+      "Cataflam",
+      "Zipsor",
+      "Flector patch",
+      "Pennsaid topical"
+    ],
+    "drug_class": "nonsteroidal anti-inflammatory drug (NSAID)",
+    "subclass": "non-selective COX inhibitor (phenylacetic acid derivative)",
+    "prototype_for": false,
+    "prototype_drug": "ibuprofen",
+    "organ_systems": [
+      "cns",
+      "musculoskeletal"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "COX-1",
+      "COX-2"
+    ],
+    "mechanism_summary": "Non-selective COX inhibitor with moderate selectivity toward COX-2 over COX-1; produces analgesia, antipyresis, and anti-inflammatory effects via prostaglandin synthesis inhibition. Available in multiple formulations including topical gel, which achieves local tissue concentrations with minimal systemic exposure.",
+    "indications": [
+      "osteoarthritis (oral and topical)",
+      "rheumatoid arthritis",
+      "ankylosing spondylitis",
+      "acute pain",
+      "dysmenorrhea",
+      "actinic keratosis (topical)"
+    ],
+    "contraindications": [
+      "active GI disease",
+      "aspirin sensitivity",
+      "third trimester pregnancy"
+    ],
+    "adverse_effects": {
+      "common": [
+        "GI upset",
+        "elevated liver enzymes",
+        "edema",
+        "hypertension"
+      ],
+      "serious": [
+        "hepatotoxicity (higher liver enzyme elevation rate than other NSAIDs)",
+        "GI bleeding/ulceration",
+        "AKI",
+        "cardiovascular events"
+      ]
+    },
+    "black_box_warnings": [
+      "cardiovascular thrombotic events",
+      "serious GI adverse events"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~55% (substantial first-pass); topical: systemic bioavailability ~6-10% for gel",
+      "distribution": "protein binding >99%",
+      "metabolism": "extensively CYP2C9; also CYP2C8 and UGT",
+      "excretion": "renal (65%) and fecal (35%)",
+      "half_life": "1-2 hours (oral)",
+      "onset": "30-60 minutes (oral)",
+      "peak": "2-3 hours (oral)",
+      "duration": "6-8 hours",
+      "protein_binding": ">99%",
+      "vd": "0.12-0.17 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "anticoagulants",
+        "mechanism": "additive bleeding risk",
+        "severity": "major"
+      },
+      {
+        "drug": "ACE inhibitors/ARBs",
+        "mechanism": "AKI risk; antihypertensive antagonism",
+        "severity": "major"
+      },
+      {
+        "drug": "lithium",
+        "mechanism": "increase lithium levels",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor liver function tests; diclofenac has the highest rate of hepatotoxicity among commonly used NSAIDs \u2014 discontinue if ALT exceeds 3x ULN.",
+      "Topical diclofenac gel (Voltaren) is OTC; systemic adverse effects are substantially reduced but not eliminated; monitor patients with renal or cardiovascular disease even with topical use.",
+      "Same GI and renal precautions as other NSAIDs; use the lowest effective dose.",
+      "Flector transdermal patch is applied to the most painful area; wash hands after handling patch."
+    ],
+    "clinical_pearls": [
+      "Topical diclofenac (Voltaren Arthritis Pain gel) achieves therapeutic concentrations in superficial joint tissue with much lower systemic exposure than oral NSAIDs \u2014 an important advantage for patients with osteoarthritis who have GI, cardiovascular, or renal risk factors.",
+      "Diclofenac has one of the most consistent associations with hepatotoxicity among NSAIDs; liver enzyme monitoring is recommended during chronic use."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid in third trimester; caution in first/second",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "arthritis",
+      "pain",
+      "dysmenorrhea"
+    ],
+    "adverse_effect_tags": [
+      "hepatotoxicity",
+      "GI bleeding",
+      "AKI"
+    ],
+    "interaction_tags": [
+      "CYP2C9-substrate",
+      "anticoagulant-interactions"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns",
+        "musculoskeletal"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "COX-inhibition"
+      ],
+      "prototype_class": "NSAIDs",
+      "adme_profile": "CYP2C9-metabolized",
+      "presentation_cluster": [
+        "acute-pain",
+        "arthritis"
+      ],
+      "adverse_cluster": [
+        "hepatotoxicity",
+        "GI-bleeding",
+        "nephrotoxicity"
+      ],
+      "interaction_cluster": [
+        "anticoagulant",
+        "nephrotoxic-combinations"
+      ]
+    }
+  },
+  {
+    "id": "meloxicam",
+    "generic_name": "meloxicam",
+    "brand_names": [
+      "Mobic",
+      "Vivlodex (low-dose)"
+    ],
+    "drug_class": "nonsteroidal anti-inflammatory drug (NSAID)",
+    "subclass": "preferential COX-2 inhibitor (oxicam derivative)",
+    "prototype_for": false,
+    "prototype_drug": "ibuprofen",
+    "organ_systems": [
+      "cns",
+      "musculoskeletal"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "COX-2 (preferential)",
+      "COX-1 (at higher doses)"
+    ],
+    "mechanism_summary": "Preferential (not selective) COX-2 inhibitor with approximately 10-fold selectivity for COX-2 over COX-1 at low doses. This partial COX-1 sparing provides somewhat better GI tolerability than non-selective NSAIDs. Produces analgesia and anti-inflammatory effects through prostaglandin synthesis inhibition.",
+    "indications": [
+      "osteoarthritis",
+      "rheumatoid arthritis",
+      "juvenile idiopathic arthritis (JIA)"
+    ],
+    "contraindications": [
+      "active GI bleeding/ulceration",
+      "aspirin sensitivity",
+      "third trimester pregnancy",
+      "renal impairment"
+    ],
+    "adverse_effects": {
+      "common": [
+        "GI upset (less than non-selective NSAIDs)",
+        "nausea",
+        "diarrhea",
+        "edema",
+        "hypertension"
+      ],
+      "serious": [
+        "GI bleeding/ulceration (reduced but not eliminated vs. non-selective NSAIDs)",
+        "AKI",
+        "cardiovascular events"
+      ]
+    },
+    "black_box_warnings": [
+      "cardiovascular thrombotic events",
+      "serious GI adverse events"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~89%; food has minimal effect",
+      "distribution": "protein binding >99%",
+      "metabolism": "primarily CYP2C9 and CYP3A4; inactive metabolites",
+      "excretion": "renal (50%) and fecal (50%)",
+      "half_life": "15-20 hours (allows once-daily dosing)",
+      "onset": "1-2 hours",
+      "peak": "5-6 hours",
+      "duration": "24 hours (once-daily)",
+      "protein_binding": ">99%",
+      "vd": "10 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "anticoagulants",
+        "mechanism": "additive bleeding risk",
+        "severity": "major"
+      },
+      {
+        "drug": "ACE inhibitors/ARBs",
+        "mechanism": "AKI risk; antihypertensive antagonism",
+        "severity": "major"
+      },
+      {
+        "drug": "CYP2C9/CYP3A4 inhibitors",
+        "mechanism": "increase meloxicam levels",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Once-daily dosing simplifies adherence compared to four-times-daily ibuprofen; preferred for chronic arthritis management.",
+      "The partial COX-2 preference provides some GI advantage over non-selective NSAIDs, but does not eliminate GI or cardiovascular risk.",
+      "Among geriatric patients, meloxicam is considered relatively better tolerated than indomethacin or piroxicam, though it remains on the Beers Criteria.",
+      "Liquid formulation available for patients who cannot swallow tablets \u2014 useful for elderly patients with dysphagia."
+    ],
+    "clinical_pearls": [
+      "Meloxicam occupies a middle ground between non-selective NSAIDs and COX-2 selective inhibitors; its partial COX-2 selectivity provides modest GI improvement without the full cardiovascular risk escalation of pure COX-2 inhibitors.",
+      "Once-daily dosing and generally favorable tolerability have made meloxicam one of the most commonly prescribed prescription NSAIDs for chronic arthritis management."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid in third trimester; caution in first/second",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "arthritis",
+      "chronic pain"
+    ],
+    "adverse_effect_tags": [
+      "GI bleeding",
+      "AKI",
+      "cardiovascular events"
+    ],
+    "interaction_tags": [
+      "CYP2C9-substrate",
+      "anticoagulant-interactions"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns",
+        "musculoskeletal"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "COX-inhibition",
+        "COX-2-preferential"
+      ],
+      "prototype_class": "NSAIDs",
+      "adme_profile": "CYP2C9-metabolized",
+      "presentation_cluster": [
+        "acute-pain",
+        "arthritis"
+      ],
+      "adverse_cluster": [
+        "GI-bleeding",
+        "nephrotoxicity"
+      ],
+      "interaction_cluster": [
+        "anticoagulant",
+        "nephrotoxic-combinations"
+      ]
+    }
   }
 ]
