@@ -38504,5 +38504,1295 @@
         "OAT-inhibition"
       ]
     }
+  },
+  {
+    "id": "estradiol",
+    "generic_name": "estradiol",
+    "brand_names": [
+      "Estrace",
+      "Estradiol patch (Vivelle-Dot, Climara)",
+      "Vagifem",
+      "Estring"
+    ],
+    "drug_class": "estrogen",
+    "subclass": "17-beta estradiol \u2014 endogenous estrogen",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine",
+      "reproductive"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "estrogen receptor alpha (ERalpha)",
+      "estrogen receptor beta (ERbeta)"
+    ],
+    "mechanism_summary": "Binds estrogen receptors (ERalpha and ERbeta) in the nucleus of target tissues (uterus, breast, brain, bone, cardiovascular). ER-ligand complex acts as a transcription factor activating estrogen response elements (ERE) on target gene promoters, producing tissue-specific effects on growth, differentiation, and metabolism.",
+    "indications": [
+      "menopausal symptom relief (hot flashes, genitourinary syndrome of menopause)",
+      "prevention of postmenopausal osteoporosis",
+      "female hypogonadism",
+      "primary ovarian insufficiency",
+      "hormone replacement in transgender women",
+      "atrophic vaginitis (low-dose vaginal formulations)"
+    ],
+    "contraindications": [
+      "estrogen-dependent cancers (breast, endometrial)",
+      "undiagnosed vaginal bleeding",
+      "thromboembolic disease history",
+      "liver disease",
+      "pregnancy"
+    ],
+    "adverse_effects": {
+      "common": [
+        "breast tenderness",
+        "nausea",
+        "bloating",
+        "headache",
+        "mood changes",
+        "breakthrough bleeding"
+      ],
+      "serious": [
+        "endometrial cancer (with unopposed estrogen in women with intact uterus)",
+        "breast cancer (long-term HRT)",
+        "venous thromboembolism (DVT, PE)",
+        "stroke",
+        "cardiovascular events (WHI trial findings)"
+      ]
+    },
+    "black_box_warnings": [
+      "endometrial cancer risk (must add progestogen in women with intact uterus)",
+      "cardiovascular disease and stroke (coronary artery disease, stroke)",
+      "probable dementia in women \u226565 years",
+      "breast cancer risk with combined estrogen-progestogen"
+    ],
+    "pharmacokinetics": {
+      "absorption": "transdermal patch avoids first-pass metabolism; oral undergoes significant first-pass hepatic metabolism",
+      "distribution": "98% bound to SHBG and albumin",
+      "metabolism": "hepatic; extensive first-pass effect (oral); metabolized to estrone and estriol",
+      "excretion": "renal (conjugated metabolites)",
+      "half_life": "~1 hour (IV); transdermal provides sustained levels",
+      "onset": "hours to days",
+      "peak": "varies by route",
+      "duration": "varies by route",
+      "protein_binding": "98% (SHBG, albumin)",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CYP3A4 inducers (rifampin, carbamazepine)",
+        "mechanism": "accelerate estrogen metabolism; reduced contraceptive efficacy",
+        "severity": "major"
+      },
+      {
+        "drug": "CYP3A4 inhibitors (ketoconazole)",
+        "mechanism": "increased estrogen levels",
+        "severity": "moderate"
+      },
+      {
+        "drug": "thyroid hormone",
+        "mechanism": "estrogen increases TBG, increasing T4 requirements in hypothyroid women on hormone replacement",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Always add a progestogen (e.g., medroxyprogesterone or micronized progesterone) in women with an intact uterus to prevent endometrial hyperplasia.",
+      "Advise patients to apply transdermal patches to clean, dry, intact skin (not breasts or waistline); rotate sites and replace per schedule.",
+      "Screen for contraindications before prescribing: family history of breast cancer, personal VTE history, smoking status.",
+      "Educate patients that low-dose vaginal estradiol (ring, tablet) for genitourinary syndrome has minimal systemic absorption and may not require progestogen."
+    ],
+    "clinical_pearls": [
+      "The WHI trial used oral conjugated equine estrogen \u00b1 medroxyprogesterone and showed increased risk of breast cancer, VTE, stroke, and CHD; subsequent analyses suggest transdermal estradiol with micronized progesterone may have a more favorable risk profile.",
+      "Transdermal estradiol avoids first-pass hepatic metabolism, produces less effect on hepatic synthesis of clotting factors and inflammatory proteins, and is associated with lower VTE risk than oral estrogens."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "contraindicated",
+    "lactation_safety": "small amounts in breast milk; may decrease milk production",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "menopause",
+      "osteoporosis",
+      "hypogonadism",
+      "atrophic-vaginitis"
+    ],
+    "adverse_effect_tags": [
+      "VTE",
+      "breast-cancer",
+      "endometrial-cancer",
+      "cardiovascular-risk"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine",
+        "reproductive"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "estrogen-receptor-agonism"
+      ],
+      "prototype_class": "estrogens",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "menopause",
+        "osteoporosis"
+      ],
+      "adverse_cluster": [
+        "VTE",
+        "malignancy"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "medroxyprogesterone",
+    "generic_name": "medroxyprogesterone acetate",
+    "brand_names": [
+      "Provera",
+      "Depo-Provera",
+      "Depo-SubQ Provera 104"
+    ],
+    "drug_class": "progestogen",
+    "subclass": "synthetic progestogen (19-nor-testosterone derivative)",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine",
+      "reproductive"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "progesterone receptor (PR)"
+    ],
+    "mechanism_summary": "Binds progesterone receptors to produce progestogenic effects: secretory transformation of estrogen-primed endometrium, inhibition of gonadotropin release (LH surge inhibition = contraception), and cervical mucus thickening. Also has some androgenic and glucocorticoid activity.",
+    "indications": [
+      "secondary amenorrhea",
+      "abnormal uterine bleeding",
+      "endometrial protection with estrogen replacement",
+      "contraception (Depo-Provera IM injection)",
+      "endometrial cancer palliative treatment",
+      "endometriosis"
+    ],
+    "contraindications": [
+      "known or suspected pregnancy",
+      "undiagnosed vaginal bleeding",
+      "breast cancer",
+      "thromboembolic disease",
+      "liver disease"
+    ],
+    "adverse_effects": {
+      "common": [
+        "irregular menstrual bleeding",
+        "weight gain",
+        "mood changes",
+        "breast tenderness",
+        "hot flashes"
+      ],
+      "serious": [
+        "bone density loss (Depo-Provera \u2014 significant; up to 10% at spine with 2 years use)",
+        "VTE (higher risk than low-dose progestogens)",
+        "depression (possible)",
+        "delayed return of fertility after Depo-Provera"
+      ]
+    },
+    "black_box_warnings": [
+      "significant loss of bone mineral density (Depo-Provera); use for >2 years only if other contraceptive methods inadequate"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral (Provera) or IM depot (Depo-Provera 3-month injection)",
+      "distribution": "90% protein bound",
+      "metabolism": "hepatic via CYP3A4; extensive first-pass effect",
+      "excretion": "renal (primarily as glucuronide conjugates)",
+      "half_life": "50 days (Depo-Provera depot)",
+      "onset": "oral: days; Depo: weeks",
+      "peak": "oral: 2\u20134 hours; Depo: ~3 weeks",
+      "duration": "3 months (Depo-Provera)",
+      "protein_binding": "90%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CYP3A4 inducers",
+        "mechanism": "may reduce contraceptive efficacy; additional contraception may be needed",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "For Depo-Provera: administer IM injection in the first 5 days of menstrual cycle to ensure non-pregnancy; next injection due every 12\u201313 weeks.",
+      "Counsel patients about bone density loss with long-term Depo-Provera use (>2 years); recommend adequate calcium (1000 mg/day) and vitamin D (600 IU/day).",
+      "Irregular bleeding is common for first 6\u201312 months of Depo-Provera; most women have amenorrhea by 12 months, which is normal.",
+      "Fertility may not return for 9\u201312 months (mean) after stopping Depo-Provera; counsel patients accordingly."
+    ],
+    "clinical_pearls": [
+      "Depo-Provera is the most effective long-acting reversible contraceptive method short of IUDs, with a failure rate of <1% with perfect use \u2014 however its delayed return of fertility after discontinuation must be communicated.",
+      "Bone density loss with Depo-Provera is reversible after discontinuation but may not completely return to baseline in adolescents who start and continue during peak bone mass accumulation years."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "contraindicated",
+    "lactation_safety": "Depo-Provera compatible with breastfeeding; oral MPA use cautiously",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "contraception",
+      "amenorrhea",
+      "endometrial-protection",
+      "endometriosis"
+    ],
+    "adverse_effect_tags": [
+      "bone-density-loss",
+      "irregular-bleeding",
+      "depression"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine",
+        "reproductive"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "progesterone-receptor-agonism"
+      ],
+      "prototype_class": "progestogens",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "contraception",
+        "endometrial-protection"
+      ],
+      "adverse_cluster": [
+        "bone-density-loss"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "levonorgestrel",
+    "generic_name": "levonorgestrel",
+    "brand_names": [
+      "Plan B One-Step",
+      "Mirena IUD",
+      "Skyla IUD",
+      "Kyleena IUD"
+    ],
+    "drug_class": "progestogen",
+    "subclass": "19-norprogesterone derived levonorgestrel",
+    "prototype_for": false,
+    "prototype_drug": "medroxyprogesterone",
+    "organ_systems": [
+      "endocrine",
+      "reproductive"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "progesterone receptor"
+    ],
+    "mechanism_summary": "Potent synthetic progestogen that prevents pregnancy via multiple mechanisms depending on dose and route: emergency contraceptive doses primarily delay or inhibit ovulation; lower IUD doses primarily thicken cervical mucus, thin endometrium, and alter tubal motility. Very low androgenic activity compared to older progestogens.",
+    "indications": [
+      "emergency contraception (Plan B: within 72\u2013120 hours)",
+      "long-term contraception (Mirena IUD up to 7\u20138 years)",
+      "heavy menstrual bleeding (Mirena)",
+      "endometriosis (Mirena)"
+    ],
+    "contraindications": [
+      "known pregnancy",
+      "uterine anomalies (for IUD)",
+      "acute pelvic inflammatory disease (IUD)",
+      "history of ectopic pregnancy (relative)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "irregular bleeding",
+        "headache (emergency contraceptive)",
+        "amenorrhea (IUD \u2014 desired)",
+        "dysmenorrhea (IUD insertion)"
+      ],
+      "serious": [
+        "ectopic pregnancy (especially if contraceptive failure)",
+        "IUD expulsion",
+        "uterine perforation (IUD insertion)",
+        "pelvic inflammatory disease (IUD)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral: rapid absorption; IUD: local release (~14\u201320 mcg/day Mirena)",
+      "distribution": "IUD: primarily local; oral: systemic distribution",
+      "metabolism": "hepatic",
+      "excretion": "renal and fecal",
+      "half_life": "~36 hours (oral); sustained local release (IUD)",
+      "onset": "hours (oral EC); days (IUD)",
+      "peak": "1\u20132 hours (oral)",
+      "duration": "single dose (EC); 7\u20138 years (Mirena IUD)",
+      "protein_binding": "97.5%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CYP3A4 inducers (rifampin, phenytoin)",
+        "mechanism": "reduced levonorgestrel levels; reduced emergency contraceptive efficacy",
+        "severity": "major"
+      },
+      {
+        "drug": "ulipristal acetate",
+        "mechanism": "progestogen may reduce ulipristal efficacy if taken within 5 days of UPA",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Emergency contraception: administer as soon as possible after unprotected sex; effective up to 72 hours (some evidence for up to 120 hours); less effective in women >165 lbs.",
+      "Counsel patients that emergency contraception does NOT cause abortion (works before implantation) and is not for regular use.",
+      "For Mirena IUD insertion: ensure no pregnancy before insertion; educate about cramping during/after placement.",
+      "Inform patients on enzyme-inducing medications that emergency contraceptive efficacy may be reduced; consider ulipristal acetate or copper IUD as alternative."
+    ],
+    "clinical_pearls": [
+      "The levonorgestrel IUD (Mirena) is one of the most effective contraceptives available (failure rate <0.1%) AND treats heavy menstrual bleeding by reducing endometrial thickness, making it a preferred option for women with HMB who also need contraception.",
+      "In overweight/obese women (>165 lbs), levonorgestrel emergency contraception has reduced efficacy; ulipristal acetate (ella) or copper IUD insertion are more reliable options."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "contraindicated",
+    "lactation_safety": "IUD compatible with breastfeeding; oral: generally compatible",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "emergency-contraception",
+      "long-term-contraception",
+      "heavy-menstrual-bleeding"
+    ],
+    "adverse_effect_tags": [
+      "ectopic-pregnancy-risk",
+      "IUD-complications"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine",
+        "reproductive"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "progesterone-receptor-agonism"
+      ],
+      "prototype_class": "progestogens",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "contraception",
+        "emergency-contraception"
+      ],
+      "adverse_cluster": [
+        "ectopic-pregnancy"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "norethindrone",
+    "generic_name": "norethindrone",
+    "brand_names": [
+      "Micronor",
+      "Errin",
+      "Camila",
+      "Aygestin"
+    ],
+    "drug_class": "progestogen",
+    "subclass": "19-nortestosterone progestogen \u2014 oral contraceptive and hormone therapy",
+    "prototype_for": false,
+    "prototype_drug": "medroxyprogesterone",
+    "organ_systems": [
+      "endocrine",
+      "reproductive"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "progesterone receptor"
+    ],
+    "mechanism_summary": "Progesterone receptor agonist that prevents pregnancy via thickening of cervical mucus, thinning of endometrium, and (at higher doses) inhibition of ovulation. Used as a progestin-only oral contraceptive ('mini-pill') and for management of endometriosis and abnormal uterine bleeding.",
+    "indications": [
+      "contraception (progestin-only pill)",
+      "endometriosis (Aygestin \u2014 norethindrone acetate)",
+      "abnormal uterine bleeding",
+      "secondary amenorrhea"
+    ],
+    "contraindications": [
+      "undiagnosed vaginal bleeding",
+      "known or suspected pregnancy",
+      "liver disease",
+      "breast cancer"
+    ],
+    "adverse_effects": {
+      "common": [
+        "irregular menstrual bleeding",
+        "amenorrhea",
+        "headache",
+        "breast tenderness",
+        "nausea"
+      ],
+      "serious": [
+        "ectopic pregnancy (if contraceptive failure)",
+        "VTE (lower risk than combination OCPs)",
+        "depression"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral; rapidly absorbed",
+      "distribution": "highly protein bound (SHBG, albumin)",
+      "metabolism": "hepatic; first-pass effect",
+      "excretion": "renal and fecal",
+      "half_life": "5\u201314 hours",
+      "onset": "hours",
+      "peak": "1\u20132 hours",
+      "duration": "24 hours (requires consistent daily dosing within 3-hour window)",
+      "protein_binding": "61% (albumin) + SHBG",
+      "vd": "4 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CYP3A4 inducers",
+        "mechanism": "reduced norethindrone levels; potential contraceptive failure",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Must be taken at the SAME TIME every day within a 3-hour window to maintain contraceptive efficacy; missing by more than 3 hours requires 48 hours of backup contraception.",
+      "Preferred oral contraceptive in breastfeeding women (no estrogen component means no reduction in milk supply).",
+      "Appropriate for women who cannot take estrogen: migraines with aura, VTE history, hypertension, age >35 and smoking.",
+      "Educate patients about irregular bleeding being common and expected; this does not indicate contraceptive failure."
+    ],
+    "clinical_pearls": [
+      "The progestin-only pill ('mini-pill') requires more strict daily dosing adherence than combination OCPs due to its shorter half-life; a 3-hour window for taking the pill (vs. 12 hours for combination pills) must be clearly communicated.",
+      "Norethindrone has moderate androgenic activity, which may contribute to acne in sensitive individuals \u2014 unlike desogestrel or norgestimate, which are preferred for patients with androgenic side effects."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "contraindicated",
+    "lactation_safety": "compatible with breastfeeding",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "contraception",
+      "endometriosis",
+      "abnormal-uterine-bleeding"
+    ],
+    "adverse_effect_tags": [
+      "irregular-bleeding",
+      "ectopic-pregnancy"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine",
+        "reproductive"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "progesterone-receptor-agonism"
+      ],
+      "prototype_class": "progestogens",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "contraception"
+      ],
+      "adverse_cluster": [
+        "ectopic-pregnancy"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "etonogestrel",
+    "generic_name": "etonogestrel",
+    "brand_names": [
+      "Nexplanon (subdermal implant)",
+      "NuvaRing (vaginal ring \u2014 combined with ethinyl estradiol)"
+    ],
+    "drug_class": "progestogen",
+    "subclass": "third-generation progestogen \u2014 long-acting implant",
+    "prototype_for": false,
+    "prototype_drug": "medroxyprogesterone",
+    "organ_systems": [
+      "endocrine",
+      "reproductive"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "progesterone receptor"
+    ],
+    "mechanism_summary": "Active metabolite of desogestrel; highly selective progesterone receptor agonist with low androgenic activity. In the subdermal implant (Nexplanon), etonogestrel suppresses ovulation primarily and secondarily thickens cervical mucus. Provides 3 years of highly effective contraception.",
+    "indications": [
+      "long-term contraception (Nexplanon implant up to 3 years)",
+      "short-term hormonal contraception (NuvaRing monthly)"
+    ],
+    "contraindications": [
+      "known pregnancy",
+      "undiagnosed vaginal bleeding",
+      "liver disease",
+      "breast cancer",
+      "history of thromboembolic disease (NuvaRing \u2014 has estrogen component)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "irregular menstrual bleeding (implant \u2014 most common reason for early removal)",
+        "amenorrhea",
+        "headache",
+        "breast tenderness"
+      ],
+      "serious": [
+        "ectopic pregnancy (if failure)",
+        "ovarian cysts (temporary)",
+        "implant migration (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "subdermal: continuous sustained release; peak levels in 4 days",
+      "distribution": "widely distributed",
+      "metabolism": "hepatic; CYP3A4",
+      "excretion": "renal and fecal",
+      "half_life": "25 hours",
+      "onset": "days (implant)",
+      "peak": "4 days (implant)",
+      "duration": "3 years (Nexplanon)",
+      "protein_binding": "~32% albumin, ~66% SHBG",
+      "vd": "201 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CYP3A4 inducers (rifampin, anticonvulsants)",
+        "mechanism": "increased etonogestrel metabolism; reduced contraceptive efficacy; alternative contraception needed",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Nexplanon is inserted subdermally in the inner upper arm by a trained healthcare provider; it is radiopaque for detection with standard X-ray if location is uncertain.",
+      "Insert during days 1\u20135 of menstrual cycle or immediately after abortion/delivery to ensure non-pregnancy.",
+      "Irregular bleeding is the most common cause of early removal; counsel extensively before insertion to set expectations.",
+      "Patients on enzyme-inducing medications (anticonvulsants, rifampin) should not rely solely on the implant for contraception; additional methods are required."
+    ],
+    "clinical_pearls": [
+      "The etonogestrel implant (Nexplanon) is the most effective reversible contraceptive available, with a failure rate of 0.01%/year \u2014 lower even than bilateral tubal ligation.",
+      "Etonogestrel's low androgenic activity (compared to older levonorgestrel-based progestogens) makes it less likely to cause androgenic side effects (acne, hirsutism) in sensitive patients."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "contraindicated",
+    "lactation_safety": "compatible with breastfeeding",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "long-term-contraception",
+      "contraception"
+    ],
+    "adverse_effect_tags": [
+      "irregular-bleeding"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine",
+        "reproductive"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "progesterone-receptor-agonism"
+      ],
+      "prototype_class": "progestogens",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "contraception"
+      ],
+      "adverse_cluster": [],
+      "interaction_cluster": [
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "oxytocin",
+    "generic_name": "oxytocin",
+    "brand_names": [
+      "Pitocin",
+      "Syntocinon"
+    ],
+    "drug_class": "oxytocic agent",
+    "subclass": "synthetic posterior pituitary hormone",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine",
+      "reproductive"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "oxytocin receptor (OXTR) in myometrium",
+      "myoepithelial cells in mammary gland"
+    ],
+    "mechanism_summary": "Binds oxytocin receptors in the myometrium, activating phospholipase C and increasing intracellular calcium, causing uterine contractions. Increases frequency and strength of contractions. Also stimulates milk ejection reflex via action on mammary myoepithelial cells.",
+    "indications": [
+      "induction of labor at term",
+      "augmentation of labor (insufficient contractions)",
+      "prevention and treatment of postpartum hemorrhage",
+      "management of incomplete/inevitable abortion"
+    ],
+    "contraindications": [
+      "fetal malpresentation (some)",
+      "placenta previa",
+      "prior classic uterine incision",
+      "contraindications to vaginal delivery"
+    ],
+    "adverse_effects": {
+      "common": [
+        "uterine hyperstimulation (contractions too frequent/too long)",
+        "nausea",
+        "vomiting",
+        "fetal heart rate abnormalities"
+      ],
+      "serious": [
+        "uterine rupture",
+        "hyponatremia (with excess IV fluid \u2014 antidiuretic effect at high doses)",
+        "fetal distress/asphyxia",
+        "hypotension (rapid IV bolus)",
+        "amniotic fluid embolism (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IV infusion; nasal spray for milk letdown",
+      "distribution": "distributed to extracellular fluid",
+      "metabolism": "plasma oxytocinase (oxytocinase enzyme) and hepatic metabolism",
+      "excretion": "renal",
+      "half_life": "1\u20136 minutes",
+      "onset": "immediate (IV)",
+      "peak": "minutes",
+      "duration": "1 hour (after stopping infusion)",
+      "protein_binding": "30%",
+      "vd": "0.3 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "vasoconstrictors",
+        "mechanism": "additive vasopressor effects; severe hypertension when given with vasoconstrictors",
+        "severity": "major"
+      },
+      {
+        "drug": "prostaglandins",
+        "mechanism": "additive uterotonic effect; risk of excessive uterine stimulation",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer via IV infusion pump ONLY; titrate rate in small increments every 20\u201340 minutes based on contraction frequency; never administer as a rapid IV bolus in labor (hypotension risk).",
+      "Monitor uterine contractions (should not exceed 5 in 10 minutes), fetal heart rate, and maternal vital signs continuously.",
+      "If uterine hyperstimulation occurs: stop infusion, position patient in left lateral decubitus, provide oxygen, notify provider.",
+      "For postpartum hemorrhage: 10\u201340 units in 1L IV fluid at a rate sufficient to control uterine atony; monitor for hyponatremia with large volumes."
+    ],
+    "clinical_pearls": [
+      "Oxytocin is the single most common cause of preventable harm in obstetrics \u2014 overdose causes uterine tachysystole, uterine rupture, and fetal hypoxia; proper infusion pump management and continuous electronic fetal monitoring are mandatory.",
+      "At doses used for postpartum hemorrhage, oxytocin has significant antidiuretic (ADH-like) properties; large volumes of hypotonic IV fluids with high-dose oxytocin can cause life-threatening dilutional hyponatremia."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "indicated for labor induction; monitor for hyperstimulation",
+    "lactation_safety": "compatible; used to stimulate letdown",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "labor-induction",
+      "postpartum-hemorrhage",
+      "augmentation-of-labor"
+    ],
+    "adverse_effect_tags": [
+      "uterine-hyperstimulation",
+      "hyponatremia",
+      "uterine-rupture"
+    ],
+    "interaction_tags": [
+      "vasopressor-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine",
+        "reproductive"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "oxytocin-receptor-agonism"
+      ],
+      "prototype_class": "oxytocic agents",
+      "adme_profile": "plasma-enzymatic-degradation",
+      "presentation_cluster": [
+        "labor-induction",
+        "postpartum-hemorrhage"
+      ],
+      "adverse_cluster": [
+        "uterine-hyperstimulation",
+        "hyponatremia"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "testosterone",
+    "generic_name": "testosterone",
+    "brand_names": [
+      "Androgel",
+      "Testim",
+      "Axiron",
+      "Depo-Testosterone"
+    ],
+    "drug_class": "androgen",
+    "subclass": "natural androgen / anabolic steroid",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine",
+      "reproductive"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "androgen receptor (AR)"
+    ],
+    "mechanism_summary": "Binds androgen receptors in target tissues (reproductive tract, skeletal muscle, bone, CNS, prostate). AR-testosterone complex acts as a transcription factor activating androgen response elements, mediating anabolic (muscle, bone mass) and androgenic (virilization) effects. Partially converted to DHT (dihydrotestosterone) by 5-alpha reductase and to estradiol by aromatase.",
+    "indications": [
+      "male hypogonadism (primary or secondary)",
+      "delayed puberty in males",
+      "hormone replacement in transgender men",
+      "female-to-male transition"
+    ],
+    "contraindications": [
+      "prostate cancer",
+      "male breast cancer",
+      "women (relative; specific circumstances with monitoring)",
+      "serious cardiac, hepatic, or renal disease"
+    ],
+    "adverse_effects": {
+      "common": [
+        "erythrocytosis (elevated hematocrit)",
+        "acne",
+        "oily skin",
+        "sleep apnea exacerbation",
+        "testicular atrophy",
+        "infertility"
+      ],
+      "serious": [
+        "cardiovascular events (polycythemia, thrombosis)",
+        "prostate cancer stimulation",
+        "hepatotoxicity (oral 17-alpha-alkylated forms)",
+        "secondary exposure to topicals (children, women)",
+        "gynecomastia (from aromatization to estradiol)"
+      ]
+    },
+    "black_box_warnings": [
+      "testosterone has been associated with serious cardiovascular adverse events; potential risk of pulmonary oil microembolism with some injectable forms"
+    ],
+    "pharmacokinetics": {
+      "absorption": "topical (gel): ~10% absorbed; IM depot (cypionate, enanthate): slow absorption from oil depot",
+      "distribution": "98% protein bound (SHBG 44%, albumin 54%)",
+      "metabolism": "hepatic; converts to DHT (5-alpha reductase) and estradiol (aromatase)",
+      "excretion": "renal (90%) and fecal (6%)",
+      "half_life": "10\u2013100 min (endogenous); 8 days (cypionate ester depot)",
+      "onset": "weeks (clinical effects)",
+      "peak": "varies by formulation",
+      "duration": "1\u20134 weeks (IM); daily (topical)",
+      "protein_binding": "98%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "warfarin",
+        "mechanism": "testosterone potentiates anticoagulant effect; increased bleeding risk",
+        "severity": "major"
+      },
+      {
+        "drug": "insulin",
+        "mechanism": "testosterone improves insulin sensitivity; hypoglycemia risk in diabetics",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor hematocrit at baseline, 3 months, and annually; hold if hematocrit >54% due to thrombosis risk.",
+      "Topical gels: educate patient about secondary exposure risk; apply to shoulders/upper arms; wash hands after application; cover with clothing; avoid skin-to-skin contact with women or children.",
+      "Monitor PSA (prostate-specific antigen) and DRE annually in men over 40; do not initiate if suspected prostate cancer.",
+      "Check LFTs and lipid panel at baseline and periodically; some testosterone formulations cause adverse lipid changes."
+    ],
+    "clinical_pearls": [
+      "Testosterone therapy in male hypogonadism causes azoospermia/oligospermia by suppressing intratesticular testosterone production via the HPG axis; men wishing to preserve fertility should use human chorionic gonadotropin (hCG) instead.",
+      "Oral 17-alpha-alkylated testosterone (methyltestosterone) should be avoided due to significant hepatotoxicity; transdermal, injectable, and buccal forms are preferred."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "contraindicated (virilization of female fetus)",
+    "lactation_safety": "contraindicated",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "hypogonadism",
+      "delayed-puberty",
+      "hormone-replacement"
+    ],
+    "adverse_effect_tags": [
+      "erythrocytosis",
+      "cardiovascular-risk",
+      "prostate-cancer-risk"
+    ],
+    "interaction_tags": [
+      "warfarin-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine",
+        "reproductive"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "androgen-receptor-agonism"
+      ],
+      "prototype_class": "androgens",
+      "adme_profile": "hepatically-metabolized",
+      "presentation_cluster": [
+        "hypogonadism"
+      ],
+      "adverse_cluster": [
+        "erythrocytosis",
+        "cardiovascular-risk"
+      ],
+      "interaction_cluster": [
+        "warfarin-interaction"
+      ]
+    }
+  },
+  {
+    "id": "sildenafil",
+    "generic_name": "sildenafil",
+    "brand_names": [
+      "Viagra",
+      "Revatio"
+    ],
+    "drug_class": "PDE-5 inhibitor",
+    "subclass": "phosphodiesterase type-5 inhibitor",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "reproductive",
+      "cardiovascular"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "phosphodiesterase type-5 (PDE-5)"
+    ],
+    "mechanism_summary": "Inhibits PDE-5, the enzyme that degrades cyclic GMP (cGMP) in smooth muscle cells. In penile erectile tissue, sexual stimulation releases nitric oxide (NO), which activates guanylyl cyclase to produce cGMP, causing smooth muscle relaxation and increased blood flow; PDE-5 inhibition prolongs cGMP accumulation, enhancing and sustaining erections. In pulmonary vasculature (Revatio), the same mechanism produces pulmonary arterial vasodilation.",
+    "indications": [
+      "erectile dysfunction (Viagra)",
+      "pulmonary arterial hypertension (Revatio)",
+      "Raynaud's phenomenon (off-label)"
+    ],
+    "contraindications": [
+      "concurrent nitrate use (organic nitrates \u2014 contraindicated; severe hypotension)",
+      "concurrent alpha-blocker use (use cautiously; some are acceptable)",
+      "recent myocardial infarction or stroke (<6 months)",
+      "hypotension"
+    ],
+    "adverse_effects": {
+      "common": [
+        "headache (most common)",
+        "flushing",
+        "dyspepsia",
+        "nasal congestion",
+        "visual disturbances (blue-green color tingling)"
+      ],
+      "serious": [
+        "severe hypotension (with nitrates)",
+        "priapism",
+        "non-arteritic anterior ischemic optic neuropathy (NAION)",
+        "sudden hearing loss",
+        "cardiovascular events in susceptible patients"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~41% (high-fat meal reduces Cmax and delays absorption)",
+      "distribution": "Vd ~105 L; 96% protein bound",
+      "metabolism": "hepatic via CYP3A4 (major) and CYP2C9 (minor) to active metabolite N-desmethylsildenafil",
+      "excretion": "fecal (80%) and renal (13%)",
+      "half_life": "3\u20135 hours",
+      "onset": "30\u201360 minutes",
+      "peak": "0.5\u20132 hours",
+      "duration": "4\u20136 hours",
+      "protein_binding": "96%",
+      "vd": "105 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "nitrates (nitroglycerin, isosorbide)",
+        "mechanism": "synergistic cGMP elevation causes catastrophic hypotension; ABSOLUTE CONTRAINDICATION",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "ritonavir, ketoconazole (CYP3A4 inhibitors)",
+        "mechanism": "dramatically increase sildenafil levels (11-fold with ritonavir); dose reduction required",
+        "severity": "major"
+      },
+      {
+        "drug": "alpha-blockers (tamsulosin, doxazosin)",
+        "mechanism": "additive hypotension; use caution with timing",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "CRITICAL: absolute contraindication with any nitrate (nitroglycerin, isosorbide mononitrate/dinitrate, amyl nitrite); severe life-threatening hypotension can occur; if patient takes nitroglycerin, sildenafil is contraindicated.",
+      "Advise patients to take 30\u201360 minutes before sexual activity; avoid high-fat meals which delay onset.",
+      "For pulmonary hypertension (Revatio): administered three times daily; monitor blood pressure and exercise tolerance regularly.",
+      "Counsel patients to seek emergency care for erection lasting >4 hours (priapism) and for sudden vision or hearing changes."
+    ],
+    "clinical_pearls": [
+      "Sildenafil was initially developed as an anti-anginal agent; its erectile effects were discovered incidentally in phase II trials, leading to one of the most commercially successful drug repurposings in history.",
+      "The absolute contraindication with nitrates is the most important clinical safety rule: even if nitrates are needed urgently for chest pain in a patient who took sildenafil, nitrates must be withheld for 24\u201348 hours (or longer with tadalafil)."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "not indicated in women (Revatio: limited data; use cautiously in PAH)",
+    "lactation_safety": "not indicated in women",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "erectile-dysfunction",
+      "pulmonary-arterial-hypertension"
+    ],
+    "adverse_effect_tags": [
+      "hypotension",
+      "priapism",
+      "NAION",
+      "hearing-loss"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate",
+      "nitrate-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "reproductive",
+        "cardiovascular"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "PDE-5-inhibition"
+      ],
+      "prototype_class": "PDE-5 inhibitors",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "erectile-dysfunction",
+        "pulmonary-arterial-hypertension"
+      ],
+      "adverse_cluster": [
+        "hypotension"
+      ],
+      "interaction_cluster": [
+        "nitrate-interaction",
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "tamsulosin",
+    "generic_name": "tamsulosin",
+    "brand_names": [
+      "Flomax"
+    ],
+    "drug_class": "selective alpha-1A/1D adrenergic antagonist",
+    "subclass": "uroselective alpha-1 blocker",
+    "prototype_for": false,
+    "prototype_drug": "doxazosin",
+    "organ_systems": [
+      "reproductive",
+      "cardiovascular"
+    ],
+    "therapeutic_classes": [
+      "adrenergic"
+    ],
+    "mechanism_targets": [
+      "alpha-1A adrenergic receptors (prostate, bladder neck, urethra)",
+      "alpha-1D receptors (detrusor)"
+    ],
+    "mechanism_summary": "Selective antagonist of alpha-1A and alpha-1D adrenergic receptors in the prostate, bladder neck, and urethra. Blockade relaxes smooth muscle in these structures, reducing urethral resistance and improving urinary flow rate in benign prostatic hyperplasia (BPH). More uroselective than doxazosin or terazosin, producing less systemic hypotension.",
+    "indications": [
+      "benign prostatic hyperplasia (BPH) \u2014 symptomatic lower urinary tract symptoms",
+      "ureteral calculi (facilitates passage \u2014 off-label)"
+    ],
+    "contraindications": [
+      "hypersensitivity to tamsulosin",
+      "caution with strong CYP3A4 inhibitors"
+    ],
+    "adverse_effects": {
+      "common": [
+        "dizziness",
+        "orthostatic hypotension (less than non-selective alpha-blockers)",
+        "rhinitis",
+        "ejaculatory dysfunction (retrograde ejaculation)",
+        "headache"
+      ],
+      "serious": [
+        "intraoperative floppy iris syndrome (IFIS) \u2014 iris floppiness during cataract surgery",
+        "priapism (rare)",
+        "first-dose hypotension (less common than non-selective alpha-blockers)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~100%; slow absorption due to modified-release capsule",
+      "distribution": "94\u201399% protein bound",
+      "metabolism": "hepatic via CYP3A4 and CYP2D6",
+      "excretion": "renal (76%)",
+      "half_life": "9\u201313 hours",
+      "onset": "days to 2 weeks",
+      "peak": "4\u20136 hours",
+      "duration": "24 hours",
+      "protein_binding": "94\u201399%",
+      "vd": "16 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "PDE-5 inhibitors (sildenafil, tadalafil)",
+        "mechanism": "additive blood pressure lowering; use cautiously; separate timing if possible",
+        "severity": "moderate"
+      },
+      {
+        "drug": "strong CYP3A4 inhibitors (ketoconazole)",
+        "mechanism": "increase tamsulosin exposure; use with caution",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "CRITICAL: Inform ophthalmologist about tamsulosin use BEFORE any eye surgery, especially cataract surgery. IFIS (intraoperative floppy iris syndrome) can cause surgical complications even after tamsulosin is discontinued.",
+      "Administer 30 minutes after the same meal each day to maintain consistent drug levels.",
+      "Counsel patients about orthostatic hypotension risk, especially during initial therapy; rise slowly from sitting/lying position.",
+      "Ejaculatory dysfunction (retrograde ejaculation) is common but reversible upon discontinuation; discuss with patients who are planning conception."
+    ],
+    "clinical_pearls": [
+      "Tamsulosin's uroselective alpha-1A receptor profile means it produces significantly less orthostatic hypotension than non-selective alpha-blockers (doxazosin, prazosin, terazosin), but the IFIS risk during cataract surgery persists even months after discontinuation.",
+      "Alpha-1 blockers provide rapid symptomatic relief of BPH (within days), while 5-alpha reductase inhibitors (finasteride, dutasteride) require months for effect but reduce prostate volume and long-term risk of urinary retention."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "not indicated in women",
+    "lactation_safety": "not indicated in women",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "BPH",
+      "lower-urinary-tract-symptoms",
+      "ureteral-stone"
+    ],
+    "adverse_effect_tags": [
+      "IFIS",
+      "orthostatic-hypotension",
+      "ejaculatory-dysfunction"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate",
+      "CYP2D6-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "reproductive",
+        "cardiovascular"
+      ],
+      "therapeutic_class": [
+        "adrenergic"
+      ],
+      "mechanism_family": [
+        "alpha-1-adrenergic-blockade"
+      ],
+      "prototype_class": "alpha-1 adrenergic antagonists",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "BPH"
+      ],
+      "adverse_cluster": [
+        "IFIS",
+        "orthostatic-hypotension"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "mirabegron",
+    "generic_name": "mirabegron",
+    "brand_names": [
+      "Myrbetriq"
+    ],
+    "drug_class": "beta-3 adrenergic agonist",
+    "subclass": "selective beta-3 agonist for overactive bladder",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "reproductive"
+    ],
+    "therapeutic_classes": [
+      "adrenergic"
+    ],
+    "mechanism_targets": [
+      "beta-3 adrenergic receptor (detrusor smooth muscle)"
+    ],
+    "mechanism_summary": "Selectively activates beta-3 adrenergic receptors in detrusor smooth muscle, stimulating adenylyl cyclase and increasing cAMP, which relaxes the bladder muscle during the filling phase and increases bladder capacity. Unlike antimuscarinics, this mechanism does not affect bladder emptying or cause dry mouth/constipation.",
+    "indications": [
+      "overactive bladder (urge incontinence, urgency, urinary frequency)",
+      "neurogenic detrusor overactivity"
+    ],
+    "contraindications": [
+      "severe uncontrolled hypertension",
+      "hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "hypertension (increased blood pressure)",
+        "nasopharyngitis",
+        "urinary tract infections",
+        "headache"
+      ],
+      "serious": [
+        "urinary retention (in patients with bladder outlet obstruction)",
+        "tachycardia (QTc prolongation reported at supratherapeutic doses)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~29\u201335%",
+      "distribution": "71% protein bound",
+      "metabolism": "multiple pathways: CYP3A4, MAO, COMT, amide hydrolysis",
+      "excretion": "renal (55%) and fecal (34%)",
+      "half_life": "50 hours",
+      "onset": "weeks for full effect",
+      "peak": "3\u20134 hours",
+      "duration": "24 hours",
+      "protein_binding": "71%",
+      "vd": "1670 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "digoxin",
+        "mechanism": "mirabegron inhibits P-gp and CYP2D6; increases digoxin levels; monitor digoxin",
+        "severity": "major"
+      },
+      {
+        "drug": "metoprolol",
+        "mechanism": "CYP2D6 inhibition increases metoprolol levels",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor blood pressure before initiation and periodically; mirabegron raises blood pressure and is contraindicated in severe uncontrolled hypertension.",
+      "Unlike antimuscarinics, mirabegron has no anticholinergic side effects \u2014 no dry mouth, constipation, or cognitive effects; preferred in elderly patients.",
+      "Ensure patients have adequate bladder emptying ability; use with caution in patients with BPH or partial outlet obstruction (urinary retention risk).",
+      "Educate patients to take consistently with or without food; full effect may take several weeks."
+    ],
+    "clinical_pearls": [
+      "Mirabegron is the first-in-class beta-3 agonist for overactive bladder, providing an alternative mechanism to antimuscarinics (oxybutynin, tolterodine) without the troublesome anticholinergic effects that often limit adherence.",
+      "The Beers criteria recommend antimuscarinics for OAB be avoided in elderly patients due to cognitive effects; mirabegron is increasingly preferred as the first-line OAB treatment in older adults."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "limited data; avoid",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "overactive-bladder",
+      "urge-incontinence"
+    ],
+    "adverse_effect_tags": [
+      "hypertension",
+      "urinary-retention"
+    ],
+    "interaction_tags": [
+      "P-gp-inhibition",
+      "CYP2D6-inhibition"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "reproductive"
+      ],
+      "therapeutic_class": [
+        "adrenergic"
+      ],
+      "mechanism_family": [
+        "beta-3-adrenergic-agonism"
+      ],
+      "prototype_class": "beta-3 adrenergic agonists",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "overactive-bladder"
+      ],
+      "adverse_cluster": [
+        "hypertension"
+      ],
+      "interaction_cluster": [
+        "P-gp-inhibition",
+        "CYP2D6-inhibition"
+      ]
+    }
   }
 ]
