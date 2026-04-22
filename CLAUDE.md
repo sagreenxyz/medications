@@ -1060,19 +1060,86 @@ Phase 3.
 
 ---
 
-## 12. Session Continuity Protocol
+## 12. Agent Session Protocol
 
-At the start of every new Claude Code session on this project:
+### At the START of every session:
 
 1. Read this entire `CLAUDE.md` file before taking any action.
-2. Run `git status` and `git log --oneline -20` to determine current state.
-3. Identify the last completed phase by checking which directories and files
-   exist and whether they are populated.
-4. Report your assessment of current phase completion before proceeding.
+2. Read `STATUS.md` in full — specifically the **Last Session Summary** block
+   at the top.
+3. Run `git status` and `git log --oneline -20` to confirm current state.
+4. Do **NOT** begin any work until you have confirmed the exact resume point
+   from the Last Session Summary. If STATUS.md does not have a Last Session
+   Summary, run `git log --oneline -10` to reconstruct state from commit
+   messages.
 5. Never regenerate files that already exist and are populated correctly —
    check before writing.
-6. If `data/drugs.json` does not yet exist or is incomplete, stop and complete
-   Phase 1 before all other work.
+6. If `data/drugs.json` does not yet exist or has fewer than 500 entries, the
+   current phase is Phase 1. Consult the Phase 1 task table in STATUS.md to
+   find the next unclaimed task and work only that task.
+
+### At the END of every session (or if interrupted):
+
+1. **Update STATUS.md immediately — before any other cleanup.**
+2. Fill in the **Last Session Summary** block at the top of STATUS.md with:
+   - Date of session
+   - Exactly which work was completed (file names, line ranges, task IDs)
+   - Exactly where work was interrupted, if applicable
+   - The precise resume point for the next agent
+   - Files modified this session
+   - Any known issues introduced
+3. Mark all completed drug data tasks in the Phase 1 task table as ✅ Complete.
+4. Mark the in-progress task as 🔶 Partial with a note about where it stopped.
+5. Commit STATUS.md with message: `chore: update STATUS.md — session end YYYY-MM-DD`
+6. Commit all in-progress data files even if incomplete, with message:
+   `wip: [system] drugs — stopped at [drug-name]`
+
+### Commit message conventions:
+```
+data: complete task CV-05 — 3 non-selective beta-blockers
+data: complete task CNS-08 — SSRIs (6 drugs)
+wip: CNS drugs — stopped at sertraline mid-entry (discarded, resume at sertraline)
+chore: update STATUS.md — session end 2026-04-22
+feat: build Nav.astro with schema dropdown and mobile drawer
+```
+
+---
+
+## 13. Drug Data Entry Protocol (Phase 1)
+
+Each session working on `drugs.json` MUST follow this protocol exactly:
+
+### Claiming a task:
+1. Open STATUS.md and find the **Phase 1 Drug Data Task Table**.
+2. Identify the first task marked ❌ Not started.
+3. Mark it 🔄 In Progress with today's date **before writing any drug data**.
+4. Commit the STATUS.md change immediately:
+   `chore: claim task [ID] — starting [drug class]`
+5. Work **only that task** to completion. Do not begin a second task until the
+   first is committed.
+
+### Writing drug entries:
+1. Each entry must completely satisfy the schema defined in Section 6.
+   A partial entry MUST NOT be committed to `drugs.json`.
+2. If a session ends before a drug entry is finished, **discard that incomplete
+   entry**. Record the drug name in the Last Session Summary as the resume
+   point. Commit only the fully-populated entries before it.
+3. Validate JSON after every entry batch:
+   ```bash
+   node -e "JSON.parse(require('fs').readFileSync('data/drugs.json','utf8')); console.log('Valid JSON')"
+   ```
+   A broken `drugs.json` blocks the entire build and all downstream work.
+
+### Committing completed task:
+1. Commit with message: `data: complete task [ID] — [count] [drug class] drugs`
+2. Immediately update STATUS.md: mark the task ✅ Complete with the count.
+3. Fill in the Last Session Summary block.
+
+### Task size guidance:
+- Target 5–10 drug entries per task (one drug class or closely related group).
+- If a class has >10 drugs, split it into subtasks (e.g., CNS-15a, CNS-15b).
+- CNS-15 (ADHD + Alzheimer's + Parkinson's, 23 drugs) must be split.
+- Complete one full task before beginning a new one.
 
 ---
 
