@@ -16158,5 +16158,4497 @@
       "adverse_cluster": [],
       "interaction_cluster": []
     }
+  },
+  {
+    "id": "phenytoin",
+    "generic_name": "phenytoin",
+    "brand_names": [
+      "Dilantin",
+      "Phenytek"
+    ],
+    "drug_class": "antiepileptic",
+    "subclass": "hydantoin",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "ion-channel"
+    ],
+    "mechanism_targets": [
+      "voltage-gated sodium channels"
+    ],
+    "mechanism_summary": "Blocks voltage-gated sodium channels in their inactivated state, stabilizing neuronal membranes and reducing repetitive firing.",
+    "indications": [
+      "tonic-clonic seizures",
+      "focal seizures",
+      "status epilepticus (IV)",
+      "cardiac arrhythmias (IV)"
+    ],
+    "contraindications": [
+      "sinus bradycardia",
+      "SA block",
+      "second/third-degree AV block",
+      "Adams-Stokes syndrome",
+      "concurrent delavirdine use"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nystagmus",
+        "ataxia",
+        "diplopia",
+        "gingival hyperplasia",
+        "hirsutism",
+        "coarsening of facial features"
+      ],
+      "serious": [
+        "Stevens-Johnson syndrome",
+        "toxic epidermal necrolysis",
+        "hepatotoxicity",
+        "blood dyscrasias",
+        "purple glove syndrome (IV)"
+      ]
+    },
+    "black_box_warnings": [
+      "IV administration: hypotension and cardiac arrhythmias require cardiac monitoring"
+    ],
+    "pharmacokinetics": {
+      "absorption": "Oral bioavailability ~90%; highly variable due to saturable (zero-order) kinetics",
+      "distribution": "Highly protein-bound (~90% albumin); Vd 0.6\u20130.8 L/kg; crosses BBB",
+      "metabolism": "Hepatic via CYP2C9 and CYP2C19; saturable kinetics \u2014 small dose increases cause large level increases",
+      "excretion": "Renal as hydroxylated metabolites; <5% unchanged",
+      "half_life": "7\u201342 hours (dose-dependent)",
+      "onset": "IV: minutes; oral: 2\u20134 hours",
+      "peak": "4\u201312 hours (oral extended release)",
+      "duration": "24 hours",
+      "protein_binding": "~90%",
+      "vd": "0.6\u20130.8 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "warfarin",
+        "mechanism": "CYP2C9 induction reduces warfarin levels",
+        "severity": "major"
+      },
+      {
+        "drug": "valproate",
+        "mechanism": "displaces phenytoin from protein binding; complex interaction",
+        "severity": "major"
+      },
+      {
+        "drug": "oral contraceptives",
+        "mechanism": "CYP induction reduces contraceptive efficacy",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor free and total phenytoin levels; therapeutic range 10\u201320 mcg/mL (total) or 1\u20132 mcg/mL (free); check free levels in hypoalbuminemia",
+      "IV phenytoin: administer no faster than 50 mg/min in adults; monitor ECG and BP continuously; use normal saline only (precipitates in dextrose)",
+      "Monitor for signs of toxicity: nystagmus at 20 mcg/mL, ataxia at 30 mcg/mL, lethargy at >40 mcg/mL",
+      "Educate patient about gingival hygiene, avoid abrupt discontinuation, and the extensive drug interaction profile"
+    ],
+    "clinical_pearls": [
+      "Phenytoin exhibits zero-order (saturable) kinetics at therapeutic levels \u2014 small dose increases can cause disproportionately large rises in serum concentration",
+      "Fosphenytoin is a prodrug preferred IV/IM because it avoids the propylene glycol toxicity and injection site reactions of phenytoin"
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category D \u2014 associated with fetal hydantoin syndrome",
+    "lactation_safety": "use with caution",
+    "tdm_required": true,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "seizure",
+      "status-epilepticus",
+      "epilepsy"
+    ],
+    "adverse_effect_tags": [
+      "nystagmus",
+      "ataxia",
+      "gingival-hyperplasia",
+      "Stevens-Johnson",
+      "hepatotoxicity"
+    ],
+    "interaction_tags": [
+      "CYP2C9-inducer",
+      "CYP3A4-inducer",
+      "narrow-therapeutic-index"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "ion-channel"
+      ],
+      "mechanism_family": [
+        "sodium-channel-blockade"
+      ],
+      "prototype_class": "Hydantoin antiepileptics",
+      "adme_profile": "hepatically-metabolized-CYP2C9",
+      "presentation_cluster": [
+        "seizure",
+        "status-epilepticus"
+      ],
+      "adverse_cluster": [
+        "Stevens-Johnson",
+        "hepatotoxicity"
+      ],
+      "interaction_cluster": [
+        "CYP-inducer",
+        "narrow-therapeutic-index"
+      ]
+    }
+  },
+  {
+    "id": "carbamazepine",
+    "generic_name": "carbamazepine",
+    "brand_names": [
+      "Tegretol",
+      "Carbatrol",
+      "Equetro"
+    ],
+    "drug_class": "antiepileptic",
+    "subclass": "iminostilbene",
+    "prototype_for": false,
+    "prototype_drug": "phenytoin",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "ion-channel"
+    ],
+    "mechanism_targets": [
+      "voltage-gated sodium channels"
+    ],
+    "mechanism_summary": "Blocks voltage-gated sodium channels in the inactivated state, reducing sustained repetitive neuronal firing; also used in neuropathic pain and bipolar disorder via sodium and calcium channel modulation.",
+    "indications": [
+      "focal and generalized tonic-clonic seizures",
+      "trigeminal neuralgia",
+      "bipolar disorder (manic episodes)"
+    ],
+    "contraindications": [
+      "bone marrow suppression history",
+      "MAOIs within 14 days",
+      "patients of Han Chinese or Thai descent without HLA-B*1502 testing (SJS risk)",
+      "hepatic porphyria"
+    ],
+    "adverse_effects": {
+      "common": [
+        "diplopia",
+        "ataxia",
+        "dizziness",
+        "nausea",
+        "leukopenia"
+      ],
+      "serious": [
+        "aplastic anemia",
+        "agranulocytosis",
+        "Stevens-Johnson syndrome",
+        "DRESS syndrome",
+        "SIADH",
+        "hepatotoxicity"
+      ]
+    },
+    "black_box_warnings": [
+      "aplastic anemia and agranulocytosis \u2014 obtain CBC before and during therapy",
+      "serious dermatologic reactions (SJS/TEN) \u2014 screen HLA-B*1502 in at-risk populations"
+    ],
+    "pharmacokinetics": {
+      "absorption": "Slowly absorbed; bioavailability ~80%",
+      "distribution": "Protein binding ~75%; Vd 0.8\u20131.9 L/kg; crosses BBB and placenta",
+      "metabolism": "CYP3A4 (primarily); auto-induces own metabolism \u2014 half-life shortens with chronic use from ~36 hours to 12\u201317 hours",
+      "excretion": "Urine 72%, feces 28%; <3% unchanged",
+      "half_life": "12\u201317 hours (chronic; initially 25\u201365 hours)",
+      "onset": "Days to weeks for full effect",
+      "peak": "4\u20135 hours (immediate release)",
+      "duration": "12\u201324 hours",
+      "protein_binding": "~75%",
+      "vd": "0.8\u20131.9 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "oral contraceptives",
+        "mechanism": "CYP3A4 induction reduces contraceptive levels",
+        "severity": "major"
+      },
+      {
+        "drug": "valproate",
+        "mechanism": "carbamazepine metabolism increased; valproate levels decreased",
+        "severity": "moderate"
+      },
+      {
+        "drug": "MAOIs",
+        "mechanism": "structural similarity to TCAs; serotonin syndrome/hypertensive crisis risk",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Obtain baseline CBC and LFTs; monitor CBC every 2\u20134 weeks for first 3 months; hold if ANC <1500/mm\u00b3",
+      "Therapeutic serum level: 4\u201312 mcg/mL; monitor levels 2\u20134 weeks after dose changes due to auto-induction",
+      "Screen patients of Asian descent for HLA-B*1502 allele before initiation to assess Stevens-Johnson syndrome risk",
+      "Instruct patient to report rash, fever, oral sores, or unusual bruising immediately; avoid abrupt discontinuation"
+    ],
+    "clinical_pearls": [
+      "Carbamazepine auto-induces CYP3A4, causing its own half-life to decrease by 50% over the first months of therapy \u2014 levels must be rechecked after 4\u20136 weeks",
+      "First-line for trigeminal neuralgia; the number needed to treat (NNT) for pain relief is approximately 2"
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category D \u2014 associated with neural tube defects and facial anomalies",
+    "lactation_safety": "use with caution",
+    "tdm_required": true,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "seizure",
+      "trigeminal-neuralgia",
+      "bipolar-disorder"
+    ],
+    "adverse_effect_tags": [
+      "aplastic-anemia",
+      "Stevens-Johnson",
+      "SIADH",
+      "hepatotoxicity",
+      "leukopenia"
+    ],
+    "interaction_tags": [
+      "CYP3A4-inducer",
+      "CYP2C9-inducer",
+      "narrow-therapeutic-index"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "ion-channel"
+      ],
+      "mechanism_family": [
+        "sodium-channel-blockade"
+      ],
+      "prototype_class": "Hydantoin antiepileptics",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "seizure",
+        "bipolar-disorder"
+      ],
+      "adverse_cluster": [
+        "Stevens-Johnson",
+        "aplastic-anemia"
+      ],
+      "interaction_cluster": [
+        "CYP-inducer",
+        "narrow-therapeutic-index"
+      ]
+    }
+  },
+  {
+    "id": "valproate",
+    "generic_name": "valproic acid / valproate sodium",
+    "brand_names": [
+      "Depakote",
+      "Depakene",
+      "Depacon"
+    ],
+    "drug_class": "antiepileptic / mood stabilizer",
+    "subclass": "branched-chain fatty acid",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "ion-channel"
+    ],
+    "mechanism_targets": [
+      "voltage-gated sodium channels",
+      "GABA transaminase"
+    ],
+    "mechanism_summary": "Blocks voltage-gated sodium channels and T-type calcium channels; inhibits GABA transaminase, increasing brain GABA levels; also inhibits histone deacetylase.",
+    "indications": [
+      "absence seizures (drug of choice)",
+      "generalized tonic-clonic seizures",
+      "bipolar disorder (mania and maintenance)",
+      "migraine prophylaxis"
+    ],
+    "contraindications": [
+      "hepatic disease or significant hepatic dysfunction",
+      "urea cycle disorders",
+      "mitochondrial disorders (Alpers syndrome)",
+      "pregnancy (neural tube defects)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "vomiting",
+        "weight gain",
+        "tremor",
+        "alopecia",
+        "sedation",
+        "thrombocytopenia"
+      ],
+      "serious": [
+        "hepatotoxicity (especially in children <2 years)",
+        "pancreatitis",
+        "teratogenicity (neural tube defects, spina bifida)",
+        "hyperammonemia encephalopathy"
+      ]
+    },
+    "black_box_warnings": [
+      "hepatotoxicity \u2014 fatal cases reported, especially in children <2 years and polytherapy",
+      "pancreatitis \u2014 may be fatal",
+      "teratogenicity \u2014 major congenital malformations including spina bifida; contraindicated for migraine prophylaxis in pregnancy"
+    ],
+    "pharmacokinetics": {
+      "absorption": "Nearly complete oral absorption; delayed with enteric-coated formulation",
+      "distribution": "Protein binding ~90% (saturable); Vd 0.1\u20130.4 L/kg; crosses BBB and placenta",
+      "metabolism": "Hepatic beta-oxidation and glucuronidation; CYP2C9 minor contributor; also mitochondrial metabolism",
+      "excretion": "Renal; <3% unchanged",
+      "half_life": "9\u201316 hours",
+      "onset": "1\u20134 days",
+      "peak": "1\u20134 hours (immediate release)",
+      "duration": "12\u201324 hours",
+      "protein_binding": "~90%",
+      "vd": "0.1\u20130.4 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "carbamazepine",
+        "mechanism": "valproate inhibits epoxide hydrolase, increasing carbamazepine-10,11-epoxide toxicity",
+        "severity": "major"
+      },
+      {
+        "drug": "phenytoin",
+        "mechanism": "valproate displaces phenytoin from protein binding and inhibits metabolism",
+        "severity": "major"
+      },
+      {
+        "drug": "lamotrigine",
+        "mechanism": "valproate inhibits lamotrigine glucuronidation, doubling lamotrigine levels",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor LFTs at baseline and during the first 6 months; check ammonia levels if altered mental status develops",
+      "Therapeutic serum level: 50\u2013100 mcg/mL (epilepsy) or 50\u2013125 mcg/mL (mania); draw trough levels",
+      "Monitor CBC including platelet count; thrombocytopenia may require dose reduction",
+      "Counsel all women of childbearing age about teratogenicity; ensure adequate folate supplementation and contraception if not trying to conceive"
+    ],
+    "clinical_pearls": [
+      "Drug of choice for absence seizures AND the only antiepileptic effective for all seizure types",
+      "Valproate inhibits lamotrigine metabolism \u2014 when adding lamotrigine to valproate, start at half the usual dose to prevent lamotrigine toxicity (Stevens-Johnson syndrome)"
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category X for migraine; Category D for epilepsy \u2014 highest teratogenic risk of all AEDs",
+    "lactation_safety": "use with caution",
+    "tdm_required": true,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "seizure",
+      "absence-seizure",
+      "bipolar-disorder",
+      "migraine-prophylaxis"
+    ],
+    "adverse_effect_tags": [
+      "hepatotoxicity",
+      "pancreatitis",
+      "teratogen",
+      "thrombocytopenia",
+      "hyperammonemia"
+    ],
+    "interaction_tags": [
+      "CYP2C9-inhibitor",
+      "glucuronidation-inhibitor",
+      "narrow-therapeutic-index"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "ion-channel"
+      ],
+      "mechanism_family": [
+        "sodium-channel-blockade",
+        "GABA-enhancement"
+      ],
+      "prototype_class": "Valproate antiepileptics",
+      "adme_profile": "hepatically-metabolized-non-CYP",
+      "presentation_cluster": [
+        "seizure",
+        "bipolar-disorder"
+      ],
+      "adverse_cluster": [
+        "hepatotoxicity",
+        "teratogen",
+        "pancreatitis"
+      ],
+      "interaction_cluster": [
+        "CYP-inhibitor",
+        "narrow-therapeutic-index"
+      ]
+    }
+  },
+  {
+    "id": "levetiracetam",
+    "generic_name": "levetiracetam",
+    "brand_names": [
+      "Keppra",
+      "Spritam"
+    ],
+    "drug_class": "antiepileptic",
+    "subclass": "synaptic vesicle protein modulator",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "ion-channel"
+    ],
+    "mechanism_targets": [
+      "synaptic vesicle protein SV2A"
+    ],
+    "mechanism_summary": "Binds selectively to synaptic vesicle protein SV2A, modulating neurotransmitter release; also inhibits N-type calcium channels and reduces GABA inhibition reversal.",
+    "indications": [
+      "focal-onset seizures",
+      "juvenile myoclonic epilepsy",
+      "tonic-clonic seizures",
+      "status epilepticus (IV)"
+    ],
+    "contraindications": [
+      "known hypersensitivity to levetiracetam"
+    ],
+    "adverse_effects": {
+      "common": [
+        "somnolence",
+        "dizziness",
+        "irritability",
+        "behavioral changes",
+        "nasopharyngitis"
+      ],
+      "serious": [
+        "serious behavioral/psychiatric symptoms (aggression, agitation, psychosis)",
+        "Stevens-Johnson syndrome (rare)",
+        "anaphylaxis"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "Nearly complete (>95%); not affected by food",
+      "distribution": "Minimal protein binding (<10%); Vd ~0.5\u20130.7 L/kg",
+      "metabolism": "Not hepatically metabolized; hydrolysis of acetamide group (non-CYP pathway)",
+      "excretion": "66% excreted unchanged renally; dose adjustment required for CrCl <80 mL/min",
+      "half_life": "6\u20138 hours",
+      "onset": "1 hour",
+      "peak": "1\u20131.3 hours",
+      "duration": "12 hours",
+      "protein_binding": "<10%",
+      "vd": "0.5\u20130.7 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CNS depressants",
+        "mechanism": "additive sedation",
+        "severity": "moderate"
+      },
+      {
+        "drug": "probenecid",
+        "mechanism": "inhibits renal tubular secretion of levetiracetam metabolite",
+        "severity": "minor"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor renal function; dose reduce when CrCl <80 mL/min (dose by renal function tier: 60\u201380, 30\u201360, <30, and ESRD on dialysis)",
+      "Monitor for behavioral changes including irritability, agitation, and depression; psychiatric symptoms may require dose reduction or discontinuation",
+      "IV levetiracetam can be infused over 15 minutes; compatible with NS, LR, and D5W",
+      "Advise patients not to abruptly discontinue; taper over at least 2 weeks to minimize seizure recurrence risk"
+    ],
+    "clinical_pearls": [
+      "Levetiracetam has no hepatic metabolism and minimal drug interactions, making it highly useful in polytherapy and in patients on complex medication regimens",
+      "Behavioral side effects (irritability, aggression) are the main limiting factor; sometimes called 'Keppra rage' \u2014 pyridoxine (vitamin B6) supplementation may reduce these effects"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category C \u2014 pregnancy registry data suggest low teratogenic risk relative to other AEDs",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "seizure",
+      "status-epilepticus",
+      "epilepsy"
+    ],
+    "adverse_effect_tags": [
+      "behavioral-changes",
+      "irritability",
+      "somnolence"
+    ],
+    "interaction_tags": [
+      "renally-cleared",
+      "minimal-drug-interactions"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "ion-channel"
+      ],
+      "mechanism_family": [
+        "SV2A-modulation"
+      ],
+      "prototype_class": "Levetiracetam-class antiepileptics",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "seizure",
+        "status-epilepticus"
+      ],
+      "adverse_cluster": [
+        "behavioral-changes"
+      ],
+      "interaction_cluster": [
+        "renal-clearance"
+      ]
+    }
+  },
+  {
+    "id": "lamotrigine",
+    "generic_name": "lamotrigine",
+    "brand_names": [
+      "Lamictal",
+      "Lamictal XR"
+    ],
+    "drug_class": "antiepileptic / mood stabilizer",
+    "subclass": "phenyltriazine",
+    "prototype_for": false,
+    "prototype_drug": "phenytoin",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "ion-channel"
+    ],
+    "mechanism_targets": [
+      "voltage-gated sodium channels",
+      "voltage-gated calcium channels"
+    ],
+    "mechanism_summary": "Stabilizes neuronal membranes by blocking voltage-sensitive sodium channels and inhibiting glutamate release; also modulates voltage-gated calcium channels.",
+    "indications": [
+      "focal-onset seizures",
+      "primary generalized tonic-clonic seizures",
+      "Lennox-Gastaut syndrome",
+      "bipolar disorder (maintenance)",
+      "bipolar depression"
+    ],
+    "contraindications": [
+      "hypersensitivity to lamotrigine"
+    ],
+    "adverse_effects": {
+      "common": [
+        "dizziness",
+        "headache",
+        "diplopia",
+        "ataxia",
+        "nausea",
+        "rash (benign maculopapular)"
+      ],
+      "serious": [
+        "Stevens-Johnson syndrome",
+        "toxic epidermal necrolysis",
+        "DRESS syndrome",
+        "aseptic meningitis",
+        "hemophagocytic lymphohistiocytosis"
+      ]
+    },
+    "black_box_warnings": [
+      "serious skin rashes including Stevens-Johnson syndrome and toxic epidermal necrolysis \u2014 risk increased with rapid titration and concurrent valproate"
+    ],
+    "pharmacokinetics": {
+      "absorption": "~98% oral bioavailability",
+      "distribution": "Protein binding 55%; Vd 0.9\u20131.3 L/kg",
+      "metabolism": "Hepatic glucuronidation (UGT1A4); significant drug interactions via glucuronidation induction/inhibition",
+      "excretion": "Renal as glucuronide conjugates; ~10% unchanged",
+      "half_life": "25\u201333 hours (monotherapy); 13\u201315 hours with enzyme inducers; 42\u201372 hours with valproate",
+      "onset": "Days to weeks",
+      "peak": "1.4\u20134.8 hours",
+      "duration": "24 hours",
+      "protein_binding": "55%",
+      "vd": "0.9\u20131.3 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "valproate",
+        "mechanism": "inhibits UGT1A4, doubles lamotrigine half-life \u2014 must halve lamotrigine dose",
+        "severity": "major"
+      },
+      {
+        "drug": "carbamazepine",
+        "mechanism": "CYP induction reduces lamotrigine levels by ~50%",
+        "severity": "major"
+      },
+      {
+        "drug": "oral contraceptives (estrogen)",
+        "mechanism": "estrogen induces UGT1A4, reducing lamotrigine levels by ~50%",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Titrate very slowly \u2014 do not exceed recommended titration schedule; rapid titration dramatically increases Stevens-Johnson syndrome risk",
+      "Instruct patient to report any rash immediately and discontinue lamotrigine pending evaluation \u2014 even a 'benign' rash requires clinical assessment",
+      "When adding to valproate, start at 25 mg every other day (vs 25 mg daily in monotherapy) due to markedly reduced clearance",
+      "Monitor for mood symptoms; lamotrigine is FDA-approved for bipolar maintenance but is less effective for acute mania than for depression"
+    ],
+    "clinical_pearls": [
+      "Lamotrigine is the preferred AED for women of childbearing age due to relatively low teratogenic risk, but estrogen-containing contraceptives reduce its levels by 50%",
+      "Unlike most AEDs, lamotrigine is effective for bipolar depression \u2014 a common unmet need given that most mood stabilizers target mania preferentially"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category C \u2014 preferred AED option in pregnancy; monitor levels which fall 50% during pregnancy",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "seizure",
+      "bipolar-disorder",
+      "bipolar-depression"
+    ],
+    "adverse_effect_tags": [
+      "Stevens-Johnson",
+      "rash",
+      "DRESS"
+    ],
+    "interaction_tags": [
+      "UGT1A4-substrate",
+      "valproate-sensitive",
+      "narrow-therapeutic-index"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "ion-channel"
+      ],
+      "mechanism_family": [
+        "sodium-channel-blockade"
+      ],
+      "prototype_class": "Phenyltriazine antiepileptics",
+      "adme_profile": "hepatically-metabolized-glucuronidation",
+      "presentation_cluster": [
+        "seizure",
+        "bipolar-disorder"
+      ],
+      "adverse_cluster": [
+        "Stevens-Johnson"
+      ],
+      "interaction_cluster": [
+        "glucuronidation-pathway",
+        "narrow-therapeutic-index"
+      ]
+    }
+  },
+  {
+    "id": "gabapentin",
+    "generic_name": "gabapentin",
+    "brand_names": [
+      "Neurontin",
+      "Gralise",
+      "Horizant"
+    ],
+    "drug_class": "antiepileptic / analgesic",
+    "subclass": "GABA analogue",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "ion-channel"
+    ],
+    "mechanism_targets": [
+      "alpha-2-delta subunit of voltage-gated calcium channels"
+    ],
+    "mechanism_summary": "Binds to the alpha-2-delta subunit of presynaptic voltage-gated calcium channels, reducing calcium influx and decreasing release of excitatory neurotransmitters (glutamate, substance P, norepinephrine).",
+    "indications": [
+      "focal-onset seizures (adjunct)",
+      "postherpetic neuralgia",
+      "restless leg syndrome (Horizant formulation)",
+      "off-label: neuropathic pain, fibromyalgia, anxiety"
+    ],
+    "contraindications": [
+      "known hypersensitivity to gabapentin"
+    ],
+    "adverse_effects": {
+      "common": [
+        "somnolence",
+        "dizziness",
+        "ataxia",
+        "fatigue",
+        "peripheral edema",
+        "weight gain"
+      ],
+      "serious": [
+        "respiratory depression (risk with opioids/CNS depressants)",
+        "multiorgan hypersensitivity",
+        "suicidal ideation",
+        "drug abuse/dependence"
+      ]
+    },
+    "black_box_warnings": [
+      "serious respiratory depression when combined with opioids or CNS depressants \u2014 especially in patients with respiratory risk factors"
+    ],
+    "pharmacokinetics": {
+      "absorption": "Non-linear, saturable absorption (bioavailability decreases with higher doses: ~60% at 300 mg, ~33% at 1600 mg)",
+      "distribution": "Not protein-bound (<3%); Vd ~0.65 L/kg",
+      "metabolism": "Not metabolized; excreted unchanged",
+      "excretion": "Entirely renal; significant dose adjustment required for CrCl <60 mL/min",
+      "half_life": "5\u20137 hours",
+      "onset": "Variable; 2\u20133 days for analgesic effect",
+      "peak": "2\u20133 hours",
+      "duration": "8 hours (requires TID dosing)",
+      "protein_binding": "<3%",
+      "vd": "~0.65 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "opioids",
+        "mechanism": "additive CNS/respiratory depression; pharmacokinetic interaction with hydrocodone",
+        "severity": "major"
+      },
+      {
+        "drug": "antacids (aluminum/magnesium)",
+        "mechanism": "reduce gabapentin absorption by ~20%",
+        "severity": "minor"
+      },
+      {
+        "drug": "morphine",
+        "mechanism": "morphine increases gabapentin AUC by 44%",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Dose must be adjusted for renal function; obtain baseline and periodic serum creatinine \u2014 major dose reductions required when CrCl <60 mL/min",
+      "Monitor for respiratory depression especially when combined with opioids, benzodiazepines, or other CNS depressants",
+      "Taper dose over at least 1 week on discontinuation to minimize withdrawal seizure risk",
+      "Assess for misuse potential; gabapentin is scheduled in some states due to increasing reports of abuse, particularly in combination with opioids"
+    ],
+    "clinical_pearls": [
+      "Gabapentin absorption is dose-dependent and saturable \u2014 spreading doses throughout the day or using the Gralise extended-release formulation improves bioavailability at higher doses",
+      "Despite its name, gabapentin does not act on GABA receptors \u2014 it binds to voltage-gated calcium channel subunits, making it distinct mechanistically from benzodiazepines and barbiturates"
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category C \u2014 limited human data; neonatal withdrawal reported",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "neuropathic-pain",
+      "postherpetic-neuralgia",
+      "seizure",
+      "restless-leg-syndrome"
+    ],
+    "adverse_effect_tags": [
+      "somnolence",
+      "dizziness",
+      "respiratory-depression",
+      "edema"
+    ],
+    "interaction_tags": [
+      "CNS-depressant",
+      "renally-cleared"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "ion-channel"
+      ],
+      "mechanism_family": [
+        "calcium-channel-alpha2-delta"
+      ],
+      "prototype_class": "Gabapentinoids",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "neuropathic-pain",
+        "seizure"
+      ],
+      "adverse_cluster": [
+        "CNS-depression",
+        "respiratory-depression"
+      ],
+      "interaction_cluster": [
+        "CNS-depressant-combination"
+      ]
+    }
+  },
+  {
+    "id": "pregabalin",
+    "generic_name": "pregabalin",
+    "brand_names": [
+      "Lyrica",
+      "Lyrica CR"
+    ],
+    "drug_class": "antiepileptic / analgesic",
+    "subclass": "GABA analogue",
+    "prototype_for": false,
+    "prototype_drug": "gabapentin",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "ion-channel"
+    ],
+    "mechanism_targets": [
+      "alpha-2-delta subunit of voltage-gated calcium channels"
+    ],
+    "mechanism_summary": "Binds alpha-2-delta subunit of voltage-gated calcium channels (like gabapentin but with higher affinity and linear absorption), reducing release of excitatory neurotransmitters.",
+    "indications": [
+      "focal-onset seizures (adjunct)",
+      "diabetic peripheral neuropathy",
+      "postherpetic neuralgia",
+      "fibromyalgia",
+      "spinal cord injury neuropathic pain"
+    ],
+    "contraindications": [
+      "hypersensitivity to pregabalin"
+    ],
+    "adverse_effects": {
+      "common": [
+        "dizziness",
+        "somnolence",
+        "dry mouth",
+        "edema",
+        "blurred vision",
+        "weight gain"
+      ],
+      "serious": [
+        "angioedema",
+        "respiratory depression (with CNS depressants)",
+        "PR interval prolongation",
+        "myopathy/rhabdomyolysis (rare)"
+      ]
+    },
+    "black_box_warnings": [
+      "serious respiratory depression when combined with CNS depressants"
+    ],
+    "pharmacokinetics": {
+      "absorption": "Linear absorption (~90% bioavailability) regardless of dose \u2014 advantage over gabapentin",
+      "distribution": "Not protein-bound; Vd ~0.5 L/kg",
+      "metabolism": "Negligible metabolism; excreted unchanged",
+      "excretion": "Entirely renal; dose adjustment required for CrCl <60 mL/min",
+      "half_life": "6 hours",
+      "onset": "Hours to days",
+      "peak": "1.5 hours",
+      "duration": "8\u201312 hours",
+      "protein_binding": "0%",
+      "vd": "~0.5 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "opioids",
+        "mechanism": "additive CNS and respiratory depression",
+        "severity": "major"
+      },
+      {
+        "drug": "benzodiazepines",
+        "mechanism": "additive CNS depression",
+        "severity": "moderate"
+      },
+      {
+        "drug": "thiazolidinediones",
+        "mechanism": "additive peripheral edema and weight gain",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Adjust dose based on creatinine clearance; pregabalin is renally eliminated and must be reduced in proportion to CrCl",
+      "Monitor for signs of angioedema (face, mouth, neck swelling) \u2014 discontinue immediately if suspected",
+      "Pregabalin is a Schedule V controlled substance due to misuse potential \u2014 assess for substance use disorder history",
+      "Taper over minimum 1 week when discontinuing to avoid withdrawal symptoms (insomnia, nausea, headache, diarrhea)"
+    ],
+    "clinical_pearls": [
+      "Unlike gabapentin, pregabalin has linear pharmacokinetics (predictable bioavailability across doses), making titration more predictable",
+      "FDA-approved for fibromyalgia \u2014 one of only three drugs approved for this indication (along with duloxetine and milnacipran)"
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category C",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "neuropathic-pain",
+      "fibromyalgia",
+      "seizure",
+      "diabetic-neuropathy"
+    ],
+    "adverse_effect_tags": [
+      "dizziness",
+      "somnolence",
+      "edema",
+      "angioedema"
+    ],
+    "interaction_tags": [
+      "CNS-depressant",
+      "renally-cleared"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "ion-channel"
+      ],
+      "mechanism_family": [
+        "calcium-channel-alpha2-delta"
+      ],
+      "prototype_class": "Gabapentinoids",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "neuropathic-pain",
+        "seizure"
+      ],
+      "adverse_cluster": [
+        "CNS-depression"
+      ],
+      "interaction_cluster": [
+        "CNS-depressant-combination"
+      ]
+    }
+  },
+  {
+    "id": "diazepam",
+    "generic_name": "diazepam",
+    "brand_names": [
+      "Valium",
+      "Diastat",
+      "Valtoco"
+    ],
+    "drug_class": "benzodiazepine",
+    "subclass": "long-acting benzodiazepine",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "GABA-A receptor (benzodiazepine binding site)"
+    ],
+    "mechanism_summary": "Positive allosteric modulator of GABA-A receptors; binds the benzodiazepine site between alpha and gamma subunits, increasing the frequency of chloride channel opening and enhancing inhibitory neurotransmission.",
+    "indications": [
+      "anxiety disorders",
+      "acute alcohol withdrawal",
+      "muscle spasm",
+      "status epilepticus (IV/rectal)",
+      "preoperative sedation"
+    ],
+    "contraindications": [
+      "myasthenia gravis",
+      "severe respiratory insufficiency",
+      "sleep apnea",
+      "severe hepatic insufficiency",
+      "acute narrow-angle glaucoma"
+    ],
+    "adverse_effects": {
+      "common": [
+        "sedation",
+        "dizziness",
+        "ataxia",
+        "anterograde amnesia",
+        "muscle weakness"
+      ],
+      "serious": [
+        "respiratory depression",
+        "coma",
+        "paradoxical reactions (agitation, aggression)",
+        "dependence and withdrawal"
+      ]
+    },
+    "black_box_warnings": [
+      "concurrent use with opioids increases risk of profound sedation, respiratory depression, coma, and death"
+    ],
+    "pharmacokinetics": {
+      "absorption": "Well absorbed orally (~93%); IM absorption erratic",
+      "distribution": "Highly lipophilic; Vd 0.8\u20131.0 L/kg; crosses BBB rapidly; extensive distribution to adipose tissue",
+      "metabolism": "Hepatic via CYP2C19 and CYP3A4 to active metabolites including desmethyldiazepam (t1/2 36\u2013200 h) and oxazepam",
+      "excretion": "Renal as glucuronide conjugates",
+      "half_life": "20\u2013100 hours (parent); active metabolites 36\u2013200 hours",
+      "onset": "IV: 1\u20133 minutes; oral: 30\u201360 minutes",
+      "peak": "1\u20132 hours (oral)",
+      "duration": "Variable (prolonged due to active metabolites)",
+      "protein_binding": "~98%",
+      "vd": "0.8\u20131.0 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "opioids",
+        "mechanism": "additive CNS/respiratory depression; boxed warning combination",
+        "severity": "major"
+      },
+      {
+        "drug": "alcohol",
+        "mechanism": "additive CNS depression",
+        "severity": "major"
+      },
+      {
+        "drug": "flumazenil",
+        "mechanism": "competitive antagonist reverses benzodiazepine effects",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "IV administration: inject slowly (<5 mg/min in adults); have resuscitation equipment available; monitor respiratory rate and oxygen saturation continuously",
+      "Assess fall risk before administration, especially in elderly patients; Beers Criteria drug \u2014 avoid for chronic use in older adults",
+      "Monitor for paradoxical reactions (more common in children, elderly, and patients with brain damage) \u2014 increased anxiety, agitation, aggression",
+      "Counsel patients about dependence risk; do not abruptly discontinue after prolonged use \u2014 taper over weeks to months to prevent withdrawal seizures"
+    ],
+    "clinical_pearls": [
+      "Diazepam's long half-life and active metabolites make it particularly useful for alcohol withdrawal (self-tapering) but problematic in the elderly due to accumulation",
+      "In status epilepticus, IV lorazepam is often preferred over diazepam due to its longer CNS duration of action despite diazepam's faster onset"
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category D \u2014 neonatal withdrawal and floppy infant syndrome",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "anxiety",
+      "alcohol-withdrawal",
+      "status-epilepticus",
+      "muscle-spasm"
+    ],
+    "adverse_effect_tags": [
+      "respiratory-depression",
+      "dependence",
+      "sedation",
+      "falls"
+    ],
+    "interaction_tags": [
+      "CYP2C19-substrate",
+      "CYP3A4-substrate",
+      "CNS-depressant"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "GABA-A-modulation"
+      ],
+      "prototype_class": "Benzodiazepines",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "anxiety",
+        "alcohol-withdrawal",
+        "status-epilepticus"
+      ],
+      "adverse_cluster": [
+        "CNS-depression",
+        "respiratory-depression",
+        "dependence"
+      ],
+      "interaction_cluster": [
+        "CNS-depressant-combination"
+      ]
+    }
+  },
+  {
+    "id": "lorazepam",
+    "generic_name": "lorazepam",
+    "brand_names": [
+      "Ativan"
+    ],
+    "drug_class": "benzodiazepine",
+    "subclass": "intermediate-acting benzodiazepine",
+    "prototype_for": false,
+    "prototype_drug": "diazepam",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "GABA-A receptor (benzodiazepine binding site)"
+    ],
+    "mechanism_summary": "Positive allosteric modulator of GABA-A receptors; increases chloride channel opening frequency; no active metabolites, making it preferred in hepatic impairment and elderly patients.",
+    "indications": [
+      "anxiety disorders",
+      "status epilepticus (first-line IV treatment)",
+      "procedural sedation/amnesia",
+      "alcohol withdrawal",
+      "acute agitation",
+      "chemotherapy-induced nausea (adjunct)"
+    ],
+    "contraindications": [
+      "acute narrow-angle glaucoma",
+      "severe respiratory insufficiency",
+      "myasthenia gravis"
+    ],
+    "adverse_effects": {
+      "common": [
+        "sedation",
+        "dizziness",
+        "weakness",
+        "anterograde amnesia",
+        "unsteadiness"
+      ],
+      "serious": [
+        "respiratory depression",
+        "dependence and withdrawal seizures",
+        "propylene glycol toxicity (high-dose prolonged IV)"
+      ]
+    },
+    "black_box_warnings": [
+      "concurrent opioid use \u2014 risk of profound sedation, respiratory depression, coma, death"
+    ],
+    "pharmacokinetics": {
+      "absorption": "Well absorbed orally and IM (90%)",
+      "distribution": "Protein binding 91%; Vd 1.3 L/kg; crosses BBB",
+      "metabolism": "Hepatic glucuronidation to inactive glucuronide \u2014 no active metabolites; safe in hepatic impairment (relative to other BZDs)",
+      "excretion": "Renal as glucuronide",
+      "half_life": "10\u201320 hours",
+      "onset": "IV: 1\u20135 minutes; IM: 15\u201330 minutes; oral: 30\u201360 minutes",
+      "peak": "2 hours (oral); 60\u201390 min (IM)",
+      "duration": "6\u20138 hours",
+      "protein_binding": "91%",
+      "vd": "1.3 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "opioids",
+        "mechanism": "additive CNS/respiratory depression",
+        "severity": "major"
+      },
+      {
+        "drug": "clozapine",
+        "mechanism": "additive sedation and risk of cardiovascular depression/arrest",
+        "severity": "major"
+      },
+      {
+        "drug": "probenecid",
+        "mechanism": "inhibits glucuronidation, prolonging lorazepam effect",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "First-line IV benzodiazepine for status epilepticus: dose 0.1 mg/kg IV (max 4 mg per dose); may repeat once after 5 minutes; longer CNS duration than diazepam",
+      "IV lorazepam is diluted 1:1 with NS, D5W, or sterile water immediately before administration; do not use pre-mixed solutions stored >24 hours",
+      "Monitor respiratory rate, oxygen saturation, and level of consciousness during IV administration; resuscitation equipment must be available",
+      "For alcohol withdrawal: use CIWA-Ar protocol to guide dosing; lorazepam preferred in patients with hepatic disease due to inactive metabolite profile"
+    ],
+    "clinical_pearls": [
+      "Lorazepam is the preferred benzodiazepine in status epilepticus because its CNS duration of action (6\u201312 hours) is longer than diazepam's despite a similar half-life",
+      "The LOC (Lorazepam Over Conazepam) rule: Lorazepam is preferred in the elderly and hepatically impaired because it has no active metabolites and does not require Phase I hepatic metabolism"
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category D",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "status-epilepticus",
+      "anxiety",
+      "alcohol-withdrawal",
+      "acute-agitation"
+    ],
+    "adverse_effect_tags": [
+      "respiratory-depression",
+      "dependence",
+      "sedation"
+    ],
+    "interaction_tags": [
+      "CNS-depressant",
+      "glucuronidation-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "GABA-A-modulation"
+      ],
+      "prototype_class": "Benzodiazepines",
+      "adme_profile": "hepatically-metabolized-glucuronidation",
+      "presentation_cluster": [
+        "status-epilepticus",
+        "anxiety",
+        "alcohol-withdrawal"
+      ],
+      "adverse_cluster": [
+        "CNS-depression",
+        "dependence"
+      ],
+      "interaction_cluster": [
+        "CNS-depressant-combination"
+      ]
+    }
+  },
+  {
+    "id": "midazolam",
+    "generic_name": "midazolam",
+    "brand_names": [
+      "Versed",
+      "Nayzilam",
+      "Seizalam"
+    ],
+    "drug_class": "benzodiazepine",
+    "subclass": "short-acting benzodiazepine",
+    "prototype_for": false,
+    "prototype_drug": "diazepam",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "GABA-A receptor (benzodiazepine binding site)"
+    ],
+    "mechanism_summary": "Positive allosteric modulator of GABA-A receptors with rapid onset; highly lipophilic water-soluble prodrug that becomes lipophilic at physiologic pH, allowing rapid BBB penetration.",
+    "indications": [
+      "procedural sedation and anxiolysis",
+      "anesthesia induction/maintenance",
+      "ICU sedation",
+      "status epilepticus (IM, intranasal, buccal)",
+      "acute repetitive seizures"
+    ],
+    "contraindications": [
+      "acute narrow-angle glaucoma",
+      "concurrent potent CYP3A4 inhibitors (protease inhibitors)",
+      "hypersensitivity to benzodiazepines"
+    ],
+    "adverse_effects": {
+      "common": [
+        "respiratory depression",
+        "sedation",
+        "anterograde amnesia",
+        "hiccups",
+        "hypotension"
+      ],
+      "serious": [
+        "respiratory arrest",
+        "cardiac arrest",
+        "paradoxical reactions",
+        "dependence (prolonged use)"
+      ]
+    },
+    "black_box_warnings": [
+      "IV/IM: respiratory depression and respiratory arrest \u2014 use only in settings with resuscitation capability; concurrent opioids \u2014 profound sedation, respiratory depression, coma, death"
+    ],
+    "pharmacokinetics": {
+      "absorption": "IV: 100%; IM: 90%; intranasal: ~55%",
+      "distribution": "Highly lipophilic at physiologic pH; Vd 1\u20133.1 L/kg; crosses BBB rapidly",
+      "metabolism": "CYP3A4 to active 1-hydroxy-midazolam (25\u201360% activity); then glucuronidation",
+      "excretion": "Renal as glucuronides",
+      "half_life": "1.8\u20136.4 hours",
+      "onset": "IV: 1\u20135 minutes; IM: 5\u201315 minutes; intranasal: 5\u201310 minutes",
+      "peak": "20\u201360 minutes",
+      "duration": "1\u20136 hours",
+      "protein_binding": "97%",
+      "vd": "1\u20133.1 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CYP3A4 inhibitors (ketoconazole, ritonavir)",
+        "mechanism": "dramatically increase midazolam levels",
+        "severity": "major"
+      },
+      {
+        "drug": "opioids",
+        "mechanism": "additive respiratory depression",
+        "severity": "major"
+      },
+      {
+        "drug": "flumazenil",
+        "mechanism": "reverses sedation but has shorter half-life \u2014 resedation can occur",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Airway management equipment and flumazenil must be immediately available whenever midazolam is administered for procedural sedation",
+      "Titrate IV doses slowly in small increments (0.5\u20131 mg); allow 2\u20133 minutes between doses to assess effect before administering more",
+      "In ICU patients on prolonged infusions, tolerance and withdrawal can develop rapidly; plan for structured weaning protocol",
+      "For intranasal administration in seizures (Nayzilam): 5 mg per nostril; second dose may be given after 10 minutes if seizure continues"
+    ],
+    "clinical_pearls": [
+      "Midazolam is water-soluble at acidic pH (allowing IV formulation) but becomes lipophilic at physiologic pH \u2014 this biphasic property explains both its IV compatibility and rapid CNS penetration",
+      "Midazolam IM is the preferred route for prehospital status epilepticus treatment (RAMPART trial) \u2014 equal efficacy to IV lorazepam with faster administration time"
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category D",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "procedural-sedation",
+      "status-epilepticus",
+      "anesthesia",
+      "ICU-sedation"
+    ],
+    "adverse_effect_tags": [
+      "respiratory-depression",
+      "respiratory-arrest",
+      "sedation"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate",
+      "CNS-depressant"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "GABA-A-modulation"
+      ],
+      "prototype_class": "Benzodiazepines",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "procedural-sedation",
+        "status-epilepticus"
+      ],
+      "adverse_cluster": [
+        "CNS-depression",
+        "respiratory-depression"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate",
+        "CNS-depressant-combination"
+      ]
+    }
+  },
+  {
+    "id": "fluoxetine",
+    "generic_name": "fluoxetine",
+    "brand_names": [
+      "Prozac",
+      "Sarafem",
+      "Selfemra"
+    ],
+    "drug_class": "antidepressant",
+    "subclass": "selective serotonin reuptake inhibitor (SSRI)",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "serotonin reuptake transporter (SERT)"
+    ],
+    "mechanism_summary": "Selectively inhibits the presynaptic serotonin reuptake transporter (SERT), increasing synaptic serotonin concentrations; minimal effects on norepinephrine or dopamine transporters; also a potent CYP2D6 inhibitor.",
+    "indications": [
+      "major depressive disorder",
+      "obsessive-compulsive disorder",
+      "panic disorder",
+      "bulimia nervosa",
+      "premenstrual dysphoric disorder (Sarafem)",
+      "bipolar I depression (with olanzapine)"
+    ],
+    "contraindications": [
+      "concurrent MAOIs (allow 14-day washout)",
+      "concurrent thioridazine or pimozide (CYP2D6 inhibition risk)",
+      "concurrent linezolid or IV methylene blue"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "insomnia",
+        "headache",
+        "sexual dysfunction (anorgasmia, delayed ejaculation)",
+        "anxiety",
+        "weight changes"
+      ],
+      "serious": [
+        "serotonin syndrome",
+        "suicidal ideation (black box; particularly in patients <24 years)",
+        "bleeding (GI, surgical)",
+        "QTc prolongation",
+        "hyponatremia (SIADH)"
+      ]
+    },
+    "black_box_warnings": [
+      "increased risk of suicidal thinking and behavior in children, adolescents, and young adults (age <24) with major depressive disorder \u2014 monitor closely"
+    ],
+    "pharmacokinetics": {
+      "absorption": "Well absorbed (~72%); not significantly affected by food",
+      "distribution": "Highly protein-bound (94%); Vd 20\u201345 L/kg; crosses BBB",
+      "metabolism": "CYP2C9 and CYP2D6 to active metabolite norfluoxetine (also a potent CYP2D6 inhibitor)",
+      "excretion": "Renal (~60%) and fecal; hepatic dose adjustment needed",
+      "half_life": "1\u20133 days (fluoxetine); 4\u201316 days (norfluoxetine) \u2014 longest half-life of all SSRIs",
+      "onset": "Antidepressant effect: 2\u20134 weeks",
+      "peak": "6\u20138 hours",
+      "duration": "Weeks after discontinuation due to long half-life",
+      "protein_binding": "94%",
+      "vd": "20\u201345 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "serotonin syndrome \u2014 potentially fatal; 14-day washout required before MAOI; 5-week washout after stopping fluoxetine",
+        "severity": "major"
+      },
+      {
+        "drug": "tricyclic antidepressants",
+        "mechanism": "CYP2D6 inhibition increases TCA levels",
+        "severity": "major"
+      },
+      {
+        "drug": "warfarin",
+        "mechanism": "CYP2C9 inhibition increases warfarin levels; bleeding risk",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor for suicidal ideation, especially in first 4 weeks of therapy and after dose changes; schedule follow-up within 1 week of initiation in young adults",
+      "Due to long half-life, discontinuation syndrome is less likely than with other SSRIs; however, a 5-week washout is required before starting an MAOI",
+      "Monitor for signs of serotonin syndrome: hyperthermia, agitation, clonus, hyperreflexia, diaphoresis \u2014 medical emergency",
+      "Assess baseline sexual function; sexual dysfunction is common and often a reason for nonadherence \u2014 counsel patients and consider dose reduction or drug holiday strategy"
+    ],
+    "clinical_pearls": [
+      "Fluoxetine's extremely long half-life (1\u20136 weeks for parent + metabolite) is both an advantage (missed doses matter less, no discontinuation syndrome) and a disadvantage (5-week MAOI washout needed, drug interactions persist weeks after stopping)",
+      "Fluoxetine/olanzapine combination (Symbyax) is FDA-approved for bipolar I depression \u2014 an uncommon but important indication"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category C \u2014 neonatal adaptation syndrome reported; PPHN risk disputed",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "major-depression",
+      "OCD",
+      "panic-disorder",
+      "bulimia",
+      "PMDD"
+    ],
+    "adverse_effect_tags": [
+      "sexual-dysfunction",
+      "serotonin-syndrome",
+      "suicidal-ideation",
+      "SIADH",
+      "bleeding"
+    ],
+    "interaction_tags": [
+      "CYP2D6-inhibitor",
+      "serotonergic",
+      "MAOI-contraindication"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "SERT-inhibition"
+      ],
+      "prototype_class": "SSRIs",
+      "adme_profile": "hepatically-metabolized-CYP2D6",
+      "presentation_cluster": [
+        "major-depression",
+        "OCD",
+        "anxiety"
+      ],
+      "adverse_cluster": [
+        "serotonin-syndrome",
+        "suicidal-ideation",
+        "sexual-dysfunction"
+      ],
+      "interaction_cluster": [
+        "serotonergic",
+        "CYP2D6-inhibitor"
+      ]
+    }
+  },
+  {
+    "id": "sertraline",
+    "generic_name": "sertraline",
+    "brand_names": [
+      "Zoloft"
+    ],
+    "drug_class": "antidepressant",
+    "subclass": "SSRI",
+    "prototype_for": false,
+    "prototype_drug": "fluoxetine",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "serotonin reuptake transporter (SERT)"
+    ],
+    "mechanism_summary": "Selective SERT inhibitor with mild dopamine transporter inhibition; fewer CYP interactions than fluoxetine; also has modest sigma receptor activity.",
+    "indications": [
+      "major depressive disorder",
+      "PTSD",
+      "OCD",
+      "panic disorder",
+      "social anxiety disorder",
+      "premenstrual dysphoric disorder"
+    ],
+    "contraindications": [
+      "concurrent MAOIs",
+      "concurrent pimozide",
+      "disulfiram (oral concentrate contains alcohol)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea (especially initially)",
+        "diarrhea",
+        "insomnia",
+        "sexual dysfunction",
+        "dry mouth",
+        "dizziness"
+      ],
+      "serious": [
+        "serotonin syndrome",
+        "suicidal ideation",
+        "hyponatremia",
+        "QTc prolongation",
+        "abnormal bleeding"
+      ]
+    },
+    "black_box_warnings": [
+      "suicidal thinking and behavior in pediatric and young adult patients"
+    ],
+    "pharmacokinetics": {
+      "absorption": "Bioavailability ~44%; food increases absorption of oral concentrate",
+      "distribution": "Highly protein-bound (98%); Vd ~20 L/kg",
+      "metabolism": "CYP2C19, CYP2C9, CYP2D6, CYP3A4 to inactive N-desmethylsertraline",
+      "excretion": "Fecal (~44%) and renal (~40%)",
+      "half_life": "22\u201336 hours",
+      "onset": "1\u20132 weeks (partial); 4\u20136 weeks (full antidepressant effect)",
+      "peak": "4.5\u20138.4 hours",
+      "duration": "24 hours",
+      "protein_binding": "98%",
+      "vd": "~20 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "serotonin syndrome",
+        "severity": "major"
+      },
+      {
+        "drug": "NSAIDs/anticoagulants",
+        "mechanism": "additive bleeding risk via platelet serotonin depletion",
+        "severity": "moderate"
+      },
+      {
+        "drug": "pimozide",
+        "mechanism": "QTc prolongation via CYP2D6 inhibition at higher sertraline doses",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor suicidal ideation in first 4 weeks; schedule follow-up within 1 week of initiation",
+      "Take with food to reduce GI side effects, especially nausea in the first 1\u20132 weeks",
+      "Monitor serum sodium (particularly in elderly patients on diuretics) \u2014 hyponatremia/SIADH can occur",
+      "Advise patients that full antidepressant effect takes 4\u20136 weeks; do not discontinue prematurely if initial response seems limited"
+    ],
+    "clinical_pearls": [
+      "Sertraline has the most extensive safety data in pregnancy of all SSRIs and is often the preferred SSRI during pregnancy \u2014 though all SSRIs carry neonatal adaptation syndrome risk",
+      "Among SSRIs, sertraline is considered to have the fewest drug interactions because it has the least potent CYP inhibitory profile at standard doses"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category C \u2014 most data available; preferred SSRI in pregnancy",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "major-depression",
+      "PTSD",
+      "OCD",
+      "social-anxiety",
+      "panic-disorder"
+    ],
+    "adverse_effect_tags": [
+      "nausea",
+      "sexual-dysfunction",
+      "serotonin-syndrome",
+      "SIADH"
+    ],
+    "interaction_tags": [
+      "serotonergic",
+      "CYP2D6-weak-inhibitor",
+      "MAOI-contraindication"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "SERT-inhibition"
+      ],
+      "prototype_class": "SSRIs",
+      "adme_profile": "hepatically-metabolized-CYP",
+      "presentation_cluster": [
+        "major-depression",
+        "anxiety",
+        "PTSD"
+      ],
+      "adverse_cluster": [
+        "serotonin-syndrome",
+        "SIADH"
+      ],
+      "interaction_cluster": [
+        "serotonergic"
+      ]
+    }
+  },
+  {
+    "id": "escitalopram",
+    "generic_name": "escitalopram",
+    "brand_names": [
+      "Lexapro"
+    ],
+    "drug_class": "antidepressant",
+    "subclass": "SSRI",
+    "prototype_for": false,
+    "prototype_drug": "fluoxetine",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "serotonin reuptake transporter (SERT)"
+    ],
+    "mechanism_summary": "S-enantiomer of citalopram with higher SERT selectivity and potency; minimal CYP inhibition; allosteric binding site on SERT provides enhanced serotonergic effect.",
+    "indications": [
+      "major depressive disorder",
+      "generalized anxiety disorder"
+    ],
+    "contraindications": [
+      "concurrent MAOIs",
+      "concurrent pimozide",
+      "QTc prolongation"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "insomnia",
+        "somnolence",
+        "increased sweating",
+        "sexual dysfunction"
+      ],
+      "serious": [
+        "QTc prolongation (dose-dependent)",
+        "serotonin syndrome",
+        "hyponatremia",
+        "suicidal ideation"
+      ]
+    },
+    "black_box_warnings": [
+      "suicidal thinking and behavior in pediatric and young adult patients"
+    ],
+    "pharmacokinetics": {
+      "absorption": "~80% bioavailability",
+      "distribution": "Protein binding ~56%; Vd ~12 L/kg",
+      "metabolism": "CYP2C19 and CYP3A4 (primary); CYP2D6 (minor)",
+      "excretion": "Renal and fecal",
+      "half_life": "27\u201332 hours",
+      "onset": "1\u20132 weeks; full effect 4\u20136 weeks",
+      "peak": "5 hours",
+      "duration": "24 hours",
+      "protein_binding": "56%",
+      "vd": "~12 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "serotonin syndrome",
+        "severity": "major"
+      },
+      {
+        "drug": "CYP2C19 inhibitors (cimetidine, omeprazole)",
+        "mechanism": "increase escitalopram levels and QTc risk",
+        "severity": "moderate"
+      },
+      {
+        "drug": "QTc-prolonging drugs",
+        "mechanism": "additive QTc prolongation",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Obtain baseline ECG in patients with cardiac disease, electrolyte abnormalities, or concurrent QTc-prolonging medications; doses >20 mg/day increase QTc risk",
+      "Monitor suicidal ideation especially in young adults during first 4 weeks and after dose changes",
+      "Assess for hyponatremia in elderly patients and those taking diuretics \u2014 check serum sodium if confusion or lethargy develops",
+      "Taper on discontinuation over several weeks to prevent discontinuation syndrome (dizziness, 'brain zaps,' irritability)"
+    ],
+    "clinical_pearls": [
+      "Escitalopram is frequently cited as having the best tolerability and fewest drug interactions among SSRIs \u2014 the S-enantiomer is 30 times more potent at SERT than the R-enantiomer of citalopram",
+      "The FDA issued a safety communication limiting citalopram (not escitalopram) to 40 mg/day due to QTc concerns \u2014 escitalopram has a similar but less severe QTc dose-response relationship"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category C",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "major-depression",
+      "generalized-anxiety-disorder"
+    ],
+    "adverse_effect_tags": [
+      "QTc-prolongation",
+      "sexual-dysfunction",
+      "serotonin-syndrome"
+    ],
+    "interaction_tags": [
+      "serotonergic",
+      "QTc-prolonging",
+      "CYP2C19-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "SERT-inhibition"
+      ],
+      "prototype_class": "SSRIs",
+      "adme_profile": "hepatically-metabolized-CYP2C19",
+      "presentation_cluster": [
+        "major-depression",
+        "anxiety"
+      ],
+      "adverse_cluster": [
+        "QTc-prolongation",
+        "serotonin-syndrome"
+      ],
+      "interaction_cluster": [
+        "serotonergic",
+        "QTc-prolonging"
+      ]
+    }
+  },
+  {
+    "id": "venlafaxine",
+    "generic_name": "venlafaxine",
+    "brand_names": [
+      "Effexor",
+      "Effexor XR"
+    ],
+    "drug_class": "antidepressant",
+    "subclass": "serotonin-norepinephrine reuptake inhibitor (SNRI)",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "SERT",
+      "norepinephrine reuptake transporter (NET)"
+    ],
+    "mechanism_summary": "Inhibits reuptake of serotonin (primary at low doses) and norepinephrine (significant at doses \u2265150 mg/day); weak dopamine reuptake inhibition at high doses; no significant receptor antagonism.",
+    "indications": [
+      "major depressive disorder",
+      "generalized anxiety disorder",
+      "social anxiety disorder",
+      "panic disorder",
+      "off-label: fibromyalgia, neuropathic pain, hot flashes, migraine prevention"
+    ],
+    "contraindications": [
+      "concurrent MAOIs",
+      "uncontrolled narrow-angle glaucoma"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "dry mouth",
+        "constipation",
+        "insomnia",
+        "diaphoresis",
+        "sexual dysfunction",
+        "hypertension (dose-dependent)"
+      ],
+      "serious": [
+        "sustained diastolic hypertension (especially >225 mg/day)",
+        "serotonin syndrome",
+        "suicidal ideation",
+        "discontinuation syndrome (severe)"
+      ]
+    },
+    "black_box_warnings": [
+      "suicidal thinking and behavior in pediatric and young adult patients"
+    ],
+    "pharmacokinetics": {
+      "absorption": "~45% bioavailability (XR equivalent but slower absorption)",
+      "distribution": "Protein binding ~27%; Vd ~7.5 L/kg",
+      "metabolism": "CYP2D6 to active O-desmethylvenlafaxine (ODV, also sold as desvenlafaxine)",
+      "excretion": "Renal (~87%); dose reduction needed for CrCl <30 mL/min and hepatic impairment",
+      "half_life": "5 hours (venlafaxine); 11 hours (ODV)",
+      "onset": "2\u20134 weeks",
+      "peak": "2 hours (IR); 5.5 hours (XR)",
+      "duration": "12\u201324 hours",
+      "protein_binding": "27%",
+      "vd": "~7.5 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "serotonin syndrome \u2014 14-day washout required",
+        "severity": "major"
+      },
+      {
+        "drug": "CYP2D6 inhibitors (fluoxetine, paroxetine)",
+        "mechanism": "increase venlafaxine and reduce ODV levels",
+        "severity": "moderate"
+      },
+      {
+        "drug": "triptans",
+        "mechanism": "additive serotonergic effect",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor blood pressure at every visit; dose-dependent diastolic hypertension can occur and may require dose reduction or antihypertensive therapy",
+      "Discontinuation syndrome is among the most severe of any antidepressant \u2014 taper over weeks to months; never abruptly stop",
+      "Monitor suicidal ideation especially in young adults during first 4 weeks",
+      "Counsel patients about the 2\u20134 week delay before therapeutic effect; early side effects (especially nausea) typically resolve within the first 2 weeks"
+    ],
+    "clinical_pearls": [
+      "Venlafaxine has dose-dependent pharmacology: serotonergic at low doses (37.5\u201375 mg), noradrenergic effects emerge above 150 mg/day \u2014 clinical implications include dose-dependent hypertension and enhanced analgesic efficacy at higher doses",
+      "Among the most severe discontinuation syndromes of any antidepressant \u2014 'brain zaps,' dizziness, nausea, and flu-like symptoms; structured taper is mandatory"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category C \u2014 neonatal adaptation syndrome; PPHN risk similar to SSRIs",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "major-depression",
+      "generalized-anxiety",
+      "panic-disorder",
+      "neuropathic-pain",
+      "hot-flashes"
+    ],
+    "adverse_effect_tags": [
+      "hypertension",
+      "sexual-dysfunction",
+      "discontinuation-syndrome",
+      "serotonin-syndrome"
+    ],
+    "interaction_tags": [
+      "serotonergic",
+      "CYP2D6-substrate",
+      "noradrenergic"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "SERT-NET-inhibition"
+      ],
+      "prototype_class": "SNRIs",
+      "adme_profile": "hepatically-metabolized-CYP2D6",
+      "presentation_cluster": [
+        "major-depression",
+        "anxiety",
+        "neuropathic-pain"
+      ],
+      "adverse_cluster": [
+        "serotonin-syndrome",
+        "hypertension"
+      ],
+      "interaction_cluster": [
+        "serotonergic",
+        "noradrenergic"
+      ]
+    }
+  },
+  {
+    "id": "duloxetine",
+    "generic_name": "duloxetine",
+    "brand_names": [
+      "Cymbalta",
+      "Drizalma",
+      "Irenka"
+    ],
+    "drug_class": "antidepressant",
+    "subclass": "SNRI",
+    "prototype_for": false,
+    "prototype_drug": "venlafaxine",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "SERT",
+      "NET"
+    ],
+    "mechanism_summary": "Balanced inhibitor of both SERT and NET (approximately equal potency), unlike venlafaxine's serotonin-preferential profile at low doses; enhances descending pain inhibitory pathways via noradrenergic modulation.",
+    "indications": [
+      "major depressive disorder",
+      "generalized anxiety disorder",
+      "diabetic peripheral neuropathy",
+      "fibromyalgia",
+      "chronic musculoskeletal pain",
+      "stress urinary incontinence (international)"
+    ],
+    "contraindications": [
+      "concurrent MAOIs",
+      "uncontrolled narrow-angle glaucoma",
+      "substantial alcohol use (hepatotoxicity risk)",
+      "end-stage renal disease"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "dry mouth",
+        "somnolence",
+        "constipation",
+        "increased sweating",
+        "dizziness"
+      ],
+      "serious": [
+        "hepatotoxicity",
+        "serotonin syndrome",
+        "suicidal ideation",
+        "urinary retention",
+        "hypertension",
+        "severe skin reactions"
+      ]
+    },
+    "black_box_warnings": [
+      "suicidal thinking and behavior in pediatric and young adult patients"
+    ],
+    "pharmacokinetics": {
+      "absorption": "~50% bioavailability; enteric-coated to protect from gastric acid",
+      "distribution": "Highly protein-bound (>90%); Vd ~1640 L",
+      "metabolism": "CYP1A2 and CYP2D6 (primary); avoid in severe hepatic impairment",
+      "excretion": "Renal (~70%); avoid in ESRD (CrCl <30 mL/min for pain indications)",
+      "half_life": "12 hours",
+      "onset": "1\u20132 weeks (partial); 4\u20136 weeks (full)",
+      "peak": "6 hours",
+      "duration": "24 hours",
+      "protein_binding": ">90%",
+      "vd": "~1640 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "serotonin syndrome",
+        "severity": "major"
+      },
+      {
+        "drug": "CYP1A2 inhibitors (fluvoxamine, ciprofloxacin)",
+        "mechanism": "increase duloxetine levels",
+        "severity": "major"
+      },
+      {
+        "drug": "CYP2D6 inhibitors",
+        "mechanism": "moderately increase duloxetine levels",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor LFTs at baseline; avoid in patients with hepatic disease or heavy alcohol use \u2014 hepatotoxicity including fatal cases reported",
+      "Monitor blood pressure before and during therapy; less hypertension risk than venlafaxine but still monitor",
+      "For pain indications, response should be reassessed at 8\u201312 weeks; adequate pain relief requires full therapeutic doses (60\u2013120 mg)",
+      "Counsel patients not to crush or open capsules \u2014 delayed-release coating prevents gastric degradation; if unable to swallow, capsules may be carefully opened and sprinkled on applesauce"
+    ],
+    "clinical_pearls": [
+      "Duloxetine is one of only three FDA-approved drugs for fibromyalgia (with pregabalin and milnacipran) and is first-line for diabetic peripheral neuropathy pain",
+      "Unlike venlafaxine, duloxetine has balanced SERT:NET inhibition ratios even at low doses, meaning noradrenergic analgesia is present throughout the dose range"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category C",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "major-depression",
+      "diabetic-neuropathy",
+      "fibromyalgia",
+      "chronic-pain",
+      "generalized-anxiety"
+    ],
+    "adverse_effect_tags": [
+      "hepatotoxicity",
+      "nausea",
+      "serotonin-syndrome",
+      "suicidal-ideation"
+    ],
+    "interaction_tags": [
+      "CYP1A2-substrate",
+      "CYP2D6-substrate",
+      "serotonergic"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "SERT-NET-inhibition"
+      ],
+      "prototype_class": "SNRIs",
+      "adme_profile": "hepatically-metabolized-CYP1A2",
+      "presentation_cluster": [
+        "major-depression",
+        "neuropathic-pain",
+        "fibromyalgia"
+      ],
+      "adverse_cluster": [
+        "hepatotoxicity",
+        "serotonin-syndrome"
+      ],
+      "interaction_cluster": [
+        "serotonergic",
+        "CYP1A2-substrate"
+      ]
+    }
+  },
+  {
+    "id": "bupropion",
+    "generic_name": "bupropion",
+    "brand_names": [
+      "Wellbutrin",
+      "Wellbutrin SR",
+      "Wellbutrin XL",
+      "Zyban",
+      "Aplenzin"
+    ],
+    "drug_class": "antidepressant / smoking cessation",
+    "subclass": "norepinephrine-dopamine reuptake inhibitor (NDRI)",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "dopamine reuptake transporter (DAT)",
+      "norepinephrine reuptake transporter (NET)"
+    ],
+    "mechanism_summary": "Inhibits neuronal reuptake of dopamine and norepinephrine; also a nicotinic acetylcholine receptor antagonist, which contributes to smoking cessation efficacy; no serotonergic activity.",
+    "indications": [
+      "major depressive disorder",
+      "seasonal affective disorder",
+      "smoking cessation (Zyban)",
+      "ADHD (off-label)",
+      "sexual dysfunction from SSRIs (off-label)"
+    ],
+    "contraindications": [
+      "seizure disorder",
+      "anorexia nervosa or bulimia nervosa",
+      "abrupt alcohol or benzodiazepine discontinuation",
+      "concurrent MAOIs",
+      "patients on other bupropion-containing products"
+    ],
+    "adverse_effects": {
+      "common": [
+        "dry mouth",
+        "headache",
+        "insomnia",
+        "nausea",
+        "constipation",
+        "tachycardia",
+        "agitation"
+      ],
+      "serious": [
+        "seizures (dose-dependent; risk 0.1\u20130.4%)",
+        "suicidal ideation",
+        "neuropsychiatric symptoms (in smoking cessation use)",
+        "hypertension"
+      ]
+    },
+    "black_box_warnings": [
+      "suicidal thinking in young adults with MDD; neuropsychiatric reactions (hostility, agitation, depressed mood, suicidal behavior) in smoking cessation \u2014 monitor closely"
+    ],
+    "pharmacokinetics": {
+      "absorption": "Rapid absorption; extensive first-pass metabolism; bioavailability ~5\u201320%",
+      "distribution": "Protein binding ~84%; Vd ~19 L/kg",
+      "metabolism": "CYP2B6 to active hydroxybupropion (primary metabolite; higher levels than parent); also threohydrobupropion and erythrohydrobupropion",
+      "excretion": "Renal (~87%)",
+      "half_life": "21 hours (parent); 20\u201337 hours (hydroxybupropion)",
+      "onset": "Antidepressant: 2\u20134 weeks",
+      "peak": "3 hours (IR); 5 hours (SR); 5 hours (XL)",
+      "duration": "12\u201324 hours depending on formulation",
+      "protein_binding": "84%",
+      "vd": "~19 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "hypertensive crisis risk",
+        "severity": "major"
+      },
+      {
+        "drug": "drugs that lower seizure threshold",
+        "mechanism": "additive seizure risk",
+        "severity": "major"
+      },
+      {
+        "drug": "tamoxifen",
+        "mechanism": "CYP2D6 inhibition by bupropion may reduce tamoxifen's active metabolite endoxifen",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Never exceed 450 mg/day total dose and avoid individual doses >200 mg (IR) or >300 mg (SR); dose-dependent seizure risk increases significantly above threshold",
+      "Contraindicated in eating disorders \u2014 purging behavior and nutritional compromise increase seizure risk",
+      "Advantage over SSRIs/SNRIs: no sexual dysfunction and no weight gain; can be used as add-on to SSRI when sexual dysfunction is problematic",
+      "For smoking cessation (Zyban): begin 1\u20132 weeks before quit date; combination with nicotine replacement therapy improves quit rates"
+    ],
+    "clinical_pearls": [
+      "Bupropion is the only commonly-used antidepressant that facilitates weight loss and lacks sexual side effects \u2014 key differentiating factors when selecting an antidepressant",
+      "The ceiling dose limit exists strictly for seizure prevention; splitting doses and using the SR/XL formulations are pharmacokinetically designed to keep peak levels below seizure threshold"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category C \u2014 neonatal seizures reported",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "major-depression",
+      "smoking-cessation",
+      "ADHD",
+      "seasonal-affective-disorder"
+    ],
+    "adverse_effect_tags": [
+      "seizures",
+      "insomnia",
+      "suicidal-ideation",
+      "hypertension"
+    ],
+    "interaction_tags": [
+      "CYP2B6-substrate",
+      "CYP2D6-inhibitor",
+      "seizure-threshold"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "DAT-NET-inhibition"
+      ],
+      "prototype_class": "NDRIs",
+      "adme_profile": "hepatically-metabolized-CYP2B6",
+      "presentation_cluster": [
+        "major-depression",
+        "smoking-cessation"
+      ],
+      "adverse_cluster": [
+        "seizures",
+        "neuropsychiatric"
+      ],
+      "interaction_cluster": [
+        "CYP2D6-inhibitor",
+        "seizure-threshold"
+      ]
+    }
+  },
+  {
+    "id": "lithium",
+    "generic_name": "lithium carbonate / lithium citrate",
+    "brand_names": [
+      "Lithobid",
+      "Eskalith"
+    ],
+    "drug_class": "mood stabilizer",
+    "subclass": "alkali metal ion",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "ion-channel"
+    ],
+    "mechanism_targets": [
+      "inositol monophosphatase",
+      "glycogen synthase kinase-3 (GSK-3)"
+    ],
+    "mechanism_summary": "Inhibits inositol monophosphatase (depleting inositol and reducing phosphoinositide signaling) and GSK-3 (affecting neuronal plasticity); also modulates neurotransmitter release and receptor sensitivity; mechanism of mood stabilization not fully established.",
+    "indications": [
+      "bipolar disorder (acute mania \u2014 first-line)",
+      "bipolar maintenance prophylaxis",
+      "augmentation of antidepressants in treatment-resistant depression",
+      "cluster headache prophylaxis"
+    ],
+    "contraindications": [
+      "severe renal impairment",
+      "dehydration or sodium depletion",
+      "concurrent diuretics and NSAIDs (relative)",
+      "pregnancy (first trimester \u2014 Ebstein's anomaly risk)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "fine tremor",
+        "polyuria",
+        "polydipsia",
+        "weight gain",
+        "cognitive dulling",
+        "nausea",
+        "diarrhea",
+        "acne"
+      ],
+      "serious": [
+        "lithium toxicity (coarse tremor, confusion, ataxia, seizures, coma)",
+        "nephrogenic diabetes insipidus",
+        "hypothyroidism",
+        "cardiac conduction abnormalities",
+        "Ebstein's anomaly (first-trimester exposure)"
+      ]
+    },
+    "black_box_warnings": [
+      "lithium toxicity can occur at doses close to therapeutic levels \u2014 facilities and clinician expertise for serum level monitoring required"
+    ],
+    "pharmacokinetics": {
+      "absorption": "Complete oral absorption; distributed throughout total body water",
+      "distribution": "Not protein-bound; Vd ~0.7\u20131.0 L/kg; distributes like sodium; crosses BBB and placenta",
+      "metabolism": "Not metabolized; excreted unchanged",
+      "excretion": "Entirely renal; proximal tubule reabsorption competes with sodium \u2014 sodium depletion increases lithium reabsorption and toxicity risk",
+      "half_life": "18\u201336 hours",
+      "onset": "5\u20137 days for antimanic effect",
+      "peak": "0.5\u20133 hours (immediate release); 4\u201312 hours (extended release)",
+      "duration": "12\u201324 hours",
+      "protein_binding": "0%",
+      "vd": "0.7\u20131.0 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "NSAIDs and COX-2 inhibitors",
+        "mechanism": "reduce renal prostaglandin synthesis, decreasing lithium clearance by up to 20\u201325%",
+        "severity": "major"
+      },
+      {
+        "drug": "thiazide diuretics",
+        "mechanism": "sodium depletion increases proximal tubular lithium reabsorption; levels may increase 25\u201340%",
+        "severity": "major"
+      },
+      {
+        "drug": "ACE inhibitors / ARBs",
+        "mechanism": "reduce aldosterone, impairing lithium excretion; levels can double",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Therapeutic drug monitoring is mandatory: target serum trough level 0.8\u20131.2 mEq/L (acute mania) or 0.6\u20130.8 mEq/L (maintenance); toxic above 1.5 mEq/L \u2014 draw 12 hours after last dose",
+      "Maintain consistent sodium intake and hydration; instruct patient to avoid dehydration, low-salt diets, excessive sweating, and OTC NSAIDs",
+      "Lithium toxicity signs: coarse tremor, confusion, ataxia, nausea, vomiting (early); seizures, coma, cardiac arrhythmias (severe) \u2014 hold and notify provider immediately",
+      "Monitor thyroid function (TSH) every 6\u201312 months; hypothyroidism occurs in ~30% of long-term users; monitor renal function annually (polyuria and nephrogenic DI are common)"
+    ],
+    "clinical_pearls": [
+      "Lithium is the only medication with level-1 evidence for antisuicidal effect in bipolar disorder \u2014 this unique benefit makes it irreplaceable despite its narrow therapeutic index",
+      "The sodium-lithium competition in the proximal tubule explains the many drug interactions: anything that depletes sodium (diuretics, low-sodium diet, vomiting, diarrhea) will cause lithium retention and toxicity"
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category D \u2014 Ebstein's anomaly risk with first-trimester exposure (smaller than historical estimates)",
+    "lactation_safety": "avoid",
+    "tdm_required": true,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "bipolar-disorder",
+      "mania",
+      "treatment-resistant-depression"
+    ],
+    "adverse_effect_tags": [
+      "lithium-toxicity",
+      "nephrogenic-DI",
+      "hypothyroidism",
+      "tremor",
+      "teratogen"
+    ],
+    "interaction_tags": [
+      "renally-cleared",
+      "sodium-dependent",
+      "narrow-therapeutic-index"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "ion-channel"
+      ],
+      "mechanism_family": [
+        "inositol-signaling"
+      ],
+      "prototype_class": "Mood stabilizers",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "bipolar-disorder",
+        "mania"
+      ],
+      "adverse_cluster": [
+        "electrolyte-disturbance",
+        "renal-toxicity",
+        "hypothyroidism"
+      ],
+      "interaction_cluster": [
+        "renal-clearance",
+        "sodium-dependent",
+        "narrow-therapeutic-index"
+      ]
+    }
+  },
+  {
+    "id": "haloperidol",
+    "generic_name": "haloperidol",
+    "brand_names": [
+      "Haldol"
+    ],
+    "drug_class": "antipsychotic",
+    "subclass": "typical antipsychotic / butyrophenone",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "dopamine D2 receptors"
+    ],
+    "mechanism_summary": "Potent antagonist of dopamine D2 receptors in the mesolimbic and mesocortical pathways, reducing positive psychotic symptoms; also blocks D2 in nigrostriatal pathway (EPS) and tuberoinfundibular pathway (hyperprolactinemia); histamine H1 and alpha-1 blockade is minimal.",
+    "indications": [
+      "schizophrenia",
+      "acute psychosis / agitation",
+      "Tourette's syndrome",
+      "delirium (IV/IM)",
+      "anti-emesis in palliative care"
+    ],
+    "contraindications": [
+      "CNS depression",
+      "Parkinson's disease (relative)",
+      "QTc prolongation (IV route)",
+      "dementia-related psychosis"
+    ],
+    "adverse_effects": {
+      "common": [
+        "extrapyramidal symptoms (EPS): parkinsonism, akathisia, dystonia",
+        "hyperprolactinemia (galactorrhea, amenorrhea)",
+        "QTc prolongation"
+      ],
+      "serious": [
+        "tardive dyskinesia (long-term)",
+        "neuroleptic malignant syndrome (NMS)",
+        "torsades de pointes (IV haloperidol)",
+        "laryngospasm (acute dystonia)"
+      ]
+    },
+    "black_box_warnings": [
+      "increased mortality in elderly patients with dementia-related psychosis \u2014 not approved for this use"
+    ],
+    "pharmacokinetics": {
+      "absorption": "Well absorbed orally (~60\u201370%); IM onset faster",
+      "distribution": "Highly protein-bound (~92%); Vd 9.5\u201321.7 L/kg; crosses BBB",
+      "metabolism": "CYP3A4 and CYP2D6; active reduced metabolite",
+      "excretion": "Renal and biliary",
+      "half_life": "12\u201336 hours",
+      "onset": "IM: 20\u201340 min; oral: 2\u20136 hours; decanoate (depot): 3\u20139 days",
+      "peak": "2\u20136 hours (oral); 20 min (IM)",
+      "duration": "8\u201312 hours",
+      "protein_binding": "92%",
+      "vd": "9.5\u201321.7 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "QTc-prolonging agents",
+        "mechanism": "additive QTc prolongation and torsades risk (especially IV haloperidol)",
+        "severity": "major"
+      },
+      {
+        "drug": "lithium",
+        "mechanism": "potential for irreversible neurological toxicity at high serum levels",
+        "severity": "major"
+      },
+      {
+        "drug": "CYP2D6 inhibitors (fluoxetine)",
+        "mechanism": "increase haloperidol levels and EPS risk",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor ECG before IV administration and during infusion; IV haloperidol carries higher QTc risk than oral/IM \u2014 keep IV doses \u22642 mg and monitor continuously",
+      "Assess for extrapyramidal symptoms at each visit using AIMS scale for tardive dyskinesia; akathisia (restlessness) is often confused with worsening anxiety or psychosis",
+      "NMS is a medical emergency: fever, rigidity, altered consciousness, autonomic instability \u2014 stop haloperidol immediately and provide supportive care",
+      "For acute dystonia (torticollis, oculogyric crisis): administer benztropine 1\u20132 mg IV/IM or diphenhydramine 25\u201350 mg IV/IM immediately"
+    ],
+    "clinical_pearls": [
+      "Haloperidol decanoate (long-acting injection every 4 weeks) dramatically improves adherence in patients with schizophrenia who have difficulty maintaining oral regimens",
+      "Haloperidol has the most evidence for treating delirium in ICU patients of all antipsychotics, though it does not reduce duration or mortality \u2014 use lowest effective dose"
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category C \u2014 neonatal EPS reported with third-trimester exposure",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "schizophrenia",
+      "acute-psychosis",
+      "delirium",
+      "acute-agitation",
+      "Tourette-syndrome"
+    ],
+    "adverse_effect_tags": [
+      "EPS",
+      "tardive-dyskinesia",
+      "NMS",
+      "QTc-prolongation",
+      "hyperprolactinemia"
+    ],
+    "interaction_tags": [
+      "QTc-prolonging",
+      "CYP3A4-substrate",
+      "CYP2D6-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "D2-antagonism"
+      ],
+      "prototype_class": "Typical antipsychotics",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "schizophrenia",
+        "acute-psychosis",
+        "delirium"
+      ],
+      "adverse_cluster": [
+        "EPS",
+        "tardive-dyskinesia",
+        "NMS",
+        "QTc-prolongation"
+      ],
+      "interaction_cluster": [
+        "QTc-prolonging",
+        "D2-antagonist"
+      ]
+    }
+  },
+  {
+    "id": "risperidone",
+    "generic_name": "risperidone",
+    "brand_names": [
+      "Risperdal",
+      "Risperdal Consta",
+      "Perseris"
+    ],
+    "drug_class": "antipsychotic",
+    "subclass": "atypical antipsychotic / second-generation",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "dopamine D2 receptors",
+      "serotonin 5-HT2A receptors"
+    ],
+    "mechanism_summary": "Antagonizes D2 and 5-HT2A receptors; 5-HT2A antagonism modulates dopamine release in the nigrostriatal and mesocortical pathways, reducing EPS risk compared to typicals while maintaining antipsychotic efficacy; also blocks alpha-1, H1, and alpha-2 receptors.",
+    "indications": [
+      "schizophrenia",
+      "bipolar I mania",
+      "irritability associated with autism spectrum disorder",
+      "acute agitation (IM formulation)"
+    ],
+    "contraindications": [
+      "dementia-related psychosis (black box)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "hyperprolactinemia (highest among atypicals due to D2 affinity)",
+        "weight gain",
+        "sedation",
+        "EPS (dose-dependent)",
+        "metabolic syndrome"
+      ],
+      "serious": [
+        "tardive dyskinesia",
+        "NMS",
+        "QTc prolongation",
+        "orthostatic hypotension",
+        "hyperglycemia",
+        "cerebrovascular events in elderly"
+      ]
+    },
+    "black_box_warnings": [
+      "increased mortality in elderly patients with dementia-related psychosis"
+    ],
+    "pharmacokinetics": {
+      "absorption": "Well absorbed; bioavailability ~70%",
+      "distribution": "Protein binding 90%; Vd 1\u20132 L/kg",
+      "metabolism": "CYP2D6 to active 9-hydroxyrisperidone (paliperidone); CYP2D6 poor metabolizers have higher risperidone levels",
+      "excretion": "Renal (~70%); dose adjustment needed for CrCl <30 mL/min",
+      "half_life": "3 hours (risperidone) + 21 hours (9-OH-risperidone); effective half-life ~20 hours",
+      "onset": "Days to weeks for full effect",
+      "peak": "1\u20132 hours",
+      "duration": "24 hours",
+      "protein_binding": "90%",
+      "vd": "1\u20132 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CYP2D6 inhibitors (fluoxetine, paroxetine)",
+        "mechanism": "increase risperidone/decrease 9-OH metabolite levels",
+        "severity": "moderate"
+      },
+      {
+        "drug": "carbamazepine",
+        "mechanism": "CYP3A4 induction reduces risperidone levels",
+        "severity": "major"
+      },
+      {
+        "drug": "QTc-prolonging agents",
+        "mechanism": "additive QTc prolongation",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor fasting glucose, lipid panel, weight, and waist circumference at baseline and every 3\u20136 months \u2014 metabolic syndrome screening is standard of care",
+      "Monitor for hyperprolactinemia symptoms: galactorrhea, amenorrhea, gynecomastia \u2014 risperidone has the highest prolactin-elevating effect among atypical antipsychotics",
+      "Assess orthostatic blood pressure, especially on initiation; educate patients to rise slowly",
+      "For Risperdal Consta (biweekly IM): oral risperidone must overlap for 3 weeks after first injection while depot levels accumulate"
+    ],
+    "clinical_pearls": [
+      "Paliperidone (Invega) is simply the active metabolite of risperidone \u2014 9-hydroxyrisperidone \u2014 and bypasses CYP2D6 metabolism, making it useful when drug interactions or CYP2D6 genotype is a concern",
+      "Risperidone has the highest risk of hyperprolactinemia among atypical antipsychotics (comparable to typicals) because unlike quetiapine and clozapine, it maintains high D2 receptor occupancy at tuberoinfundibular dopamine neurons"
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category C \u2014 neonatal EPS and withdrawal reported",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "schizophrenia",
+      "bipolar-mania",
+      "autism-irritability",
+      "acute-psychosis"
+    ],
+    "adverse_effect_tags": [
+      "hyperprolactinemia",
+      "metabolic-syndrome",
+      "EPS",
+      "tardive-dyskinesia",
+      "NMS"
+    ],
+    "interaction_tags": [
+      "CYP2D6-substrate",
+      "QTc-prolonging"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "D2-5HT2A-antagonism"
+      ],
+      "prototype_class": "Atypical antipsychotics",
+      "adme_profile": "hepatically-metabolized-CYP2D6",
+      "presentation_cluster": [
+        "schizophrenia",
+        "bipolar-disorder"
+      ],
+      "adverse_cluster": [
+        "metabolic-syndrome",
+        "EPS",
+        "QTc-prolongation"
+      ],
+      "interaction_cluster": [
+        "CYP2D6-substrate",
+        "QTc-prolonging"
+      ]
+    }
+  },
+  {
+    "id": "quetiapine",
+    "generic_name": "quetiapine",
+    "brand_names": [
+      "Seroquel",
+      "Seroquel XR"
+    ],
+    "drug_class": "antipsychotic",
+    "subclass": "atypical antipsychotic / second-generation",
+    "prototype_for": false,
+    "prototype_drug": "risperidone",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "dopamine D2 receptors",
+      "serotonin 5-HT2A receptors",
+      "histamine H1 receptors"
+    ],
+    "mechanism_summary": "Low-affinity D2 antagonist (fast dissociation) combined with potent 5-HT2A, H1, and alpha-1/2 blockade; low D2 occupancy minimizes EPS and prolactin elevation; potent H1 antagonism drives sedation and weight gain.",
+    "indications": [
+      "schizophrenia",
+      "bipolar I mania (acute)",
+      "bipolar depression (Seroquel XR)",
+      "major depressive disorder (adjunct)",
+      "generalized anxiety disorder (off-label)"
+    ],
+    "contraindications": [
+      "dementia-related psychosis"
+    ],
+    "adverse_effects": {
+      "common": [
+        "sedation (very common, dose-dependent)",
+        "weight gain",
+        "dry mouth",
+        "constipation",
+        "orthostatic hypotension",
+        "metabolic syndrome"
+      ],
+      "serious": [
+        "hyperglycemia / diabetic ketoacidosis",
+        "tardive dyskinesia (lower risk than typicals)",
+        "NMS",
+        "cataracts (long-term use)",
+        "QTc prolongation"
+      ]
+    },
+    "black_box_warnings": [
+      "increased mortality in elderly patients with dementia-related psychosis; suicidal thinking in young adults with MDD (when used as adjunct antidepressant)"
+    ],
+    "pharmacokinetics": {
+      "absorption": "~9% bioavailability (extensive first-pass); food increases absorption",
+      "distribution": "Protein binding 83%; Vd 6\u201314 L/kg",
+      "metabolism": "CYP3A4 to multiple active and inactive metabolites",
+      "excretion": "Renal (~73%); hepatic impairment requires dose reduction",
+      "half_life": "7 hours (IR); 12 hours (XR); active metabolite norquetiapine 12 hours",
+      "onset": "Sedation: hours; antipsychotic: days to weeks",
+      "peak": "1\u20131.5 hours (IR); 5\u20136 hours (XR)",
+      "duration": "12 hours (IR); 24 hours (XR)",
+      "protein_binding": "83%",
+      "vd": "6\u201314 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CYP3A4 inhibitors (ketoconazole, erythromycin)",
+        "mechanism": "increase quetiapine levels; reduce dose by 1/6",
+        "severity": "major"
+      },
+      {
+        "drug": "CYP3A4 inducers (carbamazepine, phenytoin)",
+        "mechanism": "reduce quetiapine levels by ~87%; major dose increase required",
+        "severity": "major"
+      },
+      {
+        "drug": "CNS depressants",
+        "mechanism": "additive sedation",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor fasting glucose, HbA1c, lipid panel, weight, and BP at baseline and every 3 months; quetiapine carries significant metabolic risk",
+      "Slit-lamp eye examinations every 6 months recommended for long-term users due to risk of posterior lens opacities (cataracts)",
+      "Sedation is prominent especially at lower doses due to high H1 affinity; quetiapine is frequently misused as a sedative \u2014 assess for this at each visit",
+      "Counsel patients not to drive or operate machinery until they know how quetiapine affects them; bedtime dosing reduces daytime sedation"
+    ],
+    "clinical_pearls": [
+      "Quetiapine is one of only two atypical antipsychotics (with lurasidone) FDA-approved for bipolar depression \u2014 an important distinction as most antipsychotics only have mania indication",
+      "At low doses (25\u2013100 mg), quetiapine's H1 and alpha-1 blockade dominate clinical effects (sedation, hypotension) with minimal D2 occupancy \u2014 the drug is increasingly used off-label as a sleep aid, raising concerns about off-label prescribing and metabolic risk"
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category C",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "schizophrenia",
+      "bipolar-mania",
+      "bipolar-depression",
+      "major-depression-adjunct"
+    ],
+    "adverse_effect_tags": [
+      "sedation",
+      "metabolic-syndrome",
+      "hyperglycemia",
+      "QTc-prolongation"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate",
+      "QTc-prolonging"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "D2-5HT2A-antagonism"
+      ],
+      "prototype_class": "Atypical antipsychotics",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "schizophrenia",
+        "bipolar-disorder"
+      ],
+      "adverse_cluster": [
+        "metabolic-syndrome",
+        "sedation"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "olanzapine",
+    "generic_name": "olanzapine",
+    "brand_names": [
+      "Zyprexa",
+      "Zyprexa Zydis",
+      "Symbyax (with fluoxetine)",
+      "Zyprexa Relprevv"
+    ],
+    "drug_class": "antipsychotic",
+    "subclass": "atypical antipsychotic / thienobenzodiazepine",
+    "prototype_for": false,
+    "prototype_drug": "risperidone",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "dopamine D2 receptors",
+      "serotonin 5-HT2A receptors",
+      "muscarinic M1-M5 receptors",
+      "histamine H1 receptors"
+    ],
+    "mechanism_summary": "Broad receptor antagonism including D2, 5-HT2A, muscarinic, histamine H1, and alpha-1 adrenergic receptors; most metabolically toxic atypical antipsychotic due to profound H1 and muscarinic blockade driving appetite and weight gain.",
+    "indications": [
+      "schizophrenia",
+      "bipolar I disorder (mania and maintenance)",
+      "bipolar I depression (with fluoxetine \u2014 Symbyax)",
+      "treatment-resistant schizophrenia (second-line)",
+      "agitation in schizophrenia/bipolar (IM)"
+    ],
+    "contraindications": [
+      "dementia-related psychosis",
+      "IM olanzapine + IM/IV benzodiazepine (cardiovascular collapse risk)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "significant weight gain (average 4\u20135 kg at 10 weeks)",
+        "metabolic syndrome",
+        "sedation",
+        "anticholinergic effects (dry mouth, constipation, urinary retention)",
+        "orthostatic hypotension"
+      ],
+      "serious": [
+        "new-onset diabetes mellitus",
+        "severe metabolic syndrome",
+        "tardive dyskinesia",
+        "NMS",
+        "Zyprexa Relprevv PDSS (post-injection delirium/sedation syndrome \u2014 requires 3-hour observation)"
+      ]
+    },
+    "black_box_warnings": [
+      "increased mortality in elderly patients with dementia-related psychosis; Zyprexa Relprevv: severe post-injection sedation/delirium \u2014 patients must be observed for 3 hours after each injection"
+    ],
+    "pharmacokinetics": {
+      "absorption": "Well absorbed (~80%); food does not affect absorption",
+      "distribution": "Highly protein-bound (93%); Vd ~1000 L",
+      "metabolism": "CYP1A2 (primary) and CYP2D6 (minor); smoking induces CYP1A2 \u2014 smokers need higher doses",
+      "excretion": "Renal (~57%) and fecal (~30%)",
+      "half_life": "21\u201354 hours",
+      "onset": "Days to weeks",
+      "peak": "5\u20138 hours",
+      "duration": "24 hours",
+      "protein_binding": "93%",
+      "vd": "~1000 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "fluvoxamine",
+        "mechanism": "CYP1A2 inhibition increases olanzapine levels significantly",
+        "severity": "major"
+      },
+      {
+        "drug": "smoking cessation (or new smoking)",
+        "mechanism": "CYP1A2 induction/de-induction dramatically alters olanzapine levels",
+        "severity": "major"
+      },
+      {
+        "drug": "benzodiazepines (IM combination)",
+        "mechanism": "cardiovascular depression \u2014 avoid combining IM olanzapine with IM/IV benzodiazepines",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor fasting glucose, HbA1c, lipid panel, weight, and waist circumference at baseline, 1 month, then quarterly; olanzapine has the worst metabolic profile of any atypical",
+      "Smoking status dramatically affects olanzapine levels due to CYP1A2 induction; if a patient stops smoking during hospitalization, olanzapine levels may increase by 50%",
+      "Never administer IM olanzapine with IV/IM benzodiazepines simultaneously; a minimum 1-hour gap is required due to cardiovascular collapse risk",
+      "For Zyprexa Zydis (orally disintegrating tablet): place on tongue and allow to dissolve \u2014 useful for patients suspected of cheeking medications"
+    ],
+    "clinical_pearls": [
+      "Olanzapine is the most metabolically harmful atypical antipsychotic \u2014 weight gain and diabetes risk exceed all others; ADA/APA consensus recommends highest frequency metabolic monitoring with this agent",
+      "Olanzapine + lorazepam IM for acute agitation is highly effective but the combination is specifically contraindicated due to risk of respiratory depression and cardiovascular collapse \u2014 the sequential administration (separate by \u22651 hour) is permissible"
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category C \u2014 neonatal EPS and metabolic effects reported",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "schizophrenia",
+      "bipolar-mania",
+      "bipolar-depression",
+      "acute-agitation"
+    ],
+    "adverse_effect_tags": [
+      "weight-gain",
+      "metabolic-syndrome",
+      "new-onset-diabetes",
+      "tardive-dyskinesia",
+      "NMS"
+    ],
+    "interaction_tags": [
+      "CYP1A2-substrate",
+      "smoking-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "D2-5HT2A-antagonism"
+      ],
+      "prototype_class": "Atypical antipsychotics",
+      "adme_profile": "hepatically-metabolized-CYP1A2",
+      "presentation_cluster": [
+        "schizophrenia",
+        "bipolar-disorder"
+      ],
+      "adverse_cluster": [
+        "metabolic-syndrome",
+        "weight-gain",
+        "new-onset-diabetes"
+      ],
+      "interaction_cluster": [
+        "CYP1A2-substrate"
+      ]
+    }
+  },
+  {
+    "id": "aripiprazole",
+    "generic_name": "aripiprazole",
+    "brand_names": [
+      "Abilify",
+      "Abilify Maintena",
+      "Aristada"
+    ],
+    "drug_class": "antipsychotic",
+    "subclass": "atypical antipsychotic / dopamine partial agonist",
+    "prototype_for": false,
+    "prototype_drug": "risperidone",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "dopamine D2 partial agonist",
+      "serotonin 5-HT1A partial agonist",
+      "5-HT2A antagonist"
+    ],
+    "mechanism_summary": "Unique partial agonist at D2 and 5-HT1A receptors, acting as a functional stabilizer \u2014 activates when dopamine is low (preventing EPS and cognitive effects) and dampens activity when dopamine is high (preventing psychosis); also antagonizes 5-HT2A.",
+    "indications": [
+      "schizophrenia",
+      "bipolar I mania",
+      "major depressive disorder (adjunct)",
+      "irritability associated with autism spectrum disorder",
+      "Tourette's syndrome",
+      "agitation in schizophrenia (IM)"
+    ],
+    "contraindications": [
+      "dementia-related psychosis"
+    ],
+    "adverse_effects": {
+      "common": [
+        "akathisia (most prominent EPS \u2014 dose-dependent)",
+        "nausea",
+        "headache",
+        "insomnia",
+        "dizziness",
+        "weight gain (less than other atypicals)"
+      ],
+      "serious": [
+        "tardive dyskinesia",
+        "NMS",
+        "orthostatic hypotension",
+        "compulsive behaviors (pathological gambling, hypersexuality, binge eating)",
+        "dysphagia"
+      ]
+    },
+    "black_box_warnings": [
+      "increased mortality in elderly patients with dementia-related psychosis; suicidal thinking in young adults with MDD when used as adjunct"
+    ],
+    "pharmacokinetics": {
+      "absorption": "~87% bioavailability; not affected by food",
+      "distribution": "Protein binding >99%; Vd ~4.9 L/kg",
+      "metabolism": "CYP2D6 (primary) and CYP3A4 to active dehydro-aripiprazole",
+      "excretion": "Fecal (~55%) and renal (~25%)",
+      "half_life": "75 hours (aripiprazole); 94 hours (dehydro-aripiprazole) \u2014 very long; enables missed-dose tolerance",
+      "onset": "Days to weeks",
+      "peak": "3\u20135 hours",
+      "duration": "24 hours or longer",
+      "protein_binding": ">99%",
+      "vd": "~4.9 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CYP2D6 inhibitors (fluoxetine, paroxetine)",
+        "mechanism": "increase aripiprazole levels by ~70\u2013112%; reduce aripiprazole dose by 50%",
+        "severity": "major"
+      },
+      {
+        "drug": "CYP3A4 inducers (carbamazepine)",
+        "mechanism": "reduce aripiprazole levels by ~70%; double aripiprazole dose",
+        "severity": "major"
+      },
+      {
+        "drug": "CYP3A4 inhibitors",
+        "mechanism": "increase aripiprazole levels",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor for akathisia (subjective restlessness, inability to sit still) \u2014 distinguish from psychomotor agitation; akathisia responds to beta-blockers (propranolol) or benzodiazepines, not dose increase",
+      "Metabolic monitoring is required but aripiprazole has a significantly better metabolic profile than olanzapine or quetiapine",
+      "Assess for impulse control disorders: gambling, hypersexuality, compulsive eating \u2014 have occurred with aripiprazole; mechanism involves partial D2 agonism in reward pathways",
+      "The long half-life means steady-state is not reached for 2 weeks; full clinical effect assessment requires this timeframe"
+    ],
+    "clinical_pearls": [
+      "Aripiprazole's partial agonism mechanism makes it conceptually distinct from all other antipsychotics \u2014 it is a 'dopamine stabilizer' that provides antipsychotic effect with minimal EPS and metabolic burden",
+      "Aripiprazole lauroxil (Aristada) and aripiprazole monohydrate (Maintena) are long-acting injectable formulations dosed monthly or every 6 weeks, dramatically improving adherence in chronic schizophrenia"
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category C",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "schizophrenia",
+      "bipolar-mania",
+      "major-depression-adjunct",
+      "autism-irritability"
+    ],
+    "adverse_effect_tags": [
+      "akathisia",
+      "compulsive-behaviors",
+      "tardive-dyskinesia",
+      "NMS"
+    ],
+    "interaction_tags": [
+      "CYP2D6-substrate",
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "D2-partial-agonism"
+      ],
+      "prototype_class": "Atypical antipsychotics",
+      "adme_profile": "hepatically-metabolized-CYP2D6",
+      "presentation_cluster": [
+        "schizophrenia",
+        "bipolar-disorder",
+        "major-depression"
+      ],
+      "adverse_cluster": [
+        "akathisia",
+        "EPS"
+      ],
+      "interaction_cluster": [
+        "CYP2D6-substrate",
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "morphine",
+    "generic_name": "morphine sulfate",
+    "brand_names": [
+      "MS Contin",
+      "Morphabond",
+      "Kadian",
+      "MSIR"
+    ],
+    "drug_class": "opioid analgesic",
+    "subclass": "full mu-opioid agonist / phenanthrene",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "mu-opioid receptors (MOR)",
+      "kappa-opioid receptors",
+      "delta-opioid receptors"
+    ],
+    "mechanism_summary": "Full agonist at mu-opioid receptors in the CNS (periaqueductal gray, dorsal horn) and peripheral nervous system, inhibiting adenylyl cyclase, hyperpolarizing neurons, and reducing release of nociceptive neurotransmitters (substance P, glutamate).",
+    "indications": [
+      "moderate-to-severe acute pain",
+      "chronic cancer pain",
+      "acute pulmonary edema (IV)",
+      "dyspnea in palliative care"
+    ],
+    "contraindications": [
+      "paralytic ileus",
+      "acute respiratory depression",
+      "concurrent MAOIs",
+      "acute asthma (without resuscitation)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "constipation (universal, does not develop tolerance)",
+        "nausea/vomiting",
+        "sedation",
+        "pruritus (histamine release)",
+        "urinary retention",
+        "miosis"
+      ],
+      "serious": [
+        "respiratory depression",
+        "apnea",
+        "coma",
+        "physical dependence",
+        "hyperalgesia (chronic high-dose)"
+      ]
+    },
+    "black_box_warnings": [
+      "addiction, abuse, and misuse; respiratory depression; neonatal opioid withdrawal syndrome; concurrent benzodiazepine or CNS depressant use; accidental ingestion"
+    ],
+    "pharmacokinetics": {
+      "absorption": "Variable oral bioavailability 15\u201365% due to extensive first-pass metabolism",
+      "distribution": "Protein binding ~35%; Vd ~3\u20134 L/kg; crosses BBB (less readily than lipophilic opioids)",
+      "metabolism": "Hepatic glucuronidation (UGT2B7) to morphine-6-glucuronide (M6G \u2014 active, potent) and morphine-3-glucuronide (M3G \u2014 inactive, neuroexcitatory)",
+      "excretion": "Renal; M6G accumulates in renal failure \u2014 increase dosing interval in CKD",
+      "half_life": "2\u20134 hours",
+      "onset": "IV: 5 min; IM: 10\u201330 min; oral: 30\u201360 min",
+      "peak": "IV: 20 min; oral IR: 60 min",
+      "duration": "3\u20135 hours (IR); 8\u201312 hours (ER)",
+      "protein_binding": "35%",
+      "vd": "3\u20134 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "benzodiazepines/CNS depressants",
+        "mechanism": "additive respiratory depression \u2014 leading cause of opioid overdose death",
+        "severity": "major"
+      },
+      {
+        "drug": "MAOIs",
+        "mechanism": "serotonin syndrome and/or hypotension/hypertension",
+        "severity": "major"
+      },
+      {
+        "drug": "naloxone",
+        "mechanism": "competitive antagonist \u2014 reverses analgesia and precipitates withdrawal",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Assess respiratory rate before each dose; hold and notify provider if RR <10/min or SpO2 <92%; have naloxone immediately available",
+      "Bowel regimen (stimulant laxative such as senna) must be initiated simultaneously with morphine \u2014 constipation does not self-resolve and causes significant morbidity",
+      "Use WHO pain ladder: reassess pain 30 minutes after IV and 1 hour after oral administration; titrate to effect",
+      "In opioid-naive patients, start low (2\u20134 mg IV q4h); use appropriate equianalgesic conversion tables when rotating opioids to avoid under- or over-dosing"
+    ],
+    "clinical_pearls": [
+      "Morphine-6-glucuronide (M6G) is 3\u20136 times more potent than morphine and accumulates in renal failure \u2014 morphine should be used cautiously or avoided in CKD; hydromorphone or fentanyl are preferred",
+      "Morphine releases histamine from mast cells (not an IgE-mediated allergy), causing pruritus and flushing \u2014 true morphine allergy is rare; codeine and meperidine also release histamine; fentanyl does not"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category C (D with prolonged use/high doses near term) \u2014 neonatal opioid withdrawal syndrome",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "acute-pain",
+      "cancer-pain",
+      "palliative-care",
+      "pulmonary-edema"
+    ],
+    "adverse_effect_tags": [
+      "respiratory-depression",
+      "constipation",
+      "dependence",
+      "nausea",
+      "sedation"
+    ],
+    "interaction_tags": [
+      "CNS-depressant",
+      "opioid",
+      "glucuronidation-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "mu-opioid-agonism"
+      ],
+      "prototype_class": "Opioid analgesics",
+      "adme_profile": "hepatically-metabolized-glucuronidation",
+      "presentation_cluster": [
+        "acute-pain",
+        "cancer-pain"
+      ],
+      "adverse_cluster": [
+        "respiratory-depression",
+        "constipation",
+        "dependence"
+      ],
+      "interaction_cluster": [
+        "CNS-depressant-combination",
+        "opioid-toxidrome"
+      ]
+    }
+  },
+  {
+    "id": "fentanyl",
+    "generic_name": "fentanyl",
+    "brand_names": [
+      "Duragesic (patch)",
+      "Sublimaze (IV)",
+      "Actiq (lozenge)",
+      "Abstral",
+      "Lazanda"
+    ],
+    "drug_class": "opioid analgesic",
+    "subclass": "full mu-opioid agonist / phenylpiperidine",
+    "prototype_for": false,
+    "prototype_drug": "morphine",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "mu-opioid receptors (MOR)"
+    ],
+    "mechanism_summary": "Highly lipophilic full mu-opioid agonist; 100 times more potent than morphine; rapid CNS penetration due to lipophilicity; inactive metabolites make it preferred in renal failure.",
+    "indications": [
+      "anesthesia induction/maintenance",
+      "procedural/breakthrough pain",
+      "chronic cancer pain (transdermal patch)",
+      "ICU analgesia/sedation"
+    ],
+    "contraindications": [
+      "respiratory depression without resuscitation",
+      "paralytic ileus",
+      "acute/intermittent pain not requiring continuous opioid therapy (for patch)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "respiratory depression",
+        "sedation",
+        "constipation",
+        "nausea",
+        "bradycardia",
+        "hypotension"
+      ],
+      "serious": [
+        "chest wall rigidity (high-dose IV: 'wooden chest syndrome')",
+        "respiratory arrest",
+        "physical dependence",
+        "adrenal insufficiency (chronic use)"
+      ]
+    },
+    "black_box_warnings": [
+      "addiction, abuse, and misuse; respiratory depression; neonatal opioid withdrawal syndrome; concurrent CNS depressants; patch \u2014 accidental exposure and child deaths; transmucosal products \u2014 only for opioid-tolerant cancer patients"
+    ],
+    "pharmacokinetics": {
+      "absorption": "IV: 100%; transdermal patch: ~92% over 72 hours (significant lag 12\u201324h before effect)",
+      "distribution": "Highly lipophilic; Vd ~6 L/kg; protein binding ~80\u201385%; rapid CNS penetration",
+      "metabolism": "CYP3A4 to inactive norfentanyl \u2014 no active metabolites; safe in renal failure",
+      "excretion": "Renal (~75%) as metabolites; <8% unchanged",
+      "half_life": "2\u20134 hours (IV); effective half-life 17 hours (patch due to subcutaneous depot)",
+      "onset": "IV: 1\u20132 minutes; transdermal: 12\u201324 hours (lag time)",
+      "peak": "IV: 5 minutes; transdermal: 24\u201372 hours",
+      "duration": "IV: 30\u201360 minutes; patch: 72 hours",
+      "protein_binding": "80\u201385%",
+      "vd": "~6 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CYP3A4 inhibitors (ketoconazole, ritonavir, grapefruit)",
+        "mechanism": "reduce fentanyl clearance; dramatically increase levels",
+        "severity": "major"
+      },
+      {
+        "drug": "CNS depressants",
+        "mechanism": "additive respiratory depression",
+        "severity": "major"
+      },
+      {
+        "drug": "serotonergic drugs",
+        "mechanism": "fentanyl has weak serotonergic activity; serotonin syndrome risk",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Transdermal patch: apply to clean, dry, non-irritated skin; rotate sites; temperature elevations (fever, heating pad) increase absorption by up to 26% \u2014 remove patch with fever",
+      "Patch lag time: when initiating transdermal fentanyl, continue short-acting opioids for 12\u201324 hours during onset; when discontinuing, residual drug persists in skin depot for 17\u201324 hours",
+      "Dispose of used patches by folding sticky sides together and flushing; even used patches contain enough fentanyl to be fatal to a child",
+      "IV fentanyl: monitor for chest wall rigidity (wooden chest) at high doses during rapid administration \u2014 requires neuromuscular blockade, not naloxone, to treat"
+    ],
+    "clinical_pearls": [
+      "Fentanyl is preferred in renal failure over morphine because its metabolites are inactive \u2014 morphine-6-glucuronide accumulates in CKD and causes prolonged respiratory depression",
+      "The transdermal fentanyl patch is only appropriate for opioid-tolerant patients with stable, chronic pain \u2014 it is NOT for acute pain, opioid-naive patients, or intermittent/PRN use"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category C \u2014 neonatal withdrawal with chronic use",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "acute-pain",
+      "cancer-pain",
+      "procedural-sedation",
+      "anesthesia"
+    ],
+    "adverse_effect_tags": [
+      "respiratory-depression",
+      "chest-wall-rigidity",
+      "constipation",
+      "dependence"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate",
+      "CNS-depressant",
+      "opioid"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "mu-opioid-agonism"
+      ],
+      "prototype_class": "Opioid analgesics",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "acute-pain",
+        "cancer-pain",
+        "procedural-sedation"
+      ],
+      "adverse_cluster": [
+        "respiratory-depression",
+        "dependence"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate",
+        "CNS-depressant-combination"
+      ]
+    }
+  },
+  {
+    "id": "naloxone",
+    "generic_name": "naloxone",
+    "brand_names": [
+      "Narcan",
+      "Kloxxado",
+      "Zimhi"
+    ],
+    "drug_class": "opioid antagonist",
+    "subclass": "pure opioid antagonist",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns",
+      "toxicology"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "mu-opioid receptors",
+      "kappa-opioid receptors",
+      "delta-opioid receptors"
+    ],
+    "mechanism_summary": "Competitive antagonist at all opioid receptor subtypes (mu, kappa, delta) with highest affinity for mu receptors; rapidly displaces opioids from receptors; no intrinsic agonist activity; reverses respiratory depression, sedation, and analgesia.",
+    "indications": [
+      "opioid overdose reversal",
+      "opioid-induced respiratory depression",
+      "opioid-induced pruritus (low-dose IV)",
+      "opioid use disorder (with buprenorphine or extended-release naltrexone)"
+    ],
+    "contraindications": [
+      "none absolute in overdose setting"
+    ],
+    "adverse_effects": {
+      "common": [
+        "acute opioid withdrawal (pain, agitation, nausea, hypertension, tachycardia)",
+        "sweating",
+        "hypertension"
+      ],
+      "serious": [
+        "acute pulmonary edema (rare)",
+        "ventricular fibrillation (rare, stress-related)",
+        "seizures (in opioid-dependent patients with precipitated withdrawal)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IV: 100%; IM/IN: ~50%; not effective orally (complete first-pass elimination)",
+      "distribution": "Protein binding ~46%; Vd ~2 L/kg; crosses BBB rapidly",
+      "metabolism": "Hepatic glucuronidation to inactive naloxone-3-glucuronide",
+      "excretion": "Renal",
+      "half_life": "30\u201390 minutes (shorter than most opioids \u2014 resedation can occur)",
+      "onset": "IV: 2 minutes; IM/IN: 3\u20135 minutes",
+      "peak": "IV: 2\u20135 minutes",
+      "duration": "45\u201390 minutes (shorter than duration of most opioids)",
+      "protein_binding": "46%",
+      "vd": "~2 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "buprenorphine",
+        "mechanism": "partial agonist \u2014 higher naloxone doses required to overcome buprenorphine's high receptor affinity",
+        "severity": "moderate"
+      },
+      {
+        "drug": "opioid analgesics",
+        "mechanism": "reverses analgesia \u2014 may precipitate severe pain in patients on therapeutic opioids",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Titrate to respiratory effect, not to full consciousness \u2014 goal is RR >10/min and adequate oxygenation, not full arousal (which precipitates severe withdrawal and agitation)",
+      "Duration of naloxone (45\u201390 min) is shorter than most opioids \u2014 monitor for resedation; repeat doses or infusion may be required for long-acting opioids (methadone, extended-release formulations)",
+      "Intranasal naloxone (Narcan 4 mg) is available without prescription for lay rescuers \u2014 educate patients on opioids and their family members on recognition and use",
+      "After reversal, keep patient under observation for minimum 2\u20134 hours (longer for long-acting opioids); do not discharge after naloxone administration"
+    ],
+    "clinical_pearls": [
+      "Naloxone's short duration relative to opioids is the most clinically dangerous pharmacokinetic property \u2014 patients must be monitored for resedation after reversal, especially with fentanyl patches, extended-release opioids, or methadone",
+      "In full opioid reversal, use small IV doses (0.04\u20130.1 mg) rather than full 0.4 mg to avoid precipitating severe withdrawal, agitation, and pulmonary edema"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category B \u2014 may precipitate withdrawal in opioid-dependent mother/fetus",
+    "lactation_safety": "safe",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "opioid-overdose",
+      "opioid-reversal"
+    ],
+    "adverse_effect_tags": [
+      "acute-withdrawal",
+      "agitation",
+      "hypertension"
+    ],
+    "interaction_tags": [
+      "opioid-antagonist"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns",
+        "toxicology"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "mu-opioid-antagonism"
+      ],
+      "prototype_class": "Opioid antagonists",
+      "adme_profile": "hepatically-metabolized-glucuronidation",
+      "presentation_cluster": [
+        "opioid-overdose"
+      ],
+      "adverse_cluster": [
+        "acute-withdrawal"
+      ],
+      "interaction_cluster": [
+        "opioid-antagonist"
+      ]
+    }
+  },
+  {
+    "id": "buprenorphine",
+    "generic_name": "buprenorphine",
+    "brand_names": [
+      "Subutex",
+      "Suboxone (with naloxone)",
+      "Buprenex",
+      "Belbuca",
+      "Butrans"
+    ],
+    "drug_class": "opioid partial agonist / analgesic",
+    "subclass": "partial mu-opioid agonist",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "mu-opioid receptors (partial agonist)",
+      "kappa-opioid receptors (antagonist)"
+    ],
+    "mechanism_summary": "High-affinity partial agonist at mu-opioid receptors with a ceiling effect on respiratory depression; full kappa antagonist; very slow receptor dissociation (hours) creating long duration and precipitation of withdrawal if given to opioid-dependent patients; naloxone co-formulation (Suboxone) deters IV misuse.",
+    "indications": [
+      "opioid use disorder (maintenance treatment)",
+      "moderate-to-severe chronic pain (Belbuca buccal film, Butrans patch)",
+      "opioid dependence induction"
+    ],
+    "contraindications": [
+      "acute respiratory depression without resuscitation capability",
+      "severe hepatic impairment (IV Buprenex)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "headache",
+        "nausea",
+        "constipation",
+        "insomnia",
+        "diaphoresis",
+        "sublingual irritation"
+      ],
+      "serious": [
+        "respiratory depression (occurs \u2014 ceiling effect reduces but does not eliminate risk, especially with CNS depressants)",
+        "precipitated withdrawal (if given to opioid-dependent patient before adequate washout)",
+        "QTc prolongation (high doses)",
+        "hepatotoxicity (elevated LFTs)"
+      ]
+    },
+    "black_box_warnings": [
+      "addiction, abuse, and misuse; respiratory depression; neonatal opioid withdrawal syndrome; concurrent CNS depressants \u2014 risk of respiratory depression and death"
+    ],
+    "pharmacokinetics": {
+      "absorption": "SL bioavailability ~30\u201350%; poor oral absorption due to first-pass; buccal ~46\u201365%",
+      "distribution": "Highly protein-bound (96%); Vd ~430 L; penetrates CNS well",
+      "metabolism": "CYP3A4 to active norbuprenorphine; then glucuronidation",
+      "excretion": "Fecal (~69%) and renal (~27%)",
+      "half_life": "24\u201342 hours",
+      "onset": "SL: 30\u201360 minutes",
+      "peak": "1\u20133 hours (SL)",
+      "duration": "24\u201372 hours",
+      "protein_binding": "96%",
+      "vd": "~430 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "benzodiazepines/CNS depressants",
+        "mechanism": "additive respiratory depression \u2014 FDA boxed warning",
+        "severity": "major"
+      },
+      {
+        "drug": "CYP3A4 inhibitors",
+        "mechanism": "increase buprenorphine levels",
+        "severity": "moderate"
+      },
+      {
+        "drug": "full opioid agonists",
+        "mechanism": "precipitates withdrawal due to high mu receptor affinity displacing opioids; must wait for adequate withdrawal before induction",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Buprenorphine induction: patient must be in mild-moderate opioid withdrawal (COWS score \u22658\u201312) before first dose to prevent precipitated withdrawal \u2014 this is the most critical nursing safety consideration",
+      "Suboxone (buprenorphine/naloxone): place film under tongue or in cheek until completely dissolved (2\u201310 min); do not swallow; eating and drinking should be avoided 30 minutes after",
+      "Monitor LFTs at baseline and periodically \u2014 hepatotoxicity has been reported; transient asymptomatic LFT elevation is common",
+      "Patient must be registered DEA-waivered provider (X-waiver, now integrated into DEA registration) to prescribe Suboxone for OUD; nursing assessment supports treatment adherence and monitoring"
+    ],
+    "clinical_pearls": [
+      "Buprenorphine's ceiling effect on respiratory depression is a key safety advantage over full agonists \u2014 overdose fatalities are far less common with buprenorphine monotherapy than with methadone or full agonist opioids",
+      "The high mu receptor affinity of buprenorphine means it will displace other opioids from receptors \u2014 administering buprenorphine too early in an opioid-dependent patient precipitates severe acute withdrawal (precipitated withdrawal)"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category C \u2014 buprenorphine is preferred over methadone for OUD in pregnancy per current guidelines; neonatal withdrawal expected",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "opioid-use-disorder",
+      "chronic-pain"
+    ],
+    "adverse_effect_tags": [
+      "respiratory-depression",
+      "precipitated-withdrawal",
+      "hepatotoxicity",
+      "QTc-prolongation"
+    ],
+    "interaction_tags": [
+      "CNS-depressant",
+      "CYP3A4-substrate",
+      "opioid"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "mu-opioid-partial-agonism"
+      ],
+      "prototype_class": "Opioid partial agonists",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "opioid-use-disorder",
+        "chronic-pain"
+      ],
+      "adverse_cluster": [
+        "respiratory-depression",
+        "dependence"
+      ],
+      "interaction_cluster": [
+        "CNS-depressant-combination",
+        "opioid"
+      ]
+    }
+  },
+  {
+    "id": "zolpidem",
+    "generic_name": "zolpidem",
+    "brand_names": [
+      "Ambien",
+      "Ambien CR",
+      "Intermezzo",
+      "Edluar",
+      "Zolpimist"
+    ],
+    "drug_class": "sedative-hypnotic",
+    "subclass": "non-benzodiazepine GABA-A agonist (Z-drug) / imidazopyridine",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "GABA-A receptor (BZ1/omega-1 subtype selective)"
+    ],
+    "mechanism_summary": "Selectively binds the BZ1 (omega-1) subtype of GABA-A receptors containing alpha-1 subunits, producing sedation and hypnosis with reduced anxiolytic, muscle relaxant, and anticonvulsant effects compared to benzodiazepines; selectivity is dose-dependent.",
+    "indications": [
+      "insomnia (sleep onset; CR formulation for maintenance)"
+    ],
+    "contraindications": [
+      "severe hepatic impairment",
+      "complex sleep behaviors from prior zolpidem use"
+    ],
+    "adverse_effects": {
+      "common": [
+        "daytime drowsiness",
+        "dizziness",
+        "headache",
+        "anterograde amnesia",
+        "ataxia"
+      ],
+      "serious": [
+        "complex sleep behaviors (sleepwalking, sleep-driving, preparing and eating food while asleep \u2014 may be fatal)",
+        "dependency",
+        "respiratory depression with CNS depressants",
+        "worsening depression/suicidal ideation"
+      ]
+    },
+    "black_box_warnings": [
+      "complex sleep behaviors including sleep-walking, sleep-driving, and other activities while not fully awake \u2014 discontinue if occurs; concomitant use with CNS depressants"
+    ],
+    "pharmacokinetics": {
+      "absorption": "Rapid absorption; bioavailability ~70%; food delays absorption",
+      "distribution": "Protein binding 92%; Vd 0.54 L/kg",
+      "metabolism": "CYP3A4 (primary), CYP2C9, CYP1A2 to inactive metabolites",
+      "excretion": "Renal (~56%) and fecal (~37%)",
+      "half_life": "1.5\u20132.4 hours (IR); 2.8 hours (CR); prolonged in elderly and hepatic impairment",
+      "onset": "15\u201330 minutes",
+      "peak": "1.6 hours",
+      "duration": "4\u20136 hours (IR); 6\u20138 hours (CR)",
+      "protein_binding": "92%",
+      "vd": "0.54 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CNS depressants/alcohol",
+        "mechanism": "additive CNS depression; respiratory depression",
+        "severity": "major"
+      },
+      {
+        "drug": "CYP3A4 inhibitors",
+        "mechanism": "increase zolpidem levels",
+        "severity": "moderate"
+      },
+      {
+        "drug": "rifampin",
+        "mechanism": "CYP3A4 induction reduces zolpidem efficacy",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Counsel patients to take only when able to devote 7\u20138 hours to sleep; taking with less sleep time available increases morning drowsiness and impaired driving \u2014 particularly dangerous the morning after taking the CR formulation",
+      "FDA-recommended doses for women are half those for men (lower CYP3A4 metabolism rate in women); women: 5 mg IR or 6.25 mg CR; men: 10 mg IR or 12.5 mg CR",
+      "Assess for complex sleep behaviors at every follow-up; instruct patient and household members to report any activity occurring during apparent sleep \u2014 discontinue immediately if such behavior occurs",
+      "Beers Criteria drug in elderly \u2014 significantly increased fall and fracture risk; cognitive impairment; recommend non-pharmacological sleep interventions as first-line"
+    ],
+    "clinical_pearls": [
+      "Zolpidem's selectivity for alpha-1-containing GABA-A receptors (BZ1 subtype) theoretically reduces tolerance and dependence compared to benzodiazepines, but clinical practice shows similar dependence patterns with prolonged use",
+      "Morning 'hangover' impairment is significant enough that the FDA requires women to take half the dose of men due to demonstrably slower clearance \u2014 a rare example of sex-based dosing"
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category C \u2014 neonatal withdrawal and respiratory depression reported",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "insomnia"
+    ],
+    "adverse_effect_tags": [
+      "complex-sleep-behaviors",
+      "falls",
+      "dependence",
+      "amnesia"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate",
+      "CNS-depressant"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "GABA-A-modulation"
+      ],
+      "prototype_class": "Non-benzodiazepine hypnotics (Z-drugs)",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "insomnia"
+      ],
+      "adverse_cluster": [
+        "CNS-depression",
+        "falls",
+        "complex-sleep-behaviors"
+      ],
+      "interaction_cluster": [
+        "CNS-depressant-combination"
+      ]
+    }
+  },
+  {
+    "id": "levodopa-carbidopa",
+    "generic_name": "levodopa-carbidopa",
+    "brand_names": [
+      "Sinemet",
+      "Rytary",
+      "Duopa",
+      "Inbrija"
+    ],
+    "drug_class": "antiparkinsonian",
+    "subclass": "dopamine precursor / DOPA decarboxylase inhibitor combination",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "dopamine synthesis pathway",
+      "aromatic amino acid decarboxylase (AAAD/DOPA decarboxylase)"
+    ],
+    "mechanism_summary": "Levodopa is the direct precursor to dopamine and crosses the BBB via L-amino acid transporters; carbidopa inhibits peripheral DOPA decarboxylase, preventing conversion of levodopa to dopamine in the periphery (reducing nausea, hypotension) and increasing levodopa availability for CNS conversion.",
+    "indications": [
+      "Parkinson's disease (gold standard symptomatic treatment)",
+      "restless leg syndrome (off-label)",
+      "dopa-responsive dystonia"
+    ],
+    "contraindications": [
+      "concurrent non-selective MAOIs",
+      "narrow-angle glaucoma",
+      "melanoma (theoretical \u2014 dopamine is melanin precursor)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea and vomiting (significantly reduced by carbidopa)",
+        "dyskinesias (especially peak-dose with long-term use)",
+        "'wearing-off' phenomenon",
+        "orthostatic hypotension",
+        "somnolence"
+      ],
+      "serious": [
+        "dyskinesias (peak-dose and biphasic)",
+        "impulse control disorders (gambling, hypersexuality)",
+        "psychosis/hallucinations",
+        "on-off fluctuations",
+        "dopamine agonist withdrawal syndrome (abrupt cessation)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "L-amino acid transporter in gut; protein (especially large neutral amino acids) competitively inhibits absorption \u2014 take 30\u201360 min before meals",
+      "distribution": "Levodopa crosses BBB via L-amino acid transporter; carbidopa does not cross BBB",
+      "metabolism": "CNS and peripheral DOPA decarboxylase converts levodopa to dopamine; COMT converts to 3-O-methyldopa (blocked by entacapone/tolcapone)",
+      "excretion": "Renal",
+      "half_life": "1\u20132 hours (levodopa); longer with extended-release formulations",
+      "onset": "30\u201360 minutes",
+      "peak": "1\u20132 hours (IR)",
+      "duration": "2\u20135 hours (IR); 4\u20136 hours (Rytary ER)",
+      "protein_binding": "minimal",
+      "vd": "minimal"
+    },
+    "drug_interactions": [
+      {
+        "drug": "non-selective MAOIs",
+        "mechanism": "hypertensive crisis from excess catecholamines",
+        "severity": "major"
+      },
+      {
+        "drug": "dopamine antagonists (antipsychotics, metoclopramide)",
+        "mechanism": "block dopamine receptors, directly antagonizing levodopa effect",
+        "severity": "major"
+      },
+      {
+        "drug": "high-protein meals",
+        "mechanism": "large neutral amino acids compete with levodopa for intestinal absorption and BBB transport",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer 30\u201360 minutes before meals; high-protein diets significantly reduce absorption and clinical effect \u2014 counsel patient on consistent, moderate protein intake and timing",
+      "Motor fluctuations: document timing of doses and motor function (on/off periods, dyskinesias) to guide dose adjustments; wearing-off typically occurs before next dose",
+      "Instruct patient to change positions slowly \u2014 orthostatic hypotension is common especially early in treatment; measure standing BP",
+      "Dyskinesias (involuntary movements) are a sign of excess dopamine at peak levels, not disease worsening \u2014 distinguish from tremor; may require dose reduction or adjunctive therapy"
+    ],
+    "clinical_pearls": [
+      "Carbidopa's sole purpose is to block peripheral DOPA decarboxylase \u2014 it does not cross the BBB and has no antiparkinsonian effect on its own; it merely allows higher levodopa doses with fewer peripheral side effects",
+      "Levodopa is the most effective antiparkinsonian drug, but long-term use (>5 years) invariably leads to motor complications (wearing-off, dyskinesias) \u2014 debate continues about whether delaying levodopa initiation preserves longer honeymoon period"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category C",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "Parkinson-disease"
+    ],
+    "adverse_effect_tags": [
+      "dyskinesias",
+      "wearing-off",
+      "orthostatic-hypotension",
+      "hallucinations",
+      "impulse-control"
+    ],
+    "interaction_tags": [
+      "MAOI-contraindication",
+      "D2-antagonist-interaction",
+      "protein-absorption-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "dopamine-precursor"
+      ],
+      "prototype_class": "Antiparkinsonian agents",
+      "adme_profile": "amino-acid-transport-dependent",
+      "presentation_cluster": [
+        "Parkinson-disease"
+      ],
+      "adverse_cluster": [
+        "dyskinesias",
+        "impulse-control-disorders"
+      ],
+      "interaction_cluster": [
+        "MAOI-contraindication",
+        "D2-antagonist-interaction"
+      ]
+    }
+  },
+  {
+    "id": "donepezil",
+    "generic_name": "donepezil",
+    "brand_names": [
+      "Aricept"
+    ],
+    "drug_class": "cholinesterase inhibitor",
+    "subclass": "reversible acetylcholinesterase inhibitor / piperidine",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "acetylcholinesterase (AChE)"
+    ],
+    "mechanism_summary": "Reversibly inhibits acetylcholinesterase in the CNS, increasing synaptic acetylcholine concentrations; preferentially inhibits central over peripheral AChE; does not alter disease progression but modestly improves or stabilizes cognition, behavior, and ADL function in Alzheimer's disease.",
+    "indications": [
+      "Alzheimer's disease (mild, moderate, severe)",
+      "dementia associated with Parkinson's disease (off-label)",
+      "vascular dementia (off-label)"
+    ],
+    "contraindications": [
+      "hypersensitivity to donepezil or piperidine derivatives"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "diarrhea",
+        "insomnia",
+        "vivid dreams/nightmares",
+        "muscle cramps",
+        "anorexia",
+        "bradycardia"
+      ],
+      "serious": [
+        "peptic ulcer disease exacerbation/GI bleeding (cholinergic effect)",
+        "bradycardia and syncope (vagotonic effect)",
+        "seizures (cholinergic)",
+        "bladder outflow obstruction worsening",
+        "pulmonary effects in asthma/COPD patients"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "~100% bioavailability; not affected by food",
+      "distribution": "Protein binding ~96%; Vd ~12 L/kg; crosses BBB",
+      "metabolism": "CYP2D6 and CYP3A4 to active 6-O-desmethyl donepezil and inactive metabolites",
+      "excretion": "Renal (~57%) and fecal (~15%); hepatic impairment may require monitoring",
+      "half_life": "70\u201380 hours (allows once-daily dosing)",
+      "onset": "Weeks for measurable effect",
+      "peak": "3\u20134 hours",
+      "duration": "24 hours",
+      "protein_binding": "96%",
+      "vd": "~12 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "anticholinergic drugs",
+        "mechanism": "pharmacodynamic antagonism \u2014 reduces donepezil's cholinergic benefit",
+        "severity": "moderate"
+      },
+      {
+        "drug": "NSAIDs",
+        "mechanism": "additive GI irritation; cholinergic stimulation already increases GI acid",
+        "severity": "moderate"
+      },
+      {
+        "drug": "succinylcholine",
+        "mechanism": "AChE inhibition prolongs succinylcholine's neuromuscular blockade",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer at bedtime to minimize GI side effects; 23 mg tablet must be taken with food due to higher peak levels and GI irritation",
+      "Monitor heart rate at each visit; donepezil's vagotonic (bradycardic) effect can be clinically significant \u2014 hold and notify prescriber if pulse <50 bpm",
+      "Monitor for GI side effects (nausea, diarrhea, anorexia); weight loss in already-thin dementia patients is a significant safety concern",
+      "Counsel caregivers: donepezil does not reverse or halt Alzheimer's disease progression; realistic expectations include modest improvement or slower decline over 6\u201312 months"
+    ],
+    "clinical_pearls": [
+      "Donepezil has the longest half-life (~72 hours) of the cholinesterase inhibitors (rivastigmine: 1\u20132 hours; galantamine: 7 hours), enabling once-daily dosing with high adherence rates",
+      "Cholinesterase inhibitors are the only FDA-approved treatments for Alzheimer's disease cognition and are entirely symptomatic \u2014 they modestly improve cognitive test scores and delay nursing home placement but do not modify the underlying amyloid/tau pathology"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category C",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "Alzheimer-dementia",
+      "Parkinson-dementia"
+    ],
+    "adverse_effect_tags": [
+      "bradycardia",
+      "GI-bleeding",
+      "nausea",
+      "insomnia"
+    ],
+    "interaction_tags": [
+      "CYP2D6-substrate",
+      "cholinergic",
+      "anticholinergic-antagonism"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "AChE-inhibition"
+      ],
+      "prototype_class": "Cholinesterase inhibitors",
+      "adme_profile": "hepatically-metabolized-CYP2D6",
+      "presentation_cluster": [
+        "Alzheimer-dementia"
+      ],
+      "adverse_cluster": [
+        "cholinergic-toxidrome",
+        "bradycardia"
+      ],
+      "interaction_cluster": [
+        "cholinergic",
+        "anticholinergic-interaction"
+      ]
+    }
+  },
+  {
+    "id": "methylphenidate",
+    "generic_name": "methylphenidate",
+    "brand_names": [
+      "Ritalin",
+      "Concerta",
+      "Metadate",
+      "Quillivant XR",
+      "Daytrana"
+    ],
+    "drug_class": "CNS stimulant",
+    "subclass": "dopamine-norepinephrine reuptake inhibitor",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "dopamine reuptake transporter (DAT)",
+      "norepinephrine reuptake transporter (NET)"
+    ],
+    "mechanism_summary": "Blocks reuptake of dopamine and norepinephrine by binding to their respective transporter proteins; increases synaptic monoamine concentrations in prefrontal cortex, improving executive function, attention, and impulse control.",
+    "indications": [
+      "ADHD (children and adults)",
+      "narcolepsy"
+    ],
+    "contraindications": [
+      "concurrent or recent MAOIs",
+      "marked anxiety or agitation",
+      "glaucoma",
+      "tics/Tourette's syndrome (relative)",
+      "known cardiac structural abnormalities"
+    ],
+    "adverse_effects": {
+      "common": [
+        "decreased appetite",
+        "insomnia",
+        "headache",
+        "stomach pain",
+        "increased heart rate and blood pressure",
+        "irritability"
+      ],
+      "serious": [
+        "sudden death in patients with structural cardiac abnormalities",
+        "serious cardiovascular events",
+        "new/worsened psychiatric symptoms (mania, psychosis)",
+        "growth suppression in children",
+        "priapism (extended-release formulations, rare)"
+      ]
+    },
+    "black_box_warnings": [
+      "high potential for abuse and dependence \u2014 Schedule II controlled substance; assess for history of drug dependence before prescribing"
+    ],
+    "pharmacokinetics": {
+      "absorption": "Well absorbed; IR peak at 1\u20132 hours; Concerta uses OROS delivery for 12-hour duration",
+      "distribution": "Protein binding 10\u201333%; Vd ~2.65 L/kg",
+      "metabolism": "De-esterification to inactive ritalinic acid; minimal CYP involvement",
+      "excretion": "Renal (~80%); mostly as ritalinic acid",
+      "half_life": "2\u20133 hours",
+      "onset": "30\u201360 minutes",
+      "peak": "1\u20132 hours (IR); 6\u20138 hours (ER/Concerta)",
+      "duration": "3\u20135 hours (IR); 8\u201312 hours (ER)",
+      "protein_binding": "10\u201333%",
+      "vd": "~2.65 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "hypertensive crisis \u2014 14-day washout required",
+        "severity": "major"
+      },
+      {
+        "drug": "clonidine",
+        "mechanism": "serious adverse events reported with combination; use with caution",
+        "severity": "major"
+      },
+      {
+        "drug": "anticoagulants (warfarin)",
+        "mechanism": "methylphenidate may inhibit warfarin metabolism; monitor INR",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor height and weight in children every 3\u20136 months; growth suppression may require drug holidays (weekends/summers) in growing children with significant growth delay",
+      "Obtain baseline cardiovascular evaluation (HR, BP, ECG if indicated); methylphenidate is contraindicated in structural cardiac abnormalities \u2014 sudden cardiac death, though rare, is a serious risk",
+      "Administer last dose by early afternoon to minimize insomnia \u2014 optimize timing with school/work schedule",
+      "Drug is Schedule II \u2014 verify prescription authenticity; assess for diversion; counsel family about secure storage"
+    ],
+    "clinical_pearls": [
+      "Methylphenidate's mechanism is similar to cocaine (DAT/NET blockade) but slower \u2014 the abuse potential is partly driven by rate of dopamine increase; slow-release formulations have lower abuse potential than short-acting forms",
+      "Treatment holidays during weekends or summers can help mitigate growth suppression in children but may impair social and academic functioning during those periods \u2014 individualize based on severity of ADHD impact"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "Category C",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "ADHD",
+      "narcolepsy"
+    ],
+    "adverse_effect_tags": [
+      "cardiovascular-risk",
+      "growth-suppression",
+      "insomnia",
+      "decreased-appetite"
+    ],
+    "interaction_tags": [
+      "MAOI-contraindication",
+      "stimulant",
+      "DAT-NET-inhibitor"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "DAT-NET-inhibition"
+      ],
+      "prototype_class": "CNS stimulants",
+      "adme_profile": "hepatically-metabolized-non-CYP",
+      "presentation_cluster": [
+        "ADHD",
+        "narcolepsy"
+      ],
+      "adverse_cluster": [
+        "cardiovascular-risk",
+        "growth-suppression"
+      ],
+      "interaction_cluster": [
+        "MAOI-contraindication",
+        "stimulant"
+      ]
+    }
+  },
+  {
+    "id": "sumatriptan",
+    "generic_name": "sumatriptan",
+    "brand_names": [
+      "Imitrex",
+      "Tosymra",
+      "Zembrace"
+    ],
+    "drug_class": "antimigraine",
+    "subclass": "triptan / serotonin 5-HT1B/1D agonist",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "serotonin 5-HT1B receptors",
+      "serotonin 5-HT1D receptors"
+    ],
+    "mechanism_summary": "Selective agonist at 5-HT1B (causing vasoconstriction of dilated intracranial vessels) and 5-HT1D receptors (inhibiting trigeminal nerve activation and substance P release); directly targets the pathophysiology of migraine at both the vascular and neural levels.",
+    "indications": [
+      "acute migraine with or without aura",
+      "cluster headache (SC formulation)"
+    ],
+    "contraindications": [
+      "coronary artery disease or history of MI",
+      "uncontrolled hypertension",
+      "cerebrovascular disease",
+      "hemiplegic or basilar migraine",
+      "concurrent ergotamine/DHE",
+      "within 24 hours of another triptan"
+    ],
+    "adverse_effects": {
+      "common": [
+        "chest tightness/pressure (non-cardiac in most cases)",
+        "paresthesias",
+        "warm/tingling sensation",
+        "neck stiffness",
+        "nausea (injection site: stinging)"
+      ],
+      "serious": [
+        "coronary vasospasm / MI (rare but serious)",
+        "serotonin syndrome (with SSRIs/SNRIs)",
+        "peripheral vascular ischemia",
+        "medication overuse headache with frequent use"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "SC: ~96% bioavailability; oral: ~14\u201315% (significant first-pass); nasal: ~17%",
+      "distribution": "Protein binding 14\u201321%; Vd ~170 L",
+      "metabolism": "MAO-A to inactive indole acetic acid; avoid non-selective MAOIs",
+      "excretion": "Renal (~60%) and fecal",
+      "half_life": "2 hours",
+      "onset": "SC: 10 minutes; oral: 30 minutes; nasal: 15 minutes",
+      "peak": "SC: 12 min; oral: 2 hours; nasal: 90 min",
+      "duration": "4\u20136 hours",
+      "protein_binding": "14\u201321%",
+      "vd": "~170 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "inhibit MAO-A metabolism of sumatriptan; increase sumatriptan levels; potential serotonin syndrome",
+        "severity": "major"
+      },
+      {
+        "drug": "ergotamine/DHE",
+        "mechanism": "additive vasospasm \u2014 do not use within 24 hours of each other",
+        "severity": "major"
+      },
+      {
+        "drug": "SSRIs/SNRIs",
+        "mechanism": "serotonin syndrome risk (controversial; FDA warning)",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer at onset of migraine \u2014 not as preventive therapy; maximum 2 doses in 24 hours; instruct patient to seek emergency care if chest pain, shortness of breath, or vision changes occur after dose",
+      "Screen for cardiovascular risk factors before prescribing; first dose in patients with cardiovascular risk factors should be administered in medical setting with monitoring",
+      "Medication overuse headache (MOH) develops with use >2\u20133 days per week; counsel patients to track headache days and limit triptan use",
+      "Autoinjector (Imitrex STATdose): inject into outer thigh or upper arm; avoid deltoid; demonstrate technique and have patient return-demonstrate"
+    ],
+    "clinical_pearls": [
+      "Sumatriptan's oral bioavailability is only 14% due to extensive first-pass metabolism \u2014 the subcutaneous formulation provides much faster onset and higher bioavailability but is less commonly used due to injection discomfort",
+      "Triptans are contraindicated in hemiplegic and basilar migraine (uncommon migraine variants) because 5-HT1B-mediated vasoconstriction in the posterior circulation could worsen these aura variants"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category C \u2014 pregnancy registry available; avoid if possible especially in first trimester",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "migraine-acute",
+      "cluster-headache"
+    ],
+    "adverse_effect_tags": [
+      "chest-tightness",
+      "serotonin-syndrome",
+      "medication-overuse-headache",
+      "vasospasm"
+    ],
+    "interaction_tags": [
+      "serotonergic",
+      "MAOI-contraindication",
+      "ergot-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "5HT1B-1D-agonism"
+      ],
+      "prototype_class": "Triptans",
+      "adme_profile": "hepatically-metabolized-MAO",
+      "presentation_cluster": [
+        "migraine-acute"
+      ],
+      "adverse_cluster": [
+        "vasospasm",
+        "serotonin-syndrome"
+      ],
+      "interaction_cluster": [
+        "serotonergic",
+        "MAOI-contraindication"
+      ]
+    }
+  },
+  {
+    "id": "acetaminophen",
+    "generic_name": "acetaminophen",
+    "brand_names": [
+      "Tylenol",
+      "APAP",
+      "Ofirmev (IV)",
+      "Paracetamol"
+    ],
+    "drug_class": "analgesic / antipyretic",
+    "subclass": "para-aminophenol derivative",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns",
+      "musculoskeletal"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "COX-3 (central)",
+      "endocannabinoid system",
+      "TRPA1 channels"
+    ],
+    "mechanism_summary": "Exact mechanism incompletely understood; inhibits central COX-3 (a COX-1 splice variant) and activates descending serotonergic pain pathways; has no meaningful peripheral anti-inflammatory activity; robust antipyretic action via central inhibition of prostaglandin synthesis in the hypothalamus.",
+    "indications": [
+      "mild-to-moderate pain",
+      "fever",
+      "first-line analgesic/antipyretic in pregnancy",
+      "osteoarthritis pain (oral, topical)",
+      "multimodal analgesia (IV Ofirmev)"
+    ],
+    "contraindications": [
+      "severe hepatic impairment",
+      "hypersensitivity to acetaminophen"
+    ],
+    "adverse_effects": {
+      "common": [
+        "hepatotoxicity (with overdose or therapeutic use in patients with hepatic disease/alcohol use)",
+        "rarely: rash"
+      ],
+      "serious": [
+        "hepatotoxicity \u2014 potentially fatal; N-acetylcysteine is the antidote",
+        "acute liver failure",
+        "rare: severe hypersensitivity reactions including anaphylaxis, SJS"
+      ]
+    },
+    "black_box_warnings": [
+      "hepatotoxicity \u2014 risk with doses >4 g/day; risk increased with alcohol use, hepatic disease, or CYP2E1 inducers"
+    ],
+    "pharmacokinetics": {
+      "absorption": "Rapid and complete oral absorption; IV form achieves higher peak CNS levels than oral",
+      "distribution": "Low protein binding (<20%); Vd ~0.9 L/kg; crosses BBB",
+      "metabolism": "Primarily glucuronidation (55%) and sulfation (30%) to inactive metabolites; ~5\u201310% via CYP2E1 (and CYP3A4) to toxic NAPQI, which is detoxified by glutathione",
+      "excretion": "Renal as glucuronide/sulfate conjugates",
+      "half_life": "2\u20133 hours",
+      "onset": "30 minutes (oral); ~5\u201310 minutes (IV)",
+      "peak": "30\u201360 minutes (oral); 15 minutes (IV)",
+      "duration": "4\u20136 hours",
+      "protein_binding": "<20%",
+      "vd": "~0.9 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "warfarin",
+        "mechanism": "acetaminophen inhibits warfarin metabolism; INR may increase significantly even at therapeutic doses",
+        "severity": "moderate"
+      },
+      {
+        "drug": "alcohol (chronic heavy use)",
+        "mechanism": "CYP2E1 induction increases NAPQI formation; glutathione depletion from malnutrition increases hepatotoxicity risk",
+        "severity": "major"
+      },
+      {
+        "drug": "isoniazid",
+        "mechanism": "CYP2E1 induction increases NAPQI formation",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Maximum dose: 4 g/day in healthy adults; 2 g/day maximum in patients with hepatic disease, heavy alcohol use, or malnutrition; check all other OTC/prescription products for acetaminophen content to prevent inadvertent overdose",
+      "In overdose: administer N-acetylcysteine (NAC) within 8\u201310 hours of ingestion for maximum efficacy; use Rumack-Matthew nomogram to guide NAC therapy",
+      "IV Ofirmev: infuse over 15 minutes; check dose carefully \u2014 10-fold dosing errors have occurred (1000 mg vs 100 mg/mL concentration)",
+      "Patient education: avoid alcohol with acetaminophen; identify all sources of APAP in multi-ingredient OTC products (cold/flu preparations, sleep aids)"
+    ],
+    "clinical_pearls": [
+      "Acetaminophen overdose (intentional or accidental) is the leading cause of acute liver failure in the United States \u2014 toxicity is mediated by NAPQI accumulation when glutathione stores are depleted",
+      "Unlike NSAIDs, acetaminophen lacks anti-inflammatory activity and does not inhibit platelet aggregation \u2014 it is therefore safe in patients who cannot tolerate NSAIDs (GI bleeding risk, renal insufficiency, anticoagulation) but ineffective for inflammatory pain"
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "Category B \u2014 preferred analgesic/antipyretic in pregnancy; recent debate about prenatal exposure and neurodevelopmental effects requires monitoring",
+    "lactation_safety": "safe",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "acute-pain",
+      "fever",
+      "osteoarthritis",
+      "chronic-pain"
+    ],
+    "adverse_effect_tags": [
+      "hepatotoxicity",
+      "acute-liver-failure",
+      "NAPQI-toxicity"
+    ],
+    "interaction_tags": [
+      "CYP2E1-substrate",
+      "warfarin-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns",
+        "musculoskeletal"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "COX-3-inhibition"
+      ],
+      "prototype_class": "Analgesics-antipyretics",
+      "adme_profile": "hepatically-metabolized-glucuronidation",
+      "presentation_cluster": [
+        "acute-pain",
+        "fever"
+      ],
+      "adverse_cluster": [
+        "hepatotoxicity"
+      ],
+      "interaction_cluster": [
+        "CYP2E1-substrate"
+      ]
+    }
   }
 ]
