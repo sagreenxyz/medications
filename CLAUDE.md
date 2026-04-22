@@ -335,6 +335,7 @@ Use these specific DaisyUI components for the following UI elements:
 | Drug profile wrapper | `card` + `card-body` | Outer shell for every drug page |
 | Prototype badge | `badge badge-success` | "PROTOTYPE" label |
 | BBW badge | `badge badge-error` | Black box warning flag |
+| ISMP high-alert badge | `badge badge-error` | "HIGH ALERT" label — displayed prominently in drug page header for all ISMP high-alert medications |
 | Beers Criteria flag | `badge badge-warning` | Geriatric caution |
 | Organ system tag | `badge badge-outline` | Schema membership |
 | PK data table | `table table-zebra` | Pharmacokinetics block |
@@ -441,6 +442,7 @@ Each entry in `data/drugs.json` must exactly follow this structure:
     "ACE-inhibitor cough is caused by bradykinin accumulation; switching to an ARB resolves cough while preserving renoprotection"
   ],
   "beers_criteria": false,
+  "ismp_high_alert": false,
   "renal_dose_adjustment": true,
   "hepatic_dose_adjustment": false,
   "pregnancy_safety": "contraindicated (fetal toxicity)",
@@ -492,6 +494,50 @@ Each entry in `data/drugs.json` must exactly follow this structure:
 
 Populate all 500 entries before generating any schema or drug profile pages.
 See Section 9 for the required drug list by system.
+
+### ISMP High-Alert Medication Classification
+
+The `ismp_high_alert` field (boolean) flags drugs that appear on the Institute
+for Safe Medication Practices (ISMP) High-Alert Medications list (Acute Care
+edition, 2024). High-alert medications are drugs that bear a heightened risk of
+causing significant patient harm when used in error, even when used as intended.
+They are NOT necessarily more likely to cause errors than other drugs — they
+carry greater harm potential when errors do occur.
+
+**Set `ismp_high_alert: true` for any drug in the following categories:**
+
+| Category | Examples from the drug list |
+|---|---|
+| Anticoagulants (all forms) | warfarin, heparin, enoxaparin, dalteparin, fondaparinux, bivalirudin, argatroban, dabigatran, rivaroxaban, apixaban, edoxaban |
+| Thrombolytics / fibrinolytics | alteplase, tenecteplase, reteplase |
+| Glycoprotein IIb/IIIa inhibitors | abciximab, eptifibatide, tirofiban |
+| Insulin (all forms) | insulin glargine, insulin detemir, insulin degludec, NPH insulin, regular insulin, insulin lispro, insulin aspart, insulin glulisine |
+| Oral sulfonylurea hypoglycemics | glipizide, glyburide, glimepiride |
+| Opioids (all routes) | morphine, fentanyl, buprenorphine, hydromorphone, oxycodone, codeine, tramadol, tapentadol, methadone, hydrocodone |
+| Vasopressors and IV inotropes | dopamine, dobutamine, norepinephrine, epinephrine, vasopressin, milrinone |
+| Neuromuscular blocking agents | succinylcholine, rocuronium, vecuronium, cisatracurium |
+| IV sedation / general anesthetics | midazolam, lorazepam, diazepam, propofol, etomidate, ketamine |
+| Chemotherapy agents | all cytotoxic agents (cyclophosphamide, methotrexate-onc, doxorubicin, vincristine, paclitaxel, cisplatin, etc.) |
+| Cardiac glycosides | digoxin |
+| Individual drugs (by name) | amiodarone, lidocaine (IV), nitroprusside, nitroglycerin (IV), oxytocin, promethazine (IV), droperidol, methotrexate (oral, non-oncologic), magnesium sulfate (IV) |
+
+**UI display requirements for `ismp_high_alert: true` drugs:**
+- Display `<span class="badge badge-error">HIGH ALERT</span>` in the drug page
+  header, immediately after the generic name (H1), above brand names.
+- Display an `alert alert-error` callout block at the top of the Nursing
+  Considerations section with text:
+  > **ISMP High-Alert Medication:** This drug has been identified by the
+  > Institute for Safe Medication Practices (ISMP) as a high-alert medication
+  > that bears a heightened risk of causing significant harm when used in error.
+  > Independent double-checks, clinical decision support, and standardized
+  > concentrations are recommended wherever feasible.
+- When listing drugs on schema index pages or the drug index, apply a red left
+  border (`border-l-4 border-error`) to the drug card or row.
+- The search index must include `"ismp_high_alert"` as a filterable field in
+  `FilterPanel.svelte`.
+
+**Reference:** ISMP High-Alert Medications in Acute Care Settings (2024).
+Available at: https://www.ismp.org/recommendations/high-alert-medications-acute-list
 
 ---
 
