@@ -1,5 +1,78 @@
 # CLAUDE.md — Pharmacology Reference Site
 
+Based on analyzing the failures across the last two sessions, here is the advice for future sessions:
+
+Root Causes of the Failures
+1. Sub-agent commits are local-only and get lost
+When a task agent makes git commits, those commits exist only in the sandboxed subprocess. They are not pushed to the remote. Only the main agent calling report_progress can push to the remote. If the main agent calls report_progress before the sub-agent has done any work, nothing gets pushed. The fix: after any sub-agent completes, the main agent must verify commits exist with git log --oneline and then call report_progress to push them.
+
+2. Heredoc bash commands with Python code fail JSON parsing
+The bash tool parameter is parsed as JSON. Heredocs containing Python code with quotes, backslashes, None, True, False, and other characters cause JSON parse error: Unterminated string. This is why all large drug-addition scripts silently failed. The fix: use the create tool to write Python scripts to /tmp/, then execute them with bash. Never embed Python code inside a bash heredoc in the bash tool.
+
+Concrete Protocol for Future Sessions
+Writing drug data scripts
+DO THIS:
+
+Code
+1. Use the `create` tool to write the Python script to /tmp/add_drugs_cv17.py
+2. Use bash: `cd /repo && python /tmp/add_drugs_cv17.py`
+3. Validate: `node -e "JSON.parse(require('fs').readFileSync('data/drugs.json','utf8')); console.log('Valid')"`
+4. Run: `git add data/drugs.json && git commit -m "data: complete task CV-17"`
+5. Run `report_progress` to push the commit to remote
+DO NOT:
+
+bash
+# Never embed Python inside bash heredoc like this:
+cat > /tmp/script.py << 'EOF'
+import json
+new_drugs = [{"id": "lovastatin", ...}]  # JSON parsing WILL fail
+EOF
+Verification checklist after each batch
+After any agent (sub-agent or self) reports completing drug additions:
+
+bash
+git log --oneline -5          # Verify commits exist
+node -e "const d=JSON.parse(require('fs').readFileSync('data/drugs.json','utf8')); console.log(d.length)"  # Verify count
+If count did not increase, the work was lost — redo it.
+
+Use report_progress after every batch
+Call report_progress after every task (not just at session end). This is the only mechanism that persists work. A session that ends without calling report_progress loses everything.
+
+Preferred script structure for drug additions
+Python
+# /tmp/add_drugs_cv17.py  (written via `create` tool, NOT heredoc)
+import json
+
+with open('/home/runner/work/medications/medications/data/drugs.json') as f:
+    drugs = json.load(f)
+
+existing_ids = {d['id'] for d in drugs}
+
+new_entries = [
+    {
+        "id": "lovastatin",
+        # ... all fields using Python True/False/None (not JSON true/false/null)
+    },
+]
+
+added = 0
+for entry in new_entries:
+    if entry['id'] not in existing_ids:
+        drugs.append(entry)
+        added += 1
+
+with open('/home/runner/work/medications/medications/data/drugs.json', 'w') as f:
+    json.dump(drugs, f, indent=2)
+
+print(f"Added {added} drugs. Total: {len(drugs)}")
+This approach:
+
+Avoids all heredoc/JSON escaping issues
+Is idempotent (won't add duplicates on re-run)
+Validates structure by round-tripping through json.load/json.dump
+
+---
+
 ## Project Development Status
 
 Maintain a document at ./STATUS.md that explains the current development state 
