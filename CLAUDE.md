@@ -1,4 +1,11 @@
 # CLAUDE.md — Pharmacology Reference Site
+
+## Project Development Status
+
+Maintain a document at ./STATUS.md that explains the current development state 
+of this project until it is completed. This will be utilized by AI agents to 
+avoid repeating efforts when re-starting after sessions are abruptly ended.
+
 ## Project Bootstrap & Agent Specification
 
 This file is read automatically by Claude Code at the start of every session.
