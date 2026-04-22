@@ -33595,5 +33595,2994 @@
         "immunosuppressive"
       ]
     }
+  },
+  {
+    "id": "insulin-detemir",
+    "generic_name": "insulin detemir",
+    "brand_names": [
+      "Levemir"
+    ],
+    "drug_class": "insulin",
+    "subclass": "long-acting basal insulin analog",
+    "prototype_for": false,
+    "prototype_drug": "insulin-glargine",
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "insulin receptor (IR)"
+    ],
+    "mechanism_summary": "Acylated insulin analog with a fatty acid (C14) chain that enables reversible albumin binding, prolonging absorption from the subcutaneous depot. Activates the insulin receptor, promoting glucose uptake in muscle and adipose, inhibiting hepatic glucose output, and suppressing lipolysis.",
+    "indications": [
+      "type 1 diabetes mellitus",
+      "type 2 diabetes mellitus"
+    ],
+    "contraindications": [
+      "hypoglycemic episodes",
+      "hypersensitivity to insulin detemir"
+    ],
+    "adverse_effects": {
+      "common": [
+        "hypoglycemia",
+        "injection site reactions",
+        "weight gain",
+        "lipodystrophy"
+      ],
+      "serious": [
+        "severe hypoglycemia",
+        "hypokalemia",
+        "anaphylaxis"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "subcutaneous only; slow absorption from depot due to albumin binding",
+      "distribution": "albumin-bound in plasma",
+      "metabolism": "proteolytic degradation",
+      "excretion": "proteolytic",
+      "half_life": "5\u20137 hours; duration 16\u201324 hours",
+      "onset": "1\u20132 hours",
+      "peak": "relatively flat (less pronounced than NPH)",
+      "duration": "16\u201324 hours (shorter than glargine at low doses)",
+      "protein_binding": "albumin ~98%",
+      "vd": "low (0.1 L/kg)"
+    },
+    "drug_interactions": [
+      {
+        "drug": "beta-blockers",
+        "mechanism": "mask tachycardia of hypoglycemia; may prolong hypoglycemia",
+        "severity": "moderate"
+      },
+      {
+        "drug": "corticosteroids",
+        "mechanism": "increase insulin resistance; higher doses may be required",
+        "severity": "moderate"
+      },
+      {
+        "drug": "ACE inhibitors",
+        "mechanism": "may enhance insulin sensitivity; monitor for hypoglycemia",
+        "severity": "minor"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer subcutaneously once or twice daily (at the same time each day); do NOT administer IV.",
+      "Rotate injection sites (abdomen, thigh, upper arm) to prevent lipodystrophy; document site used.",
+      "Dose may need to be twice daily in type 1 patients; monitor fasting and pre-meal glucose values to assess adequacy.",
+      "Educate patients to recognize and treat hypoglycemia (15 g rapid-acting carbohydrates); recheck glucose in 15 minutes."
+    ],
+    "clinical_pearls": [
+      "Insulin detemir causes less weight gain than NPH or insulin glargine and may be preferred in patients where weight management is a concern.",
+      "At lower doses, duration of action is only 16\u201318 hours, sometimes necessitating twice-daily dosing in type 1 diabetes \u2014 an important distinction from glargine and degludec."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "preferred over NPH in some guidelines; monitor closely",
+    "lactation_safety": "safe; insulin does not pass into breast milk in clinically significant amounts",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "diabetes-type-1",
+      "diabetes-type-2",
+      "hyperglycemia"
+    ],
+    "adverse_effect_tags": [
+      "hypoglycemia",
+      "weight-gain"
+    ],
+    "interaction_tags": [
+      "insulin-interactions"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "insulin-receptor-agonism"
+      ],
+      "prototype_class": "insulins",
+      "adme_profile": "proteolytic-degradation",
+      "presentation_cluster": [
+        "hyperglycemia",
+        "diabetes"
+      ],
+      "adverse_cluster": [
+        "hypoglycemia"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "insulin-degludec",
+    "generic_name": "insulin degludec",
+    "brand_names": [
+      "Tresiba"
+    ],
+    "drug_class": "insulin",
+    "subclass": "ultra-long-acting basal insulin analog",
+    "prototype_for": false,
+    "prototype_drug": "insulin-glargine",
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "insulin receptor (IR)"
+    ],
+    "mechanism_summary": "Ultra-long-acting basal insulin analog in which fatty acid chains and linkers allow multi-hexamer formation at the subcutaneous injection site. The large depot dissolves very slowly, providing insulin monomers that are absorbed over >42 hours, creating a nearly peakless, highly stable pharmacokinetic profile.",
+    "indications": [
+      "type 1 diabetes mellitus",
+      "type 2 diabetes mellitus"
+    ],
+    "contraindications": [
+      "hypoglycemia",
+      "hypersensitivity to insulin degludec"
+    ],
+    "adverse_effects": {
+      "common": [
+        "hypoglycemia",
+        "injection site reactions",
+        "nasopharyngitis"
+      ],
+      "serious": [
+        "severe hypoglycemia",
+        "hypokalemia",
+        "anaphylaxis"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "subcutaneous only; extremely slow, continuous absorption",
+      "distribution": "albumin-bound in circulation",
+      "metabolism": "proteolytic degradation",
+      "excretion": "proteolytic",
+      "half_life": "25 hours",
+      "onset": "1 hour",
+      "peak": "none (truly peakless)",
+      "duration": ">42 hours (allows flexible dosing window)",
+      "protein_binding": "albumin >99%",
+      "vd": "0.1 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "beta-blockers",
+        "mechanism": "mask hypoglycemia symptoms",
+        "severity": "moderate"
+      },
+      {
+        "drug": "corticosteroids",
+        "mechanism": "increase insulin resistance",
+        "severity": "moderate"
+      },
+      {
+        "drug": "GLP-1 receptor agonists",
+        "mechanism": "synergistic glucose lowering; dose reduction may be needed",
+        "severity": "minor"
+      }
+    ],
+    "nursing_considerations": [
+      "Once-daily administration; flexible dosing window (can be taken at different times each day, as long as at least 8 hours between doses) due to ultra-long duration.",
+      "Do NOT administer IV or IM; subcutaneous injection only.",
+      "Also available as a fixed-ratio combination with liraglutide (Xultophy 100/3.6); do not mix with other insulins.",
+      "Lower rates of nocturnal hypoglycemia compared to glargine in clinical trials; discuss with prescriber when transitioning patients."
+    ],
+    "clinical_pearls": [
+      "Insulin degludec's half-life of 25 hours and action duration >42 hours create a truly steady-state pharmacokinetic profile that minimizes day-to-day glucose variability.",
+      "The flexible dosing window (shift of up to 8 hours permitted between doses) offers a practical advantage for patients with irregular schedules."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "limited data; use insulin human or detemir preferentially",
+    "lactation_safety": "safe",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "diabetes-type-1",
+      "diabetes-type-2",
+      "hyperglycemia"
+    ],
+    "adverse_effect_tags": [
+      "hypoglycemia"
+    ],
+    "interaction_tags": [
+      "insulin-interactions"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "insulin-receptor-agonism"
+      ],
+      "prototype_class": "insulins",
+      "adme_profile": "proteolytic-degradation",
+      "presentation_cluster": [
+        "hyperglycemia",
+        "diabetes"
+      ],
+      "adverse_cluster": [
+        "hypoglycemia"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "nph-insulin",
+    "generic_name": "NPH insulin (isophane insulin)",
+    "brand_names": [
+      "Humulin N",
+      "Novolin N"
+    ],
+    "drug_class": "insulin",
+    "subclass": "intermediate-acting insulin",
+    "prototype_for": false,
+    "prototype_drug": "insulin-glargine",
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "insulin receptor (IR)"
+    ],
+    "mechanism_summary": "Human insulin complexed with protamine to slow absorption from the subcutaneous injection site, producing an intermediate-acting profile with a distinct peak. Acts via the insulin receptor to promote cellular glucose uptake, suppress hepatic glucose production, and inhibit lipolysis.",
+    "indications": [
+      "type 1 diabetes mellitus",
+      "type 2 diabetes mellitus",
+      "gestational diabetes"
+    ],
+    "contraindications": [
+      "hypoglycemia",
+      "hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "hypoglycemia (especially 6\u201312 hours after injection)",
+        "weight gain",
+        "injection site reactions"
+      ],
+      "serious": [
+        "severe hypoglycemia",
+        "hypokalemia",
+        "anaphylaxis (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "subcutaneous; onset 1\u20132 hours",
+      "distribution": "minimal protein binding",
+      "metabolism": "proteolytic degradation",
+      "excretion": "proteolytic",
+      "half_life": "variable",
+      "onset": "1\u20132 hours",
+      "peak": "4\u20138 hours",
+      "duration": "12\u201318 hours",
+      "protein_binding": "minimal",
+      "vd": "low"
+    },
+    "drug_interactions": [
+      {
+        "drug": "beta-blockers",
+        "mechanism": "mask symptoms of hypoglycemia",
+        "severity": "moderate"
+      },
+      {
+        "drug": "corticosteroids",
+        "mechanism": "increase insulin requirements",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Cloudy appearance is expected; gently roll (do not shake) vial before use to ensure uniform suspension.",
+      "Peak activity at 4\u20138 hours post-injection means patients are at highest hypoglycemia risk during this window; schedule meals accordingly.",
+      "NPH is safe and preferred in pregnancy (gestational diabetes and pre-existing diabetes in pregnancy).",
+      "NPH can be mixed with regular insulin (in same syringe); draw regular insulin first then NPH to avoid contaminating the regular insulin vial."
+    ],
+    "clinical_pearls": [
+      "NPH remains widely used in resource-limited settings and in pregnancy due to its low cost and established safety data.",
+      "The 4\u20138 hour peak creates a predictable window of hypoglycemia risk, particularly nocturnal if given at bedtime, requiring coordinated meal timing \u2014 a limitation compared to peakless analogs."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "preferred in pregnancy (along with regular insulin)",
+    "lactation_safety": "safe",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "diabetes-type-1",
+      "diabetes-type-2",
+      "gestational-diabetes"
+    ],
+    "adverse_effect_tags": [
+      "hypoglycemia",
+      "weight-gain"
+    ],
+    "interaction_tags": [
+      "insulin-interactions"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "insulin-receptor-agonism"
+      ],
+      "prototype_class": "insulins",
+      "adme_profile": "proteolytic-degradation",
+      "presentation_cluster": [
+        "hyperglycemia",
+        "diabetes"
+      ],
+      "adverse_cluster": [
+        "hypoglycemia"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "regular-insulin",
+    "generic_name": "regular insulin (human insulin)",
+    "brand_names": [
+      "Humulin R",
+      "Novolin R"
+    ],
+    "drug_class": "insulin",
+    "subclass": "short-acting (regular) insulin",
+    "prototype_for": false,
+    "prototype_drug": "insulin-glargine",
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "insulin receptor (IR)"
+    ],
+    "mechanism_summary": "Unmodified human insulin that activates insulin receptors on muscle, adipose, and liver cells, promoting glucose uptake via GLUT4 translocation, glycogen synthesis, lipogenesis, and protein synthesis while inhibiting gluconeogenesis, glycogenolysis, and lipolysis.",
+    "indications": [
+      "type 1 diabetes mellitus",
+      "type 2 diabetes mellitus (mealtime coverage)",
+      "diabetic ketoacidosis (IV infusion)",
+      "hyperkalemia (with dextrose)",
+      "total parenteral nutrition (insulin supplementation)",
+      "critical illness hyperglycemia"
+    ],
+    "contraindications": [
+      "hypoglycemia",
+      "hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "hypoglycemia",
+        "weight gain",
+        "hypokalemia (IV use)"
+      ],
+      "serious": [
+        "severe hypoglycemia",
+        "hypokalemia (with IV administration)",
+        "anaphylaxis"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "subcutaneous (SC) or intravenous (IV)",
+      "distribution": "minimal protein binding",
+      "metabolism": "proteolytic degradation by insulinase",
+      "excretion": "renal filtration of metabolites",
+      "half_life": "5\u20136 minutes (IV); SC variable",
+      "onset": "30\u201360 minutes (SC); 10\u201330 minutes (IM); immediate (IV)",
+      "peak": "2\u20134 hours (SC)",
+      "duration": "5\u20137 hours (SC)",
+      "protein_binding": "minimal",
+      "vd": "0.26 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "beta-blockers",
+        "mechanism": "mask tachycardia; prolong hypoglycemia",
+        "severity": "moderate"
+      },
+      {
+        "drug": "corticosteroids, thiazides",
+        "mechanism": "increase insulin resistance; higher doses needed",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "For SC use, administer 30 minutes before meals to coordinate peak action with postprandial glucose rise.",
+      "For IV insulin infusion in DKA or hyperglycemia: use ONLY regular insulin; check glucose every hour; monitor for hypokalemia (add potassium to IV fluid as needed).",
+      "Regular insulin can be given IV and is the insulin of choice for IV infusion protocols; rapid-acting analogs (lispro, aspart) should NOT be given IV.",
+      "When mixing regular insulin with NPH: draw regular insulin first; contamination of regular vial with NPH alters pharmacokinetics."
+    ],
+    "clinical_pearls": [
+      "Regular insulin remains the only insulin approved for IV infusion, making it the standard choice for DKA management protocols and insulin drips in the ICU.",
+      "The combination of regular insulin plus dextrose is used to shift potassium intracellularly in hyperkalemia emergencies \u2014 a life-saving non-antihypertensive use of insulin."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "preferred (along with NPH)",
+    "lactation_safety": "safe",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "diabetes-type-1",
+      "diabetes-type-2",
+      "DKA",
+      "hyperkalemia"
+    ],
+    "adverse_effect_tags": [
+      "hypoglycemia",
+      "hypokalemia"
+    ],
+    "interaction_tags": [
+      "insulin-interactions"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "insulin-receptor-agonism"
+      ],
+      "prototype_class": "insulins",
+      "adme_profile": "proteolytic-degradation",
+      "presentation_cluster": [
+        "hyperglycemia",
+        "DKA",
+        "hyperkalemia"
+      ],
+      "adverse_cluster": [
+        "hypoglycemia",
+        "electrolyte-disturbance"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "insulin-lispro",
+    "generic_name": "insulin lispro",
+    "brand_names": [
+      "Humalog",
+      "Admelog"
+    ],
+    "drug_class": "insulin",
+    "subclass": "rapid-acting insulin analog",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "insulin receptor (IR)"
+    ],
+    "mechanism_summary": "Rapid-acting analog in which proline and lysine at positions B28\u2013B29 are reversed, preventing hexamer formation and allowing rapid dissociation into active monomers at the injection site. Activates the insulin receptor almost immediately after injection for precise mealtime glucose control.",
+    "indications": [
+      "type 1 diabetes mellitus (mealtime coverage)",
+      "type 2 diabetes mellitus (mealtime coverage)",
+      "insulin pump therapy (CSII)"
+    ],
+    "contraindications": [
+      "hypoglycemia",
+      "hypersensitivity to insulin lispro"
+    ],
+    "adverse_effects": {
+      "common": [
+        "hypoglycemia",
+        "injection site reactions",
+        "weight gain"
+      ],
+      "serious": [
+        "severe hypoglycemia",
+        "hypokalemia"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "subcutaneous; rapid absorption due to monomeric form",
+      "distribution": "low protein binding",
+      "metabolism": "proteolytic",
+      "excretion": "renal",
+      "half_life": "1 hour",
+      "onset": "15\u201330 minutes",
+      "peak": "0.5\u20132 hours",
+      "duration": "3\u20135 hours",
+      "protein_binding": "minimal",
+      "vd": "low"
+    },
+    "drug_interactions": [
+      {
+        "drug": "beta-blockers",
+        "mechanism": "mask hypoglycemia symptoms",
+        "severity": "moderate"
+      },
+      {
+        "drug": "pramlintide",
+        "mechanism": "delays gastric emptying, altering mealtime insulin timing needs",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer immediately before meals (within 15 minutes) or even right after starting a meal due to rapid onset.",
+      "For insulin pump use, insulin lispro is the most commonly used analog; check pump catheter for clogs, and change infusion site every 2\u20133 days.",
+      "Educate patients not to confuse lispro (rapid-acting) with glargine (long-acting); confusion between insulin types is a common medication error.",
+      "If a patient eats less than planned, the dose may need to be reduced to prevent hypoglycemia."
+    ],
+    "clinical_pearls": [
+      "Rapid-acting insulin analogs (lispro, aspart, glulisine) can be given immediately before or even after meals in patients with unpredictable intake (e.g., young children, nausea), unlike regular insulin which requires 30-minute pre-meal dosing.",
+      "Insulin lispro U-200 (Humalog U-200) contains twice the concentration of standard U-100; ensure correct concentration is prescribed and dispensed."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "generally considered safe; preferred over regular in some guidelines",
+    "lactation_safety": "safe",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "diabetes-type-1",
+      "diabetes-type-2",
+      "mealtime-glucose"
+    ],
+    "adverse_effect_tags": [
+      "hypoglycemia"
+    ],
+    "interaction_tags": [],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "insulin-receptor-agonism"
+      ],
+      "prototype_class": "insulins",
+      "adme_profile": "proteolytic-degradation",
+      "presentation_cluster": [
+        "hyperglycemia",
+        "diabetes"
+      ],
+      "adverse_cluster": [
+        "hypoglycemia"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "insulin-glulisine",
+    "generic_name": "insulin glulisine",
+    "brand_names": [
+      "Apidra"
+    ],
+    "drug_class": "insulin",
+    "subclass": "rapid-acting insulin analog",
+    "prototype_for": false,
+    "prototype_drug": "insulin-lispro",
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "insulin receptor (IR)"
+    ],
+    "mechanism_summary": "Rapid-acting insulin analog with amino acid substitutions (Asn at B3\u2192Lys; Lys at B29\u2192Glu) that reduce self-aggregation, producing rapid monomeric absorption. Activates the insulin receptor for mealtime glucose control with a pharmacokinetic profile similar to lispro and aspart.",
+    "indications": [
+      "type 1 diabetes mellitus",
+      "type 2 diabetes mellitus (mealtime insulin)"
+    ],
+    "contraindications": [
+      "hypoglycemia",
+      "hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "hypoglycemia",
+        "injection site reactions",
+        "weight gain"
+      ],
+      "serious": [
+        "severe hypoglycemia",
+        "hypokalemia"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "subcutaneous; rapid",
+      "distribution": "low protein binding",
+      "metabolism": "proteolytic",
+      "excretion": "renal",
+      "half_life": "42 minutes",
+      "onset": "10\u201315 minutes",
+      "peak": "1 hour",
+      "duration": "3\u20135 hours",
+      "protein_binding": "minimal",
+      "vd": "0.13 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "beta-blockers",
+        "mechanism": "mask hypoglycemia symptoms",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer 0\u201315 minutes before a meal or within 20 minutes after starting a meal.",
+      "Can be used in insulin pumps; compatible with most CSII devices.",
+      "Do not dilute or mix with other insulins (except NPH in some protocols).",
+      "Educate patients: glulisine, lispro, and aspart are all rapid-acting but are NOT interchangeable unit-for-unit at the same concentration."
+    ],
+    "clinical_pearls": [
+      "Glulisine has the fastest documented subcutaneous onset of the three rapid-acting analogs (approximately 10\u201315 minutes), making it particularly suitable for patients with rapid gastric emptying or immediately post-meal administration scenarios.",
+      "Like other rapid-acting analogs, glulisine helps mimic physiological postprandial insulin secretion peaks when used in a basal-bolus regimen."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "limited data; use cautiously",
+    "lactation_safety": "safe",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "diabetes-type-1",
+      "diabetes-type-2",
+      "mealtime-glucose"
+    ],
+    "adverse_effect_tags": [
+      "hypoglycemia"
+    ],
+    "interaction_tags": [],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "insulin-receptor-agonism"
+      ],
+      "prototype_class": "insulins",
+      "adme_profile": "proteolytic-degradation",
+      "presentation_cluster": [
+        "hyperglycemia",
+        "diabetes"
+      ],
+      "adverse_cluster": [
+        "hypoglycemia"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "glyburide",
+    "generic_name": "glyburide",
+    "brand_names": [
+      "DiaBeta",
+      "Micronase",
+      "Glynase"
+    ],
+    "drug_class": "sulfonylurea",
+    "subclass": "second-generation sulfonylurea",
+    "prototype_for": false,
+    "prototype_drug": "glipizide",
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "SUR1 subunit of ATP-sensitive K+ channels (pancreatic beta cells)"
+    ],
+    "mechanism_summary": "Binds to the SUR1 subunit of ATP-sensitive potassium channels on pancreatic beta cells, causing channel closure, membrane depolarization, calcium influx, and insulin secretion independent of glucose levels. Risk of hypoglycemia is highest among sulfonylureas due to its longest duration.",
+    "indications": [
+      "type 2 diabetes mellitus"
+    ],
+    "contraindications": [
+      "type 1 diabetes",
+      "diabetic ketoacidosis",
+      "sulfonamide allergy",
+      "severe renal or hepatic impairment"
+    ],
+    "adverse_effects": {
+      "common": [
+        "hypoglycemia (most common and most severe among sulfonylureas)",
+        "weight gain",
+        "nausea"
+      ],
+      "serious": [
+        "severe prolonged hypoglycemia (especially in elderly)",
+        "cholestatic jaundice (rare)",
+        "agranulocytosis (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "rapidly absorbed; bioavailability ~100%",
+      "distribution": "highly protein bound (99%)",
+      "metabolism": "hepatic via CYP2C9 to active metabolites",
+      "excretion": "biliary/fecal (50%) and renal (50%)",
+      "half_life": "10 hours",
+      "onset": "15\u201330 minutes",
+      "peak": "1\u20134 hours",
+      "duration": "12\u201324 hours",
+      "protein_binding": "99%",
+      "vd": "0.12\u20130.14 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "fluconazole",
+        "mechanism": "CYP2C9 inhibition increases glyburide levels, enhancing hypoglycemia risk",
+        "severity": "major"
+      },
+      {
+        "drug": "NSAIDs",
+        "mechanism": "displace from protein binding; additive hypoglycemia",
+        "severity": "moderate"
+      },
+      {
+        "drug": "alcohol",
+        "mechanism": "disulfiram-like reaction (flushing) and enhanced hypoglycemia",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer with breakfast or first main meal of the day to reduce hypoglycemia risk.",
+      "Do not use in patients >65 years (Beers Criteria); prolonged hypoglycemia is especially dangerous in elderly due to blunted adrenergic response.",
+      "Monitor fasting and postprandial glucose levels; hold glyburide and notify prescriber if patient is NPO for procedures.",
+      "Educate patients about hypoglycemia recognition: shakiness, sweating, confusion, tachycardia; always carry fast-acting carbohydrate source."
+    ],
+    "clinical_pearls": [
+      "Glyburide is the sulfonylurea with the highest hypoglycemia risk due to its active metabolites and longest duration of action; glipizide or glimepiride are preferred in elderly patients.",
+      "Glyburide has a disulfiram-like interaction with alcohol, producing flushing, nausea, and tachycardia; advise patients to limit alcohol consumption."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid; may cause neonatal hypoglycemia",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "diabetes-type-2",
+      "hyperglycemia"
+    ],
+    "adverse_effect_tags": [
+      "hypoglycemia",
+      "weight-gain"
+    ],
+    "interaction_tags": [
+      "CYP2C9-substrate",
+      "protein-binding-displacement"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "sulfonylurea-KATP-blockade"
+      ],
+      "prototype_class": "sulfonylureas",
+      "adme_profile": "hepatically-metabolized-CYP2C9",
+      "presentation_cluster": [
+        "hyperglycemia",
+        "diabetes"
+      ],
+      "adverse_cluster": [
+        "hypoglycemia"
+      ],
+      "interaction_cluster": [
+        "CYP2C9-substrate"
+      ]
+    }
+  },
+  {
+    "id": "glimepiride",
+    "generic_name": "glimepiride",
+    "brand_names": [
+      "Amaryl"
+    ],
+    "drug_class": "sulfonylurea",
+    "subclass": "third-generation sulfonylurea",
+    "prototype_for": false,
+    "prototype_drug": "glipizide",
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "SUR1 subunit of ATP-sensitive K+ channels (pancreatic beta cells)"
+    ],
+    "mechanism_summary": "Binds SUR1 receptor to close ATP-sensitive potassium channels on pancreatic beta cells, triggering insulin secretion. Has the lowest hypoglycemia risk among second/third generation sulfonylureas due to its glucose-sensitive binding \u2014 it partially dissociates from SUR1 when glucose levels fall.",
+    "indications": [
+      "type 2 diabetes mellitus (monotherapy or combination)"
+    ],
+    "contraindications": [
+      "type 1 diabetes",
+      "DKA",
+      "sulfonamide allergy",
+      "severe renal or hepatic impairment"
+    ],
+    "adverse_effects": {
+      "common": [
+        "hypoglycemia (lower risk than glyburide)",
+        "weight gain",
+        "headache"
+      ],
+      "serious": [
+        "severe hypoglycemia (rare)",
+        "hemolytic anemia (G6PD deficiency)",
+        "hepatotoxicity (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~100%",
+      "distribution": ">99% protein bound",
+      "metabolism": "hepatic via CYP2C9 to inactive metabolites (unlike glyburide)",
+      "excretion": "renal (60%) and fecal (40%)",
+      "half_life": "5\u20139 hours",
+      "onset": "1 hour",
+      "peak": "2\u20133 hours",
+      "duration": "24 hours",
+      "protein_binding": ">99%",
+      "vd": "low"
+    },
+    "drug_interactions": [
+      {
+        "drug": "fluconazole",
+        "mechanism": "CYP2C9 inhibition increases glimepiride levels",
+        "severity": "major"
+      },
+      {
+        "drug": "rifampin",
+        "mechanism": "CYP2C9 induction decreases glimepiride levels",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer with the first main meal of the day; once-daily dosing simplifies regimen.",
+      "Preferred sulfonylurea in elderly patients over glyburide due to lower hypoglycemia risk (inactive metabolites).",
+      "Hold dose and notify prescriber when patient is NPO; risk of hypoglycemia without caloric intake.",
+      "Counsel patients on hypoglycemia symptoms and self-treatment with 15 g rapid-acting carbohydrates."
+    ],
+    "clinical_pearls": [
+      "Glimepiride produces inactive metabolites, unlike glyburide's active metabolites, reducing cumulative hypoglycemia risk especially in patients with renal impairment.",
+      "Among sulfonylureas, glimepiride has the most evidence for cardiovascular safety and is often considered the preferred sulfonylurea when one is needed."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "diabetes-type-2"
+    ],
+    "adverse_effect_tags": [
+      "hypoglycemia",
+      "weight-gain"
+    ],
+    "interaction_tags": [
+      "CYP2C9-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "sulfonylurea-KATP-blockade"
+      ],
+      "prototype_class": "sulfonylureas",
+      "adme_profile": "hepatically-metabolized-CYP2C9",
+      "presentation_cluster": [
+        "hyperglycemia",
+        "diabetes"
+      ],
+      "adverse_cluster": [
+        "hypoglycemia"
+      ],
+      "interaction_cluster": [
+        "CYP2C9-substrate"
+      ]
+    }
+  },
+  {
+    "id": "repaglinide",
+    "generic_name": "repaglinide",
+    "brand_names": [
+      "Prandin"
+    ],
+    "drug_class": "meglitinide",
+    "subclass": "short-acting insulin secretagogue",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "SUR1 subunit of KATP channels (pancreatic beta cells)"
+    ],
+    "mechanism_summary": "Binds to a distinct site on the SUR1 subunit of ATP-sensitive potassium channels in beta cells, causing rapid channel closure, depolarization, and insulin secretion. Has a very short duration compared to sulfonylureas, making it suitable for mealtime-only glucose control.",
+    "indications": [
+      "type 2 diabetes mellitus (mealtime insulin secretagogue)"
+    ],
+    "contraindications": [
+      "type 1 diabetes",
+      "DKA",
+      "concurrent gemfibrozil use (major interaction)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "hypoglycemia (meal-related)",
+        "weight gain",
+        "headache",
+        "back pain"
+      ],
+      "serious": [
+        "severe hypoglycemia (if meal is skipped)",
+        "hepatotoxicity (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "rapidly absorbed; peak within 1 hour; take 0\u201330 min before meals",
+      "distribution": "98% protein bound",
+      "metabolism": "hepatic via CYP3A4 and CYP2C8",
+      "excretion": "fecal (90%) via bile; minimal renal",
+      "half_life": "1 hour",
+      "onset": "30 minutes",
+      "peak": "1 hour",
+      "duration": "3\u20134 hours",
+      "protein_binding": "98%",
+      "vd": "low"
+    },
+    "drug_interactions": [
+      {
+        "drug": "gemfibrozil",
+        "mechanism": "CYP2C8 and OATP1B1 inhibition dramatically increases repaglinide levels (8-fold); contraindicated",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "clarithromycin",
+        "mechanism": "CYP3A4 inhibition increases repaglinide levels",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Take 0\u201330 minutes before each meal; if a meal is skipped, skip the dose to prevent hypoglycemia.",
+      "The gemfibrozil interaction is contraindicated and clinically critical \u2014 always check for this combination.",
+      "Monitor liver function; avoid in significant hepatic impairment (primary route of elimination).",
+      "Flexible dosing (2\u20134 times daily based on meal schedule) can accommodate irregular eating patterns better than fixed-dose sulfonylureas."
+    ],
+    "clinical_pearls": [
+      "Meglitinides are taken with each meal, offering flexible dosing for patients with irregular eating schedules; if a meal is skipped, the dose must be skipped to avoid hypoglycemia.",
+      "The gemfibrozil-repaglinide interaction is a landmark CYP2C8/OATP interaction used frequently in pharmacology education \u2014 coadministration is absolutely contraindicated."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "diabetes-type-2",
+      "postprandial-hyperglycemia"
+    ],
+    "adverse_effect_tags": [
+      "hypoglycemia",
+      "weight-gain"
+    ],
+    "interaction_tags": [
+      "CYP2C8-substrate",
+      "CYP3A4-substrate",
+      "OATP1B1-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "KATP-blockade-insulin-secretion"
+      ],
+      "prototype_class": "meglitinides",
+      "adme_profile": "hepatically-metabolized-CYP2C8",
+      "presentation_cluster": [
+        "hyperglycemia",
+        "diabetes"
+      ],
+      "adverse_cluster": [
+        "hypoglycemia"
+      ],
+      "interaction_cluster": [
+        "CYP2C8-substrate"
+      ]
+    }
+  },
+  {
+    "id": "nateglinide",
+    "generic_name": "nateglinide",
+    "brand_names": [
+      "Starlix"
+    ],
+    "drug_class": "meglitinide",
+    "subclass": "amino acid-derived short-acting insulin secretagogue",
+    "prototype_for": false,
+    "prototype_drug": "repaglinide",
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "SUR1 subunit of KATP channels (beta cells)"
+    ],
+    "mechanism_summary": "D-phenylalanine derivative that binds the SUR1 subunit of beta-cell KATP channels, triggering rapid insulin secretion. Has an even shorter duration of action than repaglinide, with action closely coupled to the postprandial glucose peak.",
+    "indications": [
+      "type 2 diabetes mellitus (mealtime)"
+    ],
+    "contraindications": [
+      "type 1 diabetes",
+      "DKA"
+    ],
+    "adverse_effects": {
+      "common": [
+        "hypoglycemia",
+        "diarrhea",
+        "upper respiratory infections"
+      ],
+      "serious": [
+        "severe hypoglycemia (less than repaglinide)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "rapidly absorbed; peak in 1 hour",
+      "distribution": "98% protein bound",
+      "metabolism": "hepatic via CYP2C9 (70%) and CYP3A4 (30%) to weakly active metabolites",
+      "excretion": "renal (83%) and fecal",
+      "half_life": "1.5 hours",
+      "onset": "20 minutes",
+      "peak": "1 hour",
+      "duration": "2\u20134 hours",
+      "protein_binding": "98%",
+      "vd": "low"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CYP2C9 inhibitors (fluconazole)",
+        "mechanism": "increased nateglinide exposure",
+        "severity": "moderate"
+      },
+      {
+        "drug": "rifampin",
+        "mechanism": "CYP induction reduces nateglinide levels",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer 1\u201330 minutes before meals; skip dose if meal is skipped.",
+      "Lower hypoglycemia risk than repaglinide due to shorter duration and more glucose-sensitive action.",
+      "Less potent than repaglinide for HbA1c reduction; generally used when only modest glucose control is needed.",
+      "Monitor renal function; renally excreted but dose adjustment not typically needed unless severe renal impairment."
+    ],
+    "clinical_pearls": [
+      "Nateglinide's unique glucose sensitivity means its effect diminishes when blood glucose is near normal, providing a built-in protection against hypoglycemia compared to sulfonylureas.",
+      "Among meglitinides, nateglinide has the shortest duration of action and lowest HbA1c-lowering potency, making it most suitable for isolated postprandial hyperglycemia."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "diabetes-type-2",
+      "postprandial-hyperglycemia"
+    ],
+    "adverse_effect_tags": [
+      "hypoglycemia"
+    ],
+    "interaction_tags": [
+      "CYP2C9-substrate",
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "KATP-blockade-insulin-secretion"
+      ],
+      "prototype_class": "meglitinides",
+      "adme_profile": "hepatically-metabolized-CYP2C9",
+      "presentation_cluster": [
+        "hyperglycemia",
+        "diabetes"
+      ],
+      "adverse_cluster": [
+        "hypoglycemia"
+      ],
+      "interaction_cluster": [
+        "CYP2C9-substrate"
+      ]
+    }
+  },
+  {
+    "id": "pioglitazone",
+    "generic_name": "pioglitazone",
+    "brand_names": [
+      "Actos"
+    ],
+    "drug_class": "thiazolidinedione",
+    "subclass": "PPAR-gamma agonist insulin sensitizer",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "PPAR-gamma (peroxisome proliferator-activated receptor gamma)"
+    ],
+    "mechanism_summary": "Activates nuclear PPAR-gamma receptors in adipose tissue, skeletal muscle, and liver, increasing transcription of genes for insulin-sensitive glucose transporters (GLUT4) and free fatty acid metabolism. Improves insulin sensitivity in peripheral tissues and reduces hepatic glucose output without stimulating insulin secretion.",
+    "indications": [
+      "type 2 diabetes mellitus (monotherapy or combination)",
+      "non-alcoholic steatohepatitis (NASH) \u2014 off-label"
+    ],
+    "contraindications": [
+      "heart failure (NYHA class III\u2013IV)",
+      "active bladder cancer",
+      "history of bladder cancer",
+      "hepatic impairment"
+    ],
+    "adverse_effects": {
+      "common": [
+        "weight gain (fluid retention and adipogenesis)",
+        "edema",
+        "headache"
+      ],
+      "serious": [
+        "heart failure exacerbation (fluid retention)",
+        "bladder cancer (long-term use)",
+        "bone fractures (women \u2014 distal extremities)",
+        "macular edema"
+      ]
+    },
+    "black_box_warnings": [
+      "may cause or exacerbate congestive heart failure; use not recommended in NYHA class III\u2013IV heart failure"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~83%",
+      "distribution": ">99% protein bound (albumin)",
+      "metabolism": "hepatic via CYP2C8 (major) and CYP3A4",
+      "excretion": "fecal (primarily); minor renal",
+      "half_life": "3\u20137 hours (pioglitazone); active metabolites: 16\u201324 hours",
+      "onset": "days to weeks",
+      "peak": "2 hours",
+      "duration": "ongoing with daily use",
+      "protein_binding": ">99%",
+      "vd": "0.63 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "gemfibrozil",
+        "mechanism": "CYP2C8 inhibition doubles pioglitazone exposure",
+        "severity": "major"
+      },
+      {
+        "drug": "rifampin",
+        "mechanism": "CYP induction reduces pioglitazone levels by 54%",
+        "severity": "major"
+      },
+      {
+        "drug": "oral contraceptives",
+        "mechanism": "CYP3A4 induction may reduce OCP efficacy",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Assess for signs of heart failure (dyspnea, rapid weight gain, edema) at every visit; hold if heart failure symptoms develop.",
+      "Weigh patients weekly initially; edema and fluid retention are common adverse effects.",
+      "Monitor LFTs before initiation and periodically; do not use if ALT >2.5\u00d7 ULN.",
+      "Counsel female patients about increased fracture risk (distal extremities \u2014 wrist, foot, ankle); recommend adequate calcium and vitamin D."
+    ],
+    "clinical_pearls": [
+      "Pioglitazone is the only TZD with evidence for cardiovascular benefit (PROactive trial: reduced secondary MACE), though this is partially offset by heart failure risk.",
+      "Rosiglitazone (another TZD) was restricted due to increased myocardial infarction risk; pioglitazone does not share this risk and is now the preferred TZD."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "category C; avoid",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "diabetes-type-2",
+      "insulin-resistance",
+      "NASH"
+    ],
+    "adverse_effect_tags": [
+      "heart-failure",
+      "bladder-cancer",
+      "edema",
+      "fracture-risk",
+      "weight-gain"
+    ],
+    "interaction_tags": [
+      "CYP2C8-substrate",
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "PPAR-gamma-agonism"
+      ],
+      "prototype_class": "thiazolidinediones",
+      "adme_profile": "hepatically-metabolized-CYP2C8",
+      "presentation_cluster": [
+        "hyperglycemia",
+        "diabetes"
+      ],
+      "adverse_cluster": [
+        "heart-failure",
+        "malignancy"
+      ],
+      "interaction_cluster": [
+        "CYP2C8-substrate"
+      ]
+    }
+  },
+  {
+    "id": "sitagliptin",
+    "generic_name": "sitagliptin",
+    "brand_names": [
+      "Januvia"
+    ],
+    "drug_class": "DPP-4 inhibitor",
+    "subclass": "dipeptidyl peptidase-4 inhibitor",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "DPP-4 (dipeptidyl peptidase-4 enzyme)"
+    ],
+    "mechanism_summary": "Inhibits the DPP-4 enzyme responsible for degrading incretin hormones GLP-1 and GIP. By preventing their degradation, sitagliptin prolongs incretin activity, which glucose-dependently stimulates insulin secretion from beta cells and suppresses glucagon from alpha cells, lowering postprandial and fasting glucose.",
+    "indications": [
+      "type 2 diabetes mellitus (monotherapy or combination)"
+    ],
+    "contraindications": [
+      "type 1 diabetes",
+      "DKA",
+      "history of pancreatitis (use with caution)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "upper respiratory infections",
+        "nasopharyngitis",
+        "headache"
+      ],
+      "serious": [
+        "pancreatitis (rare)",
+        "severe arthralgia (joint pain)",
+        "bullous pemphigoid",
+        "hypersensitivity reactions (angioedema, SJS rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~87%; not affected by food",
+      "distribution": "38% protein bound",
+      "metabolism": "minimal hepatic metabolism (CYP3A4 and CYP2C8 minor pathways)",
+      "excretion": "renal (~87% unchanged)",
+      "half_life": "12.4 hours",
+      "onset": "rapid",
+      "peak": "1\u20134 hours",
+      "duration": "24 hours",
+      "protein_binding": "38%",
+      "vd": "198 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "digoxin",
+        "mechanism": "P-gp inhibition slightly increases digoxin levels; monitor",
+        "severity": "minor"
+      },
+      {
+        "drug": "strong CYP3A4 inhibitors",
+        "mechanism": "minor effect on sitagliptin exposure",
+        "severity": "minor"
+      }
+    ],
+    "nursing_considerations": [
+      "Dose reduction required in moderate (GFR 30\u201345: reduce to 50 mg) and severe (GFR <30: reduce to 25 mg) renal impairment.",
+      "Instruct patient to report severe and persistent abdominal pain \u2014 may indicate pancreatitis, requiring immediate discontinuation.",
+      "Sitagliptin has a low risk of hypoglycemia as a monotherapy because its effect is glucose-dependent (no action at normal glucose levels).",
+      "Assess for joint pain (arthralgia), which has been reported as a serious but reversible adverse effect in some patients."
+    ],
+    "clinical_pearls": [
+      "DPP-4 inhibitors are weight-neutral (no significant weight change) and have a very low hypoglycemia risk as monotherapy \u2014 attributes that make them well-tolerated and popular as second-line agents after metformin.",
+      "The TECOS trial confirmed cardiovascular safety for sitagliptin; unlike GLP-1 agonists, there is no CV benefit beyond safety, but there is also no CV harm."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "limited data; use metformin or insulin preferentially",
+    "lactation_safety": "insufficient data; caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "diabetes-type-2",
+      "hyperglycemia"
+    ],
+    "adverse_effect_tags": [
+      "pancreatitis",
+      "arthralgia",
+      "bullous-pemphigoid"
+    ],
+    "interaction_tags": [
+      "P-gp-mild-inhibitor"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "DPP-4-inhibition"
+      ],
+      "prototype_class": "DPP-4 inhibitors",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "hyperglycemia",
+        "diabetes"
+      ],
+      "adverse_cluster": [
+        "pancreatitis"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "exenatide",
+    "generic_name": "exenatide",
+    "brand_names": [
+      "Byetta",
+      "Bydureon BCise"
+    ],
+    "drug_class": "GLP-1 receptor agonist",
+    "subclass": "short-acting (exenatide) and extended-release (Bydureon) GLP-1 agonist",
+    "prototype_for": false,
+    "prototype_drug": "liraglutide",
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "GLP-1 receptor (GLP-1R)"
+    ],
+    "mechanism_summary": "Exendin-4 analog that activates GLP-1 receptors on pancreatic beta cells, stimulating glucose-dependent insulin secretion and suppressing glucagon. Also delays gastric emptying, reduces appetite via hypothalamic GLP-1R, and promotes satiety. Cardiovascular and renal benefits are increasingly recognized.",
+    "indications": [
+      "type 2 diabetes mellitus"
+    ],
+    "contraindications": [
+      "personal or family history of medullary thyroid carcinoma",
+      "MEN2 syndrome",
+      "severe GI disease"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea (most common; up to 44%)",
+        "vomiting",
+        "diarrhea",
+        "injection site reactions"
+      ],
+      "serious": [
+        "pancreatitis",
+        "acute kidney injury (dehydration from GI side effects)",
+        "medullary thyroid carcinoma (rodent data; relevance to humans unclear)"
+      ]
+    },
+    "black_box_warnings": [
+      "thyroid C-cell tumors in rodents at all doses tested; contraindicated in patients with personal or family history of medullary thyroid carcinoma or MEN2"
+    ],
+    "pharmacokinetics": {
+      "absorption": "subcutaneous injection; immediate-release given twice daily; Bydureon given once weekly",
+      "distribution": "Vd ~28 L",
+      "metabolism": "proteolytic degradation",
+      "excretion": "renal (glomerular filtration of degradation products)",
+      "half_life": "2.4 hours (immediate-release); ~2 weeks (extended-release)",
+      "onset": "immediate (IR); delayed (ER)",
+      "peak": "2 hours (IR)",
+      "duration": "8 hours (IR); 1 week (ER)",
+      "protein_binding": "minimal",
+      "vd": "28 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "oral medications",
+        "mechanism": "delayed gastric emptying may reduce absorption rate of oral drugs",
+        "severity": "moderate"
+      },
+      {
+        "drug": "warfarin",
+        "mechanism": "changes in absorption kinetics; monitor INR",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer IR formulation within 60 minutes before morning and evening meals; do not administer after meals.",
+      "Nausea is dose-dependent and typically improves after 4\u20138 weeks; start at lower dose and titrate.",
+      "Ensure adequate hydration especially when GI side effects are present; monitor renal function.",
+      "Store unused pens in refrigerator; in-use pen can be kept at room temperature for up to 30 days."
+    ],
+    "clinical_pearls": [
+      "Exenatide was the first GLP-1 receptor agonist approved for clinical use (2005), derived from the Gila monster protein exendin-4.",
+      "Unlike liraglutide and semaglutide, the immediate-release exenatide does not have demonstrated cardiovascular benefit (EXSCEL trial: CV-neutral), though Bydureon has demonstrated potential benefits."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "avoid",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "diabetes-type-2",
+      "weight-loss"
+    ],
+    "adverse_effect_tags": [
+      "pancreatitis",
+      "nausea",
+      "thyroid-tumor"
+    ],
+    "interaction_tags": [
+      "gastric-emptying-delay"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "GLP-1-receptor-agonism"
+      ],
+      "prototype_class": "GLP-1 receptor agonists",
+      "adme_profile": "proteolytic-degradation",
+      "presentation_cluster": [
+        "hyperglycemia",
+        "diabetes",
+        "obesity"
+      ],
+      "adverse_cluster": [
+        "pancreatitis",
+        "GI-adverse"
+      ],
+      "interaction_cluster": [
+        "gastric-emptying-delay"
+      ]
+    }
+  },
+  {
+    "id": "liraglutide",
+    "generic_name": "liraglutide",
+    "brand_names": [
+      "Victoza",
+      "Saxenda"
+    ],
+    "drug_class": "GLP-1 receptor agonist",
+    "subclass": "once-daily long-acting GLP-1 agonist",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine",
+      "cardiovascular"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "GLP-1 receptor (GLP-1R)"
+    ],
+    "mechanism_summary": "Fatty acid-modified GLP-1 analog with 97% sequence homology to human GLP-1, enabling once-daily dosing via albumin binding. Activates GLP-1 receptors in the pancreas (insulin secretion, glucagon suppression), hypothalamus (appetite suppression), heart (cardioprotection), and kidney (natriuresis). Produces significant weight loss.",
+    "indications": [
+      "type 2 diabetes mellitus (Victoza)",
+      "obesity management \u2014 BMI \u226530 or \u226527 with comorbidity (Saxenda)",
+      "cardiovascular risk reduction in T2DM with established CVD (Victoza)"
+    ],
+    "contraindications": [
+      "personal or family history of medullary thyroid carcinoma",
+      "MEN2",
+      "pregnancy"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "diarrhea",
+        "constipation",
+        "vomiting",
+        "injection site reactions"
+      ],
+      "serious": [
+        "pancreatitis",
+        "gallbladder disease (cholelithiasis)",
+        "medullary thyroid carcinoma (rodent data)",
+        "tachycardia",
+        "suicidal ideation (Saxenda \u2014 weight management dose)"
+      ]
+    },
+    "black_box_warnings": [
+      "thyroid C-cell tumors; contraindicated in MEN2 and personal/family history of medullary thyroid carcinoma"
+    ],
+    "pharmacokinetics": {
+      "absorption": "subcutaneous injection; fatty acid chain allows albumin binding and once-daily dosing",
+      "distribution": "Vd ~11\u201317 L; albumin-bound",
+      "metabolism": "proteolytic catabolism",
+      "excretion": "renal and fecal as metabolites",
+      "half_life": "13 hours",
+      "onset": "days",
+      "peak": "8\u201312 hours",
+      "duration": "24 hours",
+      "protein_binding": ">98% (albumin)",
+      "vd": "11\u201317 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "oral medications",
+        "mechanism": "gastric emptying delay reduces Cmax of orally administered drugs",
+        "severity": "moderate"
+      },
+      {
+        "drug": "warfarin",
+        "mechanism": "altered absorption kinetics; monitor INR",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Inject subcutaneously in abdomen, thigh, or upper arm once daily at any time, independent of meals.",
+      "Titrate dose slowly (0.6 mg \u2192 1.2 mg \u2192 1.8 mg weekly) to minimize GI side effects.",
+      "Educate patients that this medication requires refrigeration until opened; after first use, store at room temperature for up to 30 days.",
+      "For Saxenda (obesity): assess for depression/suicidal ideation; discontinue if not achieving \u22654% weight loss at 16 weeks."
+    ],
+    "clinical_pearls": [
+      "The LEADER trial demonstrated a 13% relative risk reduction in MACE (major adverse cardiovascular events) in T2DM patients with established CVD, establishing liraglutide as the first GLP-1 agonist with proven CV benefit.",
+      "At the higher dose (3 mg; Saxenda), liraglutide achieves approximately 5\u20138% average body weight loss independent of glucose lowering \u2014 the first FDA-approved injectable weight-loss medication since orlistat."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "contraindicated",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "diabetes-type-2",
+      "obesity",
+      "cardiovascular-risk-reduction"
+    ],
+    "adverse_effect_tags": [
+      "pancreatitis",
+      "nausea",
+      "gallbladder-disease"
+    ],
+    "interaction_tags": [
+      "gastric-emptying-delay"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine",
+        "cardiovascular"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "GLP-1-receptor-agonism"
+      ],
+      "prototype_class": "GLP-1 receptor agonists",
+      "adme_profile": "proteolytic-catabolism",
+      "presentation_cluster": [
+        "hyperglycemia",
+        "diabetes",
+        "obesity",
+        "cardiovascular-risk"
+      ],
+      "adverse_cluster": [
+        "pancreatitis",
+        "GI-adverse"
+      ],
+      "interaction_cluster": [
+        "gastric-emptying-delay"
+      ]
+    }
+  },
+  {
+    "id": "dulaglutide",
+    "generic_name": "dulaglutide",
+    "brand_names": [
+      "Trulicity"
+    ],
+    "drug_class": "GLP-1 receptor agonist",
+    "subclass": "once-weekly long-acting GLP-1 agonist",
+    "prototype_for": false,
+    "prototype_drug": "liraglutide",
+    "organ_systems": [
+      "endocrine",
+      "cardiovascular"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "GLP-1 receptor (GLP-1R)"
+    ],
+    "mechanism_summary": "GLP-1 analog fused to an IgG4 Fc fragment, which extends half-life to ~5 days allowing once-weekly dosing. Activates GLP-1 receptors to glucose-dependently stimulate insulin secretion, suppress glucagon, slow gastric emptying, and reduce appetite.",
+    "indications": [
+      "type 2 diabetes mellitus",
+      "cardiovascular risk reduction in T2DM with established CVD or CV risk factors"
+    ],
+    "contraindications": [
+      "personal or family history of medullary thyroid carcinoma",
+      "MEN2"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "diarrhea",
+        "vomiting",
+        "abdominal pain"
+      ],
+      "serious": [
+        "pancreatitis",
+        "gallbladder disease",
+        "medullary thyroid carcinoma (rodent data)",
+        "first-degree AV block (rare)"
+      ]
+    },
+    "black_box_warnings": [
+      "thyroid C-cell tumors; contraindicated in MEN2 and personal/family history of medullary thyroid carcinoma"
+    ],
+    "pharmacokinetics": {
+      "absorption": "subcutaneous; single-dose auto-injector; once weekly",
+      "distribution": "Vd ~19.2 L",
+      "metabolism": "proteolytic catabolism",
+      "excretion": "proteolytic degradation",
+      "half_life": "~5 days",
+      "onset": "delayed (days to weeks)",
+      "peak": "24\u201372 hours",
+      "duration": "7 days",
+      "protein_binding": "not applicable (IgG4 fusion)",
+      "vd": "19.2 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "oral medications",
+        "mechanism": "gastric emptying delay; monitor timing of time-sensitive oral drugs",
+        "severity": "minor"
+      }
+    ],
+    "nursing_considerations": [
+      "Inject subcutaneously once weekly on the same day each week; can be taken with or without food.",
+      "Pre-filled single-dose auto-injector pen is designed for self-administration; teach patient injection technique.",
+      "REWIND trial demonstrated 12% reduction in MACE; preferred in patients with or at risk for CV events.",
+      "Nausea is most common with initiation; reassure patients it typically improves over 4\u20138 weeks."
+    ],
+    "clinical_pearls": [
+      "Dulaglutide's once-weekly prefilled pen with a concealed needle is consistently rated highly for ease of use in patient surveys, driving excellent adherence.",
+      "The REWIND cardiovascular outcomes trial included a broader population (CV risk factors without established CVD) than other GLP-1 outcome trials, extending the benefit to primary prevention."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "avoid",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "diabetes-type-2",
+      "cardiovascular-risk-reduction",
+      "weight-loss"
+    ],
+    "adverse_effect_tags": [
+      "pancreatitis",
+      "nausea"
+    ],
+    "interaction_tags": [
+      "gastric-emptying-delay"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine",
+        "cardiovascular"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "GLP-1-receptor-agonism"
+      ],
+      "prototype_class": "GLP-1 receptor agonists",
+      "adme_profile": "proteolytic-catabolism",
+      "presentation_cluster": [
+        "hyperglycemia",
+        "diabetes",
+        "cardiovascular-risk"
+      ],
+      "adverse_cluster": [
+        "pancreatitis"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "tirzepatide",
+    "generic_name": "tirzepatide",
+    "brand_names": [
+      "Mounjaro",
+      "Zepbound"
+    ],
+    "drug_class": "dual GLP-1/GIP receptor agonist (twincretin)",
+    "subclass": "dual incretin receptor agonist",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine",
+      "cardiovascular"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "GLP-1 receptor (GLP-1R)",
+      "GIP receptor (GIPR)"
+    ],
+    "mechanism_summary": "First-in-class dual agonist of both GLP-1 and GIP receptors. GLP-1R activation reduces glucagon and stimulates glucose-dependent insulin secretion; GIP receptor activation further enhances insulin secretion, reduces gluconeogenesis, and synergistically reduces appetite. The combined activation produces greater HbA1c reductions and weight loss than any single incretin agonist.",
+    "indications": [
+      "type 2 diabetes mellitus (Mounjaro)",
+      "chronic weight management in obesity (Zepbound)"
+    ],
+    "contraindications": [
+      "personal or family history of medullary thyroid carcinoma",
+      "MEN2",
+      "pregnancy"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "diarrhea",
+        "vomiting",
+        "constipation",
+        "abdominal pain"
+      ],
+      "serious": [
+        "pancreatitis",
+        "medullary thyroid carcinoma (rodent data)",
+        "cholelithiasis",
+        "hypoglycemia (with sulfonylureas or insulin)",
+        "tachycardia"
+      ]
+    },
+    "black_box_warnings": [
+      "thyroid C-cell tumors in rodent studies; unknown human relevance; contraindicated in MEN2 and personal/family MTC history"
+    ],
+    "pharmacokinetics": {
+      "absorption": "subcutaneous once-weekly injection",
+      "distribution": "Vd ~10.3 L (albumin-bound via fatty acid chain)",
+      "metabolism": "proteolytic catabolism; partial amide hydrolysis",
+      "excretion": "proteolytic degradation products renally excreted",
+      "half_life": "5 days",
+      "onset": "days to weeks",
+      "peak": "8\u201372 hours",
+      "duration": "7 days",
+      "protein_binding": ">99% (albumin)",
+      "vd": "10.3 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "oral contraceptives",
+        "mechanism": "gastric emptying delay reduces Cmax of OCP; backup contraception recommended",
+        "severity": "moderate"
+      },
+      {
+        "drug": "sulfonylureas / insulin",
+        "mechanism": "additive hypoglycemia risk; consider dose reduction of secretagogue",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Inject subcutaneously once weekly; may rotate between abdomen, thigh, or upper arm sites.",
+      "Titrate dose slowly every 4 weeks (2.5 \u2192 5 \u2192 7.5 \u2192 10 \u2192 12.5 \u2192 15 mg) to minimize GI adverse effects.",
+      "Advise patients that weight loss outcomes are superior to all other agents: SURMOUNT-1 trial showed mean 20.9% weight loss at 72 weeks.",
+      "Counsel patients starting hormonal contraceptives to use backup contraception for 4 weeks after each dose increase."
+    ],
+    "clinical_pearls": [
+      "Tirzepatide represents the most potent glucose-lowering and weight-loss pharmacotherapy available as of 2024\u20132025, with phase 3 trials showing HbA1c reductions of 2.0\u20132.3% and weight losses of 15\u201320% \u2014 superior to any prior single agent.",
+      "The dual GIP/GLP-1 agonism is clinically meaningful: GIP receptors in the CNS and adipose tissue synergize with GLP-1 signaling to produce additive metabolic effects not achievable with GLP-1 agonism alone."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "contraindicated",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "diabetes-type-2",
+      "obesity",
+      "weight-loss"
+    ],
+    "adverse_effect_tags": [
+      "pancreatitis",
+      "nausea",
+      "thyroid-tumor"
+    ],
+    "interaction_tags": [
+      "gastric-emptying-delay"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine",
+        "cardiovascular"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "GLP-1-GIP-receptor-agonism"
+      ],
+      "prototype_class": "dual GLP-1/GIP agonists",
+      "adme_profile": "proteolytic-catabolism",
+      "presentation_cluster": [
+        "hyperglycemia",
+        "diabetes",
+        "obesity"
+      ],
+      "adverse_cluster": [
+        "pancreatitis",
+        "GI-adverse"
+      ],
+      "interaction_cluster": [
+        "gastric-emptying-delay"
+      ]
+    }
+  },
+  {
+    "id": "dapagliflozin",
+    "generic_name": "dapagliflozin",
+    "brand_names": [
+      "Farxiga"
+    ],
+    "drug_class": "SGLT-2 inhibitor",
+    "subclass": "sodium-glucose cotransporter-2 inhibitor",
+    "prototype_for": false,
+    "prototype_drug": "empagliflozin",
+    "organ_systems": [
+      "endocrine",
+      "cardiovascular",
+      "renal"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "SGLT-2 (sodium-glucose cotransporter 2) in proximal tubule"
+    ],
+    "mechanism_summary": "Inhibits SGLT-2 in the renal proximal tubule, blocking reabsorption of filtered glucose, resulting in glycosuria that lowers blood glucose. Additional effects include natriuresis, osmotic diuresis, weight reduction, blood pressure lowering, and hemodynamic effects that reduce cardiovascular and renal stress.",
+    "indications": [
+      "type 2 diabetes mellitus",
+      "heart failure with reduced ejection fraction (HFrEF)",
+      "heart failure with preserved ejection fraction (HFpEF)",
+      "chronic kidney disease (CKD) with albuminuria"
+    ],
+    "contraindications": [
+      "type 1 diabetes",
+      "DKA",
+      "severe renal impairment (eGFR <25 mL/min for T2DM indication)",
+      "dialysis"
+    ],
+    "adverse_effects": {
+      "common": [
+        "genital mycotic infections",
+        "urinary tract infections",
+        "polyuria",
+        "volume depletion"
+      ],
+      "serious": [
+        "diabetic ketoacidosis (DKA \u2014 euglycemic)",
+        "Fournier's gangrene (necrotizing fasciitis of perineum)",
+        "acute kidney injury (volume depletion)",
+        "lower limb amputation (class effect \u2014 less consistent data for dapagliflozin vs. canagliflozin)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral; bioavailability ~78%",
+      "distribution": "91% protein bound",
+      "metabolism": "hepatic via UGT1A9 (primary glucuronidation) and CYP3A4 (minor)",
+      "excretion": "renal (75%) and fecal (21%)",
+      "half_life": "12.9 hours",
+      "onset": "rapid",
+      "peak": "2 hours",
+      "duration": "24 hours",
+      "protein_binding": "91%",
+      "vd": "118 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "diuretics",
+        "mechanism": "additive volume depletion and dehydration risk",
+        "severity": "moderate"
+      },
+      {
+        "drug": "insulin or insulin secretagogues",
+        "mechanism": "additive hypoglycemia risk; consider dose reduction",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor eGFR at baseline and periodically; do not initiate for T2DM if eGFR <45 mL/min; continue for cardiorenal indications until dialysis.",
+      "Educate patients about genital hygiene to prevent mycotic infections; genital candidiasis is the most common side effect.",
+      "Counsel patients (especially those on insulin) about euglycemic DKA: DKA may occur even with normal blood glucose; report nausea, vomiting, malaise.",
+      "Hold dapagliflozin 3\u20134 days before major surgery, prolonged fasting, or severe illness to prevent euglycemic DKA."
+    ],
+    "clinical_pearls": [
+      "Dapagliflozin is the first SGLT-2 inhibitor approved for both HFrEF AND HFpEF, expanding its use to all heart failure phenotypes regardless of ejection fraction.",
+      "The cardiorenal benefits of SGLT-2 inhibitors appear to be independent of glucose-lowering, operating through hemodynamic, anti-inflammatory, and direct renal tubular effects."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "avoid in second and third trimester",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "diabetes-type-2",
+      "heart-failure",
+      "CKD"
+    ],
+    "adverse_effect_tags": [
+      "genital-infection",
+      "DKA",
+      "Fournier-gangrene",
+      "UTI"
+    ],
+    "interaction_tags": [
+      "diuretic-additive"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine",
+        "cardiovascular",
+        "renal"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "SGLT-2-inhibition"
+      ],
+      "prototype_class": "SGLT-2 inhibitors",
+      "adme_profile": "hepatically-metabolized-UGT1A9",
+      "presentation_cluster": [
+        "hyperglycemia",
+        "diabetes",
+        "heart-failure",
+        "CKD"
+      ],
+      "adverse_cluster": [
+        "DKA",
+        "genital-infection"
+      ],
+      "interaction_cluster": [
+        "diuretic-additive"
+      ]
+    }
+  },
+  {
+    "id": "canagliflozin",
+    "generic_name": "canagliflozin",
+    "brand_names": [
+      "Invokana"
+    ],
+    "drug_class": "SGLT-2 inhibitor",
+    "subclass": "sodium-glucose cotransporter-2 inhibitor",
+    "prototype_for": false,
+    "prototype_drug": "empagliflozin",
+    "organ_systems": [
+      "endocrine",
+      "cardiovascular",
+      "renal"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "SGLT-2 (proximal tubule)",
+      "SGLT-1 (at higher doses)"
+    ],
+    "mechanism_summary": "Inhibits SGLT-2 in the proximal tubule, blocking ~40% of filtered glucose reabsorption, producing glycosuria. At clinical doses also partially inhibits intestinal SGLT-1, reducing postprandial glucose. Additional cardiorenal effects similar to other SGLT-2 inhibitors.",
+    "indications": [
+      "type 2 diabetes mellitus",
+      "cardiovascular risk reduction in T2DM with established CVD",
+      "CKD with albuminuria (eGFR 25\u201375 mL/min)"
+    ],
+    "contraindications": [
+      "type 1 diabetes",
+      "DKA",
+      "eGFR <30 mL/min (T2DM indication)",
+      "dialysis"
+    ],
+    "adverse_effects": {
+      "common": [
+        "genital mycotic infections",
+        "UTIs",
+        "polyuria",
+        "volume depletion"
+      ],
+      "serious": [
+        "lower limb amputations (strongest association among SGLT-2 inhibitors; primarily toes)",
+        "DKA (euglycemic)",
+        "acute kidney injury",
+        "Fournier's gangrene",
+        "bone fractures (class effect)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~65%",
+      "distribution": "99% protein bound",
+      "metabolism": "hepatic glucuronidation (UGT1A9, UGT2B4); CYP3A4 minimal",
+      "excretion": "fecal (52%) and renal (33%)",
+      "half_life": "10.6\u201313.1 hours",
+      "onset": "rapid",
+      "peak": "1\u20132 hours",
+      "duration": "24 hours",
+      "protein_binding": "99%",
+      "vd": "83.5 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "rifampin",
+        "mechanism": "UGT induction decreases canagliflozin levels by 51%",
+        "severity": "major"
+      },
+      {
+        "drug": "digoxin",
+        "mechanism": "canagliflozin increases digoxin AUC by 20%; monitor digoxin levels",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Assess for peripheral vascular disease, neuropathy, and history of amputation before initiating; counsel about foot care and daily foot inspection.",
+      "CREDENCE trial demonstrated significant reductions in CKD progression and CV events in diabetic nephropathy; ensure indication review.",
+      "Monitor blood pressure and volume status; orthostatic hypotension risk especially in elderly patients on diuretics.",
+      "Instruct patients to promptly report pain, tenderness, or swelling of genitalia or perineum (Fournier's gangrene is rare but life-threatening)."
+    ],
+    "clinical_pearls": [
+      "Canagliflozin has the strongest association with lower limb amputations (primarily toes/metatarsals) among SGLT-2 inhibitors, identified in the CANVAS trial; use with caution in patients with peripheral artery disease or prior amputation.",
+      "The CREDENCE trial established canagliflozin as the first agent to show significant renal protection in diabetic nephropathy since the ACE inhibitor/ARB trials of the 1990s."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "avoid in second and third trimester",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "diabetes-type-2",
+      "CKD",
+      "cardiovascular-risk-reduction"
+    ],
+    "adverse_effect_tags": [
+      "amputation-risk",
+      "DKA",
+      "genital-infection",
+      "bone-fractures"
+    ],
+    "interaction_tags": [
+      "UGT-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine",
+        "cardiovascular",
+        "renal"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "SGLT-2-inhibition"
+      ],
+      "prototype_class": "SGLT-2 inhibitors",
+      "adme_profile": "hepatically-metabolized-UGT",
+      "presentation_cluster": [
+        "hyperglycemia",
+        "diabetes",
+        "CKD"
+      ],
+      "adverse_cluster": [
+        "amputation-risk",
+        "DKA"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "ertugliflozin",
+    "generic_name": "ertugliflozin",
+    "brand_names": [
+      "Steglatro"
+    ],
+    "drug_class": "SGLT-2 inhibitor",
+    "subclass": "sodium-glucose cotransporter-2 inhibitor",
+    "prototype_for": false,
+    "prototype_drug": "empagliflozin",
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "SGLT-2 (proximal tubule)"
+    ],
+    "mechanism_summary": "Inhibits SGLT-2 in the proximal convoluted tubule to reduce glucose reabsorption, causing glycosuria and lowering blood glucose. Produces modest weight loss and blood pressure reduction. Least clinical outcomes data among SGLT-2 inhibitors.",
+    "indications": [
+      "type 2 diabetes mellitus"
+    ],
+    "contraindications": [
+      "type 1 diabetes",
+      "DKA",
+      "eGFR <30 mL/min"
+    ],
+    "adverse_effects": {
+      "common": [
+        "genital mycotic infections",
+        "UTIs",
+        "volume depletion"
+      ],
+      "serious": [
+        "DKA (euglycemic)",
+        "Fournier's gangrene",
+        "AKI"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~100%",
+      "distribution": "93% protein bound",
+      "metabolism": "hepatic glucuronidation (UGT1A9, UGT2B7)",
+      "excretion": "renal (50%) and fecal (41%)",
+      "half_life": "16.6 hours",
+      "onset": "rapid",
+      "peak": "1 hour",
+      "duration": "24 hours",
+      "protein_binding": "93%",
+      "vd": "85.5 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "diuretics",
+        "mechanism": "additive volume depletion",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor eGFR at baseline and periodically; discontinue if eGFR <30 mL/min.",
+      "Counsel on genital mycotic infection risk and hygiene practices.",
+      "Hold before major surgery or prolonged fasting to reduce DKA risk.",
+      "No proven CV or renal outcomes benefit established (VERTIS-CV trial: CV-neutral) \u2014 factor into clinical decision-making."
+    ],
+    "clinical_pearls": [
+      "Unlike empagliflozin, dapagliflozin, and canagliflozin, ertugliflozin demonstrated only CV non-inferiority without superiority in the VERTIS-CV trial, limiting its differentiation from other SGLT-2 inhibitors.",
+      "Available as fixed-dose combinations with metformin (Segluromet) and sitagliptin (Steglujan)."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "avoid in second and third trimester",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "diabetes-type-2"
+    ],
+    "adverse_effect_tags": [
+      "DKA",
+      "genital-infection"
+    ],
+    "interaction_tags": [
+      "diuretic-additive"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "SGLT-2-inhibition"
+      ],
+      "prototype_class": "SGLT-2 inhibitors",
+      "adme_profile": "hepatically-metabolized-UGT",
+      "presentation_cluster": [
+        "hyperglycemia",
+        "diabetes"
+      ],
+      "adverse_cluster": [
+        "DKA"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "acarbose",
+    "generic_name": "acarbose",
+    "brand_names": [
+      "Precose"
+    ],
+    "drug_class": "alpha-glucosidase inhibitor",
+    "subclass": "intestinal alpha-glucosidase inhibitor",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "alpha-glucosidase enzymes (intestinal brush border)"
+    ],
+    "mechanism_summary": "Competitively inhibits intestinal alpha-glucosidases (maltase, sucrase, isomaltase, glucoamylase) at the brush border of the small intestine, slowing the breakdown of complex carbohydrates and sucrose to glucose. This delays and reduces postprandial glucose absorption.",
+    "indications": [
+      "type 2 diabetes mellitus (reduces postprandial hyperglycemia)"
+    ],
+    "contraindications": [
+      "inflammatory bowel disease",
+      "colonic ulceration",
+      "intestinal obstruction",
+      "cirrhosis",
+      "severe renal impairment (CrCl <25 mL/min)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "flatulence (most common \u2014 up to 77%)",
+        "diarrhea",
+        "abdominal cramping"
+      ],
+      "serious": [
+        "hepatotoxicity (rare, with high doses)",
+        "ileus (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral; minimally absorbed (<2%); acts locally in GI tract",
+      "distribution": "local GI tract",
+      "metabolism": "metabolized by intestinal bacteria; minor hepatic metabolism of absorbed fraction",
+      "excretion": "fecal (primary); minor renal excretion of absorbed fraction",
+      "half_life": "2 hours",
+      "onset": "rapid (during meal)",
+      "peak": "during meal",
+      "duration": "postprandial period",
+      "protein_binding": "minimal",
+      "vd": "minimal"
+    },
+    "drug_interactions": [
+      {
+        "drug": "digestive enzymes (amylase, pancreatin)",
+        "mechanism": "antagonize action of acarbose",
+        "severity": "moderate"
+      },
+      {
+        "drug": "insulin or sulfonylureas",
+        "mechanism": "acarbose combined with secretagogues can increase hypoglycemia risk; treat hypoglycemia with GLUCOSE (not sucrose)",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer with the FIRST BITE of each main meal (3 times daily); taking before or after a meal reduces efficacy.",
+      "If hypoglycemia occurs while on acarbose (in combination with insulin/SU), treat ONLY with pure glucose (dextrose or glucose tabs) NOT sucrose (sucrose cannot be digested when acarbose is active).",
+      "Monitor LFTs at 3-month intervals for first year; rare hepatotoxicity at high doses.",
+      "GI side effects are dose-related; start at low dose (25 mg) and titrate slowly; side effects typically decrease over time as gut flora adapts."
+    ],
+    "clinical_pearls": [
+      "The critical clinical pearl: hypoglycemia occurring in a patient on acarbose MUST be treated with glucose tablets or IV dextrose \u2014 table sugar (sucrose) cannot be properly digested because sucrase is inhibited.",
+      "Acarbose has a favorable safety profile (minimal systemic absorption) but is limited in clinical use by its GI side effects; it is more commonly used in Asia than in the United States."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "insufficient data; insulin preferred",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "diabetes-type-2",
+      "postprandial-hyperglycemia"
+    ],
+    "adverse_effect_tags": [
+      "flatulence",
+      "hepatotoxicity"
+    ],
+    "interaction_tags": [
+      "enzyme-inhibition-GI"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "alpha-glucosidase-inhibition"
+      ],
+      "prototype_class": "alpha-glucosidase inhibitors",
+      "adme_profile": "minimally-absorbed-GI",
+      "presentation_cluster": [
+        "hyperglycemia",
+        "postprandial-glucose"
+      ],
+      "adverse_cluster": [
+        "GI-adverse"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "pramlintide",
+    "generic_name": "pramlintide",
+    "brand_names": [
+      "Symlin"
+    ],
+    "drug_class": "amylin analog",
+    "subclass": "synthetic amylin analog",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "amylin receptors (CTR/RAMP complexes)"
+    ],
+    "mechanism_summary": "Synthetic analog of amylin, a peptide co-secreted with insulin by pancreatic beta cells. Activates amylin receptors in the brainstem and area postrema to suppress postprandial glucagon secretion, slow gastric emptying, and reduce appetite/caloric intake, complementing insulin's effects on postprandial glucose.",
+    "indications": [
+      "type 1 diabetes mellitus (adjunct to mealtime insulin)",
+      "type 2 diabetes mellitus (adjunct to mealtime insulin)"
+    ],
+    "contraindications": [
+      "hypoglycemia unawareness",
+      "gastroparesis",
+      "hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea (30\u201340%)",
+        "vomiting",
+        "headache",
+        "fatigue",
+        "hypoglycemia (severe \u2014 within 3 hours of meal)"
+      ],
+      "serious": [
+        "severe insulin-induced hypoglycemia (pramlintide slows gastric emptying; mealtime insulin peaks while glucose absorption is delayed)"
+      ]
+    },
+    "black_box_warnings": [
+      "severe hypoglycemia, particularly in type 1 diabetes; reduce mealtime insulin by 50% when initiating pramlintide"
+    ],
+    "pharmacokinetics": {
+      "absorption": "subcutaneous injection; bioavailability ~30\u201340%",
+      "distribution": "Vd ~0.54 L/kg",
+      "metabolism": "renal catabolism",
+      "excretion": "renal",
+      "half_life": "48 minutes",
+      "onset": "15 minutes",
+      "peak": "19\u201321 minutes",
+      "duration": "~3 hours",
+      "protein_binding": "~40%",
+      "vd": "0.54 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "rapid-acting insulin (mealtime)",
+        "mechanism": "additive hypoglycemia; reduce insulin dose by 50% when starting; risk highest within 3 hours post-meal",
+        "severity": "major"
+      },
+      {
+        "drug": "agents slowing GI motility",
+        "mechanism": "additive gastroparesis effect; contraindicated in gastroparesis",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "NEVER MIX pramlintide with insulin in the same syringe \u2014 must be injected separately; inject within 2 inches of the insulin injection site.",
+      "Reduce mealtime insulin dose by 50% when initiating pramlintide to prevent severe hypoglycemia; retitrate insulin as needed.",
+      "Closely monitor glucose for 3 hours after injection; severe hypoglycemia typically occurs in this window.",
+      "Administer immediately before major meals; if a meal is skipped, skip pramlintide dose."
+    ],
+    "clinical_pearls": [
+      "Pramlintide is the only amylin analog approved for clinical use; it targets the 'missing' amylin signal in T1DM (amylin is not produced) and T2DM (amylin secretion declines with progressive beta-cell failure).",
+      "The black box warning of severe hypoglycemia with mealtime insulin is the most important safety concern \u2014 the insulin dose reduction protocol at initiation is mandatory."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "insufficient data; avoid",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "diabetes-type-1",
+      "diabetes-type-2",
+      "postprandial-glucose"
+    ],
+    "adverse_effect_tags": [
+      "severe-hypoglycemia",
+      "nausea"
+    ],
+    "interaction_tags": [
+      "insulin-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "amylin-receptor-agonism"
+      ],
+      "prototype_class": "amylin analogs",
+      "adme_profile": "renally-catabolized",
+      "presentation_cluster": [
+        "hyperglycemia",
+        "diabetes"
+      ],
+      "adverse_cluster": [
+        "hypoglycemia"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "rosiglitazone",
+    "generic_name": "rosiglitazone",
+    "brand_names": [
+      "Avandia"
+    ],
+    "drug_class": "thiazolidinedione",
+    "subclass": "PPAR-gamma agonist",
+    "prototype_for": false,
+    "prototype_drug": "pioglitazone",
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "PPAR-gamma receptor"
+    ],
+    "mechanism_summary": "Activates nuclear PPAR-gamma receptors to improve insulin sensitivity in peripheral tissues; similar mechanism to pioglitazone. Previously widely used but substantially restricted due to meta-analysis data suggesting increased myocardial infarction risk.",
+    "indications": [
+      "type 2 diabetes mellitus (restricted use \u2014 only for patients who cannot use other agents and are already on rosiglitazone)"
+    ],
+    "contraindications": [
+      "NYHA Class III\u2013IV heart failure",
+      "established ischemic heart disease",
+      "any other situation where pioglitazone is available and preferred"
+    ],
+    "adverse_effects": {
+      "common": [
+        "weight gain",
+        "edema",
+        "upper respiratory infections"
+      ],
+      "serious": [
+        "myocardial infarction risk (controversial but basis for restriction)",
+        "heart failure exacerbation",
+        "bladder cancer (less than pioglitazone)",
+        "bone fractures (females)"
+      ]
+    },
+    "black_box_warnings": [
+      "may cause or exacerbate congestive heart failure; risk of myocardial ischemia; not recommended when less risky alternatives exist"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~99%",
+      "distribution": "99.8% protein bound",
+      "metabolism": "hepatic via CYP2C8 (major)",
+      "excretion": "renal (64%) and fecal (23%)",
+      "half_life": "3\u20134 hours",
+      "onset": "days to weeks",
+      "peak": "1 hour",
+      "duration": "ongoing",
+      "protein_binding": "99.8%",
+      "vd": "17.6 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "gemfibrozil",
+        "mechanism": "CYP2C8 inhibition increases rosiglitazone 2-fold",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Understand that rosiglitazone use is now restricted and requires REMS program enrollment in the US due to MI risk concerns.",
+      "Monitor for heart failure signs (weight gain, edema, dyspnea); hold and consult prescriber immediately.",
+      "Monitor LFTs periodically; hepatotoxicity risk similar to pioglitazone.",
+      "Counsel patients about non-cardiac risks: fractures in women, and weight gain."
+    ],
+    "clinical_pearls": [
+      "The FDA imposed significant restrictions on rosiglitazone in 2010 following meta-analyses suggesting increased MI risk; these restrictions were partially lifted in 2013 after a more thorough evaluation.",
+      "Pioglitazone is now strongly preferred over rosiglitazone because pioglitazone's cardiovascular data (PROactive trial) suggest benefit rather than harm."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "diabetes-type-2"
+    ],
+    "adverse_effect_tags": [
+      "heart-failure",
+      "MI-risk",
+      "weight-gain",
+      "fracture-risk"
+    ],
+    "interaction_tags": [
+      "CYP2C8-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "PPAR-gamma-agonism"
+      ],
+      "prototype_class": "thiazolidinediones",
+      "adme_profile": "hepatically-metabolized-CYP2C8",
+      "presentation_cluster": [
+        "hyperglycemia",
+        "diabetes"
+      ],
+      "adverse_cluster": [
+        "heart-failure",
+        "cardiovascular-risk"
+      ],
+      "interaction_cluster": [
+        "CYP2C8-substrate"
+      ]
+    }
+  },
+  {
+    "id": "saxagliptin",
+    "generic_name": "saxagliptin",
+    "brand_names": [
+      "Onglyza"
+    ],
+    "drug_class": "DPP-4 inhibitor",
+    "subclass": "dipeptidyl peptidase-4 inhibitor",
+    "prototype_for": false,
+    "prototype_drug": "sitagliptin",
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "DPP-4 enzyme"
+    ],
+    "mechanism_summary": "Inhibits DPP-4 to prolong the action of endogenous incretin hormones GLP-1 and GIP, glucose-dependently increasing insulin secretion and decreasing glucagon, lowering postprandial and fasting glucose.",
+    "indications": [
+      "type 2 diabetes mellitus"
+    ],
+    "contraindications": [
+      "type 1 diabetes",
+      "DKA",
+      "avoid if history of heart failure or pancreatitis"
+    ],
+    "adverse_effects": {
+      "common": [
+        "upper respiratory infections",
+        "nasopharyngitis",
+        "urinary tract infections"
+      ],
+      "serious": [
+        "heart failure hospitalization (increased risk, SAVOR-TIMI trial)",
+        "pancreatitis",
+        "severe arthralgia",
+        "hypersensitivity",
+        "bullous pemphigoid"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~75%",
+      "distribution": "negligible protein binding",
+      "metabolism": "hepatic via CYP3A4/5 to active metabolite (5-hydroxy saxagliptin)",
+      "excretion": "renal (75%) and fecal (22%)",
+      "half_life": "2.5 hours (saxagliptin); 3.1 hours (active metabolite)",
+      "onset": "rapid",
+      "peak": "2 hours",
+      "duration": "24 hours",
+      "protein_binding": "negligible",
+      "vd": "2.6 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "strong CYP3A4 inhibitors (ketoconazole)",
+        "mechanism": "increase saxagliptin exposure 2.5-fold; reduce dose to 2.5 mg",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Reduce dose from 5 mg to 2.5 mg daily with strong CYP3A4 inhibitors or renal impairment (eGFR <45 mL/min).",
+      "Saxagliptin is the DPP-4 inhibitor with the strongest signal for increased heart failure hospitalization (SAVOR-TIMI); avoid in patients with existing heart failure.",
+      "Monitor for pancreatitis symptoms (severe, persistent abdominal pain); discontinue if pancreatitis suspected.",
+      "Educate patients that saxagliptin has a low hypoglycemia risk as monotherapy due to glucose-dependent action."
+    ],
+    "clinical_pearls": [
+      "Among DPP-4 inhibitors, only saxagliptin showed an increased rate of heart failure hospitalization (27% relative increase) in the SAVOR-TIMI trial; this distinguishes it from sitagliptin and linagliptin.",
+      "Despite its cardiovascular signal, saxagliptin remains used clinically, particularly when it's already part of an established regimen."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "insufficient data; avoid",
+    "lactation_safety": "insufficient data",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "diabetes-type-2"
+    ],
+    "adverse_effect_tags": [
+      "heart-failure-risk",
+      "pancreatitis"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "DPP-4-inhibition"
+      ],
+      "prototype_class": "DPP-4 inhibitors",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "hyperglycemia",
+        "diabetes"
+      ],
+      "adverse_cluster": [
+        "heart-failure"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "alogliptin",
+    "generic_name": "alogliptin",
+    "brand_names": [
+      "Nesina"
+    ],
+    "drug_class": "DPP-4 inhibitor",
+    "subclass": "dipeptidyl peptidase-4 inhibitor",
+    "prototype_for": false,
+    "prototype_drug": "sitagliptin",
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "DPP-4 enzyme"
+    ],
+    "mechanism_summary": "Selective DPP-4 inhibitor that blocks GLP-1 and GIP degradation, extending incretin action to glucose-dependently enhance insulin secretion and suppress glucagon, lowering postprandial and fasting glucose.",
+    "indications": [
+      "type 2 diabetes mellitus"
+    ],
+    "contraindications": [
+      "type 1 diabetes",
+      "DKA"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nasopharyngitis",
+        "upper respiratory infections",
+        "headache"
+      ],
+      "serious": [
+        "pancreatitis (rare)",
+        "liver injury (rare but serious: ALF reported)",
+        "heart failure (signal from EXAMINE trial)",
+        "hypersensitivity"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~100%",
+      "distribution": "20% protein bound",
+      "metabolism": "minimal CYP3A4 and CYP2D6; mostly excreted unchanged",
+      "excretion": "renal (76% unchanged)",
+      "half_life": "21 hours",
+      "onset": "rapid",
+      "peak": "1\u20132 hours",
+      "duration": "24 hours",
+      "protein_binding": "20%",
+      "vd": "417 L"
+    },
+    "drug_interactions": [],
+    "nursing_considerations": [
+      "Dose reduction required in moderate (25 mg every other day) and severe renal impairment (12.5 mg daily).",
+      "Monitor LFTs before initiation; rare cases of hepatic failure have been reported; discontinue if LFTs significantly elevated.",
+      "Like other DPP-4 inhibitors: low hypoglycemia risk as monotherapy, weight-neutral profile.",
+      "Reassess need if patient progresses to conditions requiring more aggressive therapy (e.g., established CVD where GLP-1 agonists or SGLT-2 inhibitors would be preferred)."
+    ],
+    "clinical_pearls": [
+      "Alogliptin is the most renally eliminated DPP-4 inhibitor, requiring significant dose adjustments in CKD \u2014 but unlike linagliptin, it cannot be used without renal dose modification.",
+      "The EXAMINE trial showed CV non-inferiority for alogliptin, with a mild signal for heart failure hospitalization similar to saxagliptin."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "insufficient data",
+    "lactation_safety": "insufficient data",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "diabetes-type-2"
+    ],
+    "adverse_effect_tags": [
+      "pancreatitis",
+      "hepatotoxicity"
+    ],
+    "interaction_tags": [],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "DPP-4-inhibition"
+      ],
+      "prototype_class": "DPP-4 inhibitors",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "hyperglycemia",
+        "diabetes"
+      ],
+      "adverse_cluster": [
+        "hepatotoxicity"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "linagliptin",
+    "generic_name": "linagliptin",
+    "brand_names": [
+      "Tradjenta"
+    ],
+    "drug_class": "DPP-4 inhibitor",
+    "subclass": "dipeptidyl peptidase-4 inhibitor (hepatically cleared)",
+    "prototype_for": false,
+    "prototype_drug": "sitagliptin",
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "DPP-4 enzyme"
+    ],
+    "mechanism_summary": "Selective DPP-4 inhibitor; unique among DPP-4 inhibitors in that it is primarily eliminated non-renally (enterohepatic route), making it the only DPP-4 inhibitor requiring NO dose adjustment in any level of renal impairment.",
+    "indications": [
+      "type 2 diabetes mellitus"
+    ],
+    "contraindications": [
+      "type 1 diabetes",
+      "DKA"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nasopharyngitis",
+        "upper respiratory infections",
+        "diarrhea"
+      ],
+      "serious": [
+        "pancreatitis",
+        "bullous pemphigoid",
+        "severe arthralgia",
+        "hypersensitivity"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~30%",
+      "distribution": "extensively distributed; >99% protein bound",
+      "metabolism": "minimal CYP3A4; primarily enterohepatic recirculation and fecal elimination unchanged",
+      "excretion": "fecal (~90% primarily unchanged); minimal renal excretion",
+      "half_life": "12 hours (effective); terminal half-life up to 130 hours due to tight DPP-4 binding",
+      "onset": "rapid",
+      "peak": "1.5 hours",
+      "duration": "24 hours",
+      "protein_binding": ">99% (concentration-dependent)",
+      "vd": "1110 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "strong CYP3A4/P-gp inducers (rifampin)",
+        "mechanism": "reduces linagliptin exposure by 40%; consider alternative DPP-4i",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Unique advantage: NO dose adjustment required for any level of renal impairment, including dialysis \u2014 especially useful in CKD patients where other DPP-4 inhibitors require dosage modification.",
+      "5 mg once-daily dose regardless of renal function; simplifies prescribing in complex patients.",
+      "Monitor for bullous pemphigoid (skin blisters); FDA issued a safety communication; refer to dermatology if suspected.",
+      "Educate patients that linagliptin has a favorable weight profile (weight-neutral) and low hypoglycemia risk."
+    ],
+    "clinical_pearls": [
+      "Linagliptin's non-renal elimination pathway makes it uniquely appropriate for patients with advanced CKD (including dialysis), where all other DPP-4 inhibitors would require dose reduction.",
+      "The CARMELINA trial demonstrated CV and renal safety without CV benefit or harm, making linagliptin safe but without the added cardiorenal protection offered by GLP-1 agonists or SGLT-2 inhibitors."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "insufficient data",
+    "lactation_safety": "insufficient data",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "diabetes-type-2",
+      "CKD"
+    ],
+    "adverse_effect_tags": [
+      "pancreatitis",
+      "bullous-pemphigoid"
+    ],
+    "interaction_tags": [
+      "P-gp-substrate",
+      "CYP3A4-minor-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "DPP-4-inhibition"
+      ],
+      "prototype_class": "DPP-4 inhibitors",
+      "adme_profile": "non-renally-cleared-enterohepatic",
+      "presentation_cluster": [
+        "hyperglycemia",
+        "diabetes",
+        "CKD"
+      ],
+      "adverse_cluster": [
+        "pancreatitis"
+      ],
+      "interaction_cluster": []
+    }
   }
 ]
