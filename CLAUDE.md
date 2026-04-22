@@ -335,7 +335,7 @@ Use these specific DaisyUI components for the following UI elements:
 | Drug profile wrapper | `card` + `card-body` | Outer shell for every drug page |
 | Prototype badge | `badge badge-success` | "PROTOTYPE" label |
 | BBW badge | `badge badge-error` | Black box warning flag |
-| ISMP high-alert badge | `badge badge-error` | "HIGH ALERT" label — displayed prominently in drug page header for all ISMP high-alert medications |
+| ISMP high-alert badge | `badge badge-error` | "HIGH ALERT" flag for ISMP-designated medications |
 | Beers Criteria flag | `badge badge-warning` | Geriatric caution |
 | Organ system tag | `badge badge-outline` | Schema membership |
 | PK data table | `table table-zebra` | Pharmacokinetics block |
@@ -517,9 +517,9 @@ carry greater harm potential when errors do occur.
 | Vasopressors and IV inotropes | dopamine, dobutamine, norepinephrine, epinephrine, vasopressin, milrinone |
 | Neuromuscular blocking agents | succinylcholine, rocuronium, vecuronium, cisatracurium |
 | IV sedation / general anesthetics | midazolam, lorazepam, diazepam, propofol, etomidate, ketamine |
-| Chemotherapy agents | all cytotoxic agents (cyclophosphamide, methotrexate-onc, doxorubicin, vincristine, paclitaxel, cisplatin, etc.) |
+| Chemotherapy agents | all cytotoxic agents (cyclophosphamide, methotrexate — all formulations oncologic and non-oncologic, doxorubicin, vincristine, paclitaxel, cisplatin, etc.) |
 | Cardiac glycosides | digoxin |
-| Individual drugs (by name) | amiodarone, lidocaine (IV), nitroprusside, nitroglycerin (IV), oxytocin, promethazine (IV), droperidol, methotrexate (oral, non-oncologic), magnesium sulfate (IV) |
+| Individual drugs (by name) | amiodarone, lidocaine (IV), nitroprusside, nitroglycerin (all formulations — IV, sublingual, and topical carry risk), oxytocin, promethazine (IV), droperidol, methotrexate (all formulations — both oncologic and non-oncologic oral use are high-alert), magnesium sulfate (IV) |
 
 **UI display requirements for `ismp_high_alert: true` drugs:**
 - Display `<span class="badge badge-error">HIGH ALERT</span>` in the drug page
