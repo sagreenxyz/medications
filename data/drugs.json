@@ -41645,5 +41645,2309 @@
         "anticholinergic"
       ]
     }
+  },
+  {
+    "id": "paroxetine",
+    "generic_name": "paroxetine",
+    "brand_names": [
+      "Paxil",
+      "Paxil CR",
+      "Pexeva"
+    ],
+    "drug_class": "SSRI",
+    "subclass": "selective serotonin reuptake inhibitor",
+    "prototype_for": false,
+    "prototype_drug": "fluoxetine",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "SERT (serotonin transporter)"
+    ],
+    "mechanism_summary": "Selectively inhibits the serotonin transporter (SERT), blocking presynaptic reuptake of serotonin and increasing its availability in the synapse. Paroxetine also has notable anticholinergic and noradrenergic reuptake inhibition activity compared to other SSRIs.",
+    "indications": [
+      "major depressive disorder",
+      "generalized anxiety disorder",
+      "panic disorder",
+      "social anxiety disorder",
+      "PTSD",
+      "OCD",
+      "premenstrual dysphoric disorder"
+    ],
+    "contraindications": [
+      "concurrent MAOI use",
+      "concurrent thioridazine use",
+      "concurrent pimozide use"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "somnolence",
+        "dry mouth",
+        "constipation",
+        "sexual dysfunction",
+        "weight gain",
+        "sweating"
+      ],
+      "serious": [
+        "serotonin syndrome",
+        "suicidal ideation (pediatric/young adults)",
+        "withdrawal syndrome on abrupt discontinuation",
+        "hyponatremia (SIADH)",
+        "QT prolongation"
+      ]
+    },
+    "black_box_warnings": [
+      "suicidality in children, adolescents, and young adults"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; bioavailability ~50% due to first-pass metabolism; food does not significantly affect absorption",
+      "distribution": "highly protein bound (~95%); Vd ~8-28 L/kg; distributes widely into tissues",
+      "metabolism": "extensively metabolized by CYP2D6 (major); potent inhibitor of CYP2D6; subject to saturable first-pass metabolism",
+      "excretion": "renal (~64%) and fecal (~36%); dose reduction in severe renal/hepatic impairment",
+      "half_life": "21 hours (range 3-65 hours)",
+      "onset": "1-4 weeks for antidepressant effect",
+      "peak": "5.2 hours",
+      "duration": "24 hours",
+      "protein_binding": "95%",
+      "vd": "8-28 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "serotonin syndrome risk",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "warfarin",
+        "mechanism": "increased bleeding risk via platelet serotonin depletion",
+        "severity": "moderate"
+      },
+      {
+        "drug": "tramadol",
+        "mechanism": "serotonin syndrome and CYP2D6 inhibition reduces tramadol activation",
+        "severity": "major"
+      },
+      {
+        "drug": "tamoxifen",
+        "mechanism": "CYP2D6 inhibition reduces conversion to active endoxifen, reducing efficacy",
+        "severity": "major"
+      },
+      {
+        "drug": "tricyclic antidepressants",
+        "mechanism": "CYP2D6 inhibition raises TCA levels",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Assess for suicidal ideation at each visit during first 4 weeks; paroxetine carries the highest discontinuation syndrome risk of all SSRIs due to short half-life and anticholinergic activity \u2014 never abrupt-stop.",
+      "Monitor for weight gain and metabolic changes; paroxetine is associated with more weight gain than other SSRIs.",
+      "Caution in elderly patients due to anticholinergic effects (urinary retention, constipation, confusion) and risk of falls.",
+      "Educate patient that gradual taper is required on discontinuation; abrupt stopping causes dizziness, paresthesias, electric shock sensations ('brain zaps'), irritability, and flu-like symptoms."
+    ],
+    "clinical_pearls": [
+      "Paroxetine is the only SSRI FDA-approved for all five anxiety disorders (GAD, panic, social anxiety, PTSD, OCD), making it useful in comorbid anxiety-depression.",
+      "Paroxetine is a potent CYP2D6 inhibitor \u2014 avoid co-prescribing with tamoxifen (reduces anti-cancer efficacy) and increases levels of many drugs metabolized by 2D6."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid (neonatal adaptation syndrome; possible cardiac defects with first-trimester exposure)",
+    "lactation_safety": "use with caution; low transfer but infant sedation possible",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "major depression",
+      "anxiety disorders",
+      "PTSD",
+      "OCD",
+      "panic disorder"
+    ],
+    "adverse_effect_tags": [
+      "sexual dysfunction",
+      "weight gain",
+      "discontinuation syndrome",
+      "anticholinergic",
+      "serotonin syndrome"
+    ],
+    "interaction_tags": [
+      "CYP2D6-inhibitor",
+      "MAOI-interaction",
+      "serotonergic"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "SERT-inhibition"
+      ],
+      "prototype_class": "SSRIs",
+      "adme_profile": "CYP2D6-metabolized",
+      "presentation_cluster": [
+        "major-depression",
+        "anxiety-disorders",
+        "PTSD"
+      ],
+      "adverse_cluster": [
+        "serotonin-syndrome",
+        "discontinuation-syndrome",
+        "anticholinergic-toxidrome"
+      ],
+      "interaction_cluster": [
+        "serotonergic",
+        "CYP2D6-inhibitor"
+      ]
+    }
+  },
+  {
+    "id": "citalopram",
+    "generic_name": "citalopram",
+    "brand_names": [
+      "Celexa"
+    ],
+    "drug_class": "SSRI",
+    "subclass": "selective serotonin reuptake inhibitor",
+    "prototype_for": false,
+    "prototype_drug": "fluoxetine",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "SERT (serotonin transporter)"
+    ],
+    "mechanism_summary": "Selectively inhibits the serotonin transporter with high selectivity and minimal effects on norepinephrine or dopamine transporters, CYP enzymes, or muscarinic receptors, making it one of the most selective SSRIs available.",
+    "indications": [
+      "major depressive disorder",
+      "off-label: panic disorder",
+      "off-label: OCD",
+      "off-label: generalized anxiety disorder"
+    ],
+    "contraindications": [
+      "concurrent MAOI use",
+      "concurrent pimozide use",
+      "congenital long QT syndrome",
+      "doses >40 mg/day (QT risk)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "somnolence",
+        "dry mouth",
+        "increased sweating",
+        "tremor",
+        "sexual dysfunction"
+      ],
+      "serious": [
+        "QT prolongation and torsades de pointes (dose-dependent)",
+        "serotonin syndrome",
+        "hyponatremia (SIADH)",
+        "suicidal ideation"
+      ]
+    },
+    "black_box_warnings": [
+      "suicidality in children, adolescents, and young adults"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; bioavailability ~80%; food has no effect",
+      "distribution": "protein binding ~80%; Vd ~12 L/kg",
+      "metabolism": "primarily via CYP2C19 and CYP3A4; mild CYP2D6 inhibitor; active metabolite didesmethylcitalopram",
+      "excretion": "primarily renal with some fecal; dose reduction required if CrCl <20 mL/min and in hepatic impairment",
+      "half_life": "35 hours",
+      "onset": "1-4 weeks for antidepressant effect",
+      "peak": "4 hours",
+      "duration": "24 hours",
+      "protein_binding": "80%",
+      "vd": "12 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "serotonin syndrome",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "pimozide",
+        "mechanism": "additive QT prolongation",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "omeprazole (CYP2C19 inhibitors)",
+        "mechanism": "increases citalopram exposure and QT risk",
+        "severity": "moderate"
+      },
+      {
+        "drug": "linezolid",
+        "mechanism": "serotonin syndrome risk",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Maximum dose is 40 mg/day due to QT prolongation risk; 20 mg/day maximum for patients >60 years, those with hepatic impairment, or CYP2C19 poor metabolizers.",
+      "Obtain baseline ECG in patients with known cardiac disease, hypokalemia, or hypomagnesemia before initiating; monitor ECG if dose increases.",
+      "Monitor serum sodium in elderly patients; citalopram can cause SIADH \u2014 suspect if patient develops confusion, headache, or neurological changes.",
+      "Educate patients that full antidepressant effect may take 4-6 weeks; partial response at 2 weeks is prognostically favorable."
+    ],
+    "clinical_pearls": [
+      "Citalopram has the most dose-dependent QT prolongation of all SSRIs; FDA issued a safety communication in 2011 limiting the maximum dose to 40 mg/day.",
+      "Its high selectivity and minimal drug interaction profile make it preferred in medically complex patients requiring polypharmacy."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use with caution; neonatal adaptation syndrome possible; PPHN risk debated",
+    "lactation_safety": "low infant exposure; generally considered compatible",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "major depression",
+      "anxiety"
+    ],
+    "adverse_effect_tags": [
+      "QT prolongation",
+      "sexual dysfunction",
+      "hyponatremia",
+      "serotonin syndrome"
+    ],
+    "interaction_tags": [
+      "CYP2C19-substrate",
+      "QT-prolongation",
+      "serotonergic"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "SERT-inhibition"
+      ],
+      "prototype_class": "SSRIs",
+      "adme_profile": "CYP2C19-metabolized",
+      "presentation_cluster": [
+        "major-depression"
+      ],
+      "adverse_cluster": [
+        "QT-prolongation",
+        "hyponatremia",
+        "serotonin-syndrome"
+      ],
+      "interaction_cluster": [
+        "serotonergic",
+        "QT-prolonging-combinations"
+      ]
+    }
+  },
+  {
+    "id": "fluvoxamine",
+    "generic_name": "fluvoxamine",
+    "brand_names": [
+      "Luvox",
+      "Luvox CR"
+    ],
+    "drug_class": "SSRI",
+    "subclass": "selective serotonin reuptake inhibitor",
+    "prototype_for": false,
+    "prototype_drug": "fluoxetine",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "SERT (serotonin transporter)"
+    ],
+    "mechanism_summary": "Inhibits neuronal reuptake of serotonin via SERT blockade; uniquely binds to sigma-1 receptors which may contribute to its anxiolytic and anti-inflammatory properties. A potent inhibitor of multiple CYP enzymes.",
+    "indications": [
+      "OCD (FDA-approved)",
+      "social anxiety disorder (CR formulation)",
+      "off-label: depression",
+      "off-label: PTSD",
+      "off-label: COVID-19 (investigational)"
+    ],
+    "contraindications": [
+      "concurrent MAOI use",
+      "concurrent alosetron use",
+      "concurrent thioridazine use",
+      "concurrent tizanidine use",
+      "concurrent pimozide use"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "somnolence",
+        "insomnia",
+        "dry mouth",
+        "dizziness",
+        "sexual dysfunction"
+      ],
+      "serious": [
+        "serotonin syndrome",
+        "suicidal ideation",
+        "mania activation",
+        "hyponatremia"
+      ]
+    },
+    "black_box_warnings": [
+      "suicidality in children, adolescents, and young adults"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; bioavailability ~53%; food has no significant effect",
+      "distribution": "protein binding ~80%; widely distributed",
+      "metabolism": "primarily hepatic via CYP1A2; potent inhibitor of CYP1A2, CYP2C19, and CYP3A4",
+      "excretion": "primarily renal; dose adjustment in hepatic impairment",
+      "half_life": "15.6 hours (range 9-28 hours)",
+      "onset": "2-4 weeks for OCD response",
+      "peak": "3-8 hours",
+      "duration": "24 hours",
+      "protein_binding": "80%",
+      "vd": "25 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "serotonin syndrome",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "tizanidine",
+        "mechanism": "CYP1A2 inhibition dramatically increases tizanidine levels; hypotension and CNS depression",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "theophylline",
+        "mechanism": "CYP1A2 inhibition increases theophylline levels; toxicity risk",
+        "severity": "major"
+      },
+      {
+        "drug": "clozapine",
+        "mechanism": "CYP1A2 inhibition increases clozapine levels 5-10 fold",
+        "severity": "major"
+      },
+      {
+        "drug": "warfarin",
+        "mechanism": "CYP1A2/2C9 inhibition may increase warfarin levels",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Fluvoxamine is a potent CYP1A2 and CYP2C19 inhibitor \u2014 review all concurrent medications for interactions before administering, particularly clozapine, theophylline, and warfarin.",
+      "FDA-approved specifically for OCD rather than depression; ensure indication is correct when verifying medication orders.",
+      "Monitor for signs of serotonin syndrome: agitation, hyperthermia, tachycardia, clonus, and hyperreflexia \u2014 particularly if combined with tramadol, triptans, or other serotonergic agents.",
+      "Educate that nausea is most prominent in first 1-2 weeks and generally resolves; taking with food helps minimize GI symptoms."
+    ],
+    "clinical_pearls": [
+      "Fluvoxamine's potent CYP1A2 inhibition creates clinically important drug interactions; it increases clozapine levels by 5-10 fold, which requires dose adjustment in patients starting fluvoxamine.",
+      "Fluvoxamine's sigma-1 receptor agonism has generated interest as an anti-inflammatory agent during COVID-19 infection, with some positive trial data for preventing progression to severe disease."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use with caution; neonatal adaptation syndrome possible",
+    "lactation_safety": "low infant exposure; generally compatible",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "OCD",
+      "anxiety",
+      "social anxiety disorder"
+    ],
+    "adverse_effect_tags": [
+      "nausea",
+      "sexual dysfunction",
+      "serotonin syndrome"
+    ],
+    "interaction_tags": [
+      "CYP1A2-inhibitor",
+      "CYP2C19-inhibitor",
+      "serotonergic"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "SERT-inhibition"
+      ],
+      "prototype_class": "SSRIs",
+      "adme_profile": "CYP1A2-inhibitor",
+      "presentation_cluster": [
+        "OCD",
+        "anxiety-disorders"
+      ],
+      "adverse_cluster": [
+        "serotonin-syndrome"
+      ],
+      "interaction_cluster": [
+        "CYP1A2-inhibitor",
+        "serotonergic"
+      ]
+    }
+  },
+  {
+    "id": "desvenlafaxine",
+    "generic_name": "desvenlafaxine",
+    "brand_names": [
+      "Pristiq",
+      "Khedezla"
+    ],
+    "drug_class": "SNRI",
+    "subclass": "serotonin-norepinephrine reuptake inhibitor",
+    "prototype_for": false,
+    "prototype_drug": "venlafaxine",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "SERT (serotonin transporter)",
+      "NET (norepinephrine transporter)"
+    ],
+    "mechanism_summary": "Active O-desmethyl metabolite of venlafaxine that inhibits both serotonin and norepinephrine transporters. Unlike venlafaxine, it requires no hepatic activation and has minimal CYP enzyme interactions, offering a more predictable pharmacokinetic profile.",
+    "indications": [
+      "major depressive disorder",
+      "off-label: vasomotor symptoms of menopause",
+      "off-label: fibromyalgia"
+    ],
+    "contraindications": [
+      "concurrent MAOI use",
+      "uncontrolled narrow-angle glaucoma"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "headache",
+        "dizziness",
+        "insomnia",
+        "dry mouth",
+        "constipation",
+        "diaphoresis",
+        "sexual dysfunction"
+      ],
+      "serious": [
+        "hypertension (dose-dependent)",
+        "serotonin syndrome",
+        "suicidal ideation",
+        "discontinuation syndrome",
+        "hyponatremia"
+      ]
+    },
+    "black_box_warnings": [
+      "suicidality in children, adolescents, and young adults"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; bioavailability ~80%; food has no significant effect on absorption",
+      "distribution": "protein binding ~30%; Vd ~3.4 L/kg",
+      "metabolism": "primarily conjugation (glucuronidation); minimal CYP involvement; not a significant CYP inhibitor or inducer",
+      "excretion": "renal (~45% unchanged); dose adjustment required if CrCl <50 mL/min",
+      "half_life": "11 hours",
+      "onset": "1-4 weeks for antidepressant effect",
+      "peak": "7.5 hours",
+      "duration": "24 hours",
+      "protein_binding": "30%",
+      "vd": "3.4 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "serotonin syndrome",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "linezolid",
+        "mechanism": "serotonin syndrome risk",
+        "severity": "major"
+      },
+      {
+        "drug": "NSAIDs/aspirin",
+        "mechanism": "increased bleeding risk via serotonin-mediated platelet dysfunction",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor blood pressure at baseline and after each dose increase; noradrenergic activity causes dose-dependent hypertension \u2014 particularly relevant at doses >50 mg/day.",
+      "Desvenlafaxine requires no hepatic activation (unlike venlafaxine), making it predictable in patients with CYP2D6 polymorphisms or hepatic impairment.",
+      "Taper dose gradually over at least 2 weeks on discontinuation; abrupt stopping causes dizziness, insomnia, nausea, and sensory disturbances.",
+      "Dose reduction required in severe renal impairment (CrCl <30 mL/min: 50 mg every other day); monitor renal function in patients with CKD."
+    ],
+    "clinical_pearls": [
+      "As the active metabolite of venlafaxine, desvenlafaxine offers a more predictable pharmacokinetic profile independent of CYP2D6 metabolizer status, making it useful in patients who are poor CYP2D6 metabolizers or on CYP2D6 inhibitors.",
+      "Its off-label use for vasomotor symptoms of menopause is supported by multiple RCTs, providing a non-hormonal option for women who cannot use estrogen."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use with caution; neonatal adaptation syndrome and PPHN risk",
+    "lactation_safety": "use with caution; detectable in breast milk",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "major depression",
+      "vasomotor symptoms"
+    ],
+    "adverse_effect_tags": [
+      "hypertension",
+      "sexual dysfunction",
+      "discontinuation syndrome",
+      "serotonin syndrome"
+    ],
+    "interaction_tags": [
+      "MAOI-interaction",
+      "serotonergic",
+      "noradrenergic"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "SERT-inhibition",
+        "NET-inhibition"
+      ],
+      "prototype_class": "SNRIs",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "major-depression"
+      ],
+      "adverse_cluster": [
+        "hypertension",
+        "discontinuation-syndrome",
+        "serotonin-syndrome"
+      ],
+      "interaction_cluster": [
+        "serotonergic",
+        "noradrenergic"
+      ]
+    }
+  },
+  {
+    "id": "mirtazapine",
+    "generic_name": "mirtazapine",
+    "brand_names": [
+      "Remeron",
+      "Remeron SolTab"
+    ],
+    "drug_class": "noradrenergic and specific serotonergic antidepressant (NaSSA)",
+    "subclass": "alpha-2 antagonist antidepressant",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "alpha-2 adrenergic receptor",
+      "5-HT2A receptor",
+      "5-HT2C receptor",
+      "5-HT3 receptor",
+      "H1 histamine receptor"
+    ],
+    "mechanism_summary": "Blocks presynaptic alpha-2 autoreceptors and heteroreceptors, disinhibiting norepinephrine and serotonin release. Simultaneously blocks 5-HT2A, 5-HT2C, and 5-HT3 receptors, channeling serotonin's effects through 5-HT1A pathways and reducing nausea/sexual side effects. Potent H1 blockade contributes to sedation and appetite stimulation.",
+    "indications": [
+      "major depressive disorder",
+      "off-label: nausea",
+      "off-label: insomnia",
+      "off-label: weight gain in cancer/HIV cachexia",
+      "off-label: PTSD"
+    ],
+    "contraindications": [
+      "concurrent MAOI use"
+    ],
+    "adverse_effects": {
+      "common": [
+        "sedation",
+        "increased appetite",
+        "weight gain",
+        "dry mouth",
+        "constipation",
+        "dizziness"
+      ],
+      "serious": [
+        "agranulocytosis (rare)",
+        "serotonin syndrome",
+        "suicidal ideation",
+        "hyponatremia"
+      ]
+    },
+    "black_box_warnings": [
+      "suicidality in children, adolescents, and young adults"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; bioavailability ~50% due to first-pass; food has no significant effect",
+      "distribution": "protein binding ~85%; Vd ~4.5 L/kg",
+      "metabolism": "hepatic via CYP1A2, CYP2D6, and CYP3A4; active metabolite demethylmirtazapine",
+      "excretion": "renal (~75%) and fecal (~15%); dose reduction in severe renal/hepatic impairment",
+      "half_life": "20-40 hours",
+      "onset": "1-3 weeks",
+      "peak": "2 hours",
+      "duration": "24 hours",
+      "protein_binding": "85%",
+      "vd": "4.5 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "serotonin syndrome",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "alcohol/CNS depressants",
+        "mechanism": "additive CNS depression due to H1 blockade and sedation",
+        "severity": "major"
+      },
+      {
+        "drug": "benzodiazepines",
+        "mechanism": "additive sedation and psychomotor impairment",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Sedation is dose-dependent and paradoxically more pronounced at lower doses (15 mg > 30 mg) due to H1:alpha-2 receptor blockade ratio; counsel patients about drowsiness, especially when initiating.",
+      "Weight gain and increased appetite are common and clinically meaningful \u2014 monitor BMI monthly; mirtazapine is sometimes intentionally chosen in patients with depression plus undernutrition or cancer cachexia.",
+      "Although agranulocytosis is rare (<1 per 1000 patients), instruct patients to report fever, sore throat, or mouth sores immediately; obtain CBC if infection signs occur.",
+      "Mirtazapine lacks significant CYP inhibition and causes no sexual dysfunction, making it advantageous in patients with SSRI-induced sexual side effects or in men with erectile dysfunction."
+    ],
+    "clinical_pearls": [
+      "The 'paradox of mirtazapine' refers to its more pronounced sedation at 7.5-15 mg than at 30-45 mg; as the dose increases, noradrenergic activation offsets H1-mediated sedation.",
+      "Mirtazapine is the only antidepressant that reliably stimulates appetite and promotes weight gain, making it valuable in depressed patients with cancer, AIDS, or chemotherapy-induced anorexia."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use with caution; limited data",
+    "lactation_safety": "use with caution; low breast milk transfer",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "major depression",
+      "insomnia",
+      "weight loss",
+      "PTSD"
+    ],
+    "adverse_effect_tags": [
+      "sedation",
+      "weight gain",
+      "agranulocytosis",
+      "serotonin syndrome"
+    ],
+    "interaction_tags": [
+      "CYP1A2-substrate",
+      "CNS-depression",
+      "serotonergic"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "alpha-2-antagonism",
+        "5-HT-antagonism"
+      ],
+      "prototype_class": "NaSSA antidepressants",
+      "adme_profile": "hepatically-metabolized",
+      "presentation_cluster": [
+        "major-depression",
+        "insomnia"
+      ],
+      "adverse_cluster": [
+        "weight-gain",
+        "sedation",
+        "agranulocytosis"
+      ],
+      "interaction_cluster": [
+        "CNS-depressants",
+        "serotonergic"
+      ]
+    }
+  },
+  {
+    "id": "trazodone",
+    "generic_name": "trazodone",
+    "brand_names": [
+      "Desyrel",
+      "Oleptro"
+    ],
+    "drug_class": "serotonin antagonist and reuptake inhibitor (SARI)",
+    "subclass": "triazolopyridine antidepressant",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors",
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "SERT (serotonin transporter)",
+      "5-HT2A receptor",
+      "alpha-1 adrenergic receptor",
+      "H1 histamine receptor"
+    ],
+    "mechanism_summary": "Inhibits serotonin reuptake (weak) and potently antagonizes 5-HT2A receptors, alpha-1 adrenergic receptors, and histamine H1 receptors. The combination of weak SERT inhibition and 5-HT2A blockade produces antidepressant and anxiolytic effects with a favorable sexual side effect profile.",
+    "indications": [
+      "major depressive disorder",
+      "off-label: insomnia (most common use at low doses)",
+      "off-label: anxiety",
+      "off-label: fibromyalgia pain"
+    ],
+    "contraindications": [
+      "concurrent MAOI use",
+      "congenital or acquired long QT syndrome"
+    ],
+    "adverse_effects": {
+      "common": [
+        "sedation",
+        "dizziness",
+        "dry mouth",
+        "blurred vision",
+        "orthostatic hypotension",
+        "headache"
+      ],
+      "serious": [
+        "priapism (rare; urological emergency)",
+        "QT prolongation",
+        "serotonin syndrome",
+        "suicidal ideation",
+        "orthostatic hypotension with falls (elderly)"
+      ]
+    },
+    "black_box_warnings": [
+      "suicidality in children, adolescents, and young adults"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; bioavailability ~65%; food enhances absorption and reduces peak concentration variability",
+      "distribution": "protein binding ~89-95%; Vd ~0.8-1.5 L/kg",
+      "metabolism": "extensively hepatic via CYP3A4; active metabolite m-chlorophenylpiperazine (mCPP) has serotonergic activity",
+      "excretion": "primarily renal; clearance may be reduced in elderly",
+      "half_life": "3-9 hours (immediate release); 10 hours (extended release)",
+      "onset": "sleep-promoting effect within first dose; antidepressant effect 2-4 weeks",
+      "peak": "1-2 hours (fasting); 2-3 hours (with food)",
+      "duration": "8-12 hours (IR)",
+      "protein_binding": "89-95%",
+      "vd": "0.8-1.5 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "serotonin syndrome",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "CYP3A4 inhibitors (ketoconazole, ritonavir)",
+        "mechanism": "increased trazodone levels and QT risk",
+        "severity": "major"
+      },
+      {
+        "drug": "antihypertensives",
+        "mechanism": "additive hypotension via alpha-1 blockade",
+        "severity": "moderate"
+      },
+      {
+        "drug": "digoxin",
+        "mechanism": "may increase digoxin levels",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Priapism is a rare but serious adverse effect requiring emergency urological intervention within 4-6 hours; instruct male patients to seek immediate care for prolonged erection (>4 hours).",
+      "Assess orthostatic blood pressure in elderly patients and those on antihypertensives; alpha-1 blockade causes orthostatic hypotension and fall risk.",
+      "Administer with food to reduce sedation, improve absorption consistency, and minimize dizziness; the extended-release formulation should be taken on an empty stomach.",
+      "At the low doses used for insomnia (25-100 mg), trazodone's H1 and alpha-1 antagonism predominate; counsel that this is an off-label use but widely practiced."
+    ],
+    "clinical_pearls": [
+      "Trazodone is one of the most commonly prescribed antidepressants in the United States \u2014 primarily for insomnia at doses far below its antidepressant range (25-100 mg vs. 150-600 mg), creating a dual role as sedative-hypnotic and antidepressant.",
+      "Its active metabolite mCPP is a serotonin agonist and can cause anxiety, headache, and dizziness if it accumulates, particularly when co-administered with CYP3A4 inhibitors."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use with caution; limited data",
+    "lactation_safety": "use with caution; limited data on infant effects",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "major depression",
+      "insomnia",
+      "anxiety"
+    ],
+    "adverse_effect_tags": [
+      "priapism",
+      "orthostatic hypotension",
+      "sedation",
+      "QT prolongation"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate",
+      "serotonergic",
+      "QT-prolongation"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors",
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "SERT-inhibition",
+        "5-HT2A-antagonism"
+      ],
+      "prototype_class": "SARIs",
+      "adme_profile": "CYP3A4-metabolized",
+      "presentation_cluster": [
+        "major-depression",
+        "insomnia"
+      ],
+      "adverse_cluster": [
+        "orthostatic-hypotension",
+        "priapism",
+        "QT-prolongation"
+      ],
+      "interaction_cluster": [
+        "serotonergic",
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "vilazodone",
+    "generic_name": "vilazodone",
+    "brand_names": [
+      "Viibryd"
+    ],
+    "drug_class": "SPARI (serotonin partial agonist reuptake inhibitor)",
+    "subclass": "novel antidepressant",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "SERT (serotonin transporter)",
+      "5-HT1A receptor (partial agonist)"
+    ],
+    "mechanism_summary": "Combines SSRI activity (SERT blockade) with 5-HT1A partial agonism, similar to buspirone. The partial agonism at 5-HT1A autoreceptors may accelerate the desensitization that underlies antidepressant onset, and 5-HT1A postsynaptic partial agonism may contribute to anxiolytic effects.",
+    "indications": [
+      "major depressive disorder"
+    ],
+    "contraindications": [
+      "concurrent MAOI use"
+    ],
+    "adverse_effects": {
+      "common": [
+        "diarrhea",
+        "nausea",
+        "vomiting",
+        "insomnia",
+        "dry mouth"
+      ],
+      "serious": [
+        "serotonin syndrome",
+        "suicidal ideation",
+        "abnormal bleeding",
+        "hyponatremia"
+      ]
+    },
+    "black_box_warnings": [
+      "suicidality in children, adolescents, and young adults"
+    ],
+    "pharmacokinetics": {
+      "absorption": "bioavailability ~72% with food (must take with food); food increases Cmax by ~147-160%",
+      "distribution": "protein binding ~96-99%",
+      "metabolism": "primarily via CYP3A4 (major) with minor CYP2C19 and CYP2D6 contribution",
+      "excretion": "fecal (~2% unchanged); renal (~1% unchanged)",
+      "half_life": "25 hours",
+      "onset": "2-4 weeks for antidepressant effect",
+      "peak": "4-5 hours",
+      "duration": "24 hours",
+      "protein_binding": "96-99%",
+      "vd": "approximately 1400 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "serotonin syndrome",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "strong CYP3A4 inhibitors",
+        "mechanism": "increases vilazodone exposure by 50%; reduce dose to 20 mg/day",
+        "severity": "major"
+      },
+      {
+        "drug": "strong CYP3A4 inducers",
+        "mechanism": "decreases vilazodone levels; increase dose to 80 mg/day",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Vilazodone must be taken with food; administration on an empty stomach reduces bioavailability by 50% and may reduce efficacy.",
+      "Dose titration is required: start at 10 mg for 7 days, then 20 mg for 7 days, then target 40 mg daily; this gradual titration minimizes GI side effects.",
+      "Diarrhea is the most common adverse effect (28% in trials), occurring predominantly in the first 2 weeks; reassure patients this often resolves.",
+      "Unlike SSRIs, sexual dysfunction appears less prevalent with vilazodone, possibly due to 5-HT1A agonism counteracting 5-HT2A-mediated sexual effects."
+    ],
+    "clinical_pearls": [
+      "Vilazodone's dual mechanism (SERT + 5-HT1A partial agonism) theoretically combines the antidepressant benefit of SSRIs with the anxiolytic mechanism of buspirone in a single molecule.",
+      "It requires a starter pack and mandatory food administration, making medication reconciliation and patient education critical to achieving therapeutic drug levels."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "use with caution; limited human data",
+    "lactation_safety": "use with caution; limited data",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "major depression",
+      "anxiety"
+    ],
+    "adverse_effect_tags": [
+      "diarrhea",
+      "nausea",
+      "serotonin syndrome"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate",
+      "serotonergic"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "SERT-inhibition",
+        "5-HT1A-partial-agonism"
+      ],
+      "prototype_class": "SPARIs",
+      "adme_profile": "CYP3A4-metabolized",
+      "presentation_cluster": [
+        "major-depression"
+      ],
+      "adverse_cluster": [
+        "serotonin-syndrome",
+        "GI-effects"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate",
+        "serotonergic"
+      ]
+    }
+  },
+  {
+    "id": "vortioxetine",
+    "generic_name": "vortioxetine",
+    "brand_names": [
+      "Trintellix"
+    ],
+    "drug_class": "multimodal antidepressant",
+    "subclass": "serotonin modulator and stimulator",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors",
+      "receptor-antagonists"
+    ],
+    "mechanism_targets": [
+      "SERT (serotonin transporter)",
+      "5-HT1A receptor (agonist)",
+      "5-HT1B receptor (partial agonist)",
+      "5-HT3 receptor (antagonist)",
+      "5-HT7 receptor (antagonist)"
+    ],
+    "mechanism_summary": "Combines SERT inhibition with direct modulation of multiple serotonin receptor subtypes: agonism at 5-HT1A (autoreceptors, anxiolytic), partial agonism at 5-HT1B, and antagonism at 5-HT3 and 5-HT7 (reduces nausea and may enhance cognitive function). This multimodal activity distinguishes it from conventional SSRIs.",
+    "indications": [
+      "major depressive disorder"
+    ],
+    "contraindications": [
+      "concurrent MAOI use"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "diarrhea",
+        "dry mouth",
+        "dizziness",
+        "constipation"
+      ],
+      "serious": [
+        "serotonin syndrome",
+        "suicidal ideation",
+        "abnormal bleeding",
+        "hyponatremia"
+      ]
+    },
+    "black_box_warnings": [
+      "suicidality in children, adolescents, and young adults"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; bioavailability ~75%; not significantly affected by food",
+      "distribution": "protein binding ~98%; Vd ~2600 L",
+      "metabolism": "primarily via CYP2D6 (major) with minor contributions from CYP3A4, 2A6, 2B6, 2C8, 2C9, 2C19",
+      "excretion": "renal (~59%) and fecal (~26%); primarily as inactive metabolites",
+      "half_life": "66 hours",
+      "onset": "2-4 weeks for full antidepressant effect",
+      "peak": "7-11 hours",
+      "duration": "24 hours",
+      "protein_binding": "98%",
+      "vd": "2600 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "serotonin syndrome",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "CYP2D6 inhibitors (bupropion, paroxetine)",
+        "mechanism": "increases vortioxetine exposure; reduce dose by half",
+        "severity": "major"
+      },
+      {
+        "drug": "CYP inducers (rifampin)",
+        "mechanism": "decreases vortioxetine levels; increase dose up to 3x",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Nausea is the most common adverse effect and is dose-dependent; starting at 5 mg and titrating up over 2-4 weeks can reduce nausea during initiation.",
+      "CYP2D6 inhibitors (bupropion, paroxetine, fluoxetine) significantly increase vortioxetine levels \u2014 review combination therapy and consider dose reduction to 10 mg/day.",
+      "Vortioxetine has been studied for cognitive function in depression, showing improvements in processing speed and executive function; this may be a differentiating factor for patients with prominent cognitive symptoms.",
+      "Unlike SSRIs, sexual dysfunction appears to be lower with vortioxetine (rates similar to placebo in trials); this may be a consideration for patients with prior SSRI-induced sexual side effects."
+    ],
+    "clinical_pearls": [
+      "Vortioxetine's clinical differentiation from SSRIs is its potential pro-cognitive effect; it is one of the few antidepressants with RCT data showing improvement in cognitive domains (memory, attention, processing speed) beyond mood symptoms.",
+      "Its 66-hour half-life allows for some flexibility in missed doses without the precipitous withdrawal symptoms seen with short-half-life drugs like paroxetine."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "use with caution; limited human data",
+    "lactation_safety": "use with caution; limited data",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "major depression",
+      "cognitive symptoms of depression"
+    ],
+    "adverse_effect_tags": [
+      "nausea",
+      "serotonin syndrome",
+      "hyponatremia"
+    ],
+    "interaction_tags": [
+      "CYP2D6-substrate",
+      "serotonergic"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors",
+        "receptor-antagonists"
+      ],
+      "mechanism_family": [
+        "SERT-inhibition",
+        "5-HT-modulation"
+      ],
+      "prototype_class": "multimodal antidepressants",
+      "adme_profile": "CYP2D6-metabolized",
+      "presentation_cluster": [
+        "major-depression"
+      ],
+      "adverse_cluster": [
+        "serotonin-syndrome",
+        "GI-effects"
+      ],
+      "interaction_cluster": [
+        "CYP2D6-substrate",
+        "serotonergic"
+      ]
+    }
+  },
+  {
+    "id": "amitriptyline",
+    "generic_name": "amitriptyline",
+    "brand_names": [
+      "Elavil"
+    ],
+    "drug_class": "tricyclic antidepressant (TCA)",
+    "subclass": "tertiary amine TCA",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "NET (norepinephrine transporter)",
+      "SERT (serotonin transporter)",
+      "muscarinic receptors",
+      "H1 histamine receptor",
+      "alpha-1 adrenergic receptor",
+      "sodium channels"
+    ],
+    "mechanism_summary": "Inhibits reuptake of both norepinephrine and serotonin; additionally blocks muscarinic, H1, and alpha-1 receptors, which accounts for its side effect profile. Sodium channel blockade at high concentrations explains its antiarrhythmic and neurotoxic properties in overdose.",
+    "indications": [
+      "major depressive disorder",
+      "neuropathic pain",
+      "migraine prophylaxis",
+      "off-label: insomnia",
+      "off-label: fibromyalgia",
+      "off-label: interstitial cystitis"
+    ],
+    "contraindications": [
+      "concurrent MAOI use",
+      "acute recovery phase post-MI",
+      "QT prolongation",
+      "concurrent cisapride use",
+      "glaucoma (narrow-angle)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "dry mouth",
+        "constipation",
+        "urinary retention",
+        "blurred vision",
+        "sedation",
+        "weight gain",
+        "orthostatic hypotension",
+        "tachycardia"
+      ],
+      "serious": [
+        "QT prolongation and torsades de pointes",
+        "cardiac conduction disturbances",
+        "seizures (especially in overdose)",
+        "delirium (especially in elderly)",
+        "suicidal ideation"
+      ]
+    },
+    "black_box_warnings": [
+      "suicidality in children, adolescents, and young adults"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; bioavailability ~30-60% due to extensive first-pass metabolism",
+      "distribution": "highly lipophilic; protein binding ~95%; large Vd ~6-10 L/kg; crosses BBB readily",
+      "metabolism": "extensively hepatic via CYP2D6 (demethylation) and CYP2C19; active metabolite nortriptyline",
+      "excretion": "primarily renal as metabolites; dose adjustment in hepatic impairment",
+      "half_life": "10-50 hours",
+      "onset": "antidepressant 2-4 weeks; analgesic effect within 1 week",
+      "peak": "2-12 hours",
+      "duration": "24+ hours",
+      "protein_binding": "95%",
+      "vd": "6-10 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "hypertensive crisis and serotonin syndrome",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "CYP2D6 inhibitors (fluoxetine, paroxetine)",
+        "mechanism": "increase TCA levels 2-10 fold; toxicity risk",
+        "severity": "major"
+      },
+      {
+        "drug": "anticholinergic drugs",
+        "mechanism": "additive anticholinergic toxicity (delirium, ileus, urinary retention)",
+        "severity": "major"
+      },
+      {
+        "drug": "QT-prolonging agents",
+        "mechanism": "additive QT prolongation",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Obtain baseline ECG before initiating; contraindicated with QTc >450 ms or bundle branch block; monitor ECG if dose exceeds 100 mg/day or patient has cardiac risk factors.",
+      "Anticholinergic effects are pronounced in elderly patients \u2014 assess for urinary retention (void before administration), constipation, confusion, and dry mouth; amitriptyline is on the Beers Criteria list for patients >65.",
+      "TCA overdose is a medical emergency: as few as 10-20x therapeutic dose can cause fatal arrhythmias; assess suicide risk and provide only limited supply (1-2 weeks) in high-risk patients.",
+      "Orthostatic hypotension is common \u2014 have patient sit on edge of bed for 2 minutes before standing; particularly dangerous in elderly patients with fall risk."
+    ],
+    "clinical_pearls": [
+      "Amitriptyline's active metabolite nortriptyline is also used therapeutically and has a more favorable tolerability profile with similar efficacy, making it preferred in elderly patients requiring a TCA.",
+      "At low doses (10-75 mg), amitriptyline is highly effective for neuropathic pain, migraine prophylaxis, and insomnia \u2014 these analgesic and hypnotic effects occur below the antidepressant dose range."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use with caution; neonatal withdrawal reported",
+    "lactation_safety": "use with caution; detectable in breast milk",
+    "tdm_required": true,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "major depression",
+      "neuropathic pain",
+      "migraine prevention",
+      "insomnia",
+      "fibromyalgia"
+    ],
+    "adverse_effect_tags": [
+      "anticholinergic",
+      "QT prolongation",
+      "sedation",
+      "orthostatic hypotension",
+      "weight gain"
+    ],
+    "interaction_tags": [
+      "CYP2D6-substrate",
+      "anticholinergic",
+      "QT-prolongation"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "NET-inhibition",
+        "SERT-inhibition"
+      ],
+      "prototype_class": "TCAs",
+      "adme_profile": "CYP2D6-metabolized",
+      "presentation_cluster": [
+        "major-depression",
+        "neuropathic-pain",
+        "migraine"
+      ],
+      "adverse_cluster": [
+        "anticholinergic-toxidrome",
+        "QT-prolongation",
+        "cardiac-toxicity"
+      ],
+      "interaction_cluster": [
+        "CYP2D6-substrate",
+        "anticholinergic",
+        "QT-prolonging-combinations"
+      ]
+    }
+  },
+  {
+    "id": "nortriptyline",
+    "generic_name": "nortriptyline",
+    "brand_names": [
+      "Pamelor",
+      "Aventyl"
+    ],
+    "drug_class": "tricyclic antidepressant (TCA)",
+    "subclass": "secondary amine TCA",
+    "prototype_for": false,
+    "prototype_drug": "amitriptyline",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "NET (norepinephrine transporter)",
+      "SERT (serotonin transporter)",
+      "muscarinic receptors",
+      "H1 histamine receptor"
+    ],
+    "mechanism_summary": "Active demethylated metabolite of amitriptyline; inhibits norepinephrine and serotonin reuptake with greater selectivity for NET than SERT, producing relatively more noradrenergic effects. Less anticholinergic and sedating than amitriptyline due to reduced receptor binding breadth.",
+    "indications": [
+      "major depressive disorder",
+      "neuropathic pain",
+      "migraine prophylaxis",
+      "off-label: smoking cessation",
+      "off-label: ADHD"
+    ],
+    "contraindications": [
+      "concurrent MAOI use",
+      "acute post-MI recovery",
+      "QT prolongation or bundle branch block"
+    ],
+    "adverse_effects": {
+      "common": [
+        "dry mouth",
+        "constipation",
+        "blurred vision",
+        "orthostatic hypotension",
+        "sedation (less than amitriptyline)",
+        "tachycardia"
+      ],
+      "serious": [
+        "QT prolongation",
+        "cardiac conduction disturbances",
+        "seizures in overdose",
+        "suicidal ideation"
+      ]
+    },
+    "black_box_warnings": [
+      "suicidality in children, adolescents, and young adults"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; bioavailability ~46-56%",
+      "distribution": "protein binding ~93-95%; highly lipophilic; large Vd",
+      "metabolism": "primarily via CYP2D6; CYP2D6 poor metabolizers have significantly higher plasma levels",
+      "excretion": "primarily renal as metabolites",
+      "half_life": "18-44 hours (mean 31 hours)",
+      "onset": "antidepressant 2-4 weeks",
+      "peak": "7-8.5 hours",
+      "duration": "24 hours",
+      "protein_binding": "93-95%",
+      "vd": "12-57 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "serotonin syndrome and hypertensive crisis",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "CYP2D6 inhibitors",
+        "mechanism": "significantly increase nortriptyline levels",
+        "severity": "major"
+      },
+      {
+        "drug": "QT-prolonging agents",
+        "mechanism": "additive QT prolongation",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Nortriptyline has a narrow therapeutic window; plasma levels of 50-150 ng/mL are therapeutic, with toxicity at levels >500 ng/mL \u2014 TDM is recommended for dosing guidance.",
+      "Preferred over amitriptyline in elderly patients requiring a TCA because it has less anticholinergic activity and fewer falls-related adverse effects, though still on Beers Criteria.",
+      "Obtain baseline and periodic ECGs; QRS widening >110 ms or QTc >500 ms warrants dose reduction or discontinuation.",
+      "Instruct patients to report palpitations, dizziness, or syncope immediately, as these may herald dangerous arrhythmias."
+    ],
+    "clinical_pearls": [
+      "Nortriptyline is the preferred TCA for elderly patients when one is clinically necessary, as it has less orthostatic hypotension than amitriptyline and a more favorable tolerability profile.",
+      "Its therapeutic drug monitoring window (50-150 ng/mL) is one of the few documented examples of a therapeutic concentration window \u2014 both too low (ineffective) and too high (toxic) are clinically harmful."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use with caution",
+    "lactation_safety": "use with caution",
+    "tdm_required": true,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "major depression",
+      "neuropathic pain",
+      "migraine prevention"
+    ],
+    "adverse_effect_tags": [
+      "anticholinergic",
+      "QT prolongation",
+      "orthostatic hypotension"
+    ],
+    "interaction_tags": [
+      "CYP2D6-substrate",
+      "QT-prolongation",
+      "anticholinergic"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "NET-inhibition",
+        "SERT-inhibition"
+      ],
+      "prototype_class": "TCAs",
+      "adme_profile": "CYP2D6-metabolized",
+      "presentation_cluster": [
+        "major-depression",
+        "neuropathic-pain"
+      ],
+      "adverse_cluster": [
+        "anticholinergic-toxidrome",
+        "QT-prolongation"
+      ],
+      "interaction_cluster": [
+        "CYP2D6-substrate",
+        "QT-prolonging-combinations"
+      ]
+    }
+  },
+  {
+    "id": "imipramine",
+    "generic_name": "imipramine",
+    "brand_names": [
+      "Tofranil"
+    ],
+    "drug_class": "tricyclic antidepressant (TCA)",
+    "subclass": "tertiary amine TCA",
+    "prototype_for": false,
+    "prototype_drug": "amitriptyline",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "NET (norepinephrine transporter)",
+      "SERT (serotonin transporter)",
+      "muscarinic receptors",
+      "H1 histamine receptor",
+      "alpha-1 adrenergic receptor"
+    ],
+    "mechanism_summary": "Inhibits serotonin and norepinephrine reuptake; also blocks muscarinic, histamine H1, and alpha-1 adrenergic receptors. The noradrenergic effects on bladder sphincter are responsible for its use in nocturnal enuresis.",
+    "indications": [
+      "major depressive disorder",
+      "nocturnal enuresis in children",
+      "panic disorder",
+      "off-label: ADHD",
+      "off-label: chronic pain"
+    ],
+    "contraindications": [
+      "concurrent MAOI use",
+      "acute post-MI recovery",
+      "QT prolongation"
+    ],
+    "adverse_effects": {
+      "common": [
+        "dry mouth",
+        "constipation",
+        "urinary retention",
+        "blurred vision",
+        "sedation",
+        "orthostatic hypotension"
+      ],
+      "serious": [
+        "cardiac arrhythmias",
+        "QT prolongation",
+        "seizures in overdose",
+        "suicidal ideation"
+      ]
+    },
+    "black_box_warnings": [
+      "suicidality in children, adolescents, and young adults"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; first-pass metabolism results in bioavailability ~19-35%",
+      "distribution": "protein binding ~85-95%; large Vd; highly lipophilic",
+      "metabolism": "demethylated to active metabolite desipramine via CYP2D6; further oxidized by CYP1A2 and CYP2C19",
+      "excretion": "primarily renal as metabolites",
+      "half_life": "9-28 hours",
+      "onset": "2-4 weeks for antidepressant effect",
+      "peak": "1-2 hours",
+      "duration": "24 hours",
+      "protein_binding": "85-95%",
+      "vd": "9-23 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "serotonin syndrome and hypertensive crisis",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "CYP2D6 inhibitors",
+        "mechanism": "increase imipramine and desipramine levels",
+        "severity": "major"
+      },
+      {
+        "drug": "antihypertensives",
+        "mechanism": "orthostatic hypotension potentiation",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Imipramine has the first FDA approval for pediatric nocturnal enuresis; doses for this indication (25-50 mg at bedtime) are much lower than antidepressant doses.",
+      "Cardiac monitoring is essential \u2014 baseline ECG, periodic ECGs, and immediate evaluation if palpitations, syncope, or irregular rhythm develops.",
+      "Store medication securely and dispense in limited quantities (1-2 week supply) in patients with suicidal ideation, as TCA overdose is highly lethal at low multiples of therapeutic dose.",
+      "Orthostatic hypotension assessment at each visit: measure supine and standing BP after 1 minute of standing; hold drug and notify prescriber if orthostatic drop >20 mmHg systolic."
+    ],
+    "clinical_pearls": [
+      "Imipramine was the first clinically used antidepressant, discovered serendipitously in the 1950s; its discovery established the monoamine hypothesis of depression.",
+      "For nocturnal enuresis, imipramine's noradrenergic effects increase bladder outlet resistance and reduce bladder contractility, allowing children to maintain continence through the night."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use with caution; neonatal withdrawal possible",
+    "lactation_safety": "use with caution",
+    "tdm_required": true,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "major depression",
+      "nocturnal enuresis",
+      "panic disorder"
+    ],
+    "adverse_effect_tags": [
+      "anticholinergic",
+      "QT prolongation",
+      "orthostatic hypotension",
+      "sedation"
+    ],
+    "interaction_tags": [
+      "CYP2D6-substrate",
+      "anticholinergic",
+      "QT-prolongation"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "NET-inhibition",
+        "SERT-inhibition"
+      ],
+      "prototype_class": "TCAs",
+      "adme_profile": "CYP2D6-metabolized",
+      "presentation_cluster": [
+        "major-depression",
+        "nocturnal-enuresis"
+      ],
+      "adverse_cluster": [
+        "anticholinergic-toxidrome",
+        "QT-prolongation"
+      ],
+      "interaction_cluster": [
+        "CYP2D6-substrate",
+        "QT-prolonging-combinations"
+      ]
+    }
+  },
+  {
+    "id": "desipramine",
+    "generic_name": "desipramine",
+    "brand_names": [
+      "Norpramin"
+    ],
+    "drug_class": "tricyclic antidepressant (TCA)",
+    "subclass": "secondary amine TCA",
+    "prototype_for": false,
+    "prototype_drug": "amitriptyline",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "NET (norepinephrine transporter)",
+      "SERT (serotonin transporter)"
+    ],
+    "mechanism_summary": "Active demethylated metabolite of imipramine; has the highest selectivity for NET over SERT among TCAs, producing primarily noradrenergic effects. The reduced receptor promiscuity compared to tertiary amine TCAs results in fewer anticholinergic and sedating side effects.",
+    "indications": [
+      "major depressive disorder",
+      "off-label: ADHD",
+      "off-label: neuropathic pain",
+      "off-label: chronic pain"
+    ],
+    "contraindications": [
+      "concurrent MAOI use",
+      "acute post-MI recovery",
+      "QT prolongation"
+    ],
+    "adverse_effects": {
+      "common": [
+        "dry mouth (less than amitriptyline)",
+        "insomnia (activating)",
+        "tremor",
+        "tachycardia",
+        "orthostatic hypotension"
+      ],
+      "serious": [
+        "QT prolongation",
+        "sudden cardiac death risk (pediatric cardiac monitoring required)",
+        "seizures in overdose"
+      ]
+    },
+    "black_box_warnings": [
+      "suicidality in children, adolescents, and young adults"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; bioavailability ~51-73%",
+      "distribution": "protein binding ~90%; large Vd ~22-59 L/kg",
+      "metabolism": "primarily via CYP2D6; subject to significant CYP2D6 polymorphism effects",
+      "excretion": "primarily renal as metabolites",
+      "half_life": "12-24 hours",
+      "onset": "2-4 weeks for antidepressant effect",
+      "peak": "3-4 hours",
+      "duration": "24 hours",
+      "protein_binding": "90%",
+      "vd": "22-59 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "serotonin syndrome and hypertensive crisis",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "CYP2D6 inhibitors",
+        "mechanism": "increase desipramine levels significantly",
+        "severity": "major"
+      },
+      {
+        "drug": "sympathomimetics",
+        "mechanism": "potentiation of cardiovascular effects",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Desipramine is more activating than amitriptyline; insomnia rather than sedation is common \u2014 schedule dosing in the morning to minimize sleep disruption.",
+      "Pediatric cardiac monitoring is required if used for ADHD in children; sudden cardiac death has been reported in pediatric patients receiving desipramine.",
+      "Therapeutic plasma levels are 125-300 ng/mL; TDM guides dosing and reduces toxicity risk.",
+      "Baseline ECG and periodic monitoring are mandatory; QRS widening is an early marker of cardiotoxicity in overdose."
+    ],
+    "clinical_pearls": [
+      "Desipramine has the highest norepinephrine-to-serotonin selectivity among TCAs, making it useful for understanding mechanistic differences within the TCA class in pharmacology education.",
+      "Its activation profile (insomnia rather than sedation) makes it more suitable for patients with hypersomnia-predominant depression but problematic for those with severe insomnia."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use with caution",
+    "lactation_safety": "use with caution",
+    "tdm_required": true,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "major depression",
+      "ADHD",
+      "neuropathic pain"
+    ],
+    "adverse_effect_tags": [
+      "QT prolongation",
+      "cardiac toxicity",
+      "orthostatic hypotension"
+    ],
+    "interaction_tags": [
+      "CYP2D6-substrate",
+      "QT-prolongation"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "NET-inhibition"
+      ],
+      "prototype_class": "TCAs",
+      "adme_profile": "CYP2D6-metabolized",
+      "presentation_cluster": [
+        "major-depression",
+        "neuropathic-pain"
+      ],
+      "adverse_cluster": [
+        "QT-prolongation",
+        "cardiac-toxicity"
+      ],
+      "interaction_cluster": [
+        "CYP2D6-substrate",
+        "QT-prolonging-combinations"
+      ]
+    }
+  },
+  {
+    "id": "clomipramine",
+    "generic_name": "clomipramine",
+    "brand_names": [
+      "Anafranil"
+    ],
+    "drug_class": "tricyclic antidepressant (TCA)",
+    "subclass": "chlorinated tertiary amine TCA",
+    "prototype_for": false,
+    "prototype_drug": "amitriptyline",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "SERT (serotonin transporter)",
+      "NET (norepinephrine transporter)",
+      "muscarinic receptors",
+      "D2 dopamine receptor"
+    ],
+    "mechanism_summary": "Most potent SERT inhibitor among TCAs; also inhibits NET. The high serotonin selectivity, combined with its TCA structure, may explain its unique efficacy in OCD, a disorder with prominent serotonergic dysregulation. Additional dopamine D2 blockade may contribute to anti-obsessional effects.",
+    "indications": [
+      "OCD (FDA-approved)",
+      "off-label: major depressive disorder",
+      "off-label: panic disorder",
+      "off-label: cataplexy (narcolepsy)"
+    ],
+    "contraindications": [
+      "concurrent MAOI use",
+      "acute post-MI recovery",
+      "QT prolongation",
+      "seizure disorders (lowers seizure threshold)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "dry mouth",
+        "somnolence",
+        "tremor",
+        "ejaculation failure (90% in males)",
+        "constipation",
+        "weight gain"
+      ],
+      "serious": [
+        "seizures (dose-dependent; higher risk than other TCAs)",
+        "QT prolongation",
+        "cardiac arrhythmias",
+        "serotonin syndrome"
+      ]
+    },
+    "black_box_warnings": [
+      "suicidality in children, adolescents, and young adults"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally; bioavailability ~50% after first-pass metabolism",
+      "distribution": "protein binding ~97%; highly lipophilic; large Vd",
+      "metabolism": "demethylated to active desmethylclomipramine via CYP2D6 and CYP3A4",
+      "excretion": "primarily renal as metabolites",
+      "half_life": "32 hours (range 19-37 hours); active metabolite 69 hours",
+      "onset": "4-10 weeks for OCD response",
+      "peak": "2-6 hours",
+      "duration": "24 hours",
+      "protein_binding": "97%",
+      "vd": "12-17 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "MAOIs",
+        "mechanism": "serotonin syndrome and hypertensive crisis",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "CYP2D6 inhibitors",
+        "mechanism": "increase clomipramine levels and seizure risk",
+        "severity": "major"
+      },
+      {
+        "drug": "tramadol",
+        "mechanism": "additive seizure risk and serotonin syndrome",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Seizure risk is highest among TCAs \u2014 use with caution in patients with seizure history; maximum dose is 250 mg/day and doses above 250 mg significantly increase seizure risk.",
+      "Sexual dysfunction is near-universal in males (90% ejaculatory dysfunction); counsel patients about this effect before initiating and discuss impact on quality of life and adherence.",
+      "OCD response requires longer treatment trials (8-12 weeks) than depression (4-6 weeks); lack of early response should not prompt premature discontinuation.",
+      "Monitor for serotonin syndrome symptoms at initiation and with any dose increase, as clomipramine's potent SERT inhibition makes this combination risk higher than with other TCAs."
+    ],
+    "clinical_pearls": [
+      "Clomipramine was the first pharmacological treatment proven effective for OCD in controlled trials, establishing serotonin dysregulation as central to OCD pathophysiology.",
+      "Its 90% rate of ejaculatory failure in males is the highest sexual adverse effect rate of any antidepressant, but this property is occasionally used therapeutically for premature ejaculation."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "use with caution; neonatal adaptation syndrome",
+    "lactation_safety": "use with caution",
+    "tdm_required": true,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "OCD",
+      "major depression",
+      "cataplexy"
+    ],
+    "adverse_effect_tags": [
+      "seizures",
+      "sexual dysfunction",
+      "QT prolongation",
+      "anticholinergic"
+    ],
+    "interaction_tags": [
+      "CYP2D6-substrate",
+      "QT-prolongation",
+      "serotonergic"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "SERT-inhibition",
+        "NET-inhibition"
+      ],
+      "prototype_class": "TCAs",
+      "adme_profile": "CYP2D6-metabolized",
+      "presentation_cluster": [
+        "OCD"
+      ],
+      "adverse_cluster": [
+        "anticholinergic-toxidrome",
+        "QT-prolongation",
+        "seizure-risk"
+      ],
+      "interaction_cluster": [
+        "CYP2D6-substrate",
+        "serotonergic"
+      ]
+    }
+  },
+  {
+    "id": "phenelzine",
+    "generic_name": "phenelzine",
+    "brand_names": [
+      "Nardil"
+    ],
+    "drug_class": "monoamine oxidase inhibitor (MAOI)",
+    "subclass": "irreversible, non-selective MAOI",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "MAO-A (monoamine oxidase A)",
+      "MAO-B (monoamine oxidase B)"
+    ],
+    "mechanism_summary": "Irreversibly inhibits both MAO-A and MAO-B, enzymes responsible for metabolizing monoamines (serotonin, norepinephrine, dopamine, tyramine). The resulting increase in synaptic monoamine levels produces antidepressant effects. Irreversible inhibition means restoration of MAO activity requires synthesis of new enzyme, taking 2-3 weeks.",
+    "indications": [
+      "major depressive disorder (particularly atypical features, treatment-resistant)",
+      "panic disorder",
+      "social anxiety disorder"
+    ],
+    "contraindications": [
+      "concurrent serotonergic drugs",
+      "concurrent sympathomimetics",
+      "pheochromocytoma",
+      "congestive heart failure",
+      "tyramine-rich foods during and 14 days after discontinuation"
+    ],
+    "adverse_effects": {
+      "common": [
+        "orthostatic hypotension",
+        "insomnia",
+        "weight gain",
+        "sexual dysfunction",
+        "dry mouth",
+        "constipation",
+        "edema"
+      ],
+      "serious": [
+        "hypertensive crisis with tyramine ingestion",
+        "serotonin syndrome with serotonergic drugs",
+        "hypoglycemia (potentiates insulin)",
+        "hepatotoxicity (rare)"
+      ]
+    },
+    "black_box_warnings": [
+      "suicidality in children, adolescents, and young adults"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally",
+      "distribution": "widely distributed; crosses BBB",
+      "metabolism": "hepatic acetylation; N-acetylation rate is genetically determined (fast vs. slow acetylators)",
+      "excretion": "primarily renal",
+      "half_life": "11.6 hours (but enzyme inhibition outlasts the drug itself)",
+      "onset": "2-4 weeks for antidepressant effect; MAO inhibition within 24-48 hours",
+      "peak": "1-2 hours",
+      "duration": "pharmacodynamic effect persists 2-3 weeks after discontinuation",
+      "protein_binding": "minimal",
+      "vd": "not well characterized"
+    },
+    "drug_interactions": [
+      {
+        "drug": "SSRIs, SNRIs, TCAs, tramadol, meperidine, dextromethorphan",
+        "mechanism": "serotonin syndrome; potentially fatal",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "sympathomimetics (ephedrine, pseudoephedrine, cocaine)",
+        "mechanism": "hypertensive crisis via excessive norepinephrine release",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "tyramine-rich foods (aged cheese, cured meats, fermented beverages)",
+        "mechanism": "hypertensive crisis via unmetabolized intestinal tyramine entering systemic circulation",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "insulin and oral antidiabetics",
+        "mechanism": "potentiation of hypoglycemia via increased insulin sensitivity",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Extensive dietary education is mandatory before initiating: patients must avoid tyramine-rich foods (aged cheeses, cured meats, fermented products, tap beer, chianti wine, broad beans) throughout therapy and for 14 days after discontinuation.",
+      "Teach patient to recognize hypertensive crisis: sudden severe headache, neck stiffness, palpitations, visual disturbances \u2014 go immediately to emergency department; have patient carry a MAOI medication card.",
+      "A 14-day washout period is required before switching from an MAOI to any serotonergic drug (SSRIs, SNRIs, TCAs, tramadol, meperidine, triptans); document last dose date explicitly.",
+      "Monitor blood pressure routinely for orthostatic hypotension; phenelzine has more orthostatic hypotension than other MAOIs."
+    ],
+    "clinical_pearls": [
+      "MAOIs are considered among the most effective antidepressants for atypical depression (characterized by mood reactivity, hypersomnia, leaden paralysis, hyperphagia, rejection sensitivity) and are frequently more effective than SSRIs for this presentation.",
+      "The dietary restriction of tyramine is not a side effect per se but a pharmacodynamic consequence: intestinal MAO-A normally breaks down dietary tyramine; inhibition allows tyramine to enter systemic circulation and trigger massive norepinephrine release from adrenergic neurons, causing hypertensive crisis."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid; teratogenic potential and neonatal toxicity",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "major depression",
+      "atypical depression",
+      "treatment-resistant depression",
+      "panic disorder",
+      "social anxiety"
+    ],
+    "adverse_effect_tags": [
+      "hypertensive crisis",
+      "serotonin syndrome",
+      "orthostatic hypotension",
+      "tyramine interaction"
+    ],
+    "interaction_tags": [
+      "MAOI-interaction",
+      "serotonergic",
+      "sympathomimetic",
+      "tyramine"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "MAO-inhibition"
+      ],
+      "prototype_class": "MAOIs",
+      "adme_profile": "hepatically-metabolized",
+      "presentation_cluster": [
+        "major-depression",
+        "anxiety-disorders"
+      ],
+      "adverse_cluster": [
+        "serotonin-syndrome",
+        "hypertensive-crisis",
+        "sympathomimetic-toxidrome"
+      ],
+      "interaction_cluster": [
+        "MAOI-interaction",
+        "serotonergic",
+        "tyramine"
+      ]
+    }
+  },
+  {
+    "id": "tranylcypromine",
+    "generic_name": "tranylcypromine",
+    "brand_names": [
+      "Parnate"
+    ],
+    "drug_class": "monoamine oxidase inhibitor (MAOI)",
+    "subclass": "irreversible, non-selective MAOI",
+    "prototype_for": false,
+    "prototype_drug": "phenelzine",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "MAO-A (monoamine oxidase A)",
+      "MAO-B (monoamine oxidase B)"
+    ],
+    "mechanism_summary": "Irreversibly inhibits both MAO-A and MAO-B through covalent binding. Unlike phenelzine, tranylcypromine has amphetamine-like structural properties and mild dopamine reuptake inhibitory activity, contributing to its slightly stimulant character. Enzyme inhibition is restored only by new protein synthesis over 2-3 weeks.",
+    "indications": [
+      "major depressive disorder (particularly treatment-resistant)",
+      "atypical depression"
+    ],
+    "contraindications": [
+      "concurrent serotonergic drugs",
+      "concurrent sympathomimetics",
+      "tyramine-rich foods",
+      "cerebrovascular disease",
+      "pheochromocytoma"
+    ],
+    "adverse_effects": {
+      "common": [
+        "insomnia (more than phenelzine)",
+        "agitation",
+        "dry mouth",
+        "orthostatic hypotension",
+        "sexual dysfunction"
+      ],
+      "serious": [
+        "hypertensive crisis with tyramine",
+        "serotonin syndrome",
+        "intracerebral bleeding (rare)"
+      ]
+    },
+    "black_box_warnings": [
+      "suicidality in children, adolescents, and young adults"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally",
+      "distribution": "widely distributed; crosses BBB",
+      "metabolism": "hepatic; forms amphetamine as a minor metabolite",
+      "excretion": "renal",
+      "half_life": "2-2.5 hours (but effect duration 2-3 weeks)",
+      "onset": "antidepressant 2-4 weeks",
+      "peak": "1-3 hours",
+      "duration": "pharmacodynamic effect persists 2-3 weeks",
+      "protein_binding": "minimal",
+      "vd": "not well characterized"
+    },
+    "drug_interactions": [
+      {
+        "drug": "serotonergic agents",
+        "mechanism": "serotonin syndrome; potentially fatal",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "tyramine-rich foods",
+        "mechanism": "hypertensive crisis",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "sympathomimetics",
+        "mechanism": "hypertensive crisis",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "meperidine",
+        "mechanism": "excitatory serotonin syndrome (distinct from typical pattern; may include seizures)",
+        "severity": "contraindicated"
+      }
+    ],
+    "nursing_considerations": [
+      "Tranylcypromine has more stimulant properties than phenelzine due to its amphetamine-like structure; insomnia is the most prominent complaint and is managed by morning-only dosing.",
+      "Same dietary tyramine restrictions as phenelzine apply; review tyramine food list at every visit and document patient acknowledgment.",
+      "14-day washout period required before switching to serotonergic agents; document clearly in chart.",
+      "Blood pressure should be monitored at each visit; both orthostatic hypotension and, with interactions, hypertensive crisis are possible extremes."
+    ],
+    "clinical_pearls": [
+      "Tranylcypromine's stimulant properties (derived from its amphetamine-like structure) make it the preferred MAOI for patients with anergic depression or hypersomnia-predominant features.",
+      "The interaction between meperidine and MAOIs is distinctly more dangerous than with other opioids; meperidine is absolutely contraindicated due to risk of excitatory serotonin syndrome with seizures, hyperthermia, and cardiovascular collapse."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "major depression",
+      "atypical depression",
+      "treatment-resistant depression"
+    ],
+    "adverse_effect_tags": [
+      "hypertensive crisis",
+      "serotonin syndrome",
+      "insomnia"
+    ],
+    "interaction_tags": [
+      "MAOI-interaction",
+      "serotonergic",
+      "tyramine"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "MAO-inhibition"
+      ],
+      "prototype_class": "MAOIs",
+      "adme_profile": "hepatically-metabolized",
+      "presentation_cluster": [
+        "major-depression"
+      ],
+      "adverse_cluster": [
+        "serotonin-syndrome",
+        "hypertensive-crisis"
+      ],
+      "interaction_cluster": [
+        "MAOI-interaction",
+        "serotonergic",
+        "tyramine"
+      ]
+    }
+  },
+  {
+    "id": "selegiline-maoi",
+    "generic_name": "selegiline (transdermal patch for depression)",
+    "brand_names": [
+      "Emsam"
+    ],
+    "drug_class": "monoamine oxidase inhibitor (MAOI)",
+    "subclass": "irreversible MAO-B selective (selective at low doses; non-selective at patch doses)",
+    "prototype_for": false,
+    "prototype_drug": "phenelzine",
+    "organ_systems": [
+      "cns"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "MAO-B (monoamine oxidase B)",
+      "MAO-A (monoamine oxidase A, at higher doses)"
+    ],
+    "mechanism_summary": "At low oral doses (5 mg), selectively inhibits MAO-B (relevant to Parkinson's); at transdermal patch doses (6-12 mg/24h), plasma levels are high enough to inhibit both MAO-A and MAO-B in the brain without significantly inhibiting intestinal MAO-A, which may reduce tyramine interaction risk at the 6 mg dose.",
+    "indications": [
+      "major depressive disorder (transdermal patch only)",
+      "Parkinson's disease (oral; separate entry)"
+    ],
+    "contraindications": [
+      "concurrent serotonergic drugs",
+      "concurrent sympathomimetics",
+      "concurrent dextromethorphan",
+      "concurrent meperidine"
+    ],
+    "adverse_effects": {
+      "common": [
+        "application site reactions",
+        "insomnia",
+        "diarrhea",
+        "dry mouth",
+        "weight loss"
+      ],
+      "serious": [
+        "hypertensive crisis (lower risk at 6 mg patch without dietary restriction)",
+        "serotonin syndrome"
+      ]
+    },
+    "black_box_warnings": [
+      "suicidality in children, adolescents, and young adults"
+    ],
+    "pharmacokinetics": {
+      "absorption": "transdermal patch bypasses first-pass intestinal metabolism; systemic bioavailability ~73% via patch",
+      "distribution": "widely distributed; crosses BBB",
+      "metabolism": "metabolized to L-amphetamine and L-methamphetamine (minor metabolites via CYP enzymes)",
+      "excretion": "primarily renal",
+      "half_life": "18-25 hours (transdermal)",
+      "onset": "antidepressant 2-4 weeks",
+      "peak": "approximately 15 hours (transdermal)",
+      "duration": "24 hours per patch",
+      "protein_binding": "~90%",
+      "vd": "not well characterized"
+    },
+    "drug_interactions": [
+      {
+        "drug": "SSRIs, SNRIs, TCAs, tramadol, meperidine",
+        "mechanism": "serotonin syndrome",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "sympathomimetics",
+        "mechanism": "hypertensive crisis",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "tyramine-rich foods",
+        "mechanism": "hypertensive crisis (dietary restriction required for 9 mg and 12 mg patches but NOT the 6 mg patch per FDA labeling)",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "The 6 mg/24h transdermal patch is the only MAOI that does not require dietary tyramine restriction at its starting dose; however, 9 mg and 12 mg patches require full tyramine dietary restriction.",
+      "Apply the patch to dry, intact skin on the upper torso, outer upper arm, or upper thigh; rotate application sites daily; avoid heat sources over the patch (increases drug absorption unpredictably).",
+      "Instruct patient about a 14-day washout period before starting any serotonergic medication after patch discontinuation; provide written washout instructions.",
+      "Insomnia is more common than with phenelzine due to dopaminergic activation; recommend consistent bedtime routine and avoidance of patch application near bedtime."
+    ],
+    "clinical_pearls": [
+      "The transdermal delivery of selegiline for depression was developed specifically to bypass intestinal MAO-A inhibition, thereby allowing the 6 mg dose to be used without dietary tyramine restriction \u2014 representing a pharmacokinetic solution to a pharmacodynamic safety problem.",
+      "Unlike oral selegiline used in Parkinson's disease (which selectively inhibits MAO-B at low doses), the transdermal patch delivers sufficient systemic drug to inhibit both MAO-A and MAO-B in the brain, which is necessary for antidepressant efficacy."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "avoid",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "major depression",
+      "treatment-resistant depression"
+    ],
+    "adverse_effect_tags": [
+      "hypertensive crisis",
+      "serotonin syndrome",
+      "insomnia"
+    ],
+    "interaction_tags": [
+      "MAOI-interaction",
+      "serotonergic"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "cns"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "MAO-inhibition"
+      ],
+      "prototype_class": "MAOIs",
+      "adme_profile": "transdermal",
+      "presentation_cluster": [
+        "major-depression"
+      ],
+      "adverse_cluster": [
+        "serotonin-syndrome"
+      ],
+      "interaction_cluster": [
+        "MAOI-interaction",
+        "serotonergic"
+      ]
+    }
   }
 ]
