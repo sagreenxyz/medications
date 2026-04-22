@@ -36584,5 +36584,1925 @@
       ],
       "interaction_cluster": []
     }
+  },
+  {
+    "id": "liothyronine",
+    "generic_name": "liothyronine sodium",
+    "brand_names": [
+      "Cytomel",
+      "Triostat (IV)"
+    ],
+    "drug_class": "thyroid hormone",
+    "subclass": "synthetic triiodothyronine (T3)",
+    "prototype_for": false,
+    "prototype_drug": "levothyroxine",
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "thyroid hormone receptor (TR-alpha, TR-beta)"
+    ],
+    "mechanism_summary": "Synthetic T3 (triiodothyronine) that directly activates thyroid hormone receptors without requiring peripheral conversion from T4. Produces more rapid onset of action than levothyroxine; binds nuclear TRs with 3\u20135 times greater affinity than T4, regulating transcription of metabolic genes.",
+    "indications": [
+      "hypothyroidism (short-term use or in patients who cannot convert T4 to T3)",
+      "myxedema coma (IV)",
+      "thyroid suppression testing",
+      "T3 preparation for radioiodine scanning"
+    ],
+    "contraindications": [
+      "untreated adrenal insufficiency",
+      "thyrotoxicosis"
+    ],
+    "adverse_effects": {
+      "common": [
+        "palpitations",
+        "tremor",
+        "insomnia",
+        "heat intolerance",
+        "diaphoresis"
+      ],
+      "serious": [
+        "cardiac arrhythmias",
+        "angina",
+        "myocardial infarction",
+        "thyroid storm (overdose)"
+      ]
+    },
+    "black_box_warnings": [
+      "thyroid hormones should not be used for weight reduction in euthyroid individuals; larger doses may produce serious or life-threatening adverse events including cardiac toxicity"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~95%",
+      "distribution": "binds plasma proteins (TBG, albumin, transthyretin); highly lipophilic; enters cells",
+      "metabolism": "deiodination in peripheral tissues",
+      "excretion": "fecal (conjugated forms)",
+      "half_life": "2.5 days (T3; much shorter than T4)",
+      "onset": "24\u201372 hours",
+      "peak": "days",
+      "duration": "days",
+      "protein_binding": "99% (less than T4)",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "warfarin",
+        "mechanism": "thyroid hormones increase catabolism of vitamin K-dependent clotting factors; dose reduction needed",
+        "severity": "major"
+      },
+      {
+        "drug": "sympathomimetics",
+        "mechanism": "additive cardiovascular effects (palpitations, hypertension)",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "For myxedema coma: IV liothyronine given; monitor cardiac rhythm continuously as arrhythmias are common.",
+      "Administer oral liothyronine once or twice daily; shorter half-life than levothyroxine produces more fluctuating T3 levels.",
+      "Monitor for signs of hyperthyroidism: tachycardia, palpitations, excessive weight loss, tremor.",
+      "Do not use for weight loss \u2014 no benefit in euthyroid individuals and significant cardiovascular risk."
+    ],
+    "clinical_pearls": [
+      "Liothyronine's short half-life (2.5 days vs. levothyroxine's 7 days) produces more variable thyroid hormone levels and is generally not recommended for long-term hypothyroidism management except in patients with documented T4-to-T3 conversion impairment.",
+      "Some thyroid cancer protocols use liothyronine to prepare for radioiodine scanning: T3 suppression is faster to achieve and reverse than T4 suppression."
+    ],
+    "beers_criteria": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "use levothyroxine in pregnancy; T3 does not cross placenta well",
+    "lactation_safety": "small amounts in breast milk; generally considered safe",
+    "tdm_required": true,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "hypothyroidism",
+      "myxedema-coma"
+    ],
+    "adverse_effect_tags": [
+      "tachycardia",
+      "arrhythmia",
+      "thyroid-storm"
+    ],
+    "interaction_tags": [
+      "warfarin-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "thyroid-hormone-receptor-agonism"
+      ],
+      "prototype_class": "thyroid hormones",
+      "adme_profile": "peripherally-deiodinated",
+      "presentation_cluster": [
+        "hypothyroidism",
+        "myxedema-coma"
+      ],
+      "adverse_cluster": [
+        "cardiovascular-adverse"
+      ],
+      "interaction_cluster": [
+        "warfarin-interaction"
+      ]
+    }
+  },
+  {
+    "id": "propylthiouracil",
+    "generic_name": "propylthiouracil",
+    "brand_names": [
+      "PTU"
+    ],
+    "drug_class": "thionamide",
+    "subclass": "antithyroid agent",
+    "prototype_for": false,
+    "prototype_drug": "methimazole",
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "thyroid peroxidase (TPO)",
+      "5'-deiodinase"
+    ],
+    "mechanism_summary": "Inhibits thyroid peroxidase, blocking oxidation of iodide and coupling of iodotyrosines to form T3 and T4. Uniquely also inhibits peripheral 5'-deiodinase, reducing conversion of T4 to the more active T3 \u2014 this additional mechanism makes PTU the preferred agent in thyroid storm for rapid hormone reduction.",
+    "indications": [
+      "hyperthyroidism (Graves' disease)",
+      "thyroid storm (drug of choice)",
+      "pregnancy hyperthyroidism (first trimester preferred over methimazole)"
+    ],
+    "contraindications": [
+      "PTU-induced hepatotoxicity history"
+    ],
+    "adverse_effects": {
+      "common": [
+        "rash",
+        "pruritus",
+        "arthralgia",
+        "nausea",
+        "headache"
+      ],
+      "serious": [
+        "agranulocytosis (0.5%)",
+        "hepatotoxicity (including fatal fulminant hepatic failure)",
+        "ANCA-positive vasculitis",
+        "lupus-like syndrome"
+      ]
+    },
+    "black_box_warnings": [
+      "severe liver injury and acute liver failure, some resulting in death or liver transplant; reserve PTU for patients who cannot tolerate methimazole; monitor LFTs during therapy"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral; rapidly absorbed; bioavailability ~80\u201390%",
+      "distribution": "concentrated in thyroid gland; minimal protein binding",
+      "metabolism": "hepatic glucuronidation; does NOT cross placenta as readily as methimazole",
+      "excretion": "renal",
+      "half_life": "1\u20132 hours",
+      "onset": "days to weeks (thyroid stores must deplete)",
+      "peak": "hours",
+      "duration": "continuous dosing required",
+      "protein_binding": "~75\u201380%",
+      "vd": "0.4 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "warfarin",
+        "mechanism": "PTU reduces vitamin K clotting factor synthesis via hyperthyroidism control; monitor INR",
+        "severity": "major"
+      },
+      {
+        "drug": "digoxin",
+        "mechanism": "as hyperthyroidism resolves, digoxin levels rise; dose adjustment may be needed",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor CBC with differential weekly for the first 3 months; instruct patient to report fever, sore throat, or mouth sores immediately \u2014 these may indicate agranulocytosis.",
+      "Monitor LFTs closely; serious and fatal hepatic failure has occurred; discontinue at first signs of hepatic injury (jaundice, abdominal pain, dark urine).",
+      "PTU is preferred in the first trimester of pregnancy over methimazole (which is associated with aplasia cutis in early pregnancy).",
+      "Administer in 3 divided doses every 8 hours; use consistently with respect to meals."
+    ],
+    "clinical_pearls": [
+      "PTU is the drug of choice in thyroid storm because its inhibition of 5'-deiodinase prevents peripheral T4\u2192T3 conversion, rapidly reducing thyroid hormone bioactivity \u2014 methimazole lacks this effect.",
+      "The FDA issued a black box warning for hepatotoxicity in 2010; PTU should now be reserved for specific indications (thyroid storm, first-trimester pregnancy, methimazole allergy) rather than as a routine first-line agent."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "preferred in first trimester; switch to methimazole after first trimester",
+    "lactation_safety": "low transfer to breast milk; generally compatible",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "hyperthyroidism",
+      "Graves-disease",
+      "thyroid-storm"
+    ],
+    "adverse_effect_tags": [
+      "agranulocytosis",
+      "hepatotoxicity",
+      "vasculitis"
+    ],
+    "interaction_tags": [
+      "warfarin-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "TPO-inhibition"
+      ],
+      "prototype_class": "thionamides",
+      "adme_profile": "hepatically-metabolized",
+      "presentation_cluster": [
+        "hyperthyroidism",
+        "thyroid-storm"
+      ],
+      "adverse_cluster": [
+        "agranulocytosis",
+        "hepatotoxicity"
+      ],
+      "interaction_cluster": [
+        "warfarin-interaction"
+      ]
+    }
+  },
+  {
+    "id": "potassium-iodide",
+    "generic_name": "potassium iodide",
+    "brand_names": [
+      "SSKI",
+      "ThyroShield",
+      "Iosat"
+    ],
+    "drug_class": "antithyroid agent / iodine supplement",
+    "subclass": "inorganic iodide preparation",
+    "prototype_for": false,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "thyroid gland (Wolff-Chaikoff effect)",
+      "thyroid vasculature (in Graves' disease)"
+    ],
+    "mechanism_summary": "Large doses of iodine suppress thyroid hormone synthesis and release via the Wolff-Chaikoff effect (transient inhibition of iodide organification and hormone synthesis) and reduce thyroid vascularity. Paradoxically inhibits hormone release from the hyperactive thyroid gland, making it useful pre-operatively and in thyroid storm.",
+    "indications": [
+      "thyroid storm (in combination with PTU and beta-blocker)",
+      "preoperative preparation for thyroidectomy (reduce vascularity and hormone release)",
+      "radiation emergency (blocking thyroid uptake of radioactive iodine)",
+      "expectorant (off-label)"
+    ],
+    "contraindications": [
+      "hypothyroidism",
+      "Hashimoto's thyroiditis",
+      "iodine hypersensitivity",
+      "Addison's disease"
+    ],
+    "adverse_effects": {
+      "common": [
+        "metallic taste",
+        "sore teeth/gums",
+        "headache",
+        "GI upset"
+      ],
+      "serious": [
+        "iodism (chronic toxicity \u2014 parotitis, rash, mucous membrane irritation)",
+        "thyroid dysfunction (hypothyroidism or escape phenomenon)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "rapidly and completely absorbed orally",
+      "distribution": "thyroid concentrates iodide",
+      "metabolism": "not metabolized; used directly as iodide",
+      "excretion": "renal",
+      "half_life": "not applicable",
+      "onset": "1\u20132 hours (hormone release inhibition); days (vascularity reduction)",
+      "peak": "1 day",
+      "duration": "days; escape phenomenon occurs after 10\u201314 days",
+      "protein_binding": "not applicable",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "antithyroid drugs (PTU, methimazole)",
+        "mechanism": "synergistic in thyroid storm; PTU/methimazole must be given 1 hour BEFORE iodide to prevent thyroid hormone synthesis from increased iodide substrate",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "In thyroid storm protocol: administer antithyroid drug (PTU or methimazole) at least 1 hour BEFORE potassium iodide to prevent the iodide from being used for new hormone synthesis.",
+      "Dilute SSKI in water or juice to reduce GI side effects and metallic taste.",
+      "For radiation emergency use: administer within 4 hours before nuclear exposure; provide only one day's dose at a time for safety.",
+      "The escape phenomenon (thyroid escapes Wolff-Chaikoff inhibition within 10\u201314 days) limits long-term iodide use as a sole antithyroid agent."
+    ],
+    "clinical_pearls": [
+      "The sequence in thyroid storm is critical: antithyroid drug \u2192 wait 1 hour \u2192 iodide. Giving iodide first provides substrate for continued hormone synthesis, which the subsequent antithyroid drug cannot immediately block.",
+      "Potassium iodide for radiation emergencies provides thyroidal uptake saturation \u2014 it protects the thyroid by blocking the uptake of radioactive iodine I-131, not by blocking all radiation."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "use cautiously; large doses may cause fetal goiter",
+    "lactation_safety": "excreted in breast milk; use cautiously",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "thyroid-storm",
+      "preoperative-thyroid",
+      "radiation-emergency"
+    ],
+    "adverse_effect_tags": [
+      "iodism",
+      "thyroid-dysfunction"
+    ],
+    "interaction_tags": [
+      "antithyroid-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "Wolff-Chaikoff-effect"
+      ],
+      "prototype_class": "iodide preparations",
+      "adme_profile": "renally-excreted-unchanged",
+      "presentation_cluster": [
+        "hyperthyroidism",
+        "thyroid-storm"
+      ],
+      "adverse_cluster": [],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "hydrocortisone",
+    "generic_name": "hydrocortisone",
+    "brand_names": [
+      "Solu-Cortef",
+      "Cortef",
+      "Hydrocortone"
+    ],
+    "drug_class": "corticosteroid",
+    "subclass": "natural glucocorticoid with mineralocorticoid activity",
+    "prototype_for": false,
+    "prototype_drug": "prednisone",
+    "organ_systems": [
+      "endocrine",
+      "immunology"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "glucocorticoid receptor (GR)",
+      "mineralocorticoid receptor (MR)"
+    ],
+    "mechanism_summary": "Identical to cortisol, the principal endogenous glucocorticoid. Binds glucocorticoid receptors, translocates to the nucleus, and modifies gene transcription to broadly suppress inflammation and immune activation. Also has significant mineralocorticoid activity, promoting sodium retention and potassium excretion.",
+    "indications": [
+      "adrenal insufficiency (primary and secondary) \u2014 first-choice for physiologic replacement",
+      "adrenal crisis (IV)",
+      "severe inflammation or immune reactions",
+      "septic shock (physiologic doses)"
+    ],
+    "contraindications": [
+      "systemic fungal infections (except replacement therapy)",
+      "hypersensitivity to corticosteroids"
+    ],
+    "adverse_effects": {
+      "common": [
+        "hyperglycemia",
+        "insomnia",
+        "increased appetite",
+        "weight gain",
+        "mood changes"
+      ],
+      "serious": [
+        "adrenal suppression",
+        "Cushing's syndrome",
+        "osteoporosis",
+        "peptic ulcer",
+        "increased infection susceptibility",
+        "electrolyte abnormalities (hypokalemia, hypernatremia)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral, IV, IM; excellent oral bioavailability",
+      "distribution": "widely distributed; crosses BBB and placenta",
+      "metabolism": "hepatic to inactive metabolites",
+      "excretion": "renal",
+      "half_life": "1.5\u20132 hours (plasma); 8\u201312 hours (biologic effect)",
+      "onset": "1\u20132 hours (IV immediate)",
+      "peak": "varies by route",
+      "duration": "8\u201312 hours (biologic effect)",
+      "protein_binding": "90%",
+      "vd": "0.5 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "NSAIDs",
+        "mechanism": "additive GI ulceration risk",
+        "severity": "major"
+      },
+      {
+        "drug": "potassium-depleting diuretics",
+        "mechanism": "additive hypokalemia",
+        "severity": "moderate"
+      },
+      {
+        "drug": "live vaccines",
+        "mechanism": "impaired immune response to vaccine; may cause disseminated infection",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "For adrenal crisis: administer 100 mg IV bolus immediately followed by continuous infusion or q8h dosing; this is a life-saving emergency measure.",
+      "Administer oral hydrocortisone in two doses mimicking diurnal cortisol pattern: larger morning dose (e.g., 20 mg) and smaller afternoon dose (e.g., 10 mg).",
+      "Teach 'sick day rules' for adrenal insufficiency patients: double/triple dose during febrile illness, injury, or minor surgery; provide injectable hydrocortisone for emergencies.",
+      "Monitor for signs of Cushing's (moon face, buffalo hump, striae) and signs of adrenal insufficiency on dose changes."
+    ],
+    "clinical_pearls": [
+      "Hydrocortisone is the preferred corticosteroid for physiologic adrenal replacement because it is bioidentical to cortisol and has the closest mineralocorticoid:glucocorticoid activity ratio to endogenous cortisol.",
+      "In septic shock, physiologic-dose hydrocortisone (200 mg/day) is recommended by the 2021 Surviving Sepsis Campaign for patients not responsive to fluids and vasopressors."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "acceptable for adrenal replacement; avoid supraphysiologic doses",
+    "lactation_safety": "physiologic doses acceptable; wait 4 hours after dose before nursing",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "adrenal-insufficiency",
+      "adrenal-crisis",
+      "septic-shock"
+    ],
+    "adverse_effect_tags": [
+      "hyperglycemia",
+      "immunosuppression",
+      "Cushing-syndrome",
+      "osteoporosis"
+    ],
+    "interaction_tags": [
+      "GI-ulceration-additive",
+      "live-vaccine-interaction",
+      "immunosuppressive"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine",
+        "immunology"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "glucocorticoid-receptor-agonism"
+      ],
+      "prototype_class": "corticosteroids",
+      "adme_profile": "hepatically-metabolized",
+      "presentation_cluster": [
+        "adrenal-insufficiency",
+        "septic-shock"
+      ],
+      "adverse_cluster": [
+        "immunosuppression",
+        "hyperglycemia",
+        "Cushing-syndrome"
+      ],
+      "interaction_cluster": [
+        "immunosuppressive",
+        "GI-ulceration"
+      ]
+    }
+  },
+  {
+    "id": "methylprednisolone",
+    "generic_name": "methylprednisolone",
+    "brand_names": [
+      "Solu-Medrol",
+      "Medrol",
+      "Depo-Medrol"
+    ],
+    "drug_class": "corticosteroid",
+    "subclass": "synthetic glucocorticoid (intermediate-acting)",
+    "prototype_for": false,
+    "prototype_drug": "prednisone",
+    "organ_systems": [
+      "endocrine",
+      "immunology"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "glucocorticoid receptor (GR)"
+    ],
+    "mechanism_summary": "Synthetic glucocorticoid with 5 times the anti-inflammatory potency of hydrocortisone and minimal mineralocorticoid activity. Binds GR to broadly suppress gene transcription of inflammatory cytokines, upregulate anti-inflammatory proteins, and inhibit immune cell trafficking and activation.",
+    "indications": [
+      "severe acute asthma exacerbations (IV)",
+      "autoimmune diseases (multiple sclerosis, SLE, IBD flares)",
+      "transplant rejection prophylaxis",
+      "anaphylaxis (secondary to epinephrine)",
+      "spinal cord injury (historical; no longer standard of care)",
+      "cerebral edema reduction"
+    ],
+    "contraindications": [
+      "systemic fungal infections",
+      "hypersensitivity to methylprednisolone"
+    ],
+    "adverse_effects": {
+      "common": [
+        "hyperglycemia",
+        "fluid retention",
+        "insomnia",
+        "mood changes"
+      ],
+      "serious": [
+        "adrenal suppression",
+        "avascular necrosis",
+        "peptic ulcer",
+        "myopathy",
+        "Cushing's syndrome",
+        "opportunistic infections"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral, IV, IM; Solu-Medrol is water-soluble for IV use; Depo-Medrol is long-acting repository for intra-articular injection",
+      "distribution": "widely distributed; crosses BBB and placenta",
+      "metabolism": "hepatic CYP3A4",
+      "excretion": "renal",
+      "half_life": "2.5\u20133.5 hours (plasma); 12\u201336 hours (biologic)",
+      "onset": "IV: minutes; oral: 1\u20132 hours",
+      "peak": "varies",
+      "duration": "12\u201336 hours (biologic effect)",
+      "protein_binding": "77%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "strong CYP3A4 inhibitors",
+        "mechanism": "increased methylprednisolone exposure",
+        "severity": "moderate"
+      },
+      {
+        "drug": "NSAIDs",
+        "mechanism": "additive GI ulceration",
+        "severity": "major"
+      },
+      {
+        "drug": "live vaccines",
+        "mechanism": "contraindicated during immunosuppressive doses",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "For acute asthma or COPD exacerbation: IV methylprednisolone 125 mg used in emergency settings; oral prednisone sufficient for outpatient treatment.",
+      "Administer with food to reduce GI irritation; consider GI protective agents (PPIs) for prolonged use.",
+      "Taper dose slowly when discontinuing after prolonged use (>1\u20132 weeks) to prevent adrenal insufficiency; provide patient education on recognizing withdrawal symptoms.",
+      "For pulse therapy (high-dose IV): monitor blood pressure, blood glucose, and potassium closely during infusion."
+    ],
+    "clinical_pearls": [
+      "Solu-Medrol (methylprednisolone sodium succinate) is the IV formulation of choice for most acute indications (asthma, MS exacerbations, organ transplant rejection) due to its high water solubility and rapid onset.",
+      "Depo-Medrol (methylprednisolone acetate) is a depot formulation used for intra-articular or intramuscular injections; it should NEVER be injected IV or intrathecally (fatal neurotoxicity)."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "use with caution; associated with cleft palate at high doses in first trimester",
+    "lactation_safety": "low transfer; wait 4 hours after dose if possible",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "asthma-exacerbation",
+      "COPD-exacerbation",
+      "MS-exacerbation",
+      "transplant-rejection"
+    ],
+    "adverse_effect_tags": [
+      "hyperglycemia",
+      "adrenal-suppression",
+      "Cushing-syndrome",
+      "avascular-necrosis"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate",
+      "GI-ulceration-additive",
+      "immunosuppressive"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine",
+        "immunology"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "glucocorticoid-receptor-agonism"
+      ],
+      "prototype_class": "corticosteroids",
+      "adme_profile": "hepatically-metabolized-CYP3A4",
+      "presentation_cluster": [
+        "asthma",
+        "COPD",
+        "autoimmune-disease"
+      ],
+      "adverse_cluster": [
+        "immunosuppression",
+        "hyperglycemia",
+        "Cushing-syndrome"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate",
+        "immunosuppressive"
+      ]
+    }
+  },
+  {
+    "id": "betamethasone",
+    "generic_name": "betamethasone",
+    "brand_names": [
+      "Celestone Soluspan"
+    ],
+    "drug_class": "corticosteroid",
+    "subclass": "long-acting synthetic glucocorticoid",
+    "prototype_for": false,
+    "prototype_drug": "prednisone",
+    "organ_systems": [
+      "endocrine",
+      "respiratory"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "glucocorticoid receptor (GR)"
+    ],
+    "mechanism_summary": "Long-acting synthetic glucocorticoid with ~25 times the anti-inflammatory potency of hydrocortisone and essentially no mineralocorticoid activity. Activates GR to suppress inflammatory gene transcription, stimulates fetal lung maturation in utero by inducing surfactant synthesis in type II pneumocytes.",
+    "indications": [
+      "antenatal fetal lung maturation (prematurity 24\u201334 weeks gestation)",
+      "inflammatory and autoimmune conditions",
+      "cerebral edema",
+      "intra-articular inflammation"
+    ],
+    "contraindications": [
+      "systemic fungal infections",
+      "hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "transient fetal heart rate changes",
+        "hyperglycemia",
+        "maternal insomnia"
+      ],
+      "serious": [
+        "fetal neurodevelopmental effects with repeated courses",
+        "adrenal suppression",
+        "Cushing's syndrome (long-term)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IM; betamethasone acetate (slow release) + betamethasone phosphate (rapid release) in Celestone Soluspan",
+      "distribution": "widely distributed; crosses placenta readily (unlike prednisone, which is inactivated by placental enzymes)",
+      "metabolism": "hepatic",
+      "excretion": "renal",
+      "half_life": "35\u201354 hours (biologic)",
+      "onset": "hours to 24 hours (for fetal lung effect)",
+      "peak": "1\u20132 hours",
+      "duration": "24\u201372 hours",
+      "protein_binding": "64%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "NSAIDs",
+        "mechanism": "additive GI effects",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "For fetal lung maturation: administer two doses of 12 mg IM 24 hours apart; delivery is expected within 1 week of treatment.",
+      "Monitor maternal blood glucose closely; betamethasone transiently raises glucose for 24\u201348 hours, requiring insulin adjustment in diabetic mothers.",
+      "Monitor fetal heart rate for expected transient changes after administration.",
+      "Betamethasone is preferred over dexamethasone for antenatal use per ACOG guidelines because it does not contain preservatives that may cause fetal harm."
+    ],
+    "clinical_pearls": [
+      "Unlike prednisone (which is converted to inactive prednisolone by placental 11\u03b2-HSD2), betamethasone and dexamethasone are not inactivated by the placenta, allowing direct fetal exposure \u2014 precisely why betamethasone is used for antenatal lung maturation.",
+      "A single course of antenatal betamethasone remains one of the most evidence-based interventions in perinatology, reducing neonatal RDS, IVH, NEC, and mortality in preterm infants."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "used therapeutically for fetal lung maturation; avoid repeated courses",
+    "lactation_safety": "small amounts in breast milk; likely safe",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "fetal-lung-maturation",
+      "prematurity",
+      "inflammation"
+    ],
+    "adverse_effect_tags": [
+      "hyperglycemia",
+      "adrenal-suppression"
+    ],
+    "interaction_tags": [],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine",
+        "respiratory"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "glucocorticoid-receptor-agonism"
+      ],
+      "prototype_class": "corticosteroids",
+      "adme_profile": "hepatically-metabolized",
+      "presentation_cluster": [
+        "prematurity",
+        "fetal-lung-maturation",
+        "inflammation"
+      ],
+      "adverse_cluster": [
+        "hyperglycemia"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "fludrocortisone",
+    "generic_name": "fludrocortisone acetate",
+    "brand_names": [
+      "Florinef"
+    ],
+    "drug_class": "mineralocorticoid",
+    "subclass": "synthetic mineralocorticoid",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "mineralocorticoid receptor (MR) in renal collecting duct"
+    ],
+    "mechanism_summary": "Potent synthetic mineralocorticoid that binds the mineralocorticoid receptor in renal collecting duct principal cells, stimulating expression of sodium channels (ENaC) and Na+/K+-ATPase pumps, causing sodium and water retention with potassium and hydrogen ion secretion.",
+    "indications": [
+      "primary adrenal insufficiency (Addison's disease) \u2014 mineralocorticoid replacement",
+      "salt-losing congenital adrenal hyperplasia",
+      "orthostatic hypotension (off-label)"
+    ],
+    "contraindications": [
+      "systemic fungal infections",
+      "hypertension",
+      "heart failure",
+      "edema states"
+    ],
+    "adverse_effects": {
+      "common": [
+        "edema",
+        "hypertension",
+        "weight gain",
+        "headache"
+      ],
+      "serious": [
+        "hypokalemia",
+        "hypertension (severe)",
+        "congestive heart failure",
+        "Cushing's syndrome (at high doses)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral; rapid and complete absorption",
+      "distribution": "~42% protein bound",
+      "metabolism": "hepatic",
+      "excretion": "renal",
+      "half_life": "3.5 hours (plasma); 18\u201336 hours (biologic effect)",
+      "onset": "hours",
+      "peak": "1.7 hours",
+      "duration": "24\u201336 hours (biologic)",
+      "protein_binding": "42%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "diuretics",
+        "mechanism": "additive electrolyte effects; thiazides may potentiate hypokalemia",
+        "severity": "moderate"
+      },
+      {
+        "drug": "NSAIDs",
+        "mechanism": "blunt mineralocorticoid-mediated sodium retention, reducing fludrocortisone efficacy",
+        "severity": "moderate"
+      },
+      {
+        "drug": "potassium-depleting agents",
+        "mechanism": "additive hypokalemia",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor blood pressure, electrolytes (sodium, potassium), and weight at each visit during dose titration.",
+      "Typical dose for adrenal insufficiency is 0.05\u20130.1 mg daily; titrate to normalize electrolytes and blood pressure.",
+      "Educate patients on sick day dosing for hydrocortisone (not fludrocortisone; the glucocorticoid dose is increased during illness).",
+      "Warn patients to avoid excessive sodium restriction, which could counteract mineralocorticoid replacement."
+    ],
+    "clinical_pearls": [
+      "Fludrocortisone is the only oral mineralocorticoid available; dexamethasone and prednisone have negligible mineralocorticoid activity and cannot substitute for fludrocortisone in adrenal insufficiency.",
+      "Adequate mineralocorticoid replacement (avoiding hyponatremia and hyperkalemia) is essential for hemodynamic stability in Addison's disease \u2014 insufficient fludrocortisone dosing contributes to orthostatic hypotension and salt-wasting crisis."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "acceptable for adrenal replacement in Addison's",
+    "lactation_safety": "small amounts in breast milk; use cautiously",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "adrenal-insufficiency",
+      "Addison's-disease",
+      "orthostatic-hypotension"
+    ],
+    "adverse_effect_tags": [
+      "hypokalemia",
+      "hypertension",
+      "edema"
+    ],
+    "interaction_tags": [
+      "electrolyte-interactions"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "mineralocorticoid-receptor-agonism"
+      ],
+      "prototype_class": "mineralocorticoids",
+      "adme_profile": "hepatically-metabolized",
+      "presentation_cluster": [
+        "adrenal-insufficiency"
+      ],
+      "adverse_cluster": [
+        "electrolyte-disturbance",
+        "hypertension"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "octreotide",
+    "generic_name": "octreotide",
+    "brand_names": [
+      "Sandostatin",
+      "Sandostatin LAR"
+    ],
+    "drug_class": "somatostatin analog",
+    "subclass": "synthetic somatostatin octapeptide",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine",
+      "gastrointestinal"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "somatostatin receptors (SSTR2, SSTR5) on GH-secreting and other cells"
+    ],
+    "mechanism_summary": "Synthetic analog of somatostatin with a longer half-life. Binds somatostatin receptors (predominantly SSTR2 and SSTR5) on pituitary, pancreatic, and GI cells, inhibiting GH, IGF-1, insulin, glucagon, VIP, and gastrin secretion. Also reduces splanchnic blood flow by vasoconstriction of portal vasculature.",
+    "indications": [
+      "acromegaly (excess GH/IGF-1)",
+      "carcinoid syndrome (VIPoma, glucagonoma, gastrinoma)",
+      "variceal bleeding (portal hypertension)",
+      "diarrhea/flushing from neuroendocrine tumors",
+      "refractory hypoglycemia (insulinoma)",
+      "Cushing's disease (off-label)"
+    ],
+    "contraindications": [
+      "hypersensitivity to octreotide or excipients"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "diarrhea",
+        "abdominal pain",
+        "flatulence",
+        "cholelithiasis (bile stasis)",
+        "hyperglycemia or hypoglycemia"
+      ],
+      "serious": [
+        "gallstones (up to 50% with long-term use)",
+        "bradycardia and conduction abnormalities",
+        "hypothyroidism (long-term)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "subcutaneous, IV, or IM depot (LAR form monthly)",
+      "distribution": "65% protein bound",
+      "metabolism": "hepatic; proteolytic degradation",
+      "excretion": "renal (32%) and biliary",
+      "half_life": "1.7\u20131.9 hours (SC); LAR: 23\u201330 days (effective)",
+      "onset": "minutes (SC/IV)",
+      "peak": "0.4 hours (SC)",
+      "duration": "4\u201312 hours (SC); 4 weeks (LAR)",
+      "protein_binding": "65%",
+      "vd": "0.27 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "cyclosporine",
+        "mechanism": "octreotide reduces cyclosporine absorption",
+        "severity": "major"
+      },
+      {
+        "drug": "beta-blockers",
+        "mechanism": "octreotide may enhance bradycardia",
+        "severity": "moderate"
+      },
+      {
+        "drug": "insulin/antidiabetics",
+        "mechanism": "octreotide alters glucose homeostasis; glucose must be monitored",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "For variceal bleeding: administer IV infusion 25\u201350 mcg/hour for 3\u20135 days; monitor blood pressure and heart rate for bradycardia.",
+      "Initiate dose rotation for SC injection; allow solution to warm to room temperature for 20 minutes to reduce discomfort.",
+      "Monitor blood glucose closely; octreotide inhibits both insulin and glucagon, with unpredictable net effect on glucose.",
+      "Baseline and periodic gallbladder ultrasound recommended for long-term therapy due to cholelithiasis risk."
+    ],
+    "clinical_pearls": [
+      "Octreotide is the pharmacological treatment of choice for acute variceal bleeding (in combination with endoscopy), acting via splanchnic vasoconstriction that reduces portal blood flow.",
+      "The LAR (long-acting repeatable) depot form delivered IM monthly dramatically improves compliance for long-term management of acromegaly and carcinoid syndrome."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "limited data; use cautiously",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "acromegaly",
+      "carcinoid-syndrome",
+      "variceal-bleeding"
+    ],
+    "adverse_effect_tags": [
+      "cholelithiasis",
+      "bradycardia",
+      "hyperglycemia"
+    ],
+    "interaction_tags": [
+      "drug-absorption-reduction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine",
+        "gastrointestinal"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "somatostatin-receptor-agonism"
+      ],
+      "prototype_class": "somatostatin analogs",
+      "adme_profile": "hepatically-metabolized-proteolytic",
+      "presentation_cluster": [
+        "acromegaly",
+        "variceal-bleeding",
+        "carcinoid"
+      ],
+      "adverse_cluster": [
+        "cholelithiasis",
+        "cardiac-conduction"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "teriparatide",
+    "generic_name": "teriparatide",
+    "brand_names": [
+      "Forteo"
+    ],
+    "drug_class": "parathyroid hormone analog",
+    "subclass": "recombinant PTH (1-34) anabolic agent",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine",
+      "musculoskeletal"
+    ],
+    "therapeutic_classes": [
+      "hormones-analogs"
+    ],
+    "mechanism_targets": [
+      "PTH1 receptor on osteoblasts"
+    ],
+    "mechanism_summary": "Recombinant PTH(1-34) fragment that activates PTH1 receptors on osteoblasts; when given intermittently (daily injection) rather than continuously, produces net anabolic bone formation (increases osteoblast activity more than osteoclast activity), increasing bone mineral density and reducing fracture risk.",
+    "indications": [
+      "osteoporosis in postmenopausal women at high fracture risk",
+      "male osteoporosis",
+      "glucocorticoid-induced osteoporosis"
+    ],
+    "contraindications": [
+      "Paget's disease of bone",
+      "unexplained elevated alkaline phosphatase",
+      "prior radiation therapy to skeleton",
+      "pre-existing hypercalcemia",
+      "metabolic bone diseases other than osteoporosis",
+      "history of bone malignancy or skeletal metastases"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "dizziness",
+        "leg cramps",
+        "transient hypercalcemia",
+        "orthostatic hypotension"
+      ],
+      "serious": [
+        "osteosarcoma (rodent studies at high doses; extremely rare in clinical use)",
+        "severe hypercalcemia",
+        "urolithiasis"
+      ]
+    },
+    "black_box_warnings": [
+      "osteosarcoma reported in animal studies; do not use in patients with increased risk of osteosarcoma (Paget's disease, history of radiation therapy to bone, metabolic bone diseases, prior skeletal malignancy); use limited to 2 years lifetime"
+    ],
+    "pharmacokinetics": {
+      "absorption": "subcutaneous injection; rapid absorption",
+      "distribution": "Vd ~1.7 L/kg",
+      "metabolism": "hepatic and peripheral (non-specific proteases)",
+      "excretion": "renal and biliary",
+      "half_life": "~1 hour",
+      "onset": "months",
+      "peak": "30 minutes",
+      "duration": "continuous daily dosing; effects sustained months after stopping",
+      "protein_binding": "not significant",
+      "vd": "1.7 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "digoxin",
+        "mechanism": "hypercalcemia from teriparatide sensitizes heart to digoxin toxicity",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Use is limited to 2 years (lifetime maximum) due to osteosarcoma risk in animal studies; confirm patient has not previously received teriparatide.",
+      "Administer once daily SC injection; administer initially in sitting position due to transient orthostatic hypotension risk.",
+      "Monitor serum calcium; transient hypercalcemia occurring several hours after injection; check calcium 16 hours after first dose.",
+      "Store in refrigerator; discard 28 days after first use regardless of remaining quantity."
+    ],
+    "clinical_pearls": [
+      "Teriparatide is the only FDA-approved anabolic bone agent that actually stimulates new bone formation rather than merely preventing resorption; it produces significantly greater fracture risk reduction than antiresorptive agents in patients with severe osteoporosis.",
+      "After teriparatide therapy, transition to an antiresorptive agent (bisphosphonate or denosumab) is essential to preserve bone density gains, as benefits regress after discontinuation."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "avoid",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "osteoporosis",
+      "fracture-prevention",
+      "glucocorticoid-induced-osteoporosis"
+    ],
+    "adverse_effect_tags": [
+      "osteosarcoma-risk",
+      "hypercalcemia",
+      "orthostatic-hypotension"
+    ],
+    "interaction_tags": [
+      "digoxin-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine",
+        "musculoskeletal"
+      ],
+      "therapeutic_class": [
+        "hormones-analogs"
+      ],
+      "mechanism_family": [
+        "PTH-receptor-agonism"
+      ],
+      "prototype_class": "parathyroid hormone analogs",
+      "adme_profile": "proteolytic-degradation",
+      "presentation_cluster": [
+        "osteoporosis"
+      ],
+      "adverse_cluster": [
+        "hypercalcemia"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "alendronate",
+    "generic_name": "alendronate",
+    "brand_names": [
+      "Fosamax"
+    ],
+    "drug_class": "bisphosphonate",
+    "subclass": "nitrogen-containing bisphosphonate",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine",
+      "musculoskeletal"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "farnesyl pyrophosphate synthase (FPPS) in osteoclasts"
+    ],
+    "mechanism_summary": "Nitrogen-containing bisphosphonate that binds to hydroxyapatite in bone with high affinity. Osteoclasts ingest the drug during bone resorption; intracellularly, alendronate inhibits farnesyl pyrophosphate synthase in the mevalonate pathway, preventing isoprenylation of signaling proteins, impairing osteoclast function, and inducing osteoclast apoptosis.",
+    "indications": [
+      "osteoporosis (postmenopausal women)",
+      "osteoporosis in men",
+      "glucocorticoid-induced osteoporosis",
+      "Paget's disease of bone"
+    ],
+    "contraindications": [
+      "esophageal abnormalities (achalasia, stricture, inability to stand/sit upright for 30 minutes)",
+      "hypocalcemia",
+      "CrCl <35 mL/min"
+    ],
+    "adverse_effects": {
+      "common": [
+        "esophageal irritation, esophagitis, ulceration (if not taken correctly)",
+        "abdominal pain",
+        "nausea",
+        "musculoskeletal pain"
+      ],
+      "serious": [
+        "esophageal cancer (long-term; rare)",
+        "osteonecrosis of the jaw (ONJ)",
+        "atypical subtrochanteric femoral fractures (long-term use >5 years)",
+        "severe musculoskeletal pain",
+        "uveitis/ocular inflammation (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~0.6\u20130.7% (extremely low); reduced further by food, coffee, juice",
+      "distribution": "~70% binds to bone; remainder distributed to soft tissue transiently",
+      "metabolism": "not metabolized",
+      "excretion": "renal excretion of absorbed drug; the rest remains in bone for years",
+      "half_life": ">10 years (in bone; terminal half-life reflects bone turnover)",
+      "onset": "months",
+      "peak": "months to years",
+      "duration": "years (bone retention)",
+      "protein_binding": "78% to bone mineral",
+      "vd": "bone"
+    },
+    "drug_interactions": [
+      {
+        "drug": "calcium supplements, antacids, multivitamins",
+        "mechanism": "chelate bisphosphonate, reducing absorption to near zero",
+        "severity": "major"
+      },
+      {
+        "drug": "NSAIDs",
+        "mechanism": "additive GI irritation",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Strict administration protocol: take with 6\u20138 oz of plain water ONLY, first thing in the morning on an empty stomach; remain upright (sitting or standing) for at least 30 minutes; do not eat, drink, or take other medications for 30 minutes.",
+      "Weekly dosing (70 mg) has replaced daily dosing (10 mg) to improve GI tolerability and adherence.",
+      "Assess dental health before long-term treatment; avoid invasive dental procedures; educate about ONJ risk especially if patient is on corticosteroids.",
+      "A drug holiday after 5 years of treatment is recommended for most patients (unless high fracture risk) to reduce atypical fracture risk; consult prescriber."
+    ],
+    "clinical_pearls": [
+      "Bisphosphonates are retained in bone for years after discontinuation due to high bone affinity; a 5-year drug holiday remains a valid strategy for low-risk patients while maintaining 70\u201380% of fracture protection.",
+      "Osteonecrosis of the jaw is rare but serious; risk is highest in cancer patients receiving IV bisphosphonates (not oral alendronate for osteoporosis), where the incidence is 1\u20132%."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "avoid (bisphosphonates accumulate in fetal bone)",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "osteoporosis",
+      "Paget's-disease"
+    ],
+    "adverse_effect_tags": [
+      "esophagitis",
+      "ONJ",
+      "atypical-fracture",
+      "musculoskeletal-pain"
+    ],
+    "interaction_tags": [
+      "chelation",
+      "calcium-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine",
+        "musculoskeletal"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "FPPS-inhibition-osteoclast"
+      ],
+      "prototype_class": "bisphosphonates",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "osteoporosis"
+      ],
+      "adverse_cluster": [
+        "GI-adverse",
+        "ONJ",
+        "atypical-fracture"
+      ],
+      "interaction_cluster": [
+        "chelation"
+      ]
+    }
+  },
+  {
+    "id": "zoledronic-acid",
+    "generic_name": "zoledronic acid",
+    "brand_names": [
+      "Zometa",
+      "Reclast"
+    ],
+    "drug_class": "bisphosphonate",
+    "subclass": "most potent nitrogen-containing bisphosphonate (IV)",
+    "prototype_for": false,
+    "prototype_drug": "alendronate",
+    "organ_systems": [
+      "endocrine",
+      "musculoskeletal",
+      "hematology-oncology"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "farnesyl pyrophosphate synthase (FPPS) in osteoclasts"
+    ],
+    "mechanism_summary": "Most potent bisphosphonate available; IV administration delivers drug directly to the bloodstream and to bone. Inhibits FPPS in osteoclasts with very high potency, reducing bone resorption. Oncologic use (Zometa) at higher doses every 3\u20134 weeks for skeletal-related events in cancer; osteoporosis use (Reclast) once yearly.",
+    "indications": [
+      "osteoporosis (Reclast: 5 mg IV once yearly)",
+      "Paget's disease of bone",
+      "malignant hypercalcemia",
+      "bone metastases prevention (Zometa: multiple myeloma, solid tumors)",
+      "glucocorticoid-induced osteoporosis"
+    ],
+    "contraindications": [
+      "acute renal impairment (CrCl <35 mL/min for osteoporosis; <30\u201335 for oncology)",
+      "hypocalcemia",
+      "hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "acute phase reaction (fever, myalgia, arthralgia, flu-like symptoms within 1\u20133 days of first infusion)",
+        "nausea",
+        "fatigue"
+      ],
+      "serious": [
+        "osteonecrosis of the jaw (higher risk in oncologic doses)",
+        "atypical femoral fracture",
+        "acute renal tubular injury",
+        "hypocalcemia (severe)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IV infusion; no oral form",
+      "distribution": "rapid distribution to bone; binds to bone mineral",
+      "metabolism": "not metabolized",
+      "excretion": "renal (39% within 24 hours)",
+      "half_life": "167 hours (plasma); >10 years in bone",
+      "onset": "within days",
+      "peak": "end of infusion",
+      "duration": "years (once yearly dosing for osteoporosis)",
+      "protein_binding": "22%",
+      "vd": "bone"
+    },
+    "drug_interactions": [
+      {
+        "drug": "nephrotoxic agents",
+        "mechanism": "additive renal toxicity risk",
+        "severity": "major"
+      },
+      {
+        "drug": "calcium/vitamin D supplementation",
+        "mechanism": "supplementation is required to prevent hypocalcemia post-infusion",
+        "severity": "beneficial"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer IV over 15 minutes (minimum); check renal function before every dose \u2014 do not administer if CrCl <35 mL/min (osteoporosis) or rising creatinine.",
+      "Pre-hydrate patient; ensure patient is taking calcium (1000\u20131200 mg/day) and vitamin D (400\u2013800 IU/day) before and after infusion to prevent hypocalcemia.",
+      "Warn patient about acute phase reaction after first infusion: fever, myalgia, and flu-like symptoms lasting 1\u20133 days; acetaminophen or ibuprofen can be taken prophylactically.",
+      "Assess dental health and ensure any invasive dental work is completed before initiating therapy; ONJ risk is higher in oncology doses."
+    ],
+    "clinical_pearls": [
+      "Annual IV zoledronic acid for osteoporosis (Reclast 5 mg) dramatically improves adherence compared to daily or weekly oral bisphosphonates, and is the only IV osteoporosis bisphosphonate with demonstrated mortality reduction post-hip fracture.",
+      "Malignant hypercalcemia is the oncologic emergency indication: IV zoledronic acid works within 2\u20134 days and provides longer normocalcemia than pamidronate."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "avoid",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "osteoporosis",
+      "bone-metastases",
+      "malignant-hypercalcemia",
+      "Paget's-disease"
+    ],
+    "adverse_effect_tags": [
+      "acute-phase-reaction",
+      "ONJ",
+      "nephrotoxicity",
+      "hypocalcemia"
+    ],
+    "interaction_tags": [
+      "nephrotoxic-combinations"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine",
+        "musculoskeletal",
+        "hematology-oncology"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "FPPS-inhibition-osteoclast"
+      ],
+      "prototype_class": "bisphosphonates",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "osteoporosis",
+        "bone-metastases",
+        "hypercalcemia"
+      ],
+      "adverse_cluster": [
+        "ONJ",
+        "nephrotoxicity"
+      ],
+      "interaction_cluster": [
+        "nephrotoxic-combinations"
+      ]
+    }
+  },
+  {
+    "id": "denosumab",
+    "generic_name": "denosumab",
+    "brand_names": [
+      "Prolia",
+      "Xgeva"
+    ],
+    "drug_class": "RANK ligand (RANKL) inhibitor",
+    "subclass": "anti-RANKL monoclonal antibody",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine",
+      "musculoskeletal",
+      "hematology-oncology"
+    ],
+    "therapeutic_classes": [
+      "biologics"
+    ],
+    "mechanism_targets": [
+      "RANKL (receptor activator of NF-kB ligand)"
+    ],
+    "mechanism_summary": "Human monoclonal antibody that binds RANKL, preventing it from binding RANK on osteoclast precursors and mature osteoclasts. This blocks osteoclast formation, function, and survival, profoundly reducing bone resorption. Unlike bisphosphonates, it does not incorporate into bone and its effect is fully reversible upon discontinuation.",
+    "indications": [
+      "osteoporosis (Prolia: postmenopausal women, men, glucocorticoid-induced)",
+      "bone metastases (Xgeva: giant cell tumor, solid tumors, multiple myeloma)",
+      "prevention of skeletal-related events in malignancy"
+    ],
+    "contraindications": [
+      "hypocalcemia (must be corrected before treatment)",
+      "hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "back pain",
+        "musculoskeletal pain",
+        "hypocalcemia",
+        "hypophosphatemia"
+      ],
+      "serious": [
+        "severe hypocalcemia (especially in CKD or vitamin D deficiency)",
+        "osteonecrosis of the jaw (Xgeva doses higher risk)",
+        "atypical femoral fractures",
+        "serious infections (cellulitis, endocarditis)",
+        "rebound vertebral fractures upon discontinuation"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "subcutaneous injection (Prolia every 6 months; Xgeva every 4 weeks)",
+      "distribution": "Vd ~46\u201350 mL/kg",
+      "metabolism": "proteolytic catabolism (IgG2 antibody)",
+      "excretion": "proteolytic degradation; no renal excretion",
+      "half_life": "25\u201328 days (Prolia); shorter for Xgeva",
+      "onset": "days to weeks (bone marker changes)",
+      "peak": "10 days post-injection",
+      "duration": "6 months (Prolia); shorter with Xgeva",
+      "protein_binding": "not applicable",
+      "vd": "46\u201350 mL/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "calcium and vitamin D supplements",
+        "mechanism": "supplementation required to prevent hypocalcemia; must be prescribed with denosumab",
+        "severity": "beneficial"
+      },
+      {
+        "drug": "other immunosuppressants",
+        "mechanism": "additive immunosuppression increases infection risk",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "MUST correct hypocalcemia before administration; calcium and vitamin D supplementation is mandatory during treatment.",
+      "Prolia is administered SC 60 mg every 6 months; inject in upper arm, upper thigh, or abdomen.",
+      "Critical safety concern: do NOT abruptly discontinue denosumab for osteoporosis without transitioning to another antiresorptive agent \u2014 rebound vertebral fractures (multiple, severe) can occur within 7\u201312 months of stopping.",
+      "Assess dental health and ensure any necessary dental procedures are completed before initiating; ONJ risk is present but lower than with IV bisphosphonates at oncologic doses."
+    ],
+    "clinical_pearls": [
+      "Unlike bisphosphonates, denosumab has no renal dose restriction and is therefore preferred in patients with advanced CKD (eGFR <35 mL/min), but requires careful calcium monitoring due to enhanced hypocalcemia risk in CKD.",
+      "The rebound fracture phenomenon upon denosumab discontinuation is unique among osteoporosis treatments; transition planning to bisphosphonate or other agent is mandatory when stopping denosumab."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "contraindicated",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "osteoporosis",
+      "bone-metastases",
+      "malignant-hypercalcemia"
+    ],
+    "adverse_effect_tags": [
+      "hypocalcemia",
+      "ONJ",
+      "rebound-fracture",
+      "infections"
+    ],
+    "interaction_tags": [
+      "immunosuppressive"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine",
+        "musculoskeletal",
+        "hematology-oncology"
+      ],
+      "therapeutic_class": [
+        "biologics"
+      ],
+      "mechanism_family": [
+        "RANKL-inhibition"
+      ],
+      "prototype_class": "RANKL inhibitors",
+      "adme_profile": "proteolytic-catabolism",
+      "presentation_cluster": [
+        "osteoporosis",
+        "bone-metastases"
+      ],
+      "adverse_cluster": [
+        "hypocalcemia",
+        "ONJ"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "allopurinol",
+    "generic_name": "allopurinol",
+    "brand_names": [
+      "Zyloprim",
+      "Lopurin"
+    ],
+    "drug_class": "xanthine oxidase inhibitor",
+    "subclass": "urate-lowering agent",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine",
+      "musculoskeletal"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "xanthine oxidase (XO)"
+    ],
+    "mechanism_summary": "Inhibits xanthine oxidase, the enzyme that catalyzes the final two steps of uric acid synthesis (hypoxanthine\u2192xanthine\u2192urate). Allopurinol and its active metabolite oxypurinol both inhibit XO, reducing uric acid production and lowering serum and urinary urate levels.",
+    "indications": [
+      "gout (prevention of attacks \u2014 urate-lowering therapy)",
+      "uric acid nephrolithiasis",
+      "tumor lysis syndrome (prophylaxis)",
+      "hyperuricemia (secondary causes)"
+    ],
+    "contraindications": [
+      "hypersensitivity to allopurinol",
+      "do not use in HLA-B*5801 positive patients (high risk for SJS/TEN \u2014 common in Han Chinese, Korean, Thai populations)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "rash (especially maculopapular \u2014 drug should be discontinued at any rash)",
+        "nausea",
+        "diarrhea",
+        "headache"
+      ],
+      "serious": [
+        "Stevens-Johnson syndrome / TEN (rare but potentially fatal; strongly associated with HLA-B*5801)",
+        "DRESS syndrome (drug reaction with eosinophilia and systemic symptoms)",
+        "allopurinol hypersensitivity syndrome (AHS)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~80%",
+      "distribution": "low protein binding (~1%); widely distributed",
+      "metabolism": "metabolized to oxypurinol (active) by xanthine oxidase",
+      "excretion": "renal (70% as oxypurinol)",
+      "half_life": "1\u20133 hours (allopurinol); 12\u201330 hours (oxypurinol)",
+      "onset": "days to weeks",
+      "peak": "1.5 hours",
+      "duration": "continuous",
+      "protein_binding": "~1%",
+      "vd": "1.6 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "azathioprine or 6-mercaptopurine",
+        "mechanism": "xanthine oxidase inhibition dramatically increases 6-MP/azathioprine levels; fatal myelosuppression; dose must be reduced 75%",
+        "severity": "major"
+      },
+      {
+        "drug": "ampicillin, amoxicillin",
+        "mechanism": "increased incidence of allopurinol-associated rash",
+        "severity": "moderate"
+      },
+      {
+        "drug": "warfarin",
+        "mechanism": "allopurinol inhibits hepatic metabolism; increases anticoagulant effect",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Discontinue immediately at the first sign of rash \u2014 even a macular rash may be the first sign of SJS/DRESS; do not restart after discontinuation for rash.",
+      "HLA-B*5801 genetic testing is recommended in patients of Han Chinese, Korean, Thai, or Vietnamese ancestry before initiating allopurinol.",
+      "Do not initiate during acute gout attack; begin after attack resolves; initiation can precipitate an acute gout flare \u2014 provide colchicine or NSAID prophylaxis for 3\u20136 months.",
+      "Reduce dose in renal impairment as oxypurinol accumulates; dose adjustment based on CrCl."
+    ],
+    "clinical_pearls": [
+      "The azathioprine-allopurinol interaction is one of the most dangerous in clinical practice: allopurinol blocks xanthine oxidase, the primary elimination pathway for azathioprine's active metabolites, causing up to 10-fold accumulation and potentially fatal myelosuppression.",
+      "The HLA-B*5801 allele is found in 6\u20138% of Han Chinese patients and is associated with an approximately 100-fold increased risk of allopurinol-induced SJS/TEN; pharmacogenomic testing before prescribing is now recommended in relevant populations."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "limited data; use with caution",
+    "lactation_safety": "limited data; avoid if possible",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "gout",
+      "hyperuricemia",
+      "tumor-lysis-syndrome"
+    ],
+    "adverse_effect_tags": [
+      "SJS",
+      "DRESS",
+      "allopurinol-hypersensitivity-syndrome",
+      "rash"
+    ],
+    "interaction_tags": [
+      "xanthine-oxidase-inhibition",
+      "warfarin-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine",
+        "musculoskeletal"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "xanthine-oxidase-inhibition"
+      ],
+      "prototype_class": "xanthine oxidase inhibitors",
+      "adme_profile": "renally-cleared-oxypurinol",
+      "presentation_cluster": [
+        "gout",
+        "hyperuricemia"
+      ],
+      "adverse_cluster": [
+        "SJS",
+        "DRESS",
+        "drug-hypersensitivity"
+      ],
+      "interaction_cluster": [
+        "xanthine-oxidase-drug-interaction"
+      ]
+    }
+  },
+  {
+    "id": "febuxostat",
+    "generic_name": "febuxostat",
+    "brand_names": [
+      "Uloric"
+    ],
+    "drug_class": "xanthine oxidase inhibitor",
+    "subclass": "non-purine selective xanthine oxidase inhibitor",
+    "prototype_for": false,
+    "prototype_drug": "allopurinol",
+    "organ_systems": [
+      "endocrine",
+      "musculoskeletal"
+    ],
+    "therapeutic_classes": [
+      "enzyme-inhibitors"
+    ],
+    "mechanism_targets": [
+      "xanthine oxidase (XO) \u2014 both oxidized and reduced forms"
+    ],
+    "mechanism_summary": "Non-purine selective xanthine oxidase inhibitor that blocks both the oxidized and reduced forms of XO, providing more complete enzyme inhibition than allopurinol. Lowers serum urate via reduced uric acid synthesis without requiring dose adjustment for mild-to-moderate renal impairment.",
+    "indications": [
+      "chronic gout in patients with hyperuricemia (when allopurinol has failed or is not tolerated)"
+    ],
+    "contraindications": [
+      "patients treated with azathioprine or 6-mercaptopurine (same as allopurinol interaction)",
+      "hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "gout flares (during initiation)",
+        "liver function test abnormalities",
+        "nausea",
+        "arthralgia"
+      ],
+      "serious": [
+        "cardiovascular events (increased MACE vs. allopurinol in CARES trial)",
+        "serious skin reactions (SJS \u2014 rare, but class risk)"
+      ]
+    },
+    "black_box_warnings": [
+      "increased cardiovascular death in the CARES trial; prescribe to patients for whom allopurinol treatment had failed or was not tolerated"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~49%",
+      "distribution": "99.2% protein bound (albumin)",
+      "metabolism": "hepatic via CYP1A2, CYP2C8, CYP2C9, UGT",
+      "excretion": "renal (49%) and fecal (45%)",
+      "half_life": "5\u20138 hours",
+      "onset": "days to weeks",
+      "peak": "1\u20131.5 hours",
+      "duration": "continuous",
+      "protein_binding": "99.2%",
+      "vd": "29\u201375 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "azathioprine, 6-MP",
+        "mechanism": "xanthine oxidase inhibition causes azathioprine/6-MP accumulation; potentially fatal; contraindicated",
+        "severity": "contraindicated"
+      },
+      {
+        "drug": "theophylline",
+        "mechanism": "XO inhibition increases theophylline levels",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Reserve for patients who have failed allopurinol or have documented allergy/intolerance \u2014 do not use as first-line due to CARES trial CV mortality signal.",
+      "Initiate with colchicine or NSAID prophylaxis for the first 6 months to prevent gout flares.",
+      "Monitor LFTs at 2 and 4 months after initiation; discontinue if significant LFT elevation.",
+      "Educate patients about same azathioprine/6-MP interaction risk as allopurinol \u2014 equally dangerous."
+    ],
+    "clinical_pearls": [
+      "The CARES cardiovascular outcomes trial showed febuxostat was associated with increased all-cause mortality (primarily cardiovascular) versus allopurinol, prompting the FDA boxed warning and restriction to second-line use.",
+      "Unlike allopurinol, febuxostat does not require dose adjustment in mild-to-moderate CKD, which can be clinically advantageous in gout patients with concurrent renal disease."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "insufficient data",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "gout",
+      "hyperuricemia"
+    ],
+    "adverse_effect_tags": [
+      "cardiovascular-risk",
+      "hepatotoxicity"
+    ],
+    "interaction_tags": [
+      "xanthine-oxidase-inhibition"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine",
+        "musculoskeletal"
+      ],
+      "therapeutic_class": [
+        "enzyme-inhibitors"
+      ],
+      "mechanism_family": [
+        "xanthine-oxidase-inhibition"
+      ],
+      "prototype_class": "xanthine oxidase inhibitors",
+      "adme_profile": "hepatically-metabolized-CYP",
+      "presentation_cluster": [
+        "gout",
+        "hyperuricemia"
+      ],
+      "adverse_cluster": [
+        "cardiovascular-risk"
+      ],
+      "interaction_cluster": [
+        "xanthine-oxidase-drug-interaction"
+      ]
+    }
+  },
+  {
+    "id": "probenecid",
+    "generic_name": "probenecid",
+    "brand_names": [
+      "Probalan"
+    ],
+    "drug_class": "uricosuric agent",
+    "subclass": "organic anion transporter inhibitor",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "endocrine",
+      "musculoskeletal"
+    ],
+    "therapeutic_classes": [
+      "transporter-inhibitors"
+    ],
+    "mechanism_targets": [
+      "URAT1 and other renal organic anion transporters (OAT)"
+    ],
+    "mechanism_summary": "Inhibits URAT1 and OAT4 transporters in the proximal tubule that normally reabsorb filtered urate, increasing urinary uric acid excretion (uricosuric action). Also inhibits renal secretion of various organic anions including penicillin (used therapeutically in some infection protocols).",
+    "indications": [
+      "gout (chronic \u2014 to increase urate excretion)",
+      "adjunct to penicillin therapy (to prolong penicillin levels by blocking renal secretion)"
+    ],
+    "contraindications": [
+      "uric acid nephrolithiasis or overproduction of urate",
+      "CrCl <50 mL/min (ineffective)",
+      "acute gout attack"
+    ],
+    "adverse_effects": {
+      "common": [
+        "GI upset",
+        "headache",
+        "rash",
+        "increased uric acid stone risk"
+      ],
+      "serious": [
+        "nephrolithiasis (uric acid and other stones)",
+        "hypersensitivity reactions",
+        "hemolytic anemia (G6PD deficiency)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral; well absorbed; food reduces GI side effects",
+      "distribution": "93\u201399% protein bound",
+      "metabolism": "hepatic metabolism to active and inactive metabolites",
+      "excretion": "renal",
+      "half_life": "6\u201312 hours",
+      "onset": "days to weeks",
+      "peak": "2\u20134 hours",
+      "duration": "continuous",
+      "protein_binding": "93\u201399%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "penicillin",
+        "mechanism": "probenecid blocks renal secretion of penicillin, doubling or tripling levels; used clinically for gonorrhea and other infections",
+        "severity": "beneficial interaction"
+      },
+      {
+        "drug": "NSAIDs (indomethacin, naproxen)",
+        "mechanism": "probenecid inhibits renal secretion of NSAIDs, increasing their levels",
+        "severity": "moderate"
+      },
+      {
+        "drug": "methotrexate",
+        "mechanism": "inhibition of renal transport increases methotrexate toxicity",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "High fluid intake (2\u20133 L/day) is essential to prevent uric acid nepholithiasis; alkalinizing urine with sodium bicarbonate can further reduce stone risk.",
+      "Contraindicated in patients who overproduce urate (24-hour urine uric acid >800 mg/day) \u2014 probenecid increases urinary urate, worsening stone risk in overproducers.",
+      "Do NOT initiate during acute gout attack; provide colchicine/NSAID prophylaxis for 3\u20136 months to prevent flares.",
+      "Requires adequate renal function (CrCl >50 mL/min) for effectiveness; ineffective in CKD."
+    ],
+    "clinical_pearls": [
+      "Probenecid works only in gout patients who are underexcretors of uric acid (the majority of gout patients); it is ineffective and potentially harmful in overproducers, who need xanthine oxidase inhibitors instead.",
+      "The penicillin interaction is clinically used: probenecid prolongs serum penicillin levels by blocking tubular secretion, enabling less frequent dosing in certain infections (historically used in gonorrhea therapy)."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "limited data; avoid",
+    "lactation_safety": "limited data",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "gout",
+      "hyperuricemia"
+    ],
+    "adverse_effect_tags": [
+      "nephrolithiasis"
+    ],
+    "interaction_tags": [
+      "OAT-inhibition",
+      "penicillin-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "endocrine",
+        "musculoskeletal"
+      ],
+      "therapeutic_class": [
+        "transporter-inhibitors"
+      ],
+      "mechanism_family": [
+        "uricosuric-transporter-inhibition"
+      ],
+      "prototype_class": "uricosuric agents",
+      "adme_profile": "hepatically-metabolized",
+      "presentation_cluster": [
+        "gout",
+        "hyperuricemia"
+      ],
+      "adverse_cluster": [
+        "nephrolithiasis"
+      ],
+      "interaction_cluster": [
+        "OAT-inhibition"
+      ]
+    }
   }
 ]
