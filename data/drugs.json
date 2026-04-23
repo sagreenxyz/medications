@@ -59910,5 +59910,2051 @@
         "chelation-interaction"
       ]
     }
+  },
+  {
+    "id": "itraconazole",
+    "generic_name": "itraconazole",
+    "brand_names": [
+      "Sporanox",
+      "Onmel"
+    ],
+    "drug_class": "triazole antifungal",
+    "subclass": "first-generation triazole with broad spectrum",
+    "prototype_for": false,
+    "prototype_drug": "fluconazole",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "fungal CYP51 (lanosterol 14-alpha-demethylase)"
+    ],
+    "mechanism_summary": "Inhibits fungal CYP51, blocking ergosterol synthesis and disrupting fungal cell membrane integrity; broader spectrum than fluconazole, including Aspergillus; also a potent CYP3A4 and P-gp inhibitor.",
+    "indications": [
+      "aspergillosis (prophylaxis and treatment)",
+      "histoplasmosis",
+      "blastomycosis",
+      "sporotrichosis",
+      "onychomycosis",
+      "paracoccidioidomycosis"
+    ],
+    "contraindications": [
+      "itraconazole hypersensitivity",
+      "concomitant use of CYP3A4-cleared drugs with narrow therapeutic index (pimozide, cisapride, lovastatin, simvastatin, ergotamine, quinidine)",
+      "negative inotropic effect \u2014 avoid in ventricular dysfunction"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "vomiting",
+        "abdominal pain",
+        "headache"
+      ],
+      "serious": [
+        "hepatotoxicity",
+        "negative inotropy/heart failure exacerbation",
+        "severe drug interactions via CYP3A4 and P-gp inhibition",
+        "peripheral neuropathy (prolonged use)"
+      ]
+    },
+    "black_box_warnings": [
+      "drug interactions \u2014 potentially fatal if certain drugs co-administered",
+      "congestive heart failure \u2014 itraconazole has negative inotropic effect; avoid in CHF or ventricular dysfunction"
+    ],
+    "pharmacokinetics": {
+      "absorption": "highly variable; capsules require food and gastric acid; solution taken on empty stomach for better systemic absorption; avoid with acid-suppressing drugs",
+      "distribution": "large Vd; extensively distributed to tissues; plasma levels may not reflect tissue concentrations",
+      "metabolism": "extensive CYP3A4 metabolism; active metabolite hydroxyitraconazole (equal antifungal potency); also a strong CYP3A4 and P-gp inhibitor",
+      "excretion": "primarily fecal (54% as metabolites); renal <1% unchanged",
+      "half_life": "40 hours (multiple dose)",
+      "onset": "variable",
+      "peak": "1\u20135 hours (capsules with food)",
+      "duration": "24 hours",
+      "protein_binding": "99.8%",
+      "vd": "very large (11 L/kg)"
+    },
+    "drug_interactions": [
+      {
+        "drug": "simvastatin/lovastatin",
+        "mechanism": "CYP3A4 inhibition raises statin levels dramatically; rhabdomyolysis risk \u2014 contraindicated",
+        "severity": "major"
+      },
+      {
+        "drug": "warfarin",
+        "mechanism": "CYP3A4 inhibition increases INR; monitor closely",
+        "severity": "major"
+      },
+      {
+        "drug": "tacrolimus/cyclosporine",
+        "mechanism": "CYP3A4 inhibition markedly increases immunosuppressant levels; require dose adjustment",
+        "severity": "major"
+      },
+      {
+        "drug": "calcium channel blockers",
+        "mechanism": "CYP3A4 inhibition plus additive negative inotropy; monitor for edema and hypotension",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Capsules must be taken with food and in an acidic environment; do not administer capsules with antacids or acid-suppressing drugs \u2014 instruct patient to take with a cola beverage if on acid suppression.",
+      "Itraconazole oral solution should be taken on an empty stomach for better systemic absorption (opposite of capsules).",
+      "Screen all medications for CYP3A4-based drug interactions before initiating; the interaction list is extensive.",
+      "Monitor LFTs monthly; hepatotoxicity can be severe \u2014 stop drug and notify prescriber if LFTs rise >3\u00d7 ULN."
+    ],
+    "clinical_pearls": [
+      "Itraconazole's active metabolite (hydroxyitraconazole) has antifungal activity equal to the parent drug, contributing to its efficacy, but both strongly inhibit CYP3A4 and P-gp, creating a vast drug interaction burden.",
+      "For histoplasmosis and blastomycosis, itraconazole is the drug of choice for non-severe disease; the solution formulation achieves more reliable bioavailability than capsules."
+    ],
+    "beers_criteria": true,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "contraindicated (teratogenic in animal studies)",
+    "lactation_safety": "avoid",
+    "tdm_required": true,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "aspergillosis",
+      "histoplasmosis",
+      "blastomycosis",
+      "onychomycosis"
+    ],
+    "adverse_effect_tags": [
+      "hepatotoxicity",
+      "heart-failure",
+      "drug-interactions"
+    ],
+    "interaction_tags": [
+      "CYP3A4-inhibitor",
+      "P-gp-inhibitor",
+      "statin-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "triazole-antifungal"
+      ],
+      "prototype_class": "triazole antifungals",
+      "adme_profile": "hepatic-fecal-cleared",
+      "presentation_cluster": [
+        "invasive-fungal-infection"
+      ],
+      "adverse_cluster": [
+        "hepatotoxicity"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-inhibitor",
+        "P-gp-inhibitor"
+      ]
+    }
+  },
+  {
+    "id": "voriconazole",
+    "generic_name": "voriconazole",
+    "brand_names": [
+      "Vfend"
+    ],
+    "drug_class": "triazole antifungal",
+    "subclass": "second-generation triazole (anti-Aspergillus, anti-Candida)",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "fungal CYP51 (14-alpha-demethylase)"
+    ],
+    "mechanism_summary": "Inhibits fungal CYP51 with greater potency and broader spectrum than fluconazole; drug of choice for invasive aspergillosis; also inhibits human CYP2C19, CYP2C9, and CYP3A4 as a substrate and inhibitor.",
+    "indications": [
+      "invasive aspergillosis (first-line)",
+      "candidemia/invasive candidiasis (alternative)",
+      "esophageal candidiasis",
+      "scedosporiosis, fusariosis (salvage therapy)",
+      "antifungal prophylaxis in HSCT recipients"
+    ],
+    "contraindications": [
+      "voriconazole hypersensitivity",
+      "concurrent use of drugs metabolized by CYP2C19/2C9/3A4 with narrow TI (pimozide, quinidine, ergotamine, sirolimus)",
+      "concurrent rifampin, carbamazepine, phenobarbital (CYP inducers)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "visual disturbances (photopsia/altered color perception \u2014 very common, usually transient)",
+        "photosensitivity",
+        "nausea",
+        "hepatotoxicity"
+      ],
+      "serious": [
+        "hepatotoxicity",
+        "QTc prolongation",
+        "visual/optic neuritis (with long-term use)",
+        "squamous cell carcinoma (photosensitivity-mediated \u2014 rare but reported with prolonged therapy)",
+        "periostitis/fluorosis (long-term use in children)",
+        "adrenal insufficiency (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "96% oral bioavailability (fasting); food reduces by 24% \u2014 administer fasting",
+      "distribution": "widely distributed; Vd 4.6 L/kg; CSF penetration",
+      "metabolism": "extensive CYP2C19 (primary), CYP2C9, CYP3A4; CYP2C19 polymorphism causes 4-fold AUC differences; ALSO inhibits all three CYP enzymes",
+      "excretion": "renal (<2% unchanged); primarily as metabolites",
+      "half_life": "6 hours (variable due to CYP2C19 polymorphism)",
+      "onset": "1\u20132 hours",
+      "peak": "1\u20132 hours",
+      "duration": "12 hours",
+      "protein_binding": "58%",
+      "vd": "large (4.6 L/kg)"
+    },
+    "drug_interactions": [
+      {
+        "drug": "sirolimus",
+        "mechanism": "CYP3A4 inhibition raises sirolimus levels >10-fold; contraindicated combination",
+        "severity": "major"
+      },
+      {
+        "drug": "tacrolimus/cyclosporine",
+        "mechanism": "CYP3A4 inhibition increases levels; reduce dose by 1/3 (tacrolimus) or 50% (cyclosporine)",
+        "severity": "major"
+      },
+      {
+        "drug": "rifampin",
+        "mechanism": "potent CYP inducer reduces voriconazole AUC by 96%; contraindicated",
+        "severity": "major"
+      },
+      {
+        "drug": "opioids (fentanyl, oxycodone)",
+        "mechanism": "CYP3A4 inhibition increases opioid exposure; risk of respiratory depression",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer oral voriconazole on an empty stomach (at least 1 hour before or 2 hours after a meal).",
+      "Visual disturbances (blurred vision, altered color vision, photopsia) are extremely common \u2014 warn patients before initiating and assess at each visit; these usually resolve spontaneously.",
+      "Strictly avoid direct sunlight and UV exposure; use high-SPF sunscreen daily \u2014 photosensitivity and risk of squamous cell carcinoma with prolonged therapy.",
+      "Monitor LFTs at baseline and monthly; also monitor for fluoride toxicity (periostitis) with long-term use in children \u2014 bone pain is a red flag."
+    ],
+    "clinical_pearls": [
+      "Voriconazole is the first-line treatment for invasive aspergillosis per IDSA guidelines, reducing mortality compared to amphotericin B, but it requires TDM in complex patients due to CYP2C19 polymorphism causing wide inter-individual AUC variability.",
+      "Therapeutic drug monitoring of voriconazole (target trough 1\u20135.5 mg/L) is recommended, especially in poor metabolizers (CYP2C19 *2/*2), patients on interacting drugs, and those with variable absorption."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "contraindicated (teratogenic)",
+    "lactation_safety": "avoid",
+    "tdm_required": true,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "invasive-aspergillosis",
+      "invasive-fungal-infection"
+    ],
+    "adverse_effect_tags": [
+      "visual-disturbances",
+      "hepatotoxicity",
+      "photosensitivity",
+      "QT-prolongation"
+    ],
+    "interaction_tags": [
+      "CYP3A4-inhibitor",
+      "CYP2C19-inhibitor",
+      "CYP2C9-inhibitor",
+      "sirolimus-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "triazole-antifungal"
+      ],
+      "prototype_class": "triazole antifungals",
+      "adme_profile": "hepatic-cleared",
+      "presentation_cluster": [
+        "invasive-fungal-infection",
+        "aspergillosis"
+      ],
+      "adverse_cluster": [
+        "visual-disturbances",
+        "hepatotoxicity",
+        "photosensitivity"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-inhibitor",
+        "CYP2C19-inhibitor"
+      ]
+    }
+  },
+  {
+    "id": "posaconazole",
+    "generic_name": "posaconazole",
+    "brand_names": [
+      "Noxafil"
+    ],
+    "drug_class": "triazole antifungal",
+    "subclass": "extended-spectrum triazole",
+    "prototype_for": false,
+    "prototype_drug": "voriconazole",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "fungal CYP51 (14-alpha-demethylase)"
+    ],
+    "mechanism_summary": "Inhibits fungal CYP51; extended spectrum over voriconazole includes Mucorales (important for mucormycosis prophylaxis and treatment); used primarily for prophylaxis in high-risk immunocompromised patients.",
+    "indications": [
+      "invasive aspergillosis prophylaxis (high-risk patients: AML remission induction, GVHD)",
+      "mucormycosis (prophylaxis and salvage therapy)",
+      "oropharyngeal candidiasis (refractory or in immunocompromised)",
+      "antifungal prophylaxis during allogeneic HSCT"
+    ],
+    "contraindications": [
+      "posaconazole hypersensitivity",
+      "concurrent simvastatin, lovastatin, ergotamine, pimozide, quinidine, sirolimus (unless sirolimus dose monitored)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "vomiting",
+        "diarrhea",
+        "headache"
+      ],
+      "serious": [
+        "hepatotoxicity",
+        "QTc prolongation",
+        "drug interactions via CYP3A4 and P-gp inhibition",
+        "adrenal insufficiency (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral suspension: highly food/fat dependent \u2014 must be taken with a full meal or nutritional supplement; delayed-release tablets: not food dependent; IV: complete",
+      "distribution": "large Vd; extensive tissue distribution",
+      "metabolism": "primarily by glucuronidation (UGT); minimal CYP involvement as substrate; but potent CYP3A4 and P-gp inhibitor",
+      "excretion": "fecal (77%); renal (13%)",
+      "half_life": "35 hours (delayed-release tablets)",
+      "onset": "3\u20135 hours",
+      "peak": "3\u20136 hours",
+      "duration": "24 hours (once-daily delayed-release or IV)",
+      "protein_binding": ">98%",
+      "vd": "large"
+    },
+    "drug_interactions": [
+      {
+        "drug": "tacrolimus/cyclosporine",
+        "mechanism": "CYP3A4 inhibition increases levels; reduce doses and monitor TDM",
+        "severity": "major"
+      },
+      {
+        "drug": "sirolimus",
+        "mechanism": "combined CYP3A4/P-gp inhibition markedly elevates sirolimus",
+        "severity": "major"
+      },
+      {
+        "drug": "QTc-prolonging drugs",
+        "mechanism": "additive QTc prolongation",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "The oral suspension must be taken with a full fatty meal or liquid nutritional supplement \u2014 inadequate absorption with the suspension is a major clinical pitfall.",
+      "Preferred formulation is the delayed-release tablet or IV solution (not food-dependent, more reliable absorption).",
+      "Monitor LFTs weekly during the first month; monitor ECG at baseline and periodically.",
+      "Posaconazole is critical for mucormycosis prophylaxis \u2014 counsel immunocompromised patients on the importance of adherence."
+    ],
+    "clinical_pearls": [
+      "Posaconazole is the only triazole with activity against Mucorales (Mucor, Rhizopus species), making it unique for mucormycosis prophylaxis; isavuconazole is the only other option for Mucorales among the azoles.",
+      "The delayed-release tablet formulation achieves more reliable exposure than the oral suspension, especially in patients with poor oral intake; this formulation switch dramatically improved clinical outcomes."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "contraindicated",
+    "lactation_safety": "avoid",
+    "tdm_required": true,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "invasive-aspergillosis-prophylaxis",
+      "mucormycosis",
+      "HSCT-antifungal-prophylaxis"
+    ],
+    "adverse_effect_tags": [
+      "hepatotoxicity",
+      "QT-prolongation",
+      "nausea"
+    ],
+    "interaction_tags": [
+      "CYP3A4-inhibitor",
+      "P-gp-inhibitor",
+      "QT-prolonging"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "triazole-antifungal"
+      ],
+      "prototype_class": "triazole antifungals",
+      "adme_profile": "fecal-cleared",
+      "presentation_cluster": [
+        "invasive-fungal-infection"
+      ],
+      "adverse_cluster": [
+        "hepatotoxicity",
+        "QT-prolongation"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-inhibitor"
+      ]
+    }
+  },
+  {
+    "id": "isavuconazole",
+    "generic_name": "isavuconazole",
+    "brand_names": [
+      "Cresemba"
+    ],
+    "drug_class": "triazole antifungal",
+    "subclass": "extended-spectrum triazole (anti-Aspergillus, anti-Mucorales)",
+    "prototype_for": false,
+    "prototype_drug": "voriconazole",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "fungal CYP51 (14-alpha-demethylase)"
+    ],
+    "mechanism_summary": "Inhibits fungal CYP51; active against Aspergillus and Mucorales; prodrug isavuconazonium sulfate rapidly converted to active isavuconazole; fewer drug interactions than voriconazole; QTc-shortening rather than prolonging effect (unique).",
+    "indications": [
+      "invasive aspergillosis (alternative to voriconazole)",
+      "invasive mucormycosis"
+    ],
+    "contraindications": [
+      "isavuconazole hypersensitivity",
+      "familial short QT syndrome",
+      "concurrent strong CYP3A4 inducers (rifampin, carbamazepine)",
+      "concurrent ketoconazole (strong CYP3A4 inhibitor)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "vomiting",
+        "diarrhea",
+        "headache",
+        "liver test abnormalities"
+      ],
+      "serious": [
+        "hepatotoxicity",
+        "QTc shortening (caution in familial short QT syndrome)",
+        "infusion-related reactions (IV)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "prodrug isavuconazonium converted to isavuconazole; oral bioavailability ~98%; not significantly affected by food",
+      "distribution": "large Vd (450 L); extensive tissue distribution",
+      "metabolism": "CYP3A4 and CYP3A5 substrate; also CYP3A4 inhibitor (moderate)",
+      "excretion": "fecal (>46%) and renal (<1% unchanged)",
+      "half_life": "130 hours",
+      "onset": "rapid",
+      "peak": "2\u20133 hours (oral)",
+      "duration": "once-daily (after loading)",
+      "protein_binding": ">99%",
+      "vd": "very large (450 L)"
+    },
+    "drug_interactions": [
+      {
+        "drug": "tacrolimus/cyclosporine",
+        "mechanism": "moderate CYP3A4 inhibition increases levels; monitor TDM",
+        "severity": "major"
+      },
+      {
+        "drug": "rifampin/carbamazepine",
+        "mechanism": "strong CYP3A4 induction reduces isavuconazole levels by >50%; contraindicated",
+        "severity": "major"
+      },
+      {
+        "drug": "midazolam",
+        "mechanism": "CYP3A4 inhibition increases midazolam by ~2-fold; use lowest effective benzodiazepine dose",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Oral formulation has near-complete bioavailability and can be taken with or without food \u2014 a significant practical advantage over posaconazole suspension.",
+      "Isavuconazole shortens the QTc interval \u2014 monitor ECG; contraindicated in patients with familial short QT syndrome.",
+      "Loading dose (200 mg three times daily for 2 days) then once-daily maintenance dosing; verify correct frequency.",
+      "No dose adjustments needed for mild-to-moderate hepatic impairment \u2014 an advantage in patients with liver disease."
+    ],
+    "clinical_pearls": [
+      "Unlike all other triazoles, isavuconazole shortens rather than prolongs the QTc interval \u2014 while usually benign, this distinguishes it pharmacologically and requires ECG awareness in patients with short QT syndrome.",
+      "Isavuconazole is one of only two antifungals (with posaconazole) with FDA approval for mucormycosis treatment, making it valuable for this serious infection that is unresponsive to most antifungals."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "avoid (teratogenic in animal studies)",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "invasive-aspergillosis",
+      "mucormycosis"
+    ],
+    "adverse_effect_tags": [
+      "hepatotoxicity",
+      "QTc-shortening"
+    ],
+    "interaction_tags": [
+      "CYP3A4-inhibitor",
+      "CYP3A4-substrate",
+      "rifampin-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "triazole-antifungal"
+      ],
+      "prototype_class": "triazole antifungals",
+      "adme_profile": "fecal-cleared",
+      "presentation_cluster": [
+        "invasive-fungal-infection",
+        "mucormycosis"
+      ],
+      "adverse_cluster": [
+        "hepatotoxicity"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-inhibitor"
+      ]
+    }
+  },
+  {
+    "id": "caspofungin",
+    "generic_name": "caspofungin",
+    "brand_names": [
+      "Cancidas"
+    ],
+    "drug_class": "echinocandin antifungal",
+    "subclass": "first-in-class echinocandin",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "fungal 1,3-beta-D-glucan synthase"
+    ],
+    "mechanism_summary": "Inhibits 1,3-beta-D-glucan synthase, blocking synthesis of beta-glucan \u2014 a critical component of the fungal cell wall absent in mammalian cells; fungicidal against Candida, fungistatic against Aspergillus; mammalian selectivity explains excellent tolerability.",
+    "indications": [
+      "invasive candidiasis/candidemia (first-line)",
+      "esophageal candidiasis",
+      "invasive aspergillosis (salvage therapy)",
+      "empiric antifungal therapy in febrile neutropenia"
+    ],
+    "contraindications": [
+      "echinocandin hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "fever",
+        "nausea",
+        "elevated liver enzymes",
+        "phlebitis"
+      ],
+      "serious": [
+        "hepatotoxicity",
+        "anaphylaxis (rare)",
+        "histamine-mediated infusion reactions (facial flushing, rash)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IV only (poor oral bioavailability)",
+      "distribution": "widely distributed; highly protein-bound",
+      "metabolism": "spontaneous chemical degradation and N-acetylation (not CYP-mediated primarily)",
+      "excretion": "fecal (41%) and urinary (35%)",
+      "half_life": "9\u201311 hours",
+      "onset": "immediate (IV)",
+      "peak": "end of infusion",
+      "duration": "24 hours",
+      "protein_binding": "97%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "cyclosporine",
+        "mechanism": "increases caspofungin AUC ~35%; increased hepatotoxicity risk; use with caution and monitor LFTs",
+        "severity": "moderate"
+      },
+      {
+        "drug": "rifampin",
+        "mechanism": "induction increases caspofungin metabolism; increase maintenance dose to 70 mg daily",
+        "severity": "major"
+      },
+      {
+        "drug": "tacrolimus",
+        "mechanism": "caspofungin reduces tacrolimus trough levels ~20%; monitor TDM",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer IV over 1 hour; incompatible with dextrose-containing solutions \u2014 use only 0.9% NaCl or Ringer's lactate as diluent.",
+      "Loading dose 70 mg on day 1, then 50 mg daily (increase to 70 mg if rifampin or other enzyme inducers are co-administered).",
+      "Monitor LFTs weekly; hepatotoxicity is the primary concern with extended therapy.",
+      "Echinocandins are generally well-tolerated with minimal drug interactions compared to azoles \u2014 a major advantage in polypharmacy patients."
+    ],
+    "clinical_pearls": [
+      "Echinocandins target the fungal cell wall's beta-glucan synthase \u2014 a structure absent in mammalian cells \u2014 providing exceptional selective toxicity and a very favorable adverse effect profile.",
+      "Caspofungin is fungicidal against Candida but only fungistatic against Aspergillus, partly explaining why azoles (which are fungicidal against Aspergillus) are preferred for invasive aspergillosis treatment."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "category C",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "invasive-candidiasis",
+      "candidemia",
+      "invasive-aspergillosis-salvage",
+      "febrile-neutropenia"
+    ],
+    "adverse_effect_tags": [
+      "hepatotoxicity",
+      "infusion-reactions"
+    ],
+    "interaction_tags": [
+      "cyclosporine-interaction",
+      "rifampin-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "echinocandin"
+      ],
+      "prototype_class": "echinocandin antifungals",
+      "adme_profile": "hepatic-fecal-cleared",
+      "presentation_cluster": [
+        "invasive-candidiasis",
+        "febrile-neutropenia"
+      ],
+      "adverse_cluster": [
+        "hepatotoxicity"
+      ],
+      "interaction_cluster": [
+        "cyclosporine-interaction"
+      ]
+    }
+  },
+  {
+    "id": "micafungin",
+    "generic_name": "micafungin",
+    "brand_names": [
+      "Mycamine"
+    ],
+    "drug_class": "echinocandin antifungal",
+    "subclass": "echinocandin (prophylaxis and treatment)",
+    "prototype_for": false,
+    "prototype_drug": "caspofungin",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "fungal 1,3-beta-D-glucan synthase"
+    ],
+    "mechanism_summary": "Inhibits 1,3-beta-D-glucan synthase; similar mechanism to caspofungin; preferred for antifungal prophylaxis in HSCT due to once-daily dosing without loading dose and minimal drug interactions.",
+    "indications": [
+      "invasive candidiasis/candidemia",
+      "esophageal candidiasis",
+      "antifungal prophylaxis in HSCT recipients"
+    ],
+    "contraindications": [
+      "echinocandin hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "headache",
+        "elevated liver enzymes",
+        "rash"
+      ],
+      "serious": [
+        "hepatotoxicity",
+        "anaphylaxis",
+        "hemolysis",
+        "histamine-related infusion reactions"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IV only",
+      "distribution": "widely distributed; high protein binding",
+      "metabolism": "arylsulfatase and catechol-O-methyltransferase; minimal CYP involvement",
+      "excretion": "primarily fecal (71%); renal (15%)",
+      "half_life": "14\u201317 hours",
+      "onset": "immediate (IV)",
+      "peak": "end of infusion",
+      "duration": "24 hours",
+      "protein_binding": ">99%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "sirolimus",
+        "mechanism": "micafungin increases sirolimus AUC ~21%; monitor sirolimus levels",
+        "severity": "moderate"
+      },
+      {
+        "drug": "itraconazole",
+        "mechanism": "micafungin increases itraconazole AUC ~22%",
+        "severity": "minor"
+      }
+    ],
+    "nursing_considerations": [
+      "No loading dose required; simpler dosing than caspofungin.",
+      "Administer IV over 1 hour; protect from light and incompatible with many drugs \u2014 use separate IV line.",
+      "Monitor LFTs weekly with extended therapy.",
+      "Micafungin is the preferred echinocandin for antifungal prophylaxis in allogeneic HSCT per many institutional protocols."
+    ],
+    "clinical_pearls": [
+      "Micafungin has the most minimal drug interactions of all echinocandins and does not require loading dose adjustments, making dosing simpler in the HSCT setting where patients are on multiple medications.",
+      "All three echinocandins (caspofungin, micafungin, anidulafungin) are considered clinically equivalent for invasive candidiasis, with agent selection based on drug interactions, cost, and local formulary."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "category C",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "invasive-candidiasis",
+      "HSCT-antifungal-prophylaxis"
+    ],
+    "adverse_effect_tags": [
+      "hepatotoxicity",
+      "infusion-reactions"
+    ],
+    "interaction_tags": [],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "echinocandin"
+      ],
+      "prototype_class": "echinocandin antifungals",
+      "adme_profile": "fecal-cleared",
+      "presentation_cluster": [
+        "invasive-candidiasis"
+      ],
+      "adverse_cluster": [
+        "hepatotoxicity"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "anidulafungin",
+    "generic_name": "anidulafungin",
+    "brand_names": [
+      "Eraxis"
+    ],
+    "drug_class": "echinocandin antifungal",
+    "subclass": "echinocandin with unique elimination pathway",
+    "prototype_for": false,
+    "prototype_drug": "caspofungin",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "fungal 1,3-beta-D-glucan synthase"
+    ],
+    "mechanism_summary": "Inhibits 1,3-beta-D-glucan synthase; uniquely eliminated by slow chemical degradation in blood rather than hepatic metabolism, making it the preferred echinocandin for patients with hepatic dysfunction.",
+    "indications": [
+      "invasive candidiasis/candidemia",
+      "esophageal candidiasis"
+    ],
+    "contraindications": [
+      "echinocandin hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "histamine-related reactions during infusion (flushing, rash)",
+        "nausea",
+        "elevated LFTs"
+      ],
+      "serious": [
+        "hepatotoxicity (less than caspofungin/micafungin)",
+        "anaphylaxis (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IV only",
+      "distribution": "widely distributed",
+      "metabolism": "slow chemical degradation in blood to inactive peptide \u2014 NO hepatic metabolism and NO CYP involvement",
+      "excretion": "fecal (<1% unchanged); chemical degradation products excreted primarily fecal",
+      "half_life": "40\u201350 hours",
+      "onset": "immediate (IV)",
+      "peak": "end of infusion",
+      "duration": "24 hours",
+      "protein_binding": ">99%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "cyclosporine",
+        "mechanism": "minimal; slight increase in anidulafungin AUC \u2014 no dose adjustment needed",
+        "severity": "minor"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer at a rate \u22641.1 mg/min to reduce histamine-mediated infusion reactions.",
+      "No hepatic dose adjustment needed \u2014 a key advantage in patients with liver failure.",
+      "No drug interactions with CYP enzymes \u2014 the safest echinocandin for polypharmacy patients.",
+      "Monitor LFTs periodically; hepatotoxicity risk is lower than with other echinocandins."
+    ],
+    "clinical_pearls": [
+      "Anidulafungin is the only antifungal that undergoes purely chemical degradation (not enzymatic/hepatic) for elimination, making it the echinocandin of choice in patients with severe hepatic dysfunction where other antifungals accumulate.",
+      "The clinical equivalence of all three echinocandins for invasive candidiasis treatment means the selection can be driven entirely by patient-specific factors such as drug interactions, hepatic function, and formulary availability."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "category C",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "invasive-candidiasis",
+      "candidemia",
+      "hepatic-impairment"
+    ],
+    "adverse_effect_tags": [
+      "hepatotoxicity",
+      "infusion-reactions"
+    ],
+    "interaction_tags": [],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "echinocandin"
+      ],
+      "prototype_class": "echinocandin antifungals",
+      "adme_profile": "chemical-degradation",
+      "presentation_cluster": [
+        "invasive-candidiasis"
+      ],
+      "adverse_cluster": [
+        "hepatotoxicity"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "efavirenz",
+    "generic_name": "efavirenz",
+    "brand_names": [
+      "Sustiva",
+      "Atripla (combination)"
+    ],
+    "drug_class": "non-nucleoside reverse transcriptase inhibitor (NNRTI)",
+    "subclass": "first-generation NNRTI",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "HIV reverse transcriptase (non-nucleoside binding site)"
+    ],
+    "mechanism_summary": "Binds a hydrophobic pocket near the active site of HIV-1 reverse transcriptase, causing conformational change and blocking polymerization; resistance develops rapidly if used as monotherapy.",
+    "indications": [
+      "HIV-1 infection (part of combination ART regimen)"
+    ],
+    "contraindications": [
+      "efavirenz hypersensitivity",
+      "pregnancy (especially first trimester \u2014 neural tube defects)",
+      "concurrent use with voriconazole (reduces voriconazole by >75%)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "CNS/neuropsychiatric effects (dizziness, insomnia, vivid dreams, impaired concentration \u2014 often in first 2\u20134 weeks)",
+        "rash",
+        "elevated cholesterol"
+      ],
+      "serious": [
+        "severe CNS depression or psychiatric disturbances (psychosis, suicidal ideation)",
+        "hepatotoxicity",
+        "Stevens-Johnson syndrome (rare)",
+        "neural tube defects (first trimester exposure)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "50% oral bioavailability; high-fat meal increases Cmax by 50% \u2014 take on empty stomach to reduce CNS adverse effects",
+      "distribution": "large Vd; highly protein-bound; crosses placenta",
+      "metabolism": "CYP2B6 (primary), CYP3A4; both substrate and inducer of CYP3A4",
+      "excretion": "fecal (16\u201361%) and renal (14\u201334%)",
+      "half_life": "40\u201355 hours",
+      "onset": "3\u20135 hours",
+      "peak": "3\u20135 hours",
+      "duration": "24 hours",
+      "protein_binding": ">99%",
+      "vd": "large"
+    },
+    "drug_interactions": [
+      {
+        "drug": "voriconazole",
+        "mechanism": "CYP3A4 induction reduces voriconazole by 77% and voriconazole increases efavirenz; contraindicated combination",
+        "severity": "major"
+      },
+      {
+        "drug": "methadone",
+        "mechanism": "CYP3A4 induction reduces methadone levels; opioid withdrawal",
+        "severity": "major"
+      },
+      {
+        "drug": "hormonal contraceptives",
+        "mechanism": "CYP3A4 induction reduces OCP levels; use alternative contraception",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer at bedtime on an empty stomach to minimize CNS adverse effects; drowsiness from the CNS effects may actually help patients sleep during the first few weeks.",
+      "Counsel patients that neuropsychiatric symptoms (vivid dreams, dizziness, concentration difficulties) are common in the first 2\u20134 weeks but usually diminish; instruct to report suicidal thoughts immediately.",
+      "Use with extreme caution in women who may become pregnant; requires reliable contraception.",
+      "Monitor lipid panel; efavirenz raises total cholesterol and triglycerides."
+    ],
+    "clinical_pearls": [
+      "Efavirenz was a cornerstone of HIV treatment for 20 years but has been largely supplanted by integrase strand transfer inhibitors (dolutegravir, bictegravir) which have fewer CNS side effects, better resistance barriers, and fewer drug interactions.",
+      "The CNS adverse effects of efavirenz (vivid dreams, insomnia, dissociation) are related to CYP2B6 genotype \u2014 slow CYP2B6 metabolizers have higher drug exposure and more CNS toxicity."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid first trimester (neural tube defects); acceptable second/third trimester",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "HIV-infection",
+      "antiretroviral-therapy"
+    ],
+    "adverse_effect_tags": [
+      "CNS-effects",
+      "neuropsychiatric",
+      "hepatotoxicity"
+    ],
+    "interaction_tags": [
+      "CYP3A4-inducer",
+      "CYP2B6-substrate",
+      "voriconazole-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "NNRTI"
+      ],
+      "prototype_class": "NNRTIs",
+      "adme_profile": "hepatic-fecal-cleared",
+      "presentation_cluster": [
+        "HIV-infection"
+      ],
+      "adverse_cluster": [
+        "neuropsychiatric",
+        "hepatotoxicity"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-inducer"
+      ]
+    }
+  },
+  {
+    "id": "emtricitabine",
+    "generic_name": "emtricitabine",
+    "brand_names": [
+      "Emtriva",
+      "component of Truvada, Biktarvy, Descovy, etc."
+    ],
+    "drug_class": "nucleoside reverse transcriptase inhibitor (NRTI)",
+    "subclass": "cytidine analog NRTI",
+    "prototype_for": false,
+    "prototype_drug": "tenofovir-disoproxil-fumarate",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "HIV reverse transcriptase (nucleoside active site)"
+    ],
+    "mechanism_summary": "Phosphorylated to emtricitabine triphosphate; competes with deoxycytidine triphosphate for incorporation into viral DNA; once incorporated, acts as a chain terminator. Also active against hepatitis B virus.",
+    "indications": [
+      "HIV-1 infection (as part of combination ART \u2014 virtually always in combination, not used alone)",
+      "hepatitis B infection (also active)"
+    ],
+    "contraindications": [
+      "emtricitabine hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "skin hyperpigmentation (palms/soles \u2014 occurs in darker-skinned patients)",
+        "nausea",
+        "headache"
+      ],
+      "serious": [
+        "lactic acidosis and severe hepatomegaly with steatosis (class NRTI effect)",
+        "severe acute exacerbation of hepatitis B upon discontinuation"
+      ]
+    },
+    "black_box_warnings": [
+      "lactic acidosis and severe hepatomegaly with steatosis (class NRTI toxicity)",
+      "severe acute exacerbation of hepatitis B after discontinuation in HBV-coinfected patients"
+    ],
+    "pharmacokinetics": {
+      "absorption": "93% oral bioavailability; not significantly affected by food",
+      "distribution": "widely distributed; low protein binding",
+      "metabolism": "minimal; some oxidation and glucuronidation",
+      "excretion": "renal (86% as unchanged drug and metabolites); dose adjustment in CKD",
+      "half_life": "10 hours",
+      "onset": "1\u20132 hours",
+      "peak": "1\u20132 hours",
+      "duration": "24 hours",
+      "protein_binding": "<4%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "lamivudine",
+        "mechanism": "cross-resistance and overlapping mechanism; do not combine",
+        "severity": "major"
+      },
+      {
+        "drug": "drugs causing lactic acidosis (metformin, NRTIs)",
+        "mechanism": "additive mitochondrial toxicity; lactic acidosis risk",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Emtricitabine is virtually always used in combination tablets (e.g., Truvada = emtricitabine + tenofovir DF; Biktarvy = bictegravir + emtricitabine + tenofovir AF); verify patient is not receiving duplicate NRTI therapy.",
+      "Monitor renal function (SCr, eGFR, urine protein) due to renal excretion; dose adjustment required when eGFR <50 mL/min.",
+      "If stopping emtricitabine in a patient with HIV/HBV co-infection, closely monitor LFTs for 4+ weeks \u2014 severe HBV flares have caused liver failure.",
+      "Counsel patients on the skin hyperpigmentation \u2014 benign and reversible."
+    ],
+    "clinical_pearls": [
+      "Emtricitabine and tenofovir are the most widely used NRTI backbone of modern ART; the emtricitabine/tenofovir combination (Truvada) is also the backbone of pre-exposure prophylaxis (PrEP) for HIV prevention.",
+      "Emtricitabine and lamivudine have virtually identical mechanisms, resistance profiles, and activity against HBV; they are considered interchangeable but should never be combined due to redundancy."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "compatible (preferred NRTI backbone in pregnancy)",
+    "lactation_safety": "avoid (HIV transmission risk via breast milk)",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "HIV-infection",
+      "PrEP",
+      "HBV-coinfection"
+    ],
+    "adverse_effect_tags": [
+      "lactic-acidosis",
+      "HBV-flare",
+      "skin-hyperpigmentation"
+    ],
+    "interaction_tags": [
+      "mitochondrial-toxicity"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "NRTI"
+      ],
+      "prototype_class": "NRTIs",
+      "adme_profile": "renally-cleared",
+      "presentation_cluster": [
+        "HIV-infection"
+      ],
+      "adverse_cluster": [
+        "lactic-acidosis"
+      ],
+      "interaction_cluster": [
+        "mitochondrial-toxicity"
+      ]
+    }
+  },
+  {
+    "id": "darunavir",
+    "generic_name": "darunavir",
+    "brand_names": [
+      "Prezista",
+      "Prezcobix (with cobicistat)",
+      "Symtuza (combination)"
+    ],
+    "drug_class": "HIV protease inhibitor (PI)",
+    "subclass": "second-generation HIV protease inhibitor",
+    "prototype_for": false,
+    "prototype_drug": "atazanavir",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "HIV-1 protease"
+    ],
+    "mechanism_summary": "Binds the active site of HIV-1 protease, preventing cleavage of gag-pol polyprotein precursors into functional viral proteins; produces immature, non-infectious viral particles; requires pharmacokinetic boosting with ritonavir or cobicistat.",
+    "indications": [
+      "HIV-1 infection (treatment-na\u00efve and treatment-experienced patients) \u2014 must be given with ritonavir or cobicistat boosting"
+    ],
+    "contraindications": [
+      "darunavir/ritonavir hypersensitivity",
+      "concurrent drugs highly dependent on CYP3A4 for clearance (alfuzosin, rifampin, ergotamine, pimozide, simvastatin, lovastatin, oral midazolam, triazolam)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "diarrhea",
+        "nausea",
+        "headache",
+        "rash",
+        "elevated lipids"
+      ],
+      "serious": [
+        "hepatotoxicity",
+        "hyperglycemia/diabetes",
+        "fat redistribution/lipodystrophy",
+        "hypersensitivity (sulfonamide component)",
+        "drug interactions via CYP3A4 inhibition by ritonavir/cobicistat booster"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "82% (with food); must always be taken with food",
+      "distribution": "widely distributed; extensively protein-bound",
+      "metabolism": "hepatic CYP3A4; boosting with ritonavir or cobicistat (CYP3A4 inhibitors) increases darunavir AUC ~14-fold",
+      "excretion": "fecal (79.5%) and renal (13.9%)",
+      "half_life": "15 hours (boosted)",
+      "onset": "2.5\u20134 hours",
+      "peak": "2.5\u20134 hours",
+      "duration": "24 hours (boosted once-daily for treatment-na\u00efve)",
+      "protein_binding": "95%",
+      "vd": "moderate-large"
+    },
+    "drug_interactions": [
+      {
+        "drug": "statins (simvastatin, lovastatin)",
+        "mechanism": "ritonavir/cobicistat booster markedly increases statin levels; rhabdomyolysis \u2014 contraindicated",
+        "severity": "major"
+      },
+      {
+        "drug": "rifampin",
+        "mechanism": "potent CYP3A4 induction reduces darunavir to subtherapeutic levels; contraindicated",
+        "severity": "major"
+      },
+      {
+        "drug": "midazolam/triazolam",
+        "mechanism": "CYP3A4 inhibition by booster causes extreme sedation; IV midazolam requires caution, oral is contraindicated",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Always administer darunavir with food (any food); check whether patient is receiving ritonavir 100 mg or cobicistat as the pharmacokinetic booster.",
+      "Extensively review drug interactions before prescribing; ritonavir/cobicistat as pharmacokinetic booster dramatically alters levels of many co-administered drugs.",
+      "Monitor lipid panel, blood glucose, and LFTs at baseline and every 3\u20136 months.",
+      "Darunavir contains a sulfonamide moiety; assess history of sulfonamide allergy before prescribing."
+    ],
+    "clinical_pearls": [
+      "Darunavir is the preferred protease inhibitor in current HIV treatment guidelines due to its high genetic barrier to resistance \u2014 resistance requires accumulation of multiple specific mutations that rarely develop during therapy.",
+      "Pharmacokinetic boosting with ritonavir or cobicistat is required: these agents inhibit CYP3A4 and increase darunavir bioavailability by preventing its rapid presystemic metabolism, achieving therapeutically adequate plasma levels."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "acceptable (preferred PI in pregnancy)",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "HIV-infection",
+      "treatment-experienced-HIV"
+    ],
+    "adverse_effect_tags": [
+      "hepatotoxicity",
+      "hyperlipidemia",
+      "lipodystrophy",
+      "hyperglycemia"
+    ],
+    "interaction_tags": [
+      "CYP3A4-inhibitor-via-booster",
+      "rifampin-interaction",
+      "statin-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "protease-inhibitor"
+      ],
+      "prototype_class": "HIV protease inhibitors",
+      "adme_profile": "hepatic-fecal-cleared",
+      "presentation_cluster": [
+        "HIV-infection"
+      ],
+      "adverse_cluster": [
+        "metabolic-syndrome",
+        "hepatotoxicity"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-inhibitor",
+        "statin-interaction"
+      ]
+    }
+  },
+  {
+    "id": "maraviroc",
+    "generic_name": "maraviroc",
+    "brand_names": [
+      "Selzentry",
+      "Celsentri"
+    ],
+    "drug_class": "CCR5 co-receptor antagonist (entry inhibitor)",
+    "subclass": "HIV CCR5 antagonist",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "human CCR5 co-receptor"
+    ],
+    "mechanism_summary": "Binds human CCR5 co-receptor (not the virus), preventing HIV-1 gp120 binding and viral entry into CD4+ T cells; ONLY effective against CCR5-tropic HIV \u2014 requires tropism testing before use.",
+    "indications": [
+      "HIV-1 infection in treatment-experienced patients with CCR5-tropic virus only (after tropism testing confirms CCR5-only tropism)"
+    ],
+    "contraindications": [
+      "maraviroc hypersensitivity",
+      "CXCR4-tropic or dual/mixed-tropic HIV (testing required \u2014 ineffective and may allow CXCR4 virus to expand)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "cough",
+        "upper respiratory tract infections",
+        "rash",
+        "musculoskeletal symptoms"
+      ],
+      "serious": [
+        "hepatotoxicity (especially with pre-existing liver disease)",
+        "orthostatic hypotension",
+        "cardiovascular events (safety signal in some trials)",
+        "immune reconstitution inflammatory syndrome"
+      ]
+    },
+    "black_box_warnings": [
+      "hepatotoxicity \u2014 possibly preceded by systemic allergic response"
+    ],
+    "pharmacokinetics": {
+      "absorption": "moderate bioavailability (varies with dose \u2014 23\u201333% at 300 mg); food has variable effect",
+      "distribution": "extensively distributed; high protein binding",
+      "metabolism": "hepatic CYP3A4 substrate; dose must be adjusted based on CYP3A4 inhibitor or inducer status of co-medications",
+      "excretion": "fecal (76%) and urinary (20%)",
+      "half_life": "14\u201318 hours",
+      "onset": "0.5\u20134 hours",
+      "peak": "0.5\u20134 hours",
+      "duration": "12 hours",
+      "protein_binding": "76%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "ritonavir/cobicistat (CYP3A4 inhibitors)",
+        "mechanism": "increase maraviroc exposure \u2014 reduce maraviroc dose to 150 mg BID",
+        "severity": "major"
+      },
+      {
+        "drug": "rifampin (CYP3A4 inducer)",
+        "mechanism": "reduces maraviroc by ~64% \u2014 increase dose to 600 mg BID",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Tropism testing (enhanced sensitivity Trofile assay or genotypic tropism assessment) must be performed BEFORE prescribing maraviroc; if mixed/CXCR4-tropic virus is present, maraviroc is contraindicated.",
+      "Dose adjustment required based on concomitant CYP3A4 inhibitors or inducers; pharmacist review of the complete regimen is essential.",
+      "Monitor LFTs; hepatotoxicity with allergic features can occur \u2014 instruct patients to report rash, jaundice, dark urine.",
+      "Assess blood pressure; postural hypotension is a known adverse effect."
+    ],
+    "clinical_pearls": [
+      "Maraviroc targets the human CCR5 co-receptor rather than the virus \u2014 this makes it immune to direct viral resistance mutations but means viral tropism switching to CXCR4 renders it ineffective.",
+      "Maraviroc is the only approved CCR5 antagonist and represents a unique 'host-targeting' approach to HIV therapy; tropism testing cost and complexity limit its routine use to treatment-experienced patients with confirmed CCR5-tropic virus."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "category B",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "HIV-infection",
+      "CCR5-tropic-HIV",
+      "treatment-experienced-HIV"
+    ],
+    "adverse_effect_tags": [
+      "hepatotoxicity",
+      "orthostatic-hypotension",
+      "cough"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate",
+      "ritonavir-interaction",
+      "rifampin-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "entry-inhibitor"
+      ],
+      "prototype_class": "CCR5 antagonists",
+      "adme_profile": "hepatic-fecal-cleared",
+      "presentation_cluster": [
+        "HIV-infection"
+      ],
+      "adverse_cluster": [
+        "hepatotoxicity"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "chloroquine",
+    "generic_name": "chloroquine",
+    "brand_names": [
+      "Aralen"
+    ],
+    "drug_class": "aminoquinoline antiparasitic",
+    "subclass": "4-aminoquinoline antimalarial",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "plasmodial heme polymerase (hemozoin formation)"
+    ],
+    "mechanism_summary": "Accumulates in plasmodial digestive vacuoles; inhibits heme polymerase, preventing conversion of toxic free heme to non-toxic hemozoin; free heme accumulates and is toxic to the parasite. Active only against chloroquine-sensitive Plasmodium species.",
+    "indications": [
+      "malaria treatment and prophylaxis \u2014 chloroquine-sensitive Plasmodium (primarily P. vivax and P. ovale in non-resistant areas)",
+      "extraintestinal amebiasis",
+      "lupus and rheumatoid arthritis (at lower doses \u2014 replaced by hydroxychloroquine)"
+    ],
+    "contraindications": [
+      "chloroquine hypersensitivity",
+      "retinal or visual field changes",
+      "long QT syndrome (relative)",
+      "G6PD deficiency (relative for treatment of P. vivax \u2014 hemolysis risk with primaquine combination)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "GI upset",
+        "headache",
+        "pruritus (especially in dark-skinned patients)",
+        "dizziness"
+      ],
+      "serious": [
+        "irreversible retinopathy (with long-term use)",
+        "QTc prolongation/arrhythmias",
+        "aplastic anemia",
+        "seizures at high doses",
+        "cardiomyopathy"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "89% oral bioavailability",
+      "distribution": "large Vd; concentrated in melanin-containing tissues (eyes, skin); distributes into red blood cells",
+      "metabolism": "hepatic (CYP3A4, CYP2D6) to active metabolite desethylchloroquine",
+      "excretion": "renal (50\u201360% unchanged)",
+      "half_life": "1\u20132 months (terminal, due to tissue distribution)",
+      "onset": "1\u20133 hours",
+      "peak": "1\u20132 hours",
+      "duration": "once-weekly dosing for prophylaxis",
+      "protein_binding": "50\u201365%",
+      "vd": "very large (250\u2013800 L/kg)"
+    },
+    "drug_interactions": [
+      {
+        "drug": "antacids/kaolin",
+        "mechanism": "reduce chloroquine absorption; separate by 4 hours",
+        "severity": "moderate"
+      },
+      {
+        "drug": "QTc-prolonging drugs",
+        "mechanism": "additive QTc prolongation; increased torsades risk",
+        "severity": "major"
+      },
+      {
+        "drug": "cyclosporine",
+        "mechanism": "chloroquine inhibits CYP3A4; increases cyclosporine levels",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "For malaria prophylaxis, start 1\u20132 weeks before travel to a chloroquine-sensitive region and continue for 4 weeks after return.",
+      "Monitor visual acuity and fundoscopy with long-term use (>1 year); retinopathy is irreversible and dose-related.",
+      "For P. vivax/P. ovale malaria, chloroquine eliminates the blood stage only \u2014 primaquine is needed to eradicate liver hypnozoites and prevent relapse.",
+      "Pruritus (particularly in Black patients) is a common, non-allergic adverse effect thought to be opioid receptor-mediated."
+    ],
+    "clinical_pearls": [
+      "Chloroquine resistance in P. falciparum has spread globally, making chloroquine ineffective for falciparum malaria in most of the world except Haiti and parts of Central America; P. vivax resistance to chloroquine is also emerging in parts of Asia and Oceania.",
+      "Chloroquine has an extraordinarily long half-life (1\u20132 months) due to its massive tissue distribution in melanin-containing tissues, making toxicity insidious and potentially prolonged after drug discontinuation."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "acceptable (malaria treatment; risk-benefit)",
+    "lactation_safety": "compatible (small amounts in breast milk)",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "malaria-treatment",
+      "malaria-prophylaxis",
+      "P-vivax"
+    ],
+    "adverse_effect_tags": [
+      "retinopathy",
+      "QT-prolongation",
+      "pruritus"
+    ],
+    "interaction_tags": [
+      "QT-prolonging",
+      "CYP3A4-inhibitor"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "aminoquinoline"
+      ],
+      "prototype_class": "4-aminoquinolines",
+      "adme_profile": "renal-cleared",
+      "presentation_cluster": [
+        "malaria"
+      ],
+      "adverse_cluster": [
+        "retinopathy",
+        "QT-prolongation"
+      ],
+      "interaction_cluster": [
+        "QT-prolonging"
+      ]
+    }
+  },
+  {
+    "id": "hydroxychloroquine",
+    "generic_name": "hydroxychloroquine",
+    "brand_names": [
+      "Plaquenil"
+    ],
+    "drug_class": "aminoquinoline antiparasitic/DMARD",
+    "subclass": "4-aminoquinoline used primarily as DMARD",
+    "prototype_for": false,
+    "prototype_drug": "chloroquine",
+    "organ_systems": [
+      "infectious-disease",
+      "immunology",
+      "musculoskeletal"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "plasmodial heme polymerase; toll-like receptors (TLR7/TLR9) in immune cells"
+    ],
+    "mechanism_summary": "Similar to chloroquine for antimalarial activity; additionally accumulates in lysosomes and inhibits TLR7/TLR9 signaling by preventing endosomal acidification, reducing autoimmune cytokine production \u2014 the basis for its DMARD activity.",
+    "indications": [
+      "malaria prophylaxis and treatment (chloroquine-sensitive)",
+      "systemic lupus erythematosus (SLE) \u2014 reduces flares and mortality",
+      "rheumatoid arthritis (DMARD)",
+      "Sj\u00f6gren's syndrome"
+    ],
+    "contraindications": [
+      "hydroxychloroquine hypersensitivity",
+      "pre-existing retinopathy or macular disease"
+    ],
+    "adverse_effects": {
+      "common": [
+        "GI upset",
+        "skin discoloration (blue-gray)",
+        "headache"
+      ],
+      "serious": [
+        "retinopathy (irreversible \u2014 dose and duration dependent)",
+        "cardiomyopathy (rare)",
+        "QTc prolongation (less than chloroquine)",
+        "agranulocytosis (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "74% oral bioavailability",
+      "distribution": "large Vd; extensively distributed to tissues, especially eyes and skin",
+      "metabolism": "hepatic (desethylhydroxychloroquine \u2014 active metabolite)",
+      "excretion": "renal (40\u201350%) and fecal",
+      "half_life": "40\u201350 days (long terminal half-life)",
+      "onset": "2\u20134 weeks (for DMARD effects)",
+      "peak": "3.2 hours",
+      "duration": "once or twice daily",
+      "protein_binding": "45%",
+      "vd": "very large"
+    },
+    "drug_interactions": [
+      {
+        "drug": "digoxin",
+        "mechanism": "hydroxychloroquine may increase digoxin levels",
+        "severity": "moderate"
+      },
+      {
+        "drug": "QTc-prolonging drugs",
+        "mechanism": "additive QTc prolongation",
+        "severity": "moderate"
+      },
+      {
+        "drug": "metformin",
+        "mechanism": "increased risk of lactic acidosis in renal impairment",
+        "severity": "minor"
+      }
+    ],
+    "nursing_considerations": [
+      "Baseline ophthalmologic examination is mandatory before initiating therapy; annual fundoscopy and Humphrey visual field testing required after 5 years of therapy (or earlier for high-risk patients).",
+      "Administer with food to reduce GI adverse effects.",
+      "For SLE: therapeutic benefits take weeks to months to manifest; counsel patients not to stop therapy prematurely.",
+      "Monitor CBC and LFTs annually; screen for G6PD deficiency in high-risk patients."
+    ],
+    "clinical_pearls": [
+      "Hydroxychloroquine reduces mortality and lupus flare rates by 30\u201350% in SLE patients, and should be continued indefinitely unless toxicity develops; it is one of the only medications proven to reduce cardiovascular events and thrombosis in SLE.",
+      "Hydroxychloroquine retinopathy risk is related to dose (>5 mg/kg lean body weight per day) and duration (>5 years); safe dosing is critical since retinopathy is irreversible."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "acceptable (reduces SLE flares in pregnancy)",
+    "lactation_safety": "compatible",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "SLE",
+      "rheumatoid-arthritis",
+      "malaria"
+    ],
+    "adverse_effect_tags": [
+      "retinopathy",
+      "QT-prolongation",
+      "cardiomyopathy"
+    ],
+    "interaction_tags": [
+      "QT-prolonging"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease",
+        "immunology",
+        "musculoskeletal"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "aminoquinoline"
+      ],
+      "prototype_class": "4-aminoquinolines",
+      "adme_profile": "renal-fecal-cleared",
+      "presentation_cluster": [
+        "SLE",
+        "rheumatoid-arthritis"
+      ],
+      "adverse_cluster": [
+        "retinopathy",
+        "QT-prolongation"
+      ],
+      "interaction_cluster": [
+        "QT-prolonging"
+      ]
+    }
+  },
+  {
+    "id": "ivermectin",
+    "generic_name": "ivermectin",
+    "brand_names": [
+      "Stromectol"
+    ],
+    "drug_class": "macrocyclic lactone antiparasitic",
+    "subclass": "avermectin antiparasitic agent",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "glutamate-gated chloride channels (GluCl) in invertebrate neurons and muscle cells"
+    ],
+    "mechanism_summary": "Binds glutamate-gated chloride channels exclusive to invertebrate nervous systems; potentiates GABA at invertebrate neuromuscular junctions; causes hyperpolarization and paralysis of parasites; mammalian safety due to absence of GluCl channels and P-gp exclusion from CNS.",
+    "indications": [
+      "onchocerciasis (river blindness) \u2014 microfilaricidal",
+      "strongyloidiasis",
+      "lymphatic filariasis (mass drug administration)",
+      "scabies (including crusted/Norwegian scabies)",
+      "pediculosis (lice) \u2014 for treatment-resistant cases"
+    ],
+    "contraindications": [
+      "ivermectin hypersensitivity",
+      "Loa loa microfilaremia (>2500 mf/mL \u2014 encephalopathy risk)",
+      "concurrent P-gp inhibitors in meningitis (theoretical BBB penetration)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "Mazzotti reaction (fever, urticaria, edema, arthralgia from dying microfilariae)",
+        "GI upset",
+        "dizziness"
+      ],
+      "serious": [
+        "encephalopathy/neurotoxicity (in Loa loa coinfection or P-gp mutations that allow CNS entry)",
+        "Mazzotti reaction with hypotension (in heavy infestations)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "high-fat meal increases absorption 2.5-fold; administration with food recommended",
+      "distribution": "large Vd; high lipophilicity; excluded from CNS in normal hosts by P-glycoprotein",
+      "metabolism": "hepatic CYP3A4",
+      "excretion": "fecal (almost entirely); renal <1%",
+      "half_life": "18 hours",
+      "onset": "4 hours",
+      "peak": "4 hours",
+      "duration": "variable; single dose for most indications",
+      "protein_binding": "93%",
+      "vd": "large"
+    },
+    "drug_interactions": [
+      {
+        "drug": "warfarin",
+        "mechanism": "ivermectin may increase INR; monitor during and after therapy",
+        "severity": "moderate"
+      },
+      {
+        "drug": "P-gp inhibitors",
+        "mechanism": "may allow CNS penetration; theoretical neurotoxicity risk",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer with food or water; high-fat meal improves absorption for strongyloidiasis treatment.",
+      "For scabies: after treatment, bedding, clothing, and towels must be washed in hot water; household contacts should be evaluated.",
+      "Advise patients about Mazzotti reaction (flu-like symptoms after treatment of onchocerciasis) \u2014 this represents immune response to dying parasites and can be managed with antihistamines and antipyretics.",
+      "Screen for Loa loa exposure in patients from endemic areas (Central Africa) before mass drug administration campaigns."
+    ],
+    "clinical_pearls": [
+      "Ivermectin is one of the most transformative drugs in global health \u2014 its deployment for onchocerciasis and lymphatic filariasis elimination programs has dramatically reduced the burden of these tropical diseases; its discoverers received the 2015 Nobel Prize in Medicine.",
+      "P-glycoprotein at the blood-brain barrier is essential for preventing ivermectin CNS entry in mammals; certain collies (MDR1/ABCB1 mutation) and humans with P-gp mutations lack this protection, resulting in ivermectin neurotoxicity at standard doses."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "avoid in first trimester; use with caution",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "scabies",
+      "onchocerciasis",
+      "strongyloidiasis",
+      "filariasis"
+    ],
+    "adverse_effect_tags": [
+      "Mazzotti-reaction",
+      "neurotoxicity"
+    ],
+    "interaction_tags": [
+      "P-gp-substrate",
+      "warfarin-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "macrocyclic-lactone"
+      ],
+      "prototype_class": "avermectins",
+      "adme_profile": "fecal-cleared",
+      "presentation_cluster": [
+        "scabies",
+        "parasitic-infection"
+      ],
+      "adverse_cluster": [
+        "Mazzotti-reaction"
+      ],
+      "interaction_cluster": [
+        "P-gp-substrate"
+      ]
+    }
+  },
+  {
+    "id": "albendazole",
+    "generic_name": "albendazole",
+    "brand_names": [
+      "Albenza"
+    ],
+    "drug_class": "benzimidazole antiparasitic",
+    "subclass": "broad-spectrum benzimidazole",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "beta-tubulin of helminths and protozoa"
+    ],
+    "mechanism_summary": "Binds helminth beta-tubulin, preventing tubulin polymerization; disrupts microtubule function, impairs glucose uptake and energy metabolism, and inhibits secretory vesicle function; the active metabolite albendazole sulfoxide has high tissue penetration for cystic disease.",
+    "indications": [
+      "neurocysticercosis (Taenia solium)",
+      "cystic echinococcosis (hydatid disease)",
+      "filariasis",
+      "strongyloidiasis",
+      "ascariasis, hookworm, pinworm, whipworm (standard intestinal helminths)",
+      "giardiasis (alternative)"
+    ],
+    "contraindications": [
+      "albendazole hypersensitivity",
+      "pregnancy (teratogenic \u2014 verify negative pregnancy test before initiating)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "elevated liver enzymes",
+        "abdominal pain",
+        "nausea"
+      ],
+      "serious": [
+        "hepatotoxicity",
+        "bone marrow suppression (agranulocytosis)",
+        "Steven-Johnson syndrome (rare)",
+        "CNS effects in neurocysticercosis (seizures from dying larvae)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "poorly absorbed orally; high-fat meal increases absorption by ~5-fold; always administer with fatty food",
+      "distribution": "albendazole sulfoxide (active metabolite) distributes widely including CSF, cyst fluid",
+      "metabolism": "extensive first-pass to albendazole sulfoxide (active) and sulfone (inactive)",
+      "excretion": "biliary/fecal (primarily); renal minor",
+      "half_life": "8\u201312 hours (albendazole sulfoxide)",
+      "onset": "2\u20135 hours",
+      "peak": "2\u20135 hours",
+      "duration": "28-day cycles (neurocysticercosis, echinococcosis)",
+      "protein_binding": "70%",
+      "vd": "large"
+    },
+    "drug_interactions": [
+      {
+        "drug": "cimetidine",
+        "mechanism": "increases albendazole sulfoxide levels ~50%; potentially beneficial for systemic infections",
+        "severity": "minor"
+      },
+      {
+        "drug": "dexamethasone",
+        "mechanism": "increases albendazole sulfoxide levels ~56%; co-administered for neurocysticercosis to reduce inflammation",
+        "severity": "minor"
+      },
+      {
+        "drug": "anticonvulsants (carbamazepine, phenytoin)",
+        "mechanism": "reduce albendazole levels; monitor response",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer with a fatty meal for systemic infections (neurocysticercosis, echinococcosis) to maximize absorption; for simple intestinal infections, standard administration suffices.",
+      "For neurocysticercosis, co-administer corticosteroids (dexamethasone) to prevent CNS inflammatory reactions from dying parasites; monitor for seizure activity.",
+      "Obtain baseline LFTs and CBC before starting therapy; monitor monthly \u2014 both hepatotoxicity and agranulocytosis can occur.",
+      "Confirm negative pregnancy test before prescribing; use contraception during and for 3 days after therapy."
+    ],
+    "clinical_pearls": [
+      "Albendazole's active metabolite (sulfoxide) penetrates to echinococcal cyst fluid and CSF at therapeutic concentrations, enabling treatment of systemic cystic infections that mebendazole cannot adequately reach due to poor absorption.",
+      "For neurocysticercosis, antiparasitic therapy is controversial in purely calcified lesions; it is indicated for viable or transitional cysts, and should always be combined with corticosteroids and anticonvulsants to manage the inflammatory response to dying parasites."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "contraindicated",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "neurocysticercosis",
+      "echinococcosis",
+      "intestinal-helminths"
+    ],
+    "adverse_effect_tags": [
+      "hepatotoxicity",
+      "bone-marrow-suppression"
+    ],
+    "interaction_tags": [
+      "anticonvulsant-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "benzimidazole"
+      ],
+      "prototype_class": "benzimidazole antiparasitic agents",
+      "adme_profile": "hepatic-fecal-cleared",
+      "presentation_cluster": [
+        "parasitic-infection"
+      ],
+      "adverse_cluster": [
+        "hepatotoxicity"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "atovaquone-proguanil",
+    "generic_name": "atovaquone-proguanil",
+    "brand_names": [
+      "Malarone"
+    ],
+    "drug_class": "combination antimalarial",
+    "subclass": "mitochondrial complex III inhibitor + antifolate combination",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "mitochondrial cytochrome bc1 complex III (atovaquone)",
+      "dihydrofolate reductase (cycloguanil, proguanil metabolite)"
+    ],
+    "mechanism_summary": "Atovaquone inhibits the mitochondrial electron transport chain at cytochrome bc1 complex, collapsing the mitochondrial membrane potential; cycloguanil (active metabolite of proguanil) inhibits dihydrofolate reductase; combination is synergistic and active against both liver and blood stages.",
+    "indications": [
+      "malaria prophylaxis for travelers to chloroquine-resistant regions",
+      "malaria treatment (P. falciparum including chloroquine-resistant)"
+    ],
+    "contraindications": [
+      "atovaquone/proguanil hypersensitivity",
+      "severe renal impairment (CrCl <30 mL/min \u2014 use alternative for prophylaxis)",
+      "pregnancy (insufficient data)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "GI upset",
+        "headache",
+        "abdominal pain"
+      ],
+      "serious": [
+        "hepatitis (rare)",
+        "Stevens-Johnson syndrome (rare)",
+        "neutropenia (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "atovaquone: 40% bioavailability fasting, significantly increased (2.5\u20133x) with fatty food; proguanil: ~55% bioavailability; administer with food or milky drink",
+      "distribution": "atovaquone: large Vd, highly lipophilic; proguanil/cycloguanil: moderate distribution",
+      "metabolism": "atovaquone: minimal; proguanil metabolized by CYP2C19 to active cycloguanil",
+      "excretion": "atovaquone: fecal (>94% unchanged); proguanil/cycloguanil: renal",
+      "half_life": "atovaquone 2\u20133 days; proguanil 12\u201321 hours",
+      "onset": "rapid",
+      "peak": "2\u20134 hours",
+      "duration": "once-daily dosing",
+      "protein_binding": "atovaquone 99%; proguanil 75%",
+      "vd": "large (atovaquone)"
+    },
+    "drug_interactions": [
+      {
+        "drug": "rifampin",
+        "mechanism": "reduces atovaquone levels by ~50%; avoid combination",
+        "severity": "major"
+      },
+      {
+        "drug": "warfarin",
+        "mechanism": "atovaquone may enhance anticoagulant effect; monitor INR",
+        "severity": "moderate"
+      },
+      {
+        "drug": "metoclopramide",
+        "mechanism": "reduces atovaquone absorption; avoid combination",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Must be taken with food or milky drink \u2014 atovaquone absorption is critically dependent on fat content.",
+      "For prophylaxis: start 1\u20132 days before travel and continue for 7 days after return (shorter post-travel course than chloroquine or mefloquine).",
+      "Advise patients to take at the same time each day; if vomiting occurs within 1 hour of dose, repeat the dose.",
+      "Atovaquone-proguanil is NOT effective for P. vivax hypnozoites; primaquine or tafenoquine must be added if P. vivax exposure is possible."
+    ],
+    "clinical_pearls": [
+      "Atovaquone-proguanil is one of three recommended options for malaria chemoprophylaxis in chloroquine-resistant areas (along with mefloquine and doxycycline); its advantages include once-daily dosing, minimal neuropsychiatric side effects compared to mefloquine, and only 7 days post-travel continuation.",
+      "CYP2C19 poor metabolizers produce less cycloguanil from proguanil, theoretically reducing antifolate efficacy; however, atovaquone alone provides substantial antimalarial activity, and clinical failures attributable solely to CYP2C19 status are uncommon."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "insufficient data \u2014 use in second/third trimester if benefit outweighs risk",
+    "lactation_safety": "limited data; use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "malaria-prophylaxis",
+      "malaria-treatment",
+      "P-falciparum"
+    ],
+    "adverse_effect_tags": [
+      "GI-upset",
+      "headache"
+    ],
+    "interaction_tags": [
+      "rifampin-interaction",
+      "warfarin-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "mitochondrial-inhibitor"
+      ],
+      "prototype_class": "combination antimalarials",
+      "adme_profile": "fecal-renal-cleared",
+      "presentation_cluster": [
+        "malaria"
+      ],
+      "adverse_cluster": [
+        "GI"
+      ],
+      "interaction_cluster": [
+        "rifampin-interaction"
+      ]
+    }
   }
 ]
