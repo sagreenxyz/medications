@@ -57689,5 +57689,2226 @@
         "CYP2C9-inhibitor"
       ]
     }
+  },
+  {
+    "id": "rifabutin",
+    "generic_name": "rifabutin",
+    "brand_names": [
+      "Mycobutin"
+    ],
+    "drug_class": "rifamycin antibiotic",
+    "subclass": "anti-mycobacterial rifamycin",
+    "prototype_for": false,
+    "prototype_drug": "rifampin",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "bacterial DNA-dependent RNA polymerase (beta subunit)"
+    ],
+    "mechanism_summary": "Inhibits bacterial DNA-dependent RNA polymerase by binding the beta subunit, blocking transcription; less potent CYP3A4 inducer than rifampin, making it preferred when drug interactions must be minimized (e.g., HIV patients on antiretrovirals).",
+    "indications": [
+      "Mycobacterium avium complex (MAC) prophylaxis in HIV (CD4 <50)",
+      "MAC treatment (in combination)",
+      "tuberculosis (rifampin-intolerant or drug interactions)"
+    ],
+    "contraindications": [
+      "rifamycin hypersensitivity",
+      "active uveitis"
+    ],
+    "adverse_effects": {
+      "common": [
+        "orange-brown discoloration of urine/secretions",
+        "GI upset",
+        "neutropenia",
+        "uveitis (anterior)"
+      ],
+      "serious": [
+        "uveitis (dose-related, can cause blindness if untreated)",
+        "neutropenia/thrombocytopenia",
+        "hepatotoxicity",
+        "drug interactions via moderate CYP3A4 induction"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "53% oral bioavailability; food reduces rate but not extent",
+      "distribution": "large Vd; concentrated in tissues; distributes into macrophages",
+      "metabolism": "hepatic; moderate CYP3A4 inducer (less than rifampin); active metabolite 25-O-desacetylrifabutin",
+      "excretion": "biliary (primary) and renal (5%)",
+      "half_life": "45 hours",
+      "onset": "2\u20134 hours",
+      "peak": "2\u20134 hours",
+      "duration": "24 hours (once-daily)",
+      "protein_binding": "85%",
+      "vd": "very large (8\u20139 L/kg)"
+    },
+    "drug_interactions": [
+      {
+        "drug": "HIV protease inhibitors (PI)",
+        "mechanism": "PIs increase rifabutin levels via CYP3A4 inhibition; dose reduce rifabutin to 150 mg daily or 300 mg 3x/week",
+        "severity": "major"
+      },
+      {
+        "drug": "fluconazole",
+        "mechanism": "increases rifabutin levels; risk of uveitis and neutropenia at standard doses",
+        "severity": "major"
+      },
+      {
+        "drug": "clarithromycin",
+        "mechanism": "CYP3A4 inhibition increases rifabutin; may precipitate uveitis",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Warn patients that urine, sweat, tears, and other secretions may turn orange-brown; this is expected and harmless but can permanently stain soft contact lenses.",
+      "Monitor for uveitis symptoms (eye pain, redness, photophobia, blurred vision) \u2014 a dose-related adverse effect unique to rifabutin; ophthalmologic evaluation required if symptoms develop.",
+      "CBC monitoring recommended periodically; rifabutin can cause neutropenia, particularly when combined with macrolides or antifungals that raise rifabutin levels.",
+      "Verify antiretroviral regimen before prescribing; extensive drug interactions with HIV antiretrovirals require dosage adjustments of rifabutin."
+    ],
+    "clinical_pearls": [
+      "Rifabutin is preferred over rifampin for MAC prophylaxis and TB treatment in HIV-infected patients on protease inhibitors because rifabutin is a weaker CYP3A4 inducer, causing less reduction in antiretroviral drug levels.",
+      "Paradoxically, when HIV protease inhibitors (strong CYP3A4 inhibitors) are co-prescribed with rifabutin, the rifabutin dose must be reduced (not increased) to avoid toxicity from elevated rifabutin levels."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "category B",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "MAC-prophylaxis",
+      "tuberculosis",
+      "HIV-OI"
+    ],
+    "adverse_effect_tags": [
+      "uveitis",
+      "neutropenia",
+      "orange-discoloration"
+    ],
+    "interaction_tags": [
+      "CYP3A4-inducer",
+      "HIV-drug-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "rifamycin"
+      ],
+      "prototype_class": "rifamycins",
+      "adme_profile": "hepatic-biliary-cleared",
+      "presentation_cluster": [
+        "MAC-infection",
+        "tuberculosis"
+      ],
+      "adverse_cluster": [
+        "uveitis",
+        "neutropenia"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-inducer"
+      ]
+    }
+  },
+  {
+    "id": "rifapentine",
+    "generic_name": "rifapentine",
+    "brand_names": [
+      "Priftin"
+    ],
+    "drug_class": "rifamycin antibiotic",
+    "subclass": "long-acting rifamycin for TB",
+    "prototype_for": false,
+    "prototype_drug": "rifampin",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "bacterial DNA-dependent RNA polymerase (beta subunit)"
+    ],
+    "mechanism_summary": "Inhibits bacterial RNA polymerase; long half-life enables once-weekly dosing; potent CYP3A4 and CYP2C9 inducer comparable to rifampin.",
+    "indications": [
+      "active tuberculosis (intensive and continuation phases)",
+      "latent TB infection (LTBI) \u2014 3HP regimen: weekly rifapentine + isoniazid for 12 weeks"
+    ],
+    "contraindications": [
+      "rifamycin hypersensitivity",
+      "concurrent use of drugs with narrow therapeutic windows that are significantly affected by CYP induction"
+    ],
+    "adverse_effects": {
+      "common": [
+        "orange-brown secretion discoloration",
+        "GI upset",
+        "hyperuricemia"
+      ],
+      "serious": [
+        "hepatotoxicity",
+        "hypersensitivity reactions (including flu-like syndrome)",
+        "drug interactions via potent CYP3A4 induction"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "70% oral bioavailability; high-fat meal increases absorption by 40\u201350%",
+      "distribution": "large Vd; distributes into macrophages; active metabolite 25-desacetylrifapentine",
+      "metabolism": "hepatic; potent CYP3A4 and CYP2C9 inducer",
+      "excretion": "primarily biliary/fecal; renal ~17%",
+      "half_life": "13\u201319 hours",
+      "onset": "5\u20136 hours",
+      "peak": "5\u20136 hours",
+      "duration": "once-weekly (for LTBI regimen)",
+      "protein_binding": "98% (desacetyl metabolite ~93%)",
+      "vd": "large"
+    },
+    "drug_interactions": [
+      {
+        "drug": "HIV antiretrovirals",
+        "mechanism": "potent CYP3A4 induction reduces ARV levels; generally avoid with PI-based regimens",
+        "severity": "major"
+      },
+      {
+        "drug": "warfarin",
+        "mechanism": "CYP2C9 induction reduces warfarin levels; monitor INR closely",
+        "severity": "major"
+      },
+      {
+        "drug": "oral contraceptives",
+        "mechanism": "CYP3A4 induction reduces OCP levels; contraceptive failure risk",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer with food (high-fat meal preferred) to enhance absorption during LTBI treatment.",
+      "Counsel patients to avoid rifapentine during pregnancy (not first choice) and to use non-hormonal contraception during therapy due to CYP3A4 induction.",
+      "The 3HP regimen (weekly rifapentine + isoniazid for 12 weeks) is now a preferred regimen for LTBI; adherence is facilitated by directly observed therapy or self-administration.",
+      "Warn about orange-brown discoloration of secretions \u2014 permanent contact lens staining is a practical concern."
+    ],
+    "clinical_pearls": [
+      "The 3HP regimen (3 months of once-weekly rifapentine + isoniazid) for latent TB infection has become the preferred CDC regimen for most adults, offering superior completion rates compared to 9 months of daily isoniazid monotherapy.",
+      "Rifapentine is a potent CYP3A4 and CYP2C9 inducer like rifampin; all the same drug interaction considerations apply, particularly for antiretrovirals, anticoagulants, and hormonal contraceptives."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "category C",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "latent-TB-infection",
+      "active-tuberculosis",
+      "3HP-regimen"
+    ],
+    "adverse_effect_tags": [
+      "hepatotoxicity",
+      "orange-discoloration",
+      "hypersensitivity"
+    ],
+    "interaction_tags": [
+      "CYP3A4-inducer",
+      "CYP2C9-inducer",
+      "warfarin-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "rifamycin"
+      ],
+      "prototype_class": "rifamycins",
+      "adme_profile": "hepatic-biliary-cleared",
+      "presentation_cluster": [
+        "tuberculosis",
+        "LTBI"
+      ],
+      "adverse_cluster": [
+        "hepatotoxicity"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-inducer",
+        "CYP2C9-inducer"
+      ]
+    }
+  },
+  {
+    "id": "ethambutol",
+    "generic_name": "ethambutol",
+    "brand_names": [
+      "Myambutol"
+    ],
+    "drug_class": "antimycobacterial agent",
+    "subclass": "arabinosyltransferase inhibitor",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "arabinosyltransferases (EmbA, EmbB, EmbC)"
+    ],
+    "mechanism_summary": "Inhibits arabinosyltransferases involved in arabinan biosynthesis, a critical component of mycobacterial cell wall arabinogalactan and lipoarabinomannan; bacteriostatic; primarily used in TB regimens to prevent resistance emergence.",
+    "indications": [
+      "active tuberculosis (part of standard 4-drug initial regimen: RIPE)",
+      "MAC infections (in combination)"
+    ],
+    "contraindications": [
+      "ethambutol hypersensitivity",
+      "optic neuritis (relative)",
+      "children too young to reliably monitor visual acuity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "GI upset",
+        "headache"
+      ],
+      "serious": [
+        "optic neuritis (dose- and duration-dependent; reversible if caught early)",
+        "color vision loss (red-green discrimination)",
+        "peripheral neuropathy (less common)",
+        "hyperuricemia"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "75\u201380% oral bioavailability; unaffected by food",
+      "distribution": "widely distributed; 50% enters red blood cells; poor CSF penetration (unless inflamed)",
+      "metabolism": "hepatic partial oxidation",
+      "excretion": "renal (50% unchanged); dose adjustment required in renal impairment",
+      "half_life": "3\u20134 hours",
+      "onset": "2\u20134 hours",
+      "peak": "2\u20134 hours",
+      "duration": "24 hours",
+      "protein_binding": "20\u201330%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "aluminum-containing antacids",
+        "mechanism": "reduce ethambutol absorption; separate by 4 hours",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Baseline visual acuity testing (Snellen chart) and color vision testing (Ishihara plates) are mandatory before starting therapy and should be repeated monthly during therapy.",
+      "Instruct patients to immediately report any change in vision, blurred vision, color vision disturbance, or eye pain \u2014 early discontinuation of ethambutol is essential to prevent permanent optic nerve damage.",
+      "Reduce dose in renal impairment; monitor BUN and creatinine \u2014 ethambutol accumulates in kidney disease.",
+      "Ethambutol is the 'E' in the standard RIPE regimen (Rifampin, Isoniazid, Pyrazinamide, Ethambutol); it can typically be discontinued once drug susceptibility results are confirmed."
+    ],
+    "clinical_pearls": [
+      "Optic neuritis from ethambutol is dose-dependent and usually reversible if the drug is stopped promptly; irreversible vision loss can occur with continued use, making visual monitoring mandatory.",
+      "Color vision loss (specifically red-green discrimination) often precedes visual acuity changes, making color vision testing a sensitive early monitoring tool."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "category B",
+    "lactation_safety": "compatible",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "tuberculosis",
+      "RIPE-regimen",
+      "MAC-infection"
+    ],
+    "adverse_effect_tags": [
+      "optic-neuritis",
+      "color-vision-loss"
+    ],
+    "interaction_tags": [
+      "antacid-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "cell-wall-synthesis"
+      ],
+      "prototype_class": "arabinosyltransferase inhibitors",
+      "adme_profile": "renally-cleared",
+      "presentation_cluster": [
+        "tuberculosis"
+      ],
+      "adverse_cluster": [
+        "optic-neuritis"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "pyrazinamide",
+    "generic_name": "pyrazinamide",
+    "brand_names": [
+      "PZA"
+    ],
+    "drug_class": "nicotinamide analog antimycobacterial",
+    "subclass": "pyrazinamide prodrug",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "pyrazinoic acid (PZA metabolite) \u2014 targets fatty acid synthesis and disrupts membrane potential"
+    ],
+    "mechanism_summary": "Prodrug converted by mycobacterial pyrazinamidase/nicotinamidase to active pyrazinoic acid; uniquely active in acidic pH environments (within macrophage phagolysosomes), killing dormant organisms not targeted by other first-line agents; key for shortening TB regimens.",
+    "indications": [
+      "active tuberculosis (part of standard RIPE regimen for first 2 months \u2014 sterilizing phase)"
+    ],
+    "contraindications": [
+      "pyrazinamide hypersensitivity",
+      "severe hepatic disease",
+      "gout (relative)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "hyperuricemia (universal)",
+        "arthralgia/gout exacerbation",
+        "GI upset"
+      ],
+      "serious": [
+        "hepatotoxicity (most hepatotoxic first-line TB drug)",
+        "gout precipitation",
+        "photosensitivity"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "well absorbed orally (~90%); unaffected by food",
+      "distribution": "widely distributed; crosses BBB (CSF levels 87\u2013105% of serum)",
+      "metabolism": "hepatic hydrolysis to pyrazinoic acid (active) then hydroxylation",
+      "excretion": "renal",
+      "half_life": "9\u201310 hours",
+      "onset": "1\u20133 hours",
+      "peak": "1\u20132 hours",
+      "duration": "24 hours",
+      "protein_binding": "10\u201320%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "uricosuric agents (probenecid)",
+        "mechanism": "pyrazinoic acid inhibits renal tubular secretion of uric acid; interferes with uricosuric effect",
+        "severity": "moderate"
+      },
+      {
+        "drug": "cyclosporine",
+        "mechanism": "reduced cyclosporine levels via hepatic enzyme interactions",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Baseline uric acid level is recommended; pyrazinamide universally raises uric acid \u2014 allopurinol or dose reduction may be needed if symptomatic gout develops.",
+      "Monitor LFTs (AST, ALT, total bilirubin) monthly or more frequently in patients with pre-existing liver disease.",
+      "Counsel patients to report joint pain (especially great toe) and skin rashes; advise adequate hydration.",
+      "Used only for the initial 2-month sterilizing phase of TB therapy; discontinuation after month 2 is standard unless drug-resistant TB."
+    ],
+    "clinical_pearls": [
+      "Pyrazinamide's unique ability to kill dormant, intracellular mycobacteria in the acidic phagolysosomal environment is the key reason that standard TB treatment was shortened from 18 months to 6 months when PZA was incorporated into the regimen.",
+      "All three first-line hepatotoxic agents (isoniazid, rifampin, pyrazinamide) can cause drug-induced liver injury in the RIPE regimen; when all three are given together, the hepatotoxicity risk is additive."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "category C",
+    "lactation_safety": "compatible",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "tuberculosis",
+      "RIPE-regimen"
+    ],
+    "adverse_effect_tags": [
+      "hyperuricemia",
+      "hepatotoxicity",
+      "gout"
+    ],
+    "interaction_tags": [],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "mycobacterial-cell-wall"
+      ],
+      "prototype_class": "pyrazinamide analogs",
+      "adme_profile": "renally-cleared",
+      "presentation_cluster": [
+        "tuberculosis"
+      ],
+      "adverse_cluster": [
+        "hepatotoxicity",
+        "hyperuricemia"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "bedaquiline",
+    "generic_name": "bedaquiline",
+    "brand_names": [
+      "Sirturo"
+    ],
+    "drug_class": "diarylquinoline antimycobacterial",
+    "subclass": "ATP synthase inhibitor (first-in-class for TB)",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "mycobacterial ATP synthase (atpE subunit)"
+    ],
+    "mechanism_summary": "Specifically inhibits mycobacterial ATP synthase by binding the c subunit of ATP synthase, blocking ATP production; bactericidal with selectivity for M. tuberculosis; first new TB drug class in 40 years.",
+    "indications": [
+      "multidrug-resistant tuberculosis (MDR-TB) as part of combination therapy"
+    ],
+    "contraindications": [
+      "QTc >500 ms",
+      "concurrent use of strong CYP3A4 inducers that would reduce bedaquiline levels"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "arthralgia",
+        "headache"
+      ],
+      "serious": [
+        "QTc prolongation (requires ECG monitoring throughout therapy)",
+        "hepatotoxicity",
+        "increased mortality signal in clinical trials (clinical significance uncertain)"
+      ]
+    },
+    "black_box_warnings": [
+      "QTc prolongation",
+      "increased risk of death (not caused by treatment of DR-TB \u2014 mechanism unclear from clinical trial data)"
+    ],
+    "pharmacokinetics": {
+      "absorption": "increased with food (~2-fold with high-fat meal); administer with food",
+      "distribution": "highly lipophilic; large Vd; slow redistribution from deep compartment",
+      "metabolism": "hepatic CYP3A4 (primary)",
+      "excretion": "primarily fecal",
+      "half_life": "5.5 months (terminal half-life due to deep tissue distribution)",
+      "onset": "1\u20135 hours",
+      "peak": "5 hours",
+      "duration": "24 weeks treatment course",
+      "protein_binding": ">99%",
+      "vd": "very large"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CYP3A4 inducers (rifamycins)",
+        "mechanism": "reduce bedaquiline levels by ~50%; avoid concurrent rifampin/rifabutin",
+        "severity": "major"
+      },
+      {
+        "drug": "QTc-prolonging drugs",
+        "mechanism": "additive QTc prolongation; obtain ECG at baseline and during therapy",
+        "severity": "major"
+      },
+      {
+        "drug": "CYP3A4 inhibitors",
+        "mechanism": "increase bedaquiline exposure and QTc risk",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer with food to ensure adequate absorption; obtain ECG at baseline, and at 2, 12, and 24 weeks of treatment.",
+      "Monitor serum potassium, calcium, and magnesium before starting; electrolyte abnormalities increase QTc risk.",
+      "Monitor LFTs monthly; instruct patient to report jaundice, fatigue, or right upper quadrant pain.",
+      "Bedaquiline is used only for MDR-TB as part of a multi-drug regimen under the supervision of a TB specialist."
+    ],
+    "clinical_pearls": [
+      "Bedaquiline's novel mechanism (ATP synthase inhibition) provides no cross-resistance with any existing TB drug class, making it a critical addition to MDR-TB and XDR-TB treatment regimens.",
+      "Its extremely long terminal half-life (~5.5 months) means drug persists in the body for months after a 24-week course ends; monitoring for QTc prolongation should continue even after discontinuation."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "limited data; use only if benefit outweighs risk",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "MDR-tuberculosis",
+      "XDR-TB"
+    ],
+    "adverse_effect_tags": [
+      "QT-prolongation",
+      "hepatotoxicity"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate",
+      "QT-prolonging",
+      "rifamycin-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "ATP-synthase-inhibitor"
+      ],
+      "prototype_class": "diarylquinolines",
+      "adme_profile": "hepatic-fecal-cleared",
+      "presentation_cluster": [
+        "MDR-tuberculosis"
+      ],
+      "adverse_cluster": [
+        "QT-prolongation",
+        "hepatotoxicity"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate",
+        "QT-prolonging"
+      ]
+    }
+  },
+  {
+    "id": "delamanid",
+    "generic_name": "delamanid",
+    "brand_names": [
+      "Deltyba"
+    ],
+    "drug_class": "nitroimidazole antimycobacterial",
+    "subclass": "mycobacterial cell wall synthesis inhibitor (second-in-class for MDR-TB)",
+    "prototype_for": false,
+    "prototype_drug": "bedaquiline",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "mycobacterial mycolic acid synthesis (via nitro group metabolites)"
+    ],
+    "mechanism_summary": "Prodrug converted by mycobacterial enzymes to reactive metabolites that inhibit mycolic acid biosynthesis, disrupting the mycobacterial cell wall; bactericidal against both replicating and dormant M. tuberculosis.",
+    "indications": [
+      "multidrug-resistant tuberculosis (MDR-TB) as part of combination therapy (when other regimens cannot be constructed)"
+    ],
+    "contraindications": [
+      "QTc >500 ms",
+      "severe albumin depletion (increases QTc risk from delamanid metabolite)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "dizziness",
+        "insomnia"
+      ],
+      "serious": [
+        "QTc prolongation (dose-dependent; mediated by active metabolite DM-6705)",
+        "hepatotoxicity",
+        "psychiatric effects"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "increased ~2.7-fold with high-fat meal; administer with food",
+      "distribution": "highly protein-bound; metabolized to multiple active and inactive metabolites",
+      "metabolism": "extensive albumin-mediated and CYP3A4-mediated metabolism",
+      "excretion": "fecal (primarily)",
+      "half_life": "30\u201338 hours",
+      "onset": "4 hours",
+      "peak": "4 hours",
+      "duration": "6-month course",
+      "protein_binding": ">99% (albumin-bound)",
+      "vd": "large"
+    },
+    "drug_interactions": [
+      {
+        "drug": "QTc-prolonging drugs",
+        "mechanism": "additive QTc prolongation",
+        "severity": "major"
+      },
+      {
+        "drug": "CYP3A4 inducers",
+        "mechanism": "reduce delamanid metabolite levels; efficacy concern",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer with food; obtain baseline ECG and repeat every 4\u20138 weeks throughout therapy.",
+      "Monitor serum albumin \u2014 low albumin increases concentrations of QTc-prolonging metabolite DM-6705.",
+      "Use only in combination with a WHO-recommended MDR-TB regimen under specialist supervision.",
+      "Monitor for CNS and psychiatric symptoms; psychiatric monitoring is recommended during therapy."
+    ],
+    "clinical_pearls": [
+      "Delamanid and bedaquiline represent the first new anti-TB drug classes approved in 40 years and have transformed the treatment landscape for MDR-TB.",
+      "Combination of bedaquiline and delamanid may increase QTc risk, requiring careful ECG monitoring; evidence suggests the combination can be used safely in MDR-TB when needed."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "limited data",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "MDR-tuberculosis"
+    ],
+    "adverse_effect_tags": [
+      "QT-prolongation",
+      "hepatotoxicity"
+    ],
+    "interaction_tags": [
+      "QT-prolonging",
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "mycobacterial-cell-wall"
+      ],
+      "prototype_class": "nitroimidazole antimycobacterials",
+      "adme_profile": "hepatic-fecal-cleared",
+      "presentation_cluster": [
+        "MDR-tuberculosis"
+      ],
+      "adverse_cluster": [
+        "QT-prolongation"
+      ],
+      "interaction_cluster": [
+        "QT-prolonging"
+      ]
+    }
+  },
+  {
+    "id": "pretomanid",
+    "generic_name": "pretomanid",
+    "brand_names": [
+      "Dovprela"
+    ],
+    "drug_class": "nitroimidazole antimycobacterial",
+    "subclass": "BPaL regimen component",
+    "prototype_for": false,
+    "prototype_drug": "delamanid",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "mycobacterial cell envelope (aerobic and anaerobic mechanisms)"
+    ],
+    "mechanism_summary": "Aerobically: inhibits mycobacterial cell wall lipid biosynthesis (mycolic acid and arabinogalactan); anaerobically: generates reactive nitrogen intermediates that are toxic to dormant bacteria; active against extensively drug-resistant TB.",
+    "indications": [
+      "extensively drug-resistant tuberculosis (XDR-TB) or treatment-intolerant/non-responsive MDR-TB \u2014 as part of the BPaL regimen (Bedaquiline + Pretomanid + Linezolid)"
+    ],
+    "contraindications": [
+      "nitroimidazole hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "peripheral neuropathy (primarily from linezolid in BPaL)",
+        "myelosuppression (from linezolid)",
+        "nausea",
+        "hepatotoxicity"
+      ],
+      "serious": [
+        "QTc prolongation",
+        "visual disturbances",
+        "psychiatric effects",
+        "lactic acidosis (from linezolid)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "increased ~2-fold with moderate-fat meal; administer with food",
+      "distribution": "large Vd",
+      "metabolism": "hepatic; multiple metabolic pathways",
+      "excretion": "fecal (primarily)",
+      "half_life": "16\u201318 hours",
+      "onset": "4\u20135 hours",
+      "peak": "4\u20135 hours",
+      "duration": "6-month BPaL course",
+      "protein_binding": ">96%",
+      "vd": "large"
+    },
+    "drug_interactions": [
+      {
+        "drug": "QTc-prolonging drugs",
+        "mechanism": "additive QTc prolongation",
+        "severity": "major"
+      },
+      {
+        "drug": "serotonergic drugs (with linezolid in BPaL)",
+        "mechanism": "linezolid component can cause serotonin syndrome",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer pretomanid only as part of the BPaL regimen (bedaquiline + pretomanid + linezolid) for XDR-TB or treatment-intolerant MDR-TB under specialist supervision.",
+      "Monitor CBC twice monthly due to linezolid-induced myelosuppression in the BPaL regimen; linezolid dose reductions are often required.",
+      "Obtain baseline ECG and repeat every 4 weeks; bedaquiline and pretomanid both prolong QTc.",
+      "Monitor LFTs, complete neurological assessment, and screen for psychiatric symptoms monthly throughout the 6-month course."
+    ],
+    "clinical_pearls": [
+      "The BPaL regimen (bedaquiline, pretomanid, linezolid) represents a 6-month all-oral treatment option for XDR-TB that demonstrated 89% success in the ZeNix trial, transforming the treatment landscape for previously nearly untreatable TB.",
+      "Pretomanid received accelerated FDA approval in 2019, becoming the third new anti-TB drug in 50 years; its approval was specifically for XDR-TB and treatment-intolerant MDR-TB rather than standard MDR-TB."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "limited data",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "XDR-tuberculosis",
+      "MDR-tuberculosis",
+      "BPaL-regimen"
+    ],
+    "adverse_effect_tags": [
+      "QT-prolongation",
+      "hepatotoxicity",
+      "peripheral-neuropathy"
+    ],
+    "interaction_tags": [
+      "QT-prolonging",
+      "serotonin-syndrome"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "mycobacterial-cell-wall"
+      ],
+      "prototype_class": "nitroimidazole antimycobacterials",
+      "adme_profile": "hepatic-fecal-cleared",
+      "presentation_cluster": [
+        "XDR-tuberculosis"
+      ],
+      "adverse_cluster": [
+        "QT-prolongation"
+      ],
+      "interaction_cluster": [
+        "QT-prolonging"
+      ]
+    }
+  },
+  {
+    "id": "dapsone",
+    "generic_name": "dapsone",
+    "brand_names": [
+      "Aczone (topical)",
+      "Dapsone"
+    ],
+    "drug_class": "sulfone antibiotic",
+    "subclass": "anti-leprosy and anti-pneumocystis agent",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "dihydropteroate synthase (DHPS)"
+    ],
+    "mechanism_summary": "Inhibits DHPS by competing with PABA, blocking folate synthesis; bacteriostatic/static against M. leprae and Pneumocystis jirovecii; mechanism is identical to sulfonamides.",
+    "indications": [
+      "leprosy (Hansen's disease \u2014 part of multidrug therapy)",
+      "Pneumocystis jirovecii pneumonia (PCP) prophylaxis in HIV",
+      "PCP treatment (in combination with trimethoprim)",
+      "dermatitis herpetiformis"
+    ],
+    "contraindications": [
+      "dapsone hypersensitivity",
+      "G6PD deficiency (relative \u2014 major hemolysis risk)",
+      "sulfonamide hypersensitivity (cross-reactivity possible)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "dose-related methemoglobinemia (universal, usually mild)",
+        "hemolytic anemia (dose-related; exacerbated by G6PD deficiency)",
+        "GI upset"
+      ],
+      "serious": [
+        "severe methemoglobinemia (at high doses or G6PD deficiency)",
+        "DRESS syndrome (dapsone hypersensitivity syndrome)",
+        "agranulocytosis",
+        "peripheral neuropathy",
+        "hepatotoxicity"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "86\u201395% oral bioavailability; unaffected by food",
+      "distribution": "widely distributed; enters red blood cells (accumulation causes methemoglobinemia)",
+      "metabolism": "hepatic acetylation (NAT2-dependent \u2014 slow vs. fast acetylators) and CYP oxidation (forms toxic hydroxylamine metabolite)",
+      "excretion": "renal (70\u201385%)",
+      "half_life": "20\u201330 hours",
+      "onset": "1\u20134 hours",
+      "peak": "2\u20138 hours",
+      "duration": "24 hours",
+      "protein_binding": "73%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "pyrimethamine/trimethoprim",
+        "mechanism": "folate antagonism combined with dapsone's DHPS inhibition provides synergy against PCP",
+        "severity": "beneficial"
+      },
+      {
+        "drug": "rifampin",
+        "mechanism": "CYP induction reduces dapsone levels; reduced efficacy for leprosy",
+        "severity": "major"
+      },
+      {
+        "drug": "probenecid",
+        "mechanism": "reduces renal excretion of dapsone metabolites",
+        "severity": "minor"
+      }
+    ],
+    "nursing_considerations": [
+      "Screen for G6PD deficiency before initiating therapy; G6PD-deficient patients are at high risk for severe hemolytic anemia.",
+      "Monitor CBC and methemoglobin level; cyanosis or oxygen saturation that does not improve with supplemental oxygen may indicate methemoglobinemia.",
+      "Methemoglobin >30% requires IV methylene blue 1\u20132 mg/kg; instruct caregivers on signs of methemoglobinemia.",
+      "Monitor for dapsone hypersensitivity syndrome (DRESS): fever, rash, lymphadenopathy, hepatitis \u2014 occurs 3\u20138 weeks after initiation; requires immediate discontinuation."
+    ],
+    "clinical_pearls": [
+      "Dapsone universally causes methemoglobinemia to some degree due to formation of hydroxylamine metabolite in red blood cells; healthy patients tolerate methemoglobin levels of 5\u201310% without symptoms, but G6PD-deficient patients may develop severe hemolytic anemia.",
+      "For PCP prophylaxis in G6PD-normal HIV patients, dapsone 100 mg daily is an acceptable alternative when trimethoprim-sulfamethoxazole is not tolerated due to sulfonamide allergy."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "category C",
+    "lactation_safety": "use with caution (monitor infant for hemolysis)",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "leprosy",
+      "PCP-prophylaxis",
+      "dermatitis-herpetiformis"
+    ],
+    "adverse_effect_tags": [
+      "methemoglobinemia",
+      "hemolytic-anemia",
+      "DRESS"
+    ],
+    "interaction_tags": [
+      "G6PD-interaction",
+      "rifampin-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "sulfonamide"
+      ],
+      "prototype_class": "sulfones",
+      "adme_profile": "renal-cleared",
+      "presentation_cluster": [
+        "leprosy",
+        "PCP-prophylaxis"
+      ],
+      "adverse_cluster": [
+        "methemoglobinemia",
+        "hemolytic-anemia",
+        "DRESS"
+      ],
+      "interaction_cluster": [
+        "G6PD-interaction"
+      ]
+    }
+  },
+  {
+    "id": "clofazimine",
+    "generic_name": "clofazimine",
+    "brand_names": [
+      "Lamprene"
+    ],
+    "drug_class": "riminophenazine antibiotic",
+    "subclass": "anti-leprosy and anti-NTM agent",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "mycobacterial DNA and membrane"
+    ],
+    "mechanism_summary": "Binds mycobacterial DNA and generates reactive oxygen species; also disrupts the bacterial electron transport chain by acting as a lipophilic electron acceptor; exhibits slow bactericidal activity against M. leprae and is active against M. abscessus and NTM.",
+    "indications": [
+      "leprosy (part of multidrug therapy \u2014 WHO regimen)",
+      "Mycobacterium avium complex (MAC) \u2014 treatment in non-HIV patients",
+      "M. abscessus infections",
+      "MDR-TB (second-line)"
+    ],
+    "contraindications": [
+      "clofazimine hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "red-brown to black skin discoloration (universal \u2014 dose- and duration-dependent)",
+        "ichthyosis and dry skin",
+        "GI upset"
+      ],
+      "serious": [
+        "QTc prolongation",
+        "crystalline enteropathy (deposition in intestinal wall \u2014 abdominal pain)",
+        "hepatotoxicity",
+        "phototoxicity"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "45\u201362% oral; must be taken with food (fat increases absorption)",
+      "distribution": "highly lipophilic; accumulates in fatty tissues, skin, reticuloendothelial system; Vd >1000 L",
+      "metabolism": "not significantly metabolized",
+      "excretion": "primarily fecal; minimal renal excretion; extremely slow elimination",
+      "half_life": "70 days (terminal, due to tissue accumulation)",
+      "onset": "days (slow accumulation)",
+      "peak": "8 hours",
+      "duration": "months (due to tissue stores)",
+      "protein_binding": ">99%",
+      "vd": "extremely large (>1000 L)"
+    },
+    "drug_interactions": [
+      {
+        "drug": "QTc-prolonging drugs",
+        "mechanism": "additive QTc prolongation",
+        "severity": "major"
+      },
+      {
+        "drug": "bedaquiline/delamanid",
+        "mechanism": "combination increases QTc prolongation risk in MDR-TB regimens",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Counsel patients thoroughly about inevitable skin discoloration \u2014 red-brown to black pigmentation of skin, conjunctivae, and body fluids (tears, urine, sweat) develops in all patients; it fades gradually over months to years after stopping therapy.",
+      "Administer with food or fatty meals to maximize absorption.",
+      "Monitor ECG periodically for QTc prolongation, especially when combined with bedaquiline or other QTc-prolonging drugs in MDR-TB regimens.",
+      "Abdominal pain or intestinal obstruction symptoms may indicate crystalline enteropathy; report to prescriber."
+    ],
+    "clinical_pearls": [
+      "Clofazimine's skin discoloration is so reliable that patients in leprosy clinical trials who developed characteristic skin pigmentation were unblinded by their discoloration \u2014 an important consideration in study design.",
+      "The WHO multidrug therapy (MDT) for leprosy consists of rifampin + dapsone + clofazimine (for multibacillary disease) or rifampin + dapsone (for paucibacillary disease) for 6\u201312 months."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "category C",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "leprosy",
+      "NTM-infection",
+      "MDR-tuberculosis"
+    ],
+    "adverse_effect_tags": [
+      "skin-discoloration",
+      "QT-prolongation",
+      "crystalline-enteropathy"
+    ],
+    "interaction_tags": [
+      "QT-prolonging"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "riminophenazine"
+      ],
+      "prototype_class": "riminophenazines",
+      "adme_profile": "fecal-cleared",
+      "presentation_cluster": [
+        "leprosy",
+        "NTM-infection"
+      ],
+      "adverse_cluster": [
+        "skin-discoloration",
+        "QT-prolongation"
+      ],
+      "interaction_cluster": [
+        "QT-prolonging"
+      ]
+    }
+  },
+  {
+    "id": "valacyclovir",
+    "generic_name": "valacyclovir",
+    "brand_names": [
+      "Valtrex"
+    ],
+    "drug_class": "antiviral \u2014 acyclovir prodrug",
+    "subclass": "L-valyl ester prodrug of acyclovir",
+    "prototype_for": false,
+    "prototype_drug": "acyclovir",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "herpesvirus thymidine kinase",
+      "viral DNA polymerase"
+    ],
+    "mechanism_summary": "Prodrug rapidly hydrolyzed to acyclovir; acyclovir is phosphorylated by viral thymidine kinase to acyclovir triphosphate, which inhibits viral DNA polymerase and acts as a chain terminator; selective because viral TK activity is required for activation.",
+    "indications": [
+      "herpes labialis (cold sores) \u2014 episodic treatment and suppression",
+      "genital herpes \u2014 episodic treatment and suppression",
+      "herpes zoster (shingles)",
+      "chickenpox (VZV) in immunocompromised",
+      "CMV prophylaxis in transplant recipients (high doses)"
+    ],
+    "contraindications": [
+      "acyclovir/valacyclovir hypersensitivity",
+      "thrombotic thrombocytopenic purpura/HUS in immunocompromised patients at very high doses"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "headache",
+        "diarrhea"
+      ],
+      "serious": [
+        "nephrotoxicity (crystalluria, acute kidney injury \u2014 especially dehydrated patients)",
+        "thrombotic microangiopathy (TMA/TTP-HUS \u2014 only at very high doses in severely immunocompromised)",
+        "CNS toxicity (confusion, hallucinations \u2014 with accumulation in renal failure)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "54% bioavailability as valacyclovir (converted to acyclovir); 3\u20135x higher than oral acyclovir",
+      "distribution": "widely distributed; CSF levels ~50% of plasma; crosses placenta",
+      "metabolism": "rapidly converted to acyclovir by first-pass intestinal/hepatic hydrolysis",
+      "excretion": "renal (45\u201379% unchanged acyclovir + 9-carboxymethoxymethylguanine metabolite)",
+      "half_life": "2.5\u20133.3 hours (acyclovir after valacyclovir conversion)",
+      "onset": "0.5\u20131 hour",
+      "peak": "1.5\u20132.5 hours",
+      "duration": "8\u201312 hours",
+      "protein_binding": "15%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "nephrotoxic agents, probenecid, cimetidine",
+        "mechanism": "reduced renal tubular secretion of acyclovir; increased levels and nephrotoxicity risk",
+        "severity": "moderate"
+      },
+      {
+        "drug": "zidovudine",
+        "mechanism": "possible additive CNS toxicity (drowsiness, lethargy)",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Maintain adequate hydration (minimum 2 L/day) during therapy to prevent crystalluria and nephrotoxicity; check baseline and periodic BUN/creatinine.",
+      "Dose reduction is required in renal impairment; very high-dose regimens (used for CMV prophylaxis) require close renal monitoring.",
+      "Initiate therapy within 72 hours of symptom onset for shingles to maximize efficacy; earlier is better.",
+      "Counsel patients with genital herpes that suppressive therapy reduces (but does not eliminate) viral shedding and transmission risk."
+    ],
+    "clinical_pearls": [
+      "Valacyclovir's prodrug formulation achieves 3\u20135 times higher acyclovir bioavailability than oral acyclovir, enabling three-times-daily (vs. five-times-daily) dosing for herpes zoster \u2014 a major compliance advantage.",
+      "At high doses used for CMV prophylaxis (2 g four times daily), valacyclovir can cause TTP-HUS in severely immunocompromised patients; this complication is extremely rare at doses used for HSV/VZV treatment."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "compatible (preferred oral herpes antiviral)",
+    "lactation_safety": "compatible",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "herpes-zoster",
+      "genital-herpes",
+      "herpes-labialis",
+      "CMV-prophylaxis"
+    ],
+    "adverse_effect_tags": [
+      "nephrotoxicity",
+      "CNS-toxicity"
+    ],
+    "interaction_tags": [
+      "nephrotoxic-combinations",
+      "renal-clearance"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "nucleoside-analog"
+      ],
+      "prototype_class": "acyclovir prodrugs",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "herpes-zoster",
+        "genital-herpes"
+      ],
+      "adverse_cluster": [
+        "nephrotoxicity"
+      ],
+      "interaction_cluster": [
+        "nephrotoxic-combinations"
+      ]
+    }
+  },
+  {
+    "id": "famciclovir",
+    "generic_name": "famciclovir",
+    "brand_names": [
+      "Famvir"
+    ],
+    "drug_class": "antiviral \u2014 penciclovir prodrug",
+    "subclass": "oral prodrug of penciclovir",
+    "prototype_for": false,
+    "prototype_drug": "acyclovir",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "herpesvirus thymidine kinase",
+      "viral DNA polymerase"
+    ],
+    "mechanism_summary": "Prodrug converted to penciclovir, which is phosphorylated by viral TK to penciclovir triphosphate; inhibits viral DNA polymerase with longer intracellular half-life than acyclovir triphosphate, potentially allowing less frequent dosing.",
+    "indications": [
+      "herpes zoster (shingles)",
+      "genital herpes \u2014 initial and recurrent episodes and suppression",
+      "herpes labialis (cold sores) in immunocompetent adults"
+    ],
+    "contraindications": [
+      "famciclovir/penciclovir hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "headache",
+        "nausea",
+        "diarrhea",
+        "fatigue"
+      ],
+      "serious": [
+        "nephrotoxicity (less common than acyclovir)",
+        "CNS effects (headache, confusion at high doses)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "77% bioavailability; converted to penciclovir by first-pass deacetylation and oxidation",
+      "distribution": "widely distributed; intracellular penciclovir triphosphate half-life 7\u201320 hours in infected cells",
+      "metabolism": "rapidly deacetylated and oxidized to penciclovir in intestinal mucosa and liver",
+      "excretion": "renal (73% as penciclovir)",
+      "half_life": "2\u20133 hours (penciclovir plasma); intracellular half-life much longer",
+      "onset": "rapid",
+      "peak": "0.9 hours",
+      "duration": "8\u201312 hours (dosing intervals)",
+      "protein_binding": "20%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "probenecid",
+        "mechanism": "reduces renal excretion of penciclovir; increased exposure",
+        "severity": "minor"
+      },
+      {
+        "drug": "other nephrotoxic drugs",
+        "mechanism": "additive nephrotoxicity potential",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer with or without food; initiate therapy promptly after symptom onset \u2014 within 72 hours for shingles, 24\u201348 hours for genital herpes for optimal efficacy.",
+      "Reduce dose in renal impairment; monitor renal function with prolonged therapy.",
+      "Counsel patients with genital herpes on safe sexual practices and that suppressive therapy reduces but does not eliminate shedding.",
+      "Older patients with shingles should be counseled that antiviral therapy reduces both duration and severity of post-herpetic neuralgia if started promptly."
+    ],
+    "clinical_pearls": [
+      "Penciclovir triphosphate (the active form of famciclovir) has a markedly longer intracellular half-life (7\u201320 hours vs. 1 hour for acyclovir triphosphate), which is the pharmacological basis for famciclovir's more convenient dosing intervals.",
+      "For single-day treatment of cold sores (herpes labialis), famciclovir 1500 mg single dose has shown efficacy, offering a convenient option for patients."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "category B",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "herpes-zoster",
+      "genital-herpes",
+      "herpes-labialis"
+    ],
+    "adverse_effect_tags": [
+      "headache",
+      "nausea",
+      "nephrotoxicity"
+    ],
+    "interaction_tags": [
+      "renal-clearance"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "nucleoside-analog"
+      ],
+      "prototype_class": "acyclovir-class antivirals",
+      "adme_profile": "renally-cleared",
+      "presentation_cluster": [
+        "herpes-zoster",
+        "genital-herpes"
+      ],
+      "adverse_cluster": [
+        "headache"
+      ],
+      "interaction_cluster": [
+        "renal-clearance"
+      ]
+    }
+  },
+  {
+    "id": "ganciclovir",
+    "generic_name": "ganciclovir",
+    "brand_names": [
+      "Cytovene"
+    ],
+    "drug_class": "antiviral \u2014 guanosine analog",
+    "subclass": "anti-CMV nucleoside analog",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "CMV UL97 kinase (phosphorylation)",
+      "viral DNA polymerase"
+    ],
+    "mechanism_summary": "Phosphorylated by CMV-encoded UL97 kinase to the monophosphate form; then by cellular kinases to ganciclovir triphosphate, which inhibits CMV DNA polymerase 10 times more potently than cellular DNA polymerases; also competitively inhibits dGTP incorporation.",
+    "indications": [
+      "CMV retinitis in AIDS patients",
+      "CMV disease prophylaxis in transplant recipients (usually as IV bridge before switching to oral valganciclovir)",
+      "CMV esophagitis/colitis"
+    ],
+    "contraindications": [
+      "ganciclovir/valganciclovir hypersensitivity",
+      "severe neutropenia (ANC <500/mm3) \u2014 relative",
+      "severe thrombocytopenia (relative)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "neutropenia (dose-limiting)",
+        "thrombocytopenia",
+        "anemia",
+        "fever"
+      ],
+      "serious": [
+        "severe myelosuppression",
+        "nephrotoxicity",
+        "CNS effects (confusion, seizures)",
+        "carcinogenesis (animal data)",
+        "spermatogenesis impairment"
+      ]
+    },
+    "black_box_warnings": [
+      "neutropenia, anemia, thrombocytopenia (may require treatment modification)",
+      "carcinogenesis and mutagenesis (animal data)",
+      "impaired fertility"
+    ],
+    "pharmacokinetics": {
+      "absorption": "IV (poor oral bioavailability ~6\u20139% for IV; largely replaced by valganciclovir orally)",
+      "distribution": "widely distributed; CSF penetration ~24\u201370% of plasma",
+      "metabolism": "phosphorylated intracellularly; not metabolized further in plasma",
+      "excretion": "renal (91\u201399% unchanged); dose-critical adjustment in renal impairment",
+      "half_life": "3.5\u20134.8 hours",
+      "onset": "immediate (IV)",
+      "peak": "end of infusion",
+      "duration": "12 hours",
+      "protein_binding": "1\u20132%",
+      "vd": "moderate-large"
+    },
+    "drug_interactions": [
+      {
+        "drug": "zidovudine",
+        "mechanism": "additive myelosuppression; avoid combination or monitor CBC intensively",
+        "severity": "major"
+      },
+      {
+        "drug": "imipenem-cilastatin",
+        "mechanism": "additive seizure risk in renal failure",
+        "severity": "major"
+      },
+      {
+        "drug": "mycophenolate mofetil",
+        "mechanism": "competition for renal tubular secretion; both drug levels may increase",
+        "severity": "moderate"
+      },
+      {
+        "drug": "probenecid",
+        "mechanism": "reduces renal tubular secretion of ganciclovir; increased exposure",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor CBC with differential twice weekly during induction and weekly during maintenance; neutropenia is the primary dose-limiting toxicity \u2014 colony-stimulating factors (filgrastim, sargramostim) may be required.",
+      "Administer IV infusion over at least 1 hour (not as rapid infusion); ensure adequate hydration throughout infusion.",
+      "Handle ganciclovir as a cytotoxic agent; women of childbearing age and pregnant nurses should not prepare doses. Male patients should use effective contraception during and for 90 days after therapy.",
+      "Renal dose adjustment is mandatory; monitor SCr at least twice weekly \u2014 dose or frequency adjustments required at all levels of renal impairment."
+    ],
+    "clinical_pearls": [
+      "Ganciclovir IV is largely reserved for hospitalized patients with severe CMV disease or initial induction therapy; oral valganciclovir (ganciclovir prodrug with 60% bioavailability) has replaced IV ganciclovir for most outpatient maintenance and prophylaxis indications.",
+      "CMV resistance via UL97 kinase mutations reduces ganciclovir phosphorylation; foscarnet (which does not require viral phosphorylation) is the primary alternative for ganciclovir-resistant CMV."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "contraindicated (teratogenic/embryotoxic)",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "CMV-retinitis",
+      "CMV-prophylaxis-transplant",
+      "AIDS-CMV"
+    ],
+    "adverse_effect_tags": [
+      "neutropenia",
+      "myelosuppression",
+      "nephrotoxicity"
+    ],
+    "interaction_tags": [
+      "myelosuppression-interaction",
+      "nephrotoxic-combinations"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "nucleoside-analog"
+      ],
+      "prototype_class": "anti-CMV nucleoside analogs",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "CMV-disease",
+        "AIDS-opportunistic-infection"
+      ],
+      "adverse_cluster": [
+        "myelosuppression",
+        "nephrotoxicity"
+      ],
+      "interaction_cluster": [
+        "myelosuppression-interaction"
+      ]
+    }
+  },
+  {
+    "id": "valganciclovir",
+    "generic_name": "valganciclovir",
+    "brand_names": [
+      "Valcyte"
+    ],
+    "drug_class": "antiviral \u2014 ganciclovir prodrug",
+    "subclass": "oral prodrug of ganciclovir",
+    "prototype_for": false,
+    "prototype_drug": "ganciclovir",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "CMV UL97 kinase",
+      "viral DNA polymerase"
+    ],
+    "mechanism_summary": "L-valyl ester prodrug of ganciclovir; rapidly hydrolyzed to ganciclovir after absorption, achieving ~60% oral bioavailability (vs. ~6\u20139% for oral ganciclovir); then activated by viral UL97 kinase and cellular kinases to ganciclovir triphosphate.",
+    "indications": [
+      "CMV retinitis treatment in AIDS (induction and maintenance)",
+      "CMV disease prevention in solid organ transplant recipients",
+      "CMV disease prevention in pediatric kidney and heart transplant recipients"
+    ],
+    "contraindications": [
+      "ganciclovir/valganciclovir hypersensitivity",
+      "hemodialysis patients (contraindicated; excessive drug accumulation)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "neutropenia",
+        "anemia",
+        "thrombocytopenia",
+        "diarrhea",
+        "nausea"
+      ],
+      "serious": [
+        "severe myelosuppression (dose-limiting)",
+        "nephrotoxicity",
+        "carcinogenesis/mutagenesis (animal data)",
+        "impaired fertility"
+      ]
+    },
+    "black_box_warnings": [
+      "severe neutropenia, anemia, and thrombocytopenia",
+      "teratogenicity and carcinogenicity \u2014 handle as cytotoxic"
+    ],
+    "pharmacokinetics": {
+      "absorption": "59\u201361% bioavailability after oral administration with food (food increases AUC ~30%)",
+      "distribution": "widely distributed (same as ganciclovir after conversion)",
+      "metabolism": "rapidly hydrolyzed to ganciclovir by intestinal and hepatic esterases",
+      "excretion": "renal (as ganciclovir, >90% unchanged)",
+      "half_life": "4 hours (as ganciclovir after conversion)",
+      "onset": "rapid",
+      "peak": "1\u20133 hours",
+      "duration": "12 hours",
+      "protein_binding": "1\u20132%",
+      "vd": "large (same as ganciclovir)"
+    },
+    "drug_interactions": [
+      {
+        "drug": "zidovudine/myelosuppressive drugs",
+        "mechanism": "additive bone marrow suppression",
+        "severity": "major"
+      },
+      {
+        "drug": "mycophenolate mofetil",
+        "mechanism": "competition for renal tubular secretion; elevated levels of both drugs",
+        "severity": "moderate"
+      },
+      {
+        "drug": "didanosine",
+        "mechanism": "increased didanosine AUC when combined; increase toxicity risk",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer with food to maximize absorption; instruct patients not to crush or break tablets (cytotoxic \u2014 handle with care).",
+      "Perform CBC with differential weekly during CMV treatment and twice monthly for prophylaxis; neutropenia is the primary reason for dose modification.",
+      "NEVER administer to patients on hemodialysis \u2014 use IV ganciclovir with dose adjusted for dialysis instead.",
+      "Warn patients about teratogenicity; effective contraception required during and for 30\u201390 days after therapy for both men and women."
+    ],
+    "clinical_pearls": [
+      "Valganciclovir has essentially replaced IV ganciclovir for CMV disease prophylaxis in transplant recipients and maintenance therapy for CMV retinitis because its oral bioavailability achieves equivalent ganciclovir AUC to IV administration.",
+      "The dose of valganciclovir for CMV prophylaxis (900 mg once daily) differs from the treatment dose (900 mg twice daily); nurses must verify the indication-specific dosing regimen."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "contraindicated",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "CMV-prophylaxis-transplant",
+      "CMV-retinitis",
+      "AIDS-CMV"
+    ],
+    "adverse_effect_tags": [
+      "neutropenia",
+      "myelosuppression",
+      "nephrotoxicity"
+    ],
+    "interaction_tags": [
+      "myelosuppression-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "nucleoside-analog"
+      ],
+      "prototype_class": "anti-CMV nucleoside analogs",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "CMV-disease",
+        "transplant-prophylaxis"
+      ],
+      "adverse_cluster": [
+        "myelosuppression"
+      ],
+      "interaction_cluster": [
+        "myelosuppression-interaction"
+      ]
+    }
+  },
+  {
+    "id": "foscarnet",
+    "generic_name": "foscarnet",
+    "brand_names": [
+      "Foscavir"
+    ],
+    "drug_class": "antiviral \u2014 pyrophosphate analog",
+    "subclass": "non-nucleoside antiviral; direct viral polymerase inhibitor",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "viral DNA polymerase, RNA polymerase (HSV/CMV/HIV reverse transcriptase)"
+    ],
+    "mechanism_summary": "Pyrophosphate analog that directly inhibits viral DNA polymerases and reverse transcriptases at the pyrophosphate binding site; does NOT require intracellular activation by viral kinases, making it active against acyclovir-resistant HSV and ganciclovir-resistant CMV.",
+    "indications": [
+      "CMV retinitis (acyclovir- or ganciclovir-refractory)",
+      "acyclovir-resistant HSV or VZV infections",
+      "HHV-6 and HHV-8 infections",
+      "CMV disease in immunocompromised patients refractory to ganciclovir"
+    ],
+    "contraindications": [
+      "foscarnet hypersensitivity",
+      "CrCl <0.4 mL/min/kg (contraindicated)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nephrotoxicity (dose-limiting, very common)",
+        "electrolyte abnormalities (hypocalcemia, hypo/hyperphosphatemia, hypomagnesemia, hypokalemia)",
+        "nausea",
+        "fever"
+      ],
+      "serious": [
+        "severe electrolyte abnormalities causing seizures and cardiac arrhythmias",
+        "acute kidney injury",
+        "genital ulcers (from crystallization in urine)",
+        "CNS toxicity"
+      ]
+    },
+    "black_box_warnings": [
+      "nephrotoxicity \u2014 renal impairment occurs in most patients",
+      "electrolyte abnormalities \u2014 potentially life-threatening"
+    ],
+    "pharmacokinetics": {
+      "absorption": "IV only (poor oral bioavailability)",
+      "distribution": "50% deposits in bone; moderate plasma protein binding",
+      "metabolism": "not metabolized",
+      "excretion": "renal (92\u2013100% unchanged); dose-critical adjustment",
+      "half_life": "3\u20136 hours (plasma); bone storage may extend effective exposure",
+      "onset": "immediate (IV)",
+      "peak": "end of infusion",
+      "duration": "8\u201312 hours",
+      "protein_binding": "14\u201317%",
+      "vd": "moderate-large (40 L/kg)"
+    },
+    "drug_interactions": [
+      {
+        "drug": "nephrotoxic agents (aminoglycosides, amphotericin B, cyclosporine)",
+        "mechanism": "additive nephrotoxicity",
+        "severity": "major"
+      },
+      {
+        "drug": "pentamidine IV",
+        "mechanism": "additive nephrotoxicity and hypocalcemia risk",
+        "severity": "major"
+      },
+      {
+        "drug": "drugs that decrease serum calcium (bisphosphonates, chelating agents)",
+        "mechanism": "additive hypocalcemia risk",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Mandatory pre-hydration with 750\u20131000 mL normal saline before each foscarnet dose to reduce nephrotoxicity; maintain hydration throughout infusion.",
+      "Monitor electrolytes (Ca2+, Mg2+, PO4-, K+) before each infusion and replace as needed \u2014 hypocalcemia can cause perioral numbness, tetany, and cardiac arrhythmias.",
+      "Check serum creatinine at least twice weekly during induction; the foscarnet dose MUST be adjusted based on current CrCl using standardized dosing tables.",
+      "Ensure infusion via central venous line or at high dilution; foscarnet causes severe phlebitis when given peripherally; use infusion pump to prevent too-rapid infusion."
+    ],
+    "clinical_pearls": [
+      "Foscarnet does not require viral kinase activation, making it the treatment of choice for acyclovir-resistant HSV (often caused by TK mutations) and ganciclovir-resistant CMV (often caused by UL97 mutations).",
+      "The U-shaped electrolyte disturbance of foscarnet \u2014 ionized hypocalcemia and hypomagnesemia from chelation \u2014 can cause neuromuscular irritability; patients may experience perioral tingling, muscle cramps, or tetany even when total calcium appears normal."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "category C",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "acyclovir-resistant-HSV",
+      "ganciclovir-resistant-CMV",
+      "CMV-retinitis"
+    ],
+    "adverse_effect_tags": [
+      "nephrotoxicity",
+      "hypocalcemia",
+      "electrolyte-abnormalities"
+    ],
+    "interaction_tags": [
+      "nephrotoxic-combinations",
+      "electrolyte-depletion"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "pyrophosphate-analog"
+      ],
+      "prototype_class": "pyrophosphate analog antivirals",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "CMV-disease",
+        "drug-resistant-herpes"
+      ],
+      "adverse_cluster": [
+        "nephrotoxicity",
+        "electrolyte-disturbance"
+      ],
+      "interaction_cluster": [
+        "nephrotoxic-combinations"
+      ]
+    }
+  },
+  {
+    "id": "letermovir",
+    "generic_name": "letermovir",
+    "brand_names": [
+      "Prevymis"
+    ],
+    "drug_class": "antiviral \u2014 CMV terminase inhibitor",
+    "subclass": "first-in-class CMV terminase complex inhibitor",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "CMV terminase complex (pUL51-pUL56-pUL89)"
+    ],
+    "mechanism_summary": "Inhibits the CMV terminase complex responsible for cleaving viral DNA to unit-length genomes and packaging into capsids; novel mechanism distinct from all other anti-CMV drugs, with no cross-resistance with ganciclovir or foscarnet.",
+    "indications": [
+      "CMV prophylaxis in adult CMV-seropositive recipients of allogeneic hematopoietic stem cell transplant (HSCT)"
+    ],
+    "contraindications": [
+      "letermovir hypersensitivity",
+      "concurrent use of pimozide or ergot alkaloids (drug interactions via CYP inhibition)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "diarrhea",
+        "vomiting",
+        "peripheral edema",
+        "cough"
+      ],
+      "serious": [
+        "drug interactions via CYP3A4 and OATP1B1/3 inhibition",
+        "bradycardia (with co-administration of amiodarone)",
+        "hepatotoxicity (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral: 35% bioavailability; IV: complete; IV and oral have equivalent AUC",
+      "distribution": "widely distributed; moderate protein binding",
+      "metabolism": "minimal CYP3A4; primarily eliminated unchanged; letermovir inhibits CYP3A4, CYP2C8, and OATP1B1/B3 transporters",
+      "excretion": "primarily biliary/fecal (93%); renal minimal",
+      "half_life": "12 hours",
+      "onset": "rapid",
+      "peak": "1.5 hours (oral)",
+      "duration": "24 hours (once-daily)",
+      "protein_binding": "99%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "cyclosporine",
+        "mechanism": "OATP inhibition increases letermovir AUC ~2-fold; reduce letermovir dose from 480 mg to 240 mg when combined with cyclosporine",
+        "severity": "major"
+      },
+      {
+        "drug": "statins (substrates of OATP1B1/3)",
+        "mechanism": "OATP inhibition by letermovir increases statin exposure; rhabdomyolysis risk",
+        "severity": "major"
+      },
+      {
+        "drug": "pimozide",
+        "mechanism": "CYP3A4 inhibition may increase pimozide to toxic levels; contraindicated",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer once daily; when cyclosporine is co-administered, verify the letermovir dose is reduced from 480 mg to 240 mg daily.",
+      "Screen all concurrent medications for drug interactions, particularly statins and CYP3A4/OATP substrates.",
+      "Letermovir can be given IV or oral with equivalent efficacy; transition to oral when patient can tolerate medication.",
+      "Monitor for signs of breakthrough CMV infection; letermovir does not replace CMV monitoring (weekly quantitative CMV PCR) in HSCT recipients."
+    ],
+    "clinical_pearls": [
+      "Letermovir's unique mechanism \u2014 inhibition of CMV DNA packaging terminase \u2014 provides zero cross-resistance with ganciclovir and foscarnet, and its minimal myelosuppression profile makes it ideal for CMV prophylaxis in the already myelosuppressed HSCT population.",
+      "The 480 mg dose is reduced to 240 mg when combined with cyclosporine because cyclosporine (an OATP inhibitor) reduces letermovir's hepatic uptake by transporters, thereby dramatically increasing letermovir systemic exposure."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "category C",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "CMV-prophylaxis-HSCT",
+      "stem-cell-transplant"
+    ],
+    "adverse_effect_tags": [
+      "nausea",
+      "drug-interactions"
+    ],
+    "interaction_tags": [
+      "CYP3A4-inhibitor",
+      "OATP-inhibitor",
+      "cyclosporine-interaction",
+      "statin-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "terminase-inhibitor"
+      ],
+      "prototype_class": "CMV terminase inhibitors",
+      "adme_profile": "biliary-fecal-cleared",
+      "presentation_cluster": [
+        "CMV-prophylaxis-transplant"
+      ],
+      "adverse_cluster": [
+        "GI"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-inhibitor",
+        "OATP-inhibitor"
+      ]
+    }
+  },
+  {
+    "id": "zanamivir",
+    "generic_name": "zanamivir",
+    "brand_names": [
+      "Relenza"
+    ],
+    "drug_class": "neuraminidase inhibitor antiviral",
+    "subclass": "inhaled neuraminidase inhibitor (influenza)",
+    "prototype_for": false,
+    "prototype_drug": "oseltamivir",
+    "organ_systems": [
+      "infectious-disease",
+      "respiratory"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "influenza neuraminidase (NA)"
+    ],
+    "mechanism_summary": "Competitively inhibits influenza A and B neuraminidase, preventing cleavage of sialic acid from cell surface receptors; blocks viral release and spread from infected cells; inhaled formulation delivers drug directly to respiratory tract.",
+    "indications": [
+      "treatment of influenza A and B (initiated within 48 hours of symptom onset)",
+      "prophylaxis of influenza A and B in household contacts"
+    ],
+    "contraindications": [
+      "zanamivir hypersensitivity",
+      "severe asthma or COPD (risk of bronchospasm)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "cough (from inhalation)",
+        "bronchospasm (particularly in reactive airway disease)",
+        "sinusitis"
+      ],
+      "serious": [
+        "severe bronchospasm (with or without asthma/COPD \u2014 can be fatal)",
+        "anaphylaxis",
+        "neuropsychiatric events (particularly in pediatric patients)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "4\u201317% systemic absorption (inhaled); rest deposited in oropharynx",
+      "distribution": "minimal systemic distribution from inhaled route",
+      "metabolism": "not metabolized (unchanged drug systemically available)",
+      "excretion": "renal (unchanged, absorbed fraction)",
+      "half_life": "2.5\u20135.1 hours (systemic)",
+      "onset": "rapid (local respiratory tract)",
+      "peak": "1\u20132 hours",
+      "duration": "12 hours (twice-daily dosing for treatment)",
+      "protein_binding": "<10%",
+      "vd": "low (systemic)"
+    },
+    "drug_interactions": [
+      {
+        "drug": "live attenuated influenza vaccine",
+        "mechanism": "antiviral activity may reduce vaccine replication; do not administer 2 weeks before or 48 hours after zanamivir",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Teach inhaler technique: zanamivir is delivered via Diskhaler device; proper inhalation is essential for lung deposition.",
+      "Assess for reactive airway disease before prescribing; contraindicated in severe asthma or COPD \u2014 have a bronchodilator available if zanamivir is used.",
+      "Initiate within 48 hours of symptom onset for meaningful clinical benefit in influenza treatment.",
+      "Counsel patients that zanamivir is not a substitute for annual influenza vaccination."
+    ],
+    "clinical_pearls": [
+      "Zanamivir's inhaled route delivers very high concentrations directly to the respiratory epithelium, potentially advantageous for severe influenza pneumonia, while minimizing systemic exposure \u2014 though this also limits its role when systemic antiviral activity is needed.",
+      "Resistance to zanamivir can develop but is less common than with oseltamivir; zanamivir retains activity against many oseltamivir-resistant H275Y strains."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "category C",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "influenza-treatment",
+      "influenza-prophylaxis"
+    ],
+    "adverse_effect_tags": [
+      "bronchospasm",
+      "neuropsychiatric-effects"
+    ],
+    "interaction_tags": [
+      "live-vaccine-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease",
+        "respiratory"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "neuraminidase-inhibitor"
+      ],
+      "prototype_class": "neuraminidase inhibitors",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "influenza"
+      ],
+      "adverse_cluster": [
+        "bronchospasm"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "peramivir",
+    "generic_name": "peramivir",
+    "brand_names": [
+      "Rapivab"
+    ],
+    "drug_class": "neuraminidase inhibitor antiviral",
+    "subclass": "IV neuraminidase inhibitor (influenza)",
+    "prototype_for": false,
+    "prototype_drug": "oseltamivir",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "influenza neuraminidase (NA)"
+    ],
+    "mechanism_summary": "IV neuraminidase inhibitor; competitively and reversibly inhibits influenza A and B neuraminidase; single IV dose provides complete treatment course due to prolonged protein binding at the active site.",
+    "indications": [
+      "acute uncomplicated influenza in adults (single IV dose when patient cannot take oral drugs)"
+    ],
+    "contraindications": [
+      "peramivir hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "diarrhea",
+        "hypertension",
+        "increased serum glucose"
+      ],
+      "serious": [
+        "anaphylaxis",
+        "serious skin reactions (Stevens-Johnson syndrome, erythema multiforme)",
+        "neuropsychiatric effects"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IV only",
+      "distribution": "widely distributed; minimal protein binding",
+      "metabolism": "not metabolized",
+      "excretion": "renal (unchanged; >90%)",
+      "half_life": "20 hours",
+      "onset": "immediate (IV)",
+      "peak": "end of infusion",
+      "duration": "single dose is full treatment course",
+      "protein_binding": "<30%",
+      "vd": "12.6 L"
+    },
+    "drug_interactions": [
+      {
+        "drug": "live attenuated influenza vaccine",
+        "mechanism": "antiviral may reduce live vaccine replication",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer single dose IV over 15\u201330 minutes; a single 600 mg dose is the complete treatment.",
+      "Useful for patients who cannot take oral oseltamivir (vomiting, NG tube, post-operative).",
+      "Reduce dose in severe renal impairment (CrCl <49 mL/min); consult pharmacist for dosing.",
+      "Initiate within 48 hours of influenza symptom onset for efficacy."
+    ],
+    "clinical_pearls": [
+      "Peramivir's key clinical advantage is the single IV dose, enabling treatment of influenza in patients who cannot receive oral medications \u2014 a practical advantage in hospitalized patients with nausea, vomiting, or impaired enteral access.",
+      "Cross-resistance between neuraminidase inhibitors is not universal; oseltamivir-resistant H3N2 strains may remain peramivir-sensitive, though resistance testing should guide therapy when resistance is suspected."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "category C",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "influenza-treatment",
+      "hospitalized-influenza"
+    ],
+    "adverse_effect_tags": [
+      "diarrhea",
+      "serious-skin-reactions"
+    ],
+    "interaction_tags": [],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "neuraminidase-inhibitor"
+      ],
+      "prototype_class": "neuraminidase inhibitors",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "influenza"
+      ],
+      "adverse_cluster": [
+        "skin-reactions"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "baloxavir",
+    "generic_name": "baloxavir marboxil",
+    "brand_names": [
+      "Xofluza"
+    ],
+    "drug_class": "cap-dependent endonuclease inhibitor antiviral",
+    "subclass": "influenza PA endonuclease inhibitor (first-in-class)",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "influenza PA subunit cap-dependent endonuclease"
+    ],
+    "mechanism_summary": "Prodrug converted to baloxavir; inhibits the PA subunit of influenza RNA polymerase, specifically its cap-dependent endonuclease activity \u2014 preventing 'cap snatching' required for viral mRNA transcription; first novel influenza mechanism in 20 years.",
+    "indications": [
+      "acute uncomplicated influenza in adults and pediatric patients (\u22655 years or \u226520 kg, or high-risk)",
+      "influenza prophylaxis (post-exposure)"
+    ],
+    "contraindications": [
+      "baloxavir hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "diarrhea",
+        "bronchitis",
+        "nasopharyngitis"
+      ],
+      "serious": [
+        "anaphylaxis/hypersensitivity",
+        "resistance emergence (PA I38X mutations)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "prodrug; 80% bioavailability; take with food but NOT high-fat meal (reduces Cmax); NOT taken with calcium-fortified foods",
+      "distribution": "widely distributed; moderate protein binding",
+      "metabolism": "prodrug hydrolyzed to active baloxavir by arylacetamide deacetylase (AADAC) enzymes",
+      "excretion": "primarily fecal (80%); renal minimal",
+      "half_life": "79 hours (active metabolite baloxavir)",
+      "onset": "4 hours",
+      "peak": "4 hours",
+      "duration": "single dose is complete treatment for uncomplicated influenza",
+      "protein_binding": ">92%",
+      "vd": "large"
+    },
+    "drug_interactions": [
+      {
+        "drug": "polyvalent cations (antacids, laxatives, calcium-fortified foods)",
+        "mechanism": "chelation reduces baloxavir absorption; take separately",
+        "severity": "major"
+      },
+      {
+        "drug": "live attenuated influenza vaccine",
+        "mechanism": "may reduce efficacy; avoid concurrent administration",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer as a single dose weight-based oral regimen; must NOT be taken with calcium-enriched foods, antacids, or laxatives containing polyvalent cations.",
+      "Initiate within 48 hours of symptom onset for efficacy; single dose is the complete treatment for uncomplicated influenza.",
+      "Baloxavir reduces influenza viral shedding more rapidly than neuraminidase inhibitors \u2014 potentially relevant for infection control in household transmission.",
+      "Monitor for resistance emergence in severely immunocompromised patients who receive baloxavir, as these patients may need re-treatment."
+    ],
+    "clinical_pearls": [
+      "Baloxavir's novel mechanism (cap-dependent endonuclease inhibition) provides no cross-resistance with neuraminidase inhibitors, making it valuable for oseltamivir-resistant influenza.",
+      "The single-dose, weight-based oral regimen offers an adherence advantage over 5-day twice-daily oseltamivir, and baloxavir achieves faster viral clearance in clinical trials, though clinical outcomes differences are modest."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "category C",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "influenza-treatment",
+      "influenza-prophylaxis"
+    ],
+    "adverse_effect_tags": [
+      "diarrhea",
+      "resistance-development"
+    ],
+    "interaction_tags": [
+      "chelation-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "endonuclease-inhibitor"
+      ],
+      "prototype_class": "cap-dependent endonuclease inhibitors",
+      "adme_profile": "fecal-cleared",
+      "presentation_cluster": [
+        "influenza"
+      ],
+      "adverse_cluster": [
+        "GI"
+      ],
+      "interaction_cluster": [
+        "chelation-interaction"
+      ]
+    }
   }
 ]
