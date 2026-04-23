@@ -214,9 +214,15 @@ const pkRows = [
         )}
         
         <div class="flex flex-wrap gap-2 mb-3">
+          {drug.drug_family && drug.drug_family !== drug.drug_class && (
+            <span class="badge badge-primary badge-outline capitalize">{drug.drug_family}</span>
+          )}
           <span class="badge badge-outline">{drug.drug_class}</span>
           {drug.subclass && drug.subclass !== drug.drug_class && (
             <span class="badge badge-ghost">{drug.subclass}</span>
+          )}
+          {drug.controlled_substance_schedule && (
+            <span class="badge badge-error badge-outline">DEA Schedule {drug.controlled_substance_schedule}</span>
           )}
           {drug.organ_systems?.map((sys: string) => (
             <a href={`${base}schemas/01-organ-systems/${sys}`} class="badge badge-outline badge-primary hover:badge-primary transition-colors capitalize">{sys.replace(/-/g, ' ')}</a>
@@ -303,12 +309,50 @@ const pkRows = [
                       <td><span class="badge badge-info badge-sm">Yes</span></td>
                     </tr>
                   )}
+                  {drug.route_of_administration && drug.route_of_administration.length > 0 && (
+                    <tr>
+                      <td class="font-semibold text-base-content/70">Route(s)</td>
+                      <td class="font-mono text-sm">{drug.route_of_administration.join(', ')}</td>
+                    </tr>
+                  )}
+                  {drug.typical_dose_range && (
+                    <tr>
+                      <td class="font-semibold text-base-content/70">Typical dose</td>
+                      <td class="text-sm">{drug.typical_dose_range}</td>
+                    </tr>
+                  )}
                 </tbody>
               </table>
             </div>
             <div class="flex gap-4 text-sm flex-wrap">
-              {drug.pregnancy_safety && <span><span class="font-semibold">Pregnancy:</span> {drug.pregnancy_safety}</span>}
-              {drug.lactation_safety && <span><span class="font-semibold">Lactation:</span> {drug.lactation_safety}</span>}
+              {drug.pregnancy_safety && (
+                <span>
+                  <span class="font-semibold">Pregnancy:</span>{' '}
+                  <span class={`badge badge-sm ${
+                    drug.pregnancy_safety === 'contraindicated' ? 'badge-error' :
+                    drug.pregnancy_safety === 'avoid' ? 'badge-warning' :
+                    drug.pregnancy_safety === 'safe' ? 'badge-success' :
+                    drug.pregnancy_safety === 'generally-safe' ? 'badge-success badge-outline' :
+                    drug.pregnancy_safety === 'insufficient-data' ? 'badge-ghost' :
+                    'badge-info'
+                  }`}>{drug.pregnancy_safety}</span>
+                  {drug.pregnancy_notes && <span class="ml-1 text-base-content/60 italic text-xs">{drug.pregnancy_notes}</span>}
+                </span>
+              )}
+              {drug.lactation_safety && (
+                <span>
+                  <span class="font-semibold">Lactation:</span>{' '}
+                  <span class={`badge badge-sm ${
+                    drug.lactation_safety === 'contraindicated' ? 'badge-error' :
+                    drug.lactation_safety === 'avoid' ? 'badge-warning' :
+                    drug.lactation_safety === 'safe' ? 'badge-success' :
+                    drug.lactation_safety === 'generally-safe' ? 'badge-success badge-outline' :
+                    drug.lactation_safety === 'insufficient-data' ? 'badge-ghost' :
+                    'badge-info'
+                  }`}>{drug.lactation_safety}</span>
+                  {drug.lactation_notes && <span class="ml-1 text-base-content/60 italic text-xs">{drug.lactation_notes}</span>}
+                </span>
+              )}
             </div>
           </section>
         )}
@@ -373,6 +417,7 @@ const pkRows = [
                       <td class="text-sm text-base-content/80">{interaction.mechanism}</td>
                       <td>
                         {interaction.severity === 'major' && <span class="badge badge-error badge-sm">Major</span>}
+                        {interaction.severity === 'contraindicated' && <span class="badge badge-error badge-sm">Contraindicated</span>}
                         {interaction.severity === 'moderate' && <span class="badge badge-warning badge-sm">Moderate</span>}
                         {interaction.severity === 'minor' && <span class="badge badge-ghost badge-sm">Minor</span>}
                         {interaction.severity === 'beneficial' && <span class="badge badge-success badge-sm">Beneficial</span>}
