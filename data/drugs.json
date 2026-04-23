@@ -51444,5 +51444,616 @@
         "nephrotoxic-combinations"
       ]
     }
+  },
+  {
+    "id": "penicillin-v",
+    "generic_name": "penicillin V potassium",
+    "brand_names": [
+      "Pen VK",
+      "Veetids"
+    ],
+    "drug_class": "antibiotic (penicillin)",
+    "subclass": "natural penicillin",
+    "prototype_for": false,
+    "prototype_drug": "penicillin-g",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "penicillin-binding proteins (PBPs)",
+      "transpeptidase"
+    ],
+    "mechanism_summary": "Binds and irreversibly inhibits transpeptidase (PBP), blocking the final cross-linking step of peptidoglycan synthesis in the bacterial cell wall. The resulting cell wall defects cause osmotic lysis. Active primarily against gram-positive organisms. Acid-stable (unlike penicillin G), allowing oral administration.",
+    "indications": [
+      "pharyngitis (streptococcal, Group A)",
+      "mild community-acquired pneumonia (streptococcal)",
+      "prophylaxis for rheumatic fever recurrence",
+      "mild skin and soft tissue infections"
+    ],
+    "contraindications": [
+      "severe penicillin allergy (anaphylaxis)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "diarrhea",
+        "rash"
+      ],
+      "serious": [
+        "anaphylaxis",
+        "severe skin reactions",
+        "C. difficile colitis",
+        "hemolytic anemia (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral; bioavailability ~60-73%; food reduces absorption (take on empty stomach for best levels)",
+      "distribution": "protein binding ~80%; does not penetrate CSF well",
+      "metabolism": "minimal hepatic; hydrolysis to penicilloic acid (inactive)",
+      "excretion": "renal tubular secretion; CrCl adjustment required in severe impairment",
+      "half_life": "0.5-1 hour",
+      "onset": "30-60 minutes",
+      "peak": "0.5-1 hour",
+      "duration": "6 hours",
+      "protein_binding": "80%",
+      "vd": "0.2-0.35 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "probenecid",
+        "mechanism": "blocks renal tubular secretion; increases and prolongs penicillin levels",
+        "severity": "moderate"
+      },
+      {
+        "drug": "methotrexate",
+        "mechanism": "penicillins reduce renal methotrexate clearance; toxicity risk",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Take on empty stomach 1 hour before or 2 hours after meals for maximal absorption.",
+      "For streptococcal pharyngitis, the full 10-day course must be completed even if symptoms resolve to prevent rheumatic fever.",
+      "Screen for penicillin allergy before administration; inquire specifically about anaphylaxis, urticaria, or rash to differentiate IgE-mediated from non-IgE reactions.",
+      "For rheumatic fever prophylaxis, patients may take penicillin V daily for years; adherence counseling is essential."
+    ],
+    "clinical_pearls": [
+      "Penicillin V is the preferred antibiotic for streptococcal pharyngitis; despite 70 years of use, Group A Streptococcus has not developed resistance to penicillin.",
+      "The cross-reactivity between penicillin allergy and cephalosporin allergy is approximately 1-2% (not 10% as historically taught); most penicillin-allergic patients can safely receive cephalosporins."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "considered safe (FDA historical Category B)",
+    "lactation_safety": "compatible",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "streptococcal pharyngitis",
+      "community-acquired pneumonia",
+      "rheumatic fever prophylaxis"
+    ],
+    "adverse_effect_tags": [
+      "anaphylaxis",
+      "C. difficile",
+      "rash"
+    ],
+    "interaction_tags": [
+      "probenecid",
+      "renal-clearance"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "cell-wall-synthesis-inhibition"
+      ],
+      "prototype_class": "penicillins",
+      "adme_profile": "renally-cleared",
+      "presentation_cluster": [
+        "community-acquired-pneumonia",
+        "pharyngitis"
+      ],
+      "adverse_cluster": [
+        "anaphylaxis",
+        "C-difficile"
+      ],
+      "interaction_cluster": [
+        "renal-clearance"
+      ]
+    }
+  },
+  {
+    "id": "ampicillin",
+    "generic_name": "ampicillin",
+    "brand_names": [
+      "Principen"
+    ],
+    "drug_class": "antibiotic (penicillin)",
+    "subclass": "aminopenicillin",
+    "prototype_for": false,
+    "prototype_drug": "penicillin-g",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "penicillin-binding proteins (PBPs)",
+      "transpeptidase"
+    ],
+    "mechanism_summary": "Inhibits PBPs and bacterial cell wall synthesis like all penicillins, but the aminophenyl side chain extends coverage to include gram-negative organisms (E. coli, H. influenzae, Proteus). However, ampicillin-resistant strains producing beta-lactamase are prevalent; combination with sulbactam (Unasyn) restores activity.",
+    "indications": [
+      "bacterial meningitis (Listeria, Group B Streptococcus)",
+      "enterococcal infections (often combined with gentamicin)",
+      "urinary tract infections (ampicillin-sensitive organisms)",
+      "intrapartum GBS prophylaxis"
+    ],
+    "contraindications": [
+      "penicillin allergy (anaphylaxis)",
+      "infectious mononucleosis (causes ampicillin rash)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "diarrhea",
+        "nausea",
+        "rash (especially in EBV mononucleosis)",
+        "injection site reactions"
+      ],
+      "serious": [
+        "anaphylaxis",
+        "C. difficile colitis",
+        "seizures at high doses (especially with renal impairment)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~40%; IV provides full bioavailability",
+      "distribution": "protein binding ~15-25%; penetrates CSF in meningitis (inflamed meninges)",
+      "metabolism": "minimal hepatic",
+      "excretion": "primarily renal (60-90% unchanged); dose adjustment in renal impairment",
+      "half_life": "1-1.9 hours",
+      "onset": "rapid IV",
+      "peak": "1 hour IM; end of infusion IV",
+      "duration": "6 hours",
+      "protein_binding": "15-25%",
+      "vd": "0.28 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "allopurinol",
+        "mechanism": "increases ampicillin rash incidence 3-10 fold",
+        "severity": "moderate"
+      },
+      {
+        "drug": "aminoglycosides",
+        "mechanism": "synergistic for enterococcal infections; incompatible in same IV line (physically incompatible)",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Intrapartum GBS prophylaxis: 2 g IV loading dose then 1 g IV every 4 hours until delivery in penicillin-non-anaphylactic-allergic patients.",
+      "Ampicillin and aminoglycosides (gentamicin) are physically incompatible; must be administered through separate IV lines or at different times.",
+      "Maculopapular rash in patients with EBV mononucleosis or CLL is not a true IgE-mediated allergy but indicates ampicillin should not be used for concurrent infection.",
+      "Ampicillin is preferred over penicillin G for Listeria meningitis because of better oral penetration and activity profile."
+    ],
+    "clinical_pearls": [
+      "Ampicillin is one of the few antibiotics with activity against Listeria monocytogenes, the cause of meningitis in immunocompromised patients, elderly, and neonates; empiric meningitis regimens must include ampicillin in these populations.",
+      "For enterococcal endocarditis, ampicillin plus gentamicin provides synergistic bactericidal activity; ampicillin alone is bacteriostatic against enterococci, which is insufficient for endocarditis treatment."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "considered safe",
+    "lactation_safety": "compatible",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "bacterial meningitis",
+      "enterococcal infection",
+      "GBS prophylaxis",
+      "UTI"
+    ],
+    "adverse_effect_tags": [
+      "anaphylaxis",
+      "rash (EBV)",
+      "seizures",
+      "C. difficile"
+    ],
+    "interaction_tags": [
+      "aminoglycoside-synergy"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "cell-wall-synthesis-inhibition"
+      ],
+      "prototype_class": "penicillins",
+      "adme_profile": "renally-cleared",
+      "presentation_cluster": [
+        "bacterial-meningitis",
+        "sepsis"
+      ],
+      "adverse_cluster": [
+        "anaphylaxis",
+        "C-difficile"
+      ],
+      "interaction_cluster": [
+        "aminoglycoside-synergy"
+      ]
+    }
+  },
+  {
+    "id": "ampicillin-sulbactam",
+    "generic_name": "ampicillin-sulbactam",
+    "brand_names": [
+      "Unasyn"
+    ],
+    "drug_class": "antibiotic (beta-lactam/beta-lactamase inhibitor combination)",
+    "subclass": "aminopenicillin + beta-lactamase inhibitor",
+    "prototype_for": false,
+    "prototype_drug": "amoxicillin-clavulanate",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "penicillin-binding proteins",
+      "beta-lactamase (inhibition by sulbactam)",
+      "Acinetobacter (sulbactam has intrinsic activity)"
+    ],
+    "mechanism_summary": "Ampicillin inhibits PBPs; sulbactam irreversibly inhibits beta-lactamases, restoring ampicillin activity against beta-lactamase-producing organisms. Sulbactam itself has intrinsic antibacterial activity against Acinetobacter baumannii (via PBP2 binding), which is clinically relevant for treating MDR Acinetobacter infections.",
+    "indications": [
+      "skin and soft tissue infections",
+      "intra-abdominal infections",
+      "pelvic inflammatory disease",
+      "aspiration pneumonia",
+      "MDR Acinetobacter infections (high-dose sulbactam)"
+    ],
+    "contraindications": [
+      "penicillin or sulbactam allergy (anaphylaxis)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "diarrhea",
+        "nausea",
+        "injection site reactions",
+        "rash"
+      ],
+      "serious": [
+        "anaphylaxis",
+        "C. difficile colitis",
+        "hepatotoxicity (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IV or IM only",
+      "distribution": "protein binding ampicillin 15-25%, sulbactam 38%; good tissue penetration",
+      "metabolism": "minimal hepatic",
+      "excretion": "renal; both components excreted unchanged",
+      "half_life": "1 hour (both components)",
+      "onset": "end of IV infusion",
+      "peak": "end of infusion",
+      "duration": "6 hours",
+      "protein_binding": "ampicillin 15-25%; sulbactam 38%",
+      "vd": "0.3 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "aminoglycosides",
+        "mechanism": "synergistic; physically incompatible in same line",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Reconstituted solution is time-sensitive; use within manufacturer-specified timeframe after reconstitution.",
+      "For MDR Acinetobacter infections, high-dose extended-infusion sulbactam protocols may be used; verify institutional protocol.",
+      "Monitor for signs of C. difficile during and after treatment; diarrhea warrants stool testing.",
+      "Dose adjustment required in renal impairment; CrCl <30 mL/min requires extended dosing interval."
+    ],
+    "clinical_pearls": [
+      "Sulbactam unique intrinsic antibacterial activity against Acinetobacter baumannii (via PBP2 binding) has made high-dose sulbactam (ampicillin-sulbactam) a key option for carbapenem-resistant Acinetobacter infections.",
+      "Ampicillin-sulbactam covers polymicrobial infections (gram-positives, many gram-negatives, anaerobes) making it useful for aspiration pneumonia, intra-abdominal, and skin/soft tissue infections."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "considered safe",
+    "lactation_safety": "compatible",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "skin infection",
+      "intra-abdominal infection",
+      "aspiration pneumonia",
+      "Acinetobacter"
+    ],
+    "adverse_effect_tags": [
+      "anaphylaxis",
+      "C. difficile"
+    ],
+    "interaction_tags": [
+      "aminoglycoside-synergy"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "cell-wall-synthesis-inhibition",
+        "beta-lactamase-inhibition"
+      ],
+      "prototype_class": "beta-lactam/BLI combinations",
+      "adme_profile": "renally-cleared",
+      "presentation_cluster": [
+        "sepsis",
+        "skin-infection"
+      ],
+      "adverse_cluster": [
+        "anaphylaxis",
+        "C-difficile"
+      ],
+      "interaction_cluster": [
+        "aminoglycoside-synergy"
+      ]
+    }
+  },
+  {
+    "id": "oxacillin",
+    "generic_name": "oxacillin",
+    "brand_names": [
+      "Bactocill"
+    ],
+    "drug_class": "antibiotic (penicillin)",
+    "subclass": "antistaphylococcal (isoxazolyl) penicillin",
+    "prototype_for": false,
+    "prototype_drug": "penicillin-g",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "penicillin-binding proteins (PBPs)"
+    ],
+    "mechanism_summary": "Inhibits PBPs like all penicillins; the isoxazolyl side chain provides steric protection against staphylococcal penicillinase (beta-lactamase), making it active against methicillin-susceptible Staphylococcus aureus (MSSA). Has no activity against MRSA (altered PBP2a).",
+    "indications": [
+      "methicillin-susceptible Staphylococcus aureus (MSSA) infections (bacteremia, endocarditis, osteomyelitis, skin/soft tissue)",
+      "preferred over vancomycin for serious MSSA infections"
+    ],
+    "contraindications": [
+      "penicillin allergy",
+      "MRSA infections (not active)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "phlebitis at IV site",
+        "nausea",
+        "rash"
+      ],
+      "serious": [
+        "hepatotoxicity (elevated LFTs in up to 5%)",
+        "interstitial nephritis (rare)",
+        "C. difficile colitis",
+        "anaphylaxis"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IV or oral; oral bioavailability ~30% (food reduces further); IV preferred for serious infections",
+      "distribution": "protein binding ~94%; penetrates bone, synovial fluid; limited CSF",
+      "metabolism": "hepatic (20-30%) and renal",
+      "excretion": "renal and biliary",
+      "half_life": "0.4-0.7 hours",
+      "onset": "end of IV infusion",
+      "peak": "end of infusion (IV)",
+      "duration": "4-6 hours",
+      "protein_binding": "94%",
+      "vd": "0.38 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "aminoglycosides",
+        "mechanism": "synergistic for endocarditis; physically incompatible in same line",
+        "severity": "moderate"
+      },
+      {
+        "drug": "rifampin",
+        "mechanism": "synergistic for foreign body/biofilm infections",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor hepatic function (ALT, AST, bilirubin) during prolonged therapy; hepatotoxicity may require discontinuation.",
+      "IV oxacillin is preferred over vancomycin for MSSA bacteremia and endocarditis because it achieves bactericidal activity more reliably and has better outcomes data.",
+      "Severe phlebitis with peripheral IV administration; use central venous access for prolonged treatment.",
+      "Must confirm MSSA susceptibility before using; if susceptibility unknown, use vancomycin empirically until culture results available."
+    ],
+    "clinical_pearls": [
+      "For MSSA bacteremia and endocarditis, oxacillin (or nafcillin) reduces 30-day mortality compared to vancomycin; switching from empiric vancomycin to oxacillin upon MSSA confirmation is a quality improvement benchmark.",
+      "Hepatotoxicity is a class-specific adverse effect of the isoxazolyl penicillins (oxacillin, nafcillin, dicloxacillin) and is not seen with other penicillins."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "considered safe",
+    "lactation_safety": "compatible",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "MSSA bacteremia",
+      "MSSA endocarditis",
+      "osteomyelitis",
+      "skin infection"
+    ],
+    "adverse_effect_tags": [
+      "hepatotoxicity",
+      "interstitial nephritis",
+      "phlebitis"
+    ],
+    "interaction_tags": [
+      "aminoglycoside-synergy"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "cell-wall-synthesis-inhibition"
+      ],
+      "prototype_class": "antistaphylococcal penicillins",
+      "adme_profile": "biliary-renal",
+      "presentation_cluster": [
+        "sepsis",
+        "bacteremia"
+      ],
+      "adverse_cluster": [
+        "hepatotoxicity"
+      ],
+      "interaction_cluster": [
+        "aminoglycoside-synergy"
+      ]
+    }
+  },
+  {
+    "id": "nafcillin",
+    "generic_name": "nafcillin",
+    "brand_names": [
+      "Nallpen",
+      "Unipen"
+    ],
+    "drug_class": "antibiotic (penicillin)",
+    "subclass": "antistaphylococcal penicillin",
+    "prototype_for": false,
+    "prototype_drug": "penicillin-g",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "penicillin-binding proteins (PBPs)"
+    ],
+    "mechanism_summary": "Antistaphylococcal penicillin resistant to staphylococcal beta-lactamase; identical spectrum and indications to oxacillin. Distinguishable by its primarily biliary excretion (vs. oxacillin renally excreted), making it preferred in patients with severe renal impairment where oxacillin dose adjustment is needed.",
+    "indications": [
+      "MSSA infections (bacteremia, endocarditis, osteomyelitis, skin/soft tissue)"
+    ],
+    "contraindications": [
+      "penicillin allergy",
+      "MRSA infections"
+    ],
+    "adverse_effects": {
+      "common": [
+        "severe thrombophlebitis (requires large-bore/central line)",
+        "hypokalemia",
+        "nausea"
+      ],
+      "serious": [
+        "hepatotoxicity (similar to oxacillin)",
+        "neutropenia (with prolonged high-dose therapy)",
+        "interstitial nephritis",
+        "anaphylaxis"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IV only for serious infections",
+      "distribution": "protein binding ~90%; similar to oxacillin",
+      "metabolism": "primarily biliary excretion; minimal renal",
+      "excretion": "biliary (70-90%); only ~10-20% renal",
+      "half_life": "0.5-1.5 hours",
+      "onset": "end of infusion",
+      "peak": "end of infusion",
+      "duration": "4-6 hours",
+      "protein_binding": "90%",
+      "vd": "0.35 L/kg"
+    },
+    "drug_interactions": [
+      {
+        "drug": "warfarin",
+        "mechanism": "nafcillin is a CYP450 inducer; significantly reduces warfarin effect; monitor INR",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Nafcillin is a CYP inducer \u2014 may significantly reduce warfarin anticoagulation; monitor INR closely when starting or stopping nafcillin in anticoagulated patients.",
+      "No renal dose adjustment needed (biliary elimination); preferred over oxacillin in severe renal impairment.",
+      "Monitor CBC with prolonged high-dose therapy; neutropenia is more common with nafcillin than oxacillin.",
+      "Severe thrombophlebitis at peripheral IV sites; central line strongly recommended for prolonged therapy."
+    ],
+    "clinical_pearls": [
+      "Nafcillin is the only commonly used penicillin with significant CYP induction; this unexpected drug interaction with warfarin has led to subtherapeutic anticoagulation when not recognized.",
+      "The choice between nafcillin and oxacillin for MSSA infections is largely institutional; nafcillin is preferred in renal failure, while oxacillin is preferred when CYP interactions are a concern."
+    ],
+    "beers_criteria": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "considered safe",
+    "lactation_safety": "compatible",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "MSSA bacteremia",
+      "MSSA endocarditis",
+      "osteomyelitis"
+    ],
+    "adverse_effect_tags": [
+      "hepatotoxicity",
+      "neutropenia",
+      "thrombophlebitis"
+    ],
+    "interaction_tags": [
+      "CYP-inducer",
+      "warfarin-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "cell-wall-synthesis-inhibition"
+      ],
+      "prototype_class": "antistaphylococcal penicillins",
+      "adme_profile": "biliary-excreted",
+      "presentation_cluster": [
+        "sepsis",
+        "bacteremia"
+      ],
+      "adverse_cluster": [
+        "hepatotoxicity",
+        "neutropenia"
+      ],
+      "interaction_cluster": [
+        "CYP-induction",
+        "warfarin"
+      ]
+    }
   }
 ]
