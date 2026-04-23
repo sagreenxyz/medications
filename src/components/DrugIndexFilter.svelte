@@ -11,6 +11,7 @@
   let filterISMP = false;
   let filterBeers = false;
   let filterBBW = false;
+  let filterControlled = false;
 
   const organOptions = [
     { value: 'cardiovascular', label: 'Cardiovascular' },
@@ -62,6 +63,7 @@
     if (filterISMP && !d.ismp_high_alert) return false;
     if (filterBeers && !d.beers_criteria) return false;
     if (filterBBW && !(d.black_box_warnings && d.black_box_warnings.length > 0)) return false;
+    if (filterControlled && !d.controlled_substance_schedule) return false;
     return true;
   });
 
@@ -73,7 +75,7 @@
 
   $: activeLetters = new Set(Object.keys(drugsByLetter));
 
-  $: hasFilters = searchText || filterOrgan || filterClass || filterISMP || filterBeers || filterBBW;
+  $: hasFilters = searchText || filterOrgan || filterClass || filterISMP || filterBeers || filterBBW || filterControlled;
 
   function clearFilters() {
     searchText = '';
@@ -82,6 +84,7 @@
     filterISMP = false;
     filterBeers = false;
     filterBBW = false;
+    filterControlled = false;
   }
 </script>
 
@@ -136,6 +139,10 @@
           <input type="checkbox" class="checkbox checkbox-error checkbox-xs" bind:checked={filterBBW} />
           <span class="text-xs font-medium">BBW</span>
         </label>
+        <label class="flex items-center gap-1 cursor-pointer">
+          <input type="checkbox" class="checkbox checkbox-error checkbox-xs" bind:checked={filterControlled} />
+          <span class="text-xs font-medium">Controlled (DEA)</span>
+        </label>
       </div>
 
       {#if hasFilters}
@@ -182,8 +189,9 @@
                   {#if drug.prototype_for}<span class="badge badge-success badge-xs">P</span>{/if}
                   {#if drug.ismp_high_alert}<span class="badge badge-error badge-xs">HA</span>{/if}
                   {#if drug.black_box_warnings && drug.black_box_warnings.length > 0}<span class="badge badge-error badge-outline badge-xs">BBW</span>{/if}
+                  {#if drug.controlled_substance_schedule}<span class="badge badge-warning badge-xs">C-{drug.controlled_substance_schedule}</span>{/if}
                 </div>
-                <div class="text-xs text-base-content/60 truncate">{drug.drug_class}</div>
+                <div class="text-xs text-base-content/60 truncate">{drug.drug_family ? drug.drug_family + ' — ' : ''}{drug.drug_class}</div>
               </div>
             </a>
           {/each}

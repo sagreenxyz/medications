@@ -6,6 +6,7 @@
     beers_criteria: false,
     black_box_warning: false,
     tdm_required: false,
+    controlled_substance: false,
   };
   export let onFilter = (f) => {};
   export let mobile = false;
@@ -17,6 +18,7 @@
     beers_criteria: false,
     black_box_warning: false,
     tdm_required: false,
+    controlled_substance: false,
   };
 
   const organOptions = [
@@ -70,6 +72,7 @@
       beers_criteria: false,
       black_box_warning: false,
       tdm_required: false,
+      controlled_substance: false,
     };
     emit();
   }
@@ -82,12 +85,14 @@
       beers_criteria: activeFilters.beers_criteria,
       black_box_warning: activeFilters.black_box_warning,
       tdm_required: activeFilters.tdm_required,
+      controlled_substance: activeFilters.controlled_substance,
     });
   }
 
   $: activeCount = activeFilters.organ_systems.size + activeFilters.therapeutic_classes.size
     + (activeFilters.ismp_high_alert ? 1 : 0) + (activeFilters.beers_criteria ? 1 : 0)
-    + (activeFilters.black_box_warning ? 1 : 0) + (activeFilters.tdm_required ? 1 : 0);
+    + (activeFilters.black_box_warning ? 1 : 0) + (activeFilters.tdm_required ? 1 : 0)
+    + (activeFilters.controlled_substance ? 1 : 0);
 </script>
 
 <aside class="menu bg-base-200 rounded-box p-4 {mobile ? 'w-full' : 'w-64 sticky top-20 self-start'}">
@@ -125,6 +130,9 @@
       {#if activeFilters.tdm_required}
         <button class="badge badge-info badge-sm gap-1" on:click={() => toggleBool('tdm_required')}>TDM ×</button>
       {/if}
+      {#if activeFilters.controlled_substance}
+        <button class="badge badge-error badge-sm gap-1" on:click={() => toggleBool('controlled_substance')}>CONTROLLED ×</button>
+      {/if}
     </div>
   {/if}
 
@@ -137,6 +145,7 @@
         { key: 'beers_criteria', label: 'Beers Criteria', cls: 'badge-warning' },
         { key: 'black_box_warning', label: 'Black Box Warning', cls: 'badge-error' },
         { key: 'tdm_required', label: 'TDM Required', cls: 'badge-info' },
+        { key: 'controlled_substance', label: 'Controlled Substance (DEA)', cls: 'badge-error' },
       ] as flag}
         <label class="flex items-center gap-2 cursor-pointer hover:bg-base-300 rounded px-2 py-1">
           <input

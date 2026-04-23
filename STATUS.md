@@ -2,25 +2,21 @@
 
 ## Last Session Summary
 - **Date:** 2026-04-23
-- **Work completed:**
-  - PHASE 6 COMPLETE: QA and Finalization
-  - Fixed cross-reference links in `src/pages/drugs/[slug].astro`:
-    - Added valid slug sets for all 7 schema types
-    - Added comprehensive `mechToTargetPage` mapping (100+ entries) for mechanism_family → target page
-    - Added pattern-based fallback mapping for unrecognized mechanism values
-    - Added `resolveSchemaLinks()` that filters/maps schema memberships to valid page slugs
-  - Improved `src/styles/print.css`: DaisyUI navbar class, modern CSS break-inside/break-after, print layout fixes
-  - Moved print CSS `<link>` to `<head>` in `BaseLayout.astro`
-  - Added `DrugIndexFilter.svelte` island with live text search, organ/class filters, safety flag checkboxes
-  - Updated `drug-index.astro` to use DrugIndexFilter Svelte island
-  - Build: 954 pages building successfully with no errors
-- **Resume point next session:** Project is complete. All 6 phases done.
+- **Work completed (dataset quality improvements per analysis):**
+  - **Fix 1 (Critical):** `ismp_high_alert` undefined→false for 78 drugs — all 500 now have explicit boolean
+  - **Fix 2 (Critical):** Added `drug_family` field to all 500 drugs (broad parent category, e.g. antidepressant, antibiotic) positioned after `drug_class` — resolves fragmented class naming for filtering
+  - **Fix 3 (Critical):** Normalized `pregnancy_safety` and `lactation_safety` to 6-value enum (`safe` | `generally-safe` | `use-with-caution` | `avoid` | `contraindicated` | `insufficient-data`); added `pregnancy_notes` and `lactation_notes` fields with original freeform text preserved
+  - **Fix 4 (High):** Normalized interaction severity enum — `low`→`minor`, `beneficial combination`/`beneficial interaction`→`beneficial`, `reversal agent`→`beneficial`; added `contraindicated` badge display in drug page
+  - **Fix 5 (High):** Added `route_of_administration` (array), `controlled_substance_schedule` (DEA I-V or null), and `typical_dose_range` (string or null) to all 500 drugs; 27 drugs have DEA schedules, 108 have dose ranges
+  - **Template updates:** `src/pages/drugs/[slug].astro` — displays `drug_family` badge, DEA schedule badge, route/dose in PK table, pregnancy/lactation safety as colored badges with notes
+  - **Filter updates:** `FilterPanel.svelte` and `DrugIndexFilter.svelte` — added "Controlled Substance (DEA)" checkbox filter; DEA schedule badge shown on drug index cards; `drug_family` shown in drug card subtitle
+  - Build: 954 pages, all passing
+- **Resume point next session:** Data quality work done. Next priorities from analysis: expand interaction coverage (77 drugs have only 1 interaction), add `patient_education`/`lasa_pairs`/`antidote` fields, expand dermatology/toxicology/PNS/ophthalmology organ systems.
 - **Files modified this session:**
-  - src/pages/drugs/[slug].astro (UPDATED - cross-reference fix)
-  - src/styles/print.css (UPDATED - improved print styles)
-  - src/layouts/BaseLayout.astro (UPDATED - print CSS moved to head)
-  - src/components/DrugIndexFilter.svelte (NEW - live filtering island)
-  - src/pages/drug-index.astro (UPDATED - uses DrugIndexFilter island)
+  - `data/drugs.json` (500 drugs updated — new fields: drug_family, route_of_administration, controlled_substance_schedule, typical_dose_range, pregnancy_notes, lactation_notes; normalized: ismp_high_alert, pregnancy_safety, lactation_safety, interaction severity)
+  - `src/pages/drugs/[slug].astro` (display of new fields)
+  - `src/components/FilterPanel.svelte` (controlled substance filter)
+  - `src/components/DrugIndexFilter.svelte` (controlled substance filter + DEA badge)
 
 ## IMPORTANT PROTOCOL NOTES (from prior failures)
 - Always use `create` tool to write Python scripts to /tmp/, never embed Python in bash heredocs
