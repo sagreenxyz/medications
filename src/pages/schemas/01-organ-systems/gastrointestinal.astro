@@ -1,0 +1,77 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+const slug = 'gastrointestinal';
+const displayName = 'Gastrointestinal';
+
+const drugs = (drugsData as any[]).filter(
+  (d: any) => (d.organ_systems || []).includes(slug)
+);
+const drugCount = drugs.length;
+---
+<SchemaLayout title="Gastrointestinal Pharmacology" schema="organ-systems" description="Drugs classified under the Gastrointestinal organ system">
+
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/01-organ-systems/`} class="link">Organ Systems</a></li>
+        <li>Gastrointestinal</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-2">Gastrointestinal</h1>
+    <p class="text-base-content/70 text-lg">{drugCount} drug{drugCount !== 1 ? 's' : ''} in this system</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>The gastrointestinal system offers diverse pharmacological targets spanning gastric acid secretion, intestinal motility, mucosal protection, the gut microbiome, and the enteric nervous system. Acid secretion is governed by three pathways converging on the parietal cell H+/K+-ATPase proton pump: histamine H2 receptors, acetylcholine M3 receptors, and gastrin CCK-B receptors. Intestinal motility is regulated by the enteric nervous system through serotonin 5-HT3 and 5-HT4 receptors, dopamine D2 receptors, and mu-opioid receptors. Inflammatory bowel disease involves innate and adaptive immune dysregulation, with TNF-alpha, integrins, and IL-12/23 pathways as drug targets. Major GI disease states include gastroesophageal reflux disease (GERD), peptic ulcer disease, Helicobacter pylori infection, inflammatory bowel disease, nausea and vomiting (including chemotherapy-induced nausea), constipation, diarrhea, and hepatobiliary disorders. Nursing priorities include timing of PPI administration before meals, monitoring for C. difficile with broad-spectrum antibiotic use, assessing for GI bleeding, and educating patients about dietary interactions.</p>
+    <p>Proton pump inhibitors (PPIs) -- omeprazole, esomeprazole, lansoprazole, pantoprazole, rabeprazole -- are prodrugs that require acid activation to their active sulfenamide form, which irreversibly binds cysteine residues on the H+/K+-ATPase. This mechanism explains why PPIs must be taken 30 to 60 minutes before the first meal of the day: the activated proton pumps require meal stimulation to be accessible to the drug. Maximal effect is reached after three to five days of consistent dosing. Long-term PPI use carries risks of hypomagnesemia, vitamin B12 deficiency, Clostridium difficile infection, and bone fracture through impaired calcium absorption; nurses should periodically reassess the clinical necessity of ongoing PPI therapy. Antiemetic pharmacology is mechanistically diverse: 5-HT3 antagonists (ondansetron, granisetron, palonosetron) block peripheral and central serotonin signaling; NK1 receptor antagonists (aprepitant) block substance P in the vomiting center; dopamine antagonists (metoclopramide, prochlorperazine) block D2 receptors in the chemoreceptor trigger zone; and antihistamines block H1 receptors in the vestibular pathway.</p>
+    <p>Inflammatory bowel disease pharmacology has been transformed by biologics targeting TNF-alpha (infliximab, adalimumab, certolizumab), the alpha-4/beta-7 integrin (vedolizumab, which is gut-selective), and IL-12/23 (ustekinumab). Small-molecule JAK inhibitors (tofacitinib) provide oral convenience but require more intensive monitoring for opportunistic infections, thromboembolism, and malignancy. Aminosalicylates (mesalamine, sulfasalazine) remain first-line for mild-to-moderate ulcerative colitis through a local prostaglandin-inhibitory and antioxidant mechanism. Laxatives are classified by mechanism: osmotic agents (polyethylene glycol, lactulose) draw water into the lumen; stimulant laxatives (bisacodyl, senna) activate enteric neuron Cl- secretion; and secretagogues (lubiprostone, linaclotide) activate chloride channels on intestinal epithelium. Nurses instructing patients on laxative therapy must distinguish osmotic from stimulant mechanisms, advising that polyethylene glycol is safe for long-term use while stimulant laxatives should be used short-term to avoid enteric neuron depletion and cathartic colon.</p>
+  </div>
+
+  {drugs.length === 0 && (
+    <div class="alert alert-info mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <span>No drugs are currently classified under this organ system. Check back as more drug data is added.</span>
+    </div>
+  )}
+
+  {drugs.length > 0 && (
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      {drugs.map((drug: any) => (
+        <div class={`card card-compact bg-base-100 shadow border border-base-200 ${drug.ismp_high_alert ? 'border-l-4 border-l-error' : ''}`}>
+          <div class="card-body">
+            <div class="flex flex-wrap items-start gap-1 mb-1">
+              <h2 class="card-title text-base font-semibold capitalize mr-auto">
+                <a href={`${base}drugs/${drug.id}/`} class="hover:text-primary transition-colors">
+                  {drug.generic_name}
+                </a>
+              </h2>
+              {drug.prototype_for && (
+                <span class="badge badge-success badge-sm shrink-0">PROTOTYPE</span>
+              )}
+              {drug.ismp_high_alert && (
+                <span class="badge badge-error badge-sm shrink-0">HIGH ALERT</span>
+              )}
+              {drug.black_box_warnings && drug.black_box_warnings.length > 0 && (
+                <span class="badge badge-warning badge-sm shrink-0">BBW</span>
+              )}
+            </div>
+            <p class="text-xs text-base-content/60 mb-1">
+              <span class="font-medium">{drug.drug_class}</span>
+              {drug.subclass && <span> &mdash; {drug.subclass}</span>}
+            </p>
+            {drug.mechanism_summary && (
+              <p class="text-sm text-base-content/70 line-clamp-3">{drug.mechanism_summary}</p>
+            )}
+            <div class="card-actions justify-end mt-2">
+              <a href={`${base}drugs/${drug.id}/`} class="btn btn-xs btn-outline btn-primary">Profile</a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+
+</SchemaLayout>

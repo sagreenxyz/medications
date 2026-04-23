@@ -1,0 +1,77 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+const slug = 'dermatology';
+const displayName = 'Dermatology';
+
+const drugs = (drugsData as any[]).filter(
+  (d: any) => (d.organ_systems || []).includes(slug)
+);
+const drugCount = drugs.length;
+---
+<SchemaLayout title="Dermatology Pharmacology" schema="organ-systems" description="Drugs classified under the Dermatology organ system">
+
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/01-organ-systems/`} class="link">Organ Systems</a></li>
+        <li>Dermatology</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-2">Dermatology</h1>
+    <p class="text-base-content/70 text-lg">{drugCount} drug{drugCount !== 1 ? 's' : ''} in this system</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>Dermatological pharmacology within this reference primarily reflects systemic agents with significant cutaneous indications or toxicity profiles, as well as the biologics that have transformed treatment of moderate-to-severe inflammatory skin diseases. The primary dermatological targets for systemic therapy include IL-4 and IL-13 receptors in atopic dermatitis (dupilumab), IL-17A in psoriasis (secukinumab, ixekizumab), IL-12/23 and IL-23 in plaque psoriasis (ustekinumab, guselkumab, risankizumab), PDE-4 in psoriatic disease (apremilast), and JAK1/2 in atopic dermatitis (baricitinib, upadacitinib). Retinoids -- derivatives of vitamin A acting on nuclear retinoic acid receptors -- are used topically and systemically for acne and disorders of cornification. Topical corticosteroids, the most widely prescribed dermatological drugs, vary by potency from class VII (hydrocortisone 1%) to class I (clobetasol propionate), and systemic absorption is proportional to potency, skin site, vehicle, and duration of application. Nursing priorities include skin integrity assessment, application technique education, monitoring for cutaneous and systemic corticosteroid side effects, and biologic pre-screening for TB and hepatitis B.</p>
+    <p>Isotretinoin, a systemic retinoid for nodular acne, is among the most teratogenic drugs in clinical use (category X equivalent) and is distributed exclusively through the iPLEDGE REMS program requiring monthly negative pregnancy tests for females of childbearing potential and two forms of contraception. Nurses participating in isotretinoin care must verify REMS compliance before dispensing and document counseling about depression risk, pseudotumor cerebri (headache, visual changes), and hypertriglyceridemia. Systemic antifungals for dermatophytosis -- terbinafine (squalene epoxidase inhibitor), itraconazole (azole) -- require liver function monitoring with prolonged courses. Stevens-Johnson syndrome (SJS) and toxic epidermal necrolysis (TEN) are life-threatening drug-induced mucocutaneous reactions with drug eruptions most commonly caused by aromatic antiepileptics (carbamazepine, phenytoin, lamotrigine), sulfonamides, allopurinol, and NSAIDs. Nurses encountering mucocutaneous blistering with fever and mucous membrane involvement in a patient on any of these agents must escalate immediately; discontinuation of the culprit drug is the most important therapeutic intervention.</p>
+    <p>Biologic therapy for plaque psoriasis has demonstrated transformative efficacy with PASI 90 and PASI 100 responses achievable with IL-17 and IL-23 inhibitors. Secukinumab and ixekizumab carry an increased risk of inflammatory bowel disease exacerbation and are avoided in patients with active IBD. All biologics used in dermatology share the immunosuppressive risk profile of the class: increased susceptibility to bacterial, fungal, and viral infections, and a contraindication to live vaccines during therapy. Dupilumab, the anti-IL-4/IL-13 agent approved for atopic dermatitis and asthma, has a favorable safety profile with conjunctivitis and injection site reactions as the predominant adverse effects. Nurses administering or supervising biologic therapy must document and report any sign of infection promptly, ensure vaccination records are updated before therapy initiation, and educate patients that biologics require consistent use for maintenance of response and should not be self-discontinued.</p>
+  </div>
+
+  {drugs.length === 0 && (
+    <div class="alert alert-info mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <span>No drugs are currently classified under this organ system. Check back as more drug data is added.</span>
+    </div>
+  )}
+
+  {drugs.length > 0 && (
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      {drugs.map((drug: any) => (
+        <div class={`card card-compact bg-base-100 shadow border border-base-200 ${drug.ismp_high_alert ? 'border-l-4 border-l-error' : ''}`}>
+          <div class="card-body">
+            <div class="flex flex-wrap items-start gap-1 mb-1">
+              <h2 class="card-title text-base font-semibold capitalize mr-auto">
+                <a href={`${base}drugs/${drug.id}/`} class="hover:text-primary transition-colors">
+                  {drug.generic_name}
+                </a>
+              </h2>
+              {drug.prototype_for && (
+                <span class="badge badge-success badge-sm shrink-0">PROTOTYPE</span>
+              )}
+              {drug.ismp_high_alert && (
+                <span class="badge badge-error badge-sm shrink-0">HIGH ALERT</span>
+              )}
+              {drug.black_box_warnings && drug.black_box_warnings.length > 0 && (
+                <span class="badge badge-warning badge-sm shrink-0">BBW</span>
+              )}
+            </div>
+            <p class="text-xs text-base-content/60 mb-1">
+              <span class="font-medium">{drug.drug_class}</span>
+              {drug.subclass && <span> &mdash; {drug.subclass}</span>}
+            </p>
+            {drug.mechanism_summary && (
+              <p class="text-sm text-base-content/70 line-clamp-3">{drug.mechanism_summary}</p>
+            )}
+            <div class="card-actions justify-end mt-2">
+              <a href={`${base}drugs/${drug.id}/`} class="btn btn-xs btn-outline btn-primary">Profile</a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+
+</SchemaLayout>

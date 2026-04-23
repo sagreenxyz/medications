@@ -1,12 +1,60 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
+import drugsData from '../../data/drugs.json';
+
 const base = import.meta.env.BASE_URL;
+const drugs = (drugsData as any[]).sort((a, b) => a.generic_name.localeCompare(b.generic_name));
+
+// Build A-Z letter index
+const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+const drugsByLetter: Record<string, any[]> = {};
+for (const letter of letters) {
+  const group = drugs.filter(d => d.generic_name.toUpperCase().startsWith(letter));
+  if (group.length > 0) drugsByLetter[letter] = group;
+}
 ---
-<BaseLayout title="Drug Index">
+<BaseLayout title="Drug Index — PharmRef">
   <Nav />
-  <main class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl font-serif font-bold mb-6">Drug Index</h1>
-    <p class="text-base-content/70">Drug index will be available after Phase 1 data generation is complete.</p>
+  <main class="container mx-auto px-4 py-8 max-w-6xl">
+    <h1 class="text-3xl font-serif font-bold mb-2">Drug Index</h1>
+    <p class="text-base-content/70 mb-6">Browse all {drugs.length} drugs alphabetically. Click any drug for its full profile.</p>
+
+    <!-- A–Z Jump Nav -->
+    <div class="join flex flex-wrap gap-1 mb-8">
+      {letters.map(letter => (
+        drugsByLetter[letter]
+          ? <a href={`#letter-${letter}`} class="join-item btn btn-sm btn-outline">{letter}</a>
+          : <button class="join-item btn btn-sm btn-disabled opacity-30" disabled>{letter}</button>
+      ))}
+    </div>
+
+    <!-- Drug listing by letter -->
+    {Object.entries(drugsByLetter).map(([letter, group]) => (
+      <section id={`letter-${letter}`} class="mb-10">
+        <h2 class="text-2xl font-serif font-bold border-b border-base-300 pb-2 mb-4">{letter}</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+          {group.map((drug: any) => (
+            <a
+              href={`${base}drugs/${drug.id}`}
+              class:list={[
+                "flex items-center gap-2 p-2 rounded hover:bg-base-200 transition-colors border-l-4",
+                drug.ismp_high_alert ? "border-error" : "border-transparent"
+              ]}
+            >
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-1 flex-wrap">
+                  <span class="font-medium truncate capitalize">{drug.generic_name}</span>
+                  {drug.prototype_for && <span class="badge badge-success badge-xs">P</span>}
+                  {drug.ismp_high_alert && <span class="badge badge-error badge-xs">HA</span>}
+                  {drug.black_box_warnings && drug.black_box_warnings.length > 0 && <span class="badge badge-error badge-outline badge-xs">BBW</span>}
+                </div>
+                <div class="text-xs text-base-content/60 truncate">{drug.drug_class}</div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
   </main>
 </BaseLayout>

@@ -1,0 +1,77 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+const slug = 'cns';
+const displayName = 'Central Nervous System';
+
+const drugs = (drugsData as any[]).filter(
+  (d: any) => (d.organ_systems || []).includes(slug)
+);
+const drugCount = drugs.length;
+---
+<SchemaLayout title="Central Nervous System Pharmacology" schema="organ-systems" description="Drugs classified under the Central Nervous System organ system">
+
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/01-organ-systems/`} class="link">Organ Systems</a></li>
+        <li>Central Nervous System</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-2">Central Nervous System</h1>
+    <p class="text-base-content/70 text-lg">{drugCount} drug{drugCount !== 1 ? 's' : ''} in this system</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>The central nervous system pharmacological landscape is the most complex and diverse in clinical medicine, encompassing over 130 drugs in this reference spanning neurology, psychiatry, pain management, anesthesia, and substance use disorders. Key molecular targets include voltage-gated sodium and calcium channels (targets of antiepileptics and local anesthetics), GABA-A chloride channels (targets of benzodiazepines, barbiturates, and general anesthetics), NMDA glutamate receptors (ketamine, memantine), monoamine transporters (SERT, DAT, NET targeted by antidepressants and stimulants), dopamine D2 receptors (antipsychotics), mu-opioid receptors (opioid analgesics), acetylcholinesterase (donepezil and other cholinesterase inhibitors), and dopamine biosynthetic pathways (levodopa-carbidopa in Parkinson's disease). Nursing priorities for this system are broad: fall risk assessment with sedating medications, respiratory monitoring with opioids and benzodiazepines, seizure precautions, serotonin syndrome recognition, metabolic monitoring with antipsychotics, and lithium toxicity surveillance.</p>
+    <p>Antiepileptic drugs (AEDs) modulate neuronal hyperexcitability through diverse mechanisms that largely define their clinical profiles. Sodium channel stabilizers (phenytoin, carbamazepine, oxcarbazepine, lacosamide, lamotrigine) reduce high-frequency repetitive neuronal firing by prolonging the inactivated state of voltage-gated sodium channels; phenytoin has a narrow therapeutic index (10 to 20 mcg/mL), zero-order kinetics at higher doses, and extensive drug interactions via CYP2C9 and CYP3A4 induction. Valproate inhibits sodium channels and T-type calcium channels while enhancing GABA-ergic transmission; it is a potent teratogen (neural tube defects) absolutely contraindicated in pregnancy and in women of childbearing age unless adequate contraception is confirmed. Levetiracetam, the most widely prescribed newer AED, binds the synaptic vesicle protein SV2A in a mechanism unrelated to traditional ion channels; it has minimal drug interactions and requires renal dose adjustment. Gabapentin and pregabalin bind the alpha-2-delta subunit of voltage-gated calcium channels in the dorsal horn and are used for both epilepsy and neuropathic pain. Nurses must counsel patients that abrupt AED discontinuation can precipitate status epilepticus regardless of epilepsy duration.</p>
+    <p>Antidepressant pharmacology centers on the monoamine hypothesis: depression is associated with functional deficits of serotonin, norepinephrine, and dopamine in key limbic circuits, and most antidepressants enhance monoaminergic transmission. SSRIs (fluoxetine, sertraline, paroxetine, citalopram, escitalopram) block SERT, increasing synaptic serotonin; they require two to four weeks for clinical response because downstream neuroplasticity changes (BDNF upregulation, hippocampal neurogenesis) mediate therapeutic benefit, not the immediate receptor occupancy. SNRIs (venlafaxine, duloxetine) additionally block NET, providing analgesic benefit in neuropathic pain and fibromyalgia. Antipsychotic pharmacology centers on D2 receptor blockade in the mesolimbic pathway (therapeutic) balanced against D2 blockade in the nigrostriatal pathway (extrapyramidal side effects) and tuberoinfundibular pathway (hyperprolactinemia). Second-generation antipsychotics (risperidone, olanzapine, quetiapine, aripiprazole, clozapine) have lower EPS risk due to serotonin 5-HT2A antagonism but carry significant metabolic risks -- weight gain, hyperglycemia, and hyperlipidemia -- requiring fasting glucose and lipid monitoring at baseline and every three months. Clozapine's superior efficacy in treatment-resistant schizophrenia is offset by its 1 percent risk of agranulocytosis, mandating weekly CBC for the first six months with enrollment in the REMS program.</p>
+  </div>
+
+  {drugs.length === 0 && (
+    <div class="alert alert-info mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <span>No drugs are currently classified under this organ system. Check back as more drug data is added.</span>
+    </div>
+  )}
+
+  {drugs.length > 0 && (
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      {drugs.map((drug: any) => (
+        <div class={`card card-compact bg-base-100 shadow border border-base-200 ${drug.ismp_high_alert ? 'border-l-4 border-l-error' : ''}`}>
+          <div class="card-body">
+            <div class="flex flex-wrap items-start gap-1 mb-1">
+              <h2 class="card-title text-base font-semibold capitalize mr-auto">
+                <a href={`${base}drugs/${drug.id}/`} class="hover:text-primary transition-colors">
+                  {drug.generic_name}
+                </a>
+              </h2>
+              {drug.prototype_for && (
+                <span class="badge badge-success badge-sm shrink-0">PROTOTYPE</span>
+              )}
+              {drug.ismp_high_alert && (
+                <span class="badge badge-error badge-sm shrink-0">HIGH ALERT</span>
+              )}
+              {drug.black_box_warnings && drug.black_box_warnings.length > 0 && (
+                <span class="badge badge-warning badge-sm shrink-0">BBW</span>
+              )}
+            </div>
+            <p class="text-xs text-base-content/60 mb-1">
+              <span class="font-medium">{drug.drug_class}</span>
+              {drug.subclass && <span> &mdash; {drug.subclass}</span>}
+            </p>
+            {drug.mechanism_summary && (
+              <p class="text-sm text-base-content/70 line-clamp-3">{drug.mechanism_summary}</p>
+            )}
+            <div class="card-actions justify-end mt-2">
+              <a href={`${base}drugs/${drug.id}/`} class="btn btn-xs btn-outline btn-primary">Profile</a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+
+</SchemaLayout>

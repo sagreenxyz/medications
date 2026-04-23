@@ -1,0 +1,77 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+const slug = 'pns-autonomic';
+const displayName = 'PNS & Autonomic';
+
+const drugs = (drugsData as any[]).filter(
+  (d: any) => (d.organ_systems || []).includes(slug)
+);
+const drugCount = drugs.length;
+---
+<SchemaLayout title="PNS & Autonomic Pharmacology" schema="organ-systems" description="Drugs classified under the PNS & Autonomic organ system">
+
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/01-organ-systems/`} class="link">Organ Systems</a></li>
+        <li>PNS & Autonomic</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-2">PNS & Autonomic</h1>
+    <p class="text-base-content/70 text-lg">{drugCount} drug{drugCount !== 1 ? 's' : ''} in this system</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>The peripheral nervous system and autonomic pharmacology encompass the adrenergic and cholinergic neurotransmitter systems that coordinate involuntary organ function. The sympathetic nervous system releases norepinephrine (and epinephrine from the adrenal medulla) acting on alpha-1 (vasoconstriction, mydriasis), alpha-2 (presynaptic inhibition, central sympatholysis), beta-1 (chronotropy, inotropy, renin release), and beta-2 (bronchodilation, vasodilation, glycogenolysis) adrenergic receptors. The parasympathetic system releases acetylcholine acting on M1 through M5 muscarinic receptors (visceral organs) and nicotinic receptors (ganglia, neuromuscular junction). This system also encompasses acetylcholinesterase as a drug target -- inhibition raises synaptic acetylcholine for therapeutic use in myasthenia gravis, Alzheimer's disease, and reversal of neuromuscular blockade. Disease states include autonomic dysfunction, orthostatic hypotension, benign prostatic hyperplasia (treated with alpha-1 blockers), and the life-threatening toxidromes -- anticholinergic, cholinergic, and sympathomimetic.</p>
+    <p>Muscarinic antagonists (atropine, glycopyrrolate, scopolamine, oxybutynin, solifenacin) produce dose-dependent anticholinergic effects: dry mouth, urinary retention, constipation, tachycardia, and at higher doses, confusion and hallucinations in elderly patients. Atropine's primary clinical use is reversal of symptomatic bradycardia and cholinergic toxidrome; the dose for symptomatic bradycardia is 0.5 mg IV every three to five minutes to a maximum of 3 mg. Neostigmine and pyridostigmine inhibit acetylcholinesterase, prolonging acetylcholine in the neuromuscular junction and synaptic cleft; neostigmine reverses non-depolarizing neuromuscular blockade (vecuronium, rocuronium, cisatracurium) and must be co-administered with glycopyrrolate to block the muscarinic bradycardia and hypersalivation that would otherwise result from systemic acetylcholinesterase inhibition. Alpha-1 antagonists (doxazosin, prazosin, tamsulosin) relax urethral smooth muscle in BPH and are antihypertensive; nurses must counsel patients about first-dose syncope and the need to rise slowly from supine to standing.</p>
+    <p>Adrenergic agonists used in acute hemodynamic support occupy distinct receptor profiles with clinical implications. Dopamine has dose-dependent receptor engagement: at 2 to 5 mcg/kg/min, D1 receptors mediate renal and splanchnic vasodilation; at 5 to 10 mcg/kg/min, beta-1 effects dominate with increased cardiac output; at above 10 mcg/kg/min, alpha-1-mediated vasoconstriction is prominent. Norepinephrine -- the first-line vasopressor in septic shock -- activates alpha-1 and beta-1 receptors to increase systemic vascular resistance while maintaining cardiac contractility. Epinephrine (alpha-1, beta-1, beta-2) is the drug of choice in anaphylaxis and cardiac arrest; in anaphylaxis, 0.3 to 0.5 mg IM in the mid-outer thigh is the definitive immediate treatment. All vasopressors are ISMP high-alert medications requiring continuous hemodynamic monitoring, titration per protocol, and central venous administration when possible to prevent extravasation injury.</p>
+  </div>
+
+  {drugs.length === 0 && (
+    <div class="alert alert-info mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <span>No drugs are currently classified under this organ system. Check back as more drug data is added.</span>
+    </div>
+  )}
+
+  {drugs.length > 0 && (
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      {drugs.map((drug: any) => (
+        <div class={`card card-compact bg-base-100 shadow border border-base-200 ${drug.ismp_high_alert ? 'border-l-4 border-l-error' : ''}`}>
+          <div class="card-body">
+            <div class="flex flex-wrap items-start gap-1 mb-1">
+              <h2 class="card-title text-base font-semibold capitalize mr-auto">
+                <a href={`${base}drugs/${drug.id}/`} class="hover:text-primary transition-colors">
+                  {drug.generic_name}
+                </a>
+              </h2>
+              {drug.prototype_for && (
+                <span class="badge badge-success badge-sm shrink-0">PROTOTYPE</span>
+              )}
+              {drug.ismp_high_alert && (
+                <span class="badge badge-error badge-sm shrink-0">HIGH ALERT</span>
+              )}
+              {drug.black_box_warnings && drug.black_box_warnings.length > 0 && (
+                <span class="badge badge-warning badge-sm shrink-0">BBW</span>
+              )}
+            </div>
+            <p class="text-xs text-base-content/60 mb-1">
+              <span class="font-medium">{drug.drug_class}</span>
+              {drug.subclass && <span> &mdash; {drug.subclass}</span>}
+            </p>
+            {drug.mechanism_summary && (
+              <p class="text-sm text-base-content/70 line-clamp-3">{drug.mechanism_summary}</p>
+            )}
+            <div class="card-actions justify-end mt-2">
+              <a href={`${base}drugs/${drug.id}/`} class="btn btn-xs btn-outline btn-primary">Profile</a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+
+</SchemaLayout>

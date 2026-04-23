@@ -1,0 +1,77 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+const slug = 'hematology-oncology';
+const displayName = 'Hematology-Oncology';
+
+const drugs = (drugsData as any[]).filter(
+  (d: any) => (d.organ_systems || []).includes(slug)
+);
+const drugCount = drugs.length;
+---
+<SchemaLayout title="Hematology-Oncology Pharmacology" schema="organ-systems" description="Drugs classified under the Hematology-Oncology organ system">
+
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/01-organ-systems/`} class="link">Organ Systems</a></li>
+        <li>Hematology-Oncology</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-2">Hematology-Oncology</h1>
+    <p class="text-base-content/70 text-lg">{drugCount} drug{drugCount !== 1 ? 's' : ''} in this system</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>Hematology-oncology pharmacology spans the full spectrum from supportive hematopoietic agents to curative cytotoxic chemotherapy and the targeted and immunological agents that now dominate modern oncological practice. Classical cytotoxic drugs exploit the vulnerability of rapidly dividing cells: alkylating agents (cyclophosphamide, cisplatin) form DNA crosslinks; antimetabolites (methotrexate, 5-fluorouracil) incorporate into DNA or inhibit nucleotide biosynthesis; anthracyclines (doxorubicin) intercalate DNA and generate reactive oxygen species; vinca alkaloids (vincristine, vinblastine) and taxanes (paclitaxel, docetaxel) disrupt microtubule dynamics; and topoisomerase inhibitors (topotecan, irinotecan, etoposide) trap cleavage complexes and cause strand breaks. Targeted therapy is guided by tumor molecular profiling: tyrosine kinase inhibitors block constitutively active kinases (imatinib against BCR-ABL, gefitinib against EGFR, vemurafenib against BRAF V600E). Immunotherapy with checkpoint inhibitors (pembrolizumab, nivolumab, ipilimumab) restores T-cell antitumor immunity. Nursing priorities include meticulous chemotherapy safety (ISMP high-alert classification, closed system drug transfer devices, PPE), neutropenia surveillance, mucositis management, antiemetic prophylaxis, and REMS program compliance for high-risk agents.</p>
+    <p>Cytotoxic chemotherapy requires individualized nursing vigilance because each agent has a unique toxicity signature. Platinum compounds (cisplatin, carboplatin, oxaliplatin) are nephrotoxic and ototoxic; cisplatin requires aggressive IV hydration (1 to 2 liters normal saline) before and after administration, and nurses must document urine output and measure BUN, creatinine, and electrolytes before each cycle. Anthracycline cumulative cardiotoxicity (doxorubicin, daunorubicin) is dose-dependent; baseline LVEF is measured before initiation and rechecked at cumulative doses exceeding 300 mg/m2, with discontinuation at LVEF drop exceeding 10 percentage points below 50 percent. Vincristine causes peripheral neuropathy (sensory greater than motor) that is dose-limiting and cumulative; weekly assessment of grip strength, deep tendon reflexes, and constipation is mandatory. Methotrexate at high doses (greater than 500 mg/m2) requires leucovorin rescue to replenish the folate cofactor pool in normal cells; leucovorin must be administered on a precise schedule based on methotrexate serum levels, and nurses must document strict fluid intake and urine alkalinization (pH above 7) to prevent methotrexate precipitation in renal tubules.</p>
+    <p>Targeted therapies and immunotherapies require a different set of nursing assessments than conventional cytotoxics. BCR-ABL tyrosine kinase inhibitors (imatinib, dasatinib, nilotinib, ponatinib) are generally well-tolerated but require monitoring for pleural effusion (dasatinib), QT prolongation (nilotinib), and arterial occlusive events (ponatinib). CDK4/6 inhibitors (palbociclib, ribociclib, abemaciclib) cause profound neutropenia; CBC monitoring is performed on day 14 of the first two cycles. Checkpoint inhibitors (anti-PD-1, anti-PD-L1, anti-CTLA-4) produce immune-related adverse events (irAEs) affecting virtually any organ: pneumonitis, colitis, hepatitis, endocrinopathies, dermatitis, and rarely myocarditis. Nurses must educate patients to report any new symptoms and must recognize that irAEs can occur months after the last dose. Hematopoietic growth factors (filgrastim, pegfilgrastim for neutropenia; epoetin alfa, darbepoetin for anemia; eltrombopag, romiplostim for thrombocytopenia) support marrow recovery; subcutaneous filgrastim should not be administered on the day of or 24 hours before chemotherapy due to risk of stimulating myeloid progenitors into the cytotoxic drug's effect window.</p>
+  </div>
+
+  {drugs.length === 0 && (
+    <div class="alert alert-info mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <span>No drugs are currently classified under this organ system. Check back as more drug data is added.</span>
+    </div>
+  )}
+
+  {drugs.length > 0 && (
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      {drugs.map((drug: any) => (
+        <div class={`card card-compact bg-base-100 shadow border border-base-200 ${drug.ismp_high_alert ? 'border-l-4 border-l-error' : ''}`}>
+          <div class="card-body">
+            <div class="flex flex-wrap items-start gap-1 mb-1">
+              <h2 class="card-title text-base font-semibold capitalize mr-auto">
+                <a href={`${base}drugs/${drug.id}/`} class="hover:text-primary transition-colors">
+                  {drug.generic_name}
+                </a>
+              </h2>
+              {drug.prototype_for && (
+                <span class="badge badge-success badge-sm shrink-0">PROTOTYPE</span>
+              )}
+              {drug.ismp_high_alert && (
+                <span class="badge badge-error badge-sm shrink-0">HIGH ALERT</span>
+              )}
+              {drug.black_box_warnings && drug.black_box_warnings.length > 0 && (
+                <span class="badge badge-warning badge-sm shrink-0">BBW</span>
+              )}
+            </div>
+            <p class="text-xs text-base-content/60 mb-1">
+              <span class="font-medium">{drug.drug_class}</span>
+              {drug.subclass && <span> &mdash; {drug.subclass}</span>}
+            </p>
+            {drug.mechanism_summary && (
+              <p class="text-sm text-base-content/70 line-clamp-3">{drug.mechanism_summary}</p>
+            )}
+            <div class="card-actions justify-end mt-2">
+              <a href={`${base}drugs/${drug.id}/`} class="btn btn-xs btn-outline btn-primary">Profile</a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+
+</SchemaLayout>

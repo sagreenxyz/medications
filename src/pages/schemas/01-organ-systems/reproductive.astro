@@ -1,0 +1,77 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+const slug = 'reproductive';
+const displayName = 'Reproductive';
+
+const drugs = (drugsData as any[]).filter(
+  (d: any) => (d.organ_systems || []).includes(slug)
+);
+const drugCount = drugs.length;
+---
+<SchemaLayout title="Reproductive Pharmacology" schema="organ-systems" description="Drugs classified under the Reproductive organ system">
+
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/01-organ-systems/`} class="link">Organ Systems</a></li>
+        <li>Reproductive</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-2">Reproductive</h1>
+    <p class="text-base-content/70 text-lg">{drugCount} drug{drugCount !== 1 ? 's' : ''} in this system</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>Reproductive pharmacology encompasses hormonal contraception, fertility induction, obstetric pharmacology, and the management of hormone-sensitive conditions including endometriosis, benign prostatic hyperplasia, and hormone-receptor-positive malignancies. The central pharmacological targets are estrogen receptors (ERalpha, ERbeta), progesterone receptors, androgen receptors, and the GnRH receptor on the gonadotroph cells of the anterior pituitary. Pharmacological manipulation of the GnRH pulse frequency underlies both contraception (by suppressing the mid-cycle LH surge) and fertility induction (by controlled ovarian stimulation). Uterine smooth muscle targets include oxytocin receptors (mediating uterine contraction), prostaglandin EP and FP receptors (cervical ripening and uterotonic activity), and progesterone receptors (whose blockade with mifepristone initiates medical termination). Nursing priorities in reproductive pharmacology include verification of pregnancy status before hormonal and teratogenic medications, venous thromboembolism (VTE) risk assessment with estrogen-containing contraceptives, patient education about consistent daily timing of oral contraceptives, and fetal monitoring in obstetric contexts.</p>
+    <p>Combined oral contraceptives (COCs) containing synthetic estrogen (ethinyl estradiol) and a progestin suppress ovulation by suppressing GnRH pulsatility, thereby blunting the LH surge and preventing follicular maturation. They additionally thicken cervical mucus and alter endometrial receptivity. The absolute contraindications to estrogen-containing contraceptives include personal history of VTE, stroke, or myocardial infarction; migraine with aura; active or recent breast cancer; and uncontrolled hypertension. Progestin-only pills, implants, and hormonal IUDs avoid estrogen-related VTE risk and are preferred in patients who are breastfeeding, have cardiovascular risk factors, or cannot tolerate estrogen. Selective estrogen receptor modulators (SERMs) -- tamoxifen and raloxifene -- act as ERalpha antagonists in breast tissue while exerting agonist activity in bone; nurses managing patients on tamoxifen must monitor for endometrial cancer symptoms (postmenopausal bleeding) and VTE, and must educate patients that the drug requires up to five years of use for full chemopreventive benefit.</p>
+    <p>Obstetric pharmacology requires particular vigilance because every drug administered to the pregnant patient crosses the placenta to varying degrees. Oxytocin, an ISMP high-alert medication, is administered by continuous IV infusion for labor induction or augmentation and must be titrated by a registered nurse per institutional protocol; uterine hyperstimulation produces decelerations in fetal heart rate requiring immediate dose reduction or cessation. Magnesium sulfate, another ISMP high-alert medication, is used for eclampsia prevention and neuroprotection in preterm birth; nurses must monitor deep tendon reflexes hourly (loss at levels above 7 mEq/L), respiratory rate (depression at levels above 10 mEq/L), and urine output (minimum 25 to 30 mL/hour), and must maintain calcium gluconate at the bedside as the antidote. Tocolytics including terbutaline (beta-2 agonist) and nifedipine (calcium channel blocker) delay preterm labor to allow corticosteroid administration for fetal lung maturation. Phosphodiesterase-5 inhibitors (sildenafil, tadalafil) are used in pulmonary arterial hypertension; in the reproductive context, they are also used for erectile dysfunction and require patient education about the absolute contraindication with nitrates due to life-threatening hypotension.</p>
+  </div>
+
+  {drugs.length === 0 && (
+    <div class="alert alert-info mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <span>No drugs are currently classified under this organ system. Check back as more drug data is added.</span>
+    </div>
+  )}
+
+  {drugs.length > 0 && (
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      {drugs.map((drug: any) => (
+        <div class={`card card-compact bg-base-100 shadow border border-base-200 ${drug.ismp_high_alert ? 'border-l-4 border-l-error' : ''}`}>
+          <div class="card-body">
+            <div class="flex flex-wrap items-start gap-1 mb-1">
+              <h2 class="card-title text-base font-semibold capitalize mr-auto">
+                <a href={`${base}drugs/${drug.id}/`} class="hover:text-primary transition-colors">
+                  {drug.generic_name}
+                </a>
+              </h2>
+              {drug.prototype_for && (
+                <span class="badge badge-success badge-sm shrink-0">PROTOTYPE</span>
+              )}
+              {drug.ismp_high_alert && (
+                <span class="badge badge-error badge-sm shrink-0">HIGH ALERT</span>
+              )}
+              {drug.black_box_warnings && drug.black_box_warnings.length > 0 && (
+                <span class="badge badge-warning badge-sm shrink-0">BBW</span>
+              )}
+            </div>
+            <p class="text-xs text-base-content/60 mb-1">
+              <span class="font-medium">{drug.drug_class}</span>
+              {drug.subclass && <span> &mdash; {drug.subclass}</span>}
+            </p>
+            {drug.mechanism_summary && (
+              <p class="text-sm text-base-content/70 line-clamp-3">{drug.mechanism_summary}</p>
+            )}
+            <div class="card-actions justify-end mt-2">
+              <a href={`${base}drugs/${drug.id}/`} class="btn btn-xs btn-outline btn-primary">Profile</a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+
+</SchemaLayout>

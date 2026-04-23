@@ -1,0 +1,77 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+const slug = 'toxicology';
+const displayName = 'Toxicology';
+
+const drugs = (drugsData as any[]).filter(
+  (d: any) => (d.organ_systems || []).includes(slug)
+);
+const drugCount = drugs.length;
+---
+<SchemaLayout title="Toxicology Pharmacology" schema="organ-systems" description="Drugs classified under the Toxicology organ system">
+
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/01-organ-systems/`} class="link">Organ Systems</a></li>
+        <li>Toxicology</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-2">Toxicology</h1>
+    <p class="text-base-content/70 text-lg">{drugCount} drug{drugCount !== 1 ? 's' : ''} in this system</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>Toxicological pharmacology within this reference focuses on the antidotes and reversal agents that are essential to emergency nursing practice, as well as the clinically important drug toxidromes arising from therapeutic misadventure and intentional overdose. The four classical toxidromes are: (1) the cholinergic toxidrome (salivation, lacrimation, urination, defecation, GI distress, emesis -- SLUDGE -- with bradycardia and miosis) caused by organophosphate poisoning or excessive cholinesterase inhibitor dosing; (2) the anticholinergic toxidrome (dry as a bone, blind as a bat, red as a beet, mad as a hatter, hot as hare) caused by antihistamine, tricyclic antidepressant, and atropine-class overdoses; (3) the sympathomimetic toxidrome (tachycardia, hypertension, hyperthermia, diaphoresis, mydriasis) caused by cocaine, amphetamines, or excessive adrenergic agonist dosing; and (4) the opioid toxidrome (miosis, respiratory depression, decreased consciousness) requiring immediate naloxone administration. Nursing priorities in toxicological emergencies include airway management, cardiac monitoring, laboratory surveillance, and administration of the appropriate antidote from a pre-arranged emergency stock.</p>
+    <p>Opioid overdose management centers on naloxone, a competitive mu-opioid receptor antagonist with no agonist activity that reverses respiratory depression within one to two minutes of IV administration. The initial dose is 0.4 to 2 mg IV, IM, or intranasal, with repeat dosing every two to three minutes as needed; a total of 10 mg without response should prompt reconsideration of the diagnosis. Critically, naloxone's half-life (30 to 90 minutes) is shorter than most opioids, creating renarcotization risk; patients must be monitored for at least four to six hours after apparent reversal, and a continuous infusion may be required for long-acting opioids such as methadone. Anticoagulant reversal agents are the other major toxicological category: vitamin K (phytonadione) reverses warfarin by restoring carboxylation of vitamin K-dependent clotting factors, but requires six to twelve hours for effect; four-factor prothrombin complex concentrate (PCC) provides immediate hemostasis for life-threatening warfarin-associated hemorrhage. Idarucizumab (reverses dabigatran) and andexanet alfa (reverses rivaroxaban and apixaban) are specific reversal agents for direct oral anticoagulants.</p>
+    <p>Cholinergic toxidrome management requires large doses of atropine titrated to dry secretions (not heart rate) and pralidoxime (2-PAM) to reactivate acetylcholinesterase before 'aging' -- irreversible phosphonylation -- renders the enzyme permanently inactive. Digoxin toxicity manifests with GI symptoms (nausea, anorexia) and cardiac dysrhythmias including bradycardia, heart block, and the pathognomonic bidirectional ventricular tachycardia; treatment is digoxin-specific antibody fragments (digoxin immune Fab), potassium correction, and avoidance of cardioversion which can precipitate ventricular fibrillation. Acetaminophen overdose produces fulminant hepatic necrosis through accumulation of the reactive metabolite NAPQI when glutathione stores are depleted; N-acetylcysteine (NAC) replenishes glutathione precursors and is most effective within eight hours of ingestion but benefits persist beyond that window. The Rumack-Matthew nomogram guides NAC initiation decisions based on serum acetaminophen level and time since ingestion. Nurses managing overdose patients must maintain calm, establish IV access and continuous monitoring, and prepare for seizures with benzodiazepine availability in any stimulant or organophosphate toxidrome scenario.</p>
+  </div>
+
+  {drugs.length === 0 && (
+    <div class="alert alert-info mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <span>No drugs are currently classified under this organ system. Check back as more drug data is added.</span>
+    </div>
+  )}
+
+  {drugs.length > 0 && (
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      {drugs.map((drug: any) => (
+        <div class={`card card-compact bg-base-100 shadow border border-base-200 ${drug.ismp_high_alert ? 'border-l-4 border-l-error' : ''}`}>
+          <div class="card-body">
+            <div class="flex flex-wrap items-start gap-1 mb-1">
+              <h2 class="card-title text-base font-semibold capitalize mr-auto">
+                <a href={`${base}drugs/${drug.id}/`} class="hover:text-primary transition-colors">
+                  {drug.generic_name}
+                </a>
+              </h2>
+              {drug.prototype_for && (
+                <span class="badge badge-success badge-sm shrink-0">PROTOTYPE</span>
+              )}
+              {drug.ismp_high_alert && (
+                <span class="badge badge-error badge-sm shrink-0">HIGH ALERT</span>
+              )}
+              {drug.black_box_warnings && drug.black_box_warnings.length > 0 && (
+                <span class="badge badge-warning badge-sm shrink-0">BBW</span>
+              )}
+            </div>
+            <p class="text-xs text-base-content/60 mb-1">
+              <span class="font-medium">{drug.drug_class}</span>
+              {drug.subclass && <span> &mdash; {drug.subclass}</span>}
+            </p>
+            {drug.mechanism_summary && (
+              <p class="text-sm text-base-content/70 line-clamp-3">{drug.mechanism_summary}</p>
+            )}
+            <div class="card-actions justify-end mt-2">
+              <a href={`${base}drugs/${drug.id}/`} class="btn btn-xs btn-outline btn-primary">Profile</a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+
+</SchemaLayout>

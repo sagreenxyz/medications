@@ -1,0 +1,374 @@
+---
+import DrugProfileLayout from '../../layouts/DrugProfileLayout.astro';
+import Nav from '../../components/Nav.astro';
+import drugsData from '../../../data/drugs.json';
+
+export async function getStaticPaths() {
+  return (drugsData as any[]).map(drug => ({
+    params: { slug: drug.id },
+    props: { drug },
+  }));
+}
+
+const { drug } = Astro.props as { drug: any };
+const base = import.meta.env.BASE_URL;
+const allDrugs = drugsData as any[];
+
+// Find prototype if this is a variation
+const prototypeDrug = drug.prototype_drug
+  ? allDrugs.find(d => d.id === drug.prototype_drug || d.generic_name.toLowerCase().replace(/\s+/g, '-') === drug.prototype_drug)
+  : null;
+
+// Related drugs — same drug class, limit 5
+const relatedDrugs = allDrugs
+  .filter(d => d.id !== drug.id && d.drug_class === drug.drug_class)
+  .slice(0, 5);
+
+// Schema membership links
+const schemaMaps = [
+  { key: 'organ_system', label: 'Organ Systems', base: 'schemas/01-organ-systems' },
+  { key: 'therapeutic_class', label: 'Therapeutic Classes', base: 'schemas/02-therapeutic-classes' },
+  { key: 'mechanism_family', label: 'Mechanism-First', base: 'schemas/04-mechanism-first' },
+  { key: 'prototype_class', label: 'Prototype + Class', base: 'schemas/05-prototype-class' },
+  { key: 'presentation_cluster', label: 'Clinical Presentations', base: 'schemas/07-clinical-presentations' },
+  { key: 'adverse_cluster', label: 'Adverse Effects', base: 'schemas/08-adverse-effects' },
+  { key: 'interaction_cluster', label: 'Drug Interactions', base: 'schemas/09-drug-interactions' },
+];
+
+const pkRows = [
+  { label: 'Absorption', value: drug.pharmacokinetics?.absorption },
+  { label: 'Distribution', value: drug.pharmacokinetics?.distribution },
+  { label: 'Metabolism', value: drug.pharmacokinetics?.metabolism },
+  { label: 'Excretion', value: drug.pharmacokinetics?.excretion },
+  { label: 'Half-life', value: drug.pharmacokinetics?.half_life },
+  { label: 'Onset', value: drug.pharmacokinetics?.onset },
+  { label: 'Peak', value: drug.pharmacokinetics?.peak },
+  { label: 'Duration', value: drug.pharmacokinetics?.duration },
+  { label: 'Protein binding', value: drug.pharmacokinetics?.protein_binding },
+  { label: 'Volume of distribution', value: drug.pharmacokinetics?.vd },
+].filter(r => r.value);
+---
+<DrugProfileLayout title={`${drug.generic_name} — PharmRef`} drug={drug}>
+  <Nav />
+  <main class="container mx-auto px-4 py-8 max-w-5xl">
+    
+    <!-- Header card -->
+    <div class="card bg-base-100 shadow-md mb-8">
+      <div class="card-body">
+        <div class="flex flex-wrap items-start gap-3 mb-2">
+          <h1 class="text-4xl font-serif font-bold capitalize">{drug.generic_name}</h1>
+          {drug.prototype_for && <span class="badge badge-success badge-lg">PROTOTYPE</span>}
+          {drug.ismp_high_alert && <span class="badge badge-error badge-lg">HIGH ALERT</span>}
+          {drug.black_box_warnings && drug.black_box_warnings.length > 0 && (
+            <span class="badge badge-error badge-outline badge-lg">⬛ BLACK BOX WARNING</span>
+          )}
+          {drug.beers_criteria && <span class="badge badge-warning badge-lg">BEERS CRITERIA</span>}
+        </div>
+        
+        {drug.brand_names && drug.brand_names.length > 0 && (
+          <p class="text-base-content/70 text-sm mb-2">
+            <span class="font-semibold">Brand names:</span> {drug.brand_names.join(', ')}
+          </p>
+        )}
+        
+        <div class="flex flex-wrap gap-2 mb-3">
+          <span class="badge badge-outline">{drug.drug_class}</span>
+          {drug.subclass && drug.subclass !== drug.drug_class && (
+            <span class="badge badge-ghost">{drug.subclass}</span>
+          )}
+          {drug.organ_systems?.map((sys: string) => (
+            <a href={`${base}schemas/01-organ-systems/${sys}`} class="badge badge-outline badge-primary hover:badge-primary transition-colors capitalize">{sys.replace(/-/g, ' ')}</a>
+          ))}
+        </div>
+
+        {prototypeDrug && (
+          <p class="text-sm text-base-content/70">
+            Class variation of <a href={`${base}drugs/${prototypeDrug.id}`} class="link link-primary font-semibold capitalize">{prototypeDrug.generic_name}</a> (prototype)
+          </p>
+        )}
+      </div>
+    </div>
+
+    <!-- ISMP High Alert callout -->
+    {drug.ismp_high_alert && (
+      <div class="alert alert-error mb-6 shadow-md">
+        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+        <div>
+          <h3 class="font-bold">ISMP High-Alert Medication</h3>
+          <div class="text-sm">This drug has been identified by the Institute for Safe Medication Practices (ISMP) as a high-alert medication that bears a heightened risk of causing significant harm when used in error. Independent double-checks, clinical decision support, and standardized concentrations are recommended wherever feasible.</div>
+        </div>
+      </div>
+    )}
+
+    <!-- Black Box Warning -->
+    {drug.black_box_warnings && drug.black_box_warnings.length > 0 && (
+      <div class="alert alert-error mb-6 shadow-md">
+        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+        <div>
+          <h3 class="font-bold">⬛ Black Box Warning(s)</h3>
+          <ul class="text-sm mt-1 list-disc list-inside">
+            {drug.black_box_warnings.map((w: string) => <li>{w}</li>)}
+          </ul>
+        </div>
+      </div>
+    )}
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Main content column -->
+      <div class="lg:col-span-2 space-y-8">
+
+        <!-- Mechanism of Action -->
+        <section>
+          <h2 class="text-2xl font-serif font-bold mb-3 border-b border-base-300 pb-2">Mechanism of Action</h2>
+          <div class="space-y-3">
+            <p class="text-base leading-relaxed">{drug.mechanism_summary}</p>
+            {drug.mechanism_targets && drug.mechanism_targets.length > 0 && (
+              <p class="text-sm text-base-content/70">
+                <span class="font-semibold">Target(s):</span> {drug.mechanism_targets.join('; ')}
+              </p>
+            )}
+          </div>
+        </section>
+
+        <!-- Pharmacokinetics -->
+        {pkRows.length > 0 && (
+          <section>
+            <h2 class="text-2xl font-serif font-bold mb-3 border-b border-base-300 pb-2">Pharmacokinetics</h2>
+            <div class="overflow-x-auto mb-4">
+              <table class="table table-zebra table-sm w-full">
+                <tbody>
+                  {pkRows.map(row => (
+                    <tr>
+                      <td class="font-semibold text-base-content/70 w-36">{row.label}</td>
+                      <td class="font-mono text-sm">{row.value}</td>
+                    </tr>
+                  ))}
+                  {drug.renal_dose_adjustment && (
+                    <tr>
+                      <td class="font-semibold text-base-content/70">Renal adjustment</td>
+                      <td><span class="badge badge-warning badge-sm">Required</span></td>
+                    </tr>
+                  )}
+                  {drug.hepatic_dose_adjustment && (
+                    <tr>
+                      <td class="font-semibold text-base-content/70">Hepatic adjustment</td>
+                      <td><span class="badge badge-warning badge-sm">Required</span></td>
+                    </tr>
+                  )}
+                  {drug.tdm_required && (
+                    <tr>
+                      <td class="font-semibold text-base-content/70">TDM required</td>
+                      <td><span class="badge badge-info badge-sm">Yes</span></td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+            <div class="flex gap-4 text-sm flex-wrap">
+              {drug.pregnancy_safety && <span><span class="font-semibold">Pregnancy:</span> {drug.pregnancy_safety}</span>}
+              {drug.lactation_safety && <span><span class="font-semibold">Lactation:</span> {drug.lactation_safety}</span>}
+            </div>
+          </section>
+        )}
+
+        <!-- Indications -->
+        {drug.indications && drug.indications.length > 0 && (
+          <section>
+            <h2 class="text-2xl font-serif font-bold mb-3 border-b border-base-300 pb-2">Indications</h2>
+            <p class="text-base leading-relaxed">{drug.indications.join('; ')}.</p>
+          </section>
+        )}
+
+        <!-- Contraindications -->
+        {drug.contraindications && drug.contraindications.length > 0 && (
+          <section>
+            <h2 class="text-2xl font-serif font-bold mb-3 border-b border-base-300 pb-2">Contraindications & Precautions</h2>
+            <p class="text-base leading-relaxed">{drug.contraindications.join('; ')}.</p>
+          </section>
+        )}
+
+        <!-- Adverse Effects -->
+        {drug.adverse_effects && (
+          <section>
+            <h2 class="text-2xl font-serif font-bold mb-3 border-b border-base-300 pb-2">Adverse Effects</h2>
+            <div class="space-y-3">
+              {drug.adverse_effects.common && drug.adverse_effects.common.length > 0 && (
+                <div>
+                  <h3 class="font-semibold text-base-content/80 mb-1">Common</h3>
+                  <p class="text-sm">{drug.adverse_effects.common.join(', ')}.</p>
+                </div>
+              )}
+              {drug.adverse_effects.serious && drug.adverse_effects.serious.length > 0 && (
+                <div class="alert alert-warning shadow-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-5 w-5" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                  <div>
+                    <h3 class="font-bold text-sm">Serious Adverse Effects</h3>
+                    <p class="text-sm">{drug.adverse_effects.serious.join('; ')}.</p>
+                  </div>
+                </div>
+              )}
+            </div>
+          </section>
+        )}
+
+        <!-- Drug Interactions -->
+        {drug.drug_interactions && drug.drug_interactions.length > 0 && (
+          <section>
+            <h2 class="text-2xl font-serif font-bold mb-3 border-b border-base-300 pb-2">Drug Interactions</h2>
+            <div class="overflow-x-auto">
+              <table class="table table-zebra table-sm w-full">
+                <thead>
+                  <tr>
+                    <th>Drug / Class</th>
+                    <th>Mechanism</th>
+                    <th>Severity</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {drug.drug_interactions.map((interaction: any) => (
+                    <tr>
+                      <td class="font-medium text-sm capitalize">{interaction.drug}</td>
+                      <td class="text-sm text-base-content/80">{interaction.mechanism}</td>
+                      <td>
+                        {interaction.severity === 'major' && <span class="badge badge-error badge-sm">Major</span>}
+                        {interaction.severity === 'moderate' && <span class="badge badge-warning badge-sm">Moderate</span>}
+                        {interaction.severity === 'minor' && <span class="badge badge-ghost badge-sm">Minor</span>}
+                        {interaction.severity === 'beneficial' && <span class="badge badge-success badge-sm">Beneficial</span>}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        )}
+
+        <!-- Nursing Considerations -->
+        <section>
+          <h2 class="text-2xl font-serif font-bold mb-3 border-b border-base-300 pb-2">Nursing Considerations</h2>
+          {drug.ismp_high_alert && (
+            <div class="alert alert-error mb-4 shadow-sm text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-5 w-5" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+              <p><strong>ISMP High-Alert Medication:</strong> This drug has been identified by ISMP as bearing a heightened risk of causing significant harm when used in error. Independent double-checks and standardized concentrations are recommended.</p>
+            </div>
+          )}
+          {drug.nursing_considerations && drug.nursing_considerations.length > 0 ? (
+            <div class="space-y-3">
+              {drug.nursing_considerations.map((note: string) => (
+                <div class="alert alert-info shadow-sm text-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                  <p>{note}</p>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p class="text-base-content/60">See current package insert for nursing guidance.</p>
+          )}
+        </section>
+
+        <!-- Clinical Pearls -->
+        {drug.clinical_pearls && drug.clinical_pearls.length > 0 && (
+          <section>
+            <h2 class="text-2xl font-serif font-bold mb-3 border-b border-base-300 pb-2">Clinical Pearls</h2>
+            <div class="space-y-3">
+              {drug.clinical_pearls.map((pearl: string) => (
+                <div class="alert alert-success shadow-sm text-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                  <p>{pearl}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+
+        <!-- Schema Membership Panel -->
+        <div class="card bg-base-200 shadow-sm">
+          <div class="card-body p-4">
+            <h3 class="font-bold text-base mb-3">Schema Membership</h3>
+            <div class="space-y-2">
+              {schemaMaps.map(sm => {
+                const values = Array.isArray(drug.schema_memberships?.[sm.key])
+                  ? drug.schema_memberships[sm.key]
+                  : drug.schema_memberships?.[sm.key]
+                    ? [drug.schema_memberships[sm.key]]
+                    : [];
+                if (values.length === 0) return null;
+                return (
+                  <div>
+                    <div class="text-xs font-semibold text-base-content/60 uppercase mb-1">{sm.label}</div>
+                    <div class="flex flex-wrap gap-1">
+                      {values.map((v: string) => (
+                        <a href={`${base}${sm.base}/${v.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '')}`} class="badge badge-outline badge-sm hover:badge-primary capitalize">
+                          {v.replace(/-/g, ' ')}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
+        <!-- Safety Flags -->
+        <div class="card bg-base-200 shadow-sm">
+          <div class="card-body p-4">
+            <h3 class="font-bold text-base mb-3">Safety Flags</h3>
+            <div class="space-y-1 text-sm">
+              <div class="flex items-center justify-between">
+                <span>ISMP High Alert</span>
+                {drug.ismp_high_alert ? <span class="badge badge-error badge-sm">Yes</span> : <span class="badge badge-ghost badge-sm">No</span>}
+              </div>
+              <div class="flex items-center justify-between">
+                <span>Beers Criteria</span>
+                {drug.beers_criteria ? <span class="badge badge-warning badge-sm">Yes</span> : <span class="badge badge-ghost badge-sm">No</span>}
+              </div>
+              <div class="flex items-center justify-between">
+                <span>TDM Required</span>
+                {drug.tdm_required ? <span class="badge badge-info badge-sm">Yes</span> : <span class="badge badge-ghost badge-sm">No</span>}
+              </div>
+              <div class="flex items-center justify-between">
+                <span>Renal Adjustment</span>
+                {drug.renal_dose_adjustment ? <span class="badge badge-warning badge-sm">Yes</span> : <span class="badge badge-ghost badge-sm">No</span>}
+              </div>
+              <div class="flex items-center justify-between">
+                <span>Hepatic Adjustment</span>
+                {drug.hepatic_dose_adjustment ? <span class="badge badge-warning badge-sm">Yes</span> : <span class="badge badge-ghost badge-sm">No</span>}
+              </div>
+              <div class="flex items-center justify-between">
+                <span>Guideline Update</span>
+                {drug.guideline_update_flag ? <span class="badge badge-warning badge-sm">Recent</span> : <span class="badge badge-ghost badge-sm">Current</span>}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Related Drugs Panel -->
+        {relatedDrugs.length > 0 && (
+          <div class="card bg-base-200 shadow-sm">
+            <div class="card-body p-4">
+              <h3 class="font-bold text-base mb-3">Related Drugs</h3>
+              <div class="space-y-2">
+                {relatedDrugs.map((rd: any) => (
+                  <a href={`${base}drugs/${rd.id}`} class="block p-2 rounded hover:bg-base-300 transition-colors">
+                    <div class="flex items-center gap-1">
+                      <span class="text-sm font-medium capitalize">{rd.generic_name}</span>
+                      {rd.prototype_for && <span class="badge badge-success badge-xs">P</span>}
+                    </div>
+                    <div class="text-xs text-base-content/60">{rd.subclass || rd.drug_class}</div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+      </div>
+    </div>
+  </main>
+</DrugProfileLayout>

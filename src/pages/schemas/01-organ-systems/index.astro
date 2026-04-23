@@ -1,7 +1,81 @@
 ---
 import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+
+const systems = [
+  { slug: 'cardiovascular',       name: 'Cardiovascular',         icon: 'heart' },
+  { slug: 'renal',                name: 'Renal',                   icon: 'droplet' },
+  { slug: 'respiratory',          name: 'Respiratory',             icon: 'wind' },
+  { slug: 'gastrointestinal',     name: 'Gastrointestinal',        icon: 'activity' },
+  { slug: 'endocrine',            name: 'Endocrine & Metabolic',   icon: 'zap' },
+  { slug: 'reproductive',         name: 'Reproductive',            icon: 'users' },
+  { slug: 'cns',                  name: 'Central Nervous System',  icon: 'cpu' },
+  { slug: 'pns-autonomic',        name: 'PNS & Autonomic',         icon: 'git-branch' },
+  { slug: 'musculoskeletal',      name: 'Musculoskeletal',         icon: 'layers' },
+  { slug: 'hematology-oncology',  name: 'Hematology-Oncology',     icon: 'crosshair' },
+  { slug: 'immunology',           name: 'Immunology',              icon: 'shield' },
+  { slug: 'infectious-disease',   name: 'Infectious Disease',      icon: 'alert-circle' },
+  { slug: 'dermatology',          name: 'Dermatology',             icon: 'feather' },
+  { slug: 'ophthalmology-ent',    name: 'Ophthalmology & ENT',     icon: 'eye' },
+  { slug: 'toxicology',           name: 'Toxicology',              icon: 'alert-triangle' },
+];
+
+const drugCounts = systems.map(s => ({
+  ...s,
+  count: drugsData.filter((d: any) => (d.organ_systems || []).includes(s.slug)).length,
+}));
 ---
-<SchemaLayout title="Organ Systems" schema="organ-systems">
-  <h1 class="text-3xl font-serif font-bold mb-4">Organ Systems</h1>
-  <p>Content coming soon.</p>
+<SchemaLayout title="Schema 1: Organ Systems" schema="organ-systems" description="Browse the 500 reference drugs organized by organ system">
+
+  <div class="prose max-w-none mb-8">
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-2">Schema 1: Organ Systems</h1>
+    <p class="text-base-content/70 text-lg mb-6">Browse 500 clinical medications organized by the body systems they primarily affect.</p>
+
+    <p>
+      The organ-system framework is the dominant organizational schema in clinical pharmacology education
+      because it mirrors the way physicians and nurses encounter disease. When a patient presents with
+      chest pain, the clinician's first cognitive move is to the cardiovascular system; when dyspnea
+      appears, the respiratory and cardiac systems are activated simultaneously. Organizing drugs by
+      the system they target allows learners to anchor pharmacological knowledge directly to pathophysiology,
+      building the clinical reasoning chains that sustain safe practice under pressure. This schema is
+      the most common structure in USMLE Step 1 and NCLEX blueprints, and it maps naturally to hospital
+      service lines and outpatient specialty clinics.
+    </p>
+    <p>
+      The principal limitation of organ-system organization is that many drugs act on multiple systems
+      simultaneously. Beta-blockers, for example, reduce cardiac output, blunt bronchodilation, suppress
+      renin release, and modulate glycogenolysis -- their placement under "cardiovascular" risks obscuring
+      clinically important respiratory and metabolic effects. Similarly, corticosteroids appear under
+      endocrine, immunology, respiratory, and musculoskeletal headings in different textbooks. The student
+      should resist the temptation to memorize drugs as belonging exclusively to one system; every drug
+      entry on this site cross-references all organ systems it affects through the Schema Membership Panel.
+    </p>
+    <p>
+      This schema covers fifteen organ systems, from the high-density cardiovascular and central nervous
+      system categories (each exceeding 100 agents) to the more focused renal, reproductive, and
+      musculoskeletal clusters. For learners who prefer to approach pharmacology through molecular
+      mechanism rather than anatomical target, <a href={`${base}schemas/04-mechanism-first/`} class="link link-primary">Schema 4 (Mechanism-First)</a> provides
+      an equivalent entry point organized by receptor family and enzyme target. For examination strategy,
+      <a href={`${base}schemas/05-prototype-class/`} class="link link-primary">Schema 5 (Prototype + Class)</a>
+      presents the canonical prototype drug for each class followed by its variations along the four axes
+      of PK duration, receptor selectivity, indication profile, and adverse effect profile.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+    {drugCounts.map(sys => (
+      <a href={`${base}schemas/01-organ-systems/${sys.slug}/`} class="card card-compact bg-base-100 shadow hover:shadow-md border border-base-200 transition-shadow hover:border-primary">
+        <div class="card-body">
+          <h2 class="card-title text-base font-semibold">{sys.name}</h2>
+          <p class="text-sm text-base-content/60">{sys.count} drug{sys.count !== 1 ? 's' : ''}</p>
+          <div class="card-actions justify-end mt-2">
+            <span class="badge badge-outline badge-sm">View</span>
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+
 </SchemaLayout>

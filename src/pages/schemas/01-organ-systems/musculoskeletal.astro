@@ -1,0 +1,77 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+const slug = 'musculoskeletal';
+const displayName = 'Musculoskeletal';
+
+const drugs = (drugsData as any[]).filter(
+  (d: any) => (d.organ_systems || []).includes(slug)
+);
+const drugCount = drugs.length;
+---
+<SchemaLayout title="Musculoskeletal Pharmacology" schema="organ-systems" description="Drugs classified under the Musculoskeletal organ system">
+
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/01-organ-systems/`} class="link">Organ Systems</a></li>
+        <li>Musculoskeletal</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-2">Musculoskeletal</h1>
+    <p class="text-base-content/70 text-lg">{drugCount} drug{drugCount !== 1 ? 's' : ''} in this system</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>The musculoskeletal pharmacological domain encompasses analgesics, anti-inflammatory agents, disease-modifying antirheumatic drugs (DMARDs), gout management, and bone metabolism agents. Key targets include cyclooxygenase enzymes COX-1 and COX-2 (NSAIDs), the xanthine oxidase enzyme in the purine degradation pathway (allopurinol, febuxostat), the RANKL-RANK signaling axis in osteoclast activation (denosumab), and farnesyl diphosphate synthase in the mevalonate pathway (bisphosphonates). Inflammatory arthritis involves TNF-alpha, IL-6, IL-1beta, and T-cell costimulatory signals as therapeutic targets. Disease states include osteoarthritis, rheumatoid arthritis, gout and hyperuricemia, osteoporosis, fibromyalgia, and inflammatory myopathies. Nursing priorities include gastrointestinal toxicity monitoring with chronic NSAID use, renal function surveillance, patient education about DMARD timing and infectious precautions, and fall risk assessment in patients receiving bone-modifying agents.</p>
+    <p>NSAIDs inhibit cyclooxygenase to reduce prostaglandin synthesis, producing analgesia, antipyresis, and anti-inflammation but also impairing renal prostaglandin-dependent autoregulation and gastric mucosal cytoprotection. All non-selective NSAIDs (ibuprofen, naproxen, indomethacin, ketorolac, diclofenac) carry risk of gastric ulceration through COX-1 inhibition reducing mucus and bicarbonate secretion; concurrent PPI therapy is recommended in patients over 65 or with prior GI bleeds. Selective COX-2 inhibitors (celecoxib) spare gastric COX-1, reducing GI risk, but lack the COX-1-mediated antiplatelet effect and carry a higher cardiovascular thrombotic risk in patients with pre-existing atherosclerosis. Ketorolac is a high-potency NSAID reserved for short-term (maximum five days) parenteral pain management; nurses must document renal function before administration and reassess daily. Methotrexate, the anchor DMARD in rheumatoid arthritis, inhibits dihydrofolate reductase to suppress lymphocyte proliferation; folic acid 1 mg daily is co-prescribed to reduce mucositis and hepatotoxicity while preserving efficacy.</p>
+    <p>Gout management separates acute attack treatment from long-term urate-lowering therapy. Acute gout is treated with colchicine (inhibits tubulin polymerization and neutrophil migration), NSAIDs, or corticosteroids; colchicine is most effective when initiated within 12 to 24 hours of symptom onset. Allopurinol and febuxostat reduce urate synthesis by inhibiting xanthine oxidase; the serum urate target is below 6 mg/dL for most patients and below 5 mg/dL for those with tophi. Allopurinol must be started at a low dose (100 mg/day) and titrated slowly because rapid urate lowering paradoxically triggers acute gout attacks; prophylactic colchicine or an NSAID is co-prescribed for the first three to six months. Bisphosphonates (alendronate, risedronate, zoledronic acid) inhibit osteoclast function by incorporating into hydroxyapatite and releasing cytotoxic pyrophosphate analogs when osteoclasts resorb bone; nurses must ensure adequate calcium and vitamin D co-supplementation, instruct patients on correct oral administration (swallow whole with 8 oz water, remain upright 30 to 60 minutes), and monitor for atypical femoral fracture symptoms with long-term use exceeding five years.</p>
+  </div>
+
+  {drugs.length === 0 && (
+    <div class="alert alert-info mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <span>No drugs are currently classified under this organ system. Check back as more drug data is added.</span>
+    </div>
+  )}
+
+  {drugs.length > 0 && (
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      {drugs.map((drug: any) => (
+        <div class={`card card-compact bg-base-100 shadow border border-base-200 ${drug.ismp_high_alert ? 'border-l-4 border-l-error' : ''}`}>
+          <div class="card-body">
+            <div class="flex flex-wrap items-start gap-1 mb-1">
+              <h2 class="card-title text-base font-semibold capitalize mr-auto">
+                <a href={`${base}drugs/${drug.id}/`} class="hover:text-primary transition-colors">
+                  {drug.generic_name}
+                </a>
+              </h2>
+              {drug.prototype_for && (
+                <span class="badge badge-success badge-sm shrink-0">PROTOTYPE</span>
+              )}
+              {drug.ismp_high_alert && (
+                <span class="badge badge-error badge-sm shrink-0">HIGH ALERT</span>
+              )}
+              {drug.black_box_warnings && drug.black_box_warnings.length > 0 && (
+                <span class="badge badge-warning badge-sm shrink-0">BBW</span>
+              )}
+            </div>
+            <p class="text-xs text-base-content/60 mb-1">
+              <span class="font-medium">{drug.drug_class}</span>
+              {drug.subclass && <span> &mdash; {drug.subclass}</span>}
+            </p>
+            {drug.mechanism_summary && (
+              <p class="text-sm text-base-content/70 line-clamp-3">{drug.mechanism_summary}</p>
+            )}
+            <div class="card-actions justify-end mt-2">
+              <a href={`${base}drugs/${drug.id}/`} class="btn btn-xs btn-outline btn-primary">Profile</a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+
+</SchemaLayout>
