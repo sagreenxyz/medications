@@ -1,17 +1,12 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import Nav from '../components/Nav.astro';
 
 export interface Props {
   title: string;
-  genericName: string;
-  drugClass: string;
+  drug?: any;
 }
-const { title, genericName, drugClass } = Astro.props;
+const { title, drug } = Astro.props;
 ---
 <BaseLayout title={title}>
-  <Nav />
-  <main class="container mx-auto px-4 py-8 max-w-5xl">
-    <slot />
-  </main>
+  <slot />
 </BaseLayout>

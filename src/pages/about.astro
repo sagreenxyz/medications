@@ -2,12 +2,24 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 ---
-<BaseLayout title="About">
+<BaseLayout title="About — PharmRef">
   <Nav />
   <main class="container mx-auto px-4 py-8 max-w-3xl">
     <h1 class="text-3xl font-serif font-bold mb-6">About PharmRef</h1>
-    <div class="prose">
-      <p>PharmRef is a production-quality, static pharmacology reference website covering the top 500 clinical medications. The site serves medical and nursing students at the third-year and advanced level, organizing the same 500 drugs through nine distinct educational schemas simultaneously.</p>
+    <div class="prose prose-base max-w-none">
+      <p>PharmRef is a production-quality, static pharmacology reference website covering the top 500 clinical medications. The site serves medical and nursing students at the third-year and advanced level, organizing the same 500 drugs through nine distinct educational schemas simultaneously. No single organizational schema adequately serves all learning goals — organ-system thinking serves clinical reasoning; mechanism-first thinking serves prediction and transfer; prototype-class thinking serves examination efficiency; ADME thinking serves drug interaction and dosing safety. PharmRef presents all nine schemas in parallel, cross-referenced at every level.</p>
+
+      <p>The primary audiences for PharmRef are medical students preparing for USMLE Steps 1, 2, and 3; nursing students preparing for the NCLEX-RN and NCLEX-PN; advanced practice nursing students in pharmacology coursework; and clinical pharmacology instructors seeking a comprehensive annotated reference. All pharmacological content reflects current FDA labeling, ACC/AHA, GINA, GOLD, ADA, IDSA, and WHO guidelines through 2024–2025.</p>
+
+      <p>The nine schemas represent fundamentally different cognitive frameworks for organizing the same pharmacological knowledge. Schema 1 (Organ Systems) mirrors the clinical problem-solving approach — when a patient presents with hypertension, what drugs act on the cardiovascular system? Schema 2 (Therapeutic Classes) approaches from mechanism — what do all ACE inhibitors have in common? Schema 3 (Organ × Class Matrix) reveals cross-cutting patterns — which enzyme inhibitors act on the renal system? Schemas 4 through 9 add molecular, prototype-based, pharmacokinetic, clinical presentation, adverse effect, and drug interaction perspectives. Together, these nine schemas create a richly cross-referenced learning environment that supports USMLE and NCLEX preparation as well as deep clinical reasoning.</p>
+
+      <p>Each of the 500 drug profiles follows a standardized format including mechanism of action at the molecular and systems level, full pharmacokinetic profile with clinical implications, indications with pharmacological rationale, contraindications with mechanistic explanation, adverse effects organized by severity, drug interactions with mechanistic basis, and nursing considerations with specific laboratory thresholds and patient education language. Schema membership panels on every drug page link out to all nine schema contexts where that drug appears, enabling rapid cross-schema navigation.</p>
+
+      <h2>Technical Notes</h2>
+      <p>PharmRef is built with Astro in static output mode for hosting on GitHub Pages. No server-side rendering occurs at runtime — the site is fully pre-generated at build time. Interactive features (search, filter panel, schema compass) are implemented as Svelte islands using client-side JavaScript only. Search uses Fuse.js loaded from CDN. Styling uses Tailwind CSS and DaisyUI component library. The site requires no backend, no authentication, and no external API calls at runtime.</p>
+
+      <h2>Content Disclaimer</h2>
+      <p>PharmRef is an educational reference intended for students and educators. It is not a clinical decision support tool and should not be used as a substitute for current prescribing information, institutional formulary resources, or clinical pharmacist consultation. Pharmacological guidelines evolve continuously — always verify information against current package labeling and institutional protocols before clinical application.</p>
     </div>
   </main>
 </BaseLayout>
