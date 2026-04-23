@@ -1,0 +1,89 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+const base = import.meta.env.BASE_URL;
+
+const drugs = (drugsData as any[])
+  .filter(d => d.black_box_warnings && d.black_box_warnings.length > 0)
+  .sort((a, b) => a.generic_name.localeCompare(b.generic_name));
+
+const letters = [...new Set(drugs.map(d => d.generic_name[0].toUpperCase()))].sort();
+---
+<SchemaLayout title="Black Box Warnings" schema="adverse-effects" description="Complete compilation of FDA Black Box Warning drugs from the 500-drug pharmacology reference — all BBW drugs listed alphabetically with full warning text and nursing action summary">
+
+  <div class="mb-2">
+    <a href={`${base}schemas/08-adverse-effects/`} class="text-sm text-base-content/60 hover:text-primary">← Schema 8: Adverse Effects</a>
+  </div>
+
+  <div class="mb-8">
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-3">Black Box Warnings</h1>
+    <p class="text-base-content/70 text-lg max-w-3xl">FDA-mandated black box warnings (also called "boxed warnings") for all applicable drugs in this reference. {drugs.length} drugs carry at least one black box warning.</p>
+  </div>
+
+  <div class="alert alert-error mb-8">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+    <div>
+      <p class="font-semibold">FDA Black Box Warning</p>
+      <p class="text-sm">Black box warnings represent the FDA's highest level of drug safety warning, mandated when clinical studies show a significant risk of serious or life-threatening adverse effects. The presence of a black box warning does not mean the drug should not be used — it means prescribers and nurses must ensure patients are selected appropriately, monitored carefully, and educated thoroughly.</p>
+    </div>
+  </div>
+
+  <div class="prose max-w-none mb-8">
+    <p>The FDA black box warning (BBW), also termed a "boxed warning," is the highest level of safety communication required in a drug's prescribing information. Black box warnings are mandated when clinical trials or post-marketing surveillance demonstrate a significant risk of serious or life-threatening adverse reactions, distinguishing these drugs from others where serious reactions occur but are less common or less severe. Black box warnings may address specific populations at risk (pediatric suicidality for antidepressants, fetal toxicity for ACE inhibitors and warfarin), specific administration conditions (restrict intravenous promethazine due to severe tissue necrosis), required risk mitigation strategies (REMS programs for thalidomide, clozapine, isotretinoin), or specific drug combinations to avoid (QT-prolonging drugs, serotonergic combinations with MAOIs). A nurse who practices in any acute care, ambulatory, or community setting will inevitably administer drugs with black box warnings; understanding the specific risk of each BBW drug in their patient population is a core clinical competency. The BBW drugs are listed below alphabetically with the specific warning summarized in clinical language and a nursing action summary for each.</p>
+    <p>Nursing practice implications of black box warnings extend beyond passive information transfer: the nurse is an active patient safety practitioner. For each BBW drug, the nurse must confirm that the indication is appropriate (e.g., amiodarone BBW states it is for life-threatening arrhythmias only), that required monitoring is ordered and being followed (e.g., weekly CBC for clozapine), that the patient has received and understood the BBW-relevant education (e.g., opioid patients on prescribed long-term therapy must understand overdose risk and receive naloxone), and that required REMS elements are in place where applicable. The Student should note that several BBW drugs in this reference carry REMS requirements with specific education, monitoring, or dispensing restrictions that the nurse must facilitate.</p>
+  </div>
+
+  <!-- A-Z Jump Nav -->
+  <div class="join flex flex-wrap gap-1 mb-8">
+    {letters.map(l => (
+      <a href={`#letter-${l}`} class="join-item btn btn-sm btn-outline">{l}</a>
+    ))}
+  </div>
+
+  <!-- Drug Listings by Letter -->
+  {letters.map(letter => {
+    const letterDrugs = drugs.filter(d => d.generic_name[0].toUpperCase() === letter);
+    return (
+      <div id={`letter-${letter}`} class="mb-8">
+        <h2 class="text-2xl font-serif font-bold mb-4 border-b border-base-300 pb-2">{letter}</h2>
+        <div class="space-y-4">
+          {letterDrugs.map((d: any) => (
+            <div class="card bg-base-100 border border-base-300 shadow-sm">
+              <div class="card-body py-4">
+                <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                  <div>
+                    <a href={`${base}drugs/${d.id}/`} class="text-lg font-serif font-bold text-primary hover:underline">{d.generic_name}</a>
+                    {d.brand_names && d.brand_names.length > 0 && (
+                      <span class="text-sm text-base-content/60 ml-2">({d.brand_names.slice(0,2).join(', ')})</span>
+                    )}
+                  </div>
+                  <div class="flex gap-2 flex-wrap">
+                    <span class="badge badge-error">BBW</span>
+                    {d.ismp_high_alert && <span class="badge badge-error">HIGH ALERT</span>}
+                    {d.beers_criteria && <span class="badge badge-warning">BEERS</span>}
+                  </div>
+                </div>
+                <p class="text-sm text-base-content/70 mb-2">{d.drug_class}</p>
+                <div class="space-y-2">
+                  {(d.black_box_warnings as string[]).map((bbw: string) => (
+                    <div class="alert alert-error py-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-5 w-5" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                      <span class="text-sm font-medium">{bbw}</span>
+                    </div>
+                  ))}
+                </div>
+                {d.nursing_considerations && d.nursing_considerations.length > 0 && (
+                  <div class="mt-3">
+                    <p class="text-xs font-semibold text-base-content/60 uppercase tracking-wide mb-1">Key Nursing Action</p>
+                    <p class="text-sm">{(d.nursing_considerations as string[])[0]}</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  })}
+
+</SchemaLayout>

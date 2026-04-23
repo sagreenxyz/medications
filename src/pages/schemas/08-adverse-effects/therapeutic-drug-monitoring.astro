@@ -1,0 +1,185 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+const base = import.meta.env.BASE_URL;
+
+const drugs = (drugsData as any[])
+  .filter(d => d.tdm_required === true)
+  .sort((a, b) => a.generic_name.localeCompare(b.generic_name));
+
+const tdmDetails: Record<string, { target: string; timing: string; toxicity: string; notes: string }> = {
+  'vancomycin': {
+    target: 'AUC/MIC 400–600 mg·h/L (preferred); trough 10–20 mcg/mL (legacy)',
+    timing: 'AUC-guided: obtain two levels within dosing interval at steady state (after 3rd–4th dose); trough: 30–60 min before 4th or 5th dose',
+    toxicity: 'Nephrotoxicity (AUC >600), ototoxicity (rare at therapeutic levels), Red man syndrome (infusion-related, not allergy)',
+    notes: 'AUC/MIC monitoring per 2020 ASHP/IDSA/SIDP consensus guidelines. Use Bayesian estimation software preferred. Maintain renal function and avoid concurrent nephrotoxins.',
+  },
+  'gentamicin': {
+    target: 'Traditional dosing: peak 5–10 mcg/mL, trough <2 mcg/mL; Extended-interval: random level interpreted per Hartford nomogram',
+    timing: 'Traditional: peak 30 min after end of 30-min infusion; trough 30 min before next dose. Extended-interval: 6–14 hrs after dose',
+    toxicity: 'Nephrotoxicity, ototoxicity (cochlear: high-frequency hearing loss; vestibular: dizziness, ataxia)',
+    notes: 'Avoid concurrent loop diuretics, amphotericin, vancomycin, NSAIDs. Monitor SCr and BUN every 48–72 hrs. Extended-interval dosing preferred for most indications.',
+  },
+  'tobramycin': {
+    target: 'Same as gentamicin. Pulmonary CF dosing: peak 8–10 mcg/mL',
+    timing: 'Same as gentamicin',
+    toxicity: 'Nephrotoxicity, ototoxicity (vestibular > cochlear for tobramycin)',
+    notes: 'CF patients may require higher doses for adequate pulmonary penetration. Inhaled tobramycin requires no TDM.',
+  },
+  'amikacin': {
+    target: 'Traditional: peak 20–30 mcg/mL, trough <10 mcg/mL; Extended-interval: peak 55–65 mcg/mL',
+    timing: 'Same interval as gentamicin/tobramycin',
+    toxicity: 'Nephrotoxicity, ototoxicity',
+    notes: 'Reserved for resistant gram-negative organisms. Monitor renal function closely.',
+  },
+  'digoxin': {
+    target: '0.5–2.0 ng/mL (CHF: 0.5–0.9 ng/mL preferred per DIG trial sub-analysis)',
+    timing: 'Trough level only: ≥6 hours after last oral dose; ≥12–24 hours after IV dose (wait for distribution to complete)',
+    toxicity: 'Toxicity >2 ng/mL: nausea, vomiting, visual disturbances (yellow-green halos), bradycardia, heart block, ventricular arrhythmias',
+    notes: 'Levels must be interpreted with serum potassium (hypokalemia potentiates toxicity at normal levels), magnesium, and calcium. Many interactions elevate levels (amiodarone, dronedarone, verapamil, quinidine, macrolides, azole antifungals). Renal dose adjustment required.',
+  },
+  'lithium': {
+    target: 'Acute mania: 0.8–1.2 mEq/L; Maintenance: 0.6–1.0 mEq/L; Elderly: 0.4–0.8 mEq/L',
+    timing: '12-hour trough level: exactly 12 hours after last dose (standardize timing)',
+    toxicity: 'Fine tremor (therapeutic), coarse tremor + ataxia (toxic >1.5 mEq/L), confusion, seizures, cardiovascular collapse (>2.5 mEq/L)',
+    notes: 'Narrow therapeutic index. Sodium-depleting states raise lithium levels (dehydration, low-Na diet, thiazide diuretics, NSAIDs, ACE inhibitors). Check levels at steady state (5 days), then monthly for 6 months, then every 6 months. Also monitor TSH (q6 months) and creatinine (q6 months).',
+  },
+  'phenytoin': {
+    target: 'Total: 10–20 mcg/mL; Free: 1–2 mcg/mL (check free in hypoalbuminemia, renal failure, pregnancy)',
+    timing: 'Trough level (just before next dose) at steady state (5–7 days for oral, sooner with IV loading)',
+    toxicity: 'Nystagmus (>20 mcg/mL), ataxia (>30 mcg/mL), mental status changes, cardiovascular collapse with rapid IV administration',
+    notes: 'Nonlinear pharmacokinetics (Michaelis-Menten): small dose changes produce disproportionate level changes near therapeutic range. Check free level when albumin <3.5 g/dL (use Sheiner-Tozer correction formula). Multiple drug interactions (CYP2C9, CYP2C19 inducer and substrate).',
+  },
+  'valproate': {
+    target: '50–100 mcg/mL (epilepsy); 50–125 mcg/mL (bipolar)',
+    timing: 'Trough level at steady state (2–3 days)',
+    toxicity: 'Hepatotoxicity (BBW, especially <2 years old, polytherapy), teratogenicity (BBW, neural tube defects), pancreatitis (BBW), thrombocytopenia, tremor',
+    notes: 'Monitor LFTs at baseline and during first 6 months. Check CBC with platelets. Enzyme-inducing AEDs (carbamazepine, phenytoin) lower valproate levels. Aspirin displaces from albumin, raising free levels. Contraindicated in pregnancy for epilepsy by 2024 FDA label update.',
+  },
+  'cyclosporine': {
+    target: '100–400 ng/mL (transplant type and time post-transplant dependent); 100–200 ng/mL (maintenance)',
+    timing: 'Trough (C0): just before morning dose at steady state',
+    toxicity: 'Nephrotoxicity (dose-dependent), hypertension, hirsutism, gingival hyperplasia, neurotoxicity, hyperkalemia',
+    notes: 'Extensive CYP3A4 and P-gp metabolism — many interactions. Grapefruit juice raises levels significantly. Monitor SCr, BUN, electrolytes, and BP with each level. CYP3A4 inhibitors (azoles, macrolides, diltiazem, verapamil) raise levels dramatically.',
+  },
+  'tacrolimus': {
+    target: '5–20 ng/mL (transplant type and time post-transplant dependent); 5–10 ng/mL (maintenance)',
+    timing: 'Trough: just before morning dose at steady state (whole blood sample)',
+    toxicity: 'Nephrotoxicity, neurotoxicity (tremor, headache, seizure), new-onset diabetes after transplant (NODAT), hyperkalemia, QT prolongation',
+    notes: 'CYP3A4 and P-gp substrate — same interactions as cyclosporine. More potent calcineurin inhibitor, lower maintenance doses than cyclosporine. Monitor SCr, potassium, glucose, and neurological status.',
+  },
+  'methotrexate': {
+    target: 'High-dose MTX (>500 mg/m²): levels measured 24h, 48h, 72h post-infusion. Target <1 μmol/L at 24h, <0.1 μmol/L at 48h, <0.01 μmol/L at 72h',
+    timing: 'Serial levels post high-dose infusion per protocol',
+    toxicity: 'Mucositis, myelosuppression, nephrotoxicity, hepatotoxicity (chronic low-dose), pulmonary toxicity, neurotoxicity',
+    notes: 'Leucovorin rescue is mandatory with high-dose MTX — timing and dose are based on MTX levels and creatinine. Hydration (≥3 L/day) and urinary alkalinization (urine pH >7.0) required. Low-dose weekly MTX (rheumatoid arthritis, psoriasis) does not require serum TDM but requires LFTs and CBC every 6–12 weeks.',
+  },
+  'sirolimus': {
+    target: '4–12 ng/mL (renal transplant maintenance)',
+    timing: 'Trough: 1 hour before dose at steady state (after cyclosporine withdrawal, higher targets initially)',
+    toxicity: 'Impaired wound healing (hold perioperatively), hyperlipidemia, myelosuppression, pneumonitis, proteinuria',
+    notes: 'CYP3A4/P-gp substrate. Synergistic nephrotoxicity with cyclosporine. Monitor lipid panel, CBC, and urinalysis.',
+  },
+};
+---
+<SchemaLayout title="Therapeutic Drug Monitoring" schema="adverse-effects" description="Therapeutic drug monitoring reference: target ranges, sampling timing, toxicity thresholds, and nursing implications for all TDM drugs">
+
+  <div class="mb-2">
+    <a href={`${base}schemas/08-adverse-effects/`} class="text-sm text-base-content/60 hover:text-primary">← Schema 8: Adverse Effects</a>
+  </div>
+
+  <div class="mb-8">
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-3">Therapeutic Drug Monitoring (TDM)</h1>
+    <p class="text-base-content/70 text-lg max-w-3xl">Target ranges, sampling timing, toxicity thresholds, and nursing implications for {drugs.length} drugs requiring TDM in this reference.</p>
+  </div>
+
+  <div class="prose max-w-none mb-8">
+    <p>Therapeutic drug monitoring (TDM) is the clinical practice of measuring drug concentrations in biological fluids—usually plasma or whole blood—to optimize dosing by ensuring drug concentrations fall within a defined therapeutic range that balances efficacy and toxicity. TDM is indicated when a drug has a narrow therapeutic index (the ratio of the toxic dose to the effective dose is small), when significant pharmacokinetic variability exists between patients (due to age, organ function, genetic polymorphisms, or drug interactions), and when a measurable pharmacokinetic/pharmacodynamic relationship links drug concentrations to clinical outcomes. The eight drug classes most commonly requiring TDM in acute care are aminoglycosides, vancomycin, digoxin, lithium, phenytoin, valproate, calcineurin inhibitors (cyclosporine, tacrolimus), and methotrexate—each representing drugs where underdosing risks therapeutic failure and overdosing risks severe or irreversible toxicity.</p>
+    <p>The timing of drug level collection is as important as the target range itself. Trough levels (collected just before the next dose at steady state) reflect the minimum concentration that must be maintained for efficacy and are the standard for most TDM drugs. Peak levels (collected after distribution is complete, 30–60 minutes after end of infusion for aminoglycosides) reflect the maximum concentration and are used to confirm adequate bacterial killing for concentration-dependent antibiotics. Area under the concentration-time curve (AUC) sampling—using two levels within a dosing interval to mathematically integrate exposure—has replaced trough-only monitoring for vancomycin per current guidelines because AUC better predicts nephrotoxicity and efficacy simultaneously. The nurse's role in TDM includes ensuring levels are collected at the specified time relative to the dose, documenting exact collection times in the medical record (even a 15-minute deviation from specified sampling time can result in erroneous dose adjustments), alerting the pharmacist or prescriber when levels are outside the therapeutic range, and monitoring for clinical signs of toxicity and efficacy throughout the dosing interval.</p>
+    <p>The concept of steady state is fundamental to TDM interpretation: meaningful drug levels can only be obtained after approximately 4–5 half-lives of therapy, when drug accumulation and elimination are in equilibrium. Obtaining a level too early (before steady state) will falsely suggest subtherapeutic concentrations and may lead to inappropriate dose increases. Exceptions include situations where early levels are needed to prevent toxicity (high-dose methotrexate, toxicity screening in overdose) or when loading doses are used to rapidly achieve therapeutic concentrations (phenytoin, digoxin, lidocaine). The pharmacist and clinical pharmacologist are key collaborative partners in TDM; the nurse should alert the pharmacy team before drawing levels when there has been a change in renal function, a new interacting drug, or a change in the patient's clinical status that might affect drug disposition.</p>
+  </div>
+
+  <div class="stats shadow mb-8 flex flex-wrap">
+    <div class="stat"><div class="stat-title">TDM Drugs</div><div class="stat-value text-info">{drugs.length}</div></div>
+    <div class="stat"><div class="stat-title">Narrow Therapeutic Index</div><div class="stat-value">{drugs.filter(d => d.black_box_warnings?.length > 0).length}</div><div class="stat-desc">Also carry BBW</div></div>
+  </div>
+
+  <!-- TDM Drug Cards -->
+  <div class="space-y-6 mb-10">
+    {drugs.map((d: any) => {
+      const details = tdmDetails[d.id] || null;
+      return (
+        <div class="card bg-base-100 border border-info border-l-4 shadow-sm">
+          <div class="card-body">
+            <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+              <div>
+                <a href={`${base}drugs/${d.id}/`} class="text-xl font-serif font-bold text-primary hover:underline">{d.generic_name}</a>
+                {d.brand_names && d.brand_names.length > 0 && (
+                  <span class="text-sm text-base-content/60 ml-2">({d.brand_names.slice(0,2).join(', ')})</span>
+                )}
+                <p class="text-sm text-base-content/60 mt-1">{d.drug_class}</p>
+              </div>
+              <div class="flex gap-2 flex-wrap">
+                <span class="badge badge-info">TDM Required</span>
+                {d.ismp_high_alert && <span class="badge badge-error">HIGH ALERT</span>}
+                {d.black_box_warnings?.length > 0 && <span class="badge badge-error">BBW</span>}
+              </div>
+            </div>
+
+            {details ? (
+              <div class="overflow-x-auto">
+                <table class="table table-zebra table-sm w-full">
+                  <tbody>
+                    <tr>
+                      <th class="w-36 text-xs">Therapeutic Range</th>
+                      <td class="text-sm font-mono">{details.target}</td>
+                    </tr>
+                    <tr>
+                      <th class="text-xs">Sampling Timing</th>
+                      <td class="text-sm">{details.timing}</td>
+                    </tr>
+                    <tr>
+                      <th class="text-xs">Toxicity Signs</th>
+                      <td class="text-sm text-error">{details.toxicity}</td>
+                    </tr>
+                    <tr>
+                      <th class="text-xs">Clinical Notes</th>
+                      <td class="text-sm">{details.notes}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            ) : (
+              <div class="overflow-x-auto">
+                <table class="table table-zebra table-sm w-full">
+                  <tbody>
+                    <tr>
+                      <th class="w-36 text-xs">Half-life</th>
+                      <td class="text-sm font-mono">{d.pharmacokinetics?.half_life || '—'}</td>
+                    </tr>
+                    <tr>
+                      <th class="text-xs">Metabolism</th>
+                      <td class="text-sm">{d.pharmacokinetics?.metabolism || '—'}</td>
+                    </tr>
+                    <tr>
+                      <th class="text-xs">Excretion</th>
+                      <td class="text-sm">{d.pharmacokinetics?.excretion || '—'}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            )}
+
+            {d.nursing_considerations && d.nursing_considerations.length > 0 && (
+              <div class="alert alert-info py-2 mt-3">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 h-5 w-5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <p class="text-sm">{(d.nursing_considerations as string[])[0]}</p>
+              </div>
+            )}
+          </div>
+        </div>
+      );
+    })}
+  </div>
+
+</SchemaLayout>

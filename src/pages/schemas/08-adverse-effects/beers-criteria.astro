@@ -1,0 +1,86 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+const base = import.meta.env.BASE_URL;
+
+const drugs = (drugsData as any[])
+  .filter(d => d.beers_criteria === true)
+  .sort((a, b) => a.generic_name.localeCompare(b.generic_name));
+---
+<SchemaLayout title="Beers Criteria — Drugs to Use with Caution in Older Adults" schema="adverse-effects" description="Complete listing of Beers Criteria medications from the pharmacology reference — drugs potentially inappropriate in adults 65 and older">
+
+  <div class="mb-2">
+    <a href={`${base}schemas/08-adverse-effects/`} class="text-sm text-base-content/60 hover:text-primary">← Schema 8: Adverse Effects</a>
+  </div>
+
+  <div class="mb-8">
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-3">Beers Criteria</h1>
+    <p class="text-base-content/70 text-lg max-w-3xl">Drugs potentially inappropriate for use in adults aged 65 and older. {drugs.length} drugs in this reference appear on the Beers Criteria list.</p>
+  </div>
+
+  <div class="alert alert-warning mb-8">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+    <div>
+      <p class="font-semibold">American Geriatrics Society 2023 Beers Criteria®</p>
+      <p class="text-sm">The Beers Criteria are not absolute contraindications. They identify drugs where the risk-to-benefit ratio is unfavorable in most older adults, or where a safer alternative exists. Clinical judgment, patient preferences, and individual patient factors must guide prescribing decisions.</p>
+    </div>
+  </div>
+
+  <div class="prose max-w-none mb-8">
+    <p>The American Geriatrics Society (AGS) Beers Criteria® represent an evidence-based expert consensus list of potentially inappropriate medications (PIMs) for use in older adults (aged ≥65). Updated every 3 years (most recently 2023), the Criteria identify drugs and drug classes where the potential risks outweigh the potential benefits in most older patients, or where safer therapeutic alternatives exist. The physiological basis for geriatric pharmacology risk includes reduced hepatic clearance (CYP450 activity and hepatic blood flow decline 30–40% by age 75), reduced renal clearance (GFR declines ~1 mL/min/year after age 40; renal mass decreases 25–30% by age 70), altered body composition (increased fat:lean ratio elevates Vd for lipophilic drugs; decreased albumin raises free drug fraction for highly protein-bound drugs), and increased blood-brain barrier permeability (CNS drugs cause greater cognitive, sedative, and extrapyramidal effects). Additionally, pharmacodynamic sensitivity to CNS depressants, anticholinergic agents, and cardiovascular drugs is heightened in older patients due to reduced receptor reserve and compensatory mechanisms.</p>
+    <p>The Beers Criteria are organized into five tables: (1) drugs to avoid in most older adults regardless of condition; (2) drugs to avoid or use with caution due to drug-disease interactions (e.g., NSAIDs in patients with CKD, heart failure, or peptic ulcer disease); (3) drugs to be used with caution due to moderate quality evidence of harm; (4) clinically significant drug-drug interactions; and (5) drugs to avoid or reduce dose based on renal function. The criteria most relevant to nursing practice are the first-pass screening drugs in Table 1, which include first-generation antihistamines (anticholinergic CNS effects, fall risk), benzodiazepines and non-benzodiazepine Z-drugs (fall and fracture risk, delirium), antipsychotics except for schizophrenia or bipolar disorder (fall risk, mortality in dementia), tricyclic antidepressants (highly anticholinergic), NSAIDs (GI bleeding, AKI, fluid retention), oral hypoglycemics with high hypoglycemia risk (glyburide, sliding-scale insulin in non-ICU settings), and antiarrhythmics (digoxin >0.125 mg/day, amiodarone, dronedarone). The Student should note that Beers-listed drugs are sometimes appropriately prescribed in older patients when no safer alternative exists and when the patient is monitored accordingly.</p>
+  </div>
+
+  <div class="stats shadow mb-6 flex flex-wrap">
+    <div class="stat"><div class="stat-title">Beers Criteria Drugs</div><div class="stat-value text-warning">{drugs.length}</div></div>
+    <div class="stat"><div class="stat-title">Also Have BBW</div><div class="stat-value">{drugs.filter(d => d.black_box_warnings?.length > 0).length}</div></div>
+    <div class="stat"><div class="stat-title">Also ISMP High Alert</div><div class="stat-value">{drugs.filter(d => d.ismp_high_alert).length}</div></div>
+  </div>
+
+  <div class="overflow-x-auto mb-10">
+    <table class="table table-zebra w-full">
+      <thead>
+        <tr>
+          <th>Drug</th>
+          <th>Class</th>
+          <th>Primary Risk in Older Adults</th>
+          <th>Safety Flags</th>
+        </tr>
+      </thead>
+      <tbody>
+        {drugs.map((d: any) => {
+          const aeCommon = (d.adverse_effects?.common || []) as string[];
+          const aeSerious = (d.adverse_effects?.serious || []) as string[];
+          const allAE = [...aeCommon, ...aeSerious];
+          const geriatricRisk = allAE.find((ae: string) =>
+            /fall|sedation|anticholinerg|cognitive|confusion|delirium|hypoglyc|bleed|cardiac|arrhythmia|hypotension/i.test(ae)
+          ) || allAE[0] || 'See prescribing information';
+          return (
+            <tr class="border-l-4 border-warning">
+              <td>
+                <a href={`${base}drugs/${d.id}/`} class="font-semibold text-primary hover:underline">{d.generic_name}</a>
+                <span class="badge badge-warning badge-sm ml-1">BEERS</span>
+              </td>
+              <td class="text-sm">{d.drug_class}</td>
+              <td class="text-sm text-base-content/70">{geriatricRisk}</td>
+              <td class="flex gap-1 flex-wrap">
+                {d.ismp_high_alert && <span class="badge badge-error badge-sm">HIGH ALERT</span>}
+                {d.black_box_warnings?.length > 0 && <span class="badge badge-error badge-sm">BBW</span>}
+                {d.renal_dose_adjustment && <span class="badge badge-info badge-sm">Renal Adj</span>}
+              </td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="alert alert-info">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+    <div>
+      <p class="font-semibold">Reference</p>
+      <p class="text-sm">American Geriatrics Society 2023 updated AGS Beers Criteria® for Potentially Inappropriate Medication Use in Older Adults. J Am Geriatr Soc. 2023;71(7):2052-2081.</p>
+    </div>
+  </div>
+
+</SchemaLayout>

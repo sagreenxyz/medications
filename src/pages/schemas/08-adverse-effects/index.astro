@@ -1,7 +1,95 @@
 ---
 import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+const base = import.meta.env.BASE_URL;
+
+const clusters = [
+  { slug: 'nephrotoxicity', label: 'Nephrotoxicity', icon: '🫘' },
+  { slug: 'hepatotoxicity', label: 'Hepatotoxicity', icon: '🫀' },
+  { slug: 'qt-prolongation', label: 'QT Prolongation / Torsades', icon: '💓' },
+  { slug: 'cardiotoxicity', label: 'Direct Cardiotoxicity', icon: '❤️' },
+  { slug: 'myelosuppression', label: 'Myelosuppression', icon: '🩸' },
+  { slug: 'peripheral-neuropathy', label: 'Peripheral Neuropathy', icon: '⚡' },
+  { slug: 'cns-neurotoxicity', label: 'CNS Neurotoxicity / Seizure', icon: '🧠' },
+  { slug: 'ototoxicity', label: 'Ototoxicity', icon: '👂' },
+  { slug: 'pulmonary-toxicity', label: 'Pulmonary Toxicity', icon: '🫁' },
+  { slug: 'teratogenicity', label: 'Teratogenicity / Fetotoxicity', icon: '🤰' },
+  { slug: 'hyperkalemia', label: 'Drug-Induced Hyperkalemia', icon: '⬆️' },
+  { slug: 'hypokalemia', label: 'Drug-Induced Hypokalemia', icon: '⬇️' },
+  { slug: 'hyponatremia', label: 'Hyponatremia / SIADH', icon: '💧' },
+  { slug: 'hypoglycemia', label: 'Drug-Induced Hypoglycemia', icon: '🍬' },
+  { slug: 'hyperglycemia', label: 'Drug-Induced Hyperglycemia', icon: '🍭' },
+  { slug: 'osteoporosis', label: 'Drug-Induced Osteoporosis', icon: '🦴' },
+  { slug: 'serotonin-syndrome', label: 'Serotonin Syndrome', icon: '🔴' },
+  { slug: 'nms', label: 'Neuroleptic Malignant Syndrome', icon: '🌡️' },
+  { slug: 'anticholinergic-toxidrome', label: 'Anticholinergic Toxidrome', icon: '🚫' },
+  { slug: 'opioid-toxidrome', label: 'Opioid Toxidrome', icon: '💊' },
+  { slug: 'bleeding', label: 'Bleeding / Hemorrhage', icon: '🩸' },
+  { slug: 'thrombosis', label: 'Drug-Induced Thrombosis', icon: '🔴' },
+  { slug: 'anaphylaxis', label: 'Anaphylaxis / Hypersensitivity', icon: '🚨' },
+  { slug: 'sjs-ten', label: 'Stevens-Johnson Syndrome / TEN', icon: '⚠️' },
+  { slug: 'dress', label: 'DRESS Syndrome', icon: '⚠️' },
+  { slug: 'infusion-reactions', label: 'Biologic Infusion Reactions', icon: '💉' },
+  { slug: 'extrapyramidal', label: 'Extrapyramidal Effects (EPS)', icon: '🧠' },
+  { slug: 'weight-gain', label: 'Drug-Induced Weight Gain', icon: '⚖️' },
+  { slug: 'hyperlipidemia', label: 'Drug-Induced Hyperlipidemia', icon: '🫀' },
+  { slug: 'drug-induced-lupus', label: 'Drug-Induced Lupus', icon: '🦋' },
+];
 ---
-<SchemaLayout title="Adverse Effects" schema="adverse-effects">
-  <h1 class="text-3xl font-serif font-bold mb-4">Adverse Effects</h1>
-  <p>Content coming soon.</p>
+<SchemaLayout title="Adverse Effects" schema="adverse-effects" description="Pharmacology organized by adverse effect cluster — 30 toxicity categories with mechanisms, monitoring, and nursing management">
+
+  <div class="mb-8">
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-3">Schema 8 — Adverse Effects</h1>
+    <p class="text-base-content/70 text-lg max-w-3xl">Pharmacology organized by adverse effect cluster. Understanding mechanism-based toxicity enables early recognition and prevention.</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>Adverse drug event (ADE) literacy is a core nursing competency because nurses are positioned at the critical interface between drug administration and patient response. Every day nurses administer medications, they are conducting pharmacovigilance: observing the patient for evidence of therapeutic efficacy and toxic harm simultaneously. The adverse effects schema organizes the 500-drug reference not by drug or organ system, but by the specific toxic outcome—because the same toxicity can arise from pharmacologically unrelated drugs, and recognizing the pattern of a toxidrome, an organ toxicity syndrome, or a hypersensitivity reaction requires knowledge that cuts across drug classes. For example, QT prolongation and torsades de pointes risk is shared by antiarrhythmics, antibiotics, antipsychotics, antihistamines, and antiemetics; the nurse who understands the mechanism (hERG channel blockade) can recognize the shared risk of any new order for a QT-prolonging drug in a patient already on a QT-prolonging baseline medication.</p>
+    <p>Adverse drug effects are mechanistically classified as type A (augmented, predictable, dose-related, usually manageable by dose adjustment—the majority) and type B (bizarre, unpredictable, often immune-mediated, dose-independent, and requiring drug discontinuation). Type A adverse effects include the on-target pharmacological effects of every drug: hypotension from antihypertensives, hypoglycemia from insulin, constipation from opioids, and nephrotoxicity from aminoglycosides at supratherapeutic concentrations are all extensions of their primary mechanisms. Type B effects—anaphylaxis, Stevens-Johnson syndrome, agranulocytosis, drug-induced lupus—involve immune recognition of the drug or its metabolites as antigens, and are characterized by being unpredictable before the first exposure. Both types require distinct nursing assessment strategies: type A requires monitoring for signs of exaggerated pharmacological effect; type B requires heightened vigilance for the first exposure and prompt recognition of immune-mediated patterns.</p>
+    <p>The organ-specific toxicity framework is particularly important for drugs with narrow therapeutic indices—aminoglycosides, vancomycin, digoxin, lithium, phenytoin, warfarin, methotrexate, cyclosporine—where the difference between therapeutic and toxic concentrations is small and the consequences of toxicity are severe or irreversible. For these drugs, systematic therapeutic drug monitoring (TDM), renal function surveillance, and organ-specific monitoring protocols are not optional enhancements but essential patient safety practices mandated by the drugs' pharmacological properties. The TDM compilation page in this schema provides target ranges, sampling timing, and toxicity thresholds for all TDM drugs in this reference.</p>
+    <p>Pharmacovigilance—the systematic monitoring, detection, assessment, understanding, and prevention of adverse drug effects—is a population-level responsibility that individual nurses contribute to through FDA MedWatch reporting of serious adverse events. Serious adverse events requiring MedWatch reporting include death or life-threatening outcomes, hospitalization or prolongation of existing hospitalization, significant disability or incapacity, congenital anomalies, or outcomes requiring medical or surgical intervention to prevent permanent harm. The FDA's Sentinel System continuously monitors electronic health records for adverse drug signal detection; nurse-reported adverse events contribute to this surveillance system. The adverse effect clusters in this schema are organized by toxicity category, with drugs implicated in each category listed with severity grading, relevant monitoring parameters, and nursing intervention guidance.</p>
+  </div>
+
+  <!-- Special compilation pages -->
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
+    <a href={`${base}schemas/08-adverse-effects/black-box-warnings/`}
+       class="card bg-error text-error-content shadow hover:shadow-md transition-all">
+      <div class="card-body text-center">
+        <div class="text-3xl mb-2">⬛</div>
+        <h2 class="card-title justify-center text-lg">Black Box Warnings</h2>
+        <p class="text-sm opacity-80">All BBW drugs, alphabetically listed with full warning text</p>
+      </div>
+    </a>
+    <a href={`${base}schemas/08-adverse-effects/beers-criteria/`}
+       class="card bg-warning text-warning-content shadow hover:shadow-md transition-all">
+      <div class="card-body text-center">
+        <div class="text-3xl mb-2">⚠️</div>
+        <h2 class="card-title justify-center text-lg">Beers Criteria</h2>
+        <p class="text-sm opacity-80">Potentially inappropriate drugs in older adults (AGS 2023)</p>
+      </div>
+    </a>
+    <a href={`${base}schemas/08-adverse-effects/therapeutic-drug-monitoring/`}
+       class="card bg-info text-info-content shadow hover:shadow-md transition-all">
+      <div class="card-body text-center">
+        <div class="text-3xl mb-2">🔬</div>
+        <h2 class="card-title justify-center text-lg">Therapeutic Drug Monitoring</h2>
+        <p class="text-sm opacity-80">Target ranges, sampling timing, and toxicity thresholds</p>
+      </div>
+    </a>
+  </div>
+
+  <h2 class="text-2xl font-serif font-bold mb-5">Adverse Effect Clusters</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-10">
+    {clusters.map(c => (
+      <a href={`${base}schemas/08-adverse-effects/${c.slug}/`}
+         class="card card-compact bg-base-100 border border-base-300 shadow-sm hover:shadow-md hover:border-error transition-all duration-200">
+        <div class="card-body">
+          <div class="flex items-center gap-2">
+            <span class="text-xl">{c.icon}</span>
+            <span class="font-semibold text-sm leading-snug">{c.label}</span>
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+
 </SchemaLayout>
