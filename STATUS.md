@@ -1,19 +1,18 @@
 # Project Status
 
 ## Last Session Summary
-- **Date:** 2026-04-22
+- **Date:** 2026-04-23
 - **Work completed:**
-  - Added CNS antidepressants (paroxetine, citalopram, fluvoxamine, desvenlafaxine, mirtazapine, trazodone, vilazodone, vortioxetine) — 8 drugs
-  - Added CNS TCAs + MAOIs (amitriptyline, nortriptyline, imipramine, desipramine, clomipramine, phenelzine, tranylcypromine, selegiline-maoi) — 8 drugs
-  - Added CNS antipsychotics (chlorpromazine, fluphenazine, ziprasidone, paliperidone, lurasidone, brexpiprazole, cariprazine, clozapine, pimavanserin) — 9 drugs
-  - Added CNS opioids (hydromorphone, oxycodone, remifentanil, codeine, tramadol, tapentadol, methadone, naltrexone) — 8 drugs
-  - Added CNS ADHD + Alzheimer's (amphetamine, lisdexamfetamine, atomoxetine, guanfacine-adhd, clonidine-adhd, rivastigmine, galantamine, memantine) — 8 drugs
-  - Added CNS Parkinson's/movement (pramipexole, ropinirole, rotigotine, amantadine, rasagiline, entacapone, benztropine, riluzole) — 8 drugs
-  - Added anesthetics + NMBAs (propofol, ketamine, succinylcholine, rocuronium, vecuronium, cisatracurium, sugammadex, neostigmine) — 8 drugs
-  - Added migraine agents + NSAIDs (rizatriptan, lasmiditan, rimegepant, ubrogepant, atogepant, erenumab, fremanezumab, galcanezumab, ergotamine, ibuprofen, naproxen, ketorolac, celecoxib, indomethacin, diclofenac, meloxicam) — 16 drugs
-  - Added missing penicillins (penicillin-v, ampicillin, ampicillin-sulbactam, oxacillin, nafcillin) — 5 drugs
-- **Current total:** 405 drugs in data/drugs.json
-- **Resume point next session:** Continue adding missing ID drugs (cephalosporins, carbapenems, glycopeptides, aminoglycosides, macrolides, tetracyclines, FQs, anti-TB, antivirals) to reach 500 total
+  - Added ID antibiotics (cephalosporins, carbapenems, glycopeptides, aminoglycosides, macrolides, tetracyclines, FQs, misc antibacterials) — 30 drugs (ID-04 through ID-11)
+  - Added anti-TB drugs (rifabutin, rifapentine, ethambutol, pyrazinamide, bedaquiline, delamanid, pretomanid, dapsone, clofazimine) — 9 drugs (ID-12)
+  - Added antivirals HSV/CMV (valacyclovir, famciclovir, ganciclovir, valganciclovir, foscarnet, letermovir) — 6 drugs (ID-13)
+  - Added influenza antivirals (zanamivir, peramivir, baloxavir) — 3 drugs (ID-14)
+  - Added antifungals (itraconazole, voriconazole, posaconazole, isavuconazole, caspofungin, micafungin, anidulafungin, amphotericin-b) — 8 drugs
+  - Added HIV antiretrovirals (efavirenz, emtricitabine, darunavir, maraviroc, dolutegravir, raltegravir, abacavir, atazanavir, tenofovir-DF) — 9 drugs
+  - Added antiparasitic drugs (chloroquine, hydroxychloroquine, ivermectin, albendazole, atovaquone-proguanil) — 5 drugs
+  - Added oncology drugs (cyclophosphamide, cisplatin, methotrexate-onc, doxorubicin, vincristine, paclitaxel, imatinib, pembrolizumab, rituximab, filgrastim, venetoclax, hydroxyurea, lenalidomide, bortezomib, epoetin-alfa) — 15 drugs
+- **Current total:** 500 drugs in data/drugs.json — **PHASE 1 COMPLETE**
+- **Resume point next session:** Begin Phase 2 — Core Pages and Navigation (Nav.astro, SearchOverlay.svelte, index.astro, drug-index.astro, about.astro)
 
 ## Phase 1 Drug Data Task Table
 
