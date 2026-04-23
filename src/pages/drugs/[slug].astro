@@ -309,6 +309,12 @@ const pkRows = [
                       <td><span class="badge badge-info badge-sm">Yes</span></td>
                     </tr>
                   )}
+                  {drug.tdm_target_range && (
+                    <tr>
+                      <td class="font-semibold text-base-content/70">TDM target range</td>
+                      <td class="text-sm">{drug.tdm_target_range}</td>
+                    </tr>
+                  )}
                   {drug.route_of_administration && drug.route_of_administration.length > 0 && (
                     <tr>
                       <td class="font-semibold text-base-content/70">Route(s)</td>
@@ -439,6 +445,24 @@ const pkRows = [
               <p><strong>ISMP High-Alert Medication:</strong> This drug has been identified by ISMP as bearing a heightened risk of causing significant harm when used in error. Independent double-checks and standardized concentrations are recommended.</p>
             </div>
           )}
+          {drug.administration_notes && (
+            <div class="alert alert-warning mb-4 shadow-sm text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-5 w-5" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+              <div>
+                <p class="font-semibold mb-1">Administration Notes</p>
+                <p>{drug.administration_notes}</p>
+              </div>
+            </div>
+          )}
+          {drug.antidote && (
+            <div class="alert alert-info mb-4 shadow-sm text-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-5 w-5" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+              <div>
+                <p class="font-semibold mb-1">Antidote / Reversal Agent</p>
+                <p>{drug.antidote}</p>
+              </div>
+            </div>
+          )}
           {drug.nursing_considerations && drug.nursing_considerations.length > 0 ? (
             <div class="space-y-3">
               {drug.nursing_considerations.map((note: string) => (
@@ -550,6 +574,24 @@ const pkRows = [
                     </div>
                     <div class="text-xs text-base-content/60">{rd.subclass || rd.drug_class}</div>
                   </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        <!-- LASA Pairs Panel -->
+        {drug.lasa_pairs && drug.lasa_pairs.length > 0 && (
+          <div class="card bg-warning/10 border border-warning/30 shadow-sm">
+            <div class="card-body p-4">
+              <h3 class="font-bold text-base mb-2 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-warning" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                LASA Pairs
+              </h3>
+              <p class="text-xs text-base-content/60 mb-2">Look-alike / sound-alike drugs — verify carefully</p>
+              <div class="flex flex-wrap gap-1">
+                {drug.lasa_pairs.map((pair: string) => (
+                  <span class="badge badge-warning badge-sm font-mono">{pair}</span>
                 ))}
               </div>
             </div>
