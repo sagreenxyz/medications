@@ -1,7 +1,88 @@
 ---
 import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+const base = import.meta.env.BASE_URL;
+
+const presentations = [
+  { slug: 'hypertension', label: 'Hypertension', system: 'Cardiovascular', icon: '🫀' },
+  { slug: 'heart-failure', label: 'Heart Failure', system: 'Cardiovascular', icon: '🫀' },
+  { slug: 'acute-coronary-syndrome', label: 'Acute Coronary Syndrome / ACS', system: 'Cardiovascular', icon: '🫀' },
+  { slug: 'atrial-fibrillation', label: 'Atrial Fibrillation', system: 'Cardiovascular', icon: '🫀' },
+  { slug: 'dyslipidemia', label: 'Dyslipidemia', system: 'Cardiovascular', icon: '🫀' },
+  { slug: 'dvt-pe', label: 'DVT / Pulmonary Embolism', system: 'Cardiovascular', icon: '🩸' },
+  { slug: 'shock', label: 'Shock (Septic / Cardiogenic)', system: 'Critical Care', icon: '⚠️' },
+  { slug: 'asthma', label: 'Asthma', system: 'Respiratory', icon: '🫁' },
+  { slug: 'copd', label: 'COPD', system: 'Respiratory', icon: '🫁' },
+  { slug: 'pneumonia', label: 'Pneumonia / CAP', system: 'Infectious Disease', icon: '🦠' },
+  { slug: 'tuberculosis', label: 'Tuberculosis', system: 'Infectious Disease', icon: '🦠' },
+  { slug: 'hiv', label: 'HIV Infection', system: 'Infectious Disease', icon: '🦠' },
+  { slug: 'hyperglycemia-dka', label: 'Hyperglycemia / DKA / HHS', system: 'Endocrine', icon: '🩺' },
+  { slug: 'hypothyroidism', label: 'Hypothyroidism', system: 'Endocrine', icon: '🩺' },
+  { slug: 'hyperthyroidism', label: 'Hyperthyroidism', system: 'Endocrine', icon: '🩺' },
+  { slug: 'adrenal-insufficiency', label: 'Adrenal Insufficiency', system: 'Endocrine', icon: '🩺' },
+  { slug: 'acute-pain', label: 'Acute Pain', system: 'Pain', icon: '💊' },
+  { slug: 'chronic-pain', label: 'Chronic Pain', system: 'Pain', icon: '💊' },
+  { slug: 'opioid-overdose', label: 'Opioid Overdose / Reversal', system: 'Toxicology', icon: '🚨' },
+  { slug: 'status-epilepticus', label: 'Status Epilepticus', system: 'Neurology', icon: '🧠' },
+  { slug: 'major-depression', label: 'Major Depression', system: 'Psychiatry', icon: '🧠' },
+  { slug: 'anxiety', label: 'Generalized Anxiety Disorder', system: 'Psychiatry', icon: '🧠' },
+  { slug: 'psychosis', label: 'Acute Psychosis / Schizophrenia', system: 'Psychiatry', icon: '🧠' },
+  { slug: 'bipolar-disorder', label: 'Bipolar Disorder', system: 'Psychiatry', icon: '🧠' },
+  { slug: 'adhd', label: 'ADHD', system: 'Psychiatry', icon: '🧠' },
+  { slug: 'alzheimer-dementia', label: "Alzheimer's Dementia", system: 'Neurology', icon: '🧠' },
+  { slug: 'parkinsons-disease', label: "Parkinson's Disease", system: 'Neurology', icon: '🧠' },
+  { slug: 'migraine', label: 'Migraine', system: 'Neurology', icon: '🧠' },
+  { slug: 'insomnia', label: 'Insomnia', system: 'Neurology', icon: '🧠' },
+  { slug: 'nausea-vomiting', label: 'Nausea / Vomiting / CINV', system: 'GI', icon: '🫄' },
+  { slug: 'gi-bleeding-pud', label: 'GI Bleeding / PUD / GERD', system: 'GI', icon: '🫄' },
+  { slug: 'ibd', label: 'Inflammatory Bowel Disease', system: 'GI', icon: '🫄' },
+  { slug: 'c-difficile', label: 'C. difficile Infection', system: 'Infectious Disease', icon: '🦠' },
+  { slug: 'uti-pyelonephritis', label: 'UTI / Pyelonephritis', system: 'Infectious Disease', icon: '🦠' },
+  { slug: 'sepsis', label: 'Sepsis / Bacteremia', system: 'Critical Care', icon: '⚠️' },
+  { slug: 'meningitis', label: 'Bacterial Meningitis', system: 'Infectious Disease', icon: '🦠' },
+  { slug: 'fungal-infection', label: 'Invasive Fungal Infection', system: 'Infectious Disease', icon: '🦠' },
+  { slug: 'anemia', label: 'Anemia', system: 'Hematology', icon: '🩸' },
+  { slug: 'rheumatoid-arthritis', label: 'Rheumatoid Arthritis', system: 'Immunology', icon: '🦴' },
+  { slug: 'anaphylaxis', label: 'Anaphylaxis', system: 'Immunology', icon: '🚨' },
+];
+
+const systems = [...new Set(presentations.map(p => p.system))];
 ---
-<SchemaLayout title="Clinical Presentations" schema="clinical-presentations">
-  <h1 class="text-3xl font-serif font-bold mb-4">Clinical Presentations</h1>
-  <p>Content coming soon.</p>
+<SchemaLayout title="Clinical Presentations" schema="clinical-presentations" description="Pharmacology organized by the clinical problem — 40 presentation-based treatment pathways with drug tiers and nursing considerations">
+
+  <div class="mb-8">
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-3">Schema 7 — Clinical Presentations</h1>
+    <p class="text-base-content/70 text-lg max-w-3xl">Pharmacology organized by the clinical problem. Start with the patient presentation, understand the pathophysiology, and trace the rationale for each drug tier.</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>The clinical presentation schema inverts the traditional pharmacology curriculum's drug-first orientation and replaces it with a problem-first framework that mirrors the cognitive process of clinical practice. When a nurse or advanced practitioner encounters a patient with acute dyspnea, the immediate therapeutic question is not "what are the mechanisms of furosemide?" but rather "what pharmacological interventions are indicated for acute decompensated heart failure, in what order should they be administered, and what does this patient's response tell me about the adequacy of treatment?" This schema trains exactly that clinical reasoning pattern. Each presentation page begins with the pathophysiology that defines the pharmacological targets, then organizes available drugs by treatment tier—first-line (evidence-based, guideline-recommended for most patients), second-line (alternative when first-line is contraindicated or inadequate), and adjunct (situational or disease-modifying).</p>
+    <p>The presentation-based schema is complementary, not superior, to mechanism-first learning. A student who understands that beta-blockers reduce heart rate and myocardial oxygen demand through beta-1 receptor blockade can correctly apply that mechanism across three different presentations: rate control in atrial fibrillation, anti-ischemic therapy in ACS, and remodeling prevention in heart failure with reduced ejection fraction. Without the mechanistic foundation, drug choices in clinical presentations become rote memorization that fails when an atypical case or a new drug is encountered. The optimal learning strategy integrates both schemas: use mechanism-first (Schema 4) to build the predictive pharmacological framework, then use clinical presentations (Schema 7) to practice applying that framework to patient scenarios.</p>
+    <p>A persistent danger in clinical pharmacology education is rote association without mechanism—knowing that "digoxin is for heart failure" without understanding that it inhibits Na+/K+-ATPase, raises intracellular calcium, increases contractility, and slows AV nodal conduction through vagal enhancement. Rote association fails when the clinical scenario changes: the student who memorizes "use metoprolol for hypertension" may not recognize that it is contraindicated in asthma (beta-2 blockade), decompensated heart failure (reduced inotropic reserve), or bradycardia. This schema uses drug tier tables not as memorization targets but as structured exposures to evidence-based hierarchies that, when combined with mechanism understanding from Schemas 1–6, produce durable clinical pharmacology knowledge.</p>
+    <p>The nursing bedside application of this schema is direct: it trains the nurse to anticipate the pharmacological trajectory of a patient's management. A nurse who understands that first-line treatment for septic shock is norepinephrine will prepare a norepinephrine infusion before the physician orders it, will titrate it correctly using MAP targets, will monitor for extremity ischemia, and will anticipate the vasopressin addition when norepinephrine doses escalate. This anticipatory nursing competency—grounded in pharmacological understanding of clinical presentations—is what distinguishes the expert bedside nurse from the task-oriented medication administrator. Each presentation page in this schema includes specific monitoring parameters, vital sign thresholds, and patient education language aligned with the 2024–2025 clinical guidelines referenced throughout this reference.</p>
+  </div>
+
+  <div class="stats shadow mb-8 flex flex-wrap">
+    <div class="stat"><div class="stat-title">Presentations</div><div class="stat-value text-primary">40</div></div>
+    <div class="stat"><div class="stat-title">Body Systems</div><div class="stat-value">{systems.length}</div></div>
+  </div>
+
+  {systems.map(sys => (
+    <div class="mb-8">
+      <h2 class="text-xl font-serif font-bold mb-3 text-base-content/80">{sys}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        {presentations.filter(p => p.system === sys).map(p => (
+          <a href={`${base}schemas/07-clinical-presentations/${p.slug}/`}
+             class="card card-compact bg-base-100 border border-base-300 shadow-sm hover:shadow-md hover:border-primary transition-all duration-200">
+            <div class="card-body">
+              <div class="flex items-center gap-2">
+                <span class="text-xl">{p.icon}</span>
+                <span class="font-semibold text-sm leading-snug">{p.label}</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  ))}
+
 </SchemaLayout>

@@ -1,0 +1,238 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const clusterData = [
+  { slug: 'nephrotoxicity', label: 'Nephrotoxicity', keywords: ['nephrotoxicity','nephrotoxic','AKI','renal toxicity','renal damage'] },
+  { slug: 'hepatotoxicity', label: 'Hepatotoxicity', keywords: ['hepatotoxicity','hepatic toxicity','liver injury','DILI','elevated LFTs'] },
+  { slug: 'qt-prolongation', label: 'QT Prolongation / Torsades de Pointes', keywords: ['QT prolongation','QTc prolongation','torsades','torsade','QT-prolongation'] },
+  { slug: 'cardiotoxicity', label: 'Direct Cardiotoxicity (Anthracycline)', keywords: ['cardiotoxicity','cardiomyopathy','cardiac toxicity','anthracycline'] },
+  { slug: 'myelosuppression', label: 'Myelosuppression / Bone Marrow Suppression', keywords: ['myelosuppression','bone marrow','neutropenia','thrombocytopenia','anemia','agranulocytosis'] },
+  { slug: 'peripheral-neuropathy', label: 'Peripheral Neuropathy', keywords: ['peripheral neuropathy','neuropathy','neuropathic','axonal'] },
+  { slug: 'cns-neurotoxicity', label: 'CNS Neurotoxicity / Seizure Risk', keywords: ['CNS neurotoxicity','seizure','neurotoxicity','CNS-neurotoxicity','CNS-toxicity'] },
+  { slug: 'ototoxicity', label: 'Ototoxicity', keywords: ['ototoxicity','hearing loss','tinnitus','vestibular'] },
+  { slug: 'pulmonary-toxicity', label: 'Pulmonary Toxicity', keywords: ['pulmonary toxicity','pulmonary fibrosis','pneumonitis','interstitial lung'] },
+  { slug: 'teratogenicity', label: 'Teratogenicity / Fetotoxicity', keywords: ['teratogenicity','teratogen','fetotoxicity','fetal toxicity','pregnancy'] },
+  { slug: 'hyperkalemia', label: 'Drug-Induced Hyperkalemia', keywords: ['hyperkalemia','potassium elevation','high potassium'] },
+  { slug: 'hypokalemia', label: 'Drug-Induced Hypokalemia', keywords: ['hypokalemia','potassium wasting','electrolyte-wasting','low potassium'] },
+  { slug: 'hyponatremia', label: 'Hyponatremia / SIADH', keywords: ['hyponatremia','SIADH','sodium','low sodium'] },
+  { slug: 'hypoglycemia', label: 'Drug-Induced Hypoglycemia', keywords: ['hypoglycemia','low blood glucose','blood sugar'] },
+  { slug: 'hyperglycemia', label: 'Drug-Induced Hyperglycemia', keywords: ['drug-induced-hyperglycemia','hyperglycemia','glucose elevation','steroid diabetes'] },
+  { slug: 'osteoporosis', label: 'Drug-Induced Osteoporosis', keywords: ['drug-induced-osteoporosis','bone density loss','osteoporosis','fracture risk'] },
+  { slug: 'serotonin-syndrome', label: 'Serotonin Syndrome', keywords: ['serotonin syndrome','serotonin toxicity','serotonergic'] },
+  { slug: 'nms', label: 'Neuroleptic Malignant Syndrome (NMS)', keywords: ['neuroleptic malignant syndrome','NMS','hyperthermia'] },
+  { slug: 'anticholinergic-toxidrome', label: 'Anticholinergic Toxidrome', keywords: ['anticholinergic toxidrome','anticholinergic-toxidrome','anticholinergic effects','antimuscarinic'] },
+  { slug: 'opioid-toxidrome', label: 'Opioid Toxidrome', keywords: ['opioid toxidrome','opioid overdose','respiratory depression','sedation'] },
+  { slug: 'bleeding', label: 'Bleeding / Hemorrhage', keywords: ['bleeding','hemorrhage','bleeding-hemorrhage','anticoagulant bleeding'] },
+  { slug: 'thrombosis', label: 'Drug-Induced Thrombosis', keywords: ['thrombosis','VTE-thrombosis','clotting','hypercoagulable'] },
+  { slug: 'anaphylaxis', label: 'Anaphylaxis / Hypersensitivity Reactions', keywords: ['anaphylaxis','hypersensitivity','allergic reaction','anaphylactoid'] },
+  { slug: 'sjs-ten', label: 'Stevens-Johnson Syndrome / TEN', keywords: ['Stevens-Johnson','SJS','TEN','toxic epidermal'] },
+  { slug: 'dress', label: 'DRESS Syndrome', keywords: ['DRESS','drug reaction with eosinophilia'] },
+  { slug: 'infusion-reactions', label: 'Biologic Infusion Reactions', keywords: ['infusion reaction','biologic-infusion-reactions','infusion-related'] },
+  { slug: 'extrapyramidal', label: 'Extrapyramidal Effects (EPS)', keywords: ['extrapyramidal','EPS','akathisia','tardive dyskinesia','dystonia','parkinsonism'] },
+  { slug: 'weight-gain', label: 'Drug-Induced Weight Gain', keywords: ['weight gain','drug-induced weight','metabolic effects','obesity'] },
+  { slug: 'hyperlipidemia', label: 'Drug-Induced Hyperlipidemia', keywords: ['drug-induced-hyperlipidemia','hyperlipidemia','cholesterol','triglycerides'] },
+  { slug: 'drug-induced-lupus', label: 'Drug-Induced Lupus', keywords: ['drug-induced lupus','drug-induced-lupus','DILE','lupus-like'] },
+];
+
+const proseMap: Record<string, { p1: string; p2: string; p3: string; p4: string; p5: string }> = {
+  'nephrotoxicity': {
+    p1: `Drug-induced nephrotoxicity encompasses a spectrum of renal injury mechanisms, each defined by the site and nature of tubular or glomerular damage. Direct tubular toxicity from aminoglycosides (gentamicin, tobramycin, amikacin) occurs because these polycationic drugs accumulate in proximal tubular cells through receptor-mediated endocytosis via megalin (LRP2), releasing lysosomal phospholipases and reactive oxygen species that cause tubular necrosis—the histological hallmark is vacuolization of proximal tubular epithelial cells and cellular sloughing into the lumen. NSAIDs and ACE inhibitors/ARBs cause hemodynamic nephrotoxicity by eliminating compensatory vasodilatory (prostaglandin-mediated) and vasoconstrictor-counteracting (angiotensin II-mediated efferent arteriole constriction) mechanisms that maintain glomerular filtration pressure; in patients with reduced renal perfusion (dehydration, heart failure, CKD), these drugs unmask the kidney's dependence on these mediators. Contrast nephropathy results from direct tubular toxicity and renal vasoconstriction from iodinated contrast agents. Interstitial nephritis, typically immune-mediated, is caused by penicillins, NSAIDs, PPIs, and sulfonamides.`,
+    p2: `Monitoring parameters for nephrotoxicity include serum creatinine (a 0.3 mg/dL rise within 48 hours or 1.5× baseline within 7 days meets KDIGO criteria for AKI), blood urea nitrogen (rises parallel to creatinine), urine output (oliguria <0.5 mL/kg/hr for >6 hours), and urinalysis (muddy brown granular casts indicate ATN; white cell casts suggest interstitial nephritis). For aminoglycosides, trough levels predict toxicity—once-daily extended interval dosing reduces nephrotoxicity by allowing renal tubular recovery during the trough period. Vancomycin nephrotoxicity is monitored via AUC-guided dosing (AUC/MIC 400–600 mg·h/L) rather than trough-only monitoring, per 2020 ASHP/IDSA/SIDP consensus guidelines. Cisplatin nephrotoxicity is mitigated by aggressive pre- and post-hydration with NS (1–2 L IV over 2 hours before cisplatin) and amifostine for selected patients.`,
+    p3: `High-risk patients for drug-induced nephrotoxicity include those with baseline CKD (eGFR <60 mL/min/1.73m²), elderly patients (reduced nephron mass and renal blood flow), diabetic patients (impaired afferent arteriolar autoregulation), patients with heart failure or cirrhosis (reduced effective arterial volume), and those receiving nephrotoxin combinations (aminoglycoside + vancomycin; NSAID + ACE inhibitor; contrast + nephrotoxin). The nurse must verify current renal function before administering nephrotoxic drugs, adjust doses per renal impairment protocols, ensure adequate hydration, and avoid concurrent nephrotoxins. Baseline creatinine and BUN should be obtained before initiating aminoglycoside, cisplatin, amphotericin B, or IV contrast administration.`,
+    p4: `Nursing interventions for established AKI from nephrotoxins include cessation of the offending agent, fluid resuscitation (unless fluid overload is present), strict intake/output monitoring, daily weights, avoidance of additional nephrotoxins, and dose adjustment of renally cleared drugs. Furosemide may be used for fluid management but does not improve renal recovery (FACTT trial). Loop diuretic infusions require careful balancing to avoid further volume depletion. Monitor electrolytes (AKI causes hyperkalemia from impaired renal potassium excretion; check K+ every 6–12 hours in oliguric AKI), bicarbonate (metabolic acidosis from impaired proton excretion), and phosphate. Nephrology consultation is warranted for severe AKI (creatinine >3× baseline), hyperkalemia >6.0 mEq/L unresponsive to medical management, or refractory fluid overload.`,
+    p5: `Patient education for patients prescribed nephrotoxic medications should include instructions to maintain adequate fluid intake (unless volume restriction applies), avoid NSAIDs and COX-2 inhibitors unless specifically prescribed, report decreased urine output, ankle swelling, or fatigue, and ensure all healthcare providers know they are taking nephrotoxic drugs before procedures requiring contrast or additional nephrotoxins are added. For patients on chronic aminoglycoside or vancomycin therapy, explain the purpose of therapeutic drug monitoring and that dose adjustments based on levels are a precision medicine approach to balancing efficacy and safety. Patients with CKD should be educated on the Beers criteria concern for NSAID use and encouraged to use acetaminophen for analgesia instead.`,
+  },
+  'qt-prolongation': {
+    p1: `Drug-induced QT prolongation results from blockade of the hERG (human ether-a-go-go-related gene) potassium channel, which conducts the rapid component of the delayed rectifier potassium current (IKr). The hERG channel is uniquely susceptible to pharmacological blockade because its inner vestibule is unusually large, accommodating structurally diverse drugs including antiarrhythmics (amiodarone, sotalol, dofetilide), antibiotics (azithromycin, moxifloxacin, fluoroquinolones), antipsychotics (haloperidol, ziprasidone, quetiapine), antihistamines (diphenhydramine), antimalarials (hydroxychloroquine), and prokinetics (metoclopramide IV, domperidone). IKr blockade prolongs cardiac repolarization (phase 3 of the action potential), lengthening the QT interval on the ECG. When repolarization is sufficiently prolonged and heterogeneous, early afterdepolarizations (EADs) can trigger torsades de pointes (TdP)—a polymorphic ventricular tachycardia that may degenerate into ventricular fibrillation.`,
+    p2: `Risk factors for drug-induced TdP dramatically amplify the baseline QTc prolongation from individual drugs: female sex (intrinsically longer QTc, lower IKr reserve), hypokalemia (reduces IKr and thus repolarization reserve), hypomagnesemia, bradycardia (QTc increases at slower heart rates), baseline QTc >450 ms in males or >470 ms in females, structural heart disease, congenital long QT syndrome, and pharmacokinetic interactions that elevate QT-prolonging drug concentrations (e.g., CYP3A4 inhibition by azole antifungals or macrolides raising levels of co-administered substrates). The risk from drug combinations is not simply additive but often supra-additive when drugs from different QT-prolonging classes are combined. The Arizona CERT CredibleMeds database classifies drugs by TdP risk as "Known Risk," "Conditional Risk," "Possible Risk," and "Special Risk."`,
+    p3: `Assessment and prevention require obtaining a baseline 12-lead ECG before initiating high-risk QT-prolonging medications, measuring the corrected QT interval (QTc) using Bazett (QTc = QT/√RR) or Fridericia formula, and rechecking QTc within 1–3 days of initiation or dose increase. A QTc >500 ms or an increase of ≥60 ms from baseline constitutes a high-risk threshold requiring consideration of dose reduction or drug discontinuation. The nurse should check serum potassium and magnesium before and during QT-prolonging drug therapy—maintaining K+ ≥4.0 mEq/L and Mg²+ ≥2.0 mg/dL reduces TdP risk. IV magnesium sulfate (1–2 g IV over 5–15 minutes) is the first-line treatment for TdP even when serum magnesium is normal.`,
+    p4: `Nursing assessment for patients on QT-prolonging medications includes continuous telemetry when initiating high-risk agents (particularly IV antiarrhythmics, IV antibiotics), monitoring for TdP warning signs (palpitations, presyncope, syncope, dizziness), and immediate notification if TdP is detected on monitoring. For IV amiodarone, use in-line 0.22-micron filters (drug adsorbs to polyvinyl chloride tubing) and administer via central line when possible due to phlebitis risk. For sotalol or dofetilide initiation, CMS mandates in-hospital telemetry monitoring for ≥72 hours with QTc measurement before each of the first three doses. Defibrillation capability must be immediately available. TdP may be self-terminating or may require unsynchronized cardioversion (200 J biphasic) if hemodynamically unstable.`,
+    p5: `Patient education for QT-prolonging medications requires explaining that certain OTC medications (diphenhydramine, dextromethorphan), supplements, and grapefruit juice can prolong the QT interval or raise drug levels; patients should consult a pharmacist before taking any new medication. Alert patients to symptoms of TdP: sudden dizziness, feeling faint, palpitations, or blackout episodes warrant immediate medical evaluation. Instruct patients to inform all healthcare providers that they are on QT-prolonging medications. Patients with acquired long QT syndrome from drugs should obtain a medical alert bracelet. The nurse should document QTc values in the medication administration record and include QTc trending in nursing shift communication.`,
+  },
+  'serotonin-syndrome': {
+    p1: `Serotonin syndrome is a drug-induced clinical toxidrome resulting from excessive serotonergic neurotransmission at central and peripheral 5-HT1A and 5-HT2A receptors, manifesting as a triad of mental status changes (agitation, confusion), autonomic instability (hyperthermia, tachycardia, diaphoresis, hypertension), and neuromuscular abnormalities (tremor, myoclonus, hyperreflexia, clonus, ataxia). The Hunter Criteria define serotonin toxicity as the presence of one of: spontaneous clonus, inducible clonus with agitation or diaphoresis, ocular clonus with agitation or diaphoresis, tremor with hyperreflexia, or hypertonia with hyperthermia >38°C plus clonus or ocular clonus. Serotonin syndrome must be distinguished from neuroleptic malignant syndrome (NMS); key differences are onset (hours for SS vs. days for NMS), rigidity (not prominent in SS), bowel sounds (hyperactive in SS vs. absent in NMS), and tremor (prominent in SS).`,
+    p2: `Drug combinations most likely to cause serotonin syndrome involve combinations of serotonin reuptake inhibitors (SSRIs, SNRIs, TCAs, tramadol, dextromethorphan, meperidine), serotonin releasers (amphetamines, MDMA), serotonin synthesis precursors (tryptophan, L-DOPA), MAO inhibitors (phenelzine, tranylcypromine, selegiline, linezolid, methylene blue), and serotonin agonists (buspirone, triptans, fentanyl, lithium—which enhances 5-HT synthesis and postsynaptic sensitivity). The highest-risk combinations involve MAO inhibitors with any serotonergic drug; the SSRI-linezolid interaction is particularly clinically relevant in hospital settings where linezolid is prescribed for MRSA without recognizing the patient's existing SSRI. Serotonin syndrome from SSRI-triptan combinations is theoretically possible but clinically rare and contested by current evidence.`,
+    p3: `Management of serotonin syndrome begins with immediate discontinuation of all serotonergic agents. Mild cases (tremor, myoclonus, no hyperthermia) require supportive care and monitoring. Moderate cases (hyperthermia <41°C, autonomic instability) are treated with IV benzodiazepines (diazepam or lorazepam) for agitation and neuromuscular hyperactivity—benzodiazepines reduce clonus and tremor by enhancing GABA-mediated inhibition. Cyproheptadine, a 5-HT2A antagonist and H1 antihistamine, is used as adjunct pharmacological antidote (4 mg orally every hour until response, maximum 32 mg/day) in moderate-to-severe cases. Severe serotonin syndrome with hyperthermia >41°C requires ICU management, active cooling (ice packs, cooling blankets), sedation, and potentially neuromuscular paralysis (rocuronium, vecuronium) to prevent rhabdomyolysis and hyperthermia-induced brain injury.`,
+    p4: `Nursing recognition of serotonin syndrome requires familiarity with the Hunter Criteria and assessment of the triad on each nursing assessment shift in patients on serotonergic drugs. Obtain a comprehensive medication reconciliation including OTC medications, supplements (St. John's Wort is a serotonin reuptake inhibitor), and illicit substances. Assess for clonus by rapidly dorsiflexing the ankle while the patient's knee is extended—sustained rhythmic contractions constitute clonus. Measure temperature every 4 hours in at-risk patients; hyperthermia is a marker of severity. Document baseline mental status on admission and at each assessment to detect the early agitation and confusion. Hold serotonergic agents and notify the physician immediately if serotonin syndrome is suspected.`,
+    p5: `Patient education for patients prescribed serotonergic medications should include explaining that combining multiple serotonergic medications—including those prescribed by different providers—can cause a dangerous drug interaction, and that any new prescriptions must be communicated to all prescribers. Warn patients about dietary supplements (St. John's Wort) and OTC preparations (dextromethorphan-containing cough suppressants) with serotonergic activity. Instruct patients to report muscle twitching, restlessness, rapid heartbeat, or fever after starting or changing a serotonergic medication. Patients transitioning between MAO inhibitors and SSRIs must observe the washout period: 14 days after stopping phenelzine/tranylcypromine before starting any serotonergic drug, and 14 days after stopping most SSRIs (5 weeks for fluoxetine due to active long-acting metabolite norfluoxetine).`,
+  },
+  'myelosuppression': {
+    p1: `Drug-induced myelosuppression reflects cytotoxic injury to rapidly dividing hematopoietic progenitor cells in the bone marrow, producing the characteristic nadir of neutrophils, platelets, and red cells approximately 7–14 days after administration of cycle-specific cytotoxic agents. Neutropenia (ANC <1500/μL; severe: ANC <500/μL) is the most clinically dangerous consequence because it abolishes the primary defense against bacterial and fungal infections; the risk of life-threatening infection increases exponentially when ANC falls below 500/μL. Thrombocytopenia (platelets <100,000/μL; severe: <50,000/μL) increases spontaneous bleeding risk, particularly at platelets <10,000–20,000/μL. Anemia from myelosuppression is usually manageable but may require erythropoiesis-stimulating agent (ESA) support or transfusion in symptomatic patients. The depth and duration of myelosuppression varies by agent: platinum compounds and alkylating agents produce prolonged suppression; antimetabolites produce shorter nadirs.`,
+    p2: `Granulocyte colony-stimulating factors (filgrastim, pegfilgrastim, sargramostim) are the pharmacological mitigation for chemotherapy-induced neutropenia, reducing the duration of severe neutropenia by stimulating neutrophil precursor proliferation and differentiation via G-CSF receptor activation. Primary prophylaxis with pegfilgrastim (given once per chemotherapy cycle, 24–72 hours after last chemotherapy) is recommended for regimens carrying ≥20% febrile neutropenia risk. Febrile neutropenia (temperature >38.3°C or >38°C sustained with ANC <500/μL) is an oncological emergency requiring immediate broad-spectrum antibiotics (piperacillin-tazobactam or cefepime) within 60 minutes of presentation, without waiting for culture results. Risk stratification using the MASCC score identifies low-risk patients who may be managed with oral antibiotics as outpatients.`,
+    p3: `Thrombocytopenia management depends on severity and bleeding risk. Platelet transfusions are indicated for platelets <10,000/μL in stable patients, or <50,000/μL before invasive procedures. Thrombopoietin receptor agonists (romiplostim, eltrombopag) are approved for immune thrombocytopenic purpura (ITP) but also used for chemotherapy-induced thrombocytopenia in selected patients. Recombinant erythropoiesis-stimulating agents (epoetin alfa, darbepoetin alfa) reduce transfusion requirements in chemotherapy-induced anemia but carry increased VTE and, controversially, potential tumor progression risk; they are indicated only when hemoglobin falls below 10 g/dL and chemotherapy is given with curative intent in consultation with guidelines. Hematopoietic recovery may be assessed by reticulocyte count before RBC transfusion decisions.`,
+    p4: `Nursing management of patients with myelosuppression requires neutropenic precautions: private room (if ANC <500/μL), meticulous hand hygiene, restriction of fresh flowers/plants (fungal source), avoidance of crowds and sick contacts, low-bacterial diet (avoiding raw fruits, vegetables, and undercooked meat per institutional protocol), and daily ANC monitoring. Obtain vital signs every 4 hours—fever in a neutropenic patient requires immediate blood cultures (two sets: peripheral and central line), urine culture, and physician notification before antibiotic administration. For thrombocytopenic patients, avoid IM injections, rectal temperatures, rectal suppositories, and bladder catheterization unless essential; apply prolonged pressure to venipuncture sites; assess for petechiae, ecchymosis, and occult bleeding. Stool guaiac testing is appropriate for clinical concern of GI bleeding.`,
+    p5: `Patient education for patients receiving myelosuppressive chemotherapy must cover infection prevention (hand hygiene, avoiding ill contacts, when to call with fever), bleeding precautions (soft toothbrush, electric razor, fall prevention, no NSAIDs or aspirin), and fatigue management. Teach patients the specific fever threshold requiring emergency department evaluation (typically 38.3°C or 100.4°F for neutropenic patients) and emphasize this is a medical emergency, not a "wait and see" situation. Provide written instructions with the expected nadir timing for their specific regimen. Educate on signs of bleeding (unusual bruising, petechiae, blood in urine or stool, prolonged bleeding after minor cuts) and anemia (progressive fatigue, dyspnea, pallor). Patients must inform all healthcare providers of their chemotherapy regimen and ANC status before any procedures.`,
+  },
+  'bleeding': {
+    p1: `Drug-induced bleeding occurs through three primary mechanisms: impaired primary hemostasis from platelet inhibition (NSAIDs/aspirin inhibiting TXA2 via COX-1, P2Y12 inhibitors blocking ADP-mediated platelet activation, GPIIb/IIIa inhibitors blocking fibrinogen binding), impaired secondary hemostasis from coagulation factor inhibition (warfarin depleting vitamin K-dependent factors II, VII, IX, X; direct factor inhibitors: dabigatran targeting thrombin, rivaroxaban/apixaban/edoxaban targeting factor Xa; heparins potentiating antithrombin), and fibrinolysis promotion (alteplase, tenecteplase, reteplase converting plasminogen to plasmin, which degrades fibrin clot). The clinical consequences range from nuisance bleeding (bruising, epistaxis, prolonged menstrual bleeding) to life-threatening hemorrhage (intracranial bleeding, GI hemorrhage, retroperitoneal bleeding). Intracranial hemorrhage is the most feared complication of anticoagulation, with a case fatality rate approaching 50%.`,
+    p2: `Reversal agents are available for each anticoagulant class. Warfarin is reversed by vitamin K (phytonadione—oral for non-urgent reversal, IV for urgent reversal, avoiding SC due to erratic absorption); for life-threatening bleeding, 4-factor PCC (prothrombin complex concentrate, Kcentra) or fresh frozen plasma (FFP) provides rapid factor replacement without waiting 6–12 hours for vitamin K effect. Dabigatran (direct thrombin inhibitor) is reversed by idarucizumab (Praxbind), a monoclonal antibody fragment with near-complete reversal within minutes. Rivaroxaban, apixaban, and edoxaban (factor Xa inhibitors) are reversed by andexanet alfa (Andexxa), a recombinant modified factor Xa decoy protein; 4-factor PCC is an alternative. UFH is reversed by protamine sulfate (1 mg per 100 units heparin administered in the previous hour). Aspirin and P2Y12 inhibitors have no specific reversal; DDAVP and platelet transfusions may help in severe bleeding.`,
+    p3: `Risk factors for anticoagulant-related bleeding include age >75, prior GI bleeding, uncontrolled hypertension, CKD (impaired drug clearance, platelet dysfunction), thrombocytopenia, concurrent use of antiplatelet agents or NSAIDs, and supratherapeutic drug levels. The HAS-BLED score quantifies 1-year major bleeding risk in anticoagulated AF patients; high scores (≥3) identify patients needing modifiable risk factor correction rather than automatically withholding anticoagulation. Concomitant use of SSRIs with anticoagulants increases GI bleeding risk by 15–25% through serotonin-mediated platelet dysfunction. NSAID use in anticoagulated patients is associated with a 3–4-fold increased major bleeding risk.`,
+    p4: `Nursing monitoring of anticoagulated patients requires assessing for bleeding at every nursing assessment: check stool color (black, tarry stool = upper GI bleeding; bright red = lower GI), urine color (hematuria = pink to red), skin (petechiae, ecchymosis, hematoma formation), neurological status (sudden headache + neurological changes = intracranial hemorrhage—emergency), and hemoglobin/hematocrit trends. For patients on warfarin, document INR before administration and hold if INR is supratherapeutic per institutional protocol (typically >4.0 without bleeding, >3.0 in high-risk patients, or any supratherapeutic level with active bleeding). Apply pressure to venipuncture sites for ≥5 minutes (≥10 minutes for arterial sites). Fall prevention is essential for all anticoagulated inpatients.`,
+    p5: `Patient education for anticoagulation must cover the purpose of the medication, target INR range or monitoring requirements, signs of bleeding requiring emergency evaluation (severe headache, sudden vision change, neurological symptoms, vomiting blood, dark stools, excessive bruising), dietary considerations (warfarin: consistent vitamin K intake; avoid large fluctuations in green leafy vegetable consumption), drug interactions (avoid NSAIDs/ibuprofen/aspirin unless directed, inform all providers of anticoagulant use), and fall prevention. For DOAC patients, emphasize never missing doses (no bridging needed for procedures under 24 hours in most cases), and that no routine blood test monitoring is required—but to keep follow-up appointments for kidney/liver function monitoring. Provide written emergency contact information and nearest medical facility for a bleeding emergency.`,
+  },
+  'anaphylaxis': {
+    p1: `Drug-induced anaphylaxis is an acute, potentially life-threatening systemic hypersensitivity reaction mediated primarily by IgE-dependent mast cell and basophil degranulation releasing histamine, tryptase, prostaglandins, and leukotrienes that produce multi-system manifestations within minutes of drug exposure. Common culprits include beta-lactam antibiotics (cross-reactive IgE antibodies to the beta-lactam ring), NSAIDs (pseudo-allergic, through COX-1 inhibition and leukotriene overproduction), opioids (direct mast cell degranulation without IgE), radiocontrast media (direct mast cell degranulation), neuromuscular blocking agents (NMBA sensitization via quaternary ammonium epitopes), biologic agents (rituximab, trastuzumab, infliximab), and sulfonamides. Anaphylactoid reactions (clinically identical but non-IgE mediated) require the same treatment. The biphasic reaction—recurrence 4–12 hours after apparent resolution—occurs in up to 23% of cases, mandating at minimum 4–6 hours of post-treatment observation.`,
+    p2: `The cornerstone of anaphylaxis treatment is intramuscular epinephrine in the anterolateral thigh (0.3–0.5 mg of 1:1000 solution in adults, 0.01 mg/kg in pediatrics, maximum 0.5 mg), which must be administered immediately without waiting for IV access or for the reaction to worsen. Epinephrine activates α1-adrenoceptors (vasoconstriction, reducing mucosal edema and reversing distributive shock), β1-receptors (positive inotropy and chronotropy, improving cardiac output), and β2-receptors (bronchodilation). Antihistamines (diphenhydramine H1 blocker + famotidine H2 blocker) and corticosteroids (methylprednisolone or hydrocortisone) are important adjuncts but are NOT substitutes for epinephrine—their onset is too slow (30–60 minutes) to prevent acute cardiovascular collapse. Inhaled albuterol is added for refractory bronchospasm. Glucagon IV (1–2 mg) is used for anaphylaxis in patients taking beta-blockers who are unresponsive to epinephrine.`,
+    p3: `Beta-blockers and ACE inhibitors significantly worsen anaphylaxis outcomes. Beta-blockers blunt epinephrine's cardiovascular rescue effects (both therapeutic and endogenous) and promote bronchoconstriction; patients on beta-blockers may require significantly higher epinephrine doses and glucagon. ACE inhibitors impair the metabolism of bradykinin, which potentiates anaphylaxis-mediated vasodilation and angioedema; patients on ACE inhibitors have more severe and potentially fatal anaphylaxis. Skin testing and drug desensitization are available for patients requiring re-treatment with drugs causing documented IgE-mediated reactions, particularly platinum-based chemotherapy and taxanes where no alternative exists.`,
+    p4: `Nursing response to anaphylaxis must be immediate: call for help, position patient supine with legs elevated (unless dyspneic, then seated upright), administer IM epinephrine in the anterolateral thigh (NOT intradermally or subcutaneously—poor absorption during shock), stop the offending drug infusion, establish large-bore IV access, administer oxygen at 10–15 L/min via non-rebreather mask, and initiate cardiac monitoring and pulse oximetry. Time to epinephrine administration is the most important determinant of survival; delays increase fatality risk. Assess response within 5–15 minutes; repeat epinephrine every 5–15 minutes if symptoms persist—there is no maximum dose in anaphylaxis. Document vital signs, symptoms, medications administered (with times), and patient response in real-time.`,
+    p5: `Discharge education after an anaphylactic reaction must include prescribing and training on self-injectable epinephrine (EpiPen or generic), including two devices (primary + backup), technique training with return demonstration, expiration date monitoring, and instructions to use it at the first sign of severe allergic reaction. Refer to an allergist for definitive allergen identification, drug challenge testing, and desensitization consideration. Document the culprit drug as an allergy in all medical records and instruct the patient to inform all healthcare providers (including dentists and pharmacists). Recommend a medical alert bracelet identifying the drug allergy. Educate on biphasic reactions—the patient must be evaluated at an emergency department even after apparent resolution from self-epinephrine administration because a second wave of anaphylaxis may occur.`,
+  },
+};
+
+export async function getStaticPaths() {
+  const drugs = drugsData as any[];
+  const clusters = [
+    { slug: 'nephrotoxicity', label: 'Nephrotoxicity', keywords: ['nephrotoxicity','nephrotoxic','AKI','renal toxicity'] },
+    { slug: 'hepatotoxicity', label: 'Hepatotoxicity', keywords: ['hepatotoxicity','hepatic toxicity','liver injury','DILI','elevated LFTs'] },
+    { slug: 'qt-prolongation', label: 'QT Prolongation / Torsades de Pointes', keywords: ['QT prolongation','QTc prolongation','torsades','QT-prolongation'] },
+    { slug: 'cardiotoxicity', label: 'Direct Cardiotoxicity', keywords: ['cardiotoxicity','cardiomyopathy','cardiac toxicity'] },
+    { slug: 'myelosuppression', label: 'Myelosuppression', keywords: ['myelosuppression','bone marrow','neutropenia','thrombocytopenia','agranulocytosis'] },
+    { slug: 'peripheral-neuropathy', label: 'Peripheral Neuropathy', keywords: ['peripheral neuropathy','neuropathy','neuropathic'] },
+    { slug: 'cns-neurotoxicity', label: 'CNS Neurotoxicity / Seizure Risk', keywords: ['CNS neurotoxicity','seizure','neurotoxicity','CNS-toxicity'] },
+    { slug: 'ototoxicity', label: 'Ototoxicity', keywords: ['ototoxicity','hearing loss','tinnitus'] },
+    { slug: 'pulmonary-toxicity', label: 'Pulmonary Toxicity', keywords: ['pulmonary toxicity','pulmonary fibrosis','pneumonitis'] },
+    { slug: 'teratogenicity', label: 'Teratogenicity / Fetotoxicity', keywords: ['teratogenicity','teratogen','fetotoxicity','fetal toxicity'] },
+    { slug: 'hyperkalemia', label: 'Drug-Induced Hyperkalemia', keywords: ['hyperkalemia','potassium elevation'] },
+    { slug: 'hypokalemia', label: 'Drug-Induced Hypokalemia', keywords: ['hypokalemia','potassium wasting','electrolyte-wasting'] },
+    { slug: 'hyponatremia', label: 'Hyponatremia / SIADH', keywords: ['hyponatremia','SIADH'] },
+    { slug: 'hypoglycemia', label: 'Drug-Induced Hypoglycemia', keywords: ['hypoglycemia','low blood glucose'] },
+    { slug: 'hyperglycemia', label: 'Drug-Induced Hyperglycemia', keywords: ['drug-induced-hyperglycemia','steroid diabetes'] },
+    { slug: 'osteoporosis', label: 'Drug-Induced Osteoporosis', keywords: ['drug-induced-osteoporosis','bone density loss','osteoporosis'] },
+    { slug: 'serotonin-syndrome', label: 'Serotonin Syndrome', keywords: ['serotonin syndrome','serotonin toxicity'] },
+    { slug: 'nms', label: 'Neuroleptic Malignant Syndrome', keywords: ['neuroleptic malignant','NMS'] },
+    { slug: 'anticholinergic-toxidrome', label: 'Anticholinergic Toxidrome', keywords: ['anticholinergic toxidrome','anticholinergic effects','antimuscarinic'] },
+    { slug: 'opioid-toxidrome', label: 'Opioid Toxidrome', keywords: ['opioid toxidrome','opioid overdose','respiratory depression'] },
+    { slug: 'bleeding', label: 'Bleeding / Hemorrhage', keywords: ['bleeding','hemorrhage','anticoagulant bleeding'] },
+    { slug: 'thrombosis', label: 'Drug-Induced Thrombosis', keywords: ['thrombosis','VTE-thrombosis','hypercoagulable'] },
+    { slug: 'anaphylaxis', label: 'Anaphylaxis / Hypersensitivity', keywords: ['anaphylaxis','hypersensitivity','allergic reaction'] },
+    { slug: 'sjs-ten', label: 'Stevens-Johnson Syndrome / TEN', keywords: ['Stevens-Johnson','SJS','TEN','toxic epidermal'] },
+    { slug: 'dress', label: 'DRESS Syndrome', keywords: ['DRESS','drug reaction with eosinophilia'] },
+    { slug: 'infusion-reactions', label: 'Biologic Infusion Reactions', keywords: ['infusion reaction','infusion-related'] },
+    { slug: 'extrapyramidal', label: 'Extrapyramidal Effects', keywords: ['extrapyramidal','EPS','akathisia','tardive','dystonia'] },
+    { slug: 'weight-gain', label: 'Drug-Induced Weight Gain', keywords: ['weight gain','drug-induced weight'] },
+    { slug: 'hyperlipidemia', label: 'Drug-Induced Hyperlipidemia', keywords: ['drug-induced-hyperlipidemia','cholesterol elevation'] },
+    { slug: 'drug-induced-lupus', label: 'Drug-Induced Lupus', keywords: ['drug-induced lupus','DILE','lupus-like'] },
+  ];
+  return clusters.map(c => {
+    const kw = c.keywords.map(k => k.toLowerCase());
+    const matched = drugs.filter(d => {
+      const text = [
+        ...(d.adverse_effect_tags || []),
+        ...(d.schema_memberships?.adverse_cluster || []),
+        ...(d.adverse_effects?.serious || []),
+        ...(d.adverse_effects?.common || []),
+        ...(d.black_box_warnings || []),
+      ].join(' ').toLowerCase();
+      return kw.some(k => text.includes(k));
+    });
+    return {
+      params: { cluster: c.slug },
+      props: { label: c.label, drugs: matched, slug: c.slug },
+    };
+  });
+}
+
+const { label, drugs, slug } = Astro.props as { label: string; drugs: any[]; slug: string };
+const base = import.meta.env.BASE_URL;
+const prose = proseMap[slug] || null;
+---
+<SchemaLayout title={`${label} — Adverse Effects`} schema="adverse-effects" description={`Drugs associated with ${label}: mechanisms, risk factors, monitoring, and nursing management`}>
+
+  <div class="mb-2">
+    <a href={`${base}schemas/08-adverse-effects/`} class="text-sm text-base-content/60 hover:text-primary">← Schema 8: Adverse Effects</a>
+  </div>
+
+  <div class="mb-8">
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-2">{label}</h1>
+    <p class="text-base-content/60">{drugs.length} drug{drugs.length !== 1 ? 's' : ''} in this reference are associated with this adverse effect.</p>
+  </div>
+
+  {prose ? (
+    <div class="prose max-w-none mb-10">
+      <h2 class="text-2xl font-serif font-bold mb-3">Mechanism of the Adverse Effect</h2>
+      <p>{prose.p1}</p>
+      <h2 class="text-2xl font-serif font-bold mb-3 mt-6">Risk Factors & Predisposing Conditions</h2>
+      <p>{prose.p2}</p>
+      <h2 class="text-2xl font-serif font-bold mb-3 mt-6">Recognition & Monitoring</h2>
+      <p>{prose.p3}</p>
+      <h2 class="text-2xl font-serif font-bold mb-3 mt-6">Nursing Interventions</h2>
+      <p>{prose.p4}</p>
+      <h2 class="text-2xl font-serif font-bold mb-3 mt-6">Patient Education</h2>
+      <p>{prose.p5}</p>
+    </div>
+  ) : (
+    <div class="prose max-w-none mb-8">
+      <p>The adverse effect of <strong>{label}</strong> involves {drugs.length} drugs in this reference that share this toxicity concern. Understanding the mechanism, risk factors, and monitoring approach is essential for safe pharmacological management. The drugs listed below should be reviewed individually for specific onset timing, incidence rates, severity grading, and clinical management recommendations. Consult current prescribing information and institutional protocols for drug-specific monitoring parameters and intervention thresholds.</p>
+    </div>
+  )}
+
+  <div class="mb-10">
+    <h2 class="text-2xl font-serif font-bold mb-4">Implicated Drugs ({drugs.length})</h2>
+    {drugs.length === 0 ? (
+      <div class="alert alert-info"><span>No drugs specifically tagged for this adverse effect cluster. See individual drug profiles for adverse effect details.</span></div>
+    ) : (
+      <div class="overflow-x-auto">
+        <table class="table table-zebra w-full">
+          <thead>
+            <tr>
+              <th>Drug</th>
+              <th>Class</th>
+              <th>Severity</th>
+              <th>Safety Flags</th>
+            </tr>
+          </thead>
+          <tbody>
+            {drugs.map((d: any) => {
+              const serious = (d.adverse_effects?.serious || []) as string[];
+              const bbw = (d.black_box_warnings || []) as string[];
+              const isSevere = bbw.length > 0 || serious.length > 0;
+              return (
+                <tr class={d.ismp_high_alert || bbw.length > 0 ? 'border-l-4 border-error' : ''}>
+                  <td>
+                    <a href={`${base}drugs/${d.id}/`} class="font-semibold text-primary hover:underline">{d.generic_name}</a>
+                  </td>
+                  <td class="text-sm">{d.drug_class}</td>
+                  <td>
+                    {bbw.length > 0
+                      ? <span class="badge badge-error badge-sm">BBW</span>
+                      : isSevere
+                        ? <span class="badge badge-warning badge-sm">Serious</span>
+                        : <span class="badge badge-ghost badge-sm">Moderate</span>
+                    }
+                  </td>
+                  <td class="flex gap-1 flex-wrap">
+                    {d.ismp_high_alert && <span class="badge badge-error badge-sm">HIGH ALERT</span>}
+                    {d.beers_criteria && <span class="badge badge-warning badge-sm">BEERS</span>}
+                    {d.tdm_required && <span class="badge badge-info badge-sm">TDM</span>}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    )}
+  </div>
+
+  <div class="alert alert-warning mb-6">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+    <div>
+      <p class="font-semibold">Pharmacovigilance note</p>
+      <p class="text-sm">Adverse drug event incidence varies substantially by dose, patient population, and comorbidities. Always consult current prescribing information. Report adverse drug events to FDA MedWatch.</p>
+    </div>
+  </div>
+
+  <div class="alert alert-info">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+    <div>
+      <p class="font-semibold">Cross-schema navigation</p>
+      <p class="text-sm">
+        See <a href={`${base}schemas/08-adverse-effects/black-box-warnings/`} class="link">Black Box Warnings compilation</a> •
+        <a href={`${base}schemas/08-adverse-effects/beers-criteria/`} class="link">Beers Criteria</a> •
+        <a href={`${base}schemas/09-drug-interactions/`} class="link">Drug Interactions (Schema 9)</a>
+      </p>
+    </div>
+  </div>
+
+</SchemaLayout>

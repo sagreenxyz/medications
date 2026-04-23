@@ -1,0 +1,260 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const presentations = [
+  { slug: 'hypertension', label: 'Hypertension', tier1: ['ACE inhibitor','ARB','thiazide','calcium channel blocker'], keywords: ['hypertension','HTN','blood pressure','antihypertensive'] },
+  { slug: 'heart-failure', label: 'Heart Failure', tier1: ['ACE inhibitor','ARB','beta-blocker','MRA'], keywords: ['heart failure','HFrEF','HFpEF','cardiac failure','cardiomyopathy'] },
+  { slug: 'acute-coronary-syndrome', label: 'Acute Coronary Syndrome / ACS', tier1: ['antiplatelet','anticoagulant','beta-blocker','statin'], keywords: ['ACS','acute-MI','STEMI','NSTEMI','angina','post-MI'] },
+  { slug: 'atrial-fibrillation', label: 'Atrial Fibrillation', tier1: ['anticoagulant','rate control','antiarrhythmic'], keywords: ['atrial fibrillation','AF','AF-rate-control','flutter'] },
+  { slug: 'dyslipidemia', label: 'Dyslipidemia', tier1: ['statin','PCSK9 inhibitor'], keywords: ['dyslipidemia','hyperlipidemia','ASCVD','cholesterol','LDL','triglyceride'] },
+  { slug: 'dvt-pe', label: 'DVT / Pulmonary Embolism', tier1: ['anticoagulant','DOAC'], keywords: ['DVT','DVT-PE','pulmonary embolism','VTE','deep vein'] },
+  { slug: 'shock', label: 'Shock (Septic / Cardiogenic)', tier1: ['vasopressor','inotrope'], keywords: ['shock','septic shock','cardiogenic shock','vasopressor','sepsis'] },
+  { slug: 'asthma', label: 'Asthma', tier1: ['SABA','ICS','LABA'], keywords: ['asthma','bronchospasm','bronchoconstriction','wheeze','reactive airway'] },
+  { slug: 'copd', label: 'COPD', tier1: ['LAMA','LABA','ICS'], keywords: ['COPD','chronic obstructive','emphysema','bronchitis'] },
+  { slug: 'pneumonia', label: 'Pneumonia / CAP', tier1: ['beta-lactam','macrolide','fluoroquinolone'], keywords: ['pneumonia','CAP','community-acquired pneumonia','pulmonary infection'] },
+  { slug: 'tuberculosis', label: 'Tuberculosis', tier1: ['isoniazid','rifampin','pyrazinamide','ethambutol'], keywords: ['tuberculosis','TB','mycobacterium','anti-tubercular'] },
+  { slug: 'hiv', label: 'HIV Infection', tier1: ['INSTI','NRTI','NNRTI'], keywords: ['HIV','HIV-infection','antiretroviral','AIDS','ART'] },
+  { slug: 'hyperglycemia-dka', label: 'Hyperglycemia / DKA / HHS', tier1: ['insulin','metformin'], keywords: ['hyperglycemia','DKA','HHS','diabetes','type 2 diabetes','insulin'] },
+  { slug: 'hypothyroidism', label: 'Hypothyroidism', tier1: ['levothyroxine'], keywords: ['hypothyroidism','thyroid replacement','myxedema','TSH elevation'] },
+  { slug: 'hyperthyroidism', label: 'Hyperthyroidism', tier1: ['methimazole','propylthiouracil','beta-blocker'], keywords: ['hyperthyroidism','thyrotoxicosis','Graves','thyroid storm'] },
+  { slug: 'adrenal-insufficiency', label: 'Adrenal Insufficiency', tier1: ['hydrocortisone','fludrocortisone'], keywords: ['adrenal insufficiency','Addison','adrenal crisis','corticosteroid replacement'] },
+  { slug: 'acute-pain', label: 'Acute Pain', tier1: ['NSAID','acetaminophen','opioid'], keywords: ['acute pain','pain','analgesia','post-operative','nociceptive'] },
+  { slug: 'chronic-pain', label: 'Chronic Pain', tier1: ['SNRI','TCA','gabapentinoid','NSAID'], keywords: ['chronic pain','neuropathic pain','fibromyalgia','central sensitization'] },
+  { slug: 'opioid-overdose', label: 'Opioid Overdose / Reversal', tier1: ['naloxone'], keywords: ['opioid overdose','overdose','naloxone','opioid reversal','respiratory depression'] },
+  { slug: 'status-epilepticus', label: 'Status Epilepticus', tier1: ['benzodiazepine','levetiracetam','phenytoin'], keywords: ['status epilepticus','seizure','epilepsy','convulsion','anticonvulsant'] },
+  { slug: 'major-depression', label: 'Major Depression', tier1: ['SSRI','SNRI','bupropion'], keywords: ['depression','MDD','antidepressant','major depressive'] },
+  { slug: 'anxiety', label: 'Generalized Anxiety Disorder', tier1: ['SSRI','SNRI','buspirone'], keywords: ['anxiety','GAD','anxiolytic','panic disorder'] },
+  { slug: 'psychosis', label: 'Acute Psychosis / Schizophrenia', tier1: ['second-generation antipsychotic'], keywords: ['psychosis','schizophrenia','antipsychotic','hallucination','delusion'] },
+  { slug: 'bipolar-disorder', label: 'Bipolar Disorder', tier1: ['lithium','valproate','atypical antipsychotic'], keywords: ['bipolar','mania','mood stabilizer','manic episode'] },
+  { slug: 'adhd', label: 'ADHD', tier1: ['stimulant','amphetamine','methylphenidate'], keywords: ['ADHD','attention deficit','stimulant','hyperactivity'] },
+  { slug: 'alzheimer-dementia', label: "Alzheimer's Dementia", tier1: ['AChE inhibitor','memantine'], keywords: ['Alzheimer','dementia','cognitive decline','AChE inhibitor'] },
+  { slug: 'parkinsons-disease', label: "Parkinson's Disease", tier1: ['levodopa-carbidopa','dopamine agonist'], keywords: ['Parkinson','dopamine','levodopa','parkinsonism'] },
+  { slug: 'migraine', label: 'Migraine', tier1: ['triptan','CGRP antagonist'], keywords: ['migraine','headache','triptan','CGRP'] },
+  { slug: 'insomnia', label: 'Insomnia', tier1: ['zolpidem','eszopiclone','melatonin agonist'], keywords: ['insomnia','sleep disorder','sedative-hypnotic','sleep initiation'] },
+  { slug: 'nausea-vomiting', label: 'Nausea / Vomiting / CINV', tier1: ['5-HT3 antagonist','NK1 antagonist','corticosteroid'], keywords: ['nausea','vomiting','CINV','antiemetic','emesis'] },
+  { slug: 'gi-bleeding-pud', label: 'GI Bleeding / PUD / GERD', tier1: ['PPI','H2 blocker'], keywords: ['GI bleeding','peptic ulcer','PUD','GERD','acid suppression','H. pylori'] },
+  { slug: 'ibd', label: 'Inflammatory Bowel Disease', tier1: ['mesalamine','biologic TNF inhibitor','corticosteroid'], keywords: ['IBD','Crohn','ulcerative colitis','inflammatory bowel'] },
+  { slug: 'c-difficile', label: 'C. difficile Infection', tier1: ['vancomycin oral','fidaxomicin'], keywords: ['C. difficile','C-diff','clostridioides','pseudomembranous'] },
+  { slug: 'uti-pyelonephritis', label: 'UTI / Pyelonephritis', tier1: ['fluoroquinolone','TMP-SMX','nitrofurantoin'], keywords: ['UTI','pyelonephritis','urinary tract','cystitis'] },
+  { slug: 'sepsis', label: 'Sepsis / Bacteremia', tier1: ['beta-lactam','carbapenem','vancomycin'], keywords: ['sepsis','bacteremia','septicemia','blood stream infection'] },
+  { slug: 'meningitis', label: 'Bacterial Meningitis', tier1: ['ceftriaxone','dexamethasone','vancomycin'], keywords: ['meningitis','bacterial meningitis','CSF infection'] },
+  { slug: 'fungal-infection', label: 'Invasive Fungal Infection', tier1: ['echinocandin','azole','amphotericin B'], keywords: ['fungal infection','candidiasis','aspergillosis','antifungal','invasive fungal'] },
+  { slug: 'anemia', label: 'Anemia', tier1: ['iron','B12','folate','ESA'], keywords: ['anemia','iron deficiency','megaloblastic','erythropoietin','hemoglobin'] },
+  { slug: 'rheumatoid-arthritis', label: 'Rheumatoid Arthritis', tier1: ['methotrexate','TNF inhibitor','JAK inhibitor'], keywords: ['rheumatoid arthritis','RA','DMARD','synovitis','joint inflammation'] },
+  { slug: 'anaphylaxis', label: 'Anaphylaxis', tier1: ['epinephrine','corticosteroid','antihistamine'], keywords: ['anaphylaxis','anaphylactic','allergic emergency','systemic allergy'] },
+];
+
+const proseMap: Record<string, { p1: string; p2: string; p3: string; p4: string }> = {
+  'hypertension': {
+    p1: `Hypertension (sustained systemic BP ≥130/80 mmHg by ACC/AHA 2017 criteria) is the most prevalent modifiable cardiovascular risk factor, affecting nearly half of American adults. The pathophysiology involves dysregulation of three interacting systems: the renin-angiotensin-aldosterone system (RAAS), which raises BP through angiotensin II-mediated vasoconstriction and sodium retention; the sympathetic nervous system, which elevates cardiac output and vascular tone via adrenergic receptor stimulation; and intrinsic vascular mechanisms, including reduced nitric oxide bioavailability, endothelin overproduction, and impaired arterial compliance. In secondary hypertension, primary aldosteronism, renal artery stenosis, pheochromocytoma, or obstructive sleep apnea is the underlying cause. Long-term uncontrolled hypertension causes end-organ damage through mechanical stress and neurohormonal activation, producing left ventricular hypertrophy, arterial stiffening, glomerulosclerosis, and accelerated atherosclerosis.`,
+    p2: `First-line pharmacological treatment according to JNC 8 and ACC/AHA 2017 guidelines includes four equally efficacious drug classes: ACE inhibitors (e.g., lisinopril) and ARBs (e.g., losartan) reduce RAAS activity, making them preferred in diabetes, CKD, or heart failure; thiazide diuretics (e.g., chlorthalidone) reduce plasma volume and vascular resistance; and calcium channel blockers (e.g., amlodipine) vasodilate by blocking L-type calcium channels in vascular smooth muscle. ACE inhibitors and ARBs are not combined due to additive hyperkalemia and AKI risk without additional BP benefit (ONTARGET trial). Black patients with hypertension have lower RAAS activity on average and respond better to thiazides and CCBs than to ACE inhibitors or ARBs as monotherapy.`,
+    p3: `Second-line and adjunct agents include beta-blockers (preferred when hypertension coexists with angina, heart failure, or post-MI), aldosterone antagonists (particularly effective in primary aldosteronism), alpha-1 blockers (useful when BPH coexists), central alpha-2 agonists (clonidine, methyldopa—useful in pregnancy), and direct vasodilators (hydralazine, minoxidil—adjuncts for resistant hypertension). The ARNI sacubitril-valsartan is emerging as an option for hypertension with heart failure with reduced ejection fraction. Resistant hypertension (BP >130/80 despite three drugs including a diuretic) may warrant spironolactone addition, renal denervation, or investigation for secondary causes.`,
+    p4: `Nursing assessment prior to antihypertensive administration requires measuring bilateral arm BPs and obtaining orthostatic BP readings in patients at fall risk. The nurse must hold antihypertensive medications and notify the prescriber if systolic BP is below the institutional hold parameter (typically <90–100 mmHg) or if new symptoms of end-organ damage (headache, visual changes, chest pain, neurological changes) suggest hypertensive urgency or emergency. Patient education should emphasize dietary sodium restriction (<2.3 g/day), DASH diet adherence, physical activity (150 min/week moderate intensity), smoking cessation, and weight reduction (each 1 kg loss reduces BP by ~1 mmHg). The nurse should reinforce that hypertension is asymptomatic and lifelong medication adherence is required even when BP is controlled.`,
+  },
+  'heart-failure': {
+    p1: `Heart failure (HF) is a clinical syndrome resulting from structural or functional cardiac abnormality that impairs ventricular filling or ejection, producing symptoms of dyspnea, fatigue, and fluid retention. HF with reduced ejection fraction (HFrEF, EF <40%) results from myocardial injury—typically ischemic, hypertensive, or idiopathic dilated cardiomyopathy—that activates compensatory neurohormonal pathways: sympathetic nervous system activation increases heart rate and contractility acutely but causes maladaptive hypertrophy and apoptosis chronically; RAAS activation produces sodium retention and vasoconstriction that increase preload and afterload beyond the failing heart's capacity. HF with preserved ejection fraction (HFpEF, EF ≥50%) involves impaired ventricular relaxation (diastolic dysfunction), most commonly from hypertension, diabetes, obesity, and aging. Understanding neurohormonal activation is essential because the four pillars of HFrEF pharmacotherapy all target these pathways.`,
+    p2: `The four guideline-directed medical therapy (GDMT) pillars for HFrEF each reduce all-cause mortality: ACE inhibitors/ARBs (or the ARNI sacubitril-valsartan) block RAAS-mediated adverse remodeling; beta-blockers (specifically carvedilol, metoprolol succinate, bisoprolol) counteract sympathetic-driven remodeling by reducing adrenergic stimulation of the failing myocardium; mineralocorticoid receptor antagonists (spironolactone, eplerenone) block aldosterone-mediated fibrosis and electrolyte derangements; and SGLT2 inhibitors (dapagliflozin, empagliflozin) reduce HF hospitalization and death through osmotic diuresis, reduced preload, and cardiac metabolic benefits. The ARNI sacubitril-valsartan is preferred over ACE inhibitors in ambulatory HFrEF patients tolerating RAAS blockade, based on the PARADIGM-HF trial showing superior mortality benefit. Ivabradine can be added when resting heart rate exceeds 70 bpm despite maximally tolerated beta-blocker.`,
+    p3: `Diuretics—primarily loop diuretics (furosemide, torsemide, bumetanide)—provide symptomatic relief from congestion but have not demonstrated mortality benefit. They are titrated to achieve euvolemia (dry weight) while monitoring renal function and electrolytes. Digoxin reduces HF hospitalizations and improves symptoms without mortality benefit (DIG trial) and is used primarily for rate control in HFrEF with atrial fibrillation. Hydralazine-isosorbide dinitrate is guideline-recommended as an alternative in patients who cannot tolerate ACE inhibitors or ARBs due to renal insufficiency or hyperkalemia, and has shown particular mortality benefit in self-identified Black patients (A-HeFT trial). HFpEF management focuses on treating comorbidities; SGLT2 inhibitors have shown benefit (EMPEROR-Preserved trial).`,
+    p4: `Nursing management of HF requires daily weights, with patients instructed to contact their provider for a 2–3 lb overnight or 5 lb weekly gain. Intake/output measurement and assessment of fluid distribution (JVD, S3 gallop, dependent edema, pulmonary crackles) guide diuretic titration. Before administering beta-blockers, check apical heart rate for 60 seconds—hold if <50–55 bpm per protocol. ACE inhibitor/ARB therapy requires monitoring creatinine (hold if rises >30% from baseline) and potassium (hold if K+ >5.5 mEq/L). Patient education must include fluid restriction (typically 1.5–2 L/day), sodium restriction (<2 g/day), daily weight monitoring at the same time each morning, and recognizing decompensation signs requiring emergency care.`,
+  },
+  'acute-coronary-syndrome': {
+    p1: `Acute coronary syndrome (ACS) encompasses unstable angina, NSTEMI, and STEMI—presentations along a continuum of plaque disruption and coronary thrombosis. The pathophysiology involves rupture or erosion of an atherosclerotic plaque, exposing subendothelial collagen and tissue factor to flowing blood, triggering platelet adhesion and activation (via GPIb-collagen and GPVI contacts), platelet aggregation (mediated by GPIIb/IIIa binding fibrinogen), and coagulation cascade activation producing thrombin and fibrin clot. Total coronary occlusion causes transmural ischemia and STEMI; partial occlusion with distal embolization causes NSTEMI. Myocardial necrosis begins within 20 minutes of ischemia and is essentially complete by 6–12 hours, making timely reperfusion the central therapeutic goal.`,
+    p2: `Immediate pharmacological therapy in ACS targets three mechanisms: antiplatelet therapy (dual antiplatelet therapy—aspirin + P2Y12 inhibitor such as ticagrelor or prasugrel—blocks thromboxane A2 synthesis and ADP-mediated platelet activation respectively), anticoagulation (unfractionated heparin or low-molecular-weight heparin provides additional thrombin inhibition), and anti-ischemic therapy (beta-blockers reduce myocardial oxygen demand; nitroglycerin vasodilates coronary and systemic vasculature). For STEMI, primary percutaneous coronary intervention (PPCI) within 90 minutes of first medical contact is the reperfusion standard; when PPCI is unavailable, fibrinolysis with alteplase or tenecteplase within 12 hours of symptom onset achieves pharmacological reperfusion. High-intensity statin therapy (atorvastatin 80 mg) is initiated in-hospital for all ACS patients regardless of baseline LDL.`,
+    p3: `Long-term post-ACS therapy includes dual antiplatelet therapy for 12 months (or longer in stent patients at high ischemic risk), continued beta-blocker for at least 1 year, lifelong aspirin, high-intensity statin, ACE inhibitor (particularly if EF <40%), and aldosterone antagonist if EF ≤35% with heart failure or diabetes. GPIIb/IIIa inhibitors (abciximab, eptifibatide, tirofiban) may be added for high-risk NSTEMI patients undergoing PCI. The PCSK9 inhibitors evolocumab and alirocumab are indicated when statin therapy is insufficient to achieve LDL <70 mg/dL after ACS, with evidence of reduced recurrent events.`,
+    p4: `Nursing priorities in ACS include continuous ECG monitoring for arrhythmias and ST changes, obtaining 12-lead ECG within 10 minutes of symptom onset, establishing IV access and obtaining troponin/CK-MB at presentation and 3–6 hours later, and administering the ACS medication bundle (aspirin 325 mg chewed, oxygen if SpO2 <90%, nitroglycerin sublingual, morphine only if unresponsive to nitrates due to evidence of increased mortality with routine use). Avoid IM injections before anticoagulation status is established. After PCI, monitor sheath insertion sites for hematoma and pseudoaneurysm; instruct patients not to flex the affected extremity. Discharge education must address dual antiplatelet therapy compliance (P2Y12 inhibitor must not be stopped without cardiologist consultation due to stent thrombosis risk).`,
+  },
+  'atrial-fibrillation': {
+    p1: `Atrial fibrillation (AF) is the most common sustained cardiac arrhythmia, affecting >5 million Americans and causing 15–20% of all strokes. The pathophysiology involves ectopic firing from pulmonary vein ostia (the initiating trigger in most paroxysmal AF), combined with atrial substrate abnormalities—fibrosis, ion channel remodeling, autonomic imbalance—that sustain re-entrant circuits (the perpetuating mechanism). The irregular ventricular response reflects unpredictable AV nodal conduction of chaotic atrial impulses; the consequent loss of atrial contraction reduces cardiac output by 10–30% and promotes thrombus formation in the left atrial appendage, the source of most cardioembolic strokes. Risk factors include hypertension, heart failure, valvular disease, obesity, sleep apnea, and hyperthyroidism.`,
+    p2: `Management of AF addresses three simultaneous goals: rate control, stroke prevention, and rhythm management. Rate control—targeting resting HR <80 bpm or <110 bpm in lenient control strategies—is achieved with beta-blockers (metoprolol), non-dihydropyridine CCBs (diltiazem, verapamil), or digoxin (for sedentary patients with HFrEF). Stroke prevention with anticoagulation is guided by the CHA2DS2-VASc score; patients with a score ≥2 in males or ≥3 in females require anticoagulation. Direct oral anticoagulants (DOACs: apixaban, rivaroxaban, dabigatran, edoxaban) are preferred over warfarin for nonvalvular AF because of equivalent or superior efficacy with lower intracranial bleeding risk and no requirement for INR monitoring. Warfarin remains indicated for mechanical heart valves and mitral stenosis.`,
+    p3: `Rhythm control—restoration and maintenance of sinus rhythm—is pursued in symptomatic patients who fail rate control. Cardioversion (electrical or pharmacological with ibutilide/dofetilide/flecainide) requires either anticoagulation for ≥3 weeks preceding or a TEE to exclude LAA thrombus. Antiarrhythmic drugs for maintaining sinus rhythm include flecainide/propafenone (first-line in structurally normal hearts), sotalol (moderate heart disease), amiodarone (most effective, reserved for patients with structural heart disease due to toxicity), and dronedarone (contraindicated in permanent AF and HFrEF). Catheter ablation targeting pulmonary vein isolation is increasingly offered as first-line rhythm control in paroxysmal AF.`,
+    p4: `Nursing assessment for AF patients must include apical pulse for 60 seconds (the radial pulse underestimates rate due to pulse deficit), BP assessment, and continuous telemetry monitoring. Before administering rate control agents, verify the HR and rhythm—withhold diltiazem/verapamil if HR is <50 bpm or if the patient has Wolff-Parkinson-White syndrome (accessory pathway; these agents can accelerate conduction and precipitate ventricular fibrillation). For patients on warfarin, check INR before each dose and ensure the INR is therapeutic (2.0–3.0) before cardioversion. Educate patients on bleeding precautions for anticoagulation therapy: avoid NSAIDs/aspirin unless directed, use soft toothbrush, and report any unusual bleeding, severe headache, or neurological changes immediately.`,
+  },
+  'dyslipidemia': {
+    p1: `Dyslipidemia encompasses elevated LDL-C, reduced HDL-C, elevated triglycerides, and elevations of atherogenic lipoprotein particles (apoB, Lp(a)) that promote atherosclerotic cardiovascular disease (ASCVD). LDL particles cause atherosclerosis through endothelial transcytosis, subendothelial retention, oxidative modification, and uptake by macrophages to form foam cells within arterial plaques. HMG-CoA reductase is the rate-limiting enzyme in hepatic cholesterol synthesis; its product, mevalonate, is a substrate for cholesterol, dolichol, ubiquinone, and isoprenyl group biosynthesis, making statins pleiotropic with anti-inflammatory and plaque-stabilizing effects beyond LDL reduction alone. The causal relationship between LDL-C and ASCVD is supported by Mendelian randomization studies and multiple large randomized controlled trials demonstrating mortality reduction with statin therapy.`,
+    p2: `High-intensity statin therapy (atorvastatin 40–80 mg or rosuvastatin 20–40 mg) is first-line for most patients with clinical ASCVD, LDL-C ≥190 mg/dL, or diabetes with intermediate-to-high ASCVD risk. Statins competitively inhibit HMG-CoA reductase, reducing intrahepatic cholesterol and upregulating LDL receptors, which enhances LDL clearance from plasma—typically achieving 40–60% LDL reduction. Ezetimibe reduces cholesterol absorption at the NPC1L1 transporter in intestinal enterocytes and bile duct epithelium, providing an additional 15–20% LDL reduction when added to statins (IMPROVE-IT trial: further cardiovascular risk reduction). PCSK9 inhibitors (evolocumab, alirocumab) block the degradation of hepatic LDL receptors, achieving 50–60% additional LDL reduction on top of statin plus ezetimibe.`,
+    p3: `For hypertriglyceridemia (TG ≥500 mg/dL), pancreatitis prevention is the primary goal; omega-3 fatty acid ethyl esters (icosapent ethyl, Vascepa) at 4 g/day reduce cardiovascular events in patients with TG >150 mg/dL and established ASCVD on statins (REDUCE-IT trial). Fibrates (fenofibrate, gemfibrozil) activate PPARα to reduce hepatic VLDL production and increase lipoprotein lipase activity, reducing TG by 40–50%. Gemfibrozil significantly inhibits statin metabolism via CYP2C8 and UGT1A1 inhibition, raising statin plasma levels and increasing myopathy/rhabdomyolysis risk; fenofibrate has a much safer interaction profile and is the preferred combination partner. Niacin reduces all atherogenic lipoproteins but has fallen from favor due to lack of cardiovascular benefit when added to statin therapy (AIM-HIGH, HPS2-THRIVE trials) and flushing.`,
+    p4: `Before initiating statin therapy, obtain baseline ALT and CK. The most important nursing safety concern is statin-associated muscle symptoms (SAMS), ranging from myalgia (5–10%, dose-dependent) to rare rhabdomyolysis (CK >10× ULN with myoglobinuria and AKI risk). Instruct patients to report unexplained muscle pain, weakness, or dark brown/tea-colored urine immediately. Check CK if myopathy symptoms develop; hold statin and notify prescriber if CK >10× ULN. Coenzyme Q10 supplementation is not evidence-based but is commonly used by patients. Statin therapy is absolutely contraindicated in pregnancy (Pregnancy Category X); counsel women of childbearing age accordingly. Routine LFT monitoring is no longer recommended for asymptomatic patients, but check ALT if symptoms of hepatotoxicity develop.`,
+  },
+  'dvt-pe': {
+    p1: `Venous thromboembolism (VTE), encompassing DVT and pulmonary embolism (PE), is the third most common acute cardiovascular syndrome. The pathophysiology follows Virchow's triad: venous stasis (immobility, heart failure, venous insufficiency), endothelial injury (surgery, trauma, indwelling catheters), and hypercoagulability (inherited thrombophilias, malignancy, estrogen therapy, antiphospholipid syndrome). DVT most commonly originates in the deep veins of the calf, propagating proximally; proximal DVT carries high embolic risk. PE results from thrombus embolization to pulmonary arteries, causing V/Q mismatch, hypoxemia, and, in massive PE, acute right ventricular failure and hemodynamic collapse. Mortality from untreated proximal DVT is approximately 30% from recurrent PE; with anticoagulation, it falls below 5%.`,
+    p2: `Anticoagulation is the cornerstone of VTE treatment, preventing thrombus extension and reducing PE recurrence risk. Direct oral anticoagulants (DOACs) are first-line for most patients: apixaban and rivaroxaban can be initiated immediately without parenteral bridging (using full-dose oral treatment regimens); dabigatran and edoxaban require 5–10 days of parenteral anticoagulation before oral transition. DOACs have predictable pharmacokinetics without routine monitoring and lower intracranial bleeding risk than warfarin. Unfractionated heparin (UFH) is preferred for massive PE or hemodynamically unstable patients requiring thrombolysis, due to its reversibility with protamine sulfate and short half-life. LMWH (enoxaparin) remains preferred in pregnancy (DOACs and warfarin are contraindicated) and in cancer-associated VTE where LMWH has historically been standard, though apixaban and rivaroxaban are now recommended alternatives.`,
+    p3: `Systemic thrombolysis with alteplase (100 mg IV over 2 hours) is reserved for massive PE (hemodynamic instability with systolic BP <90 mmHg or shock) despite the risk of major bleeding, including intracranial hemorrhage in approximately 2%. Catheter-directed thrombolysis delivers lower doses directly to the clot, reducing bleeding risk. IVC filters are used when anticoagulation is contraindicated; retrievable filters should be removed once anticoagulation is feasible. Duration of anticoagulation for provoked VTE is typically 3 months; unprovoked VTE warrants consideration of indefinite therapy, especially in females with elevated D-dimer. Thrombophilia testing is recommended selectively after the acute event, not during anticoagulation.`,
+    p4: `Nursing management of VTE includes establishing IV access for heparin or LMWH, monitoring aPTT (goal 60–100 seconds for UFH infusion per protocol), and assessing for bleeding complications. For LMWH, anti-Xa levels are used when monitoring is required (obese patients, pregnancy, renal impairment). Assess lower extremities for warmth, erythema, tenderness, and Homan's sign (poor sensitivity/specificity but still assessed). Elevate the affected extremity to reduce edema and apply compression stockings after acute DVT resolves. For patients on warfarin transitioning from LMWH, ensure INR is therapeutic (2.0–3.0) for two consecutive days before discontinuing LMWH. Patient education should address signs of PE (sudden dyspnea, pleuritic chest pain, hemoptysis), fall prevention while anticoagulated, and importance of follow-up for VTE recurrence surveillance.`,
+  },
+  'shock': {
+    p1: `Shock is defined as inadequate tissue oxygen delivery relative to demand, manifesting as end-organ dysfunction. The four major types—distributive (septic, anaphylactic), cardiogenic, hypovolemic, and obstructive—differ in hemodynamic profile but share the final common pathway of cellular hypoxia and lactic acidosis. Septic shock, the most common distributive form, results from pathogen-associated molecular patterns activating toll-like receptors and triggering a cytokine cascade that causes systemic vasodilation, capillary leak, myocardial depression, and microvascular thrombosis. Cardiogenic shock involves primary cardiac pump failure reducing cardiac output; compensation with elevated SVR (cold, mottled extremities) distinguishes it from distributive shock. Early goal-directed resuscitation within the first 6 hours improves survival in septic shock (Surviving Sepsis Campaign).`,
+    p2: `Vasopressors restore mean arterial pressure (MAP ≥65 mmHg) through α1-adrenoceptor-mediated vasoconstriction. Norepinephrine is the first-line vasopressor for septic shock (SOAP II trial), providing potent α1-mediated vasoconstriction with moderate β1 inotropy. Vasopressin at 0.03 units/minute is added as a vasopressor-sparing agent activating V1 receptors on vascular smooth muscle, independent of adrenergic stimulation. Epinephrine is used for anaphylactic shock (combined α1 vasoconstriction and β2 bronchodilation) and as a second-line vasopressor in sepsis. Phenylephrine (pure α1 agonist) is used when tachycardia is undesirable. Dopamine is now second-line in septic shock due to increased arrhythmia risk vs. norepinephrine and is reserved for select cases of cardiogenic shock with bradycardia.`,
+    p3: `Inotropes augment myocardial contractility for cardiogenic shock. Dobutamine activates β1-receptors to increase cardiac output without significant vasoconstriction, reducing SVR through peripheral β2 activation. Milrinone, a phosphodiesterase-3 inhibitor, increases intracellular cAMP, producing positive inotropy and vasodilation (inodilator), and is preferred when beta-blockers are present (dobutamine is attenuated). Both dobutamine and milrinone increase myocardial oxygen demand and may worsen ischemia. Corticosteroids (hydrocortisone 200 mg/day continuous infusion or 50 mg q6h) are used in refractory septic shock not responding to fluids and vasopressors; the mechanism is restoration of adrenoceptor sensitivity and suppression of inflammatory mediators.`,
+    p4: `Nursing management of shock requires continuous hemodynamic monitoring via arterial line (continuous intra-arterial BP) and central venous catheter or pulmonary artery catheter. Vasopressors must be administered via central IV access to prevent tissue necrosis from extravasation; if a peripheral IV is temporarily used, monitor the site hourly for erythema and blanching. Titrate vasopressors in small increments (typically 2–4 mcg/min norepinephrine) targeting MAP ≥65 mmHg and assessing end-organ perfusion markers: urine output ≥0.5 mL/kg/hr, lactate trending to normal, mental status improving. Monitor for vasopressor adverse effects: norepinephrine causes peripheral ischemia (check extremity perfusion), limb cyanosis, and arrhythmias. Ensure blood cultures are obtained before antibiotic administration but do not delay antibiotics for culture results.`,
+  },
+};
+
+export async function getStaticPaths() {
+  const drugs = drugsData as any[];
+  const presData = [
+    { slug: 'hypertension', label: 'Hypertension', keywords: ['hypertension','HTN','blood pressure','antihypertensive'] },
+    { slug: 'heart-failure', label: 'Heart Failure', keywords: ['heart failure','HFrEF','HFpEF','cardiac failure'] },
+    { slug: 'acute-coronary-syndrome', label: 'Acute Coronary Syndrome / ACS', keywords: ['ACS','acute-MI','STEMI','NSTEMI','angina','post-MI'] },
+    { slug: 'atrial-fibrillation', label: 'Atrial Fibrillation', keywords: ['atrial fibrillation','AF','AF-rate-control'] },
+    { slug: 'dyslipidemia', label: 'Dyslipidemia', keywords: ['dyslipidemia','hyperlipidemia','ASCVD','cholesterol'] },
+    { slug: 'dvt-pe', label: 'DVT / Pulmonary Embolism', keywords: ['DVT','DVT-PE','pulmonary embolism','VTE','VTE-prophylaxis'] },
+    { slug: 'shock', label: 'Shock (Septic / Cardiogenic)', keywords: ['shock','septic shock','vasopressor','sepsis','cardiogenic shock'] },
+    { slug: 'asthma', label: 'Asthma', keywords: ['asthma','bronchospasm','reactive airway'] },
+    { slug: 'copd', label: 'COPD', keywords: ['COPD','chronic obstructive','emphysema'] },
+    { slug: 'pneumonia', label: 'Pneumonia / CAP', keywords: ['pneumonia','CAP','community-acquired'] },
+    { slug: 'tuberculosis', label: 'Tuberculosis', keywords: ['tuberculosis','TB','mycobacterium','anti-tubercular'] },
+    { slug: 'hiv', label: 'HIV Infection', keywords: ['HIV','HIV-infection','antiretroviral','ART'] },
+    { slug: 'hyperglycemia-dka', label: 'Hyperglycemia / DKA / HHS', keywords: ['hyperglycemia','DKA','HHS','diabetes','insulin'] },
+    { slug: 'hypothyroidism', label: 'Hypothyroidism', keywords: ['hypothyroidism','thyroid replacement','myxedema'] },
+    { slug: 'hyperthyroidism', label: 'Hyperthyroidism', keywords: ['hyperthyroidism','thyrotoxicosis','Graves'] },
+    { slug: 'adrenal-insufficiency', label: 'Adrenal Insufficiency', keywords: ['adrenal insufficiency','Addison','adrenal crisis'] },
+    { slug: 'acute-pain', label: 'Acute Pain', keywords: ['acute pain','pain','analgesia','post-operative'] },
+    { slug: 'chronic-pain', label: 'Chronic Pain', keywords: ['chronic pain','neuropathic pain','fibromyalgia'] },
+    { slug: 'opioid-overdose', label: 'Opioid Overdose / Reversal', keywords: ['opioid overdose','overdose','naloxone','opioid reversal'] },
+    { slug: 'status-epilepticus', label: 'Status Epilepticus', keywords: ['status epilepticus','seizure','epilepsy','anticonvulsant'] },
+    { slug: 'major-depression', label: 'Major Depression', keywords: ['depression','MDD','antidepressant','major depressive'] },
+    { slug: 'anxiety', label: 'Generalized Anxiety Disorder', keywords: ['anxiety','GAD','anxiolytic','panic'] },
+    { slug: 'psychosis', label: 'Acute Psychosis / Schizophrenia', keywords: ['psychosis','schizophrenia','antipsychotic'] },
+    { slug: 'bipolar-disorder', label: 'Bipolar Disorder', keywords: ['bipolar','mania','mood stabilizer'] },
+    { slug: 'adhd', label: 'ADHD', keywords: ['ADHD','attention deficit','stimulant','hyperactivity'] },
+    { slug: 'alzheimer-dementia', label: "Alzheimer's Dementia", keywords: ['Alzheimer','dementia','cognitive decline'] },
+    { slug: 'parkinsons-disease', label: "Parkinson's Disease", keywords: ['Parkinson','dopamine','levodopa','parkinsonism'] },
+    { slug: 'migraine', label: 'Migraine', keywords: ['migraine','headache','triptan','CGRP'] },
+    { slug: 'insomnia', label: 'Insomnia', keywords: ['insomnia','sleep disorder','sedative-hypnotic'] },
+    { slug: 'nausea-vomiting', label: 'Nausea / Vomiting / CINV', keywords: ['nausea','vomiting','CINV','antiemetic'] },
+    { slug: 'gi-bleeding-pud', label: 'GI Bleeding / PUD / GERD', keywords: ['GI bleeding','peptic ulcer','PUD','GERD','acid suppression'] },
+    { slug: 'ibd', label: 'Inflammatory Bowel Disease', keywords: ['IBD','Crohn','ulcerative colitis','inflammatory bowel'] },
+    { slug: 'c-difficile', label: 'C. difficile Infection', keywords: ['C. difficile','C-diff','clostridioides'] },
+    { slug: 'uti-pyelonephritis', label: 'UTI / Pyelonephritis', keywords: ['UTI','pyelonephritis','urinary tract','cystitis'] },
+    { slug: 'sepsis', label: 'Sepsis / Bacteremia', keywords: ['sepsis','bacteremia','septicemia'] },
+    { slug: 'meningitis', label: 'Bacterial Meningitis', keywords: ['meningitis','bacterial meningitis'] },
+    { slug: 'fungal-infection', label: 'Invasive Fungal Infection', keywords: ['fungal infection','candidiasis','aspergillosis','antifungal'] },
+    { slug: 'anemia', label: 'Anemia', keywords: ['anemia','iron deficiency','megaloblastic','erythropoietin'] },
+    { slug: 'rheumatoid-arthritis', label: 'Rheumatoid Arthritis', keywords: ['rheumatoid arthritis','RA','DMARD'] },
+    { slug: 'anaphylaxis', label: 'Anaphylaxis', keywords: ['anaphylaxis','anaphylactic','allergic emergency'] },
+  ];
+  return presData.map(p => {
+    const kw = p.keywords.map(k => k.toLowerCase());
+    const matched = drugs.filter(d => {
+      const text = [
+        ...(d.presentation_tags || []),
+        ...(d.schema_memberships?.presentation_cluster || []),
+        ...(d.indications || []),
+      ].join(' ').toLowerCase();
+      return kw.some(k => text.includes(k));
+    });
+    return {
+      params: { presentation: p.slug },
+      props: { label: p.label, drugs: matched, slug: p.slug },
+    };
+  });
+}
+
+const { label, drugs, slug } = Astro.props as { label: string; drugs: any[]; slug: string };
+const base = import.meta.env.BASE_URL;
+const prose = proseMap[slug] || null;
+
+function tier(d: any, slug: string): string {
+  const indications = ((d.indications || []) as string[]).join(' ').toLowerCase();
+  const ptags = ((d.presentation_tags || []) as string[]).join(' ').toLowerCase();
+  const kws = (presentations.find(p => p.slug === slug)?.tier1 || []).map((t: string) => t.toLowerCase());
+  const cls = (d.drug_class || '').toLowerCase();
+  const isFirst = kws.some(k => cls.includes(k) || indications.includes(k));
+  if (isFirst) return 'First-line';
+  if (ptags.includes(slug.replace(/-/g, ' ')) || ptags.includes(slug)) return 'Second-line';
+  return 'Adjunct';
+}
+---
+<SchemaLayout title={`${label} — Clinical Presentations`} schema="clinical-presentations" description={`Pharmacological management of ${label}: pathophysiology, drug selection, tiers, and nursing considerations`}>
+
+  <div class="mb-2">
+    <a href={`${base}schemas/07-clinical-presentations/`} class="text-sm text-base-content/60 hover:text-primary">← Schema 7: Clinical Presentations</a>
+  </div>
+
+  <div class="mb-8">
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-2">{label}</h1>
+    <p class="text-base-content/60">{drugs.length} drug{drugs.length !== 1 ? 's' : ''} in this reference address this clinical presentation.</p>
+  </div>
+
+  {prose ? (
+    <div class="prose max-w-none mb-10">
+      <h2 class="text-2xl font-serif font-bold mb-3">Pathophysiology & Pharmacological Rationale</h2>
+      <p>{prose.p1}</p>
+      <h2 class="text-2xl font-serif font-bold mb-3 mt-6">First-Line Pharmacological Approach</h2>
+      <p>{prose.p2}</p>
+      <h2 class="text-2xl font-serif font-bold mb-3 mt-6">Second-Line & Adjunct Agents</h2>
+      <p>{prose.p3}</p>
+      <h2 class="text-2xl font-serif font-bold mb-3 mt-6">Monitoring & Nursing Key Points</h2>
+      <p>{prose.p4}</p>
+    </div>
+  ) : (
+    <div class="prose max-w-none mb-8">
+      <p>Pharmacological management of <strong>{label}</strong> involves {drugs.length} agents across multiple drug classes, reflecting the complexity of the underlying pathophysiology and the range of available therapeutic targets. Consult current clinical guidelines (ACC/AHA, GINA, GOLD, ADA, IDSA as applicable) for evidence-based treatment algorithms and monitoring parameters specific to patient populations. The drugs listed below are organized by treatment tier and cross-referenced to individual drug profile pages for complete pharmacological detail.</p>
+    </div>
+  )}
+
+  <!-- Treatment Tiers (Steps) -->
+  <div class="mb-8">
+    <h2 class="text-2xl font-serif font-bold mb-4">Treatment Hierarchy</h2>
+    <ul class="steps steps-vertical lg:steps-horizontal w-full mb-6">
+      <li class="step step-primary">First-line agents</li>
+      <li class="step step-primary">Second-line agents</li>
+      <li class="step">Adjunct / situational</li>
+    </ul>
+  </div>
+
+  <!-- Drug Table -->
+  <div class="mb-10">
+    <h2 class="text-2xl font-serif font-bold mb-4">Drugs for {label}</h2>
+    {drugs.length === 0 ? (
+      <div class="alert alert-info">
+        <span>No drugs in the database are specifically tagged for this presentation. Navigate to individual schema pages for related drug information.</span>
+      </div>
+    ) : (
+      <div class="overflow-x-auto">
+        <table class="table table-zebra w-full">
+          <thead>
+            <tr>
+              <th>Drug</th>
+              <th>Class</th>
+              <th>Mechanism</th>
+              <th>Tier</th>
+            </tr>
+          </thead>
+          <tbody>
+            {drugs.map((d: any) => (
+              <tr class={d.ismp_high_alert ? 'border-l-4 border-error' : ''}>
+                <td>
+                  <a href={`${base}drugs/${d.id}/`} class="font-semibold text-primary hover:underline">{d.generic_name}</a>
+                  {d.ismp_high_alert && <span class="badge badge-error badge-sm ml-1">HIGH ALERT</span>}
+                  {d.beers_criteria && <span class="badge badge-warning badge-sm ml-1">BEERS</span>}
+                </td>
+                <td class="text-sm">{d.drug_class}</td>
+                <td class="text-sm text-base-content/70 max-w-xs">{d.mechanism_summary ? d.mechanism_summary.slice(0, 100) + (d.mechanism_summary.length > 100 ? '...' : '') : '—'}</td>
+                <td>
+                  <span class={`badge badge-sm ${tier(d, slug) === 'First-line' ? 'badge-success' : tier(d, slug) === 'Second-line' ? 'badge-warning' : 'badge-ghost'}`}>
+                    {tier(d, slug)}
+                  </span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    )}
+  </div>
+
+  <div class="alert alert-info mt-6">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+    <div>
+      <p class="font-semibold">Cross-schema navigation</p>
+      <p class="text-sm">
+        Explore these drugs by mechanism in <a href={`${base}schemas/04-mechanism-first/`} class="link">Schema 4 (Mechanism-First)</a>,
+        by adverse effects in <a href={`${base}schemas/08-adverse-effects/`} class="link">Schema 8</a>,
+        or by drug interactions in <a href={`${base}schemas/09-drug-interactions/`} class="link">Schema 9</a>.
+      </p>
+    </div>
+  </div>
+
+</SchemaLayout>
