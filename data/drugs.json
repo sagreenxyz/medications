@@ -61956,5 +61956,2714 @@
         "rifampin-interaction"
       ]
     }
+  },
+  {
+    "id": "cyclophosphamide",
+    "generic_name": "cyclophosphamide",
+    "brand_names": [
+      "Cytoxan"
+    ],
+    "drug_class": "nitrogen mustard alkylating agent",
+    "subclass": "prodrug alkylating agent",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "hematology-oncology",
+      "immunology"
+    ],
+    "therapeutic_classes": [
+      "cytotoxics"
+    ],
+    "mechanism_targets": [
+      "DNA (N-alkylation of guanine, cross-linking)"
+    ],
+    "mechanism_summary": "Prodrug activated by hepatic CYP2B6/CYP3A4 to active metabolites phosphoramide mustard and acrolein; phosphoramide mustard alkylates and cross-links DNA (both interstrand and intrastrand), preventing DNA replication and transcription; acrolein causes hemorrhagic cystitis.",
+    "indications": [
+      "non-Hodgkin lymphoma",
+      "Hodgkin lymphoma",
+      "breast cancer",
+      "ovarian cancer",
+      "small cell lung cancer",
+      "nephrotic syndrome",
+      "lupus nephritis",
+      "ANCA-associated vasculitis (immunosuppression)",
+      "hematopoietic stem cell transplant conditioning"
+    ],
+    "contraindications": [
+      "cyclophosphamide hypersensitivity",
+      "active urinary tract obstruction",
+      "severely compromised bone marrow"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea/vomiting",
+        "alopecia",
+        "myelosuppression"
+      ],
+      "serious": [
+        "hemorrhagic cystitis (from acrolein metabolite)",
+        "bladder transitional cell carcinoma (long-term risk)",
+        "myelosuppression",
+        "gonadal toxicity (ovarian failure, azoospermia)",
+        "SIADH/hyponatremia (at high doses)",
+        "pulmonary fibrosis",
+        "cardiotoxicity (at very high HSCT doses)"
+      ]
+    },
+    "black_box_warnings": [
+      "myelosuppression",
+      "bladder toxicity (hemorrhagic cystitis)",
+      "cardiac toxicity (at high doses)",
+      "secondary malignancies",
+      "serious infections",
+      "severe immunosuppression"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral bioavailability ~75%; IV also common",
+      "distribution": "widely distributed; crosses BBB",
+      "metabolism": "hepatic prodrug activation (CYP2B6/CYP3A4) to active phosphoramide mustard and toxic acrolein",
+      "excretion": "renal (active metabolites and acrolein)",
+      "half_life": "3\u201312 hours",
+      "onset": "prodrug \u2014 hours",
+      "peak": "1\u20132 hours (oral)",
+      "duration": "varies",
+      "protein_binding": "20% (parent); metabolites higher",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CYP inducers (rifampin)",
+        "mechanism": "increase activation to phosphoramide mustard and acrolein; greater toxicity",
+        "severity": "major"
+      },
+      {
+        "drug": "allopurinol",
+        "mechanism": "may increase cyclophosphamide toxicity by inhibiting metabolism",
+        "severity": "moderate"
+      },
+      {
+        "drug": "succinylcholine",
+        "mechanism": "cyclophosphamide inhibits pseudocholinesterase, prolonging neuromuscular blockade",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "MESNA (sodium 2-mercaptoethanesulfonate) must be co-administered with high-dose cyclophosphamide to prevent hemorrhagic cystitis; MESNA binds acrolein in the bladder, neutralizing its urotoxic effect.",
+      "Maintain vigorous hydration (2\u20133 L/day) and encourage frequent voiding during and for 24 hours after administration to flush acrolein from the bladder.",
+      "Monitor CBC with differential; nadir typically occurs 7\u201314 days after administration \u2014 WBC nadir guides neutropenic precautions.",
+      "Administer antiemetics before and after each dose; late nausea may require extended antiemetic coverage."
+    ],
+    "clinical_pearls": [
+      "The toxic bladder metabolite of cyclophosphamide is acrolein (not the antitumor phosphoramide mustard); MESNA selectively inactivates acrolein in the urinary tract by conjugation without affecting systemic antitumor activity \u2014 a pharmacological masterpiece of selective detoxification.",
+      "Long-term cyclophosphamide use for autoimmune diseases (e.g., SLE nephritis, vasculitis) is associated with bladder transitional cell carcinoma risk, typically 5\u201310 years after exposure; cumulative dose is the primary risk factor."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "contraindicated",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "lymphoma",
+      "lupus-nephritis",
+      "HSCT-conditioning"
+    ],
+    "adverse_effect_tags": [
+      "myelosuppression",
+      "hemorrhagic-cystitis",
+      "gonadal-toxicity"
+    ],
+    "interaction_tags": [
+      "CYP2B6-substrate",
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "hematology-oncology",
+        "immunology"
+      ],
+      "therapeutic_class": [
+        "cytotoxics"
+      ],
+      "mechanism_family": [
+        "alkylating-agent"
+      ],
+      "prototype_class": "nitrogen mustard alkylating agents",
+      "adme_profile": "renal-cleared",
+      "presentation_cluster": [
+        "lymphoma",
+        "lupus-nephritis"
+      ],
+      "adverse_cluster": [
+        "myelosuppression",
+        "hemorrhagic-cystitis"
+      ],
+      "interaction_cluster": [
+        "CYP2B6-substrate"
+      ]
+    }
+  },
+  {
+    "id": "cisplatin",
+    "generic_name": "cisplatin",
+    "brand_names": [
+      "Platinol"
+    ],
+    "drug_class": "platinum-based alkylating agent",
+    "subclass": "first-generation platinum antineoplastic",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "hematology-oncology"
+    ],
+    "therapeutic_classes": [
+      "cytotoxics"
+    ],
+    "mechanism_targets": [
+      "DNA (intrastrand and interstrand cross-links)"
+    ],
+    "mechanism_summary": "Undergoes hydrolysis to form reactive platinum species; forms intrastrand and interstrand DNA cross-links (primarily at adjacent guanine residues), distorting DNA helix; triggers apoptosis via p53 pathway; cells in all phases of cell cycle are susceptible.",
+    "indications": [
+      "testicular cancer (curative)",
+      "ovarian cancer",
+      "bladder cancer",
+      "lung cancer (NSCLC and SCLC)",
+      "head and neck cancer",
+      "cervical cancer"
+    ],
+    "contraindications": [
+      "cisplatin hypersensitivity",
+      "pre-existing significant renal impairment",
+      "pre-existing severe hearing loss (ototoxicity)",
+      "myelosuppression"
+    ],
+    "adverse_effects": {
+      "common": [
+        "severe nausea/vomiting (most emetogenic of all chemotherapies)",
+        "nephrotoxicity",
+        "peripheral neuropathy",
+        "electrolyte wasting (hypomagnesemia, hypokalemia, hypocalcemia)"
+      ],
+      "serious": [
+        "nephrotoxicity (dose-limiting, cumulative)",
+        "ototoxicity (irreversible high-frequency hearing loss)",
+        "peripheral neuropathy (cumulative, sometimes irreversible)",
+        "myelosuppression",
+        "severe nausea and vomiting (most emetogenic agent)",
+        "anaphylaxis"
+      ]
+    },
+    "black_box_warnings": [
+      "nephrotoxicity (cumulative renal toxicity)",
+      "myelosuppression",
+      "ototoxicity",
+      "anaphylactic reactions"
+    ],
+    "pharmacokinetics": {
+      "absorption": "IV only",
+      "distribution": "extensively binds to plasma proteins (>90%) and tissue proteins; distributes widely",
+      "metabolism": "non-enzymatic conversion to reactive species in plasma",
+      "excretion": "renal (primarily platinum \u2014 90% within 24 hours of administration); dose reduction with renal impairment",
+      "half_life": "58\u201373 hours (terminal)",
+      "onset": "immediate (IV)",
+      "peak": "end of infusion",
+      "duration": "variable per cycle",
+      "protein_binding": ">90%",
+      "vd": "moderate-large"
+    },
+    "drug_interactions": [
+      {
+        "drug": "aminoglycosides/vancomycin/loop diuretics",
+        "mechanism": "additive ototoxicity and nephrotoxicity",
+        "severity": "major"
+      },
+      {
+        "drug": "NSAIDs",
+        "mechanism": "increase nephrotoxicity risk by reducing renal prostaglandin-mediated vasodilation",
+        "severity": "major"
+      },
+      {
+        "drug": "phenytoin",
+        "mechanism": "cisplatin reduces phenytoin absorption and increases metabolism; subtherapeutic phenytoin levels",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Pre-hydration with at least 1\u20132 L of 0.9% NaCl over 2\u20134 hours before and after cisplatin is mandatory to prevent nephrotoxicity; maintain urinary output >100 mL/hr during infusion.",
+      "Aggressive antiemetic prophylaxis is required \u2014 the most emetogenic chemotherapy regimen demands a 5-HT3 antagonist + NK1 antagonist + dexamethasone combination.",
+      "Monitor BMP (electrolytes, creatinine) before each cycle; replace magnesium aggressively (hypomagnesemia is universal and can be severe).",
+      "Audiogram testing at baseline and periodically; instruct patients to report tinnitus, decreased hearing, or dizziness immediately."
+    ],
+    "clinical_pearls": [
+      "Cisplatin's discovery was accidental \u2014 an American researcher studying the effects of electric current on bacterial growth noticed that platinum electrodes were producing platinum compounds that inhibited bacterial division, leading to its development as an anti-cancer drug.",
+      "The combination of bleomycin, etoposide, and cisplatin (BEP) is curative for advanced testicular cancer in >80% of cases \u2014 one of oncology's greatest success stories and a testament to cisplatin's importance."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "contraindicated",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "testicular-cancer",
+      "ovarian-cancer",
+      "bladder-cancer",
+      "NSCLC"
+    ],
+    "adverse_effect_tags": [
+      "nephrotoxicity",
+      "ototoxicity",
+      "peripheral-neuropathy",
+      "myelosuppression",
+      "severe-nausea"
+    ],
+    "interaction_tags": [
+      "nephrotoxic-combinations",
+      "ototoxic-combinations"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "hematology-oncology"
+      ],
+      "therapeutic_class": [
+        "cytotoxics"
+      ],
+      "mechanism_family": [
+        "alkylating-agent"
+      ],
+      "prototype_class": "platinum-based agents",
+      "adme_profile": "renally-cleared",
+      "presentation_cluster": [
+        "solid-tumors",
+        "testicular-cancer"
+      ],
+      "adverse_cluster": [
+        "nephrotoxicity",
+        "ototoxicity",
+        "nausea-vomiting"
+      ],
+      "interaction_cluster": [
+        "nephrotoxic-combinations",
+        "ototoxic-combinations"
+      ]
+    }
+  },
+  {
+    "id": "methotrexate-onc",
+    "generic_name": "methotrexate (oncologic)",
+    "brand_names": [
+      "Trexall",
+      "Otrexup",
+      "Rasuvo"
+    ],
+    "drug_class": "antimetabolite antineoplastic",
+    "subclass": "folate antagonist",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "hematology-oncology",
+      "immunology",
+      "musculoskeletal"
+    ],
+    "therapeutic_classes": [
+      "cytotoxics"
+    ],
+    "mechanism_targets": [
+      "dihydrofolate reductase (DHFR)",
+      "thymidylate synthase"
+    ],
+    "mechanism_summary": "Competitively inhibits DHFR, blocking tetrahydrofolate production; depletes pools of folate cofactors required for purine and thymidylate synthesis; also polyglutamated intracellularly to forms that inhibit thymidylate synthase; S-phase specific.",
+    "indications": [
+      "acute lymphoblastic leukemia (ALL) \u2014 cornerstone",
+      "osteosarcoma",
+      "non-Hodgkin lymphoma",
+      "choriocarcinoma",
+      "breast cancer",
+      "CNS prophylaxis (intrathecal)",
+      "rheumatoid arthritis (low dose)",
+      "psoriasis (low dose)",
+      "ectopic pregnancy (intramuscular)"
+    ],
+    "contraindications": [
+      "methotrexate hypersensitivity",
+      "severe renal impairment (high-dose)",
+      "immunodeficiency syndromes (live vaccines)",
+      "pleural effusion or ascites (third-space sequestration)",
+      "pregnancy (teratogenic)",
+      "breastfeeding"
+    ],
+    "adverse_effects": {
+      "common": [
+        "mucositis/stomatitis",
+        "nausea/vomiting",
+        "myelosuppression",
+        "hepatotoxicity"
+      ],
+      "serious": [
+        "severe myelosuppression",
+        "mucositis",
+        "nephrotoxicity (at high doses)",
+        "pulmonary toxicity (methotrexate pneumonitis)",
+        "hepatic fibrosis/cirrhosis (chronic low-dose)",
+        "neurotoxicity (intrathecal)",
+        "teratogenicity"
+      ]
+    },
+    "black_box_warnings": [
+      "severe toxic reactions \u2014 see prescribing information for complete list",
+      "fetal death or teratogenic effects",
+      "deaths have occurred with concomitant NSAIDs",
+      "renal failure",
+      "bone marrow suppression",
+      "pulmonary toxicity",
+      "hepatotoxicity and liver cirrhosis",
+      "gastrointestinal toxicity (ulceration, bleeding, toxic megacolon)",
+      "serious infections"
+    ],
+    "pharmacokinetics": {
+      "absorption": "50\u201390% oral at low doses; IV at high doses for oncology",
+      "distribution": "widely distributed; 50% protein-bound; intrathecal distribution limited to CSF",
+      "metabolism": "partial hepatic metabolism; polyglutamation in cells (active, retained intracellularly)",
+      "excretion": "primarily renal (90% unchanged at high doses); dose adjustment essential in renal impairment",
+      "half_life": "3\u201310 hours (low dose); up to 24 hours (high dose)",
+      "onset": "hours",
+      "peak": "1\u20134 hours (oral)",
+      "duration": "varies by indication",
+      "protein_binding": "50%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "NSAIDs/aspirin",
+        "mechanism": "reduce renal tubular secretion of methotrexate; increase levels to toxic; deaths reported \u2014 avoid with high-dose MTX",
+        "severity": "major"
+      },
+      {
+        "drug": "trimethoprim/sulfonamides",
+        "mechanism": "additive folate antagonism; severe myelosuppression",
+        "severity": "major"
+      },
+      {
+        "drug": "proton pump inhibitors",
+        "mechanism": "reduce renal tubular secretion of MTX at high doses; delay elimination",
+        "severity": "major"
+      },
+      {
+        "drug": "leucovorin (folinic acid)",
+        "mechanism": "rescues normal cells after high-dose MTX \u2014 must be administered on schedule; delays require additional leucovorin rescue",
+        "severity": "beneficial"
+      }
+    ],
+    "nursing_considerations": [
+      "High-dose methotrexate requires mandatory leucovorin rescue \u2014 verify leucovorin is prescribed and the first dose is given at the correct time relative to methotrexate infusion (typically 24 hours after MTX start).",
+      "Maintain urinary pH >7 with sodium bicarbonate during and after high-dose MTX infusion \u2014 alkaline urine prevents methotrexate precipitation in renal tubules.",
+      "Monitor methotrexate levels at 24, 48, and 72 hours; if levels are above the nomogram thresholds, increase leucovorin rescue dose.",
+      "NSAIDs (including OTC ibuprofen, naproxen, aspirin) must be held before and during high-dose MTX \u2014 these can cause fatal toxicity by blocking renal elimination."
+    ],
+    "clinical_pearls": [
+      "Leucovorin rescue (folinic acid) after high-dose methotrexate is a clinically elegant strategy: leucovorin bypasses DHFR to restore folate pools in normal cells, while entering cancer cells poorly due to lower affinity for the folate carrier \u2014 providing differential rescue.",
+      "Methotrexate polyglutamates are the active intracellular forms with long retention times \u2014 this explains the persistent antiproliferative effects of even weekly low-dose MTX for RA and psoriasis, where circulating drug levels are undetectable between doses."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "contraindicated (teratogenic, abortifacient)",
+    "lactation_safety": "avoid",
+    "tdm_required": true,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "ALL",
+      "lymphoma",
+      "osteosarcoma",
+      "ectopic-pregnancy"
+    ],
+    "adverse_effect_tags": [
+      "myelosuppression",
+      "mucositis",
+      "hepatotoxicity",
+      "pulmonary-toxicity",
+      "nephrotoxicity"
+    ],
+    "interaction_tags": [
+      "NSAID-interaction",
+      "trimethoprim-interaction",
+      "leucovorin-rescue"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "hematology-oncology",
+        "immunology",
+        "musculoskeletal"
+      ],
+      "therapeutic_class": [
+        "cytotoxics"
+      ],
+      "mechanism_family": [
+        "antimetabolite"
+      ],
+      "prototype_class": "folate antagonists",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "ALL",
+        "lymphoma",
+        "solid-tumors"
+      ],
+      "adverse_cluster": [
+        "myelosuppression",
+        "mucositis",
+        "hepatotoxicity"
+      ],
+      "interaction_cluster": [
+        "NSAID-interaction",
+        "renal-clearance"
+      ]
+    }
+  },
+  {
+    "id": "doxorubicin",
+    "generic_name": "doxorubicin",
+    "brand_names": [
+      "Adriamycin",
+      "Doxil (liposomal)"
+    ],
+    "drug_class": "anthracycline antineoplastic antibiotic",
+    "subclass": "prototype anthracycline",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "hematology-oncology"
+    ],
+    "therapeutic_classes": [
+      "cytotoxics"
+    ],
+    "mechanism_targets": [
+      "topoisomerase II",
+      "DNA intercalation",
+      "reactive oxygen species generation"
+    ],
+    "mechanism_summary": "Intercalates into DNA, blocking topoisomerase II from resolving DNA strand breaks; generates reactive oxygen species via redox cycling; intercalation and free radical mechanisms contribute to DNA damage and apoptosis; cardiotoxicity results from iron-mediated ROS generation in cardiac mitochondria.",
+    "indications": [
+      "breast cancer (adjuvant and metastatic)",
+      "acute leukemias",
+      "Hodgkin and non-Hodgkin lymphoma",
+      "soft tissue sarcoma",
+      "bladder, ovarian, thyroid cancers",
+      "Kaposi sarcoma (liposomal formulation)"
+    ],
+    "contraindications": [
+      "doxorubicin hypersensitivity",
+      "severe myocardial insufficiency",
+      "previous total anthracycline dose near lifetime maximum",
+      "recent MI or severe cardiac arrhythmia"
+    ],
+    "adverse_effects": {
+      "common": [
+        "myelosuppression (dose-limiting)",
+        "alopecia (complete)",
+        "nausea/vomiting",
+        "red urine (not hematuria \u2014 normal discoloration from drug)",
+        "mucositis"
+      ],
+      "serious": [
+        "cardiomyopathy (dose-dependent, cumulative, potentially irreversible)",
+        "acute cardiotoxicity (arrhythmias during infusion)",
+        "myelosuppression",
+        "extravasation necrosis (vesicant \u2014 severe)",
+        "secondary leukemia (AML)",
+        "radiation recall"
+      ]
+    },
+    "black_box_warnings": [
+      "cardiomyopathy \u2014 risk increases with cumulative dose above 550 mg/m\u00b2; prior mediastinal radiation lowers the threshold",
+      "secondary AML/MDS",
+      "severe myelosuppression",
+      "extravasation causing severe local tissue injury and necrosis",
+      "reduce dose with hepatic impairment"
+    ],
+    "pharmacokinetics": {
+      "absorption": "IV only (significant first-pass inactivation if oral)",
+      "distribution": "large Vd; concentrates in tissues; limited CNS penetration",
+      "metabolism": "hepatic; active metabolite doxorubicinol (cardiotoxic)",
+      "excretion": "biliary/fecal (primary); renal minor; dose reduction required in hepatic impairment",
+      "half_life": "20\u201348 hours (terminal)",
+      "onset": "immediate (IV)",
+      "peak": "end of infusion",
+      "duration": "3-week cycles",
+      "protein_binding": "75%",
+      "vd": "very large"
+    },
+    "drug_interactions": [
+      {
+        "drug": "trastuzumab",
+        "mechanism": "both cardiotoxic; additive cardiomyopathy risk \u2014 avoid concurrent use; sequence trastuzumab after anthracycline",
+        "severity": "major"
+      },
+      {
+        "drug": "cyclosporine",
+        "mechanism": "increases doxorubicin levels and toxicity via P-gp inhibition",
+        "severity": "major"
+      },
+      {
+        "drug": "paclitaxel",
+        "mechanism": "sequence-dependent interaction; paclitaxel after doxorubicin increases cardiotoxicity",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Doxorubicin is a potent vesicant \u2014 peripheral IV access must be checked for patency before EACH cycle; extravasation causes severe, progressive tissue necrosis requiring surgical debridement.",
+      "Obtain echocardiogram or MUGA scan to assess LVEF before initiating therapy, after cumulative doses of 250\u2013300 mg/m\u00b2, and before each additional dose once cumulative dose exceeds 400 mg/m\u00b2.",
+      "Warn patients that urine will appear red-orange for 1\u20132 days after treatment \u2014 reassure them this is the drug, not blood.",
+      "Cumulative lifetime dose is typically limited to 550 mg/m\u00b2 (450 mg/m\u00b2 with prior mediastinal radiation) \u2014 communicate this limit across providers."
+    ],
+    "clinical_pearls": [
+      "Doxorubicin's cardiomyopathy is mediated by iron-catalyzed free radical production in cardiac mitochondria (which lack catalase); dexrazoxane, an iron chelator, is FDA-approved to prevent doxorubicin cardiomyopathy by blocking iron-mediated ROS generation in the heart.",
+      "The liposomal formulation (Doxil) achieves preferential tumor accumulation via the enhanced permeability and retention (EPR) effect while reducing cardiac exposure, significantly lowering cardiomyopathy risk."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "contraindicated",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "breast-cancer",
+      "lymphoma",
+      "sarcoma",
+      "leukemia"
+    ],
+    "adverse_effect_tags": [
+      "cardiomyopathy",
+      "myelosuppression",
+      "alopecia",
+      "extravasation-necrosis"
+    ],
+    "interaction_tags": [
+      "trastuzumab-interaction",
+      "cardiotoxic-combinations"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "hematology-oncology"
+      ],
+      "therapeutic_class": [
+        "cytotoxics"
+      ],
+      "mechanism_family": [
+        "anthracycline"
+      ],
+      "prototype_class": "anthracycline antineoplastics",
+      "adme_profile": "hepatic-biliary-cleared",
+      "presentation_cluster": [
+        "breast-cancer",
+        "lymphoma"
+      ],
+      "adverse_cluster": [
+        "cardiomyopathy",
+        "myelosuppression"
+      ],
+      "interaction_cluster": [
+        "cardiotoxic-combinations"
+      ]
+    }
+  },
+  {
+    "id": "vincristine",
+    "generic_name": "vincristine",
+    "brand_names": [
+      "Oncovin",
+      "Vincasar"
+    ],
+    "drug_class": "vinca alkaloid antineoplastic",
+    "subclass": "prototype vinca alkaloid",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "hematology-oncology"
+    ],
+    "therapeutic_classes": [
+      "cytotoxics"
+    ],
+    "mechanism_targets": [
+      "tubulin (beta-tubulin)"
+    ],
+    "mechanism_summary": "Binds beta-tubulin, inhibiting tubulin polymerization and disrupting mitotic spindle formation; arrests cells in M phase metaphase; also disrupts axonal microtubule structure, causing peripheral neuropathy.",
+    "indications": [
+      "ALL (cornerstone)",
+      "Hodgkin and non-Hodgkin lymphoma",
+      "multiple myeloma",
+      "Wilms tumor",
+      "neuroblastoma",
+      "rhabdomyosarcoma"
+    ],
+    "contraindications": [
+      "vincristine hypersensitivity",
+      "Charcot-Marie-Tooth disease (demyelinating neuropathy)",
+      "intrathecal administration (FATAL \u2014 causes ascending paralysis and death)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "peripheral neuropathy (dose-limiting, sensorimotor)",
+        "constipation/ileus (autonomic neuropathy)",
+        "alopecia"
+      ],
+      "serious": [
+        "severe peripheral neuropathy (dose-limiting)",
+        "SIADH/hyponatremia",
+        "ileus/bowel obstruction (autonomic neuropathy)",
+        "inadvertent intrathecal injection (FATAL)",
+        "jaw pain"
+      ]
+    },
+    "black_box_warnings": [
+      "FATAL if given intrathecally \u2014 must be given IV only; administer in a dilute IV bag with overwrap labeled 'For IV Use Only \u2014 Fatal If Administered Intrathecally'"
+    ],
+    "pharmacokinetics": {
+      "absorption": "IV only",
+      "distribution": "large Vd; does not cross BBB (protects CNS from intrathecal inadvertent dosing's systemic effects but means intrathecal accidental overdose is fatal)",
+      "metabolism": "hepatic CYP3A4 and P-gp",
+      "excretion": "biliary/fecal (>80%); renal minor",
+      "half_life": "19\u2013155 hours (triphasic)",
+      "onset": "immediate (IV)",
+      "peak": "end of infusion",
+      "duration": "3\u20134 week cycles",
+      "protein_binding": "75%",
+      "vd": "very large"
+    },
+    "drug_interactions": [
+      {
+        "drug": "itraconazole/voriconazole/azole antifungals",
+        "mechanism": "CYP3A4 inhibition increases vincristine levels; severe peripheral neuropathy, SIADH",
+        "severity": "major"
+      },
+      {
+        "drug": "nifedipine",
+        "mechanism": "inhibits P-gp and CYP3A4; increases vincristine exposure",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "CRITICAL SAFETY: Vincristine must ALWAYS be prepared and dispensed in a minibag for IV infusion \u2014 NEVER in a syringe \u2014 to prevent accidental intrathecal administration, which causes fatal ascending myeloencephalopathy.",
+      "Monitor for peripheral neuropathy at each visit: assess deep tendon reflexes (loss of ankle reflex is an early sign), paresthesias, and strength; dose reductions or discontinuation may be required.",
+      "Constipation from autonomic neuropathy is universal \u2014 prophylactic bowel regimen (stool softener + stimulant laxative) should be initiated with the first dose.",
+      "Monitor for SIADH: daily weights, signs of fluid retention, and serum sodium."
+    ],
+    "clinical_pearls": [
+      "Vincristine intrathecal injection is universally fatal \u2014 this represents one of the most important medication safety issues in oncology. ISMP recommends vincristine be prepared ONLY in minibags (never syringes) and labeled with a warning; this is a Joint Commission National Patient Safety Goal.",
+      "Vincristine uniquely causes peripheral neuropathy (due to axonal tubulin disruption) rather than myelosuppression, distinguishing it from most cytotoxics \u2014 it can often be combined with myelosuppressive agents without additive bone marrow toxicity."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "contraindicated",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "ALL",
+      "lymphoma",
+      "Wilms-tumor"
+    ],
+    "adverse_effect_tags": [
+      "peripheral-neuropathy",
+      "SIADH",
+      "constipation",
+      "intrathecal-fatality"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate",
+      "azole-antifungal-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "hematology-oncology"
+      ],
+      "therapeutic_class": [
+        "cytotoxics"
+      ],
+      "mechanism_family": [
+        "vinca-alkaloid"
+      ],
+      "prototype_class": "vinca alkaloids",
+      "adme_profile": "hepatic-biliary-cleared",
+      "presentation_cluster": [
+        "ALL",
+        "lymphoma"
+      ],
+      "adverse_cluster": [
+        "peripheral-neuropathy",
+        "SIADH"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "paclitaxel",
+    "generic_name": "paclitaxel",
+    "brand_names": [
+      "Taxol",
+      "Abraxane (nab-paclitaxel)"
+    ],
+    "drug_class": "taxane antineoplastic",
+    "subclass": "microtubule-stabilizing agent",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "hematology-oncology"
+    ],
+    "therapeutic_classes": [
+      "cytotoxics"
+    ],
+    "mechanism_targets": [
+      "beta-tubulin (microtubule stabilization)"
+    ],
+    "mechanism_summary": "Binds and stabilizes polymerized microtubules, preventing depolymerization; unlike vinca alkaloids (which prevent polymerization), paclitaxel locks microtubules in the polymerized state; cells arrest in mitosis because chromosomes cannot be separated.",
+    "indications": [
+      "ovarian cancer (first-line with carboplatin)",
+      "breast cancer (adjuvant and metastatic)",
+      "NSCLC (with carboplatin)",
+      "Kaposi sarcoma",
+      "pancreatic cancer (nab-paclitaxel + gemcitabine)"
+    ],
+    "contraindications": [
+      "paclitaxel hypersensitivity",
+      "pre-existing significant peripheral neuropathy (relative)",
+      "neutrophil count <1500/mm3"
+    ],
+    "adverse_effects": {
+      "common": [
+        "peripheral neuropathy (dose-limiting, sensory-predominant)",
+        "myelosuppression (neutropenia)",
+        "alopecia (complete)",
+        "myalgia/arthralgia"
+      ],
+      "serious": [
+        "severe hypersensitivity reactions (from Cremophor EL vehicle \u2014 anaphylaxis, severe hypotension, bronchospasm)",
+        "peripheral neuropathy (dose-limiting)",
+        "myelosuppression",
+        "bradycardia/heart block (during infusion)",
+        "mucositis"
+      ]
+    },
+    "black_box_warnings": [
+      "anaphylaxis and severe hypersensitivity reactions \u2014 premedicate with corticosteroids, antihistamines, H2 blockers",
+      "myelosuppression \u2014 do not administer if neutrophils <1500/mm3"
+    ],
+    "pharmacokinetics": {
+      "absorption": "IV only",
+      "distribution": "widely distributed; large Vd; highly protein-bound; minimal CNS penetration",
+      "metabolism": "hepatic CYP2C8 (primarily) and CYP3A4",
+      "excretion": "biliary/fecal (89%); renal (minor)",
+      "half_life": "3\u201352 hours (dose and schedule dependent)",
+      "onset": "immediate (IV)",
+      "peak": "end of infusion",
+      "duration": "every 3 weeks or weekly",
+      "protein_binding": "89\u201398%",
+      "vd": "large"
+    },
+    "drug_interactions": [
+      {
+        "drug": "doxorubicin (when given after paclitaxel)",
+        "mechanism": "sequence-dependent cardiotoxicity and myelosuppression increase",
+        "severity": "major"
+      },
+      {
+        "drug": "CYP3A4 inhibitors (azoles, cyclosporine)",
+        "mechanism": "increase paclitaxel levels; greater toxicity",
+        "severity": "major"
+      },
+      {
+        "drug": "cisplatin",
+        "mechanism": "sequence matters \u2014 cisplatin before paclitaxel worsens myelosuppression",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Premedication protocol is mandatory: dexamethasone (given the evening before AND morning of), diphenhydramine, and ranitidine or famotidine \u2014 to prevent Cremophor EL vehicle-related hypersensitivity reactions.",
+      "Use non-PVC tubing and non-DEHP containers (Cremophor EL leaches DEHP from PVC tubing \u2014 avoid standard IV tubing).",
+      "Observe patient closely for hypersensitivity during the first 15 minutes of infusion; have epinephrine, IV diphenhydramine, and corticosteroids immediately available.",
+      "Monitor peripheral neuropathy at each cycle; numbness and tingling in hands and feet is common \u2014 assess using standardized scales."
+    ],
+    "clinical_pearls": [
+      "Paclitaxel's microtubule-stabilizing mechanism is the opposite of vinca alkaloids (which prevent polymerization) but achieves the same mitotic arrest; this unique mechanism means paclitaxel and vincristine can be combined without antagonism.",
+      "Nab-paclitaxel (Abraxane) replaces Cremophor EL with albumin nanoparticles, eliminating the hypersensitivity reaction risk from the vehicle and allowing higher doses with equivalent or better efficacy."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "contraindicated",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "ovarian-cancer",
+      "breast-cancer",
+      "NSCLC"
+    ],
+    "adverse_effect_tags": [
+      "peripheral-neuropathy",
+      "anaphylaxis",
+      "myelosuppression",
+      "alopecia"
+    ],
+    "interaction_tags": [
+      "CYP2C8-substrate",
+      "CYP3A4-substrate",
+      "cardiotoxic-combinations"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "hematology-oncology"
+      ],
+      "therapeutic_class": [
+        "cytotoxics"
+      ],
+      "mechanism_family": [
+        "taxane"
+      ],
+      "prototype_class": "taxane antineoplastics",
+      "adme_profile": "hepatic-biliary-cleared",
+      "presentation_cluster": [
+        "ovarian-cancer",
+        "breast-cancer",
+        "NSCLC"
+      ],
+      "adverse_cluster": [
+        "peripheral-neuropathy",
+        "anaphylaxis",
+        "myelosuppression"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "imatinib",
+    "generic_name": "imatinib",
+    "brand_names": [
+      "Gleevec",
+      "Glivec"
+    ],
+    "drug_class": "BCR-ABL tyrosine kinase inhibitor",
+    "subclass": "first-generation targeted tyrosine kinase inhibitor",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "hematology-oncology"
+    ],
+    "therapeutic_classes": [
+      "cytotoxics"
+    ],
+    "mechanism_targets": [
+      "BCR-ABL tyrosine kinase",
+      "c-KIT",
+      "PDGFR"
+    ],
+    "mechanism_summary": "Competitive inhibitor of the ATP-binding site of BCR-ABL tyrosine kinase (product of the Philadelphia chromosome t(9;22) translocation); blocks BCR-ABL from phosphorylating substrates that drive leukemic cell proliferation; also inhibits c-KIT and PDGFR.",
+    "indications": [
+      "chronic myeloid leukemia (CML) \u2014 standard first-line for Ph+ CML",
+      "acute lymphoblastic leukemia (Ph+ ALL)",
+      "gastrointestinal stromal tumor (GIST) \u2014 c-KIT driven"
+    ],
+    "contraindications": [
+      "imatinib hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea/vomiting",
+        "fluid retention/edema (periorbital edema characteristic)",
+        "muscle cramps",
+        "fatigue",
+        "skin rash"
+      ],
+      "serious": [
+        "severe fluid retention (pleural effusion, pulmonary edema, cardiac tamponade)",
+        "myelosuppression (usually early in therapy)",
+        "hepatotoxicity",
+        "cardiac dysfunction/QTc prolongation",
+        "growth retardation in children"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "98% oral bioavailability; administer with food to reduce GI upset",
+      "distribution": "widely distributed; 95% protein-bound",
+      "metabolism": "hepatic CYP3A4 (primary), CYP2C9, CYP2D6; active metabolite N-desmethyl imatinib",
+      "excretion": "fecal (68%) and renal (13%)",
+      "half_life": "18 hours (parent); 40 hours (N-desmethyl metabolite)",
+      "onset": "2\u20134 hours",
+      "peak": "2\u20134 hours",
+      "duration": "once-daily",
+      "protein_binding": "95%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CYP3A4 inducers (rifampin, carbamazepine)",
+        "mechanism": "reduce imatinib levels substantially; may require dose doubling",
+        "severity": "major"
+      },
+      {
+        "drug": "warfarin",
+        "mechanism": "imatinib inhibits CYP2C9; INR elevations \u2014 use LMWH instead of warfarin where possible",
+        "severity": "major"
+      },
+      {
+        "drug": "simvastatin/lovastatin",
+        "mechanism": "CYP3A4 inhibition increases statin levels; use pravastatin or rosuvastatin instead",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer with a large glass of water and food to minimize GI adverse effects.",
+      "Monitor for fluid retention \u2014 daily weights and assessment for edema; imatinib-induced fluid retention is common and can range from mild edema to life-threatening fluid accumulation.",
+      "Monitor CBC weekly during the first month, biweekly during the second month, then periodically; imatinib causes early myelosuppression.",
+      "Conduct therapeutic response monitoring via BCR-ABL PCR \u2014 major molecular response (MR3.0 \u2014 \u22653 log reduction) should be achieved by 12 months."
+    ],
+    "clinical_pearls": [
+      "Imatinib transformed CML from a disease with median survival of 4\u20135 years (with prior therapies) to one where patients now have near-normal life expectancy when treated, representing the paradigm shift in targeted cancer therapy.",
+      "BCR-ABL mutations (particularly T315I \u2014 the 'gatekeeper' mutation) confer resistance to imatinib; ponatinib is the only TKI active against T315I mutant CML."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "contraindicated",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "CML",
+      "GIST",
+      "Ph-positive-ALL"
+    ],
+    "adverse_effect_tags": [
+      "fluid-retention",
+      "myelosuppression",
+      "hepatotoxicity"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate",
+      "CYP3A4-inhibitor",
+      "warfarin-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "hematology-oncology"
+      ],
+      "therapeutic_class": [
+        "cytotoxics"
+      ],
+      "mechanism_family": [
+        "tyrosine-kinase-inhibitor"
+      ],
+      "prototype_class": "BCR-ABL TKIs",
+      "adme_profile": "hepatic-fecal-cleared",
+      "presentation_cluster": [
+        "CML",
+        "GIST"
+      ],
+      "adverse_cluster": [
+        "fluid-retention",
+        "myelosuppression"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "pembrolizumab",
+    "generic_name": "pembrolizumab",
+    "brand_names": [
+      "Keytruda"
+    ],
+    "drug_class": "PD-1 checkpoint inhibitor monoclonal antibody",
+    "subclass": "anti-PD-1 IgG4 monoclonal antibody",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "hematology-oncology",
+      "immunology"
+    ],
+    "therapeutic_classes": [
+      "biologics"
+    ],
+    "mechanism_targets": [
+      "PD-1 (programmed cell death protein 1)"
+    ],
+    "mechanism_summary": "Humanized IgG4 monoclonal antibody that blocks PD-1 on T cells, preventing interaction with PD-L1/PD-L2 on tumor cells; restores T-cell-mediated anti-tumor immune activity by removing inhibitory signaling; effective in tumors with high PD-L1 expression or high tumor mutational burden.",
+    "indications": [
+      "advanced/metastatic melanoma",
+      "NSCLC (PD-L1 positive)",
+      "head and neck squamous cell carcinoma",
+      "Hodgkin lymphoma",
+      "urothelial carcinoma",
+      "MSI-high/dMMR solid tumors (tumor-agnostic approval)",
+      "triple-negative breast cancer",
+      "gastric/esophageal cancer",
+      "cervical cancer",
+      "TMB-high solid tumors"
+    ],
+    "contraindications": [
+      "pembrolizumab hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "fatigue",
+        "rash",
+        "diarrhea",
+        "musculoskeletal pain",
+        "decreased appetite"
+      ],
+      "serious": [
+        "immune-related adverse events (irAE): pneumonitis, colitis, hepatitis, endocrinopathies (hypothyroidism, hyperthyroidism, adrenal insufficiency, type 1 diabetes), nephritis, myocarditis (rare but potentially fatal)",
+        "infusion reactions",
+        "severe skin reactions (TEN, SJS)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IV infusion only",
+      "distribution": "limited to vascular and extravascular space",
+      "metabolism": "proteolytic degradation to amino acids (no CYP involvement)",
+      "excretion": "proteolytic catabolism",
+      "half_life": "22\u201327 days",
+      "onset": "days to weeks (therapeutic response)",
+      "peak": "end of infusion",
+      "duration": "every 3 or 6 weeks",
+      "protein_binding": "not applicable (IgG)",
+      "vd": "low (4\u20135 L)"
+    },
+    "drug_interactions": [
+      {
+        "drug": "systemic corticosteroids/immunosuppressants",
+        "mechanism": "may reduce pembrolizumab anti-tumor efficacy; use only for irAE management, not before treatment initiation",
+        "severity": "major"
+      },
+      {
+        "drug": "live vaccines",
+        "mechanism": "immunosuppressive state increases vaccine risk",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Monitor for immune-related adverse events (irAEs) at every visit \u2014 these can occur at any time, including months after discontinuation; educate patients to report any new symptoms.",
+      "Administer IV over 30 minutes every 3 weeks or every 6 weeks; no dose modifications are made based on body weight.",
+      "Grade \u22653 irAEs require immediate discontinuation and high-dose systemic corticosteroids (prednisone 1\u20132 mg/kg/day or equivalent); grade 2 irAEs require treatment hold and possible corticosteroids.",
+      "Monitor TSH before each cycle; thyroid dysfunction is common (hypothyroidism >hyperthyroidism) \u2014 may be permanent and require lifelong hormone replacement."
+    ],
+    "clinical_pearls": [
+      "Pembrolizumab has the most FDA approvals of any single oncology drug in history, including the first tumor-agnostic approval (for MSI-high/dMMR solid tumors regardless of tumor type) \u2014 a historic shift in cancer classification from histology to molecular biology.",
+      "Unlike chemotherapy, irAEs from pembrolizumab can present weeks to months after the last dose because the augmented immune response persists; patients and clinicians must maintain vigilance well beyond the treatment period."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "contraindicated (immune-mediated fetal harm)",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "melanoma",
+      "NSCLC",
+      "MSI-high-tumor",
+      "tumor-agnostic"
+    ],
+    "adverse_effect_tags": [
+      "immune-related-adverse-events",
+      "pneumonitis",
+      "colitis",
+      "endocrinopathy",
+      "myocarditis"
+    ],
+    "interaction_tags": [
+      "immunosuppressant-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "hematology-oncology",
+        "immunology"
+      ],
+      "therapeutic_class": [
+        "biologics"
+      ],
+      "mechanism_family": [
+        "checkpoint-inhibitor"
+      ],
+      "prototype_class": "PD-1 checkpoint inhibitors",
+      "adme_profile": "proteolytic-catabolism",
+      "presentation_cluster": [
+        "melanoma",
+        "NSCLC",
+        "solid-tumors"
+      ],
+      "adverse_cluster": [
+        "immune-related-adverse-events"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "rituximab",
+    "generic_name": "rituximab",
+    "brand_names": [
+      "Rituxan",
+      "MabThera"
+    ],
+    "drug_class": "anti-CD20 monoclonal antibody",
+    "subclass": "chimeric murine-human IgG1 anti-CD20 monoclonal antibody",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "hematology-oncology",
+      "immunology"
+    ],
+    "therapeutic_classes": [
+      "biologics"
+    ],
+    "mechanism_targets": [
+      "CD20 antigen on B lymphocytes"
+    ],
+    "mechanism_summary": "Binds CD20 (a B cell-specific surface antigen) on normal and malignant B cells; depletes B cells via complement-dependent cytotoxicity (CDC), antibody-dependent cellular cytotoxicity (ADCC), and direct induction of apoptosis; spares plasma cells and B cell precursors (lack CD20).",
+    "indications": [
+      "non-Hodgkin lymphoma (CD20+)",
+      "chronic lymphocytic leukemia (CLL)",
+      "rheumatoid arthritis (with methotrexate, after anti-TNF failure)",
+      "granulomatosis with polyangiitis/microscopic polyangiitis (ANCA vasculitis)",
+      "pemphigus vulgaris"
+    ],
+    "contraindications": [
+      "rituximab hypersensitivity",
+      "active, severe infections",
+      "live vaccine administration within 4 weeks"
+    ],
+    "adverse_effects": {
+      "common": [
+        "infusion-related reactions (fever, chills, nausea \u2014 very common with first infusion)",
+        "fatigue",
+        "rash"
+      ],
+      "serious": [
+        "fatal infusion reactions (severe bronchospasm, hypoxia, hypotension)",
+        "progressive multifocal leukoencephalopathy (PML \u2014 JC virus reactivation)",
+        "hepatitis B reactivation",
+        "severe mucocutaneous reactions (TEN, SJS, pemphigus)",
+        "late-onset neutropenia",
+        "prolonged hypogammaglobulinemia"
+      ]
+    },
+    "black_box_warnings": [
+      "fatal infusion reactions",
+      "severe mucocutaneous reactions",
+      "PML (progressive multifocal leukoencephalopathy)",
+      "hepatitis B reactivation"
+    ],
+    "pharmacokinetics": {
+      "absorption": "IV only",
+      "distribution": "binds to CD20+ B cells throughout the body; CSF levels negligible",
+      "metabolism": "proteolytic catabolism",
+      "excretion": "no urinary or biliary excretion of the molecule; catabolized in target cells and reticuloendothelial system",
+      "half_life": "22 days (highly variable with B cell depletion)",
+      "onset": "days (B cell depletion immediate); clinical response weeks",
+      "peak": "end of infusion",
+      "duration": "every 3 weeks (oncology) or every 6 months (rheumatology)",
+      "protein_binding": "not applicable (IgG1)",
+      "vd": "low (3\u20134 L)"
+    },
+    "drug_interactions": [
+      {
+        "drug": "immunosuppressants",
+        "mechanism": "additive immunosuppression; increased infection risk",
+        "severity": "moderate"
+      },
+      {
+        "drug": "live vaccines",
+        "mechanism": "B cell depletion impairs vaccine response; live vaccines contraindicated during and for \u226512 months after therapy",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Pre-medicate with acetaminophen and diphenhydramine (and methylprednisolone for some protocols) before each infusion to reduce infusion reactions.",
+      "Start infusion at 50 mg/hr and increase every 30 minutes as tolerated up to 400 mg/hr; never administer as rapid infusion or bolus \u2014 resuscitation equipment must be available.",
+      "Screen for hepatitis B surface antigen and hepatitis B core antibody before initiating; HBV-seropositive patients require antiviral prophylaxis (entecavir preferred) throughout and for 12 months after therapy.",
+      "Monitor for PML signs and symptoms (new neurological symptoms, cognitive changes, vision changes); alert any neurological changes to the prescriber immediately."
+    ],
+    "clinical_pearls": [
+      "Rituximab transformed the treatment of CD20+ B cell malignancies: adding rituximab to CHOP chemotherapy (R-CHOP) for diffuse large B cell lymphoma improved 5-year overall survival by 10\u201315% \u2014 one of the largest single improvements in lymphoma outcomes.",
+      "PML from JC virus reactivation is a devastating but rare complication of rituximab \u2014 most patients with rituximab-associated PML have severely compromised immune systems from concurrent immunosuppression or underlying lymphoma."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "contraindicated (B cell depletion in newborn)",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "non-Hodgkin-lymphoma",
+      "CLL",
+      "rheumatoid-arthritis",
+      "ANCA-vasculitis"
+    ],
+    "adverse_effect_tags": [
+      "infusion-reactions",
+      "PML",
+      "HBV-reactivation",
+      "hypogammaglobulinemia"
+    ],
+    "interaction_tags": [
+      "immunosuppressant-interaction",
+      "HBV-reactivation"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "hematology-oncology",
+        "immunology"
+      ],
+      "therapeutic_class": [
+        "biologics"
+      ],
+      "mechanism_family": [
+        "anti-CD20"
+      ],
+      "prototype_class": "anti-CD20 monoclonal antibodies",
+      "adme_profile": "proteolytic-catabolism",
+      "presentation_cluster": [
+        "lymphoma",
+        "CLL",
+        "rheumatoid-arthritis"
+      ],
+      "adverse_cluster": [
+        "infusion-reactions",
+        "PML",
+        "HBV-reactivation"
+      ],
+      "interaction_cluster": [
+        "immunosuppressant-interaction"
+      ]
+    }
+  },
+  {
+    "id": "filgrastim",
+    "generic_name": "filgrastim",
+    "brand_names": [
+      "Neupogen",
+      "Zarxio (biosimilar)",
+      "Nivestym (biosimilar)"
+    ],
+    "drug_class": "granulocyte colony-stimulating factor (G-CSF)",
+    "subclass": "recombinant human G-CSF",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "hematology-oncology"
+    ],
+    "therapeutic_classes": [
+      "biologics"
+    ],
+    "mechanism_targets": [
+      "G-CSF receptor (G-CSFR) on neutrophil precursors"
+    ],
+    "mechanism_summary": "Recombinant human G-CSF produced in E. coli; binds G-CSF receptor on myeloid progenitors, stimulating proliferation, differentiation, and activation of neutrophil precursors; reduces duration and severity of chemotherapy-induced neutropenia and febrile neutropenia.",
+    "indications": [
+      "chemotherapy-induced neutropenia (primary and secondary prophylaxis)",
+      "mobilization of peripheral blood progenitor cells for hematopoietic stem cell transplantation",
+      "severe chronic neutropenia (congenital, cyclic, idiopathic)",
+      "post-autologous/allogeneic HSCT recovery"
+    ],
+    "contraindications": [
+      "filgrastim hypersensitivity",
+      "concurrent administration with chemotherapy (do not give within 24 hours before or after cytotoxic chemotherapy)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "bone pain (very common \u2014 from marrow expansion)",
+        "headache",
+        "fatigue",
+        "injection site reactions"
+      ],
+      "serious": [
+        "splenic rupture (rare but potentially fatal \u2014 instruct patients to report left upper quadrant pain)",
+        "acute respiratory distress syndrome (rare)",
+        "sickle cell crisis (in sickle cell disease)",
+        "capillary leak syndrome (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "SC or IV; SC bioavailability ~60\u201370%",
+      "distribution": "distributes to bone marrow",
+      "metabolism": "receptor-mediated endocytosis and neutrophil uptake; minimal renal elimination",
+      "excretion": "primarily by neutrophil internalization and receptor-mediated catabolism",
+      "half_life": "3.5 hours (SC); 1\u20137 hours (IV)",
+      "onset": "hours (ANC rise within 24 hours)",
+      "peak": "2\u20138 hours (SC)",
+      "duration": "daily dosing until ANC recovery",
+      "protein_binding": "minimal",
+      "vd": "limited (0.15 L/kg)"
+    },
+    "drug_interactions": [
+      {
+        "drug": "chemotherapy",
+        "mechanism": "concurrent administration increases myelotoxicity; administer 24 hours after chemotherapy and discontinue 24 hours before next cycle",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Do NOT administer within 24 hours before or 24 hours after cytotoxic chemotherapy administration.",
+      "Teach subcutaneous self-injection technique; rotate sites; refrigerate and allow to reach room temperature before injection.",
+      "Counsel patients to report left-sided shoulder or abdominal pain \u2014 may indicate splenic rupture, which requires immediate evaluation.",
+      "Bone pain is expected and can be severe; acetaminophen usually provides adequate relief; avoid NSAIDs if patient is thrombocytopenic."
+    ],
+    "clinical_pearls": [
+      "Primary prophylaxis with G-CSF is recommended when the risk of febrile neutropenia from a chemotherapy regimen exceeds 20% (per ASCO guidelines); secondary prophylaxis is used after a prior febrile neutropenic episode to allow continued chemotherapy delivery.",
+      "Pegfilgrastim (Neulasta) \u2014 pegylated long-acting G-CSF \u2014 is administered as a single dose per chemotherapy cycle rather than daily; its prolonged half-life results from reduced renal clearance and neutrophil-mediated clearance that decreases as neutrophil counts rise."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "category C",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "febrile-neutropenia",
+      "chemotherapy-induced-neutropenia",
+      "HSCT"
+    ],
+    "adverse_effect_tags": [
+      "bone-pain",
+      "splenic-rupture"
+    ],
+    "interaction_tags": [
+      "chemotherapy-timing"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "hematology-oncology"
+      ],
+      "therapeutic_class": [
+        "biologics"
+      ],
+      "mechanism_family": [
+        "colony-stimulating-factor"
+      ],
+      "prototype_class": "G-CSFs",
+      "adme_profile": "receptor-mediated-catabolism",
+      "presentation_cluster": [
+        "neutropenia",
+        "febrile-neutropenia"
+      ],
+      "adverse_cluster": [
+        "bone-pain"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "venetoclax",
+    "generic_name": "venetoclax",
+    "brand_names": [
+      "Venclexta",
+      "Venclyxto"
+    ],
+    "drug_class": "BCL-2 inhibitor",
+    "subclass": "selective BCL-2 inhibitor (BH3 mimetic)",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "hematology-oncology"
+    ],
+    "therapeutic_classes": [
+      "cytotoxics"
+    ],
+    "mechanism_targets": [
+      "BCL-2 antiapoptotic protein"
+    ],
+    "mechanism_summary": "Binds to BCL-2 with high affinity and selectivity, displacing pro-apoptotic proteins (BAX, BAK) that BCL-2 normally sequesters; releases these proteins to activate the intrinsic apoptosis pathway; CLL cells overexpress BCL-2 making them highly sensitive.",
+    "indications": [
+      "chronic lymphocytic leukemia/small lymphocytic lymphoma (CLL/SLL)",
+      "acute myeloid leukemia (AML) \u2014 in combination with azacitidine or decitabine, or low-dose cytarabine (in adults ineligible for intensive induction)"
+    ],
+    "contraindications": [
+      "venetoclax hypersensitivity",
+      "concurrent use of strong CYP3A4 inhibitors at initiation/ramp-up phase (extreme TLS risk)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "neutropenia",
+        "diarrhea",
+        "nausea",
+        "anemia",
+        "fatigue"
+      ],
+      "serious": [
+        "tumor lysis syndrome (TLS \u2014 potentially fatal, especially during ramp-up)",
+        "myelosuppression",
+        "serious infections (from neutropenia + immunosuppression)"
+      ]
+    },
+    "black_box_warnings": [
+      "tumor lysis syndrome (TLS) \u2014 can cause acute renal failure and death; assessment and prevention required before initiating; ramp-up dosing required"
+    ],
+    "pharmacokinetics": {
+      "absorption": "oral; administration with food (low-fat or high-fat meal) required \u2014 low-fat meal increases Cmax 3-fold, high-fat meal ~5-fold vs fasting",
+      "distribution": "widely distributed; highly protein-bound",
+      "metabolism": "hepatic CYP3A4/P-gp (primary); active metabolite M27 (weak)",
+      "excretion": "fecal (>99.9%)",
+      "half_life": "26 hours",
+      "onset": "days to weeks",
+      "peak": "5\u20138 hours",
+      "duration": "once-daily",
+      "protein_binding": ">99%",
+      "vd": "large"
+    },
+    "drug_interactions": [
+      {
+        "drug": "strong CYP3A4 inhibitors (posaconazole, voriconazole, clarithromycin)",
+        "mechanism": "increase venetoclax AUC 5\u20137-fold; venetoclax dose must be reduced by 75%; TLS risk is extreme",
+        "severity": "major"
+      },
+      {
+        "drug": "rifampin (strong CYP3A4 inducer)",
+        "mechanism": "reduces venetoclax AUC >71%; avoid combination",
+        "severity": "major"
+      },
+      {
+        "drug": "P-gp inhibitors",
+        "mechanism": "increase venetoclax exposure; adjust dose",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "TLS prevention is paramount: assess baseline risk, ensure adequate hydration (1.8\u20132.4 L/day), administer allopurinol 2\u20133 days before ramp-up, monitor uric acid, potassium, phosphate, creatinine at regular intervals during ramp-up.",
+      "Ramp-up dosing is mandatory: 20 mg \u2192 50 mg \u2192 100 mg \u2192 200 mg \u2192 400 mg (final dose), with 1 week at each dose level; do NOT skip ramp-up.",
+      "CYP3A4 inhibitors dramatically increase venetoclax exposure; any azole antifungal, macrolide, or other CYP3A4 inhibitor requires venetoclax dose reduction.",
+      "Administer with food; refrigerate and protect from light; daily at approximately the same time each day."
+    ],
+    "clinical_pearls": [
+      "Venetoclax represents the most dramatic single-drug activity seen in CLL treatment \u2014 objective response rates of 79% as monotherapy and >90% in combination regimens; the BCL-2 inhibitor concept validates that targeting anti-apoptotic proteins can treat BCL-2-dependent malignancies.",
+      "TLS risk with venetoclax is related to the tumor burden and BCL-2 dependence of the cancer cells; the week-long ramp-up schedule was specifically designed to allow incremental tumor kill while managing TLS \u2014 do not shortcut this schedule."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "contraindicated",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "CLL",
+      "AML",
+      "TLS-risk"
+    ],
+    "adverse_effect_tags": [
+      "tumor-lysis-syndrome",
+      "neutropenia",
+      "myelosuppression"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate",
+      "P-gp-substrate",
+      "TLS-risk"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "hematology-oncology"
+      ],
+      "therapeutic_class": [
+        "cytotoxics"
+      ],
+      "mechanism_family": [
+        "BCL-2-inhibitor"
+      ],
+      "prototype_class": "BH3 mimetics",
+      "adme_profile": "fecal-cleared",
+      "presentation_cluster": [
+        "CLL",
+        "AML"
+      ],
+      "adverse_cluster": [
+        "tumor-lysis-syndrome",
+        "neutropenia"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate",
+        "TLS-risk"
+      ]
+    }
+  },
+  {
+    "id": "hydroxyurea",
+    "generic_name": "hydroxyurea",
+    "brand_names": [
+      "Hydrea",
+      "Droxia"
+    ],
+    "drug_class": "antimetabolite antineoplastic",
+    "subclass": "ribonucleotide reductase inhibitor",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "hematology-oncology"
+    ],
+    "therapeutic_classes": [
+      "cytotoxics"
+    ],
+    "mechanism_targets": [
+      "ribonucleotide reductase (RNR)"
+    ],
+    "mechanism_summary": "Inhibits ribonucleotide reductase, blocking conversion of ribonucleotides to deoxyribonucleotides; depletes the dNTP pool required for DNA synthesis; S-phase specific. In sickle cell disease, increases fetal hemoglobin (HbF) production by an incompletely understood mechanism involving epigenetic HBG gene activation.",
+    "indications": [
+      "chronic myeloid leukemia (CML) \u2014 cytoreduction, now largely replaced by TKIs",
+      "polycythemia vera",
+      "essential thrombocythemia",
+      "sickle cell disease (reduces painful crises and acute chest syndrome)",
+      "head and neck cancer (with radiation as radiosensitizer)"
+    ],
+    "contraindications": [
+      "hydroxyurea hypersensitivity",
+      "severe bone marrow suppression",
+      "pregnancy (teratogenic)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "myelosuppression (dose-dependent)",
+        "skin changes (leg ulcers, melanonychia, dermatomyositis-like skin findings)",
+        "mucositis"
+      ],
+      "serious": [
+        "severe myelosuppression",
+        "secondary leukemia (with long-term use)",
+        "teratogenicity",
+        "leg ulcers (can be refractory and require drug discontinuation)"
+      ]
+    },
+    "black_box_warnings": [
+      "myelosuppression",
+      "teratogenicity",
+      "secondary leukemias"
+    ],
+    "pharmacokinetics": {
+      "absorption": "well-absorbed orally (~80%)",
+      "distribution": "widely distributed; crosses BBB",
+      "metabolism": "partial hepatic",
+      "excretion": "renal (50% as unchanged drug; 50% as urea metabolite)",
+      "half_life": "3\u20134 hours",
+      "onset": "hours",
+      "peak": "1\u20134 hours",
+      "duration": "24 hours",
+      "protein_binding": "minimal",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "didanosine/stavudine (HIV NRTIs)",
+        "mechanism": "additive risk of pancreatitis and peripheral neuropathy via mitochondrial toxicity",
+        "severity": "major"
+      },
+      {
+        "drug": "antiretrovirals generally",
+        "mechanism": "hydroxyurea inhibits RNR, increasing intracellular activation of certain NRTIs; has been used to enhance ddI activity but increases toxicity",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Handle hydroxyurea as a cytotoxic agent; wear gloves when handling capsules.",
+      "Monitor CBC weekly initially, then every 2 weeks; dose should be held if WBC <2500/mm3 or platelets <100,000/mm3.",
+      "For sickle cell disease, hydroxyurea requires dose optimization over several months; baseline labs include HbF level, CBC, reticulocyte count.",
+      "Assess skin regularly for leg ulcers \u2014 a unique adverse effect; discontinue if ulcers develop."
+    ],
+    "clinical_pearls": [
+      "Hydroxyurea is the only FDA-approved medication for sickle cell disease that reduces painful crises by increasing fetal hemoglobin (HbF) production; HbF inhibits HbS polymerization, reducing sickling \u2014 the mechanism of HbF induction is partially via nitric oxide and involves epigenetic regulation of the gamma-globin gene.",
+      "In sickle cell disease, therapeutic response is monitored by measuring HbF percentage; target HbF >20% is associated with clinical benefit (fewer vaso-occlusive crises)."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "contraindicated",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "sickle-cell-disease",
+      "CML",
+      "polycythemia-vera"
+    ],
+    "adverse_effect_tags": [
+      "myelosuppression",
+      "leg-ulcers",
+      "teratogenicity"
+    ],
+    "interaction_tags": [
+      "NRTI-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "hematology-oncology"
+      ],
+      "therapeutic_class": [
+        "cytotoxics"
+      ],
+      "mechanism_family": [
+        "antimetabolite"
+      ],
+      "prototype_class": "ribonucleotide reductase inhibitors",
+      "adme_profile": "renally-cleared",
+      "presentation_cluster": [
+        "sickle-cell-disease",
+        "CML"
+      ],
+      "adverse_cluster": [
+        "myelosuppression",
+        "leg-ulcers"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "lenalidomide",
+    "generic_name": "lenalidomide",
+    "brand_names": [
+      "Revlimid"
+    ],
+    "drug_class": "immunomodulatory imide drug (IMiD)",
+    "subclass": "thalidomide analog with improved efficacy and safety",
+    "prototype_for": false,
+    "prototype_drug": "thalidomide",
+    "organ_systems": [
+      "hematology-oncology",
+      "immunology"
+    ],
+    "therapeutic_classes": [
+      "cytotoxics"
+    ],
+    "mechanism_targets": [
+      "cereblon (CRBN) E3 ubiquitin ligase complex"
+    ],
+    "mechanism_summary": "Binds cereblon (CRBN), a component of a CRL4 E3 ubiquitin ligase complex; redirects ubiquitin ligase to degrade two transcription factors (Ikaros/IKZF1 and Aiolos/IKZF3) that are essential for myeloma cell survival; also has direct anti-angiogenic, anti-proliferative, and immunostimulatory effects.",
+    "indications": [
+      "multiple myeloma (with dexamethasone or with bortezomib+dexamethasone)",
+      "myelodysplastic syndrome (5q deletion \u2014 del(5q) MDS)",
+      "mantle cell lymphoma (maintenance after autologous HSCT)",
+      "follicular lymphoma"
+    ],
+    "contraindications": [
+      "pregnancy (severe teratogen \u2014 thalidomide analog)",
+      "hypersensitivity to thalidomide or lenalidomide"
+    ],
+    "adverse_effects": {
+      "common": [
+        "myelosuppression (neutropenia, thrombocytopenia)",
+        "diarrhea",
+        "fatigue",
+        "rash"
+      ],
+      "serious": [
+        "venous thromboembolism (DVT/PE \u2014 requires thromboprophylaxis)",
+        "severe myelosuppression",
+        "teratogenicity (phocomelia)",
+        "peripheral neuropathy (less than thalidomide)",
+        "second primary malignancies",
+        "tumor flare reaction"
+      ]
+    },
+    "black_box_warnings": [
+      "embryo-fetal toxicity \u2014 mandatory REMS program (REVLIMID REMS)",
+      "venous and arterial thromboembolism",
+      "hematologic toxicity"
+    ],
+    "pharmacokinetics": {
+      "absorption": "25\u201330% oral bioavailability",
+      "distribution": "moderate distribution; crosses placenta",
+      "metabolism": "minimal; two metabolites with <10% of parent activity",
+      "excretion": "renal (80% unchanged); dose adjustment required in CKD",
+      "half_life": "3\u20135 hours",
+      "onset": "days",
+      "peak": "0.6\u20131.5 hours",
+      "duration": "daily (21 or 28 days per cycle)",
+      "protein_binding": "30%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "erythropoietin/darbepoetin",
+        "mechanism": "additive thrombosis risk \u2014 increase DVT/PE incidence in myeloma; avoid combination without anticoagulation",
+        "severity": "major"
+      },
+      {
+        "drug": "digoxin",
+        "mechanism": "lenalidomide may increase digoxin levels via P-gp inhibition",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "REMS program participation is MANDATORY for prescribers, dispensing pharmacists, and patients; no prescription can be filled without confirmation of REMS enrollment and negative pregnancy test.",
+      "Mandatory thromboprophylaxis: all patients receiving lenalidomide with dexamethasone require aspirin (low risk) or therapeutic anticoagulation (LMWH or warfarin for high-risk patients).",
+      "Monitor CBC every 2 weeks for the first 12 weeks; lenalidomide causes significant neutropenia and thrombocytopenia.",
+      "Reiterate pregnancy avoidance counseling at every encounter; women must have two negative pregnancy tests before initiating and monthly during therapy."
+    ],
+    "clinical_pearls": [
+      "Lenalidomide's mechanism (cereblon-mediated targeted protein degradation) established the PROTAC (proteolysis-targeting chimera) concept in cancer biology \u2014 directing the cell's own ubiquitin-proteasome system to degrade specific oncoproteins.",
+      "The REVLIMID REMS program is one of the most restrictive in U.S. pharmaceutical history, requiring mandatory prescriber certification, patient enrollment, negative pregnancy tests before each cycle, and direct dispensing through certified pharmacies \u2014 a regulatory framework driven by the thalidomide disaster."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": true,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "contraindicated (absolute \u2014 REMS)",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "multiple-myeloma",
+      "MDS",
+      "mantle-cell-lymphoma"
+    ],
+    "adverse_effect_tags": [
+      "VTE-thrombosis",
+      "myelosuppression",
+      "teratogenicity"
+    ],
+    "interaction_tags": [
+      "VTE-risk",
+      "REMS-program"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "hematology-oncology",
+        "immunology"
+      ],
+      "therapeutic_class": [
+        "cytotoxics"
+      ],
+      "mechanism_family": [
+        "immunomodulatory-imide"
+      ],
+      "prototype_class": "immunomodulatory drugs (IMiDs)",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "multiple-myeloma",
+        "MDS"
+      ],
+      "adverse_cluster": [
+        "VTE-thrombosis",
+        "myelosuppression",
+        "teratogenicity"
+      ],
+      "interaction_cluster": [
+        "VTE-risk"
+      ]
+    }
+  },
+  {
+    "id": "bortezomib",
+    "generic_name": "bortezomib",
+    "brand_names": [
+      "Velcade"
+    ],
+    "drug_class": "proteasome inhibitor antineoplastic",
+    "subclass": "first-in-class proteasome inhibitor",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "hematology-oncology"
+    ],
+    "therapeutic_classes": [
+      "cytotoxics"
+    ],
+    "mechanism_targets": [
+      "26S proteasome (20S catalytic core \u2014 chymotryptic activity)"
+    ],
+    "mechanism_summary": "Reversibly inhibits the chymotryptic activity of the 26S proteasome, blocking ubiquitin-mediated protein degradation; accumulates misfolded proteins, induces endoplasmic reticulum stress, activates unfolded protein response, and triggers apoptosis; myeloma cells are particularly dependent on proteasomal clearance.",
+    "indications": [
+      "multiple myeloma (front-line and relapsed/refractory)",
+      "mantle cell lymphoma"
+    ],
+    "contraindications": [
+      "bortezomib hypersensitivity",
+      "hypersensitivity to boron or mannitol"
+    ],
+    "adverse_effects": {
+      "common": [
+        "peripheral neuropathy (dose-limiting \u2014 sensorimotor)",
+        "nausea/vomiting",
+        "fatigue",
+        "diarrhea/constipation",
+        "thrombocytopenia"
+      ],
+      "serious": [
+        "severe peripheral neuropathy (often irreversible)",
+        "thrombocytopenia",
+        "herpes zoster reactivation",
+        "pulmonary toxicity (interstitial pneumonitis)",
+        "posterior reversible encephalopathy syndrome (PRES)",
+        "hepatotoxicity"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IV or SC (SC preferred to reduce peripheral neuropathy); SC and IV have equivalent AUC but SC has lower Cmax",
+      "distribution": "large Vd; distributes extensively into tissues and organs",
+      "metabolism": "hepatic CYP3A4/2C19/1A2 via oxidative deboronation",
+      "excretion": "primarily biliary/fecal; metabolites excreted in urine and feces",
+      "half_life": "9\u201315 hours",
+      "onset": "rapid",
+      "peak": "30 min (IV); 1\u20132 hours (SC)",
+      "duration": "twice-weekly dosing per cycle",
+      "protein_binding": "83%",
+      "vd": "very large"
+    },
+    "drug_interactions": [
+      {
+        "drug": "CYP3A4 inhibitors/inducers",
+        "mechanism": "alter bortezomib metabolism; clinical significance moderate",
+        "severity": "moderate"
+      },
+      {
+        "drug": "antidiabetic drugs",
+        "mechanism": "bortezomib can cause both hypoglycemia and hyperglycemia; monitor glucose closely",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "SC administration is preferred over IV to significantly reduce peripheral neuropathy risk while maintaining equivalent efficacy.",
+      "Antiviral prophylaxis against herpes zoster (acyclovir or valacyclovir) is mandatory throughout therapy and for 3 months after completion.",
+      "Baseline neurological assessment before each cycle; dose reduction or discontinuation required for grade \u22653 peripheral neuropathy.",
+      "Monitor platelet counts before each dose; dose adjustments based on platelet nadir are standard."
+    ],
+    "clinical_pearls": [
+      "Bortezomib's proteasome inhibition specifically exploits the fact that plasma cells (from which myeloma derives) are among the most proteasome-dependent cells in the body due to their massive immunoglobulin synthesis demands.",
+      "Switching from IV to SC bortezomib significantly reduces the incidence and severity of peripheral neuropathy (38% vs 53% in clinical trials) without sacrificing efficacy \u2014 a major clinical advance in myeloma care."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": true,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "contraindicated",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "multiple-myeloma",
+      "mantle-cell-lymphoma"
+    ],
+    "adverse_effect_tags": [
+      "peripheral-neuropathy",
+      "thrombocytopenia",
+      "herpes-zoster-reactivation"
+    ],
+    "interaction_tags": [
+      "CYP3A4-substrate"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "hematology-oncology"
+      ],
+      "therapeutic_class": [
+        "cytotoxics"
+      ],
+      "mechanism_family": [
+        "proteasome-inhibitor"
+      ],
+      "prototype_class": "proteasome inhibitors",
+      "adme_profile": "hepatic-fecal-cleared",
+      "presentation_cluster": [
+        "multiple-myeloma",
+        "mantle-cell-lymphoma"
+      ],
+      "adverse_cluster": [
+        "peripheral-neuropathy",
+        "thrombocytopenia"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-substrate"
+      ]
+    }
+  },
+  {
+    "id": "epoetin-alfa",
+    "generic_name": "epoetin alfa",
+    "brand_names": [
+      "Epogen",
+      "Procrit",
+      "Retacrit (biosimilar)"
+    ],
+    "drug_class": "erythropoiesis-stimulating agent (ESA)",
+    "subclass": "recombinant human erythropoietin",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "hematology-oncology"
+    ],
+    "therapeutic_classes": [
+      "biologics"
+    ],
+    "mechanism_targets": [
+      "erythropoietin receptor (EpoR) on erythroid progenitors"
+    ],
+    "mechanism_summary": "Recombinant human erythropoietin; binds and activates EpoR on erythroid progenitor cells (BFU-E, CFU-E) in bone marrow, stimulating proliferation, differentiation, and survival; increases RBC production and hemoglobin concentration over 2\u20134 weeks.",
+    "indications": [
+      "anemia of chronic kidney disease (dialysis and non-dialysis dependent)",
+      "anemia due to chemotherapy in non-myeloid malignancies",
+      "anemia in HIV patients on AZT",
+      "pre-surgical autologous blood donation"
+    ],
+    "contraindications": [
+      "epoetin alfa hypersensitivity",
+      "uncontrolled hypertension",
+      "pure red cell aplasia (PRCA) from prior ESA exposure"
+    ],
+    "adverse_effects": {
+      "common": [
+        "hypertension (most common; can be severe)",
+        "headache",
+        "arthralgia",
+        "injection site reactions"
+      ],
+      "serious": [
+        "thromboembolic events (DVT, PE, stroke, MI \u2014 especially when Hgb exceeds 11 g/dL)",
+        "pure red cell aplasia (rare \u2014 antibody-mediated)",
+        "tumor progression (in cancer patients)",
+        "worsening hypertension/hypertensive encephalopathy"
+      ]
+    },
+    "black_box_warnings": [
+      "increased risk of death, myocardial infarction, stroke, DVT, tumor progression \u2014 do NOT target Hgb >11 g/dL",
+      "shorten overall survival and/or time-to-tumor progression in cancer patients",
+      "use lowest effective dose"
+    ],
+    "pharmacokinetics": {
+      "absorption": "SC or IV; SC bioavailability ~20\u201325%",
+      "distribution": "volume of distribution approximately equal to plasma volume",
+      "metabolism": "proteolytic degradation",
+      "excretion": "receptor-mediated; minor renal",
+      "half_life": "4\u201313 hours (IV); 24 hours (SC)",
+      "onset": "2\u20136 weeks (hemoglobin increase)",
+      "peak": "5\u201324 hours (SC)",
+      "duration": "3 times weekly (CKD) or weekly (cancer)",
+      "protein_binding": "minimal",
+      "vd": "low"
+    },
+    "drug_interactions": [
+      {
+        "drug": "iron deficiency",
+        "mechanism": "ESA response requires adequate iron stores; assess and supplement iron before initiating",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Do NOT target hemoglobin above 11 g/dL (CKD) or 10 g/dL (cancer) \u2014 increases risk of cardiovascular events; withhold dose when Hgb approaches 11 g/dL in CKD patients.",
+      "Assess and correct iron deficiency (transferrin saturation <20%, ferritin <100 ng/mL) before and during therapy \u2014 ESA response requires adequate iron substrate.",
+      "Monitor blood pressure every visit; hypertension is the most common adverse effect and may require initiation or intensification of antihypertensives.",
+      "Cancer patients require REMS enrollment (ESAs are subject to a REMS for the cancer indication); prescribers must counsel patients on the risks."
+    ],
+    "clinical_pearls": [
+      "Clinical trials showing excess mortality and tumor progression in cancer patients when ESAs targeted Hgb >12 g/dL led to the current restrictive use guidelines; ESAs should only be used in cancer patients with chemotherapy-induced anemia and only to avoid transfusion (not to achieve normal Hgb).",
+      "Iron deficiency is the most common cause of ESA hyporesponsiveness; patients not responding appropriately to ESA therapy should have functional iron deficiency assessed (high ferritin but low transferrin saturation \u2014 a functional rather than absolute iron deficiency)."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "category C",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "CKD-anemia",
+      "chemotherapy-induced-anemia"
+    ],
+    "adverse_effect_tags": [
+      "hypertension",
+      "thromboembolism",
+      "pure-red-cell-aplasia"
+    ],
+    "interaction_tags": [
+      "iron-supplementation"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "hematology-oncology"
+      ],
+      "therapeutic_class": [
+        "biologics"
+      ],
+      "mechanism_family": [
+        "colony-stimulating-factor"
+      ],
+      "prototype_class": "erythropoiesis-stimulating agents",
+      "adme_profile": "receptor-mediated-catabolism",
+      "presentation_cluster": [
+        "anemia",
+        "CKD-anemia"
+      ],
+      "adverse_cluster": [
+        "hypertension",
+        "thromboembolism"
+      ],
+      "interaction_cluster": []
+    }
+  },
+  {
+    "id": "tenofovir-disoproxil-fumarate",
+    "generic_name": "tenofovir disoproxil fumarate",
+    "brand_names": [
+      "Viread",
+      "component of Truvada, Atripla, Stribild, Symfi"
+    ],
+    "drug_class": "nucleotide reverse transcriptase inhibitor (NtRTI)",
+    "subclass": "acyclic nucleotide analog NRTI",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "HIV reverse transcriptase",
+      "HBV DNA polymerase"
+    ],
+    "mechanism_summary": "Prodrug converted to tenofovir diphosphate; competes with deoxyadenosine 5'-triphosphate for incorporation into viral DNA; acts as a chain terminator after incorporation; active against HIV-1, HIV-2, and hepatitis B virus.",
+    "indications": [
+      "HIV-1 infection (as part of combination ART)",
+      "chronic hepatitis B (HBV) treatment",
+      "HIV pre-exposure prophylaxis (PrEP) in combination with emtricitabine"
+    ],
+    "contraindications": [
+      "tenofovir hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "diarrhea",
+        "headache",
+        "fatigue"
+      ],
+      "serious": [
+        "nephrotoxicity (Fanconi syndrome, renal tubular acidosis, AKI)",
+        "decreased bone mineral density (osteoporosis)",
+        "lactic acidosis (class NRTI effect)",
+        "severe hepatitis B flare on discontinuation in HBV-coinfected patients"
+      ]
+    },
+    "black_box_warnings": [
+      "lactic acidosis and severe hepatomegaly with steatosis (class NRTI effect)",
+      "severe acute exacerbation of hepatitis B after discontinuation in HBV-infected patients"
+    ],
+    "pharmacokinetics": {
+      "absorption": "25% fasting; increases to 39% with food \u2014 administer with meal",
+      "distribution": "widely distributed; low protein binding",
+      "metabolism": "prodrug hydrolyzed to tenofovir then phosphorylated to active form intracellularly; tenofovir is not a CYP substrate",
+      "excretion": "renal (70\u201380% unchanged via glomerular filtration and active tubular secretion); dose adjustment in CKD",
+      "half_life": "17 hours (intracellular tenofovir diphosphate: 10\u201350 hours)",
+      "onset": "hours to days",
+      "peak": "1\u20132 hours",
+      "duration": "24 hours",
+      "protein_binding": "<0.7%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "atazanavir",
+        "mechanism": "tenofovir reduces atazanavir levels by ~25%; always combine with ritonavir boosting",
+        "severity": "major"
+      },
+      {
+        "drug": "didanosine",
+        "mechanism": "tenofovir increases didanosine levels; increased pancreatitis and peripheral neuropathy risk; avoid combination",
+        "severity": "major"
+      },
+      {
+        "drug": "nephrotoxic drugs",
+        "mechanism": "additive nephrotoxicity",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer with a meal to improve absorption.",
+      "Monitor SCr, eGFR, urine glucose and protein at baseline and every 3\u20136 months; tenofovir causes proximal tubular toxicity \u2014 Fanconi syndrome presents with glycosuria at normal blood glucose, phosphaturia, and aminoaciduria.",
+      "Measure bone mineral density at baseline in patients with risk factors for osteoporosis; tenofovir DF reduces BMD and increases fracture risk.",
+      "If stopping tenofovir in an HBV-coinfected patient, monitor LFTs for 4\u20136 months; HBV flares can be severe."
+    ],
+    "clinical_pearls": [
+      "Tenofovir DF has largely replaced older NRTIs (zidovudine, stavudine) in clinical practice due to its superior safety profile and convenient once-daily dosing; its primary toxicities (renal and bone) are generally manageable with monitoring.",
+      "Tenofovir alafenamide (TAF) is a newer prodrug of tenofovir with lower plasma tenofovir levels and equivalent intracellular levels, resulting in significantly less renal and bone toxicity \u2014 increasingly preferred over TDF in patients with renal disease or osteoporosis risk."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": true,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "compatible (preferred NRTI in pregnancy)",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": true,
+    "presentation_tags": [
+      "HIV-infection",
+      "hepatitis-B",
+      "PrEP"
+    ],
+    "adverse_effect_tags": [
+      "nephrotoxicity",
+      "Fanconi-syndrome",
+      "bone-loss",
+      "lactic-acidosis"
+    ],
+    "interaction_tags": [
+      "nephrotoxic-combinations",
+      "didanosine-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "NRTI"
+      ],
+      "prototype_class": "NtRTIs",
+      "adme_profile": "renally-cleared-unchanged",
+      "presentation_cluster": [
+        "HIV-infection",
+        "hepatitis-B",
+        "PrEP"
+      ],
+      "adverse_cluster": [
+        "nephrotoxicity",
+        "Fanconi-syndrome"
+      ],
+      "interaction_cluster": [
+        "nephrotoxic-combinations"
+      ]
+    }
+  },
+  {
+    "id": "amphotericin-b",
+    "generic_name": "amphotericin B",
+    "brand_names": [
+      "Fungizone (conventional)",
+      "AmBisome (liposomal)",
+      "Abelcet (lipid complex)"
+    ],
+    "drug_class": "polyene antifungal antibiotic",
+    "subclass": "broad-spectrum polyene macrolide antifungal",
+    "prototype_for": true,
+    "prototype_drug": null,
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "ergosterol (fungal cell membrane)"
+    ],
+    "mechanism_summary": "Binds ergosterol in the fungal cell membrane, creating pores that increase membrane permeability; loss of potassium, protons, and small molecules causes fungal cell death; the selectivity of amphotericin B for ergosterol over cholesterol explains its antifungal vs. mammalian toxicity.",
+    "indications": [
+      "invasive aspergillosis (primary or salvage)",
+      "invasive candidiasis",
+      "cryptococcal meningitis (in HIV \u2014 with flucytosine)",
+      "mucormycosis (liposomal preferred)",
+      "histoplasmosis and other endemic mycoses (severe or disseminated)",
+      "empiric antifungal therapy in febrile neutropenia"
+    ],
+    "contraindications": [
+      "amphotericin B hypersensitivity (conventional formulation)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "infusion reactions (fever, chills, rigors, headache, nausea \u2014 conventional > liposomal)",
+        "nephrotoxicity (most clinically significant)",
+        "electrolyte wasting (hypokalemia, hypomagnesemia)"
+      ],
+      "serious": [
+        "nephrotoxicity (dose-dependent; 80% with conventional formulation; significantly less with liposomal)",
+        "severe hypokalemia and hypomagnesemia",
+        "normochromic normocytic anemia",
+        "cardiovascular collapse (with rapid infusion of conventional formulation)",
+        "hepatotoxicity (rare)"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "IV only (negligible oral absorption)",
+      "distribution": "binds to serum lipoproteins and tissues; liposomal formulation reduces tissue binding and nephrotoxicity",
+      "metabolism": "not significantly metabolized",
+      "excretion": "renal and biliary (extremely slow elimination); detectable for weeks after discontinuation",
+      "half_life": "15 days (terminal)",
+      "onset": "immediate (IV)",
+      "peak": "end of infusion",
+      "duration": "once-daily",
+      "protein_binding": "91\u201395%",
+      "vd": "large"
+    },
+    "drug_interactions": [
+      {
+        "drug": "nephrotoxic agents (aminoglycosides, cyclosporine, tacrolimus)",
+        "mechanism": "additive nephrotoxicity \u2014 avoid or use with extreme caution",
+        "severity": "major"
+      },
+      {
+        "drug": "fluconazole and azoles",
+        "mechanism": "pharmacodynamic antagonism \u2014 azoles inhibit ergosterol synthesis (target of amphotericin); may reduce amphotericin efficacy; clinical significance controversial",
+        "severity": "moderate"
+      },
+      {
+        "drug": "digoxin",
+        "mechanism": "amphotericin-induced hypokalemia potentiates digoxin toxicity",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Pre-medicate for infusion reactions: acetaminophen 650 mg + diphenhydramine 25 mg 30 minutes before conventional amphotericin; meperidine 25\u201350 mg or hydrocortisone IV is used for severe rigors.",
+      "Infuse conventional amphotericin over 4\u20136 hours; NEVER infuse rapidly \u2014 cardiovascular collapse can result from potassium efflux with rapid infusion.",
+      "Electrolyte replacement is essential: monitor potassium and magnesium daily and replace aggressively; hypokalemia from potassium wasting predisposes to fatal arrhythmias.",
+      "Liposomal amphotericin (AmBisome) is preferred over conventional for most indications due to significantly reduced nephrotoxicity and infusion reactions at equivalent efficacy."
+    ],
+    "clinical_pearls": [
+      "Amphotericin B has been the 'gold standard' antifungal for decades \u2014 broad spectrum, fungicidal activity, and minimal resistance \u2014 but its toxicity burden earned it the nickname 'ampho-terrible' in clinical settings; liposomal formulations maintain the efficacy while dramatically reducing nephrotoxicity.",
+      "The combination of amphotericin B deoxycholate + flucytosine for cryptococcal meningitis is the induction regimen of choice due to synergistic fungicidal activity; flucytosine penetrates the CNS and provides rapid CSF sterilization."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "category B (used for serious fungal infections in pregnancy)",
+    "lactation_safety": "use with caution",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "cryptococcal-meningitis",
+      "invasive-aspergillosis",
+      "invasive-candidiasis",
+      "mucormycosis"
+    ],
+    "adverse_effect_tags": [
+      "nephrotoxicity",
+      "electrolyte-wasting",
+      "infusion-reactions"
+    ],
+    "interaction_tags": [
+      "nephrotoxic-combinations",
+      "electrolyte-depletion"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "polyene-antifungal"
+      ],
+      "prototype_class": "polyene antifungals",
+      "adme_profile": "slow-renal-biliary-cleared",
+      "presentation_cluster": [
+        "invasive-fungal-infection",
+        "cryptococcal-meningitis"
+      ],
+      "adverse_cluster": [
+        "nephrotoxicity",
+        "electrolyte-wasting"
+      ],
+      "interaction_cluster": [
+        "nephrotoxic-combinations"
+      ]
+    }
+  },
+  {
+    "id": "raltegravir",
+    "generic_name": "raltegravir",
+    "brand_names": [
+      "Isentress",
+      "Isentress HD"
+    ],
+    "drug_class": "HIV integrase strand transfer inhibitor (INSTI)",
+    "subclass": "first-generation integrase inhibitor",
+    "prototype_for": false,
+    "prototype_drug": "dolutegravir",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "HIV integrase (strand transfer step)"
+    ],
+    "mechanism_summary": "First-in-class INSTI; binds the active site of HIV integrase with a divalent metal chelation mechanism, blocking the strand transfer of HIV DNA into the host chromosome; does not inhibit CYP3A4, making it the INSTI with the fewest metabolic drug interactions.",
+    "indications": [
+      "HIV-1 infection (treatment-na\u00efve and experienced)",
+      "HIV-1 infection in pregnant women near delivery (rapid ART initiation)"
+    ],
+    "contraindications": [
+      "raltegravir hypersensitivity"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "headache",
+        "diarrhea",
+        "fatigue"
+      ],
+      "serious": [
+        "severe skin reactions (SJS, TEN \u2014 rare)",
+        "elevated CPK, rhabdomyolysis",
+        "hypersensitivity reactions",
+        "immune reconstitution inflammatory syndrome"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "moderate bioavailability; administer with or without food (HD tablet requires feeding)",
+      "distribution": "widely distributed; 83% protein-bound",
+      "metabolism": "primarily UGT1A1 (glucuronidation) \u2014 NO significant CYP3A4 involvement",
+      "excretion": "fecal (51%) and renal (32%)",
+      "half_life": "9 hours",
+      "onset": "1\u20132 hours",
+      "peak": "1\u20131.5 hours",
+      "duration": "twice daily (standard) or once-daily HD 1200 mg",
+      "protein_binding": "83%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "rifampin",
+        "mechanism": "UGT1A1 induction reduces raltegravir AUC by 40\u201361%; increase raltegravir to 800 mg BID with rifampin",
+        "severity": "major"
+      },
+      {
+        "drug": "polyvalent cations (antacids with calcium, magnesium)",
+        "mechanism": "chelation reduces absorption; take separately",
+        "severity": "moderate"
+      }
+    ],
+    "nursing_considerations": [
+      "Raltegravir's lack of CYP3A4 metabolism makes it the preferred INSTI for patients with complex drug interactions involving CYP3A4.",
+      "Twice-daily dosing of standard tablets can be challenging for adherence; the HD formulation (1200 mg once-daily) offers a once-daily option.",
+      "Monitor CPK in patients with myopathy risk; rhabdomyolysis has been reported.",
+      "Administer antacids separately by \u22652\u20134 hours to avoid chelation."
+    ],
+    "clinical_pearls": [
+      "Raltegravir was the first FDA-approved INSTI, proving the integrase inhibitor concept in HIV therapy; its lack of CYP3A4 metabolism distinguishes it pharmacokinetically from subsequent INSTIs (dolutegravir, bictegravir) but lower genetic barrier to resistance limits its use.",
+      "Due to its lack of pharmacokinetic boosting requirements and minimal drug interactions, raltegravir is a preferred regimen component during pregnancy when initiating antiretroviral therapy late in pregnancy."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": false,
+    "pregnancy_safety": "acceptable (frequently used in pregnancy)",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "HIV-infection",
+      "antiretroviral-therapy"
+    ],
+    "adverse_effect_tags": [
+      "rhabdomyolysis",
+      "hypersensitivity",
+      "skin-reactions"
+    ],
+    "interaction_tags": [
+      "UGT1A1-substrate",
+      "rifampin-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "integrase-inhibitor"
+      ],
+      "prototype_class": "HIV integrase strand transfer inhibitors",
+      "adme_profile": "fecal-renal-cleared",
+      "presentation_cluster": [
+        "HIV-infection"
+      ],
+      "adverse_cluster": [
+        "hypersensitivity",
+        "rhabdomyolysis"
+      ],
+      "interaction_cluster": [
+        "UGT1A1-substrate"
+      ]
+    }
+  },
+  {
+    "id": "abacavir",
+    "generic_name": "abacavir",
+    "brand_names": [
+      "Ziagen",
+      "component of Epzicom, Triumeq, Trizivir"
+    ],
+    "drug_class": "nucleoside reverse transcriptase inhibitor (NRTI)",
+    "subclass": "guanosine analog NRTI",
+    "prototype_for": false,
+    "prototype_drug": "tenofovir-disoproxil-fumarate",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "HIV reverse transcriptase"
+    ],
+    "mechanism_summary": "Intracellularly phosphorylated to carbovir triphosphate (not abacavir triphosphate); competes with deoxyguanosine triphosphate for incorporation into viral DNA; acts as a chain terminator.",
+    "indications": [
+      "HIV-1 infection (in combination ART) \u2014 particularly in patients who cannot tolerate tenofovir due to renal or bone disease"
+    ],
+    "contraindications": [
+      "HLA-B*57:01 positive patients (hypersensitivity reaction \u2014 CONTRAINDICATED)",
+      "abacavir hypersensitivity (prior reaction)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "nausea",
+        "headache",
+        "fatigue"
+      ],
+      "serious": [
+        "abacavir hypersensitivity reaction (ABCs: Abdominal pain, fever, Rash, Cough/dyspnea, constitutional Symptoms \u2014 occurs in ~5% of non-screened patients; potentially fatal on rechallenge)",
+        "lactic acidosis (class NRTI effect)",
+        "cardiovascular risk (association with MI risk at high doses \u2014 clinical significance debated)"
+      ]
+    },
+    "black_box_warnings": [
+      "hypersensitivity reactions \u2014 screen for HLA-B*57:01 before use; NEVER rechallenge after a hypersensitivity reaction \u2014 can be fatal",
+      "lactic acidosis and severe hepatomegaly with steatosis"
+    ],
+    "pharmacokinetics": {
+      "absorption": "83% oral bioavailability; not affected by food",
+      "distribution": "widely distributed; CSF penetration ~30% of plasma",
+      "metabolism": "hepatic (alcohol dehydrogenase and glucuronyl transferase); forms abacavir 5'-carboxylate and glucuronide metabolites",
+      "excretion": "renal (83% as metabolites); minor fecal",
+      "half_life": "1.5 hours (plasma); intracellular carbovir triphosphate: 20+ hours",
+      "onset": "rapid",
+      "peak": "0.7\u20131.7 hours",
+      "duration": "24 hours",
+      "protein_binding": "50%",
+      "vd": "moderate"
+    },
+    "drug_interactions": [
+      {
+        "drug": "alcohol",
+        "mechanism": "competitive inhibition of abacavir metabolism via ADH; increase abacavir AUC ~41%; ribavirin increases carbovir triphosphate",
+        "severity": "minor"
+      },
+      {
+        "drug": "ribavirin",
+        "mechanism": "ribavirin increases intracellular carbovir triphosphate levels (same metabolic pathway)",
+        "severity": "minor"
+      }
+    ],
+    "nursing_considerations": [
+      "HLA-B*57:01 testing is MANDATORY before prescribing abacavir; patients testing positive must never receive abacavir \u2014 use an alternative NRTI (tenofovir preferred).",
+      "Counsel patients on the abacavir hypersensitivity reaction syndrome \u2014 symptoms within 6 weeks of initiation: fever, rash (not always present), GI symptoms, malaise, pharyngitis, and/or dyspnea.",
+      "If hypersensitivity is suspected, STOP abacavir immediately and NEVER rechallenge \u2014 rechallenge after hypersensitivity can be fatal within hours.",
+      "Educate patients never to restart abacavir without medical clearance even if they stopped for other reasons, as latent sensitization may exist."
+    ],
+    "clinical_pearls": [
+      "HLA-B*57:01 genotyping before abacavir prescription has been one of the most successful implementations of pharmacogenomics in clinical practice, reducing the incidence of abacavir hypersensitivity reaction from ~5% to near 0% in prospectively screened populations.",
+      "Abacavir is preferred over tenofovir DF in patients with significant renal disease or bone disease because it does not cause nephrotoxicity or decrease bone mineral density."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "compatible",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "HIV-infection",
+      "antiretroviral-therapy"
+    ],
+    "adverse_effect_tags": [
+      "hypersensitivity-reaction",
+      "lactic-acidosis"
+    ],
+    "interaction_tags": [
+      "HLA-B5701-screening"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "NRTI"
+      ],
+      "prototype_class": "NRTIs",
+      "adme_profile": "renal-cleared",
+      "presentation_cluster": [
+        "HIV-infection"
+      ],
+      "adverse_cluster": [
+        "hypersensitivity-reaction",
+        "lactic-acidosis"
+      ],
+      "interaction_cluster": [
+        "HLA-pharmacogenomics"
+      ]
+    }
+  },
+  {
+    "id": "atazanavir",
+    "generic_name": "atazanavir",
+    "brand_names": [
+      "Reyataz",
+      "Evotaz (with cobicistat)"
+    ],
+    "drug_class": "HIV protease inhibitor (PI)",
+    "subclass": "azapeptide protease inhibitor",
+    "prototype_for": false,
+    "prototype_drug": "darunavir",
+    "organ_systems": [
+      "infectious-disease"
+    ],
+    "therapeutic_classes": [
+      "antimicrobials"
+    ],
+    "mechanism_targets": [
+      "HIV-1 protease"
+    ],
+    "mechanism_summary": "Selectively inhibits HIV-1 protease; unlike most other PIs, atazanavir does not cause lipid elevations \u2014 it actually lowers LDL in some patients; once-daily dosing advantage; requires boosting with ritonavir or cobicistat; unique adverse effect: indirect hyperbilirubinemia via UGT1A1 inhibition.",
+    "indications": [
+      "HIV-1 infection (in combination ART with ritonavir or cobicistat boosting)"
+    ],
+    "contraindications": [
+      "atazanavir hypersensitivity",
+      "concurrent drugs requiring CYP3A4/UGT1A1 for clearance with narrow TI (pimozide, cisapride, lovastatin, simvastatin)",
+      "concurrent PPIs at standard doses (require gastric acid for absorption)"
+    ],
+    "adverse_effects": {
+      "common": [
+        "indirect hyperbilirubinemia/jaundice (benign \u2014 UGT1A1 inhibition; universal in UGT1A1*28/*28 homozygotes)",
+        "nausea",
+        "headache"
+      ],
+      "serious": [
+        "nephrolithiasis/cholelithiasis (crystallization of atazanavir in urine/bile)",
+        "PR interval prolongation/heart block (first degree common; rarely clinically significant)",
+        "hypersensitivity (including rash)",
+        "metabolic effects less than other PIs"
+      ]
+    },
+    "black_box_warnings": [],
+    "pharmacokinetics": {
+      "absorption": "requires food and gastric acid for absorption; PPIs can reduce atazanavir to undetectable levels \u2014 avoid or limit to omeprazole \u226420 mg equivalent",
+      "distribution": "widely distributed; 86% protein-bound",
+      "metabolism": "hepatic CYP3A4 (primary); also inhibits UGT1A1 (causes bilirubinemia) and CYP3A4",
+      "excretion": "biliary/fecal (79%); renal (13%)",
+      "half_life": "7\u20138 hours (boosted)",
+      "onset": "2.5\u20133 hours",
+      "peak": "2.5\u20133 hours",
+      "duration": "once-daily (boosted)",
+      "protein_binding": "86%",
+      "vd": "large"
+    },
+    "drug_interactions": [
+      {
+        "drug": "PPIs (omeprazole, pantoprazole, esomeprazole)",
+        "mechanism": "reduce gastric acid, reducing atazanavir absorption; avoid PPIs or limit; H2 blockers preferable",
+        "severity": "major"
+      },
+      {
+        "drug": "tenofovir",
+        "mechanism": "tenofovir reduces atazanavir AUC ~25%; must use ritonavir boosting when combined with tenofovir",
+        "severity": "major"
+      },
+      {
+        "drug": "simvastatin/lovastatin",
+        "mechanism": "CYP3A4 inhibition causes massive statin accumulation; rhabdomyolysis risk \u2014 contraindicated",
+        "severity": "major"
+      }
+    ],
+    "nursing_considerations": [
+      "Administer with food and a substantial meal for absorption; counsel patients to avoid PPIs \u2014 even OTC omeprazole or pantoprazole significantly reduces drug levels.",
+      "Instruct patients that yellowing of skin or eyes (jaundice) is expected from elevated indirect bilirubin via UGT1A1 inhibition \u2014 reassure that this is benign, not hepatotoxicity, and does not require stopping the drug.",
+      "Monitor for nephrolithiasis symptoms \u2014 flank pain, hematuria; maintain adequate hydration to prevent atazanavir crystal deposition in urine.",
+      "Obtain ECG if co-administering with drugs affecting cardiac conduction; first-degree AV block is common and usually asymptomatic."
+    ],
+    "clinical_pearls": [
+      "Atazanavir's benign lipid profile (neutral effect on triglycerides, may actually lower total cholesterol) distinguishes it from other PIs, which universally raise lipids \u2014 making it preferable in patients with pre-existing cardiovascular risk.",
+      "The indirect hyperbilirubinemia from atazanavir is a predictable, dose-dependent consequence of its inhibition of UGT1A1 \u2014 the same enzyme responsible for Gilbert's syndrome; patients who are UGT1A1*28/*28 homozygotes (Gilbert phenotype) will have more pronounced jaundice."
+    ],
+    "beers_criteria": false,
+    "ismp_high_alert": false,
+    "renal_dose_adjustment": false,
+    "hepatic_dose_adjustment": true,
+    "pregnancy_safety": "acceptable (frequently used in pregnancy)",
+    "lactation_safety": "avoid",
+    "tdm_required": false,
+    "guideline_update_flag": false,
+    "presentation_tags": [
+      "HIV-infection",
+      "antiretroviral-therapy"
+    ],
+    "adverse_effect_tags": [
+      "indirect-hyperbilirubinemia",
+      "jaundice",
+      "nephrolithiasis",
+      "PR-prolongation"
+    ],
+    "interaction_tags": [
+      "CYP3A4-inhibitor",
+      "UGT1A1-inhibitor",
+      "PPI-interaction"
+    ],
+    "schema_memberships": {
+      "organ_system": [
+        "infectious-disease"
+      ],
+      "therapeutic_class": [
+        "antimicrobials"
+      ],
+      "mechanism_family": [
+        "protease-inhibitor"
+      ],
+      "prototype_class": "HIV protease inhibitors",
+      "adme_profile": "hepatic-fecal-cleared",
+      "presentation_cluster": [
+        "HIV-infection"
+      ],
+      "adverse_cluster": [
+        "hyperbilirubinemia",
+        "nephrolithiasis"
+      ],
+      "interaction_cluster": [
+        "CYP3A4-inhibitor",
+        "PPI-interaction"
+      ]
+    }
   }
 ]
