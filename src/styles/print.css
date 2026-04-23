@@ -1,13 +1,58 @@
 @media print {
-  nav, .schema-compass, .search-overlay, .filter-panel, .related-drugs-panel { display: none !important; }
-  .card { box-shadow: none !important; border: 1px solid #ccc; }
+  /* Hide navigation and interactive elements */
+  .navbar,
+  nav,
+  .schema-compass,
+  .search-overlay,
+  .filter-panel,
+  .related-drugs-panel,
+  .drawer-toggle,
+  .drawer-side,
+  button,
+  [aria-label="Open search"] { display: none !important; }
+
+  /* Remove card shadows for print */
+  .card { box-shadow: none !important; border: 1px solid #ccc !important; }
+
+  /* Remove link URL annotations */
   a[href]::after { content: none !important; }
-  body { font-size: 11pt; color: #000; }
-  h1 { font-size: 18pt; }
-  h2 { font-size: 14pt; }
-  h3 { font-size: 12pt; }
-  .alert { border: 1px solid currentColor; }
-  table { width: 100%; border-collapse: collapse; }
-  th, td { border: 1px solid #ccc; padding: 4px 8px; }
+
+  /* Typography */
+  body { font-size: 11pt; color: #000 !important; background: #fff !important; }
+  h1 { font-size: 18pt; margin-bottom: 0.5em; }
+  h2 { font-size: 14pt; margin-bottom: 0.4em; }
+  h3 { font-size: 12pt; margin-bottom: 0.3em; }
+
+  /* Alert/callout borders for print */
+  .alert { border: 2px solid #555 !important; background: #f9f9f9 !important; color: #000 !important; }
+  .alert-error { border-color: #900 !important; }
+  .alert-warning { border-color: #960 !important; }
+  .alert-info { border-color: #006 !important; }
+  .alert-success { border-color: #060 !important; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; break-inside: avoid; }
+  th, td { border: 1px solid #999; padding: 4px 8px; font-size: 10pt; }
+  thead { display: table-header-group; }
+  tr { break-inside: avoid; }
+
+  /* Badges render as plain text in print */
+  .badge {
+    border: 1px solid currentColor !important;
+    background: transparent !important;
+    color: #000 !important;
+    font-size: 8pt;
+    padding: 1px 4px;
+  }
+
+  /* Keep drug profile layout single-column */
+  .grid { display: block !important; }
+  .lg\:col-span-2, .lg\:col-span-1 { width: 100% !important; }
+
+  /* Page margins */
   @page { margin: 1in; }
+
+  /* Avoid breaking headings across pages */
+  h1, h2, h3 { break-after: avoid; }
+  .card-body { break-inside: avoid; }
 }
