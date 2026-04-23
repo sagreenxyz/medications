@@ -1,0 +1,308 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+
+// Drugs with transporter-related interaction tags
+const pgpSubstrates = (drugsData as any[]).filter(d =>
+  (d.interaction_tags || []).some((t: string) =>
+    t.toLowerCase().includes('p-gp') && t.toLowerCase().includes('substrate')
+  )
+);
+const pgpInhibitors = (drugsData as any[]).filter(d =>
+  (d.interaction_tags || []).some((t: string) =>
+    (t.toLowerCase().includes('p-gp') || t.toLowerCase().includes('p-glycoprotein')) &&
+    (t.toLowerCase().includes('inhibit') || t.toLowerCase().includes('inhibitor'))
+  )
+);
+const oatpDrugs = (drugsData as any[]).filter(d =>
+  (d.interaction_tags || []).some((t: string) =>
+    t.toLowerCase().includes('oatp')
+  )
+);
+const octDrugs = (drugsData as any[]).filter(d =>
+  (d.interaction_tags || []).some((t: string) =>
+    t.toLowerCase().includes('oct')
+  )
+);
+
+// Key anchor pairs for prose
+const anchorPairs = [
+  {
+    pair: 'Digoxin + Amiodarone',
+    transporter: 'P-glycoprotein (P-gp)',
+    mechanism: 'Amiodarone inhibits P-gp in renal tubular cells, reducing digoxin\'s active renal secretion and increasing digoxin AUC by 50–70%. Digoxin toxicity (bradycardia, AV block, nausea, visual disturbances) may develop within 1–2 weeks. Standard practice is to reduce the digoxin dose by 50% when amiodarone is initiated and monitor digoxin levels closely.',
+    severity: 'major',
+    management: 'Reduce digoxin dose 50%; monitor serum digoxin levels; assess HR and rhythm daily',
+  },
+  {
+    pair: 'Digoxin + Verapamil',
+    transporter: 'P-glycoprotein (P-gp)',
+    mechanism: 'Verapamil inhibits P-gp (and also CYP3A4), reducing both the renal tubular secretion and the intestinal efflux of digoxin. Digoxin AUC increases by 40–70%. Since both agents slow AV conduction, the combination also carries a pharmacodynamic risk of high-degree AV block independent of elevated digoxin levels.',
+    severity: 'major',
+    management: 'Reduce digoxin dose 30–50%; monitor ECG for PR prolongation and AV block; check digoxin levels',
+  },
+  {
+    pair: 'Statins + Cyclosporine',
+    transporter: 'OATP1B1/1B3 + P-gp',
+    mechanism: 'Cyclosporine is a potent inhibitor of OATP1B1 and OATP1B3, the hepatic uptake transporters that deliver most statins from portal blood into hepatocytes for first-pass metabolism. Inhibition of OATP increases systemic statin exposure 5- to 20-fold depending on the statin — simvastatin and lovastatin are most affected. This dramatically increases myopathy and rhabdomyolysis risk. Pravastatin (partially OATP-dependent) and fluvastatin are relatively safer, though dose limits still apply.',
+    severity: 'major',
+    management: 'Use pravastatin ≤20 mg or fluvastatin ≤40 mg; avoid simvastatin and lovastatin; monitor CK and renal function',
+  },
+  {
+    pair: 'Metformin + Cimetidine',
+    transporter: 'OCT2 / MATE',
+    mechanism: 'Metformin is not metabolized and is eliminated almost entirely by active renal tubular secretion via OCT2 (uptake into tubular cells) and MATE1/2 (efflux into urine). Cimetidine is a potent OCT2/MATE inhibitor that reduces metformin\'s renal clearance by 40–50%, increasing metformin plasma concentrations. At standard metformin doses this is rarely of major clinical concern, but in the setting of renal impairment or other factors that already limit metformin clearance, the combination may increase lactic acidosis risk.',
+    severity: 'moderate',
+    management: 'Avoid cimetidine in patients on metformin with CKD; monitor renal function; famotidine is a safer alternative',
+  },
+  {
+    pair: 'Dabigatran + P-gp inhibitors',
+    transporter: 'P-glycoprotein (P-gp)',
+    mechanism: 'Dabigatran etexilate (the prodrug) is a P-gp substrate but is not a CYP substrate. Absorption from the GI tract and renal tubular secretion are both P-gp dependent. Potent P-gp inhibitors such as dronedarone, cyclosporine, ketoconazole, and itraconazole increase dabigatran exposure by 50–200%, precipitating bleeding risk without any CYP-based interaction. Dabigatran\'s lack of a reversal agent antidote until idarucizumab became available made this interaction particularly dangerous historically.',
+    severity: 'major',
+    management: 'Avoid dronedarone and systemic ketoconazole with dabigatran; reduce dose in renal impairment; have idarucizumab available',
+  },
+  {
+    pair: 'Rosuvastatin + Gemfibrozil',
+    transporter: 'OATP1B1 + CYP2C8',
+    mechanism: 'Gemfibrozil inhibits both OATP1B1-mediated hepatic uptake and CYP2C8-mediated metabolism of rosuvastatin (and cerivastatin). The combined effect increases rosuvastatin AUC substantially and markedly elevates myopathy risk. Gemfibrozil-cerivastatin co-administration caused multiple fatal rhabdomyolysis cases leading to cerivastatin market withdrawal in 2001, which catalyzed current understanding of OATP-statin interactions.',
+    severity: 'major',
+    management: 'Avoid gemfibrozil with rosuvastatin if possible; if necessary, limit rosuvastatin to 10 mg/day; fenofibrate is a safer fibrate alternative',
+  },
+];
+---
+<SchemaLayout
+  title="Transporter Interactions — Drug Interactions"
+  schema="drug-interactions"
+  description="P-glycoprotein, OATP1B1/1B3, and OCT transporter-mediated drug interactions: mechanisms, anchor clinical pairs, and nursing management."
+>
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/09-drug-interactions/`} class="link link-hover">Drug Interactions</a></li>
+        <li>Transporter Interactions</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold mb-2">Transporter Interactions</h1>
+    <p class="text-base-content/70 text-lg">P-glycoprotein, OATP, and OCT transporter-mediated pharmacokinetic interactions</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>
+      Drug transporter proteins are membrane-bound proteins that mediate the active
+      translocation of drugs and their metabolites across biological membranes — the
+      intestinal epithelium, the hepatocyte canalicular membrane, the renal proximal
+      tubular cell, and the blood-brain barrier — and are responsible for a clinically
+      important class of pharmacokinetic interactions that cannot be explained by CYP
+      enzyme activity alone. Unlike CYP enzymes, which chemically transform drug
+      molecules, transporters physically move intact drug molecules between cellular
+      compartments, determining both how much drug is absorbed into systemic circulation
+      and how efficiently it is eliminated by the liver and kidney. The FDA requires
+      evaluation of transporter-mediated drug interaction potential for all new molecular
+      entities, and the eight transporters of greatest clinical relevance are P-glycoprotein
+      (P-gp/ABCB1), breast cancer resistance protein (BCRP/ABCG2), OATP1B1 (SLCO1B1),
+      OATP1B3, OCT1, OCT2, MATE1, and MATE2-K.
+    </p>
+    <p>
+      P-glycoprotein is an ATP-dependent efflux transporter expressed on the apical surface
+      of intestinal enterocytes, renal proximal tubular cells, hepatocyte canalicular
+      membranes, and the luminal surface of brain capillary endothelial cells. Its normal
+      physiological role is to limit the intracellular accumulation of xenobiotics by
+      actively pumping them back into the intestinal lumen (limiting absorption), into
+      bile and urine (facilitating elimination), and out of the brain (restricting CNS
+      penetration). Drugs that are P-gp substrates include digoxin, dabigatran, fexofenadine,
+      the HIV protease inhibitors, vinca alkaloids, and loperamide. When a P-gp inhibitor
+      (amiodarone, verapamil, quinidine, dronedarone, cyclosporine, clarithromycin) is
+      co-administered, intestinal absorption of P-gp substrates increases and renal and
+      biliary elimination decreases — net result: elevated substrate plasma concentrations.
+      Conversely, P-gp inducers (rifampin, carbamazepine) reduce substrate exposure.
+      The digoxin-amiodarone and digoxin-verapamil interactions are the archetypal clinical
+      examples of P-gp inhibition and are described in detail below.
+    </p>
+    <p>
+      The organic anion transporting polypeptides OATP1B1 and OATP1B3 are expressed on
+      the basolateral (sinusoidal) surface of hepatocytes and mediate the uptake of a wide
+      variety of anionic substrates from portal blood into the hepatocyte, where they are
+      subject to first-pass metabolism and biliary excretion. Most HMG-CoA reductase
+      inhibitors (statins) are major OATP1B1 substrates, and inhibition of OATP1B1 — by
+      cyclosporine, gemfibrozil, or the HIV protease inhibitors — prevents statin entry
+      into hepatocytes, dramatically elevating systemic statin concentrations and
+      precipitating myopathy and rhabdomyolysis. The clinical legacy of OATP inhibition
+      includes the fatal rhabdomyolysis cases that led to the market withdrawal of
+      cerivastatin in 2001 when co-prescribed with gemfibrozil; the statin dose restrictions
+      in the cyclosporine product labeling; and the contraindication of gemfibrozil with
+      all statins metabolized by CYP2C8 or transported by OATP1B1. Genetic polymorphisms
+      in SLCO1B1 (encoding OATP1B1) — particularly the c.521T>C variant (rs4149056) —
+      reduce transporter function even in the absence of a drug inhibitor and are a
+      recognized pharmacogenomic risk factor for simvastatin-induced myopathy.
+    </p>
+    <p>
+      The organic cation transporter OCT2, expressed on the basolateral surface of renal
+      proximal tubular cells, mediates the uptake of metformin and several other organic
+      cations from blood into tubular cells, where MATE1 and MATE2-K on the apical surface
+      complete excretion into urine. Inhibition of this two-transporter secretory system
+      by cimetidine, dolutegravir, isavuconazole, and some tyrosine kinase inhibitors
+      reduces metformin elimination and raises its plasma concentration; while this
+      interaction is rarely of consequence at normal renal function, it assumes clinical
+      significance in patients with pre-existing CKD, dehydration, or contrast exposure.
+      Understanding OCT-mediated interactions also informs the management of drugs with
+      narrow therapeutic indices that use this same pathway — notably creatinine itself,
+      which is secreted by OCT2/MATE, explaining why drugs that inhibit these transporters
+      may falsely elevate serum creatinine without affecting the true GFR.
+    </p>
+  </div>
+
+  <!-- Anchor Pairs -->
+  <h2 class="text-2xl font-serif font-bold mb-4">Anchor Clinical Interaction Pairs</h2>
+  <div class="space-y-4 mb-10">
+    {anchorPairs.map(pair => (
+      <div class={`card card-compact border-l-4 ${pair.severity === 'major' ? 'border-error bg-error/5' : 'border-warning bg-warning/5'}`}>
+        <div class="card-body">
+          <div class="flex items-start justify-between gap-4 flex-wrap">
+            <div>
+              <h3 class="font-bold text-lg">{pair.pair}</h3>
+              <span class="badge badge-outline badge-sm">{pair.transporter}</span>
+            </div>
+            <span class={`badge ${pair.severity === 'major' ? 'badge-error' : 'badge-warning'}`}>{pair.severity}</span>
+          </div>
+          <p class="text-sm mt-2">{pair.mechanism}</p>
+          <div class="alert alert-info py-2 mt-2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-4 h-4">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <p class="text-xs"><strong>Management:</strong> {pair.management}</p>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- P-gp Substrates from database -->
+  {pgpSubstrates.length > 0 && (
+    <>
+      <h2 class="text-2xl font-serif font-bold mb-3">P-glycoprotein Substrates</h2>
+      <p class="text-sm text-base-content/70 mb-3">
+        These drugs have reduced absorption and/or increased elimination when P-gp is active.
+        P-gp inhibitors increase their plasma concentrations; P-gp inducers reduce exposure.
+      </p>
+      <div class="overflow-x-auto mb-8">
+        <table class="table table-zebra table-sm w-full">
+          <thead>
+            <tr><th>Drug</th><th>Drug Class</th><th>Clinical Risk of P-gp Inhibition</th></tr>
+          </thead>
+          <tbody>
+            {pgpSubstrates.map((drug: any) => (
+              <tr>
+                <td><a href={`${base}drugs/${drug.id}/`} class="link link-hover font-medium">{drug.generic_name}</a></td>
+                <td class="text-sm">{drug.drug_class}</td>
+                <td class="text-sm text-base-content/70">
+                  {(drug.drug_interactions || []).find((i: any) =>
+                    i.mechanism && i.mechanism.toLowerCase().includes('p-gp')
+                  )?.drug || 'Increased exposure with P-gp inhibitors'}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  )}
+
+  <!-- P-gp Inhibitors from database -->
+  {pgpInhibitors.length > 0 && (
+    <>
+      <h2 class="text-2xl font-serif font-bold mb-3">P-glycoprotein Inhibitors</h2>
+      <div class="overflow-x-auto mb-8">
+        <table class="table table-zebra table-sm w-full">
+          <thead>
+            <tr><th>Drug</th><th>Drug Class</th><th>Key Substrates Affected</th></tr>
+          </thead>
+          <tbody>
+            {pgpInhibitors.map((drug: any) => (
+              <tr>
+                <td><a href={`${base}drugs/${drug.id}/`} class="link link-hover font-medium">{drug.generic_name}</a></td>
+                <td class="text-sm">{drug.drug_class}</td>
+                <td class="text-sm text-base-content/70">
+                  {(drug.drug_interactions || []).slice(0,2).map((i: any) => i.drug).join('; ')}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  )}
+
+  <!-- OATP and OCT -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+    {oatpDrugs.length > 0 && (
+      <div>
+        <h2 class="text-xl font-serif font-bold mb-3">OATP Transporter Drugs</h2>
+        <p class="text-xs text-base-content/70 mb-2">Primarily OATP1B1/1B3 — hepatic uptake transporters critical for statin delivery.</p>
+        <div class="overflow-x-auto">
+          <table class="table table-zebra table-sm w-full">
+            <thead><tr><th>Drug</th><th>Role</th></tr></thead>
+            <tbody>
+              {oatpDrugs.map((drug: any) => {
+                const tags = (drug.interaction_tags||[]).filter((t:string)=>t.toLowerCase().includes('oatp'));
+                return (
+                  <tr>
+                    <td><a href={`${base}drugs/${drug.id}/`} class="link link-hover">{drug.generic_name}</a></td>
+                    <td>
+                      {tags.map((t: string) => (
+                        <span class={`badge badge-xs mr-1 ${t.includes('inhibitor') ? 'badge-error' : 'badge-outline'}`}>{t}</span>
+                      ))}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    )}
+    {octDrugs.length > 0 && (
+      <div>
+        <h2 class="text-xl font-serif font-bold mb-3">OCT Transporter Drugs</h2>
+        <p class="text-xs text-base-content/70 mb-2">OCT2/MATE — renal tubular secretion pathway for metformin and other cations.</p>
+        <div class="overflow-x-auto">
+          <table class="table table-zebra table-sm w-full">
+            <thead><tr><th>Drug</th><th>Role</th></tr></thead>
+            <tbody>
+              {octDrugs.map((drug: any) => {
+                const tags = (drug.interaction_tags||[]).filter((t:string)=>t.toLowerCase().includes('oct'));
+                return (
+                  <tr>
+                    <td><a href={`${base}drugs/${drug.id}/`} class="link link-hover">{drug.generic_name}</a></td>
+                    <td>
+                      {tags.map((t: string) => (
+                        <span class={`badge badge-xs mr-1 ${t.includes('inhibitor') ? 'badge-error' : 'badge-outline'}`}>{t}</span>
+                      ))}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    )}
+  </div>
+
+  <div class="alert alert-warning">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+    </svg>
+    <div>
+      <p class="font-semibold">Nursing Alert — Digoxin Transporter Interactions</p>
+      <p class="text-sm">
+        When amiodarone or verapamil is initiated in a patient already stabilized on digoxin, reduce the digoxin dose by 50% on day one
+        and recheck serum digoxin levels within 7–10 days. Monitor for signs of digoxin toxicity: bradycardia, new AV block,
+        yellow-green visual halos, nausea, and anorexia. Therapeutic digoxin level is 0.5–0.9 ng/mL for heart failure
+        and 0.8–2.0 ng/mL for rate control; toxicity risk rises sharply above 2.0 ng/mL.
+      </p>
+    </div>
+  </div>
+</SchemaLayout>

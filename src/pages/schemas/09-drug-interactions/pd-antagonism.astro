@@ -1,0 +1,268 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+
+// Drugs that are antagonized by other drugs
+const betaBlockers = (drugsData as any[]).filter(d =>
+  d.drug_class && (d.drug_class.toLowerCase().includes('beta-blocker') || d.drug_class.toLowerCase().includes('β-blocker'))
+);
+const betaAgonists = (drugsData as any[]).filter(d =>
+  d.drug_class && (d.drug_class.toLowerCase().includes('beta-2') || d.drug_class.toLowerCase().includes('β2-agonist') ||
+    d.drug_class.toLowerCase().includes('beta agonist') || d.drug_class.toLowerCase().includes('bronchodilator'))
+);
+const nsaids = (drugsData as any[]).filter(d =>
+  d.drug_class && (d.drug_class.toLowerCase().includes('nsaid') || d.drug_class.toLowerCase().includes('cox'))
+);
+const antihypertensives = (drugsData as any[]).filter(d =>
+  (d.organ_systems || []).includes('cardiovascular') &&
+  (d.indications || []).some((ind: string) => ind.toLowerCase().includes('hypertension')) &&
+  !d.drug_class?.toLowerCase().includes('nsaid')
+).slice(0, 15);
+
+// Curated antagonism pairs
+const antagonismPairs = [
+  {
+    category: 'β-Blocker vs. β2-Agonist',
+    drug1: 'Non-selective β-blockers (propranolol, nadolol, carvedilol)',
+    drug2: 'β2-Agonist bronchodilators (albuterol, salmeterol)',
+    mechanism: 'Non-selective β-blockers competitively antagonize β2 receptors in bronchial smooth muscle, blocking the bronchodilatory effect of β2-agonists. In asthma and COPD, this can precipitate severe, potentially fatal bronchospasm that is refractory to usual doses of albuterol. Cardioselective β-blockers (metoprolol, bisoprolol, atenolol) at low to moderate doses preferentially block β1 cardiac receptors and are relatively safer in reactive airway disease, but cardioselectivity is lost at higher doses. When β-blocker therapy is necessary in a patient with reactive airway disease, a cardioselective agent at the lowest effective dose is preferred, and a short-acting β2-agonist rescue inhaler must be prescribed.',
+    severity: 'major',
+    clinicalNote: 'Never initiate non-selective β-blockers in patients with active asthma. For COPD patients requiring β-blockers for heart failure or post-MI protection, use cardioselective agents (metoprolol succinate, bisoprolol). If bronchospasm develops on a β-blocker and β2-agonist response is inadequate, ipratropium provides alternative bronchodilation via muscarinic antagonism.',
+  },
+  {
+    category: 'NSAIDs vs. Antihypertensives',
+    drug1: 'NSAIDs (ibuprofen, naproxen, celecoxib, ketorolac, indomethacin)',
+    drug2: 'ACE inhibitors, ARBs, β-blockers, diuretics',
+    mechanism: 'NSAIDs inhibit prostaglandin synthesis (PGE2, PGI2) in the kidney and vasculature. Renal prostaglandins vasodilate the afferent arteriole and support natriuresis; their inhibition causes sodium and water retention, peripheral vasoconstriction, and increased aldosterone sensitivity — collectively elevating blood pressure and blunting the antihypertensive effect. The interaction is most pronounced with ACE inhibitors and ARBs (which are prostaglandin-dependent for efferent arteriolar dilation), with mean BP increases of 3–5 mmHg on average but up to 15 mmHg in susceptible patients. The combination of ACE inhibitor/ARB + NSAID + diuresis (the "triple whammy") can precipitate acute kidney injury by eliminating all three pharmacological mechanisms that maintain GFR under stress.',
+    severity: 'moderate',
+    clinicalNote: 'Counsel all patients on antihypertensive therapy to avoid OTC NSAIDs, including ibuprofen and naproxen, without prescriber guidance. Recommend acetaminophen for mild analgesia in hypertensive patients. When NSAIDs are medically necessary, monitor blood pressure at 1–2 weeks and renal function at baseline and during therapy. Diclofenac gel (topical) has substantially lower systemic exposure and less BP impact than oral NSAIDs.',
+  },
+  {
+    category: 'Opioids vs. Prokinetics / Bowel Motility Agents',
+    drug1: 'Opioids (all routes)',
+    drug2: 'Metoclopramide, prucalopride, lubiprostone',
+    mechanism: 'Opioid receptors (μ subtype) are densely expressed in the enteric nervous system. Opioid binding suppresses acetylcholine release, reduces peristalsis, increases intestinal smooth muscle tone (leading to non-propulsive contractions), and delays gastric emptying — collectively causing opioid-induced constipation (OIC) and, at higher doses, opioid-induced bowel dysfunction (OIBD). Metoclopramide promotes gastric emptying via D2 and 5-HT4 receptor agonism; this prokinetic effect is directly antagonized by opioids acting at the same enteric neural circuits. For patients requiring chronic opioid therapy who develop OIC unresponsive to stimulant laxatives, peripherally acting μ-opioid receptor antagonists (PAMORAs) — methylnaltrexone, naloxegol, naldemedine — block opioid effects in the gut without reversing central analgesia.',
+    severity: 'moderate',
+    clinicalNote: 'Begin scheduled bowel regimen (stimulant laxative ± stool softener) at the same time as opioid therapy; do not wait for constipation to develop. Docusate alone is insufficient. For postoperative ileus, opioid minimization strategies, alvimopan (a μ-receptor antagonist for post-surgical ileus), and early ambulation are preferred. Metoclopramide for CINV or gastroparesis will have reduced efficacy in patients on full opioid doses.',
+  },
+  {
+    category: 'Cholinesterase Inhibitors vs. Anticholinergics',
+    drug1: 'Donepezil, rivastigmine, galantamine',
+    drug2: 'Oxybutynin, tolterodine, diphenhydramine, TCAs, antipsychotics (low-potency)',
+    mechanism: 'Cholinesterase inhibitors used in Alzheimer\'s disease increase synaptic acetylcholine by inhibiting its degradation. Anticholinergic drugs compete for muscarinic receptors and directly oppose this mechanism, negating the cognitive benefit. Furthermore, the combination may paradoxically increase peripheral cholinergic adverse effects (nausea, diarrhea, bradycardia) while blocking central cholinergic benefit. Older adults are simultaneously most likely to be prescribed cholinesterase inhibitors for dementia and most vulnerable to prescribing of anticholinergic drugs — a phenomenon the Beers Criteria specifically targets.',
+    severity: 'major',
+    clinicalNote: 'Conduct a comprehensive Beers Criteria review when initiating a cholinesterase inhibitor. Deprescribe anticholinergic medications wherever possible: replace oxybutynin with mirabegron for overactive bladder; replace diphenhydramine with melatonin for insomnia; substitute low-anticholinergic antidepressants (SSRIs, SNRIs) for TCAs.',
+  },
+  {
+    category: 'Vitamin K vs. Warfarin',
+    drug1: 'Vitamin K (dietary; phytonadione supplements)',
+    drug2: 'Warfarin',
+    mechanism: 'Warfarin inhibits the vitamin K epoxide reductase (VKOR) enzyme, preventing regeneration of the reduced (active) form of vitamin K required for γ-carboxylation and activation of clotting factors II, VII, IX, and X. Dietary vitamin K1 (phylloquinone) in green leafy vegetables competes with warfarin\'s mechanism: high dietary vitamin K increases the substrate available for VKOR, partially overcoming warfarin\'s inhibitory effect and reducing the INR. The interaction is bidirectional and ongoing — large changes in dietary vitamin K intake (e.g., starting or stopping a daily kale smoothie) will shift the INR meaningfully. Patient education must emphasize consistency of vitamin K intake rather than avoidance.',
+    severity: 'moderate',
+    clinicalNote: 'Educate warfarin patients to maintain a consistent, not absent, intake of vitamin K-containing foods. Sudden changes in dietary pattern (hospital admission with different food service, starting a "healthy eating" regimen) can destabilize anticoagulation. When high-dose IV phytonadione is needed to rapidly reverse warfarin (e.g., for active bleeding), expect full reversal within 6–12 hours but significant warfarin resistance for 7–14 days thereafter.',
+  },
+  {
+    category: 'PDE5 Inhibitors vs. Nitrates',
+    drug1: 'Sildenafil, tadalafil, vardenafil, avanafil',
+    drug2: 'Nitroglycerin (all formulations), isosorbide mononitrate, isosorbide dinitrate',
+    mechanism: 'Nitrates generate nitric oxide (NO), which activates guanylyl cyclase and increases cyclic GMP (cGMP), causing vascular smooth muscle relaxation and systemic and pulmonary vasodilation. PDE5 inhibitors block the phosphodiesterase enzyme that degrades cGMP, prolonging and amplifying the vasodilatory signal. Co-administration causes profound, potentially catastrophic systemic hypotension. The interaction is absolute: PDE5 inhibitors are absolutely contraindicated with all nitrate formulations. Tadalafil, with its 36-hour half-life, creates a 48-hour contraindication window for nitrate use after the last dose.',
+    severity: 'contraindicated',
+    clinicalNote: 'Always obtain a sexual history and medication history before administering nitroglycerin in a patient presenting with chest pain. If the patient has taken sildenafil or vardenafil within 24 hours, or tadalafil within 48 hours, nitrates are contraindicated regardless of symptom severity. Non-nitrate management with morphine, oxygen, and β-blockers must be used. Document PDE5 inhibitor use in the medication administration record.',
+  },
+  {
+    category: 'α2-Agonists vs. TCAs / Sympathomimetics',
+    drug1: 'Clonidine, methyldopa',
+    drug2: 'Tricyclic antidepressants; norepinephrine reuptake inhibitors',
+    mechanism: 'Clonidine lowers blood pressure by stimulating central α2-adrenergic receptors, reducing sympathetic outflow. Tricyclic antidepressants and norepinephrine reuptake inhibitors (atomoxetine, venlafaxine, duloxetine) block the reuptake of norepinephrine in central and peripheral neurons, including the presynaptic α2 receptor on which clonidine acts. By increasing synaptic norepinephrine levels, these agents desensitize or compete with α2 receptors, blunting clonidine\'s antihypertensive mechanism. The net effect is reduced BP control and potential hypertensive rebound — particularly dangerous because abrupt clonidine discontinuation alone carries a risk of life-threatening rebound hypertension, which would be amplified in this setting.',
+    severity: 'major',
+    clinicalNote: 'Avoid combining clonidine with TCAs. If a TCA or SNRI must be added in a patient on clonidine for hypertension, monitor BP closely and consider transitioning to a different antihypertensive mechanism. Educate patients on clonidine to never abruptly discontinue the drug; taper over 2–4 days to prevent rebound hypertension.',
+  },
+];
+---
+<SchemaLayout
+  title="PD Antagonism — Drug Interactions"
+  schema="drug-interactions"
+  description="Pharmacodynamic antagonism: β-blockers opposing β2-agonists, NSAIDs opposing antihypertensives, opioids antagonizing prokinetics, cholinesterase inhibitors blocked by anticholinergics."
+>
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/09-drug-interactions/`} class="link link-hover">Drug Interactions</a></li>
+        <li>PD Antagonism</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold mb-2">Pharmacodynamic Antagonism</h1>
+    <p class="text-base-content/70 text-lg">Opposing pharmacological effects that reduce therapeutic efficacy or cause harm</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>
+      Pharmacodynamic antagonism occurs when two drugs oppose each other's effects at
+      shared or functionally linked receptor systems — one drug activating and the other
+      blocking the same receptor, or one drug producing an effect that another drug is
+      intended to reverse. Unlike PK interactions (which alter drug concentration) or
+      additive PD toxicity (which amplifies shared adverse effects), PD antagonism typically
+      results in therapeutic failure of one or both drugs without an obvious toxic signal.
+      This makes PD antagonism particularly insidious: the patient continues to receive
+      both medications, the prescriber may attribute the lack of response to disease
+      progression rather than drug opposition, and dose escalation of both agents may follow
+      — creating a costly and potentially harmful therapeutic spiral. Recognition of PD
+      antagonism requires an understanding of each drug's mechanism and a systems-level
+      awareness of how those mechanisms interact with each other within the patient's
+      physiology.
+    </p>
+    <p>
+      The β-blocker versus β2-agonist interaction is the canonical example of PD receptor
+      antagonism and carries immediate patient safety implications. β-Adrenergic receptors
+      are divided into β1 (predominantly cardiac) and β2 (predominantly pulmonary smooth
+      muscle, vascular smooth muscle, and metabolic) subtypes. Non-selective β-blockers
+      (propranolol, carvedilol, labetalol, nadolol, sotalol) antagonize both receptor
+      subtypes with equal affinity; their β2 blockade in bronchial smooth muscle directly
+      opposes the bronchodilatory action of β2-agonist bronchodilators and can precipitate
+      severe bronchospasm in patients with reactive airway disease. Importantly, this
+      antagonism also reduces the efficacy of epinephrine in anaphylaxis — patients on
+      non-selective β-blockers who develop anaphylaxis may be refractory to standard
+      epinephrine doses because of β2 antagonism, potentially requiring glucagon
+      (which activates a distinct receptor pathway) in addition to repeated epinephrine doses
+      and IV vasopressors. The student should identify all patients on non-selective
+      β-blockers before any procedure carrying anaphylaxis risk and ensure this is
+      communicated to the anesthesiology and emergency response teams.
+    </p>
+    <p>
+      The opposition between NSAIDs and antihypertensive medications represents a widespread
+      but underappreciated PD interaction that contributes to inadequate blood pressure
+      control across a large population of patients simultaneously managed for chronic
+      pain and cardiovascular disease — two of the most prevalent conditions in clinical
+      practice. Non-steroidal anti-inflammatory drugs suppress renal prostaglandin synthesis
+      by inhibiting both COX-1 and COX-2, reducing prostaglandin-mediated vasodilation of
+      the afferent arteriole, blunting natriuretic signals, and promoting sodium and water
+      retention. These effects collectively raise blood pressure — opposing the mechanism of
+      virtually every antihypertensive class — and reduce renal perfusion in ways that
+      amplify the AKI risk inherent in many antihypertensive-NSAID combinations. Celecoxib,
+      as a selective COX-2 inhibitor, was hoped to have less renal prostaglandin impact but
+      has been demonstrated to elevate blood pressure comparably to non-selective NSAIDs
+      in hypertensive patients receiving antihypertensive therapy. Topical NSAID formulations
+      (diclofenac gel) offer analgesic efficacy with substantially reduced systemic exposure
+      and minimal BP effect, and represent a preferred option when NSAIDs are clinically
+      necessary in hypertensive patients.
+    </p>
+    <p>
+      Pharmacodynamic antagonism is not always harmful — it is sometimes intentional and
+      therapeutic. The reversal of opioid toxicity with naloxone, the reversal of
+      neuromuscular blockade with neostigmine, and the use of physostigmine for
+      anticholinergic toxidrome are all deliberate applications of receptor-level antagonism.
+      Understanding the kinetics of the reversal agent relative to the agonist is critical
+      in these settings: naloxone has a shorter half-life (60–90 minutes) than most opioids,
+      meaning that repeated doses or continuous infusion may be required to prevent
+      resedation after initial reversal. Sugammadex chelates rocuronium and vecuronium with
+      extraordinary selectivity, enabling complete reversal of neuromuscular blockade
+      regardless of depth; its mechanism is not receptor-level competitive antagonism but
+      molecular encapsulation, making it insensitive to the anticholinesterase limitations
+      of neostigmine. Recognizing when pharmacological antagonism is therapeutic, when it
+      is harmful, and when it is incomplete and therefore dangerous defines a core
+      dimension of advanced pharmacological reasoning.
+    </p>
+  </div>
+
+  <!-- Antagonism Pairs -->
+  <h2 class="text-2xl font-serif font-bold mb-4">Key Pharmacodynamic Antagonism Interactions</h2>
+  <div class="space-y-6 mb-10">
+    {antagonismPairs.map(pair => (
+      <div class={`card bg-base-100 border-l-4 ${pair.severity === 'contraindicated' ? 'border-error' : pair.severity === 'major' ? 'border-warning' : 'border-info'}`}>
+        <div class="card-body">
+          <div class="flex items-start justify-between gap-4 flex-wrap">
+            <h3 class="card-title text-lg">{pair.category}</h3>
+            <span class={`badge ${pair.severity === 'contraindicated' ? 'badge-error' : pair.severity === 'major' ? 'badge-warning' : 'badge-info'}`}>
+              {pair.severity}
+            </span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+            <div>
+              <p class="text-xs font-semibold text-base-content/60 uppercase mb-1">Drug 1</p>
+              <p class="text-sm font-medium">{pair.drug1}</p>
+            </div>
+            <div>
+              <p class="text-xs font-semibold text-base-content/60 uppercase mb-1">Drug 2 (Antagonized)</p>
+              <p class="text-sm font-medium">{pair.drug2}</p>
+            </div>
+          </div>
+          <p class="text-sm mt-3">{pair.mechanism}</p>
+          <div class="alert alert-info py-2 mt-3">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-4 h-4">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <p class="text-xs"><strong>Nursing Action:</strong> {pair.clinicalNote}</p>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Quick Reference -->
+  <h2 class="text-2xl font-serif font-bold mb-4">Quick Reference — PD Antagonism Pairs</h2>
+  <div class="overflow-x-auto mb-10">
+    <table class="table table-zebra w-full">
+      <thead>
+        <tr>
+          <th>Intended Drug</th>
+          <th>Antagonizing Drug(s)</th>
+          <th>Outcome</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Albuterol / Salmeterol (β2-agonist)</td>
+          <td>Propranolol, carvedilol (non-selective β-blocker)</td>
+          <td class="text-sm">Bronchospasm; reduced bronchodilator response; refractory anaphylaxis</td>
+        </tr>
+        <tr>
+          <td>ACE inhibitors / ARBs / diuretics</td>
+          <td>NSAIDs (ibuprofen, naproxen, ketorolac, celecoxib)</td>
+          <td class="text-sm">Reduced BP control; sodium retention; AKI (triple whammy)</td>
+        </tr>
+        <tr>
+          <td>Metoclopramide (prokinetic)</td>
+          <td>Opioids (all)</td>
+          <td class="text-sm">Reduced gastric emptying; reduced CINV control; worsened gastroparesis</td>
+        </tr>
+        <tr>
+          <td>Donepezil / Rivastigmine (ChEI)</td>
+          <td>Anticholinergics (oxybutynin, diphenhydramine, TCAs)</td>
+          <td class="text-sm">Loss of cognitive benefit; worsened peripheral cholinergic side effects</td>
+        </tr>
+        <tr>
+          <td>Warfarin (anticoagulant)</td>
+          <td>Vitamin K (dietary); phytonadione</td>
+          <td class="text-sm">Reduced INR; subtherapeutic anticoagulation; thrombosis risk</td>
+        </tr>
+        <tr>
+          <td>Nitroglycerin (vasodilator)</td>
+          <td>PDE5 inhibitors (sildenafil, tadalafil)</td>
+          <td class="text-sm">Profound hypotension; syncope; cardiovascular collapse — CONTRAINDICATED</td>
+        </tr>
+        <tr>
+          <td>Clonidine (central α2 agonist)</td>
+          <td>TCAs; SNRIs (venlafaxine, atomoxetine)</td>
+          <td class="text-sm">Reduced antihypertensive efficacy; rebound hypertension risk</td>
+        </tr>
+        <tr>
+          <td>Levodopa (dopamine precursor)</td>
+          <td>Antipsychotics (D2 antagonists); metoclopramide</td>
+          <td class="text-sm">Reduced antiparkinsonian efficacy; worsening motor symptoms</td>
+        </tr>
+        <tr>
+          <td>Clopidogrel (prodrug via CYP2C19)</td>
+          <td>Omeprazole / Esomeprazole (CYP2C19 inhibitors)</td>
+          <td class="text-sm">Reduced antiplatelet activation; higher MACE risk (most relevant for PPI + dual antiplatelet)</td>
+        </tr>
+        <tr>
+          <td>Naloxone / Naltrexone (opioid antagonist)</td>
+          <td>Buprenorphine (partial agonist with high μ-receptor affinity)</td>
+          <td class="text-sm">Naloxone has reduced efficacy in reversing buprenorphine overdose; high doses required</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</SchemaLayout>

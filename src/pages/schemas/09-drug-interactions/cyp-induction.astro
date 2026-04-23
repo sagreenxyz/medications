@@ -1,0 +1,231 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+
+// Drugs identified as CYP inducers from interaction_tags
+const cypInducers = (drugsData as any[]).filter(d =>
+  (d.interaction_tags || []).some((t: string) =>
+    t.includes('CYP') && t.includes('inducer')
+  )
+);
+
+// Known major inducers table (curated)
+const majorInducers = [
+  { name: 'Rifampin', isoforms: 'CYP3A4, CYP2C9, CYP2C19, CYP2B6, P-gp', strength: 'strong', mechanism: 'Potent PXR/CAR nuclear receptor activator; reduces exposure of most CYP substrates by 50–90%', category: 'Antibiotic' },
+  { name: 'Rifabutin', isoforms: 'CYP3A4, CYP2C9', strength: 'moderate', mechanism: 'Less potent PXR activator than rifampin; preferred over rifampin in HIV regimens', category: 'Antibiotic' },
+  { name: 'Rifapentine', isoforms: 'CYP3A4', strength: 'strong', mechanism: 'Similar to rifampin; weekly dosing in TB therapy; interacts with oral contraceptives', category: 'Antibiotic' },
+  { name: 'Carbamazepine', isoforms: 'CYP3A4, CYP2C9, CYP2C19, CYP1A2', strength: 'strong', mechanism: 'CAR activator; auto-induces its own metabolism; reduces levels of many co-administered AEDs and oral contraceptives', category: 'Antiepileptic' },
+  { name: 'Phenytoin', isoforms: 'CYP3A4, CYP2C9, CYP2C19', strength: 'strong', mechanism: 'PXR/CAR activator; also substrate of CYP2C9 — saturable kinetics mean small dose changes produce large level changes', category: 'Antiepileptic' },
+  { name: 'Phenobarbital', isoforms: 'CYP3A4, CYP2C9, CYP2C19, CYP2B6', strength: 'strong', mechanism: 'One of the oldest known enzyme inducers; CAR activator; primidone is metabolized to phenobarbital', category: 'Antiepileptic' },
+  { name: 'Oxcarbazepine', isoforms: 'CYP3A4, CYP2C19', strength: 'moderate', mechanism: 'Less inducing than carbamazepine; significant interaction with oral contraceptives and HIV antiretrovirals', category: 'Antiepileptic' },
+  { name: 'Efavirenz', isoforms: 'CYP3A4, CYP2B6', strength: 'moderate', mechanism: 'Mixed inducer/inhibitor — auto-induces CYP2B6 (its own elimination pathway) while also inhibiting CYP2C9/2C19', category: 'Antiretroviral' },
+  { name: 'Nevirapine', isoforms: 'CYP3A4', strength: 'moderate', mechanism: 'Reduces levels of PI-based antiretroviral regimens; major interaction with rifampin', category: 'Antiretroviral' },
+  { name: 'St. John\'s Wort', isoforms: 'CYP3A4, CYP2C9, P-gp', strength: 'strong', mechanism: 'Hyperforin activates PXR; reduces cyclosporine levels by 50% — documented cause of transplant rejection; reduces antiretroviral exposure', category: 'Herbal' },
+  { name: 'Dexamethasone', isoforms: 'CYP3A4', strength: 'weak-moderate', mechanism: 'At high doses used for chemotherapy premedication; reduces taxane exposure if given in excess', category: 'Corticosteroid' },
+  { name: 'Modafinil', isoforms: 'CYP3A4', strength: 'moderate', mechanism: 'Reduces oral contraceptive efficacy; interacts with calcineurin inhibitors in transplant patients', category: 'CNS Stimulant' },
+  { name: 'Bosentan', isoforms: 'CYP3A4, CYP2C9', strength: 'moderate', mechanism: 'Pulmonary arterial hypertension agent; reduces sildenafil and ciclosporin levels', category: 'Endothelin Antagonist' },
+  { name: 'Apalutamide', isoforms: 'CYP3A4, CYP2C9, P-gp', strength: 'strong', mechanism: 'Androgen receptor antagonist; potent inducer comparable to rifampin — contraindicated with many co-medications', category: 'Antiandrogen' },
+];
+
+// Substrates at risk: curated high-priority list
+const substrates = [
+  { name: 'Cyclosporine / Tacrolimus', impact: 'Reduced immunosuppression → transplant rejection. Levels must be monitored intensively when initiating or stopping an inducer.' },
+  { name: 'Warfarin', impact: 'Reduced anticoagulant effect; INR may fall below therapeutic range within 1–2 weeks. Dose increase needed; INR monitoring q3–7 days during inducer course.' },
+  { name: 'Oral contraceptives', impact: 'Reduced estrogen/progestin exposure; ovulation may occur. Barrier contraception must be used during and for 28 days after inducer course.' },
+  { name: 'HIV antiretrovirals (PIs, INSTIs)', impact: 'Sub-therapeutic levels → viral rebound and resistance. Rifabutin preferred over rifampin with PI-based regimens.' },
+  { name: 'Methadone', impact: 'Rifampin reduces methadone levels by ~50%; withdrawal syndrome may occur within days of rifampin initiation.' },
+  { name: 'Apixaban / Rivaroxaban', impact: 'Reduced DOAC exposure; thrombotic risk increases. Concomitant use with strong inducers is generally contraindicated per FDA labeling.' },
+  { name: 'Imatinib / Erlotinib', impact: 'Markedly reduced TKI exposure; tumor progression risk. Strong CYP3A4 inducers are contraindicated or require significant dose escalation.' },
+  { name: 'Quetiapine / Haloperidol', impact: 'Reduced antipsychotic levels; psychiatric relapse or return of psychosis. Dose adjustments and close psychiatric monitoring required.' },
+];
+
+const inducerDrugs = (drugsData as any[]).filter(d =>
+  (d.interaction_tags || []).some((t: string) => t.includes('inducer'))
+);
+---
+<SchemaLayout
+  title="CYP Induction — Drug Interactions"
+  schema="drug-interactions"
+  description="Mechanisms of CYP enzyme induction via nuclear receptor activation, major inducing drugs, affected substrates, and clinical management strategies."
+>
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/09-drug-interactions/`} class="link link-hover">Drug Interactions</a></li>
+        <li>CYP Induction</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold mb-2">CYP Induction</h1>
+    <p class="text-base-content/70 text-lg">Nuclear receptor–mediated enzyme upregulation: clinical consequences and management</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>
+      Unlike CYP inhibition, which occurs rapidly and can be anticipated within hours of
+      co-administration, CYP induction is a transcriptional process that requires days to
+      weeks to manifest fully and resolves only gradually as the inducing drug is eliminated
+      and enzyme levels return to baseline. Inducers increase the synthesis of CYP enzymes
+      — and often also drug transporter proteins such as P-glycoprotein — by activating
+      nuclear receptors that bind to response elements in CYP gene promoter regions.
+      The two most clinically important nuclear receptors mediating induction are the
+      pregnane X receptor (PXR), activated by rifampin, carbamazepine, phenytoin, St. John's
+      wort, and glucocorticoids, and the constitutive androstane receptor (CAR), activated
+      by phenobarbital and its analogs. When these ligand-activated transcription factors
+      bind to their response elements, they upregulate CYP3A4, CYP2C9, CYP2C19, CYP2B6,
+      and CYP1A2 gene expression, increasing total enzyme content in hepatocytes and
+      intestinal enterocytes and dramatically accelerating the clearance of co-administered
+      substrates.
+    </p>
+    <p>
+      The clinical consequence of CYP induction is reduced drug exposure of the substrate —
+      a pharmacokinetic interaction that leads to therapeutic failure rather than toxicity.
+      For drugs with measurable endpoints (INR for warfarin, drug levels for cyclosporine
+      and tacrolimus, viral load for antiretrovirals, seizure frequency for antiepileptics),
+      therapeutic failure is detectable if monitoring is performed. For drugs without readily
+      measurable endpoints — oral contraceptives, anticoagulants started empirically, cancer
+      chemotherapy — therapeutic failure may go unrecognized until a catastrophic outcome
+      (unintended pregnancy, thrombosis, cancer progression) has already occurred. Rifampin
+      represents the most potent clinical inducer in routine use, capable of reducing the
+      AUC of cyclosporine by up to 90% and reducing methadone levels by approximately 50%,
+      precipitating acute opioid withdrawal within 3–7 days of initiation. Nurses managing
+      patients on rifampin-based TB regimens must proactively audit the entire medication
+      list for substrates at risk and flag potential interactions for pharmacist and
+      prescriber review before the first dose is administered.
+    </p>
+    <p>
+      A particularly hazardous scenario is when an enzyme inducer is discontinued in a patient
+      who has been dose-escalated to maintain therapeutic substrate levels during the induction
+      period. When rifampin or carbamazepine is stopped — whether therapeutically or abruptly
+      — the enzymatic machinery that had been degrading the substrate returns to baseline
+      over 1–2 weeks, and substrate concentrations rise progressively toward toxic levels.
+      This "reverse induction" scenario is responsible for cases of warfarin-related
+      hemorrhage, tacrolimus nephrotoxicity, and CNS drug toxicity that occur days after a
+      known inducer is discontinued. Nurses managing post-transplant patients being transitioned
+      off rifampin for TB treatment must anticipate this risk and ensure that calcineurin
+      inhibitor levels are checked every 2–3 days during the washout period, with dose
+      reductions implemented proactively before levels become supratherapeutic.
+    </p>
+    <p>
+      St. John's wort (Hypericum perforatum) deserves special emphasis as the most clinically
+      impactful non-prescription CYP inducer. Its active component, hyperforin, is a potent
+      PXR activator that induces CYP3A4 and P-glycoprotein expression at commercially
+      available doses. Documented clinical consequences of unrecognized St. John's wort
+      use include acute transplant rejection in stable cyclosporine-treated patients,
+      HIV viral rebound in patients on protease inhibitors, reduced anticoagulation with
+      warfarin, and reduced plasma levels of digoxin, amitriptyline, alprazolam, and oral
+      contraceptives. Because St. John's wort is sold over the counter as a supplement for
+      mild depression and mood disorders, patients frequently do not report it as a
+      medication. Complete medication reconciliation — explicitly asking about herbal
+      products, dietary supplements, and vitamins in addition to prescription drugs — is
+      a nursing responsibility that directly prevents this category of preventable harm.
+    </p>
+  </div>
+
+  <!-- Major Inducers Table -->
+  <h2 class="text-2xl font-serif font-bold mb-4">Major Clinical CYP Inducers</h2>
+  <div class="overflow-x-auto mb-10">
+    <table class="table table-zebra w-full">
+      <thead>
+        <tr>
+          <th>Drug</th>
+          <th>Category</th>
+          <th>Isoforms Induced</th>
+          <th>Strength</th>
+          <th>Clinical Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        {majorInducers.map(ind => (
+          <tr>
+            <td class="font-medium">{ind.name}</td>
+            <td class="text-sm">{ind.category}</td>
+            <td><span class="badge badge-outline badge-sm font-mono text-xs">{ind.isoforms}</span></td>
+            <td>
+              <span class={`badge badge-sm ${ind.strength === 'strong' ? 'badge-error' : ind.strength === 'moderate' ? 'badge-warning' : 'badge-ghost'}`}>
+                {ind.strength}
+              </span>
+            </td>
+            <td class="text-sm max-w-sm">{ind.mechanism}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Substrates at Risk -->
+  <h2 class="text-2xl font-serif font-bold mb-4">High-Priority Substrates at Risk of Therapeutic Failure</h2>
+  <div class="overflow-x-auto mb-10">
+    <table class="table table-zebra w-full">
+      <thead>
+        <tr>
+          <th>Substrate / Drug Class</th>
+          <th>Clinical Consequence & Management</th>
+        </tr>
+      </thead>
+      <tbody>
+        {substrates.map(sub => (
+          <tr>
+            <td class="font-medium align-top">{sub.name}</td>
+            <td class="text-sm">{sub.impact}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Drugs from database with inducer tags -->
+  {inducerDrugs.length > 0 && (
+    <>
+      <h2 class="text-2xl font-serif font-bold mb-4">Enzyme Inducers in the Drug Database</h2>
+      <div class="overflow-x-auto mb-10">
+        <table class="table table-zebra w-full">
+          <thead>
+            <tr>
+              <th>Drug</th>
+              <th>Drug Class</th>
+              <th>Inducer Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            {inducerDrugs.map((drug: any) => {
+              const inducerTags = (drug.interaction_tags || []).filter((t: string) => t.includes('inducer'));
+              return (
+                <tr>
+                  <td>
+                    <a href={`${base}drugs/${drug.id}/`} class="link link-hover font-medium">{drug.generic_name}</a>
+                  </td>
+                  <td class="text-sm">{drug.drug_class}</td>
+                  <td>
+                    <div class="flex flex-wrap gap-1">
+                      {inducerTags.map((t: string) => (
+                        <span class="badge badge-outline badge-xs font-mono">{t}</span>
+                      ))}
+                    </div>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </>
+  )}
+
+  <div class="alert alert-error mt-4">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    <div>
+      <p class="font-semibold">Critical Safety — Inducer Start and Stop</p>
+      <p class="text-sm">
+        When a strong CYP inducer (rifampin, carbamazepine, phenytoin) is <strong>started</strong>:
+        anticipate reduced substrate levels over 7–14 days; increase monitoring frequency.
+        When a strong inducer is <strong>stopped</strong>: anticipate rising substrate concentrations
+        over the next 1–2 weeks as enzyme levels normalize; reduce substrate doses proactively
+        and monitor for toxicity. This is especially critical for tacrolimus, cyclosporine, warfarin, and methadone.
+      </p>
+    </div>
+  </div>
+</SchemaLayout>

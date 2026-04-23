@@ -1,7 +1,146 @@
 ---
 import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+const base = import.meta.env.BASE_URL;
+
+const subPages = [
+  {
+    href: `${base}schemas/09-drug-interactions/cyp-inhibition/`,
+    title: 'CYP Inhibition',
+    description: 'Competitive and mechanism-based inhibitors of CYP isoforms; substrates at risk; landmark interaction pairs with management strategies.',
+    icon: '🔴',
+  },
+  {
+    href: `${base}schemas/09-drug-interactions/cyp-induction/`,
+    title: 'CYP Induction',
+    description: 'Nuclear receptor–mediated enzyme induction; rifampin, carbamazepine, phenytoin, and St. John\'s wort as key inducers; clinical consequences.',
+    icon: '⬆️',
+  },
+  {
+    href: `${base}schemas/09-drug-interactions/transporter-interactions/`,
+    title: 'Transporter Interactions',
+    description: 'P-glycoprotein, OATP, and OCT-mediated interactions; digoxin-amiodarone, statins-cyclosporine, and metformin anchor pairs.',
+    icon: '🚪',
+  },
+  {
+    href: `${base}schemas/09-drug-interactions/pd-additive-toxicity/`,
+    title: 'PD Additive Toxicity',
+    description: 'Pharmacodynamic synergism leading to serotonin syndrome, QT prolongation, CNS depression, nephrotoxicity, bleeding, and myelosuppression.',
+    icon: '⚡',
+  },
+  {
+    href: `${base}schemas/09-drug-interactions/pd-antagonism/`,
+    title: 'PD Antagonism',
+    description: 'Pharmacodynamic opposition: β-blockers vs. β2-agonists, NSAIDs vs. antihypertensives, opioids vs. prokinetics.',
+    icon: '🚫',
+  },
+  {
+    href: `${base}schemas/09-drug-interactions/food-drug/`,
+    title: 'Food–Drug Interactions',
+    description: 'Grapefruit/CYP3A4, tyramine/MAOIs, vitamin K/warfarin, dairy/tetracyclines, alcohol combinations, and high-fat meal absorption effects.',
+    icon: '🍊',
+  },
+  {
+    href: `${base}schemas/09-drug-interactions/protein-binding/`,
+    title: 'Protein Binding Displacement',
+    description: 'Plasma protein binding, albumin displacement interactions, clinical magnitude of effect, and correction of a common misconception.',
+    icon: '🔗',
+  },
+];
 ---
-<SchemaLayout title="Drug Interactions" schema="drug-interactions">
-  <h1 class="text-3xl font-serif font-bold mb-4">Drug Interactions</h1>
-  <p>Content coming soon.</p>
+<SchemaLayout
+  title="Drug Interactions — Schema 9"
+  schema="drug-interactions"
+  description="A mechanistic survey of pharmacokinetic and pharmacodynamic drug interactions: CYP inhibition and induction, transporter proteins, additive toxicity, pharmacodynamic antagonism, food-drug interactions, and protein-binding displacement."
+>
+  <div class="mb-8">
+    <h1 class="text-4xl font-serif font-bold mb-2">Schema 9 — Drug Interactions</h1>
+    <p class="text-base-content/70 text-lg">Pharmacokinetic and pharmacodynamic interactions: mechanisms, magnitude, and nursing management</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>
+      Drug-drug interactions are among the leading preventable causes of adverse drug events,
+      accounting for an estimated 3–5% of all in-hospital medication errors and contributing
+      to over 125,000 deaths annually in the United States. The clinical significance of a
+      drug interaction is not fixed — it depends on the therapeutic index of the affected drug,
+      the patient's physiological reserve, the degree of the interaction, and the availability
+      of monitoring or reversal strategies. Understanding interactions at a mechanistic level
+      allows the clinician to anticipate, detect, and manage interaction risks before harm
+      occurs, transforming pharmacovigilance from a reactive process into a proactive one.
+      Nurses, who administer the majority of medications in acute care settings and serve as
+      the final checkpoint before drug delivery, carry a unique responsibility to recognize
+      interaction signals and act on them in real time.
+    </p>
+    <p>
+      Drug interactions are broadly classified as pharmacokinetic (PK) or pharmacodynamic (PD).
+      Pharmacokinetic interactions alter the concentration of a drug at its site of action by
+      affecting absorption, distribution, metabolism, or excretion — the four processes that
+      govern how much drug reaches the receptor and how long it remains there. The most
+      clinically consequential PK interactions involve the cytochrome P450 (CYP) enzyme
+      superfamily and membrane drug transporters such as P-glycoprotein, OATP, and OCT,
+      which together regulate the biotransformation and tissue distribution of the majority
+      of prescribed medications. Pharmacodynamic interactions, by contrast, occur at the
+      receptor or effector level and involve additive, synergistic, or antagonistic effects
+      without necessarily altering drug concentrations. Both types carry patient safety
+      implications, but they require different detection and management strategies: PK
+      interactions often manifest as toxic drug levels or therapeutic failure detectable via
+      serum drug concentrations or clinical signs of toxicity, whereas PD interactions may
+      produce overlapping clinical syndromes that require syndromic recognition.
+    </p>
+    <p>
+      Polypharmacy — the concurrent use of five or more medications — exponentially amplifies
+      interaction risk. Older adults are disproportionately affected: the average Medicare
+      beneficiary fills 20 or more unique prescriptions annually, and each additional drug
+      added to a regimen introduces a combinatorial increase in the number of possible
+      pairwise interactions. Age-related physiologic changes compound the risk: reduced
+      hepatic mass and CYP activity decrease metabolic clearance, declining renal function
+      reduces excretion of renally cleared drugs and their metabolites, decreased albumin
+      increases the free fraction of highly protein-bound drugs, and reduced volume of
+      distribution for water-soluble drugs increases plasma concentrations. In this context,
+      the Beers Criteria, START/STOPP criteria, and Screening Tool for Older Persons'
+      Prescriptions serve as evidence-based frameworks for identifying high-risk combinations
+      in geriatric patients, and nurses conducting medication reconciliation at transitions
+      of care are positioned to apply these tools directly.
+    </p>
+    <p>
+      Nursing's role in drug interaction prevention extends well beyond cross-checking an
+      interaction database before administration. Comprehensive medication reconciliation at
+      admission, transfer, and discharge — including over-the-counter medications, herbal
+      supplements, and recreational substances — forms the foundation of interaction
+      prevention, as unrecognized co-medications cannot be screened. During administration,
+      nurses must apply knowledge of food-drug and drug-drug timing restrictions: for
+      example, separating fluoroquinolones and tetracyclines from divalent cation-containing
+      antacids, dairy products, and iron supplements by at least two hours; administering
+      warfarin at the same time each evening and counseling patients about dietary vitamin K
+      consistency; and recognizing that grapefruit juice, consumed hours before a dose, can
+      profoundly inhibit intestinal CYP3A4 and increase exposure to affected substrates.
+      The seven sub-sections of this schema provide the mechanistic foundation and clinical
+      guidance for each major interaction category encountered in acute and ambulatory practice.
+    </p>
+  </div>
+
+  <h2 class="text-2xl font-serif font-bold mb-4">Interaction Categories</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-10">
+    {subPages.map(page => (
+      <a href={page.href} class="card card-compact bg-base-100 border border-base-300 hover:border-primary hover:shadow-md transition-all">
+        <div class="card-body">
+          <h3 class="card-title text-lg">
+            <span class="text-2xl mr-1">{page.icon}</span>
+            {page.title}
+          </h3>
+          <p class="text-sm text-base-content/70">{page.description}</p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <div class="alert alert-info">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+    </svg>
+    <div>
+      <p class="font-semibold">Clinical Reminder</p>
+      <p class="text-sm">All drug interactions should be verified against current clinical pharmacology resources, institutional guidelines, and patient-specific factors including renal/hepatic function, age, and genetic polymorphisms. This resource is educational and does not replace clinical decision support software at the point of care.</p>
+    </div>
+  </div>
 </SchemaLayout>

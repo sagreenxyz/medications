@@ -1,0 +1,270 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+
+// Highly protein-bound drugs from the database
+const highProteinBinding = (drugsData as any[]).filter(d => {
+  const pb = d.pharmacokinetics?.protein_binding || '';
+  const pbLower = pb.toLowerCase();
+  // Check for percentage ≥ 85%
+  const match = pb.match(/(\d+)/g);
+  if (match) {
+    const nums = match.map(Number);
+    const maxVal = Math.max(...nums);
+    if (maxVal >= 85) return true;
+  }
+  // Check for qualitative descriptors
+  return pbLower.includes('high') || pbLower.includes('extensive') || pbLower.includes('>90') ||
+    pbLower.includes('>85') || pbLower.includes('>95') || pbLower.includes('>99');
+});
+
+// Drugs with protein binding displacement interaction tags
+const displacementDrugs = (drugsData as any[]).filter(d =>
+  (d.interaction_tags || []).some((t: string) => t.toLowerCase().includes('protein-binding') || t.toLowerCase().includes('bilirubin-displacement'))
+);
+
+// Key highly protein-bound drugs (curated)
+const curatedHighPB = [
+  { drug: 'Warfarin', binding: '99%', protein: 'Albumin (primarily)', clinical: 'Displacement interactions historically cited but clinical magnitude debated; NSAIDs, phenytoin, sulfonamides cited as displacers; transient increase in free fraction rapidly corrected by increased clearance.' },
+  { drug: 'Phenytoin', binding: '90%', protein: 'Albumin', clinical: 'Decreased binding in hypoalbuminemia, uremia, and pregnancy elevates free fraction. Measure free phenytoin levels in these populations; total level interpretation is unreliable.' },
+  { drug: 'Valproate', binding: '85–95%', protein: 'Albumin (saturable)', clinical: 'Protein binding becomes saturated at high doses, causing disproportionate increases in free fraction; free valproate monitoring may be needed in toxicity evaluation.' },
+  { drug: 'NSAIDs (ibuprofen, naproxen)', binding: '>99%', protein: 'Albumin', clinical: 'NSAIDs can displace other highly albumin-bound drugs; most clinically significant displacement effect is on warfarin — though PK studies show the total warfarin level falls rapidly, making it a transient interaction.' },
+  { drug: 'Diazepam', binding: '98%', protein: 'Albumin', clinical: 'Free fraction increases in hypoalbuminemia and with displacing drugs; CNS effects may be more pronounced in critically ill patients with low albumin.' },
+  { drug: 'Cyclosporine', binding: '90%', protein: 'Lipoproteins and erythrocytes (not primarily albumin)', clinical: 'Binding to lipoproteins means that hyperlipidemia changes can affect drug distribution; whole blood level (not plasma level) is used for monitoring.' },
+  { drug: 'Amiodarone', binding: '>96%', protein: 'Albumin', clinical: 'Highly lipophilic; massive Vd (~60 L/kg). Protein binding displacement contributes marginally to its interactions relative to its profound CYP and P-gp inhibitory effects.' },
+  { drug: 'Furosemide', binding: '91–99%', protein: 'Albumin', clinical: 'In severe hypoalbuminemia, reduced protein binding reduces tubular delivery of furosemide to its site of action — a pharmacokinetic basis for loop diuretic resistance in nephrotic syndrome.' },
+  { drug: 'Ceftriaxone', binding: '85–95%', protein: 'Albumin', clinical: 'In neonates, ceftriaxone displaces bilirubin from albumin binding sites, raising free bilirubin and risking kernicterus — absolute contraindication in neonates receiving calcium or hyperbilirubinemic neonates.' },
+];
+---
+<SchemaLayout
+  title="Protein Binding Displacement — Drug Interactions"
+  schema="drug-interactions"
+  description="Plasma protein binding, albumin displacement interactions, clinical magnitude of effect, and the common misconception about the significance of displacement in practice."
+>
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/09-drug-interactions/`} class="link link-hover">Drug Interactions</a></li>
+        <li>Protein Binding</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold mb-2">Protein Binding &amp; Displacement Interactions</h1>
+    <p class="text-base-content/70 text-lg">Plasma albumin binding, free drug fraction, and the clinical reality of displacement interactions</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>
+      The concept that drugs must be pharmacologically "free" — unbound to plasma proteins —
+      to exert their effects is a foundational principle of clinical pharmacokinetics.
+      Of the plasma proteins that bind drugs, albumin is quantitatively dominant, binding
+      the vast majority of acidic drugs (including warfarin, NSAIDs, phenytoin, valproate,
+      furosemide, and most penicillins) via two primary binding sites. Basic drugs (opioids,
+      propranolol, lidocaine, amitriptyline, quinidine) bind preferentially to α1-acid
+      glycoprotein (AAG), an acute-phase reactant whose concentration rises during stress,
+      infection, and post-surgery, temporarily increasing binding of basic drugs in
+      those states. Lipoproteins bind lipophilic drugs including cyclosporine and
+      amiodarone. The free (unbound) fraction determines the pharmacodynamic effect
+      because only free drug crosses membranes, reaches receptors, and is subject to
+      hepatic extraction and renal filtration for elimination.
+    </p>
+    <p>
+      Protein binding displacement occurs when drug A displaces drug B from albumin
+      binding sites, transiently increasing the free fraction of drug B. For decades,
+      this was taught as a clinically significant interaction mechanism — warfarin displaced
+      by NSAIDs, phenytoin displaced by valproate — with the implication that displacement
+      raises free drug concentrations and pharmacodynamic effect. Modern pharmacokinetic
+      analysis has substantially revised this teaching. The critical insight is that an
+      increase in the free fraction of drug B also increases its clearance: the liver and
+      kidney, which can only eliminate free drug, now have more substrate available and
+      accelerate elimination proportionally. For drugs with low hepatic extraction ratios
+      — the majority of clinically relevant highly protein-bound drugs, including warfarin
+      and phenytoin — clearance is directly proportional to the free fraction (capacity-limited
+      or restrictive clearance model). Within hours to days, a new steady state is established
+      where the free concentration returns to its original value despite a lower total
+      drug concentration. The "interaction" produces a transient and self-correcting
+      change in total drug level, not a sustained elevation in free drug effect. This
+      is why isolated protein-binding displacement in vitro does not reliably predict
+      clinically significant pharmacodynamic change in vivo.
+    </p>
+    <p>
+      Despite this revision, several clinically important exceptions justify continued
+      attention to protein-binding displacement. First, for drugs with high hepatic
+      extraction ratios (high-extraction or flow-limited clearance, where elimination
+      depends on hepatic blood flow rather than free fraction — lidocaine, propranolol,
+      morphine), displacement does not accelerate clearance proportionally and free
+      concentration can transiently rise with clinical effect. Second, displacement is
+      clinically significant when the volume of distribution is small (highly protein-bound
+      drug confined to plasma, little tissue distribution) and the therapeutic margin is
+      narrow — conditions partially met by warfarin and phenytoin. Third, the context of
+      co-occurring pharmacokinetic interactions (where the displacer also inhibits CYP
+      or renal elimination of the displaced drug) converts a pharmacokinetically
+      insignificant displacement into a clinically dangerous combination, because
+      increased free fraction cannot be rapidly cleared. The warfarin-phenylbutazone
+      combination (now largely historical) caused fatal bleeding through exactly this
+      mechanism: phenylbutazone displaced warfarin from albumin while simultaneously
+      inhibiting its CYP2C9-mediated elimination, producing a sustained elevation in
+      free warfarin concentration. When interpreting reports of protein-binding displacement
+      interactions, the student should ask: is there also a PK elimination interaction
+      that would prevent compensatory clearance?
+    </p>
+    <p>
+      Hypoalbuminemia is the clinically encountered condition that most reliably elevates
+      free drug fractions of albumin-bound drugs with physiological rather than
+      drug-induced displacement as the cause. Albumin levels below 2.0 g/dL —
+      common in severe liver disease, nephrotic syndrome, malnutrition, and critical
+      illness — can double the free fraction of phenytoin, warfarin, and valproate.
+      For phenytoin, the total plasma concentration is a misleading guide in
+      hypoalbuminemic patients: total phenytoin levels may appear therapeutic or
+      sub-therapeutic while free levels are supratherapeutic and toxic. The Sheiner-Tozer
+      equation (adjusted phenytoin = measured total / [0.2 × albumin + 0.1]) corrects
+      for hypoalbuminemia, but direct measurement of free phenytoin is preferred in
+      complex patients. Similarly, uremia alters phenytoin protein binding through
+      competitive displacement of uremic retention solutes from albumin, an important
+      consideration in patients with end-stage renal disease on phenytoin. Nurses
+      caring for patients with liver disease, nephrotic syndrome, or critical illness
+      should be aware that "normal" total drug levels may represent overexposure
+      when protein binding is reduced, and should communicate this to the prescriber
+      when toxicity signs appear at seemingly therapeutic drug levels.
+    </p>
+  </div>
+
+  <!-- Highly Protein-Bound Drugs — Curated -->
+  <h2 class="text-2xl font-serif font-bold mb-4">High Clinical-Priority Highly Protein-Bound Drugs</h2>
+  <div class="overflow-x-auto mb-10">
+    <table class="table table-zebra w-full">
+      <thead>
+        <tr>
+          <th>Drug</th>
+          <th>Protein Binding</th>
+          <th>Binding Protein</th>
+          <th>Clinical Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        {curatedHighPB.map(entry => (
+          <tr>
+            <td class="font-medium">{entry.drug}</td>
+            <td><span class="badge badge-outline badge-sm font-mono">{entry.binding}</span></td>
+            <td class="text-sm">{entry.protein}</td>
+            <td class="text-sm max-w-sm">{entry.clinical}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Highly protein-bound drugs from database -->
+  {highProteinBinding.length > 0 && (
+    <>
+      <h2 class="text-2xl font-serif font-bold mb-3">Highly Protein-Bound Drugs in the Database (≥85%)</h2>
+      <p class="text-sm text-base-content/70 mb-4">
+        These drugs may exhibit altered free fraction in hypoalbuminemia, uremia, or when displaced by competing drugs.
+        Monitor free levels (not total) for narrow therapeutic index drugs (phenytoin, valproate) when albumin is low.
+      </p>
+      <div class="overflow-x-auto mb-10">
+        <table class="table table-zebra table-sm w-full">
+          <thead>
+            <tr>
+              <th>Drug</th>
+              <th>Drug Class</th>
+              <th>Protein Binding</th>
+              <th>NTI</th>
+            </tr>
+          </thead>
+          <tbody>
+            {highProteinBinding.map((drug: any) => {
+              const ntiIds = new Set(['warfarin','phenytoin','digoxin','lithium','cyclosporine','tacrolimus',
+                'methotrexate','vancomycin','valproate','carbamazepine','theophylline','amiodarone']);
+              const isNTI = ntiIds.has(drug.id);
+              return (
+                <tr class={isNTI ? 'bg-error/5' : ''}>
+                  <td>
+                    <a href={`${base}drugs/${drug.id}/`} class="link link-hover font-medium">{drug.generic_name}</a>
+                  </td>
+                  <td class="text-sm">{drug.drug_class}</td>
+                  <td class="font-mono text-sm">{drug.pharmacokinetics?.protein_binding || '—'}</td>
+                  <td>
+                    {isNTI && <span class="badge badge-error badge-xs">NTI</span>}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </>
+  )}
+
+  <!-- Displacement-tagged drugs -->
+  {displacementDrugs.length > 0 && (
+    <>
+      <h2 class="text-2xl font-serif font-bold mb-3">Displacement-Related Interaction Tags in the Database</h2>
+      <div class="overflow-x-auto mb-10">
+        <table class="table table-zebra table-sm w-full">
+          <thead><tr><th>Drug</th><th>Drug Class</th><th>Interaction Tags</th></tr></thead>
+          <tbody>
+            {displacementDrugs.map((drug: any) => {
+              const dispTags = (drug.interaction_tags||[]).filter((t:string) =>
+                t.toLowerCase().includes('protein-binding') || t.toLowerCase().includes('bilirubin')
+              );
+              return (
+                <tr>
+                  <td><a href={`${base}drugs/${drug.id}/`} class="link link-hover">{drug.generic_name}</a></td>
+                  <td class="text-sm">{drug.drug_class}</td>
+                  <td>
+                    {dispTags.map((t: string) => (
+                      <span class="badge badge-outline badge-xs mr-1">{t}</span>
+                    ))}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </>
+  )}
+
+  <!-- Correcting the Misconception -->
+  <div class="card bg-base-200 mb-10">
+    <div class="card-body">
+      <h3 class="card-title text-lg">⚠️ Correcting a Common Misconception</h3>
+      <p class="text-sm">
+        <strong>Myth:</strong> "Drug A displaces Drug B from protein → Drug B free fraction ↑ → Drug B toxicity."
+      </p>
+      <p class="text-sm mt-2">
+        <strong>Reality:</strong> For most highly protein-bound drugs with low hepatic extraction ratios,
+        displacement transiently raises free fraction → free drug is rapidly cleared (restrictive clearance model)
+        → free concentration returns to baseline within hours; total concentration falls but free drug is unchanged at steady state.
+        The "interaction" is pharmacokinetically self-correcting in most cases.
+      </p>
+      <p class="text-sm mt-2">
+        <strong>Exceptions where displacement IS clinically significant:</strong>
+      </p>
+      <ul class="text-sm list-disc list-inside space-y-1 mt-1">
+        <li>Concurrent CYP or elimination inhibition (displacement + impaired clearance = sustained free level elevation)</li>
+        <li>Hypoalbuminemia (physiological, not drug-induced displacement — no compensatory albumin available)</li>
+        <li>Uremia (endogenous displacing solutes + altered renal clearance)</li>
+        <li>Neonatal hyperbilirubinemia: ceftriaxone displaces bilirubin → free bilirubin elevation → kernicterus risk</li>
+        <li>High extraction ratio drugs: lidocaine, propranolol — clearance is flow-limited, not free fraction-limited</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="alert alert-info">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+    </svg>
+    <div>
+      <p class="font-semibold">Clinical Monitoring Principle</p>
+      <p class="text-sm">
+        For narrow therapeutic index drugs (phenytoin, valproate, cyclosporine) in patients with albumin &lt;2.5 g/dL,
+        uremia (CrCl &lt;20 mL/min), or critical illness: measure <strong>free drug concentrations</strong> rather than
+        relying on total levels. Report unexplained toxicity at "therapeutic" total levels to the prescriber; free fraction
+        measurement is indicated.
+      </p>
+    </div>
+  </div>
+</SchemaLayout>

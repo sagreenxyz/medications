@@ -1,0 +1,337 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+
+// Drugs that are CYP inhibitors based on interaction_tags
+const cypInhibitors = (drugsData as any[]).filter(d =>
+  (d.interaction_tags || []).some((t: string) =>
+    t.includes('CYP') && (t.includes('inhibitor') || t.includes('inhibit'))
+  )
+);
+
+// Categorize by isoform
+function inhibitsIsoform(drug: any, isoform: string): boolean {
+  return (drug.interaction_tags || []).some((t: string) =>
+    t.toLowerCase().includes(isoform.toLowerCase()) && t.toLowerCase().includes('inhibitor')
+  );
+}
+function inhibitStrength(drug: any): string {
+  const tags: string[] = drug.interaction_tags || [];
+  if (tags.some(t => t.includes('strong'))) return 'strong';
+  if (tags.some(t => t.includes('moderate') || t.includes('inhibitor-moderate'))) return 'moderate';
+  return 'weak/moderate';
+}
+
+const cyp3a4Inhibitors = cypInhibitors.filter(d => inhibitsIsoform(d, '3A4'));
+const cyp2d6Inhibitors = cypInhibitors.filter(d => inhibitsIsoform(d, '2D6'));
+const cyp2c9Inhibitors = cypInhibitors.filter(d => inhibitsIsoform(d, '2C9'));
+const cyp2c19Inhibitors = cypInhibitors.filter(d => inhibitsIsoform(d, '2C19'));
+const cyp1a2Inhibitors = cypInhibitors.filter(d => inhibitsIsoform(d, '1A2'));
+
+// Narrow therapeutic index substrates at risk
+const ntiIds = new Set(['warfarin','phenytoin','digoxin','lithium','cyclosporine','tacrolimus',
+  'methotrexate','vancomycin','valproate','carbamazepine','theophylline','amiodarone',
+  'sirolimus','everolimus','clozapine','haloperidol']);
+
+// Notable interaction pairs for prose examples
+const notablePairs = [
+  { inhibitor: 'Fluconazole', substrate: 'Warfarin', isoform: 'CYP2C9', mechanism: 'Fluconazole is a potent CYP2C9 inhibitor; it dramatically reduces S-warfarin clearance, elevating INR by 50–100% and precipitating life-threatening bleeding. INR must be monitored frequently and warfarin dose reduced by approximately 25–50% when co-administration is unavoidable.', severity: 'major' },
+  { inhibitor: 'Amiodarone', substrate: 'Warfarin', isoform: 'CYP2C9/2D6', mechanism: 'Amiodarone and its active metabolite desethylamiodarone inhibit CYP2C9 and CYP2D6 with an unusually long duration (weeks to months) reflecting amiodarone\'s extraordinary half-life of 40–55 days. INR monitoring must continue for months after amiodarone discontinuation.', severity: 'major' },
+  { inhibitor: 'Fluoxetine', substrate: 'Codeine → morphine', isoform: 'CYP2D6', mechanism: 'Fluoxetine and its active metabolite norfluoxetine are potent CYP2D6 inhibitors. Codeine is a prodrug requiring CYP2D6 activation to morphine; inhibition converts extensive metabolizers to phenotypic poor metabolizers, causing analgesic failure. Conversely, tramadol O-demethylation to active M1 is blocked, reducing efficacy but also risk of opioid toxicity.', severity: 'moderate' },
+  { inhibitor: 'Clarithromycin', substrate: 'Simvastatin / Lovastatin', isoform: 'CYP3A4', mechanism: 'Clarithromycin is a potent CYP3A4 inhibitor via reversible competitive inhibition. Co-administration with CYP3A4-metabolized statins (simvastatin, lovastatin, atorvastatin) elevates statin AUC 5- to 10-fold, dramatically increasing myopathy and rhabdomyolysis risk. Simvastatin and lovastatin should be held during clarithromycin courses.', severity: 'major' },
+  { inhibitor: 'Ritonavir', substrate: 'Multiple CYP3A4 substrates', isoform: 'CYP3A4', mechanism: 'Ritonavir is the most potent reversible CYP3A4 inhibitor in clinical use, exploited pharmacologically as a "booster" (at sub-therapeutic doses) to increase exposure of co-administered HIV protease inhibitors and direct-acting antivirals. When used at full antiviral doses, it profoundly inhibits CYP3A4, 2D6, and 2C9, generating a high risk of interactions with a vast array of co-medications.', severity: 'major' },
+  { inhibitor: 'Ketoconazole', substrate: 'Midazolam', isoform: 'CYP3A4', mechanism: 'Ketoconazole is a reference standard CYP3A4 inhibitor used in drug interaction studies; it increases midazolam AUC ~15-fold and prolongs benzodiazepine sedation significantly. This interaction illustrates the danger of combining any strong CYP3A4 inhibitor with narrow-window sedatives, including triazolam, alprazolam, and oral midazolam.', severity: 'major' },
+];
+---
+<SchemaLayout
+  title="CYP Inhibition — Drug Interactions"
+  schema="drug-interactions"
+  description="Mechanisms of CYP enzyme inhibition, major inhibitors by isoform, substrates at risk, and clinical management of pharmacokinetic drug interactions."
+>
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/09-drug-interactions/`} class="link link-hover">Drug Interactions</a></li>
+        <li>CYP Inhibition</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold mb-2">CYP Inhibition</h1>
+    <p class="text-base-content/70 text-lg">Competitive and mechanism-based CYP enzyme inhibition: substrates at risk and clinical management</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>
+      Cytochrome P450 inhibition is the single most common mechanism underlying clinically
+      significant pharmacokinetic drug-drug interactions, and understanding its principles
+      is essential for safe prescribing and medication management. When a CYP inhibitor
+      is co-administered with a drug that depends on that isoform for elimination, the
+      inhibitor reduces metabolic clearance of the substrate, causing plasma concentrations
+      to rise above the intended therapeutic range. For drugs with narrow therapeutic indices
+      — anticoagulants, antiepileptics, immunosuppressants, cardiac glycosides, antiarrhythmics,
+      and opioids — even modest increases in substrate concentration can produce toxicity
+      with potentially fatal consequences. The magnitude of the interaction depends on the
+      potency of the inhibitor (quantified as its Ki, the inhibitory concentration constant),
+      the fraction of the substrate's clearance mediated by that isoform (fm), and whether
+      the substrate has alternative metabolic pathways that remain uninhibited.
+    </p>
+    <p>
+      Mechanistically, CYP inhibition occurs through two distinct pathways with profoundly
+      different clinical time courses. Reversible (competitive) inhibition occurs when an
+      inhibitor drug directly competes with the substrate for binding at the active site of
+      the enzyme; this type of inhibition is immediate in onset and resolves rapidly upon
+      elimination of the inhibitor, typically within four to five half-lives. Mechanism-based
+      (irreversible) inhibition, also called "suicide inhibition," occurs when the inhibitor
+      is metabolized by the CYP enzyme to a reactive intermediate that covalently binds to
+      and permanently inactivates the enzyme. Recovery from mechanism-based inhibition
+      requires de novo synthesis of new CYP protein, a process that takes days to weeks.
+      Clinically important mechanism-based CYP3A4 inhibitors include clarithromycin,
+      erythromycin (via nitrosoalkane formation), diltiazem, verapamil, amiodarone, and the
+      irreversible CYP2C19 inhibitor omeprazole at high doses. Fluoxetine and its
+      metabolite norfluoxetine are mechanism-based inhibitors of CYP2D6, explaining why
+      fluoxetine's interaction effects persist for weeks after discontinuation.
+    </p>
+    <p>
+      The student should note that inhibitor potency is classified clinically as strong
+      (causing a ≥5-fold increase in substrate AUC or ≥80% reduction in substrate clearance),
+      moderate (≥2-fold but &lt;5-fold AUC increase), and weak (&lt;2-fold AUC increase) — a
+      classification system used by the FDA for drug interaction labeling. Strong inhibitors
+      of CYP3A4 include azole antifungals (ketoconazole, itraconazole, voriconazole,
+      posaconazole, isavuconazole), macrolide antibiotics (clarithromycin, erythromycin),
+      HIV protease inhibitors (ritonavir, cobicistat, lopinavir), and the antidepressant
+      nefazodone. Strong CYP2D6 inhibitors include bupropion, fluoxetine, paroxetine,
+      duloxetine, and the antipsychotic haloperidol. Strong CYP2C9 inhibitors include
+      fluconazole and amiodarone — both of which critically interact with warfarin. When
+      a strong inhibitor is co-prescribed with a narrow therapeutic index substrate, the
+      prescriber must either avoid the combination, reduce the substrate dose prospectively,
+      or implement intensive therapeutic drug monitoring. Nurses administering medications
+      in this class of interactions must recognize toxicity signs early and communicate
+      them urgently to the prescribing team.
+    </p>
+    <p>
+      A frequently underappreciated aspect of CYP inhibition is the contribution of
+      intestinal CYP3A4, which resides in the enterocytes of the small intestinal mucosa.
+      Drugs that are CYP3A4 substrates with significant first-pass intestinal metabolism
+      — including cyclosporine, tacrolimus, midazolam, buspirone, simvastatin, and
+      felodipine — are particularly vulnerable to inhibitors that target intestinal CYP3A4
+      because the absorptive inhibition operates in addition to hepatic inhibition,
+      compounding the interaction. Grapefruit juice acts exclusively as an intestinal
+      CYP3A4 inhibitor (furanocoumarins, particularly bergamottin, act as mechanism-based
+      inhibitors of intestinal CYP3A4 but do not reach sufficient hepatic concentrations
+      to inhibit hepatic enzyme); its interaction with oral simvastatin, cyclosporine, and
+      felodipine illustrates this mechanism and is detailed further in the
+      <a href={`${base}schemas/09-drug-interactions/food-drug/`}>Food–Drug Interactions</a> section.
+      Understanding this two-site inhibition model helps explain why the same inhibitor
+      drug may produce disproportionately large interactions with some substrates but not
+      others, depending on each substrate's relative dependence on intestinal versus
+      hepatic CYP3A4.
+    </p>
+  </div>
+
+  <!-- Notable Interaction Pairs -->
+  <h2 class="text-2xl font-serif font-bold mb-4">Notable Clinical Interaction Pairs</h2>
+  <div class="overflow-x-auto mb-10">
+    <table class="table table-zebra w-full">
+      <thead>
+        <tr>
+          <th>Inhibitor</th>
+          <th>Substrate</th>
+          <th>Isoform</th>
+          <th>Severity</th>
+          <th>Clinical Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        {notablePairs.map(pair => (
+          <tr>
+            <td class="font-medium">{pair.inhibitor}</td>
+            <td>{pair.substrate}</td>
+            <td><span class="badge badge-outline badge-sm">{pair.isoform}</span></td>
+            <td>
+              <span class={`badge badge-sm ${pair.severity === 'major' ? 'badge-error' : pair.severity === 'moderate' ? 'badge-warning' : 'badge-ghost'}`}>
+                {pair.severity}
+              </span>
+            </td>
+            <td class="text-sm max-w-xs">{pair.mechanism}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- CYP3A4 Inhibitors -->
+  <h2 class="text-2xl font-serif font-bold mb-3">CYP3A4 Inhibitors</h2>
+  <p class="text-base-content/70 mb-4 text-sm">
+    CYP3A4 metabolizes ~50% of all marketed drugs; its inhibition has the broadest clinical impact.
+    Substrates include statins, calcineurin inhibitors, benzodiazepines, HIV antiretrovirals, and many antineoplastics.
+  </p>
+  {cyp3a4Inhibitors.length > 0 ? (
+    <div class="overflow-x-auto mb-10">
+      <table class="table table-zebra w-full">
+        <thead>
+          <tr>
+            <th>Drug</th>
+            <th>Drug Class</th>
+            <th>Strength</th>
+            <th>Key Substrates at Risk</th>
+          </tr>
+        </thead>
+        <tbody>
+          {cyp3a4Inhibitors.map((drug: any) => (
+            <tr class={ntiIds.has(drug.id) ? 'bg-error/5' : ''}>
+              <td>
+                <a href={`${base}drugs/${drug.id}/`} class="link link-hover font-medium">{drug.generic_name}</a>
+                {ntiIds.has(drug.id) && <span class="badge badge-error badge-xs ml-1">NTI</span>}
+              </td>
+              <td class="text-sm">{drug.drug_class}</td>
+              <td>
+                <span class={`badge badge-sm ${(drug.interaction_tags||[]).some((t:string)=>t.includes('strong')) ? 'badge-error' : 'badge-warning'}`}>
+                  {inhibitStrength(drug)}
+                </span>
+              </td>
+              <td class="text-sm text-base-content/70">
+                {(drug.drug_interactions || []).slice(0,2).map((i: any) => i.drug).join(', ')}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  ) : (
+    <p class="text-base-content/50 italic mb-8">See CYP Metabolism page for full substrate lists.</p>
+  )}
+
+  <!-- CYP2D6 Inhibitors -->
+  <h2 class="text-2xl font-serif font-bold mb-3">CYP2D6 Inhibitors</h2>
+  <p class="text-base-content/70 mb-4 text-sm">
+    CYP2D6 substrates include codeine (prodrug), tramadol, metoprolol, tamoxifen, tricyclic antidepressants, and many antipsychotics.
+    Strong inhibitors convert extensive metabolizers to phenotypic poor metabolizers.
+  </p>
+  {cyp2d6Inhibitors.length > 0 ? (
+    <div class="overflow-x-auto mb-10">
+      <table class="table table-zebra w-full">
+        <thead>
+          <tr>
+            <th>Drug</th>
+            <th>Drug Class</th>
+            <th>Strength</th>
+            <th>Clinical Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          {cyp2d6Inhibitors.map((drug: any) => (
+            <tr>
+              <td>
+                <a href={`${base}drugs/${drug.id}/`} class="link link-hover font-medium">{drug.generic_name}</a>
+              </td>
+              <td class="text-sm">{drug.drug_class}</td>
+              <td>
+                <span class={`badge badge-sm ${(drug.interaction_tags||[]).some((t:string)=>t.includes('strong')||t.includes('2D6-inhibit')) ? 'badge-error' : 'badge-warning'}`}>
+                  {inhibitStrength(drug)}
+                </span>
+              </td>
+              <td class="text-sm text-base-content/70">
+                {drug.drug_class}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  ) : (
+    <p class="text-base-content/50 italic mb-8">No CYP2D6 inhibitors identified from interaction tags.</p>
+  )}
+
+  <!-- CYP2C9 Inhibitors -->
+  <h2 class="text-2xl font-serif font-bold mb-3">CYP2C9 Inhibitors</h2>
+  <p class="text-base-content/70 mb-4 text-sm">
+    Critical substrates: warfarin (S-isomer), phenytoin, NSAIDs, sulfonylureas, losartan. Co-administration with strong CYP2C9 inhibitors requires dose reduction and INR/drug level monitoring.
+  </p>
+  {cyp2c9Inhibitors.length > 0 ? (
+    <div class="overflow-x-auto mb-10">
+      <table class="table table-zebra w-full">
+        <thead>
+          <tr><th>Drug</th><th>Drug Class</th><th>Strength</th></tr>
+        </thead>
+        <tbody>
+          {cyp2c9Inhibitors.map((drug: any) => (
+            <tr>
+              <td><a href={`${base}drugs/${drug.id}/`} class="link link-hover font-medium">{drug.generic_name}</a></td>
+              <td class="text-sm">{drug.drug_class}</td>
+              <td><span class="badge badge-warning badge-sm">{inhibitStrength(drug)}</span></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  ) : (
+    <p class="text-base-content/50 italic mb-8">See CYP Metabolism page for full inhibitor lists.</p>
+  )}
+
+  <!-- CYP2C19 & CYP1A2 Inhibitors -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+    <div>
+      <h2 class="text-xl font-serif font-bold mb-3">CYP2C19 Inhibitors</h2>
+      <p class="text-sm text-base-content/70 mb-3">
+        Key substrates: clopidogrel (prodrug — inhibition reduces antiplatelet effect), omeprazole, escitalopram, phenytoin.
+        PPIs are moderate CYP2C19 inhibitors.
+      </p>
+      {cyp2c19Inhibitors.length > 0 ? (
+        <div class="overflow-x-auto">
+          <table class="table table-zebra w-full table-sm">
+            <thead><tr><th>Drug</th><th>Drug Class</th></tr></thead>
+            <tbody>
+              {cyp2c19Inhibitors.map((drug: any) => (
+                <tr>
+                  <td><a href={`${base}drugs/${drug.id}/`} class="link link-hover">{drug.generic_name}</a></td>
+                  <td class="text-sm">{drug.drug_class}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ) : (
+        <p class="text-base-content/50 italic text-sm">See CYP Metabolism page.</p>
+      )}
+    </div>
+    <div>
+      <h2 class="text-xl font-serif font-bold mb-3">CYP1A2 Inhibitors</h2>
+      <p class="text-sm text-base-content/70 mb-3">
+        Key substrates: theophylline, clozapine, olanzapine, haloperidol, caffeine.
+        Fluvoxamine is the strongest CYP1A2 inhibitor in clinical use; ciprofloxacin and enoxacin are moderate inhibitors.
+      </p>
+      {cyp1a2Inhibitors.length > 0 ? (
+        <div class="overflow-x-auto">
+          <table class="table table-zebra w-full table-sm">
+            <thead><tr><th>Drug</th><th>Drug Class</th></tr></thead>
+            <tbody>
+              {cyp1a2Inhibitors.map((drug: any) => (
+                <tr>
+                  <td><a href={`${base}drugs/${drug.id}/`} class="link link-hover">{drug.generic_name}</a></td>
+                  <td class="text-sm">{drug.drug_class}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ) : (
+        <p class="text-base-content/50 italic text-sm">See CYP Metabolism page.</p>
+      )}
+    </div>
+  </div>
+
+  <div class="alert alert-warning mt-6">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+    </svg>
+    <div>
+      <p class="font-semibold">Nursing Safety — CYP Inhibition Recognition</p>
+      <p class="text-sm">
+        When a new CYP inhibitor is added to a patient's regimen, anticipate increased drug levels in all co-administered narrow therapeutic index substrates.
+        Monitor for toxicity signs (bleeding with warfarin, sedation with CNS drugs, nephrotoxicity with calcineurin inhibitors) and notify the prescriber.
+        Mechanism-based inhibitors (clarithromycin, fluoxetine, amiodarone) may require monitoring for weeks after discontinuation.
+      </p>
+    </div>
+  </div>
+</SchemaLayout>
