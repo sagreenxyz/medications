@@ -1,0 +1,77 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+const slug = 'infectious-disease';
+const displayName = 'Infectious Disease';
+
+const drugs = (drugsData as any[]).filter(
+  (d: any) => (d.organ_systems || []).includes(slug)
+);
+const drugCount = drugs.length;
+---
+<SchemaLayout title="Infectious Disease Pharmacology" schema="organ-systems" description="Drugs classified under the Infectious Disease organ system">
+
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/01-organ-systems/`} class="link">Organ Systems</a></li>
+        <li>Infectious Disease</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-2">Infectious Disease</h1>
+    <p class="text-base-content/70 text-lg">{drugCount} drug{drugCount !== 1 ? 's' : ''} in this system</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>Infectious disease pharmacology encompasses the largest drug class in this reference, with over 100 agents targeting bacteria, viruses, fungi, and parasites. The fundamental pharmacological principle distinguishing antimicrobials from all other drug classes is selective toxicity: the drug must harm the microorganism without equivalent harm to the host, exploiting structural and biochemical features unique to the pathogen. Bacterial targets include cell wall synthesis (penicillin-binding proteins for beta-lactams, peptidoglycan crosslinking for vancomycin), 30S and 50S ribosomal subunits (aminoglycosides, tetracyclines, macrolides, chloramphenicol, linezolid), DNA replication (fluoroquinolones inhibiting topoisomerase II and IV), cell membrane integrity (polymyxins), and metabolic pathways (sulfonamides and trimethoprim inhibiting folate synthesis). Viral targets include reverse transcriptase and integrase in HIV, neuraminidase in influenza, viral polymerases in herpesviruses and hepatitis, and the viral protease. Nursing priorities encompass allergy history verification, culture-before-antibiotics timing, infusion reaction monitoring, organ toxicity surveillance, and patient education on completing prescribed courses.</p>
+    <p>Beta-lactam antibiotics -- penicillins, cephalosporins, carbapenems, and monobactams -- share a beta-lactam ring that covalently binds penicillin-binding proteins (PBPs), inhibiting the final transpeptidation step of peptidoglycan crosslinking and triggering autolytic enzymes. They are bactericidal and their pharmacodynamic driver is time above the minimum inhibitory concentration (T>MIC), which guides dosing frequency and extended infusion strategies. Cross-reactivity between penicillins and cephalosporins is approximately 1 to 2 percent (not the historically cited 10 percent) and is side-chain dependent; cephalosporins are generally safe in patients with non-anaphylactic penicillin allergy. Vancomycin, a glycopeptide active against MRSA and other Gram-positive organisms, inhibits the D-Ala-D-Ala terminus of the peptidoglycan precursor. Modern vancomycin dosing uses area-under-the-curve (AUC)-guided monitoring (target AUC 400 to 600 mg*h/L) rather than simple trough targets to optimize efficacy and minimize nephrotoxicity; nurses must coordinate sample timing precisely with pharmacy.</p>
+    <p>Antiretroviral therapy (ART) for HIV follows the principle of combinatorial attack on the viral replication cycle using at least three agents from two or more mechanistic classes. The current preferred backbone is a nucleoside reverse transcriptase inhibitor combination (tenofovir alafenamide plus emtricitabine) with an integrase strand transfer inhibitor (bictegravir, dolutegravir). Integrase inhibitors are preferred for their high barrier to resistance, favorable tolerability profile, and minimal drug interactions compared with PI-based regimens. Nurses managing patients on ART must reinforce that missed doses select for resistance mutations that can compromise the entire drug class; adherence counseling is as critical as clinical monitoring. Hepatitis C treatment has been transformed by direct-acting antivirals (DAAs) -- NS5B polymerase inhibitors (sofosbuvir), NS5A inhibitors (ledipasvir, velpatasvir), and NS3/4A protease inhibitors (glecaprevir, voxilaprevir) -- achieving cure rates exceeding 95 percent in 8 to 12 week courses. Antifungal pharmacology is complicated by the limited number of distinct fungal targets: azoles inhibit ergosterol synthesis by blocking lanosterol 14-alpha demethylase (CYP51); echinocandins block beta-1,3-glucan synthase in the fungal cell wall; and amphotericin B binds ergosterol in the fungal membrane, creating pores that cause osmotic lysis. Amphotericin B's serious nephrotoxicity is reduced but not eliminated with liposomal formulation; pre-infusion normal saline loading and avoidance of concurrent nephrotoxins are mandatory nursing interventions.</p>
+  </div>
+
+  {drugs.length === 0 && (
+    <div class="alert alert-info mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <span>No drugs are currently classified under this organ system. Check back as more drug data is added.</span>
+    </div>
+  )}
+
+  {drugs.length > 0 && (
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      {drugs.map((drug: any) => (
+        <div class={`card card-compact bg-base-100 shadow border border-base-200 ${drug.ismp_high_alert ? 'border-l-4 border-l-error' : ''}`}>
+          <div class="card-body">
+            <div class="flex flex-wrap items-start gap-1 mb-1">
+              <h2 class="card-title text-base font-semibold capitalize mr-auto">
+                <a href={`${base}drugs/${drug.id}/`} class="hover:text-primary transition-colors">
+                  {drug.generic_name}
+                </a>
+              </h2>
+              {drug.prototype_for && (
+                <span class="badge badge-success badge-sm shrink-0">PROTOTYPE</span>
+              )}
+              {drug.ismp_high_alert && (
+                <span class="badge badge-error badge-sm shrink-0">HIGH ALERT</span>
+              )}
+              {drug.black_box_warnings && drug.black_box_warnings.length > 0 && (
+                <span class="badge badge-warning badge-sm shrink-0">BBW</span>
+              )}
+            </div>
+            <p class="text-xs text-base-content/60 mb-1">
+              <span class="font-medium">{drug.drug_class}</span>
+              {drug.subclass && <span> &mdash; {drug.subclass}</span>}
+            </p>
+            {drug.mechanism_summary && (
+              <p class="text-sm text-base-content/70 line-clamp-3">{drug.mechanism_summary}</p>
+            )}
+            <div class="card-actions justify-end mt-2">
+              <a href={`${base}drugs/${drug.id}/`} class="btn btn-xs btn-outline btn-primary">Profile</a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+
+</SchemaLayout>

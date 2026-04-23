@@ -1,0 +1,77 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+const slug = 'immunology';
+const displayName = 'Immunology';
+
+const drugs = (drugsData as any[]).filter(
+  (d: any) => (d.organ_systems || []).includes(slug)
+);
+const drugCount = drugs.length;
+---
+<SchemaLayout title="Immunology Pharmacology" schema="organ-systems" description="Drugs classified under the Immunology organ system">
+
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/01-organ-systems/`} class="link">Organ Systems</a></li>
+        <li>Immunology</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-2">Immunology</h1>
+    <p class="text-base-content/70 text-lg">{drugCount} drug{drugCount !== 1 ? 's' : ''} in this system</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>Immunopharmacology encompasses agents that suppress, modulate, or enhance immune function across a spectrum of conditions from solid organ transplantation to autoimmune diseases and immune-mediated inflammatory conditions. The immune pharmacological targets include calcineurin (cyclosporine, tacrolimus), mTOR (sirolimus, everolimus), inosine monophosphate dehydrogenase (mycophenolate mofetil), and JAK-STAT signaling pathways (baricitinib, tofacitinib, upadacitinib). Biologic agents target specific cytokines and their receptors or deplete immune cell populations: anti-TNF agents (infliximab, adalimumab, etanercept), anti-IL-6 (tocilizumab, sarilumab), anti-IL-1 (anakinra, canakinumab), anti-CD20 (rituximab), anti-CD80/86 (abatacept), and integrin blockers (vedolizumab). The overarching nursing challenge in this system is the balance between adequate immunosuppression to prevent rejection or control autoimmunity and the infectious and malignant consequences of over-immunosuppression.</p>
+    <p>Transplant immunosuppression follows induction, maintenance, and rejection treatment phases. Induction with basiliximab (IL-2 receptor antagonist) or antithymocyte globulin depletes activated T-cells at the time of transplantation when alloreactive immune responses are strongest. Maintenance triple therapy typically combines a calcineurin inhibitor (tacrolimus preferred over cyclosporine for its lower rejection rate), mycophenolate mofetil, and prednisone. Tacrolimus therapeutic drug monitoring targets whole blood trough levels of 8 to 12 ng/mL in the first year, with individual institutional targets guided by rejection history; nurses must draw trough samples consistently 12 hours after the last dose. Both calcineurin inhibitors are nephrotoxic and predispose to hypertension, diabetes (new-onset diabetes after transplantation, NODAT), and hyperlipidemia. Cyclosporine uniquely causes gingival hyperplasia and hirsutism; tacrolimus is more likely to cause neurotoxicity (tremor, headache) and alopecia. Both are extensively metabolized by CYP3A4 and transported by P-glycoprotein, creating numerous drug-drug and food-drug interactions -- grapefruit juice raises blood levels unpredictably and must be strictly avoided.</p>
+    <p>Biologic DMARDs for rheumatoid arthritis have transformed outcomes for patients with inadequate response to conventional DMARDs, but require rigorous pre-treatment screening and ongoing monitoring. Before initiating anti-TNF therapy (infliximab, adalimumab, etanercept), nurses must verify negative tuberculin skin test or IGRA, negative hepatitis B surface antigen and core antibody (to prevent reactivation), and updated vaccinations with live vaccines prohibited during therapy. Infusion reactions with IV biologics (infliximab, rituximab, abatacept) require pre-medication with acetaminophen and an antihistamine, and nurses must monitor the patient for 30 to 60 minutes post-infusion with resuscitative equipment available. JAK inhibitors carry black box warnings for increased risk of serious infections, malignancy, thromboembolism, and cardiovascular events compared with anti-TNF agents, requiring risk-benefit discussion before initiation. IVIG is administered for primary and secondary immunodeficiency, autoimmune thrombocytopenia, and Kawasaki disease; nurses must monitor for infusion reactions, headache from aseptic meningitis, and hemolytic anemia, and must ensure adequate hydration to reduce the risk of renal failure from sucrose-containing formulations.</p>
+  </div>
+
+  {drugs.length === 0 && (
+    <div class="alert alert-info mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <span>No drugs are currently classified under this organ system. Check back as more drug data is added.</span>
+    </div>
+  )}
+
+  {drugs.length > 0 && (
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      {drugs.map((drug: any) => (
+        <div class={`card card-compact bg-base-100 shadow border border-base-200 ${drug.ismp_high_alert ? 'border-l-4 border-l-error' : ''}`}>
+          <div class="card-body">
+            <div class="flex flex-wrap items-start gap-1 mb-1">
+              <h2 class="card-title text-base font-semibold capitalize mr-auto">
+                <a href={`${base}drugs/${drug.id}/`} class="hover:text-primary transition-colors">
+                  {drug.generic_name}
+                </a>
+              </h2>
+              {drug.prototype_for && (
+                <span class="badge badge-success badge-sm shrink-0">PROTOTYPE</span>
+              )}
+              {drug.ismp_high_alert && (
+                <span class="badge badge-error badge-sm shrink-0">HIGH ALERT</span>
+              )}
+              {drug.black_box_warnings && drug.black_box_warnings.length > 0 && (
+                <span class="badge badge-warning badge-sm shrink-0">BBW</span>
+              )}
+            </div>
+            <p class="text-xs text-base-content/60 mb-1">
+              <span class="font-medium">{drug.drug_class}</span>
+              {drug.subclass && <span> &mdash; {drug.subclass}</span>}
+            </p>
+            {drug.mechanism_summary && (
+              <p class="text-sm text-base-content/70 line-clamp-3">{drug.mechanism_summary}</p>
+            )}
+            <div class="card-actions justify-end mt-2">
+              <a href={`${base}drugs/${drug.id}/`} class="btn btn-xs btn-outline btn-primary">Profile</a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+
+</SchemaLayout>

@@ -1,0 +1,77 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+const slug = 'respiratory';
+const displayName = 'Respiratory';
+
+const drugs = (drugsData as any[]).filter(
+  (d: any) => (d.organ_systems || []).includes(slug)
+);
+const drugCount = drugs.length;
+---
+<SchemaLayout title="Respiratory Pharmacology" schema="organ-systems" description="Drugs classified under the Respiratory organ system">
+
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/01-organ-systems/`} class="link">Organ Systems</a></li>
+        <li>Respiratory</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-2">Respiratory</h1>
+    <p class="text-base-content/70 text-lg">{drugCount} drug{drugCount !== 1 ? 's' : ''} in this system</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>Respiratory pharmacology addresses the full spectrum from acute bronchoconstriction to chronic airway remodeling, pulmonary hypertension, and rare genetic diseases of mucociliary clearance. The principal pharmacological targets in the airways are beta-2 adrenergic receptors on bronchial smooth muscle and mast cells, muscarinic M3 receptors mediating bronchoconstriction and mucus secretion, leukotriene CysLT1 receptors that amplify eosinophilic inflammation, IgE on mast cell surfaces, cytokine receptors (IL-4, IL-5, IL-13, TSLP) driving type 2 airway inflammation, and the 5-lipoxygenase pathway generating leukotriene B4 and C4. In cystic fibrosis, the target is the CFTR chloride channel itself. Major disease states include asthma, COPD, allergic rhinitis, pulmonary arterial hypertension, cystic fibrosis, and acute respiratory distress. Nursing priorities include correct inhaler technique (a primary determinant of drug delivery), peak flow monitoring, oxygen saturation surveillance, and recognition of adrenergic side effects including tachycardia, tremor, and hypokalemia with high-dose beta-2 agonist therapy.</p>
+    <p>Short-acting beta-2 agonists (SABAs) -- albuterol and levalbuterol -- are the cornerstone of acute bronchospasm rescue. They activate adenylyl cyclase through Gs-coupled beta-2 receptors, raising intracellular cAMP and activating PKA to phosphorylate myosin light-chain kinase, relaxing smooth muscle within three to five minutes. The inhaled route maximizes local concentration while minimizing systemic cardiovascular effects; nurses must teach patients to wait one full minute between puffs and to use a spacer to maximize lower airway deposition. Inhaled corticosteroids (ICS) -- fluticasone, budesonide, beclomethasone, mometasone -- are the most effective anti-inflammatory agents for persistent asthma, reducing mucosal edema, goblet cell hyperplasia, and eosinophilic infiltration. They must be taken daily regardless of symptoms; nurses instruct patients to rinse the mouth and gargle after each dose to prevent oropharyngeal candidiasis caused by local immunosuppression. Long-acting beta-2 agonists (LABAs) -- salmeterol, formoterol, vilanterol -- must never be used as monotherapy in asthma due to risk of fatal asthma exacerbations; they are prescribed only in combination with ICS.</p>
+    <p>Anticholinergic bronchodilators -- ipratropium (short-acting) and tiotropium, umeclidinium, aclidinium (long-acting) -- block M3 muscarinic receptors, reducing bronchoconstriction and mucus hypersecretion. They are the preferred bronchodilators in COPD, where parasympathetic tone is the dominant driver of airflow obstruction, and are less effective than beta-2 agonists in asthma. Biologic agents targeting type 2 inflammation -- omalizumab (anti-IgE), mepolizumab, reslizumab, benralizumab (anti-IL-5), dupilumab (anti-IL-4/IL-13), and tezepelumab (anti-TSLP) -- are reserved for severe uncontrolled asthma with defined biomarker profiles. Nurses administering biologics must monitor for 30 to 60 minutes post-injection for anaphylaxis. CFTR modulators -- ivacaftor (CFTR potentiator), tezacaftor-ivacaftor-elexacaftor (triple combination) -- represent precision pharmacology for specific CFTR mutations, restoring channel gating or correcting protein misfolding; they require monitoring for cataracts in pediatric patients and drug interactions with CYP3A4 inhibitors and inducers.</p>
+  </div>
+
+  {drugs.length === 0 && (
+    <div class="alert alert-info mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <span>No drugs are currently classified under this organ system. Check back as more drug data is added.</span>
+    </div>
+  )}
+
+  {drugs.length > 0 && (
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      {drugs.map((drug: any) => (
+        <div class={`card card-compact bg-base-100 shadow border border-base-200 ${drug.ismp_high_alert ? 'border-l-4 border-l-error' : ''}`}>
+          <div class="card-body">
+            <div class="flex flex-wrap items-start gap-1 mb-1">
+              <h2 class="card-title text-base font-semibold capitalize mr-auto">
+                <a href={`${base}drugs/${drug.id}/`} class="hover:text-primary transition-colors">
+                  {drug.generic_name}
+                </a>
+              </h2>
+              {drug.prototype_for && (
+                <span class="badge badge-success badge-sm shrink-0">PROTOTYPE</span>
+              )}
+              {drug.ismp_high_alert && (
+                <span class="badge badge-error badge-sm shrink-0">HIGH ALERT</span>
+              )}
+              {drug.black_box_warnings && drug.black_box_warnings.length > 0 && (
+                <span class="badge badge-warning badge-sm shrink-0">BBW</span>
+              )}
+            </div>
+            <p class="text-xs text-base-content/60 mb-1">
+              <span class="font-medium">{drug.drug_class}</span>
+              {drug.subclass && <span> &mdash; {drug.subclass}</span>}
+            </p>
+            {drug.mechanism_summary && (
+              <p class="text-sm text-base-content/70 line-clamp-3">{drug.mechanism_summary}</p>
+            )}
+            <div class="card-actions justify-end mt-2">
+              <a href={`${base}drugs/${drug.id}/`} class="btn btn-xs btn-outline btn-primary">Profile</a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+
+</SchemaLayout>
