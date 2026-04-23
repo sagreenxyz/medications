@@ -1,0 +1,70 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+const slug = 'adrenergic';
+const displayName = 'Adrenergic Agents';
+
+const drugs = (drugsData as any[]).filter(
+  (d: any) => (d.therapeutic_classes || []).includes(slug)
+);
+const drugCount = drugs.length;
+---
+<SchemaLayout title="Adrenergic Agents" schema="therapeutic-classes" description="Adrenergic agents that act on alpha and beta adrenoceptors throughout the sympathetic nervous system">
+
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/02-therapeutic-classes/`} class="link">Therapeutic Classes</a></li>
+        <li>{displayName}</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-2">{displayName}</h1>
+    <p class="text-base-content/70 text-lg">{drugCount} drug{drugCount !== 1 ? 's' : ''} in this class</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>Adrenergic pharmacology emerged from the pioneering work of John Abel and later Thomas Aldrich, who isolated epinephrine from the adrenal medulla in the early twentieth century. The subsequent synthesis of catecholamines and the elucidation of their receptors by Raymond Ahlquist in 1948—who first distinguished alpha and beta adrenoceptors based on differential potency of a series of catecholamines—established the conceptual foundation for the entire class. This receptor classification was transformative: it enabled rational drug design targeting specific receptor subtypes and organs, yielding selective beta-1 blockers for cardiac indications, selective beta-2 agonists for pulmonary use, and selective alpha-1 antagonists for benign prostatic hyperplasia and hypertension. The pharmacological rationale for adrenergic drug development has always been the modulation of the sympathetic nervous system, which governs the "fight-or-flight" physiological state, and the exploitation of its pervasive receptor distribution across the cardiovascular, pulmonary, metabolic, and genitourinary systems.</p>
+    <p>Adrenoceptors are G-protein-coupled receptors (GPCRs) that transduce extracellular catecholamine binding into intracellular signaling cascades. Alpha-1 receptors couple to Gq, activating phospholipase C, increasing inositol trisphosphate and diacylglycerol, and elevating intracellular calcium to produce smooth muscle contraction in blood vessels and the urogenital tract. Alpha-2 receptors couple to Gi, inhibiting adenylyl cyclase and reducing cAMP, thereby decreasing norepinephrine release from presynaptic terminals and producing centrally mediated sympatholysis—the mechanism exploited by clonidine and dexmedetomidine. Beta-1 receptors couple to Gs, activating adenylyl cyclase and elevating cAMP, which activates protein kinase A to increase heart rate (chronotropy), conduction velocity (dromotropy), and contractility (inotropy). Beta-2 receptors also couple to Gs but predominate in bronchial, uterine, and skeletal muscle vascular smooth muscle, where their activation promotes relaxation; agonists such as albuterol exploit this selectively. Beta-3 receptors in adipose tissue and the detrusor muscle have more recently been targeted by mirabegron for overactive bladder. Agonists at these receptors produce physiological effects mimicking sympathetic stimulation, while antagonists produce the inverse; partial agonists exhibit intrinsic sympathomimetic activity that blunts resting bradycardia.</p>
+    <p>The pharmacokinetic profiles of adrenergic agents are highly diverse and largely dictated by their chemical structure. Catecholamines—epinephrine, norepinephrine, dopamine, dobutamine—contain the catechol nucleus and are substrates for catechol-O-methyltransferase (COMT) and monoamine oxidase (MAO), rendering them orally inactive and extremely short-acting (minutes), requiring intravenous infusion for clinical use. Non-catecholamine sympathomimetics such as albuterol and pseudoephedrine lack the catechol hydroxyl groups, evading COMT metabolism and achieving oral bioavailability; albuterol's beta-2 selectivity is metabolized hepatically with a half-life of approximately four to six hours, though its inhaled formulation achieves onset within minutes. Beta-blockers are predominantly hepatically metabolized (propranolol, metoprolol, carvedilol) or renally excreted (atenolol, nadolol); lipophilic agents such as propranolol cross the blood-brain barrier and may cause CNS adverse effects including vivid dreams and depression, while hydrophilic agents such as atenolol are less likely to do so. Alpha-2 agonists like clonidine have excellent oral bioavailability and cross the BBB readily, producing central hypotension; they are largely renally eliminated, necessitating dose adjustment in CKD.</p>
+    <p>The adverse effect profile of adrenergic agents follows directly from the receptor pharmacology and mirrors receptor-mediated physiological effects. Beta-blockers produce bradycardia, heart block, and negative inotropy by blocking cardiac beta-1 receptors; in patients with obstructive lung disease, non-selective agents (propranolol, carvedilol) risk bronchoconstriction through beta-2 blockade, though cardioselective agents (metoprolol, atenolol, bisoprolol) are relatively safer. Abrupt discontinuation of beta-blockers causes rebound tachycardia and angina due to receptor upregulation, making a gradual taper mandatory. Alpha-1 antagonists (doxazosin, prazosin, terazosin) reliably produce orthostatic hypotension and reflex tachycardia, particularly after the first dose; patients must be counseled to rise slowly and avoid standing for prolonged periods after initiation. Centrally-acting alpha-2 agonists such as clonidine cause sedation, dry mouth, and rebound hypertension on abrupt withdrawal; the patch formulation reduces peak-trough fluctuation but requires attention to placement site rotation. Beta-2 agonist excess—whether from overdose or systemic absorption of inhaled bronchodilators—produces tremor, tachycardia, and hypokalemia through stimulation of Na+/K+-ATPase, the latter requiring monitoring in patients on concurrent diuretics.</p>
+    <p>Clinically, adrenergic agents span an extraordinary range of indications that collectively account for some of the highest-volume prescribing in medicine. Beta-blockers are guideline-mandated in heart failure with reduced ejection fraction, post-myocardial infarction, atrial fibrillation rate control, and stable angina, with outcome data demonstrating mortality reduction in each context. Beta-2 agonists form the cornerstone of asthma and COPD management, with short-acting agents (albuterol) serving as rescue bronchodilators and long-acting agents (salmeterol, formoterol, indacaterol) providing maintenance bronchodilation when paired with inhaled corticosteroids. Vasopressors—norepinephrine, epinephrine, dopamine, vasopressin—are first-line agents in distributive and cardiogenic shock, where they restore vascular tone and cardiac output; norepinephrine is now preferred over dopamine in septic shock based on reduced dysrhythmia risk and lower mortality. The nurse must distinguish agonist from antagonist, selective from non-selective, and oral from parenteral formulations when administering adrenergic drugs, as each axis of variation carries distinct safety implications—particularly in the ICU, where titration of vasopressors requires continuous hemodynamic assessment and knowledge of the physiological endpoints guiding each agent's titration.</p>
+  </div>
+
+  {drugs.length === 0 && (
+    <div class="alert alert-info mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <span>No drugs are currently classified under this therapeutic class. Check back as more drug data is added.</span>
+    </div>
+  )}
+
+  {drugs.length > 0 && (
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      {drugs.map((drug: any) => (
+        <div class={`card card-compact bg-base-100 shadow border border-base-200 ${drug.ismp_high_alert ? 'border-l-4 border-l-error' : ''}`}>
+          <div class="card-body">
+            <div class="flex flex-wrap items-start gap-1 mb-1">
+              <h2 class="card-title text-base font-semibold capitalize mr-auto">
+                <a href={`${base}drugs/${drug.id}/`} class="hover:text-primary transition-colors">
+                  {drug.generic_name}
+                </a>
+              </h2>
+              {drug.prototype_for && <span class="badge badge-success badge-sm shrink-0">PROTOTYPE</span>}
+              {drug.ismp_high_alert && <span class="badge badge-error badge-sm shrink-0">HIGH ALERT</span>}
+              {drug.black_box_warnings && drug.black_box_warnings.length > 0 && <span class="badge badge-warning badge-sm shrink-0">BBW</span>}
+            </div>
+            <p class="text-xs text-base-content/60 mb-1">
+              <span class="font-medium">{drug.drug_class}</span>
+              {drug.subclass && <span> — {drug.subclass}</span>}
+            </p>
+            {drug.mechanism_summary && <p class="text-sm text-base-content/70 line-clamp-3">{drug.mechanism_summary}</p>}
+            <div class="card-actions justify-end mt-2">
+              <a href={`${base}drugs/${drug.id}/`} class="btn btn-xs btn-outline btn-primary">Profile</a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+</SchemaLayout>

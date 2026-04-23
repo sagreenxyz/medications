@@ -1,0 +1,70 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+const slug = 'antimicrobials';
+const displayName = 'Antimicrobials';
+
+const drugs = (drugsData as any[]).filter(
+  (d: any) => (d.therapeutic_classes || []).includes(slug)
+);
+const drugCount = drugs.length;
+---
+<SchemaLayout title="Antimicrobials" schema="therapeutic-classes" description="Antibacterial, antiviral, antifungal, and antiparasitic agents targeting pathogen-specific structures and metabolic pathways">
+
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/02-therapeutic-classes/`} class="link">Therapeutic Classes</a></li>
+        <li>{displayName}</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-2">{displayName}</h1>
+    <p class="text-base-content/70 text-lg">{drugCount} drug{drugCount !== 1 ? 's' : ''} in this class</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>Antimicrobial pharmacology encompasses one of the most diverse and clinically consequential drug classes in medicine, encompassing agents that target the unique biological machinery of bacteria, viruses, fungi, and parasites while sparing human cells. The modern antimicrobial era began with Fleming's discovery of penicillin in 1928 and Florey and Chain's clinical development in the 1940s, demonstrating that selective toxicity—exploiting fundamental biochemical differences between pathogen and host—was achievable on a therapeutic scale. The guiding principle of selective toxicity requires that antimicrobials target structures or pathways absent in or fundamentally different from human cells: bacterial cell walls (beta-lactams, glycopeptides), bacterial ribosomes (aminoglycosides, macrolides, tetracyclines, oxazolidinones), bacterial DNA gyrase and topoisomerase IV (fluoroquinolones), folate synthesis (sulfonamides, trimethoprim), fungal ergosterol biosynthesis (azoles, polyenes), and viral-specific polymerases and integrase enzymes. The emergence of antimicrobial resistance through mutation, horizontal gene transfer, and selection pressure represents the defining pharmacological challenge of the twenty-first century, making antimicrobial stewardship—the rational, evidence-based use of antimicrobials to optimize patient outcomes while minimizing resistance selection—a core nursing and clinical competency.</p>
+    <p>Beta-lactam antibiotics—the largest and most clinically deployed antibacterial subclass—inhibit bacterial cell wall synthesis by covalently acylating penicillin-binding proteins (PBPs), the transpeptidase enzymes that cross-link peptidoglycan strands in the bacterial cell wall. Loss of PBP activity prevents cell wall maintenance, causing osmotic lysis in susceptible organisms. The four beta-lactam subclasses—penicillins, cephalosporins, carbapenems, and monobactams—share this mechanism but differ in their PBP binding affinities, beta-lactamase stability, and spectrum of activity. Beta-lactamase production (including extended-spectrum beta-lactamases, ESBLs, and carbapenemases) is the dominant resistance mechanism; beta-lactamase inhibitors (clavulanate, sulbactam, tazobactam, avibactam) are co-formulated to restore activity against beta-lactamase-producing organisms. Fluoroquinolones inhibit bacterial DNA gyrase (gram-negative primary target) and topoisomerase IV (gram-positive primary target), preventing DNA supercoil relaxation and replication; their excellent oral bioavailability and broad spectrum make them therapeutically versatile, but their capacity to prolong the QTc interval, cause tendinopathy (including Achilles tendon rupture), and select for resistance in Gram-negative organisms mandates judicious restriction. Glycopeptides (vancomycin, telavancin, oritavancin, dalbavancin) bind the D-Ala-D-Ala terminus of peptidoglycan precursors, preventing transglycosylation and transpeptidation; vancomycin is the cornerstone treatment for MRSA, with trough-guided or AUC-guided therapeutic drug monitoring required to balance efficacy (AUC/MIC target 400–600 mg·h/L) against nephrotoxicity.</p>
+    <p>Antimicrobial pharmacokinetics are clinically critical because inadequate drug exposure at the infection site is the primary driver of both therapeutic failure and resistance selection. Antibacterials exhibit concentration-dependent or time-dependent killing, a pharmacodynamic distinction that guides dosing strategy. Aminoglycosides and fluoroquinolones are concentration-dependent: their bactericidal activity correlates with the peak concentration-to-MIC ratio (Cmax/MIC) and the total drug exposure-to-MIC ratio (AUC24/MIC); this pharmacodynamic property supports once-daily aminoglycoside dosing, which achieves superior peak concentrations while reducing nephrotoxicity risk compared to divided-dose regimens. Beta-lactams, vancomycin, and macrolides are time-dependent: efficacy correlates with the percentage of the dosing interval during which free drug concentration exceeds the MIC (fT>MIC); this supports extended infusion strategies for piperacillin-tazobactam and meropenem (infused over 3–4 hours) against resistant Gram-negative organisms. Tissue penetration varies widely: fluoroquinolones achieve excellent penetration into lung, bone, and prostate; vancomycin poorly penetrates the CNS and requires high doses or intrathecal administration for CNS infections; clindamycin and rifampin have excellent bone penetration. Antifungals exhibit similar PK/PD relationships, with azoles being concentration-independent (AUC/MIC-dependent) and echinocandins being concentration-dependent; renal and hepatic impairment affect elimination of antifungals differentially, with voriconazole requiring hepatic dose adjustment and fluconazole requiring renal adjustment.</p>
+    <p>Antimicrobial adverse effects span organ systems and reflect the limited selectivity achievable against organisms that share fundamental biochemistry with human cells. Aminoglycosides (gentamicin, tobramycin, amikacin) concentrate in proximal tubular cells and cochlear hair cells through specific uptake mechanisms, producing nephrotoxicity (rising serum creatinine, non-oliguric ARF) and irreversible ototoxicity (high-frequency sensorineural hearing loss and vestibular toxicity); risk monitoring requires daily serum creatinine measurement, regular audiometric assessment in prolonged courses, and trough levels below 1 mcg/mL for thrice-daily dosing. Vancomycin causes nephrotoxicity, particularly when combined with aminoglycosides or piperacillin-tazobactam; the "red man syndrome"—facial flushing, pruritus, and hypotension from histamine release—is not an allergic reaction but an infusion rate-dependent reaction prevented by infusing over at least 60 minutes and pre-medicating with diphenhydramine. Fluoroquinolones carry FDA black box warnings for tendinopathy and tendon rupture (risk magnified in patients over 60, on corticosteroids, or with kidney transplants), peripheral neuropathy, CNS effects (seizure threshold lowering, anxiety, delirium in elderly), and QTc prolongation; their use in pediatric patients is restricted to specific indications due to concerns about cartilage toxicity. Antifungal azoles inhibit fungal lanosterol 14-alpha-demethylase (CYP51) with spillover inhibition of human CYP3A4, CYP2C9, and CYP2C19, creating drug interaction burdens that make voriconazole and posaconazole among the most interaction-prone drugs in clinical practice.</p>
+    <p>Antimicrobial stewardship is the clinical and ethical framework within which nurses must deploy this class. Every antimicrobial prescription carries an ecological cost—selection pressure on commensal and pathogenic organisms that drives resistance—necessitating the principle that antimicrobials are prescribed for the shortest effective duration at the narrowest effective spectrum guided by culture and sensitivity results. The nurse's role in stewardship includes timely culture collection before antibiotic administration (blood cultures, wound cultures, urine cultures), accurate reporting of timing and response of fever and clinical parameters, facilitating de-escalation when culture results narrow the suspected pathogen, documenting allergy history accurately (distinguishing true IgE-mediated penicillin allergy from intolerances), and patient education about completion of prescribed courses. In the management of Clostridioides difficile infection—a healthcare-associated complication of antimicrobial use—the nurse must recognize that inciting antibiotics (clindamycin, fluoroquinolones, third-generation cephalosporins, ampicillin) disrupt the intestinal microbiome and create the ecological niche exploited by C. difficile; treatment with oral vancomycin or fidaxomicin and contact precautions require nursing vigilance for signs of complications including toxic megacolon (fever, leukocytosis above 30,000, abdominal pain without diarrhea, colonic dilatation on imaging). Antiviral therapy for HIV, hepatitis C, and herpesviruses has achieved outcomes once inconceivable—undetectable viral loads, functional cures, once-daily single-tablet regimens—and requires nursing support for adherence, resistance testing interpretation, and management of immune reconstitution inflammatory syndrome (IRIS) in HIV patients initiating antiretroviral therapy.</p>
+  </div>
+
+  {drugs.length === 0 && (
+    <div class="alert alert-info mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <span>No drugs are currently classified under this therapeutic class. Check back as more drug data is added.</span>
+    </div>
+  )}
+
+  {drugs.length > 0 && (
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      {drugs.map((drug: any) => (
+        <div class={`card card-compact bg-base-100 shadow border border-base-200 ${drug.ismp_high_alert ? 'border-l-4 border-l-error' : ''}`}>
+          <div class="card-body">
+            <div class="flex flex-wrap items-start gap-1 mb-1">
+              <h2 class="card-title text-base font-semibold capitalize mr-auto">
+                <a href={`${base}drugs/${drug.id}/`} class="hover:text-primary transition-colors">
+                  {drug.generic_name}
+                </a>
+              </h2>
+              {drug.prototype_for && <span class="badge badge-success badge-sm shrink-0">PROTOTYPE</span>}
+              {drug.ismp_high_alert && <span class="badge badge-error badge-sm shrink-0">HIGH ALERT</span>}
+              {drug.black_box_warnings && drug.black_box_warnings.length > 0 && <span class="badge badge-warning badge-sm shrink-0">BBW</span>}
+            </div>
+            <p class="text-xs text-base-content/60 mb-1">
+              <span class="font-medium">{drug.drug_class}</span>
+              {drug.subclass && <span> — {drug.subclass}</span>}
+            </p>
+            {drug.mechanism_summary && <p class="text-sm text-base-content/70 line-clamp-3">{drug.mechanism_summary}</p>}
+            <div class="card-actions justify-end mt-2">
+              <a href={`${base}drugs/${drug.id}/`} class="btn btn-xs btn-outline btn-primary">Profile</a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+</SchemaLayout>

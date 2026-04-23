@@ -1,0 +1,70 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+const slug = 'receptor-antagonists';
+const displayName = 'Receptor Antagonists';
+
+const drugs = (drugsData as any[]).filter(
+  (d: any) => (d.therapeutic_classes || []).includes(slug)
+);
+const drugCount = drugs.length;
+---
+<SchemaLayout title="Receptor Antagonists" schema="therapeutic-classes" description="Drugs that bind receptors and block endogenous agonist activity, including ARBs, H2 blockers, antihistamines, and opioid antagonists">
+
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/02-therapeutic-classes/`} class="link">Therapeutic Classes</a></li>
+        <li>{displayName}</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-2">{displayName}</h1>
+    <p class="text-base-content/70 text-lg">{drugCount} drug{drugCount !== 1 ? 's' : ''} in this class</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>Receptor antagonists represent the conceptual cornerstone of pharmacodynamics, rooted in Paul Ehrlich's receptor theory of the early twentieth century and formalized mathematically by Gaddum and Schild in the 1940s and 1950s. An antagonist binds to a receptor with affinity but produces no intrinsic activity (efficacy = 0), thereby competitively excluding endogenous agonists from binding or, in the case of non-competitive antagonists, allosterically preventing receptor activation regardless of agonist concentration. The therapeutic utility of receptor antagonism depends on a biological paradox: in many disease states, endogenous ligands (angiotensin II, histamine, serotonin, opioid peptides) are tonically overproduced or their receptors pathologically upregulated, making receptor blockade corrective rather than suppressive. This reasoning underlies the development of angiotensin receptor blockers (ARBs) for cardiovascular protection, H1 antihistamines for allergy, H2 antagonists for peptic ulcer disease, opioid antagonists for overdose reversal, NMDA antagonists for depression and analgesia, and leukotriene receptor antagonists for asthma—a mechanistically diverse class united by the principle of blocking a specific receptor rather than modifying the ligand or its synthesis.</p>
+    <p>Receptor antagonists operate through well-characterized binding kinetics that govern their pharmacological behavior. Competitive reversible antagonists (losartan at AT1 receptors, fexofenadine at H1 receptors, ranitidine at H2 receptors) occupy the same binding site as the endogenous agonist; their inhibitory effect can be overcome by sufficiently high agonist concentrations, producing a parallel rightward shift in the agonist concentration-response curve without reducing the maximum response. Non-competitive antagonists (phenoxybenzamine at alpha-1 receptors, ketamine at NMDA receptors) bind irreversibly or to allosteric sites, producing a depression of the maximal response that cannot be overcome by increasing agonist concentration. Inverse agonists, distinguished from neutral antagonists, occupy the receptor and actively stabilize its inactive conformation, suppressing constitutive receptor activity below baseline—a clinically relevant distinction for H1 antihistamines, most of which exhibit inverse agonist rather than neutral antagonist properties, contributing to their antiemetic and sedative effects. The Schild equation quantifies competitive antagonism and provides the pharmacological basis for drug-drug interaction prediction when two competitive antagonists compete for the same receptor.</p>
+    <p>Pharmacokinetic characteristics of receptor antagonists vary by subclass. ARBs (losartan, valsartan, irbesartan, olmesartan, candesartan) are orally bioavailable with moderate protein binding and hepatic metabolism; losartan is a prodrug converted by CYP2C9 to the active metabolite EXP-3174, which has 10–40 times greater potency at AT1 receptors and a longer half-life, conferring the drug's once-daily clinical efficacy. H1 antihistamines bifurcate into first-generation lipophilic compounds (diphenhydramine, hydroxyzine, promethazine) with CNS penetration causing sedation and anticholinergic effects, and second-generation hydrophilic compounds (cetirizine, loratadine, fexofenadine) with minimal CNS penetration and once-daily dosing; fexofenadine is unique in being a P-glycoprotein substrate, with bioavailability reduced by grapefruit juice and orange juice through organic anion transporter inhibition. Opioid antagonists naloxone and naltrexone have essentially opposite pharmacokinetic profiles: naloxone has a half-life of 30–90 minutes, shorter than most opioid agonists, necessitating re-dosing or continuous infusion in opioid overdose; naltrexone has a 4-hour half-life with an active metabolite (6-beta-naltrexol) extending duration to 24 hours, suitable for once-daily oral dosing in addiction medicine.</p>
+    <p>Adverse effects of receptor antagonists are predominantly mechanism-based, arising from blockade of receptor-mediated physiological functions that become unmasked. ARBs do not cause the bradykinin-mediated cough of ACE inhibitors but share the class risks of hyperkalemia (through aldosterone suppression), azotemia (through efferent arteriolar dilation reducing GFR), and teratogenicity (fetal renal dysgenesis from RAAS blockade in the second and third trimesters); all ARBs carry an FDA black box warning for pregnancy. First-generation antihistamines cause clinically significant anticholinergic effects—dry mouth, urinary retention, constipation, blurred vision, and delirium in elderly patients—because their structural similarity to muscarinic antagonists confers off-target M1 and M2 receptor blockade. H2 antagonists (ranitidine, famotidine, cimetidine) are generally well-tolerated, though cimetidine is a potent inhibitor of multiple CYP enzymes and the renal tubular secretion transporter OCT2, causing interactions with warfarin, theophylline, and metformin; ranitidine has been withdrawn due to N-nitrosodimethylamine (NDMA) contamination concerns. Leukotriene receptor antagonists (montelukast, zafirlukast) carry an FDA-required black box warning for neuropsychiatric events including suicidal ideation, nightmares, depression, and anxiety, particularly in pediatric patients, requiring patient and caregiver education about these risks before prescribing.</p>
+    <p>The clinical scope of receptor antagonists is defined by the breadth of pathological receptor signaling in human disease. In cardiovascular medicine, ARBs have supplanted ACE inhibitors in many patients due to superior tolerability, with outcomes equivalence demonstrated in major trials for hypertension, heart failure, and nephroprotection; nurses must reinforce that ARBs should not be combined with ACE inhibitors in most patients, as dual RAAS blockade dramatically increases hyperkalemia and renal failure risk without additional cardiovascular benefit. In oncology, androgen receptor antagonists (bicalutamide, enzalutamide) and estrogen receptor antagonists (tamoxifen, fulvestrant) form the backbone of hormonal therapy for prostate and breast cancers, respectively; their adverse effects—hot flashes, sexual dysfunction, bone loss, and thromboembolic risk (tamoxifen)—require dedicated monitoring protocols. Naloxone's emergence as a public health tool for opioid overdose reversal has prompted widespread community distribution, and nurses in emergency, community, and addiction settings must be competent in its administration (intranasal 4 mg per nostril, intramuscular 0.4–2 mg, intravenous for monitored settings) and in recognizing the need for repeat dosing when reversing long-acting or extended-release opioids. The receptor antagonist framework is also essential for understanding drug-drug interactions: any drug that competes with an endogenous agonist at a receptor creates the potential for antagonism-mediated adverse events when combined with exogenous agonists or when the endogenous ligand is acutely elevated, a pattern illustrated by beta-blocker use in patients requiring epinephrine for anaphylaxis.</p>
+  </div>
+
+  {drugs.length === 0 && (
+    <div class="alert alert-info mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <span>No drugs are currently classified under this therapeutic class. Check back as more drug data is added.</span>
+    </div>
+  )}
+
+  {drugs.length > 0 && (
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      {drugs.map((drug: any) => (
+        <div class={`card card-compact bg-base-100 shadow border border-base-200 ${drug.ismp_high_alert ? 'border-l-4 border-l-error' : ''}`}>
+          <div class="card-body">
+            <div class="flex flex-wrap items-start gap-1 mb-1">
+              <h2 class="card-title text-base font-semibold capitalize mr-auto">
+                <a href={`${base}drugs/${drug.id}/`} class="hover:text-primary transition-colors">
+                  {drug.generic_name}
+                </a>
+              </h2>
+              {drug.prototype_for && <span class="badge badge-success badge-sm shrink-0">PROTOTYPE</span>}
+              {drug.ismp_high_alert && <span class="badge badge-error badge-sm shrink-0">HIGH ALERT</span>}
+              {drug.black_box_warnings && drug.black_box_warnings.length > 0 && <span class="badge badge-warning badge-sm shrink-0">BBW</span>}
+            </div>
+            <p class="text-xs text-base-content/60 mb-1">
+              <span class="font-medium">{drug.drug_class}</span>
+              {drug.subclass && <span> — {drug.subclass}</span>}
+            </p>
+            {drug.mechanism_summary && <p class="text-sm text-base-content/70 line-clamp-3">{drug.mechanism_summary}</p>}
+            <div class="card-actions justify-end mt-2">
+              <a href={`${base}drugs/${drug.id}/`} class="btn btn-xs btn-outline btn-primary">Profile</a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+</SchemaLayout>
