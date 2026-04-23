@@ -1,7 +1,173 @@
 ---
 import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+
+const renalCount = drugsData.filter((d: any) => d.renal_dose_adjustment).length;
+const hepaticCount = drugsData.filter((d: any) => d.hepatic_dose_adjustment).length;
+const beersCount = drugsData.filter((d: any) => d.beers_criteria).length;
+const cyp3a4Count = drugsData.filter((d: any) =>
+  d.pharmacokinetics?.metabolism?.toLowerCase().includes('cyp3a4')
+).length;
+const tdmCount = drugsData.filter((d: any) => d.tdm_required).length;
+
+const subPages = [
+  {
+    href: `${base}schemas/06-adme/absorption/`,
+    title: 'Absorption',
+    description: 'Bioavailability, first-pass effect, routes of administration, and factors affecting drug absorption.',
+    icon: '💊',
+    color: 'border-amber-400',
+  },
+  {
+    href: `${base}schemas/06-adme/distribution/`,
+    title: 'Distribution',
+    description: 'Volume of distribution, protein binding, BBB penetration, and placental transfer.',
+    icon: '🔬',
+    color: 'border-amber-500',
+  },
+  {
+    href: `${base}schemas/06-adme/cyp-metabolism/`,
+    title: 'CYP Metabolism',
+    description: 'CYP450 isoforms, inducers and inhibitors, prodrug activation, and genetic polymorphisms.',
+    icon: '⚗️',
+    color: 'border-amber-600',
+  },
+  {
+    href: `${base}schemas/06-adme/excretion/`,
+    title: 'Excretion',
+    description: 'Renal clearance, dose adjustment in CKD, biliary excretion, and dialyzability.',
+    icon: '🫘',
+    color: 'border-amber-700',
+  },
+  {
+    href: `${base}schemas/06-adme/special-populations/`,
+    title: 'Special Populations',
+    description: 'Pediatrics, geriatrics, pregnancy, lactation, and obesity considerations.',
+    icon: '👥',
+    color: 'border-amber-800',
+  },
+  {
+    href: `${base}schemas/06-adme/drug-interactions-pk/`,
+    title: 'PK Drug Interactions',
+    description: 'Pharmacokinetic interactions, clinical significance grading, and management strategies.',
+    icon: '⚠️',
+    color: 'border-amber-900',
+  },
+];
 ---
-<SchemaLayout title="ADME" schema="adme">
-  <h1 class="text-3xl font-serif font-bold mb-4">ADME</h1>
-  <p>Content coming soon.</p>
+<SchemaLayout
+  title="ADME — Pharmacokinetic Schema"
+  schema="adme"
+  description="Explore drugs organized by absorption, distribution, metabolism, and excretion properties."
+>
+  <div class="mb-6">
+    <h1 class="text-4xl font-serif font-bold mb-2">Schema 6: ADME</h1>
+    <p class="text-base-content/70 text-lg">Absorption · Distribution · Metabolism · Excretion</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>
+      Pharmacokinetics — the study of what the body does to a drug — is encapsulated in the ADME
+      framework: absorption, distribution, metabolism, and excretion. Understanding ADME is not
+      merely an academic exercise; it is the mechanistic foundation upon which safe and effective
+      drug therapy depends. A clinician who understands why oral metformin has near-complete
+      bioavailability without first-pass metabolism, while oral nitroglycerin is almost entirely
+      destroyed before reaching systemic circulation, can predict clinical outcomes, anticipate
+      dose adjustments, and prevent life-threatening errors in ways that rote memorization cannot
+      support. ADME principles explain why two drugs with identical mechanisms of action can have
+      vastly different dosing schedules, why renal impairment transforms a standard dose into an
+      overdose for renally-cleared drugs, and why a seemingly innocuous dietary change — drinking
+      grapefruit juice — can convert a therapeutic dose of certain statins or calcineurin inhibitors
+      into a toxic one.
+    </p>
+    <p>
+      The ADME framework organizes pharmacokinetic knowledge along the drug's temporal journey
+      through the body. Absorption governs the rate and extent to which a drug reaches the systemic
+      circulation, shaped by molecular properties (lipophilicity, molecular weight, ionization state),
+      formulation characteristics, and physiological variables from gastric pH to intestinal motility.
+      Distribution describes the drug's subsequent partitioning into tissues, governed by plasma
+      protein binding, lipophilicity, and tissue-specific transporters — processes that determine
+      whether a drug reaches its target organ at therapeutically relevant concentrations and whether
+      it penetrates protected compartments such as the central nervous system, the placenta, or
+      abscess cavities. Metabolism, principally hepatic but also occurring in the gut wall, lung,
+      and kidney, chemically transforms drugs through oxidation, conjugation, and hydrolysis — a
+      process mediated largely by the cytochrome P450 enzyme family whose genetic variability and
+      susceptibility to induction and inhibition underlies the majority of clinically significant
+      drug interactions. Excretion describes the elimination of drug and metabolites from the body,
+      predominantly through renal filtration, secretion, and reabsorption, with biliary and pulmonary
+      routes contributing for specific drug classes.
+    </p>
+    <p>
+      For the nursing clinician, ADME mastery translates directly into patient safety practices:
+      recognizing which patients require dose adjustments based on organ function, understanding
+      why crushing an extended-release tablet can produce fatal drug concentrations, anticipating
+      the delay between administration and therapeutic effect for drugs with long distribution phases,
+      and counseling patients about food and drug interactions with mechanistic specificity rather
+      than a list of prohibitions. The {drugsData.length} drugs indexed in this reference span an
+      enormous range of pharmacokinetic profiles — from vancomycin, renally cleared unchanged with
+      dose adjustment required in {renalCount} drugs of this database, to highly lipophilic agents
+      with volumes of distribution exceeding total body water. {cyp3a4Count} drugs in this database
+      are metabolized by CYP3A4, the single most important drug-metabolizing enzyme; {hepaticCount}
+      require hepatic dose adjustment; and {beersCount} appear on the Beers Criteria for potentially
+      inappropriate use in older adults whose pharmacokinetic capacity is diminished. Navigate the
+      six sub-sections below to explore each dimension of ADME in full clinical and mechanistic
+      depth.
+    </p>
+  </div>
+
+  <!-- Stats bar -->
+  <div class="stats stats-horizontal shadow w-full mb-10 flex-wrap">
+    <div class="stat">
+      <div class="stat-title">CYP3A4 Substrates</div>
+      <div class="stat-value text-amber-600">{cyp3a4Count}</div>
+      <div class="stat-desc">drugs in database</div>
+    </div>
+    <div class="stat">
+      <div class="stat-title">Renal Dose Adj.</div>
+      <div class="stat-value text-amber-600">{renalCount}</div>
+      <div class="stat-desc">require CKD adjustment</div>
+    </div>
+    <div class="stat">
+      <div class="stat-title">Hepatic Dose Adj.</div>
+      <div class="stat-value text-amber-600">{hepaticCount}</div>
+      <div class="stat-desc">require liver adjustment</div>
+    </div>
+    <div class="stat">
+      <div class="stat-title">Beers Criteria</div>
+      <div class="stat-value text-amber-600">{beersCount}</div>
+      <div class="stat-desc">avoid in elderly</div>
+    </div>
+    <div class="stat">
+      <div class="stat-title">TDM Required</div>
+      <div class="stat-value text-amber-600">{tdmCount}</div>
+      <div class="stat-desc">therapeutic drug monitoring</div>
+    </div>
+  </div>
+
+  <!-- Sub-page card grid -->
+  <h2 class="text-2xl font-serif font-bold mb-4">Explore ADME Sub-Sections</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+    {subPages.map((page) => (
+      <a href={page.href} class={`card card-compact bg-base-100 shadow-md border-l-4 ${page.color} hover:shadow-lg transition-shadow`}>
+        <div class="card-body">
+          <div class="text-3xl mb-2">{page.icon}</div>
+          <h3 class="card-title font-serif">{page.title}</h3>
+          <p class="text-sm text-base-content/70">{page.description}</p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <div class="alert alert-info">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+    <div>
+      <div class="font-bold">Cross-Schema Navigation</div>
+      <div class="text-sm">
+        ADME properties link directly to drug interactions (Schema 9), adverse effect clusters (Schema 8),
+        and special-population safety profiles. Use the Schema Compass to navigate between schemas for any drug.
+      </div>
+    </div>
+  </div>
 </SchemaLayout>

@@ -1,0 +1,70 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+const slug = 'cholinergic';
+const displayName = 'Cholinergic Agents';
+
+const drugs = (drugsData as any[]).filter(
+  (d: any) => (d.therapeutic_classes || []).includes(slug)
+);
+const drugCount = drugs.length;
+---
+<SchemaLayout title="Cholinergic Agents" schema="therapeutic-classes" description="Cholinergic agents acting on muscarinic and nicotinic acetylcholine receptors">
+
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/02-therapeutic-classes/`} class="link">Therapeutic Classes</a></li>
+        <li>{displayName}</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-2">{displayName}</h1>
+    <p class="text-base-content/70 text-lg">{drugCount} drug{drugCount !== 1 ? 's' : ''} in this class</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>Cholinergic pharmacology is grounded in the neurotransmitter acetylcholine (ACh), whose synthesis, storage, release, receptor binding, and hydrolysis have been mapped in exquisite detail since Otto Loewi's 1921 demonstration of humoral neurotransmission in the frog heart. Acetylcholine is synthesized in cholinergic nerve terminals from choline and acetyl-CoA via choline acetyltransferase, stored in synaptic vesicles, and released by calcium-dependent exocytosis into the synaptic cleft where it binds muscarinic and nicotinic receptors before rapid hydrolysis by acetylcholinesterase (AChE). The clinical imperative to modulate cholinergic tone arises from its roles as the primary neurotransmitter of the parasympathetic nervous system, the neuromuscular junction, and cognitive circuits in the basal forebrain. Drug classes within this family include direct cholinomimetics (bethanechol, pilocarpine), acetylcholinesterase inhibitors (donepezil, rivastigmine, neostigmine, pyridostigmine), and anticholinergics (atropine, scopolamine, benztropine, glycopyrrolate, ipratropium, oxybutynin)—the last group paradoxically producing cholinergic effects by preventing ACh degradation or by blocking receptors.</p>
+    <p>Cholinergic receptors fall into two structurally and functionally distinct families. Muscarinic receptors (M1–M5) are GPCRs distributed throughout the parasympathetic end-organ targets: M1 in the CNS and gastric parietal cells; M2 in the heart and presynaptic terminals; M3 in smooth muscle, exocrine glands, and the eye. M2 activation couples to Gi, reducing heart rate and AV nodal conduction velocity; M3 activation couples to Gq, increasing smooth muscle contraction in the GI and urinary tracts and stimulating glandular secretion. Nicotinic receptors are ligand-gated ion channels: NM receptors at the neuromuscular junction mediate skeletal muscle contraction via sodium and potassium flux and depolarization; NN receptors at autonomic ganglia are responsible for synaptic transmission in both the sympathetic and parasympathetic divisions. Acetylcholinesterase inhibitors amplify ACh at all synaptic clefts by preventing its hydrolysis, thereby producing broad cholinergic stimulation encompassing both receptor families and both peripheral and central circuits.</p>
+    <p>The pharmacokinetics of cholinergic agents are strongly governed by their chemical polarity. Quaternary ammonium compounds—neostigmine, pyridostigmine, glycopyrrolate, bethanechol—bear permanent positive charges and cross neither the BBB nor the GI epithelium efficiently, yielding negligible CNS penetration and poor oral bioavailability; their effects are restricted to peripheral cholinergic targets. Tertiary amine compounds—donepezil, rivastigmine, galantamine, atropine, scopolamine—are lipophilic and cross the BBB readily, exerting prominent CNS effects. Donepezil has a long half-life of approximately 70 hours, permitting once-daily dosing and steady-state accumulation; rivastigmine's shorter half-life necessitates twice-daily oral dosing but has prompted development of a transdermal patch that reduces peak-concentration-driven GI adverse effects. Pyridostigmine's oral bioavailability is approximately 10–20% with a half-life of 90 minutes, requiring frequent dosing in myasthenia gravis management. Organophosphate insecticides and nerve agents (sarin, VX) are irreversible AChE inhibitors with exceptionally high lipid solubility, producing rapid CNS penetration and life-threatening cholinergic crisis requiring pralidoxime reactivation within hours before the enzyme becomes irreversibly "aged."</p>
+    <p>The adverse effect profile of cholinergic agonists and AChE inhibitors is predicted by excess muscarinic stimulation and summarized by the SLUDGE mnemonic: Salivation, Lacrimation, Urination, Defecation, GI distress, and Emesis—as well as bradycardia, bronchospasm, and miosis. These effects are dose-dependent, particularly prominent with systemic cholinomimetics, and are managed by dose reduction or atropine administration. GI adverse effects—nausea, vomiting, diarrhea—are the most common dose-limiting toxicities for the cholinesterase inhibitors used in Alzheimer's disease and frequently require slow titration over weeks. Paradoxically, high doses of depolarizing neuromuscular blocking agents (succinylcholine) cause fasciculations and myalgias through nicotinic receptor depolarization before producing paralysis. Anticholinergic agents cause the inverse SLUDGE picture—dry mouth, urinary retention, constipation, blurred vision, mydriasis, tachycardia, hyperthermia, and delirium—particularly in elderly patients with reduced cholinergic reserve; the Beers Criteria strongly recommend against routine use of anticholinergics in patients over 65.</p>
+    <p>Clinically, cholinergic pharmacology underpins several high-priority therapeutic applications. In Alzheimer's disease, the cholinergic hypothesis postulates that degeneration of basal forebrain cholinergic neurons reduces cortical and hippocampal ACh, impairing memory encoding; AChE inhibitors (donepezil, rivastigmine, galantamine) modestly slow symptomatic progression and are standard of care for mild-to-moderate disease, though the nurse must monitor for bradycardia and GI tolerability. In myasthenia gravis, an autoimmune attack on postsynaptic NM nicotinic receptors reduces available ACh binding sites; pyridostigmine provides symptomatic relief by prolonging ACh dwell-time. Neostigmine and sugammadex are used perioperatively to reverse neuromuscular blockade. Atropine is the first-line treatment for symptomatic bradycardia and the antidote for organophosphate poisoning, where its competition with ACh at muscarinic receptors ameliorates bronchospasm, bradycardia, and secretions; the nurse must titrate to drying of secretions and heart rate normalization, not pupil dilation alone. Pilocarpine eye drops reduce intraocular pressure in open-angle glaucoma through ciliary muscle contraction that improves trabecular outflow, illustrating how targeted muscarinic agonism can be clinically useful without systemic toxicity.</p>
+  </div>
+
+  {drugs.length === 0 && (
+    <div class="alert alert-info mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <span>No drugs are currently classified under this therapeutic class. Check back as more drug data is added.</span>
+    </div>
+  )}
+
+  {drugs.length > 0 && (
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      {drugs.map((drug: any) => (
+        <div class={`card card-compact bg-base-100 shadow border border-base-200 ${drug.ismp_high_alert ? 'border-l-4 border-l-error' : ''}`}>
+          <div class="card-body">
+            <div class="flex flex-wrap items-start gap-1 mb-1">
+              <h2 class="card-title text-base font-semibold capitalize mr-auto">
+                <a href={`${base}drugs/${drug.id}/`} class="hover:text-primary transition-colors">
+                  {drug.generic_name}
+                </a>
+              </h2>
+              {drug.prototype_for && <span class="badge badge-success badge-sm shrink-0">PROTOTYPE</span>}
+              {drug.ismp_high_alert && <span class="badge badge-error badge-sm shrink-0">HIGH ALERT</span>}
+              {drug.black_box_warnings && drug.black_box_warnings.length > 0 && <span class="badge badge-warning badge-sm shrink-0">BBW</span>}
+            </div>
+            <p class="text-xs text-base-content/60 mb-1">
+              <span class="font-medium">{drug.drug_class}</span>
+              {drug.subclass && <span> — {drug.subclass}</span>}
+            </p>
+            {drug.mechanism_summary && <p class="text-sm text-base-content/70 line-clamp-3">{drug.mechanism_summary}</p>}
+            <div class="card-actions justify-end mt-2">
+              <a href={`${base}drugs/${drug.id}/`} class="btn btn-xs btn-outline btn-primary">Profile</a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+</SchemaLayout>

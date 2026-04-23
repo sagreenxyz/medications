@@ -1,0 +1,181 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const organLabels: Record<string, string> = {
+  'cardiovascular':      'Cardiovascular',
+  'renal':               'Renal',
+  'respiratory':         'Respiratory',
+  'gastrointestinal':    'Gastrointestinal',
+  'endocrine':           'Endocrine',
+  'reproductive':        'Reproductive',
+  'cns':                 'CNS',
+  'pns-autonomic':       'PNS/Autonomic',
+  'musculoskeletal':     'Musculoskeletal',
+  'hematology-oncology': 'Hematology-Oncology',
+  'immunology':          'Immunology',
+  'infectious-disease':  'Infectious Disease',
+  'dermatology':         'Dermatology',
+  'ophthalmology-ent':   'Ophthalmology/ENT',
+  'toxicology':          'Toxicology',
+};
+
+const classLabels: Record<string, string> = {
+  'adrenergic':             'Adrenergic Agents',
+  'cholinergic':            'Cholinergic Agents',
+  'ion-channel':            'Ion Channel Modulators',
+  'enzyme-inhibitors':      'Enzyme Inhibitors',
+  'receptor-antagonists':   'Receptor Antagonists',
+  'transporter-inhibitors': 'Transporter Inhibitors',
+  'hormones-analogs':       'Hormones & Analogs',
+  'biologics':              'Biologics',
+  'antimicrobials':         'Antimicrobials',
+  'cytotoxics':             'Cytotoxic Agents',
+  'anticoagulants':         'Anticoagulants',
+};
+
+const organSlugs = Object.keys(organLabels);
+const classSlugs = Object.keys(classLabels);
+
+export async function getStaticPaths() {
+  const organSlugsInner = [
+    'cardiovascular','renal','respiratory','gastrointestinal','endocrine',
+    'reproductive','cns','pns-autonomic','musculoskeletal','hematology-oncology',
+    'immunology','infectious-disease','dermatology','ophthalmology-ent','toxicology',
+  ];
+  const classSlugsInner = [
+    'adrenergic','cholinergic','ion-channel','enzyme-inhibitors','receptor-antagonists',
+    'transporter-inhibitors','hormones-analogs','biologics','antimicrobials',
+    'cytotoxics','anticoagulants',
+  ];
+  const paths = [];
+  for (const org of organSlugsInner) {
+    for (const tc of classSlugsInner) {
+      const drugs = (drugsData as any[]).filter(d =>
+        (d.organ_systems || []).includes(org) &&
+        (d.therapeutic_classes || []).includes(tc)
+      );
+      if (drugs.length > 0) {
+        paths.push({
+          params: { intersection: `${org}-${tc}` },
+          props: { org, tc, drugs },
+        });
+      }
+    }
+  }
+  return paths;
+}
+
+const { org, tc, drugs } = Astro.props as {
+  org: string;
+  tc: string;
+  drugs: any[];
+};
+const base = import.meta.env.BASE_URL;
+
+const orgLabel = organLabels[org] ?? org;
+const tcLabel  = classLabels[tc]  ?? tc;
+const pageTitle = `${orgLabel} × ${tcLabel}`;
+
+// Context prose keyed by therapeutic class
+const classProse: Record<string, string> = {
+  'adrenergic': `Adrenergic agents modulate the sympathetic nervous system through α- and β-adrenoceptors, making them broadly applicable wherever sympathetic tone governs physiology. In the ${orgLabel} system, these drugs are deployed primarily to adjust vascular resistance, cardiac output, bronchomotor tone, or smooth-muscle contractility, depending on the receptor subtype targeted. The selectivity profile of each agent—whether it preferentially engages α1, α2, β1, β2, or non-selective pathways—determines both its clinical utility and the adverse effect profile the nurse must anticipate.`,
+
+  'cholinergic': `Cholinergic drugs act on muscarinic or nicotinic acetylcholine receptors, mimicking or opposing parasympathetic signaling. Within the ${orgLabel} system, their effects reflect the density and subtype of cholinergic receptors present: M2 receptors dominate the heart and modulate rate, M3 receptors govern smooth muscle and secretory glands, and nicotinic receptors mediate neuromuscular transmission. Therapeutic applications at this intersection are chosen precisely because parasympathetic upregulation or antagonism produces a clinically useful and organ-specific outcome.`,
+
+  'ion-channel': `Ion channel modulators alter the gating of voltage-gated or ligand-gated channels to change membrane excitability or ion flux. In the ${orgLabel} system, these drugs exploit the fact that excitable cells—cardiac myocytes, neurons, smooth muscle—depend on precisely timed ion currents for their function. Sodium channel blockers stabilize action potentials; calcium channel antagonists reduce calcium-dependent contraction and conduction; potassium channel openers hyperpolarize membranes; each mechanism translates into a specific therapeutic effect and a corresponding toxicity profile the nurse must monitor.`,
+
+  'enzyme-inhibitors': `Enzyme inhibitors occupy the active site of a target enzyme, reducing conversion of substrate to product and thereby shifting a physiological equilibrium. The ${orgLabel} system is particularly amenable to this strategy because many of its regulatory pathways are enzymatically driven: the renin-angiotensin cascade, arachidonic acid metabolism, HMG-CoA synthesis, phosphodiesterase activity, and others. The specificity of inhibition determines how tightly pharmacological effects are confined to the intended system versus producing off-target consequences in other organs.`,
+
+  'receptor-antagonists': `Receptor antagonists bind to their target receptors without activating them, competitively or irreversibly blocking endogenous ligand binding. The ${orgLabel} system harbors receptors whose activation drives pathological states—excessive angiotensin signaling in heart failure, histamine-mediated gastric acid secretion, dopamine-driven psychosis—and antagonism at these sites produces clinically significant benefit. Because receptor blockade is pharmacodynamically clean relative to non-selective inhibition, these agents tend to have predictable dose–response curves that facilitate titration-based nursing management.`,
+
+  'transporter-inhibitors': `Transporter inhibitors block membrane proteins responsible for substrate re-uptake or active secretion across epithelial and neuronal membranes. In the ${orgLabel} system, this mechanism enables either retention (e.g., SGLT2 inhibition keeping glucose in the tubule) or accumulation (e.g., SERT inhibition increasing synaptic serotonin) of biologically active molecules where the clinical effect is needed. The transporters in this system are often highly selective, meaning that inhibitor specificity correlates directly with the magnitude and predictability of the intended pharmacological response.`,
+
+  'hormones-analogs': `Hormones and hormone analogs either replicate the action of endogenous signaling molecules or occupy their receptors to produce agonist, partial-agonist, or antagonist effects. The ${orgLabel} system depends on endocrine signaling for fundamental homeostatic processes—glucose regulation, reproductive cycling, thyroid metabolism, adrenal stress responses—making this class numerically large at this intersection. Pharmacokinetic optimization, such as creating analogs with prolonged half-lives or altered receptor selectivity, has expanded the clinical repertoire far beyond simple hormone replacement.`,
+
+  'biologics': `Biologic agents—monoclonal antibodies, receptor fusion proteins, cytokine modulators, and cell-depleting antibodies—exploit the specificity of immune-system targeting to intervene at discrete molecular checkpoints. In the ${orgLabel} system, biologics are deployed when small-molecule drugs cannot adequately suppress pathological immune cascades (e.g., TNF-α in inflammatory disease, IgE in atopic disease, checkpoint proteins in oncology). Their large molecular size restricts them to parenteral routes, and their immune-modulatory mechanisms demand vigilance for opportunistic infection and infusion-related reactions.`,
+
+  'antimicrobials': `Antimicrobials act on structural targets unique to microbial cells—peptidoglycan synthesis, ribosomal subunits, nucleic acid replication, cell-membrane integrity, or metabolic pathways absent in human cells. Within the ${orgLabel} system, these drugs are directed at infections caused by bacteria, fungi, viruses, or parasites that preferentially affect that anatomical compartment. Pharmacokinetic adequacy—achieving sufficient tissue concentration at the site of infection relative to the minimum inhibitory concentration—is a fundamental determinant of efficacy and a key consideration in dose selection.`,
+
+  'cytotoxics': `Cytotoxic agents disrupt cell division or DNA integrity, exploiting the higher proliferative rate of malignant cells while accepting collateral toxicity to rapidly dividing normal tissues. In the ${orgLabel} system, these drugs are used either to treat primary malignancies arising from that organ or to address secondary effects of systemic cytotoxic regimens. Myelosuppression, mucositis, and organ-specific toxicities (cardiomyopathy, nephrotoxicity, neurotoxicity) require structured nursing assessment with defined laboratory thresholds for dose modification or treatment delay.`,
+
+  'anticoagulants': `Anticoagulants interrupt the coagulation cascade at one or more steps—thrombin, factor Xa, vitamin K–dependent factor synthesis, or platelet activation—to prevent pathological thrombus formation. Within the ${orgLabel} system, thromboembolic disease is a direct or indirect complication of the underlying pathophysiology, making anticoagulation both a treatment and a prophylactic strategy. Because the therapeutic window of these agents is narrow and bleeding is the primary dose-limiting toxicity, nursing responsibilities center on laboratory monitoring, recognition of bleeding signs, and patient education about drug–drug and drug–food interactions.`,
+};
+
+const contextProse = classProse[tc] ?? `Drugs at the intersection of the ${orgLabel} system and the ${tcLabel} class represent agents whose mechanism of action is specifically deployed to address pathophysiological processes occurring within this organ system. Understanding both the mechanistic basis of drug action and the specific physiology of the system is essential for predicting therapeutic effects, anticipating toxicities, and providing safe, evidence-based nursing care.`;
+
+// Group drugs by drug_class for display
+const byClass: Record<string, any[]> = {};
+for (const drug of drugs) {
+  const cls = drug.drug_class || 'Other';
+  if (!byClass[cls]) byClass[cls] = [];
+  byClass[cls].push(drug);
+}
+---
+
+<SchemaLayout title={pageTitle} schema="organ-by-class">
+  <!-- Breadcrumbs -->
+  <nav class="text-sm breadcrumbs mb-6">
+    <ul>
+      <li><a href={`${base}`}>Home</a></li>
+      <li><a href={`${base}schemas/03-organ-by-class/`}>Organ × Class Matrix</a></li>
+      <li class="font-semibold">{pageTitle}</li>
+    </ul>
+  </nav>
+
+  <h1 class="text-3xl font-serif font-bold mb-2">{pageTitle}</h1>
+  <p class="text-base-content/60 mb-6">
+    {drugs.length} drug{drugs.length !== 1 ? 's' : ''} at this intersection
+  </p>
+
+  <div class="prose max-w-none mb-8">
+    <p>{contextProse}</p>
+  </div>
+
+  <!-- Drug cards grouped by subclass -->
+  {Object.entries(byClass).map(([className, classDrugs]) => (
+    <section class="mb-8">
+      <h2 class="text-xl font-serif font-semibold mb-4 pb-1 border-b border-base-300">{className}</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+        {classDrugs.map((drug: any) => (
+          <div class={`card card-compact bg-base-100 border shadow-sm hover:shadow-md transition-shadow ${drug.ismp_high_alert ? 'border-l-4 border-l-error' : 'border-base-200'}`}>
+            <div class="card-body">
+              <div class="flex flex-wrap items-start gap-1 mb-1">
+                {drug.prototype_for && (
+                  <span class="badge badge-success badge-sm">PROTOTYPE</span>
+                )}
+                {drug.ismp_high_alert && (
+                  <span class="badge badge-error badge-sm">HIGH ALERT</span>
+                )}
+                {drug.black_box_warnings?.length > 0 && (
+                  <span class="badge badge-error badge-outline badge-sm">BBW</span>
+                )}
+                {drug.beers_criteria && (
+                  <span class="badge badge-warning badge-sm">Beers</span>
+                )}
+              </div>
+              <h3 class="card-title text-base capitalize">
+                <a href={`${base}drugs/${drug.id}/`} class="link link-hover link-primary">
+                  {drug.generic_name}
+                </a>
+              </h3>
+              {drug.brand_names?.length > 0 && (
+                <p class="text-xs text-base-content/60 -mt-1">{drug.brand_names.slice(0,3).join(', ')}</p>
+              )}
+              <p class="text-sm text-base-content/80 mt-1 line-clamp-2">{drug.mechanism_summary}</p>
+              <div class="card-actions justify-end mt-2">
+                <a href={`${base}drugs/${drug.id}/`} class="btn btn-xs btn-ghost">View profile →</a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  ))}
+
+  <div class="mt-8 pt-6 border-t border-base-200 flex flex-wrap gap-3">
+    <a href={`${base}schemas/03-organ-by-class/`} class="btn btn-outline btn-sm">← Back to Matrix</a>
+    <a href={`${base}schemas/01-organ-systems/${org}/`} class="btn btn-ghost btn-sm">{orgLabel} System →</a>
+    <a href={`${base}schemas/02-therapeutic-classes/${tc}/`} class="btn btn-ghost btn-sm">{tcLabel} →</a>
+  </div>
+</SchemaLayout>

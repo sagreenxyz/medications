@@ -1,0 +1,70 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+const slug = 'anticoagulants';
+const displayName = 'Anticoagulants';
+
+const drugs = (drugsData as any[]).filter(
+  (d: any) => (d.therapeutic_classes || []).includes(slug)
+);
+const drugCount = drugs.length;
+---
+<SchemaLayout title="Anticoagulants" schema="therapeutic-classes" description="Anticoagulant agents targeting the coagulation cascade including heparins, vitamin K antagonists, and direct oral anticoagulants">
+
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/02-therapeutic-classes/`} class="link">Therapeutic Classes</a></li>
+        <li>{displayName}</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-2">{displayName}</h1>
+    <p class="text-base-content/70 text-lg">{drugCount} drug{drugCount !== 1 ? 's' : ''} in this class</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>Anticoagulant pharmacology addresses one of the most fundamental challenges in clinical medicine: the prevention and treatment of pathological thrombosis while preserving the hemostatic mechanisms essential for wound repair and vascular integrity. The coagulation cascade—a sequential amplification of serine protease activation culminating in thrombin generation and fibrin clot formation—provides multiple pharmacologically targetable nodes. The modern anticoagulant era began with the purification of heparin from liver extracts by McLean and Howell in 1916, with clinical anticoagulation first applied systematically in the 1930s. Warfarin, discovered in Wisconsin when cattle died from bleeding after consuming spoiled sweet clover, was developed as a clinical anticoagulant in the 1950s and dominated anticoagulant therapy for half a century. The twenty-first century brought direct oral anticoagulants (DOACs)—dabigatran (direct thrombin inhibitor), rivaroxaban, apixaban, edoxaban, and betrixaban (factor Xa inhibitors)—that target specific coagulation factors with predictable pharmacokinetics, fixed dosing, and no requirement for routine monitoring, transforming both the treatment of venous thromboembolism and stroke prevention in atrial fibrillation. All anticoagulants are designated ISMP high-alert medications because bleeding errors—from underdosing causing thromboembolic events or overdosing causing hemorrhage—carry life-threatening consequences.</p>
+    <p>The coagulation cascade operates through intrinsic (contact activation) and extrinsic (tissue factor) pathways that converge at factor Xa to activate prothrombin to thrombin, which cleaves fibrinogen to fibrin and activates platelets. Heparin (unfractionated, UFH) is a highly sulfated glycosaminoglycan that binds antithrombin III (AT III) through a specific pentasaccharide sequence, causing a conformational change that accelerates AT III's inhibition of thrombin (factor IIa) and factor Xa by approximately 1000-fold; the heparin-AT III complex requires heparin chains of at least 18 saccharide units to simultaneously bind both thrombin and AT III, explaining why low-molecular-weight heparins (LMWHs: enoxaparin, dalteparin) with shorter chain lengths predominantly inhibit factor Xa rather than thrombin. The indirect mechanism of heparin (requiring AT III as cofactor) is distinguished from direct thrombin inhibitors (dabigatran, bivalirudin, argatroban) that bind thrombin's active site directly without cofactor, and from direct factor Xa inhibitors (rivaroxaban, apixaban, edoxaban) that bind the active site of factor Xa. Warfarin and other vitamin K antagonists inhibit vitamin K epoxide reductase (VKORC1), preventing regeneration of reduced vitamin K, which is an essential cofactor for gamma-carboxylation of the glutamic acid residues of factors II, VII, IX, X, protein C, and protein S—rendering these proteins unable to bind calcium and phospholipid membranes at sites of endothelial injury.</p>
+    <p>The pharmacokinetics of anticoagulants determine their monitoring requirements, reversal strategies, and dose adjustment principles. Warfarin's highly variable pharmacokinetics—influenced by dietary vitamin K intake, gut microbiome, hepatic function, concomitant medications affecting CYP2C9 (the primary metabolizing enzyme) and CYP3A4, and VKORC1 and CYP2C9 genetic polymorphisms—necessitate INR monitoring with a target of 2–3 for most indications (2.5–3.5 for mechanical mitral valves), weekly or biweekly initially and monthly once stable; the FDA has approved pharmacogenomic-guided warfarin dosing algorithms that incorporate CYP2C9 and VKORC1 genotype. UFH's highly variable bioavailability and protein binding necessitate weight-based dosing protocols with aPTT monitoring targeting 60–100 seconds (1.5–2.5x baseline), with dose adjustments every 6 hours until therapeutic; UFH's short half-life (90 minutes) and reversal by protamine sulfate make it preferred perioperatively and in patients with high bleeding risk requiring rapid anticoagulant reversal. LMWHs (enoxaparin 1 mg/kg subcutaneously twice daily for treatment, 40 mg once daily for prophylaxis) have predictable pharmacokinetics permitting fixed weight-based dosing without routine monitoring; anti-Xa level monitoring is recommended at extremes of weight (less than 45 kg or greater than 120 kg), pregnancy, and renal impairment (CrCl less than 30 mL/min). DOACs achieve peak plasma concentrations within 2–3 hours of oral administration, have half-lives of 7–17 hours, and are eliminated variably by renal (dabigatran 80%, edoxaban 50%, rivaroxaban 35% as active drug) and hepatic pathways; dose reduction or avoidance is required at defined renal thresholds specific to each agent and indication.</p>
+    <p>Bleeding is the primary adverse effect of all anticoagulants and occurs on a spectrum from minor (skin bruising, epistaxis) to life-threatening (intracranial hemorrhage, retroperitoneal hemorrhage). The risk of major bleeding with therapeutic anticoagulation is approximately 2–3% per year for DOACs and 3–4% per year for warfarin in atrial fibrillation patients; risk scoring tools (HAS-BLED for AF) quantify patient-specific bleeding risk and guide the benefit-risk calculation of anticoagulation. Reversal agents are essential components of anticoagulant management: protamine sulfate reverses UFH (1 mg per 100 units UFH given in preceding 2 hours, maximum 50 mg IV over 10 minutes) and partially reverses LMWH (approximately 60% anti-Xa activity reduction); vitamin K (phytonadione 2.5–10 mg orally or 2.5–5 mg IV infusion over 30 minutes) restores vitamin K-dependent factor synthesis within 6–24 hours for warfarin reversal; 4-factor prothrombin complex concentrate (4F-PCC) provides immediate warfarin reversal without volume overload and is preferred over fresh frozen plasma for life-threatening hemorrhage. Idarucizumab (Praxbind) is a specific humanized monoclonal antibody fragment that binds dabigatran with 350-fold greater affinity than thrombin, providing immediate and complete reversal; andexanet alfa is a recombinant modified factor Xa decoy protein that binds and sequesters rivaroxaban, apixaban, and edoxaban. Heparin-induced thrombocytopenia (HIT) is an immune-mediated adverse effect where antibodies form against heparin-platelet factor 4 complexes, paradoxically activating platelets and causing arterial and venous thrombosis despite thrombocytopenia; any platelet count fall of 30–50% occurring 5–14 days after heparin initiation should trigger a 4T score assessment and anti-PF4 antibody testing, with immediate cessation of all heparin products and initiation of a non-heparin anticoagulant (argatroban, bivalirudin, fondaparinux).</p>
+    <p>Anticoagulant management represents one of the highest-acuity areas of nursing pharmacology practice, requiring comprehensive assessment, vigilant monitoring, and sophisticated patient education. Before initiating anticoagulation, the nurse must assess and document fall risk, bleeding history, concurrent antiplatelet or NSAID use, hepatic and renal function, and patient or caregiver ability to manage home anticoagulation safely. Anticoagulant stewardship requires daily review of anticoagulant appropriateness, dose, and monitoring parameters against the clinical indication; nurses participating in anticoagulation clinics manage warfarin dose adjustment and INR trending, patient education about dietary consistency, drug interaction awareness, and signs of bleeding. Patient education for DOAC therapy emphasizes the absolute importance of adherence—the short half-lives of DOACs mean a missed dose significantly reduces anticoagulant protection for 12–24 hours, creating thromboembolism windows, particularly dangerous in patients with mechanical valves (DOACs are contraindicated with mechanical valves) or high-risk AF. Bridging therapy—the use of short-acting parenteral heparin or LMWH during peri-procedural periods when oral anticoagulants are held—must be individualized based on thromboembolism risk (CHADS2-VASc for AF, prior VTE history, thrombophilia) and procedural bleeding risk; the nurse coordinating perioperative anticoagulant management must verify hold periods (warfarin held 5 days, DOACs held 24–48 hours depending on CrCl and procedure bleeding risk) and document bridging agent administration and timing relative to surgery.</p>
+  </div>
+
+  {drugs.length === 0 && (
+    <div class="alert alert-info mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <span>No drugs are currently classified under this therapeutic class. Check back as more drug data is added.</span>
+    </div>
+  )}
+
+  {drugs.length > 0 && (
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      {drugs.map((drug: any) => (
+        <div class={`card card-compact bg-base-100 shadow border border-base-200 ${drug.ismp_high_alert ? 'border-l-4 border-l-error' : ''}`}>
+          <div class="card-body">
+            <div class="flex flex-wrap items-start gap-1 mb-1">
+              <h2 class="card-title text-base font-semibold capitalize mr-auto">
+                <a href={`${base}drugs/${drug.id}/`} class="hover:text-primary transition-colors">
+                  {drug.generic_name}
+                </a>
+              </h2>
+              {drug.prototype_for && <span class="badge badge-success badge-sm shrink-0">PROTOTYPE</span>}
+              {drug.ismp_high_alert && <span class="badge badge-error badge-sm shrink-0">HIGH ALERT</span>}
+              {drug.black_box_warnings && drug.black_box_warnings.length > 0 && <span class="badge badge-warning badge-sm shrink-0">BBW</span>}
+            </div>
+            <p class="text-xs text-base-content/60 mb-1">
+              <span class="font-medium">{drug.drug_class}</span>
+              {drug.subclass && <span> — {drug.subclass}</span>}
+            </p>
+            {drug.mechanism_summary && <p class="text-sm text-base-content/70 line-clamp-3">{drug.mechanism_summary}</p>}
+            <div class="card-actions justify-end mt-2">
+              <a href={`${base}drugs/${drug.id}/`} class="btn btn-xs btn-outline btn-primary">Profile</a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+</SchemaLayout>

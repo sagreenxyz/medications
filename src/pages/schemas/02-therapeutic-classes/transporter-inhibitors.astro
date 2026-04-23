@@ -1,0 +1,70 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+const slug = 'transporter-inhibitors';
+const displayName = 'Transporter Inhibitors';
+
+const drugs = (drugsData as any[]).filter(
+  (d: any) => (d.therapeutic_classes || []).includes(slug)
+);
+const drugCount = drugs.length;
+---
+<SchemaLayout title="Transporter Inhibitors" schema="therapeutic-classes" description="Drugs that inhibit membrane transport proteins including SERT, DAT, SGLT2, and P-glycoprotein">
+
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/02-therapeutic-classes/`} class="link">Therapeutic Classes</a></li>
+        <li>{displayName}</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-2">{displayName}</h1>
+    <p class="text-base-content/70 text-lg">{drugCount} drug{drugCount !== 1 ? 's' : ''} in this class</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>Membrane transport proteins are integral membrane proteins that mediate the ATP-dependent or electrochemical gradient-driven movement of molecules across biological membranes—including neurotransmitters at the synapse, glucose and ions across epithelial barriers, and drugs and toxins at the gut, liver, kidney, and blood-brain barrier. The pharmacological inhibition of transporters as a therapeutic strategy was first demonstrated with the monoamine reuptake inhibitors (tricyclic antidepressants) in the 1950s and was refined with the development of selective serotonin reuptake inhibitors (SSRIs) in the 1980s, which exploited the SERT (serotonin transporter, SLC6A4) selectively enough to retain antidepressant efficacy while eliminating the cardiac and anticholinergic toxicity of tricyclics. The subsequent discovery that SGLT2 (sodium-glucose cotransporter 2) inhibition in the renal proximal tubule could produce glycosuria and clinically meaningful glucose lowering, and that this class also reduced cardiovascular and renal endpoints through mechanisms beyond glucose control, made transporter pharmacology one of the most exciting areas of drug discovery in the early twenty-first century. Today, transporter inhibitors span antidepressants, anticonvulsants, antidiabetics, and agents exploiting OATP, P-glycoprotein, and multidrug resistance transporters in clinical pharmacokinetics.</p>
+    <p>Transporter proteins are structurally classified into two superfamilies: ATP-binding cassette (ABC) transporters, which use ATP hydrolysis to pump substrates against concentration gradients (P-glycoprotein/MDR1/ABCB1, MRP2/ABCC2, BCRP/ABCG2), and solute carrier (SLC) transporters, which use ion gradients for secondary active transport (SERT/SLC6A4, DAT/SLC6A3, NET/SLC6A2, SGLT1/SLC5A1, SGLT2/SLC5A2, OATP1B1/SLCO1B1, OCT1/SLC22A1). SSRIs inhibit SERT with varying selectivity ratios over DAT and NET; escitalopram is the most SERT-selective, while duloxetine and venlafaxine (SNRIs) inhibit both SERT and NET, adding noradrenergic antidepressant effects. SGLT2 inhibitors (empagliflozin, dapagliflozin, canagliflozin, ertugliflozin) block the low-affinity, high-capacity glucose cotransporter in the S1 and S2 segments of the proximal convoluted tubule, reducing the renal glucose threshold from approximately 180 mg/dL to below 70 mg/dL and increasing urinary glucose excretion by 60–80 g per day. P-glycoprotein (P-gp) inhibitors—verapamil, amiodarone, clarithromycin, ritonavir—are clinically important not as primary therapeutic agents but as perpetrators of drug interactions: by inhibiting P-gp in the gut and at the blood-brain barrier, they increase bioavailability and CNS penetration of P-gp substrates such as digoxin, dabigatran, and certain chemotherapy agents.</p>
+    <p>The pharmacokinetics of transporter inhibitors are governed by the tissue distribution and intrinsic affinity of the target transporter. SSRIs are well absorbed orally, undergo extensive hepatic CYP metabolism (fluoxetine and paroxetine by CYP2D6; citalopram, escitalopram, and sertraline predominantly by CYP2C19 and CYP3A4), and have highly variable half-lives: fluoxetine's half-life of 1–4 days (and active metabolite norfluoxetine's half-life of 4–16 days) produces a functionally irreversible SERT inhibition profile that simplifies missed-dose management but complicates drug discontinuation; paroxetine's shorter half-life and self-inhibition of its own CYP2D6 metabolism creates discontinuation syndrome risk with abrupt cessation. SGLT2 inhibitors are orally bioavailable (approximately 60–80%), renally eliminated, and have half-lives of 10–14 hours permitting once-daily dosing; their glucose-lowering efficacy is reduced in CKD (eGFR <45 mL/min/1.73m²) because tubular glucose delivery decreases, though cardiorenal benefits persist at lower eGFRs and are now an indication to continue the class despite reduced glycemic efficacy. Renal OATP and OCT transporters mediate tubular secretion of metformin, and inhibitors of OCT2 (cimetidine, trimethoprim) reduce metformin clearance with potential for accumulation.</p>
+    <p>Adverse effects of transporter inhibitors reflect the physiological functions of the blocked transporters. SSRIs produce an initial serotonin syndrome risk when combined with other serotonergic agents (MAOIs, linezolid, tramadol, triptans, St. John's Wort); even in monotherapy, GI serotonergic activation during titration causes nausea, diarrhea, and anorexia in the first 1–2 weeks that typically remit with continued use. Sexual dysfunction—reduced libido, delayed orgasm, and anorgasmia—is a class effect of SERT inhibition occurring in 30–40% of patients and is mechanistically related to presynaptic 5-HT1A receptor inhibition of dopaminergic tone; it is a major contributor to non-adherence. SGLT2 inhibitors produce predictable urogenital adverse effects from the glucosuria they create: genital mycotic infections (candidal vulvovaginitis in women, candidal balanitis in men) occur in approximately 10% of patients from the glucose-enriched genitourinary environment; urinary tract infections are less consistently increased. More serious SGLT2 inhibitor adverse effects include euglycemic diabetic ketoacidosis—a potentially life-threatening complication where glucosuria masks hyperglycemia so that DKA develops with blood glucose below 250 mg/dL; patients must hold SGLT2 inhibitors at least 3–4 days before major surgery and during prolonged fasting. Fournier's gangrene (necrotizing fasciitis of the perineum) has been reported rarely with all SGLT2 inhibitors and represents an FDA black box warning requiring patient education about perineal hygiene and immediate reporting of pain, swelling, or erythema.</p>
+    <p>The clinical impact of transporter inhibitors extends beyond their primary therapeutic applications through their profound influence on the pharmacokinetics of co-administered drugs. P-gp inhibition by amiodarone or verapamil can double plasma digoxin concentrations, precipitating toxicity; this interaction is managed by reducing the digoxin dose by 30–50% when these agents are co-prescribed and rechecking serum levels. OATP1B1 inhibition by cyclosporine dramatically increases plasma concentrations of statins—particularly simvastatin, atorvastatin, and rosuvastatin—by preventing their hepatic uptake and first-pass extraction, creating a rhabdomyolysis risk that mandates dose capping and vigilant monitoring. In psychiatry, the nurse prescribing or administering an SSRI must perform a comprehensive medication reconciliation to identify all serotonergic co-medications; the MAOI-SSRI combination is absolutely contraindicated due to life-threatening serotonin syndrome, and a 14-day washout period after MAOI discontinuation (5 weeks for fluoxetine due to its long half-life) is required before initiating an SSRI. The expanding cardiovascular and renal outcome data for SGLT2 inhibitors—with empagliflozin, dapagliflozin, and canagliflozin each demonstrating significant reductions in heart failure hospitalization and CKD progression in dedicated outcomes trials—has made this transporter inhibitor subclass a cornerstone of guideline-directed therapy in heart failure and CKD irrespective of diabetes status.</p>
+  </div>
+
+  {drugs.length === 0 && (
+    <div class="alert alert-info mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <span>No drugs are currently classified under this therapeutic class. Check back as more drug data is added.</span>
+    </div>
+  )}
+
+  {drugs.length > 0 && (
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      {drugs.map((drug: any) => (
+        <div class={`card card-compact bg-base-100 shadow border border-base-200 ${drug.ismp_high_alert ? 'border-l-4 border-l-error' : ''}`}>
+          <div class="card-body">
+            <div class="flex flex-wrap items-start gap-1 mb-1">
+              <h2 class="card-title text-base font-semibold capitalize mr-auto">
+                <a href={`${base}drugs/${drug.id}/`} class="hover:text-primary transition-colors">
+                  {drug.generic_name}
+                </a>
+              </h2>
+              {drug.prototype_for && <span class="badge badge-success badge-sm shrink-0">PROTOTYPE</span>}
+              {drug.ismp_high_alert && <span class="badge badge-error badge-sm shrink-0">HIGH ALERT</span>}
+              {drug.black_box_warnings && drug.black_box_warnings.length > 0 && <span class="badge badge-warning badge-sm shrink-0">BBW</span>}
+            </div>
+            <p class="text-xs text-base-content/60 mb-1">
+              <span class="font-medium">{drug.drug_class}</span>
+              {drug.subclass && <span> — {drug.subclass}</span>}
+            </p>
+            {drug.mechanism_summary && <p class="text-sm text-base-content/70 line-clamp-3">{drug.mechanism_summary}</p>}
+            <div class="card-actions justify-end mt-2">
+              <a href={`${base}drugs/${drug.id}/`} class="btn btn-xs btn-outline btn-primary">Profile</a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+</SchemaLayout>

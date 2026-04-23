@@ -1,0 +1,70 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+const slug = 'enzyme-inhibitors';
+const displayName = 'Enzyme Inhibitors';
+
+const drugs = (drugsData as any[]).filter(
+  (d: any) => (d.therapeutic_classes || []).includes(slug)
+);
+const drugCount = drugs.length;
+---
+<SchemaLayout title="Enzyme Inhibitors" schema="therapeutic-classes" description="Drugs that inhibit specific enzymes involved in disease pathways, including ACE inhibitors, statins, PDE inhibitors, and more">
+
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/02-therapeutic-classes/`} class="link">Therapeutic Classes</a></li>
+        <li>{displayName}</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-2">{displayName}</h1>
+    <p class="text-base-content/70 text-lg">{drugCount} drug{drugCount !== 1 ? 's' : ''} in this class</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>Enzyme inhibitors constitute the single largest mechanistic category of clinically approved drugs, reflecting both the centrality of enzymatic catalysis to metabolic and signaling pathways and the tractability of enzyme active sites as drug targets. The modern era of enzyme inhibitor drug design began with the rational design of captopril in the 1970s, when Ondetti and Cushman used the crystal structure of carboxypeptidase A as a template to design competitive inhibitors of angiotensin-converting enzyme (ACE)—an approach that validated structure-based drug design and spawned an entire generation of substrate-analogue enzyme inhibitors. Subsequent decades produced HMG-CoA reductase inhibitors (statins), phosphodiesterase inhibitors (sildenafil, roflumilast), cyclooxygenase inhibitors (NSAIDs, aspirin), proton pump inhibitors (PPIs), xanthine oxidase inhibitors (allopurinol), DPP-4 inhibitors (gliptins), and a vast array of kinase inhibitors that have transformed oncology. The unifying principle across all these subclasses is occupancy of the enzyme's active site or an allosteric regulatory site, reducing catalytic activity and allowing accumulation of upstream substrates or depletion of downstream products with therapeutic consequences.</p>
+    <p>Enzyme inhibition can be classified by mechanism as competitive (reversible binding at the active site, overcome by increasing substrate concentration), non-competitive (binding at an allosteric site, unaffected by substrate concentration), uncompetitive (binding only to the enzyme-substrate complex), or irreversible (covalent modification of the active site). ACE inhibitors competitively inhibit the zinc metalloprotease that cleaves angiotensin I to angiotensin II, simultaneously preventing angiotensin II-mediated vasoconstriction and aldosterone secretion while allowing bradykinin accumulation—the latter mechanism responsible for the class-defining dry cough occurring in 5–20% of patients. Statins are competitive inhibitors of HMG-CoA reductase, the rate-limiting enzyme in hepatic cholesterol synthesis; the resulting reduction in intrahepatic cholesterol upregulates LDL receptor expression, increasing LDL clearance from plasma. Proton pump inhibitors are prodrugs activated by acid in the secretory canaliculus of parietal cells to reactive sulfenamides that covalently and irreversibly bind the H+/K+-ATPase, producing acid suppression that lasts 24–48 hours regardless of the drug's short plasma half-life—an important pharmacokinetic–pharmacodynamic dissociation that the student must appreciate. Aspirin irreversibly acetylates the serine residue in the COX-1 and COX-2 active sites; platelets cannot regenerate COX because they lack nuclei, so aspirin's antiplatelet effect persists for the entire 7–10 day platelet lifespan.</p>
+    <p>The pharmacokinetic diversity within this class is extensive. Most enzyme inhibitors are orally bioavailable, though significant first-pass metabolism varies: lisinopril has approximately 25% oral bioavailability and is not hepatically metabolized, excreted unchanged renally; enalapril is a prodrug requiring hepatic esterase hydrolysis to the active enalaprilat. Statins vary from hydrophilic agents (pravastatin, rosuvastatin) with minimal CYP metabolism and low tissue penetration, to lipophilic agents (atorvastatin, simvastatin, lovastatin) extensively metabolized by CYP3A4, making them susceptible to interactions with CYP3A4 inhibitors such as clarithromycin, itraconazole, and cyclosporine that can precipitate rhabdomyolysis. PPIs are extensively metabolized by CYP2C19, which exhibits functionally significant genetic polymorphism; poor metabolizers (approximately 3% of Caucasians, 15–20% of Asians) achieve plasma exposures several-fold higher than extensive metabolizers, producing greater acid suppression with the same dose. DPP-4 inhibitors (sitagliptin, saxagliptin, linagliptin, alogliptin) have favorable pharmacokinetic profiles with minimal CYP interactions and predominantly renal (sitagliptin) or biliary (linagliptin) elimination, the latter permitting use without dose adjustment in CKD.</p>
+    <p>Shared adverse effects across enzyme inhibitor subclasses are largely on-target, arising from the physiological consequences of blocking the target enzyme rather than off-target receptor interactions. ACE inhibitor-induced cough—caused by bradykinin and substance P accumulation in the respiratory tract—is a class effect occurring in all ACE inhibitors with no dose-dependence and necessitating switch to an ARB rather than dose reduction. Hyperkalemia is a shared risk of all RAAS-targeting enzyme inhibitors (ACE inhibitors, ARBs, renin inhibitors, aldosterone antagonists) because aldosterone suppression reduces renal potassium excretion; concurrent use of two RAAS agents substantially increases this risk. Statin-induced myopathy ranges from asymptomatic creatine kinase elevation to life-threatening rhabdomyolysis with myoglobinuria and acute kidney injury; the mechanism involves impaired CoQ10 synthesis and mitochondrial dysfunction in skeletal muscle cells, with risk increasing proportionally with dose, age, hypothyroidism, renal impairment, and concurrent CYP3A4 inhibition. Proton pump inhibitors, despite their excellent short-term safety profile, carry long-term risks including hypomagnesemia (interfering with Mg2+ absorption in the colon), vitamin B12 deficiency (requiring acid for pepsin-mediated liberation from food proteins), Clostridium difficile infection (reduced gastric acid as a barrier), and potentially increased risk of chronic kidney disease and dementia with prolonged use.</p>
+    <p>Clinically, enzyme inhibitors are among the most prescribed drug classes globally, with statins, ACE inhibitors, and PPIs individually accounting for hundreds of millions of prescriptions annually. ACE inhibitors and ARBs reduce cardiovascular mortality in patients with heart failure, post-MI left ventricular dysfunction, and diabetic nephropathy; nurses must monitor blood pressure, serum creatinine (anticipate a 10–20% increase at initiation that is acceptable and protective), and potassium, and must instruct patients to avoid NSAIDs and potassium supplements. Statin dosing must balance intensity of LDL reduction against myopathy risk: high-intensity therapy (atorvastatin 40–80 mg, rosuvastatin 20–40 mg) is indicated in all patients with clinical atherosclerotic cardiovascular disease and those at high 10-year risk, with baseline and periodic CK and liver enzyme monitoring. The emergence of kinase inhibitors (imatinib, erlotinib, osimertinib) as targeted cancer therapies has added a new dimension to enzyme inhibitor safety monitoring, as each kinase inhibitor carries unique off-target effects including rash, diarrhea, QT prolongation, and interstitial lung disease that require organ-specific surveillance protocols tailored to the specific agent rather than a class-wide approach.</p>
+  </div>
+
+  {drugs.length === 0 && (
+    <div class="alert alert-info mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <span>No drugs are currently classified under this therapeutic class. Check back as more drug data is added.</span>
+    </div>
+  )}
+
+  {drugs.length > 0 && (
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      {drugs.map((drug: any) => (
+        <div class={`card card-compact bg-base-100 shadow border border-base-200 ${drug.ismp_high_alert ? 'border-l-4 border-l-error' : ''}`}>
+          <div class="card-body">
+            <div class="flex flex-wrap items-start gap-1 mb-1">
+              <h2 class="card-title text-base font-semibold capitalize mr-auto">
+                <a href={`${base}drugs/${drug.id}/`} class="hover:text-primary transition-colors">
+                  {drug.generic_name}
+                </a>
+              </h2>
+              {drug.prototype_for && <span class="badge badge-success badge-sm shrink-0">PROTOTYPE</span>}
+              {drug.ismp_high_alert && <span class="badge badge-error badge-sm shrink-0">HIGH ALERT</span>}
+              {drug.black_box_warnings && drug.black_box_warnings.length > 0 && <span class="badge badge-warning badge-sm shrink-0">BBW</span>}
+            </div>
+            <p class="text-xs text-base-content/60 mb-1">
+              <span class="font-medium">{drug.drug_class}</span>
+              {drug.subclass && <span> — {drug.subclass}</span>}
+            </p>
+            {drug.mechanism_summary && <p class="text-sm text-base-content/70 line-clamp-3">{drug.mechanism_summary}</p>}
+            <div class="card-actions justify-end mt-2">
+              <a href={`${base}drugs/${drug.id}/`} class="btn btn-xs btn-outline btn-primary">Profile</a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+</SchemaLayout>

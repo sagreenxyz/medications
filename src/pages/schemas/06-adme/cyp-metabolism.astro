@@ -1,0 +1,486 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+
+// Helper to check if metabolism string mentions a CYP isoform
+function hasCYP(metabolism: string | undefined, isoform: string): boolean {
+  return !!(metabolism && metabolism.toLowerCase().includes(isoform.toLowerCase()));
+}
+
+// Build CYP substrate lists
+const cyp3a4Substrates = (drugsData as any[]).filter(d => hasCYP(d.pharmacokinetics?.metabolism, 'CYP3A4'));
+const cyp2d6Substrates = (drugsData as any[]).filter(d => hasCYP(d.pharmacokinetics?.metabolism, 'CYP2D6'));
+const cyp2c9Substrates = (drugsData as any[]).filter(d => hasCYP(d.pharmacokinetics?.metabolism, 'CYP2C9'));
+const cyp2c19Substrates = (drugsData as any[]).filter(d => hasCYP(d.pharmacokinetics?.metabolism, 'CYP2C19'));
+const cyp1a2Substrates = (drugsData as any[]).filter(d => hasCYP(d.pharmacokinetics?.metabolism, 'CYP1A2'));
+const cyp2b6Substrates = (drugsData as any[]).filter(d => hasCYP(d.pharmacokinetics?.metabolism, 'CYP2B6'));
+
+// Narrow therapeutic index drugs (subset of known NTI drugs)
+const ntiIds = new Set(['warfarin','phenytoin','digoxin','lithium','cyclosporine','tacrolimus',
+  'methotrexate','vancomycin','valproate','carbamazepine','theophylline','amiodarone',
+  'sirolimus','everolimus','clozapine','haloperidol']);
+
+// Known strong CYP3A4 inhibitors
+const strongInhibitors3a4 = ['ketoconazole','itraconazole','voriconazole','posaconazole','isavuconazole',
+  'clarithromycin','erythromycin','ritonavir','cobicistat','nefazodone','telithromycin'];
+const modInhibitors3a4 = ['fluconazole','diltiazem','verapamil','aprepitant','ciprofloxacin',
+  'fluvoxamine','grapefruit','amiodarone','cimetidine'];
+const strongInducers3a4 = ['rifampin','rifabutin','rifapentine','phenytoin','carbamazepine',
+  'phenobarbital','primidone','St. Johns wort','efavirenz','nevirapine'];
+const modInducers3a4 = ['oxcarbazepine','topiramate','modafinil','bosentan','dexamethasone'];
+
+// Prodrug examples
+const prodrugs = (drugsData as any[]).filter(d => {
+  const m = (d.pharmacokinetics?.metabolism || '').toLowerCase();
+  return m.includes('prodrug') || m.includes('pro-drug') ||
+    ['clopidogrel','codeine','tamoxifen','enalapril','losartan','valacyclovir',
+     'valganciclovir','oseltamivir','dabigatran etexilate'].includes(d.id);
+});
+
+// Phase II / non-CYP
+const glucuronidation = (drugsData as any[]).filter(d => {
+  const m = (d.pharmacokinetics?.metabolism || '').toLowerCase();
+  return m.includes('glucuronid') || m.includes('ugt');
+});
+---
+<SchemaLayout
+  title="CYP Metabolism — ADME Schema"
+  schema="adme"
+  description="CYP450 isoforms, induction vs inhibition, prodrug activation, genetic polymorphisms, and dangerous interactions."
+>
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/06-adme/`} class="link link-hover">ADME</a></li>
+        <li>CYP Metabolism</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold mb-2">CYP Metabolism</h1>
+    <p class="text-base-content/70 text-lg">Cytochrome P450 isoforms, induction, inhibition, and genetic polymorphisms</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>
+      The cytochrome P450 (CYP) enzyme superfamily mediates the oxidative metabolism of
+      the majority of clinically prescribed drugs, constituting the mechanistic foundation
+      of most pharmacokinetic drug-drug interactions encountered in clinical practice.
+      These heme-containing monooxygenases are expressed predominantly in the hepatic
+      endoplasmic reticulum and intestinal enterocytes, with additional expression in
+      lung, kidney, brain, and adrenal gland. The CYP system evolved as a detoxification
+      apparatus for lipophilic xenobiotics, converting them to more polar, water-soluble
+      metabolites that can be excreted by the kidney or biliary system. Pharmacological
+      exploitation of this system is double-edged: metabolism by CYP enzymes inactivates
+      most drugs (terminating pharmacological action), but activates prodrugs to their
+      active forms, and occasionally generates toxic or reactive metabolites that account
+      for idiosyncratic drug reactions. Of the 57 human CYP isoforms, six — CYP3A4,
+      CYP2D6, CYP2C9, CYP2C19, CYP1A2, and CYP2B6 — account for the metabolism of over
+      90% of all marketed drugs, making their inhibition and induction profiles among
+      the most clinically consequential pharmacological properties a prescriber or nurse
+      must master.
+    </p>
+    <p>
+      CYP3A4 is the single most important drug-metabolizing isoform, responsible for the
+      metabolism of {cyp3a4Substrates.length} of the {drugsData.length} drugs in this reference
+      database — including statins, calcineurin inhibitors, many benzodiazepines, most
+      protease inhibitors, calcium channel blockers, macrolide antibiotics, and numerous
+      antineoplastic agents. CYP3A4 is subject to dramatic inhibition by azole antifungals
+      (ketoconazole, itraconazole, voriconazole), macrolide antibiotics (clarithromycin,
+      erythromycin), and ritonavir — so potent that ritonavir is deliberately co-formulated
+      as a pharmacokinetic booster in HIV regimens (lopinavir/ritonavir, darunavir/cobicistat)
+      precisely to increase plasma concentrations of the co-administered protease inhibitor.
+      Conversely, CYP3A4 is powerfully induced by rifampin (rifampicin), which can reduce
+      plasma concentrations of CYP3A4 substrates by 80–90% — a clinically catastrophic
+      interaction when rifampin is co-administered with oral contraceptives (contraceptive
+      failure), warfarin (sub-therapeutic anticoagulation and thromboembolism), or
+      cyclosporine (acute transplant rejection). CYP2D6 metabolizes {cyp2d6Substrates.length}
+      drugs including most tricyclic antidepressants, SSRIs, many beta-blockers, codeine,
+      tramadol, and several antipsychotics; it is notably non-inducible and subject to
+      competitive inhibition by fluoxetine, paroxetine, bupropion, and quinidine.
+    </p>
+    <p>
+      CYP enzyme inhibition and induction represent mechanistically distinct phenomena with
+      different clinical time courses and management implications. Competitive inhibition
+      occurs immediately upon co-administration of an inhibitor and resolves within days of
+      inhibitor discontinuation, as it reflects reversible competition for the enzyme active
+      site; the magnitude depends on the inhibitor's affinity (Ki) relative to the substrate.
+      Mechanism-based (irreversible) inhibition — exemplified by clarithromycin, erythromycin,
+      and grapefruit juice furanocoumarins — forms a covalent adduct with the enzyme, permanently
+      inactivating it; recovery requires synthesis of new CYP protein over days to weeks.
+      Induction, by contrast, requires new CYP protein synthesis through nuclear receptor
+      activation (pregnane X receptor for CYP3A4, aryl hydrocarbon receptor for CYP1A2):
+      the onset is delayed by several days as new enzyme protein accumulates, and the offset
+      is equally delayed after inducer withdrawal. The clinical implication is that a patient
+      stabilized on warfarin who begins rifampin will have a delayed but severe fall in INR
+      over 5–7 days as CYP2C9 is induced; conversely, when rifampin is stopped in a patient
+      whose warfarin dose has been increased to compensate for induction, the INR will rise
+      dangerously over the ensuing week as CYP2C9 returns to baseline.
+    </p>
+    <p>
+      Prodrug activation by CYP enzymes creates unique clinical vulnerabilities that differ
+      fundamentally from standard substrate interactions. Clopidogrel requires CYP2C19-mediated
+      bioactivation to its active thiol metabolite; CYP2C19 poor metabolizers — approximately
+      2–14% of populations depending on genetic background — derive markedly reduced
+      antiplatelet benefit from clopidogrel, and the FDA has issued a black box warning
+      requiring consideration of alternative antiplatelet agents (ticagrelor, prasugrel)
+      in patients known to be CYP2C19 poor metabolizers. Codeine is O-demethylated by
+      CYP2D6 to morphine; ultrarapid metabolizers (with duplicated CYP2D6 gene copies)
+      can produce dangerously high morphine levels from standard codeine doses — a mechanism
+      responsible for pediatric deaths from postoperative codeine and its subsequent FDA
+      contraindication in children under 12. Tamoxifen requires CYP2D6 metabolism to
+      endoxifen, its active metabolite with the majority of the drug's anti-estrogenic
+      activity; CYP2D6 inhibitors (paroxetine, fluoxetine) co-administered with tamoxifen
+      reduce endoxifen concentrations and may compromise breast cancer treatment efficacy.
+      Enalapril, losartan, and most ACE inhibitor/ARB prodrug forms rely on esterase rather
+      than CYP activation but illustrate the broader principle that the administered molecule
+      is not always the pharmacologically active species.
+    </p>
+    <p>
+      Genetic polymorphisms in CYP enzymes create heritable variation in drug metabolism
+      rate that can span an order of magnitude between poor and ultrarapid metabolizers.
+      CYP2D6 is the most clinically impactful polymorphic isoform, with over 100 allelic
+      variants producing four metabolizer phenotypes: poor metabolizers (PM, ~7% of Caucasians,
+      ~1% of East Asians) who are homozygous for loss-of-function alleles and accumulate
+      drugs at standard doses; intermediate metabolizers (IM) with reduced activity;
+      extensive metabolizers (EM, the normal reference phenotype); and ultrarapid
+      metabolizers (UM, ~1–2% of most populations, up to 29% of some East African
+      populations) with CYP2D6 gene duplications who metabolize substrates so rapidly
+      that standard doses produce subtherapeutic plasma concentrations. CYP2C19
+      polymorphisms are particularly prevalent in Asian populations (~20% poor metabolizers)
+      and are clinically significant for proton pump inhibitors (PMs achieve higher acid
+      suppression), clopidogrel (PMs have increased cardiovascular event risk), and
+      several antidepressants and anxiolytics. CYP2C9 polymorphisms affect warfarin dosing
+      requirements: CYP2C9*2 and *3 variant carriers require substantially lower warfarin
+      doses, and VKORC1 and CYP2C9 genotyping is recommended by the FDA label before
+      warfarin initiation. Pharmacogenomic testing is now commercially available and
+      increasingly integrated into clinical practice through institutional panels.
+    </p>
+    <p>
+      Several drug-drug interaction pairs mediated by CYP pharmacokinetics are of such
+      clinical severity that they represent absolute or near-absolute contraindications
+      in prescribing practice. Simvastatin at doses above 20 mg is contraindicated with
+      strong CYP3A4 inhibitors due to the risk of rhabdomyolysis; lovastatin carries
+      similar restrictions. Warfarin interacts with nearly every drug affecting CYP2C9
+      (its S-enantiomer metabolism), CYP1A2, and CYP3A4, requiring INR monitoring
+      and dose adjustment within days of adding or removing an interacting agent.
+      QT-prolonging drugs metabolized by CYP3A4 (astemizole, cisapride — now withdrawn;
+      quinidine, sotalol, amiodarone) become profoundly more likely to cause torsades
+      de pointes when plasma concentrations are elevated by CYP3A4 inhibitors.
+      Tacrolimus, cyclosporine, and sirolimus — with narrow therapeutic indices and
+      extensive CYP3A4 metabolism — require immediate dose adjustments and plasma
+      level monitoring when any CYP3A4 inhibitor or inducer is introduced, discontinued,
+      or dose-changed in transplant recipients. The nurse's role in recognizing
+      potentially fatal CYP interactions requires vigilance during medication
+      reconciliation, awareness of the drugs most susceptible to interaction (narrow
+      therapeutic index CYP substrates), and immediate communication with the prescriber
+      when such combinations are identified.
+    </p>
+  </div>
+
+  <!-- CYP3A4 substrates -->
+  <h2 class="text-2xl font-serif font-bold mb-2">CYP3A4 Substrates</h2>
+  <p class="text-sm text-base-content/70 mb-4">
+    {cyp3a4Substrates.length} drugs metabolized by CYP3A4.
+    <span class="badge badge-error badge-sm ml-1">NTI</span> = Narrow Therapeutic Index — highest interaction risk.
+  </p>
+  <div class="overflow-x-auto mb-8">
+    <table class="table table-zebra table-pin-rows table-sm w-full">
+      <thead>
+        <tr>
+          <th>Drug</th>
+          <th>Class</th>
+          <th>NTI</th>
+          <th>Metabolism Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        {cyp3a4Substrates.map((d: any) => (
+          <tr>
+            <td>
+              <a href={`${base}drugs/${d.id}/`} class="link link-hover font-medium capitalize">
+                {d.generic_name}
+              </a>
+            </td>
+            <td class="text-xs text-base-content/70">{d.drug_class}</td>
+            <td>
+              {ntiIds.has(d.id) && <span class="badge badge-error badge-sm">NTI</span>}
+            </td>
+            <td class="text-xs max-w-xs truncate" title={d.pharmacokinetics?.metabolism}>
+              {d.pharmacokinetics?.metabolism}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- CYP3A4 inhibitors/inducers reference -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+    <div class="card bg-base-100 shadow">
+      <div class="card-body">
+        <h3 class="card-title text-error">CYP3A4 Inhibitors</h3>
+        <div class="mb-3">
+          <p class="font-semibold text-sm mb-1">Strong Inhibitors (avoid with NTI substrates):</p>
+          <div class="flex flex-wrap gap-1">
+            {strongInhibitors3a4.map(drug => (
+              <span class="badge badge-error badge-sm">{drug}</span>
+            ))}
+          </div>
+        </div>
+        <div>
+          <p class="font-semibold text-sm mb-1">Moderate Inhibitors (use with caution):</p>
+          <div class="flex flex-wrap gap-1">
+            {modInhibitors3a4.map(drug => (
+              <span class="badge badge-warning badge-sm">{drug}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card bg-base-100 shadow">
+      <div class="card-body">
+        <h3 class="card-title text-warning">CYP3A4 Inducers</h3>
+        <div class="mb-3">
+          <p class="font-semibold text-sm mb-1">Strong Inducers (may cause treatment failure):</p>
+          <div class="flex flex-wrap gap-1">
+            {strongInducers3a4.map(drug => (
+              <span class="badge badge-error badge-sm">{drug}</span>
+            ))}
+          </div>
+        </div>
+        <div>
+          <p class="font-semibold text-sm mb-1">Moderate Inducers:</p>
+          <div class="flex flex-wrap gap-1">
+            {modInducers3a4.map(drug => (
+              <span class="badge badge-warning badge-sm">{drug}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CYP2D6 substrates -->
+  <h2 class="text-2xl font-serif font-bold mb-2">CYP2D6 Substrates</h2>
+  <p class="text-sm text-base-content/70 mb-4">
+    {cyp2d6Substrates.length} drugs — important for opioids (codeine → morphine), antidepressants, and antipsychotics.
+    Non-inducible; inhibited by fluoxetine, paroxetine, bupropion, quinidine.
+  </p>
+  <div class="overflow-x-auto mb-8">
+    <table class="table table-zebra table-sm w-full">
+      <thead>
+        <tr>
+          <th>Drug</th>
+          <th>Class</th>
+          <th>Metabolism Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        {cyp2d6Substrates.map((d: any) => (
+          <tr>
+            <td>
+              <a href={`${base}drugs/${d.id}/`} class="link link-hover font-medium capitalize">
+                {d.generic_name}
+              </a>
+            </td>
+            <td class="text-xs text-base-content/70">{d.drug_class}</td>
+            <td class="text-xs max-w-sm truncate" title={d.pharmacokinetics?.metabolism}>
+              {d.pharmacokinetics?.metabolism}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- CYP2C9 and CYP2C19 -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+    <div>
+      <h2 class="text-xl font-serif font-bold mb-2">CYP2C9 Substrates ({cyp2c9Substrates.length})</h2>
+      <p class="text-xs text-base-content/70 mb-2">Key drugs: warfarin (S-enantiomer), phenytoin, NSAIDs, losartan, glipizide</p>
+      <div class="overflow-x-auto">
+        <table class="table table-zebra table-sm w-full">
+          <thead>
+            <tr><th>Drug</th><th>NTI</th><th>Class</th></tr>
+          </thead>
+          <tbody>
+            {cyp2c9Substrates.map((d: any) => (
+              <tr>
+                <td><a href={`${base}drugs/${d.id}/`} class="link link-hover capitalize text-sm">{d.generic_name}</a></td>
+                <td>{ntiIds.has(d.id) && <span class="badge badge-error badge-xs">NTI</span>}</td>
+                <td class="text-xs text-base-content/60">{d.drug_class}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div>
+      <h2 class="text-xl font-serif font-bold mb-2">CYP2C19 Substrates ({cyp2c19Substrates.length})</h2>
+      <p class="text-xs text-base-content/70 mb-2">Key drugs: clopidogrel (prodrug!), PPIs, citalopram, escitalopram, voriconazole</p>
+      <div class="overflow-x-auto">
+        <table class="table table-zebra table-sm w-full">
+          <thead>
+            <tr><th>Drug</th><th>Prodrug?</th><th>Class</th></tr>
+          </thead>
+          <tbody>
+            {cyp2c19Substrates.map((d: any) => (
+              <tr>
+                <td><a href={`${base}drugs/${d.id}/`} class="link link-hover capitalize text-sm">{d.generic_name}</a></td>
+                <td>{d.id === 'clopidogrel' && <span class="badge badge-info badge-xs">Prodrug</span>}</td>
+                <td class="text-xs text-base-content/60">{d.drug_class}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- CYP1A2 -->
+  <h2 class="text-xl font-serif font-bold mb-2">CYP1A2 Substrates ({cyp1a2Substrates.length})</h2>
+  <p class="text-xs text-base-content/70 mb-2">
+    Induced by cigarette smoke, cruciferous vegetables, omeprazole.
+    Inhibited by fluvoxamine, ciprofloxacin. Key drugs: theophylline, clozapine, olanzapine, caffeine, duloxetine.
+  </p>
+  <div class="flex flex-wrap gap-1 mb-8">
+    {cyp1a2Substrates.map((d: any) => (
+      <a href={`${base}drugs/${d.id}/`} class={`badge badge-sm link link-hover capitalize ${ntiIds.has(d.id) ? 'badge-error' : 'badge-outline'}`}>
+        {d.generic_name}
+      </a>
+    ))}
+  </div>
+
+  <!-- Prodrugs -->
+  <h2 class="text-xl font-serif font-bold mb-2">Prodrugs Requiring CYP Activation</h2>
+  <p class="text-xs text-base-content/70 mb-4">
+    These drugs require enzymatic conversion to an active metabolite for efficacy.
+    CYP inhibition or genetic poor metabolizer status reduces therapeutic effect.
+  </p>
+  <div class="overflow-x-auto mb-8">
+    <table class="table table-zebra table-sm w-full">
+      <thead>
+        <tr>
+          <th>Prodrug</th>
+          <th>Class</th>
+          <th>Activation Enzyme</th>
+          <th>Active Metabolite / Clinical Risk</th>
+        </tr>
+      </thead>
+      <tbody>
+        {prodrugs.map((d: any) => (
+          <tr>
+            <td><a href={`${base}drugs/${d.id}/`} class="link link-hover font-medium capitalize">{d.generic_name}</a></td>
+            <td class="text-xs">{d.drug_class}</td>
+            <td class="text-xs font-mono">{
+              d.id === 'clopidogrel' ? 'CYP2C19' :
+              d.id === 'codeine' ? 'CYP2D6' :
+              d.id === 'tamoxifen' ? 'CYP2D6' :
+              d.id === 'enalapril' ? 'Esterase (liver)' :
+              d.id === 'losartan' ? 'CYP2C9' :
+              d.id === 'valacyclovir' ? 'Intestinal/hepatic esterase' :
+              d.id === 'valganciclovir' ? 'Intestinal/hepatic esterase' :
+              d.id === 'oseltamivir' ? 'Hepatic esterase' :
+              'CYP3A4/other'
+            }</td>
+            <td class="text-xs">{
+              d.id === 'clopidogrel' ? 'Active thiol metabolite; CYP2C19 PM → reduced antiplatelet effect (BBW)' :
+              d.id === 'codeine' ? 'Morphine; CYP2D6 UM → morphine toxicity; PM → analgesia failure' :
+              d.id === 'tamoxifen' ? 'Endoxifen; CYP2D6 inhibitors reduce efficacy (paroxetine avoid)' :
+              d.id === 'enalapril' ? 'Enalaprilat; reduced activation in severe hepatic failure' :
+              d.id === 'losartan' ? 'EXP3174 (active); CYP2C9 PM → reduced antihypertensive effect' :
+              d.pharmacokinetics?.metabolism || '—'
+            }</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Phase II glucuronidation -->
+  <h2 class="text-xl font-serif font-bold mb-2">Phase II: Glucuronidation (UGT) Substrates</h2>
+  <p class="text-xs text-base-content/70 mb-3">
+    {glucuronidation.length} drugs undergo UGT-mediated glucuronidation. Important in pregnancy
+    (UGT activity increases ~50%), neonates (immature UGT → "gray baby" syndrome with chloramphenicol),
+    and drug interactions (atazanavir inhibits UGT1A1 → hyperbilirubinemia).
+  </p>
+  <div class="flex flex-wrap gap-1 mb-8">
+    {glucuronidation.map((d: any) => (
+      <a href={`${base}drugs/${d.id}/`} class="badge badge-outline badge-sm link link-hover capitalize">
+        {d.generic_name}
+      </a>
+    ))}
+  </div>
+
+  <!-- Pharmacogenomics summary table -->
+  <h2 class="text-xl font-serif font-bold mb-3">Clinically Actionable Pharmacogenomic Interactions</h2>
+  <div class="overflow-x-auto mb-8">
+    <table class="table table-zebra table-sm w-full">
+      <thead>
+        <tr>
+          <th>Gene / Isoform</th>
+          <th>Phenotype</th>
+          <th>Drugs Affected</th>
+          <th>Clinical Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="font-mono text-xs">CYP2D6</td>
+          <td><span class="badge badge-error badge-sm">Poor Metabolizer</span></td>
+          <td class="text-xs">Codeine, tramadol, tricyclics, risperidone, tamoxifen</td>
+          <td class="text-xs">Codeine/tramadol contraindicated; reduce TCA/antipsychotic doses; alternate tamoxifen</td>
+        </tr>
+        <tr>
+          <td class="font-mono text-xs">CYP2D6</td>
+          <td><span class="badge badge-warning badge-sm">Ultrarapid Metabolizer</span></td>
+          <td class="text-xs">Codeine → morphine, opioids</td>
+          <td class="text-xs">Codeine contraindicated (children, post-tonsillectomy); standard doses may be subtherapeutic</td>
+        </tr>
+        <tr>
+          <td class="font-mono text-xs">CYP2C19</td>
+          <td><span class="badge badge-error badge-sm">Poor Metabolizer</span></td>
+          <td class="text-xs">Clopidogrel, PPIs, citalopram, voriconazole</td>
+          <td class="text-xs">Consider ticagrelor/prasugrel over clopidogrel (FDA BBW); higher PPI levels may be beneficial</td>
+        </tr>
+        <tr>
+          <td class="font-mono text-xs">CYP2C9 + VKORC1</td>
+          <td><span class="badge badge-warning badge-sm">Variant Alleles</span></td>
+          <td class="text-xs">Warfarin</td>
+          <td class="text-xs">FDA label recommends genotype-informed initial warfarin dosing; *2/*3 variants → lower doses</td>
+        </tr>
+        <tr>
+          <td class="font-mono text-xs">TPMT / NUDT15</td>
+          <td><span class="badge badge-error badge-sm">Poor Metabolizer</span></td>
+          <td class="text-xs">Azathioprine, 6-mercaptopurine, thioguanine</td>
+          <td class="text-xs">Severe myelosuppression risk; test before initiating; reduce dose substantially in PMs</td>
+        </tr>
+        <tr>
+          <td class="font-mono text-xs">DPYD</td>
+          <td><span class="badge badge-error badge-sm">Deficiency</span></td>
+          <td class="text-xs">5-fluorouracil, capecitabine</td>
+          <td class="text-xs">Lethal 5-FU toxicity; test DPYD before chemotherapy; 50–80% dose reduction in intermediate metabolizers</td>
+        </tr>
+        <tr>
+          <td class="font-mono text-xs">UGT1A1</td>
+          <td><span class="badge badge-warning badge-sm">*28 Variant (Gilbert's)</span></td>
+          <td class="text-xs">Irinotecan, atazanavir</td>
+          <td class="text-xs">Irinotecan: severe diarrhea/myelosuppression at standard doses; reduce initial dose</td>
+        </tr>
+        <tr>
+          <td class="font-mono text-xs">G6PD</td>
+          <td><span class="badge badge-error badge-sm">Deficiency</span></td>
+          <td class="text-xs">Primaquine, rasburicase, dapsone, nitrofurantoin</td>
+          <td class="text-xs">Hemolytic anemia; test G6PD before initiating; contraindicated in severe deficiency</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="divider my-8"></div>
+  <div class="flex gap-4 justify-between text-sm">
+    <a href={`${base}schemas/06-adme/distribution/`} class="btn btn-outline btn-sm">← Distribution</a>
+    <a href={`${base}schemas/06-adme/excretion/`} class="btn btn-primary btn-sm">Excretion →</a>
+  </div>
+</SchemaLayout>

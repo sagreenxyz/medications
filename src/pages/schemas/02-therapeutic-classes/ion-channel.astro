@@ -1,0 +1,70 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+const slug = 'ion-channel';
+const displayName = 'Ion Channel Modulators';
+
+const drugs = (drugsData as any[]).filter(
+  (d: any) => (d.therapeutic_classes || []).includes(slug)
+);
+const drugCount = drugs.length;
+---
+<SchemaLayout title="Ion Channel Modulators" schema="therapeutic-classes" description="Drugs that modulate voltage-gated and ligand-gated ion channels throughout the body">
+
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/02-therapeutic-classes/`} class="link">Therapeutic Classes</a></li>
+        <li>{displayName}</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-2">{displayName}</h1>
+    <p class="text-base-content/70 text-lg">{drugCount} drug{drugCount !== 1 ? 's' : ''} in this class</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>Ion channels are transmembrane protein complexes that permit the selective passage of ions down their electrochemical gradients, generating the electrical potentials that underlie nerve conduction, cardiac rhythmicity, skeletal and smooth muscle contraction, and neurotransmitter release. The discovery that diseases as diverse as epilepsy, cardiac dysrhythmia, neuropathic pain, and type 2 diabetes involve aberrant ion channel function—and that these channels could be selectively targeted by small molecules—has made ion channel pharmacology one of the most productive areas of drug discovery in the twentieth and twenty-first centuries. The two principal channel families exploited pharmacologically are voltage-gated channels—sodium (Nav), calcium (Cav), and potassium (Kv) channels that open in response to membrane depolarization—and ligand-gated ion channels, including GABA-A receptors and nicotinic acetylcholine receptors, which open in response to neurotransmitter binding. A third category, background potassium channels and ATP-sensitive potassium channels (KATP), provide additional drug targets relevant to cardiac and pancreatic beta-cell physiology.</p>
+    <p>Voltage-gated sodium channel blockers represent the largest and most clinically diverse subgroup, encompassing local anesthetics, class I antidysrhythmics, and many antiepileptic drugs. Nav channels cycle through resting, open, and inactivated states; all approved Nav blockers exhibit use-dependence—binding preferentially to open or inactivated channels rather than resting channels—meaning their effect is greater in tissues with high firing rates (epileptic foci, dysrhythmic myocardium) than in quiescent tissues, providing a degree of selectivity. Lidocaine, procainamide, and flecainide block cardiac Nav channels (Nav1.5), slowing phase 0 depolarization and reducing conduction velocity; class Ic agents (flecainide, propafenone) bind most avidly with slowest dissociation kinetics and carry the highest proarrhythmic risk, as demonstrated by the CAST trial. Phenytoin, carbamazepine, lamotrigine, and lacosamide stabilize the inactivated state of Nav channels in cortical neurons, suppressing high-frequency neuronal firing in epileptic foci without significantly affecting normal low-frequency firing. L-type voltage-gated calcium channel blockers (dihydropyridines, phenylalkylamines, benzothiazepines) reduce calcium influx during cardiac and vascular smooth muscle action potentials, producing vasodilation, reduced heart rate, and negative inotropy depending on their tissue selectivity; T-type calcium channel blockade by ethosuximide suppresses thalamic pacemaker activity in absence epilepsy.</p>
+    <p>The pharmacokinetic behavior of ion channel modulators varies widely across the class. Lidocaine administered intravenously distributes rapidly into highly perfused tissues with a half-life of approximately eight minutes in the initial distribution phase and one to two hours in the elimination phase, requiring continuous infusion for sustained antidysrhythmic effect; it undergoes extensive first-pass hepatic metabolism via CYP1A2 and CYP3A4, rendering it orally inactive for systemic use. Phenytoin exhibits nonlinear (Michaelis-Menten) pharmacokinetics due to saturation of hepatic CYP2C9 at therapeutic concentrations, meaning small dose increases produce disproportionately large plasma level rises; its narrow therapeutic index (10–20 mcg/mL), protein binding of approximately 90%, and multiple CYP interactions necessitate therapeutic drug monitoring. Calcium channel blockers are generally well absorbed orally but undergo extensive first-pass metabolism; amlodipine's exceptional 35–50 hour half-life permits once-daily dosing and gradual onset, minimizing reflex tachycardia, while verapamil and diltiazem have much shorter half-lives requiring multiple daily doses or extended-release formulations. Gabapentin and pregabalin are absorbed by a saturable amino acid transporter in the gut, so bioavailability decreases at high doses and dose escalation must be gradual; both are renally eliminated unchanged, requiring significant dose reduction in CKD.</p>
+    <p>The adverse effect profiles of ion channel modulators reflect their cellular mechanisms, with the most clinically important effects arising from off-target channel activity or from on-target effects in non-intended tissues. Calcium channel blockers produce constipation (diltiazem, verapamil) through reduced GI smooth muscle contractility, peripheral edema (dihydropyridines) through precapillary arteriolar dilation exceeding venous dilation, and bradycardia/heart block (verapamil, diltiazem) through AV nodal calcium channel blockade; combining a non-dihydropyridine calcium channel blocker with a beta-blocker creates additive AV nodal depression and is contraindicated in patients with baseline conduction abnormalities. Class I antidysrhythmics carry proarrhythmic risk—the paradox of antidysrhythmic drugs causing the very dysrhythmias they treat—driven by QRS prolongation (class Ic) and QT prolongation (class Ia), making ECG monitoring mandatory. Sodium channel-blocking anticonvulsants share a class-wide teratogenicity risk, with carbamazepine causing neural tube defects and phenytoin producing the fetal hydantoin syndrome; women of childbearing age require folate supplementation and contraceptive counseling. Gabapentinoids produce dose-dependent CNS depression—sedation, ataxia, dizziness—that accumulates in renal impairment and carries additive risk with opioids and benzodiazepines, a combination implicated in an increasing proportion of respiratory depression-related deaths.</p>
+    <p>Ion channel modulator pharmacology is indispensable across cardiology, neurology, anesthesiology, and pain management. In epilepsy, the therapeutic choice of ion channel-targeting agents (phenytoin, carbamazepine, lamotrigine, lacosamide) versus broader-spectrum drugs depends on seizure type, patient demographics, and comedication risks; the nurse's role includes recognizing early toxicity signs—nystagmus and ataxia indicating phenytoin toxicity at levels above 20 mcg/mL, or diplopia and gait disturbance with carbamazepine—before neurological deterioration occurs. In the cardiac care unit, recognition of class I antidysrhythmic proarrhythmic effects requires continuous telemetry monitoring with QRS width thresholds (hold if QRS widens more than 25% from baseline with flecainide or propafenone) and QTc surveillance. Calcium channel blockers remain among the most commonly prescribed antihypertensives and antianginal agents, where amlodipine's safety profile and tolerability make it a preferred first-line option; the nurse must educate patients that grapefruit juice inhibits CYP3A4-mediated first-pass metabolism of felodipine, nifedipine, and nisoldipine, potentially doubling plasma concentrations and precipitating severe hypotension. The breadth of this therapeutic class makes ion channel pharmacology a non-negotiable component of clinical pharmacology literacy for nurses at every level of practice.</p>
+  </div>
+
+  {drugs.length === 0 && (
+    <div class="alert alert-info mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <span>No drugs are currently classified under this therapeutic class. Check back as more drug data is added.</span>
+    </div>
+  )}
+
+  {drugs.length > 0 && (
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      {drugs.map((drug: any) => (
+        <div class={`card card-compact bg-base-100 shadow border border-base-200 ${drug.ismp_high_alert ? 'border-l-4 border-l-error' : ''}`}>
+          <div class="card-body">
+            <div class="flex flex-wrap items-start gap-1 mb-1">
+              <h2 class="card-title text-base font-semibold capitalize mr-auto">
+                <a href={`${base}drugs/${drug.id}/`} class="hover:text-primary transition-colors">
+                  {drug.generic_name}
+                </a>
+              </h2>
+              {drug.prototype_for && <span class="badge badge-success badge-sm shrink-0">PROTOTYPE</span>}
+              {drug.ismp_high_alert && <span class="badge badge-error badge-sm shrink-0">HIGH ALERT</span>}
+              {drug.black_box_warnings && drug.black_box_warnings.length > 0 && <span class="badge badge-warning badge-sm shrink-0">BBW</span>}
+            </div>
+            <p class="text-xs text-base-content/60 mb-1">
+              <span class="font-medium">{drug.drug_class}</span>
+              {drug.subclass && <span> — {drug.subclass}</span>}
+            </p>
+            {drug.mechanism_summary && <p class="text-sm text-base-content/70 line-clamp-3">{drug.mechanism_summary}</p>}
+            <div class="card-actions justify-end mt-2">
+              <a href={`${base}drugs/${drug.id}/`} class="btn btn-xs btn-outline btn-primary">Profile</a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+</SchemaLayout>

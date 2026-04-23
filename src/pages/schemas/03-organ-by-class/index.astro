@@ -1,7 +1,145 @@
 ---
 import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+const base = import.meta.env.BASE_URL;
+
+const organSystems = [
+  { slug: 'cardiovascular',      label: 'Cardiovascular' },
+  { slug: 'renal',               label: 'Renal' },
+  { slug: 'respiratory',         label: 'Respiratory' },
+  { slug: 'gastrointestinal',    label: 'Gastrointestinal' },
+  { slug: 'endocrine',           label: 'Endocrine' },
+  { slug: 'reproductive',        label: 'Reproductive' },
+  { slug: 'cns',                 label: 'CNS' },
+  { slug: 'pns-autonomic',       label: 'PNS/Autonomic' },
+  { slug: 'musculoskeletal',     label: 'Musculoskeletal' },
+  { slug: 'hematology-oncology', label: 'Hematology-Oncology' },
+  { slug: 'immunology',          label: 'Immunology' },
+  { slug: 'infectious-disease',  label: 'Infectious Disease' },
+  { slug: 'dermatology',         label: 'Dermatology' },
+  { slug: 'ophthalmology-ent',   label: 'Ophthalmology/ENT' },
+  { slug: 'toxicology',          label: 'Toxicology' },
+];
+
+const therapClasses = [
+  { slug: 'adrenergic',             label: 'Adrenergic' },
+  { slug: 'cholinergic',            label: 'Cholinergic' },
+  { slug: 'ion-channel',            label: 'Ion Channel' },
+  { slug: 'enzyme-inhibitors',      label: 'Enzyme Inhib.' },
+  { slug: 'receptor-antagonists',   label: 'Rec. Antag.' },
+  { slug: 'transporter-inhibitors', label: 'Transporter Inhib.' },
+  { slug: 'hormones-analogs',       label: 'Hormones' },
+  { slug: 'biologics',              label: 'Biologics' },
+  { slug: 'antimicrobials',         label: 'Antimicrobials' },
+  { slug: 'cytotoxics',             label: 'Cytotoxics' },
+  { slug: 'anticoagulants',         label: 'Anticoagulants' },
+];
+
+// Build matrix[organ][class] = count
+const matrix: Record<string, Record<string, number>> = {};
+for (const org of organSystems) {
+  matrix[org.slug] = {};
+  for (const tc of therapClasses) {
+    matrix[org.slug][tc.slug] = (drugsData as any[]).filter(d =>
+      (d.organ_systems || []).includes(org.slug) &&
+      (d.therapeutic_classes || []).includes(tc.slug)
+    ).length;
+  }
+}
 ---
+
 <SchemaLayout title="Organ × Class Matrix" schema="organ-by-class">
-  <h1 class="text-3xl font-serif font-bold mb-4">Organ × Class Matrix</h1>
-  <p>Content coming soon.</p>
+  <h1 class="text-3xl font-serif font-bold mb-6">Schema 3: Organ System × Therapeutic Class Matrix</h1>
+
+  <div class="prose max-w-none mb-8">
+    <p>
+      The organ-system-by-therapeutic-class matrix represents the most clinically integrated
+      view of pharmacology available to the student, because it simultaneously encodes two
+      orthogonal axes of medical knowledge: <em>where</em> a drug acts (the organ system) and
+      <em>how</em> it acts (the molecular mechanism family). A β-blocker, for example, appears in
+      the cardiovascular row under Adrenergic, but also in the CNS row, the renal row, and the
+      respiratory row—each intersection revealing a distinct clinical application or risk
+      profile. The student who understands this multidimensionality can anticipate off-target
+      effects, predict drug repurposing opportunities, and reason fluently through polypharmacy
+      scenarios rather than memorizing each combination in isolation.
+    </p>
+    <p>
+      Each cell in the matrix below represents the count of drugs in this reference database
+      that belong to both the organ system (row) and the therapeutic class (column). Cells
+      colored with a prominent badge contain five or more drugs, signaling a clinically dense
+      intersection worth deep study. Grey-shaded empty cells represent mechanistic combinations
+      that are currently absent from the top-500 drug list—sometimes because such combinations
+      do not exist pharmacologically, and sometimes because the agents at that intersection are
+      rare enough to fall outside the high-yield curriculum. Clicking any non-zero cell opens a
+      dedicated intersection page listing every drug at that node, organized by subclass, with
+      a brief explanation of why this mechanism is deployed in this organ system.
+    </p>
+    <p>
+      The matrix is particularly valuable for recognizing drug repurposing patterns. Enzyme
+      inhibitors dominate both the cardiovascular and the endocrine rows because ACE inhibitors,
+      statins, DPP-4 inhibitors, and aromatase inhibitors all exploit the same mechanistic
+      strategy—enzyme active-site blockade—applied to different biological substrates. Similarly,
+      receptor antagonists span nearly every organ system, from α1-blockade in the cardiovascular
+      column to dopamine-D2 antagonism in the CNS column, illustrating that receptor-level
+      antagonism is the single most versatile pharmacodynamic strategy in clinical medicine.
+      Use this matrix in conjunction with Schema 4 (Mechanism-First) and Schema 1
+      (Organ Systems) for the most complete cross-referencing experience.
+    </p>
+  </div>
+
+  <div class="overflow-x-auto rounded-lg border border-base-300 shadow">
+    <table class="table table-pin-rows table-sm w-full">
+      <thead>
+        <tr class="bg-base-200">
+          <th class="font-serif text-sm sticky left-0 bg-base-200 z-10 min-w-[140px]">Organ System</th>
+          {therapClasses.map(tc => (
+            <th class="text-center text-xs font-medium px-2 whitespace-nowrap">{tc.label}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {organSystems.map((org, i) => (
+          <tr class={i % 2 === 0 ? 'bg-base-100' : 'bg-base-50'}>
+            <td class="font-semibold text-sm sticky left-0 bg-inherit z-10 border-r border-base-200">
+              <a href={`${base}schemas/01-organ-systems/${org.slug}/`} class="link link-hover">{org.label}</a>
+            </td>
+            {therapClasses.map(tc => {
+              const count = matrix[org.slug][tc.slug];
+              const href = `${base}schemas/03-organ-by-class/${org.slug}-${tc.slug}/`;
+              return (
+                <td class="text-center px-1 py-1">
+                  {count === 0 ? (
+                    <span class="block w-full h-6 rounded bg-base-200 opacity-40"></span>
+                  ) : count >= 5 ? (
+                    <a href={href} class="tooltip" data-tip={`${count} drugs`}>
+                      <span class="badge badge-primary badge-sm font-bold">{count}</span>
+                    </a>
+                  ) : (
+                    <a href={href} class="tooltip" data-tip={`${count} drug${count > 1 ? 's' : ''}`}>
+                      <span class="badge badge-outline badge-sm">{count}</span>
+                    </a>
+                  )}
+                </td>
+              );
+            })}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="mt-6 flex flex-wrap gap-4 text-sm">
+    <div class="flex items-center gap-2">
+      <span class="badge badge-primary badge-sm font-bold">9</span>
+      <span class="text-base-content/70">≥5 drugs (high-yield intersection)</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="badge badge-outline badge-sm">2</span>
+      <span class="text-base-content/70">1–4 drugs</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="block w-6 h-4 rounded bg-base-200 opacity-40"></span>
+      <span class="text-base-content/70">No drugs at this intersection</span>
+    </div>
+  </div>
 </SchemaLayout>

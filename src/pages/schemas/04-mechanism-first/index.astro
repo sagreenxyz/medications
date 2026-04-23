@@ -1,7 +1,74 @@
 ---
 import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+const base = import.meta.env.BASE_URL;
+
+const targetFamilies = [
+  { slug: 'gpcr-adrenergic',         label: 'Adrenergic Receptors (α/β)',       icon: '⚡', color: 'badge-primary',    desc: 'α1, α2, β1, β2, β3 adrenoceptors — sympathomimetics and sympatholytics' },
+  { slug: 'gpcr-cholinergic',        label: 'Cholinergic Receptors (M/N)',       icon: '🔵', color: 'badge-secondary', desc: 'Muscarinic (M1–M5) and nicotinic receptors — parasympathomimetics and anticholinergics' },
+  { slug: 'gpcr-opioid',             label: 'Opioid Receptors (μ/κ/δ)',          icon: '🔴', color: 'badge-error',     desc: 'Mu, kappa, delta opioid receptors — analgesics and addiction medicine' },
+  { slug: 'gpcr-histamine',          label: 'Histamine Receptors (H1/H2)',       icon: '🟡', color: 'badge-warning',   desc: 'H1 and H2 histamine receptors — antihistamines and acid suppression' },
+  { slug: 'gpcr-angiotensin',        label: 'Angiotensin Receptors (AT1)',       icon: '❤️', color: 'badge-primary',   desc: 'AT1 receptor — ARBs and cardiovascular/renal protection' },
+  { slug: 'gpcr-glp1',               label: 'GLP-1 Receptor',                   icon: '🟢', color: 'badge-success',   desc: 'Glucagon-like peptide-1 receptor — incretin-based diabetes therapy' },
+  { slug: 'gpcr-dopamine',           label: 'Dopamine Receptors (D1–D5)',        icon: '🧠', color: 'badge-accent',    desc: 'D1–D5 dopamine receptors — antipsychotics, antiemetics, Parkinson\'s' },
+  { slug: 'gpcr-serotonin',          label: 'Serotonin Receptors (5-HT)',        icon: '💊', color: 'badge-secondary', desc: '5-HT receptors and transporters — antidepressants, anxiolytics, antiemetics' },
+  { slug: 'ligand-gated-channels',   label: 'Ligand-Gated Ion Channels',        icon: '⚙️', color: 'badge-accent',    desc: 'GABA-A, NMDA, nAChR, AMPA — sedation, anesthesia, analgesia' },
+  { slug: 'voltage-gated-sodium',    label: 'Voltage-Gated Na⁺ Channels',       icon: '⚡', color: 'badge-warning',   desc: 'Nav channels — local anesthetics, antiepileptics, antiarrhythmics' },
+  { slug: 'voltage-gated-calcium',   label: 'Voltage-Gated Ca²⁺ Channels',      icon: '💛', color: 'badge-warning',   desc: 'L-type Cav channels — calcium channel blockers for CV and neurologic use' },
+  { slug: 'voltage-gated-potassium', label: 'Voltage-Gated K⁺ Channels',        icon: '🔋', color: 'badge-ghost',     desc: 'Kv/hERG/KATP channels — antiarrhythmics, sulfonylureas' },
+  { slug: 'nuclear-receptors',       label: 'Nuclear Receptors',                icon: '🧬', color: 'badge-success',   desc: 'GR, MR, AR, ER, TR, PPAR, RAR — steroids, thyroid hormones, retinoids' },
+  { slug: 'receptor-tyrosine-kinases', label: 'Receptor Tyrosine Kinases',      icon: '🎯', color: 'badge-error',     desc: 'EGFR, VEGFR, BCR-ABL, HER2 — targeted cancer therapies' },
+  { slug: 'serine-threonine-kinases', label: 'Serine/Threonine Kinases',        icon: '🔬', color: 'badge-error',     desc: 'BRAF, MEK, CDK4/6, mTOR, JAK — oncology and immunology kinase inhibitors' },
+  { slug: 'enzyme-ace',              label: 'ACE (Angiotensin-Converting Enzyme)', icon: '🫀', color: 'badge-primary', desc: 'ACE inhibition — cardiovascular, renal, and heart failure protection' },
+  { slug: 'enzyme-cox',              label: 'COX-1/2 (Cyclooxygenase)',         icon: '🔥', color: 'badge-warning',   desc: 'Prostaglandin synthesis inhibition — NSAIDs, aspirin, COX-2 inhibitors' },
+  { slug: 'enzyme-hmgcoa',           label: 'HMG-CoA Reductase',               icon: '🩺', color: 'badge-primary',   desc: 'Cholesterol biosynthesis inhibition — statins' },
+  { slug: 'enzyme-pde',              label: 'Phosphodiesterase (PDE)',          icon: '💨', color: 'badge-accent',    desc: 'cAMP/cGMP hydrolysis inhibition — bronchodilators, vasodilators, erectile dysfunction' },
+  { slug: 'enzyme-thymidylate',      label: 'DNA Synthesis Enzymes',           icon: '🧪', color: 'badge-error',     desc: 'Thymidylate synthase, DHFR, DNA polymerase — antifolates and antivirals' },
+  { slug: 'transporter-sert-dat-net', label: 'Monoamine Transporters (SERT/DAT/NET)', icon: '🔄', color: 'badge-secondary', desc: 'Serotonin, dopamine, and norepinephrine reuptake transporters — antidepressants' },
+  { slug: 'transporter-sglt2',       label: 'SGLT2 Glucose Transporter',       icon: '🍬', color: 'badge-success',   desc: 'Sodium-glucose cotransporter 2 — gliflozins for diabetes and heart failure' },
+  { slug: 'transporter-pgp',         label: 'P-Glycoprotein (P-gp/MDR1)',      icon: '🚪', color: 'badge-ghost',     desc: 'ABC efflux transporter — drug bioavailability and resistance' },
+  { slug: 'structural-tubulin',      label: 'Tubulin / Microtubule Targets',   icon: '🌀', color: 'badge-error',     desc: 'Microtubule polymerization/depolymerization — vinca alkaloids, taxanes' },
+  { slug: 'structural-dna',          label: 'DNA & Topoisomerase Targets',     icon: '🧬', color: 'badge-error',     desc: 'Topoisomerase I/II, DNA cross-linking, intercalation — cytotoxic chemotherapy' },
+];
 ---
-<SchemaLayout title="Mechanism-First" schema="mechanism-first">
-  <h1 class="text-3xl font-serif font-bold mb-4">Mechanism-First</h1>
-  <p>Content coming soon.</p>
+<SchemaLayout title="Mechanism-First" schema="mechanism-first" description="Explore pharmacology organized by molecular target family — receptors, enzymes, ion channels, and transporters">
+
+  <div class="mb-8">
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-3">Schema 4 — Mechanism-First</h1>
+    <p class="text-base-content/70 text-lg max-w-3xl">Pharmacology organized by molecular target family. Understanding the biology of the target predicts every drug effect, interaction, and adverse event.</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>The mechanism-first approach to pharmacology inverts the traditional clinical schema—instead of beginning with a disease and asking "what drug treats this?" it begins with a molecular target and asks "what happens when this target is modulated?" This intellectual reorientation is profoundly powerful for three reasons. First, it generates predictive capacity: a student who understands the physiology of beta-1 adrenoceptors can predict not only the therapeutic effects of metoprolol but also every adverse effect, contraindication, and drug interaction before they are memorized by rote. Second, it reveals mechanism-based relationships between drugs that appear clinically unrelated—the antihypertensive, the antiarrhythmic, and the heart failure drug may all be beta-blockers operating through an identical molecular mechanism. Third, it provides a durable framework that accommodates new drugs: a novel SGLT2 inhibitor or JAK inhibitor can be immediately understood by a student who grasps the underlying target biology, without needing to memorize each drug de novo.</p>
+    <p>The molecular targets of clinically used drugs fall into five major structural families, each with distinct biological logic. G-protein-coupled receptors (GPCRs) constitute the largest family, with over 800 human GPCRs and drugs targeting dozens of subtypes including adrenergic, cholinergic, opioid, histamine, serotonin, dopamine, angiotensin, and incretin receptors; these transmembrane proteins transduce ligand binding into intracellular second messenger signals through heterotrimeric G-proteins, making them modulatable by both agonists and antagonists. Ion channels—both ligand-gated (GABA-A, NMDA, nicotinic acetylcholine receptors) and voltage-gated (sodium, calcium, potassium channels)—are pore-forming membrane proteins whose gating kinetics can be modulated by pharmacological agents to alter cellular excitability in neurons, cardiac myocytes, and smooth muscle. Nuclear receptors (glucocorticoid receptor, estrogen receptor, thyroid hormone receptor, PPARs) are intracellular transcription factors activated by lipophilic ligands that diffuse across the plasma membrane; their effects are genomic and therefore delayed, but potent and long-lasting. Enzyme active sites—ACE, COX-1/2, HMG-CoA reductase, phosphodiesterases, topoisomerases—are catalytic proteins whose inhibition alters the concentration of substrate or product in a pathway of physiological or pathological relevance. Transporters, including monoamine reuptake transporters, SGLT2, and P-glycoprotein, regulate the movement of ions, nutrients, and drugs across cellular membranes, and their inhibition produces clinically exploitable changes in neurotransmitter availability, glucose handling, or drug bioavailability.</p>
+    <p>Across the 500 drugs in this reference, molecular targets span at least 25 major target families, with the broadest representation in GPCRs (particularly adrenergic, cholinergic, opioid, and serotonin receptors), enzyme inhibitors (particularly ACE, COX, and HMG-CoA reductase), and nuclear receptors (steroids and thyroid hormones). Kinase inhibitors represent the fastest-growing category, with receptor tyrosine kinases and serine/threonine kinases increasingly targeted in oncology; the BCR-ABL inhibitor imatinib, which transformed chronic myeloid leukemia from a fatal to a manageable disease, exemplifies the paradigm of mechanism-based targeted therapy. Ion channel pharmacology underpins both the oldest clinical drugs (local anesthetics acting on sodium channels, discovered in the 1880s) and modern precision medicines (ivacaftor as a CFTR channel potentiator); the unifying principle is that understanding channel gating states—resting, open, and inactivated—explains both therapeutic selectivity and the use-dependence that distinguishes antiarrhythmic drug classes.</p>
+    <p>Mechanism-first thinking is not merely an intellectual luxury—it is a patient safety imperative for nursing practice. The nurse who understands that all opioids activate the same mu-opioid receptor can recognize that combining opioids with benzodiazepines (GABA-A positive allosteric modulators) produces additive CNS and respiratory depression through parallel mechanisms—explaining why this combination carries an FDA black box warning. Understanding that all NSAIDs inhibit COX-1-mediated thromboxane synthesis predicts antiplatelet effects and bleeding risk regardless of the specific NSAID prescribed, enabling the nurse to ask the right assessment questions (concurrent anticoagulants? history of peptic ulcer?) for any new NSAID order. The nurse who grasps that serotonin syndrome results from excessive serotonergic neurotransmission at multiple 5-HT receptors can recognize the pharmacodynamic interaction risk when any two serotonergic agents are co-prescribed—whether two SSRIs, an SSRI and a triptán, or an SSRI and tramadol—without needing a memorized table of every possible combination. Navigate the target families below to explore the drugs acting at each target, the mechanisms underlying their clinical effects, and the nursing implications that follow directly from target physiology.</p>
+  </div>
+
+  <h2 class="text-2xl font-serif font-bold mb-5">Molecular Target Families</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+    {targetFamilies.map(tf => (
+      <a href={`${base}schemas/04-mechanism-first/${tf.slug}/`}
+         class="card card-compact bg-base-100 border border-base-300 shadow-sm hover:shadow-md hover:border-primary transition-all duration-200">
+        <div class="card-body">
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">{tf.icon}</span>
+            <div class="flex-1 min-w-0">
+              <h3 class="font-serif font-bold text-base leading-snug text-base-content mb-1">{tf.label}</h3>
+              <p class="text-xs text-base-content/60 leading-snug">{tf.desc}</p>
+            </div>
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <div class="alert alert-info">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+    <div>
+      <p class="font-semibold">Cross-schema navigation</p>
+      <p class="text-sm">Each target family page links to individual drug profiles, Schema 1 (Organ Systems), and Schema 9 (Drug Interactions) for comprehensive cross-referencing.</p>
+    </div>
+  </div>
+
 </SchemaLayout>

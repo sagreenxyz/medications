@@ -1,0 +1,302 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+
+// Categorize drugs by Vd profile
+function categorizeVd(vd: string | undefined): string {
+  if (!vd) return 'Unknown';
+  const v = vd.toLowerCase();
+  if (v.includes('very high') || v.includes('extremely high')) return 'Very High (>10 L/kg)';
+  if (v.includes('high')) return 'High (>3 L/kg)';
+  if (v.includes('moderate') || v.includes('mod')) return 'Moderate (0.5–3 L/kg)';
+  if (v.includes('low')) return 'Low (<0.5 L/kg)';
+  if (v.includes('large')) return 'High (>3 L/kg)';
+  if (v.includes('small') || v.includes('limited')) return 'Low (<0.5 L/kg)';
+  return 'Moderate (0.5–3 L/kg)';
+}
+
+function categorizeProteinBinding(pb: string | undefined): string {
+  if (!pb) return 'Unknown';
+  const p = pb.toLowerCase();
+  const m = p.match(/(\d+)/);
+  if (!m) return 'Unknown';
+  const pct = parseInt(m[1]);
+  if (pct >= 90) return 'High (≥90%)';
+  if (pct >= 70) return 'Moderate (70–89%)';
+  if (pct >= 30) return 'Low–Moderate (30–69%)';
+  return 'Low (<30%)';
+}
+
+const distribDrugs = (drugsData as any[])
+  .filter((d) => d.pharmacokinetics?.distribution || d.pharmacokinetics?.vd || d.pharmacokinetics?.protein_binding)
+  .map((d) => ({
+    id: d.id,
+    name: d.generic_name,
+    drugClass: d.drug_class,
+    vd: d.pharmacokinetics?.vd || '—',
+    vdCategory: categorizeVd(d.pharmacokinetics?.vd),
+    proteinBinding: d.pharmacokinetics?.protein_binding || '—',
+    pbCategory: categorizeProteinBinding(d.pharmacokinetics?.protein_binding),
+    distribution: d.pharmacokinetics?.distribution || '',
+    bbb: d.pharmacokinetics?.distribution?.toLowerCase().includes('cross') &&
+          d.pharmacokinetics?.distribution?.toLowerCase().includes('bbb') ? true :
+          d.pharmacokinetics?.distribution?.toLowerCase().includes('does not cross bbb') ? false : null,
+  }))
+  .sort((a, b) => a.name.localeCompare(b.name));
+
+// Group by Vd category
+const vdOrder = ['Low (<0.5 L/kg)', 'Moderate (0.5–3 L/kg)', 'High (>3 L/kg)', 'Very High (>10 L/kg)'];
+const vdGroups: Record<string, typeof distribDrugs> = {};
+for (const drug of distribDrugs) {
+  const cat = drug.vdCategory;
+  if (!vdGroups[cat]) vdGroups[cat] = [];
+  vdGroups[cat].push(drug);
+}
+
+// High protein binding drugs (displacement risk)
+const highPbDrugs = distribDrugs.filter(d => d.pbCategory === 'High (≥90%)');
+
+// BBB crossing
+const bbbCross = (drugsData as any[]).filter(d =>
+  d.pharmacokinetics?.distribution?.toLowerCase().includes('crosses bbb') ||
+  d.pharmacokinetics?.distribution?.toLowerCase().includes('cross bbb') ||
+  d.pharmacokinetics?.distribution?.toLowerCase().includes('penetrates cns')
+);
+const bbbNoCross = (drugsData as any[]).filter(d =>
+  d.pharmacokinetics?.distribution?.toLowerCase().includes('does not cross bbb') ||
+  d.pharmacokinetics?.distribution?.toLowerCase().includes('minimal bbb')
+);
+---
+<SchemaLayout
+  title="Distribution — ADME Schema"
+  schema="adme"
+  description="Volume of distribution, protein binding, BBB penetration, and placental transfer."
+>
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/06-adme/`} class="link link-hover">ADME</a></li>
+        <li>Distribution</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold mb-2">Distribution</h1>
+    <p class="text-base-content/70 text-lg">Volume of distribution, protein binding, and tissue penetration</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>
+      After absorption, a drug distributes from the systemic circulation into tissues — a process
+      quantitatively described by the apparent volume of distribution (Vd), defined as the
+      hypothetical volume in which the total drug dose would need to be dissolved to produce the
+      observed plasma concentration. Vd is not a physiological compartment but a mathematical
+      index of partitioning behavior: a drug with Vd of 5 L is confined to plasma volume and
+      distributes minimally into tissues; a drug with Vd of 500 L has distributed extensively
+      into tissues and exists at tissue concentrations far exceeding plasma levels. Clinically,
+      Vd determines loading dose requirements (loading dose = target concentration × Vd),
+      predicts dialyzability (drugs with large Vd are not effectively removed by dialysis
+      because only the small fraction in plasma is accessible), and governs duration of action
+      for lipophilic drugs that slowly release from tissue depots. Amiodarone exemplifies the
+      extreme end of this spectrum, with a Vd of approximately 60 L/kg — it distributes so
+      extensively into adipose and other tissues that its half-life exceeds 40 days, requiring
+      weeks to months for full washout after discontinuation.
+    </p>
+    <p>
+      Plasma protein binding profoundly influences drug distribution and pharmacodynamic activity.
+      The majority of clinically used drugs bind reversibly to albumin (primarily acidic drugs)
+      or alpha-1-acid glycoprotein (primarily basic drugs), and only the free (unbound) fraction
+      is pharmacologically active, available for tissue distribution, metabolism, and elimination.
+      Drugs with greater than 90% protein binding — including warfarin (~99%), phenytoin (~90%),
+      diazepam (~98%), and furosemide (~98%) — present several clinical considerations of
+      importance. Hypoalbuminemia, common in cirrhosis, nephrotic syndrome, malnutrition, and
+      critical illness, reduces protein binding and increases free drug fraction: total phenytoin
+      levels appear deceptively low in hypoalbuminemic patients while free (active) levels may
+      be therapeutic or even toxic, necessitating free phenytoin monitoring rather than total
+      levels. Protein binding displacement — the theoretical concern that one drug displacing
+      another from albumin might cause toxicity — is clinically significant only when the
+      displaced drug has a narrow therapeutic index and limited volume of distribution, as
+      most displaced drug simply redistributes into tissues rather than increasing free plasma
+      concentrations persistently.
+    </p>
+    <p>
+      Blood-brain barrier (BBB) penetration is determined by a drug's lipophilicity, molecular
+      weight, ionization state at physiological pH, and susceptibility to efflux transporters
+      such as P-glycoprotein (P-gp) that actively pump drugs out of the CNS endothelium.
+      Highly lipophilic, low-molecular-weight, non-ionized drugs such as diazepam, barbiturates,
+      and anesthetic agents cross the BBB rapidly and extensively, producing rapid CNS effects.
+      Polar, ionized, or high-molecular-weight drugs such as vancomycin, aminoglycosides, and
+      most penicillins penetrate the BBB poorly under normal conditions — a clinical challenge
+      in treating bacterial meningitis where high-dose parenteral therapy is required to achieve
+      therapeutic CSF concentrations. Inflammation, as in meningitis, disrupts tight junctions
+      and transiently increases BBB permeability, improving CSF drug penetration; this effect
+      diminishes as treatment succeeds and inflammation resolves, potentially reducing drug
+      concentrations at a clinically vulnerable time. P-gp inhibitors such as verapamil and
+      cyclosporine can meaningfully increase CNS concentrations of P-gp substrates — a
+      mechanism exploited therapeutically in some CNS drug delivery strategies and a
+      potential source of unexpected CNS toxicity in drug interactions.
+    </p>
+    <p>
+      Placental transfer follows principles similar to BBB penetration — lipophilic, low-molecular-weight,
+      non-ionized drugs cross most readily — with important therapeutic and teratogenic implications.
+      The placenta expresses CYP enzymes and efflux transporters that modify fetal drug exposure,
+      but these defenses are incomplete, and virtually all drugs administered during pregnancy reach
+      the fetus to some extent. Warfarin, a small lipophilic molecule, crosses the placenta freely
+      and causes warfarin embryopathy when administered in the first trimester and fetal hemorrhage
+      at any gestational age, which is why heparin — a large, highly charged molecule that does not
+      cross the placenta — is the preferred anticoagulant in pregnancy. Conversely, corticosteroids
+      prescribed for fetal lung maturation must cross the placenta to be effective; betamethasone
+      is preferred over prednisone for this indication because it undergoes less placental
+      inactivation. Anesthetics, opioids, and benzodiazepines all cross the placenta freely,
+      with neonatal respiratory depression, abstinence syndrome, and prolonged sedation as
+      potential consequences of peripartum administration. The distribution volume changes
+      substantially during pregnancy — expanded plasma volume, increased body fat, and
+      altered protein binding affect drug concentrations in ways that require dose adjustments
+      for numerous agents including levothyroxine, epilepsy medications, and antiretrovirals.
+    </p>
+  </div>
+
+  <!-- High protein binding alert -->
+  <div class="alert alert-warning mb-8">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+    <div>
+      <div class="font-bold">Monitoring Tip: Hypoalbuminemia and Drug Monitoring</div>
+      <div class="text-sm">
+        For highly protein-bound drugs with narrow therapeutic indices (phenytoin, valproate, carbamazepine),
+        standard serum levels reflect total drug. In hypoalbuminemic patients (albumin &lt;3.5 g/dL), request
+        <em>free</em> drug levels. Use the Sheiner-Tozer equation to correct total phenytoin:
+        Adjusted phenytoin = measured total ÷ [(0.2 × albumin) + 0.1].
+      </div>
+    </div>
+  </div>
+
+  <!-- BBB penetration summary -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+    <div class="card bg-base-100 shadow">
+      <div class="card-body">
+        <h3 class="card-title text-success">CNS-Penetrating Drugs</h3>
+        <p class="text-sm text-base-content/70 mb-3">{bbbCross.length} drugs cross the blood-brain barrier</p>
+        <div class="flex flex-wrap gap-1">
+          {bbbCross.slice(0, 20).map((d: any) => (
+            <a href={`${base}drugs/${d.id}/`} class="badge badge-outline badge-sm capitalize link link-hover">{d.generic_name}</a>
+          ))}
+          {bbbCross.length > 20 && <span class="badge badge-ghost badge-sm">+{bbbCross.length - 20} more</span>}
+        </div>
+      </div>
+    </div>
+    <div class="card bg-base-100 shadow">
+      <div class="card-body">
+        <h3 class="card-title text-error">Minimal CNS Penetration</h3>
+        <p class="text-sm text-base-content/70 mb-3">{bbbNoCross.length} drugs have poor BBB penetration</p>
+        <div class="flex flex-wrap gap-1">
+          {bbbNoCross.slice(0, 20).map((d: any) => (
+            <a href={`${base}drugs/${d.id}/`} class="badge badge-outline badge-sm capitalize link link-hover">{d.generic_name}</a>
+          ))}
+          {bbbNoCross.length > 20 && <span class="badge badge-ghost badge-sm">+{bbbNoCross.length - 20} more</span>}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vd tables -->
+  <h2 class="text-2xl font-serif font-bold mb-4">Drugs by Volume of Distribution</h2>
+  <p class="text-sm text-base-content/70 mb-4">
+    {distribDrugs.length} drugs with documented distribution data.
+    Vd categories: Low (&lt;0.5 L/kg = confined to plasma/extracellular fluid);
+    Moderate (0.5–3 L/kg = moderate tissue distribution);
+    High (&gt;3 L/kg = extensive tissue sequestration).
+  </p>
+
+  {vdOrder.map((cat) => vdGroups[cat] && vdGroups[cat].length > 0 && (
+    <div class="mb-8">
+      <h3 class="text-xl font-bold mb-3 font-serif">
+        {cat}
+        <span class="badge badge-outline ml-2">{vdGroups[cat].length} drugs</span>
+      </h3>
+      <div class="overflow-x-auto">
+        <table class="table table-zebra table-sm w-full">
+          <thead>
+            <tr>
+              <th>Drug</th>
+              <th>Class</th>
+              <th>Vd</th>
+              <th>Protein Binding</th>
+              <th>Distribution Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            {vdGroups[cat].slice(0, 35).map((drug: any) => (
+              <tr>
+                <td>
+                  <a href={`${base}drugs/${drug.id}/`} class="link link-hover font-medium capitalize">
+                    {drug.name}
+                  </a>
+                </td>
+                <td class="text-xs text-base-content/70">{drug.drugClass}</td>
+                <td>
+                  {drug.vd !== '—'
+                    ? <span class="font-mono text-xs">{drug.vd}</span>
+                    : <span class="text-base-content/40">—</span>
+                  }
+                </td>
+                <td>
+                  {drug.proteinBinding !== '—'
+                    ? <span class="font-mono text-xs">{drug.proteinBinding}</span>
+                    : <span class="text-base-content/40">—</span>
+                  }
+                </td>
+                <td class="text-xs max-w-xs truncate" title={drug.distribution}>{drug.distribution || '—'}</td>
+              </tr>
+            ))}
+            {vdGroups[cat].length > 35 && (
+              <tr>
+                <td colspan="5" class="text-center text-base-content/50 text-xs py-2">
+                  + {vdGroups[cat].length - 35} additional drugs in this category
+                </td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  ))}
+
+  <!-- High protein binding table -->
+  <h2 class="text-2xl font-serif font-bold mb-4">High Protein Binding (≥90%) — Displacement Risk</h2>
+  <p class="text-sm text-base-content/70 mb-4">
+    {highPbDrugs.length} drugs with high plasma protein binding. These drugs are most susceptible
+    to displacement interactions and may require monitoring in hypoalbuminemic patients.
+  </p>
+  <div class="overflow-x-auto mb-10">
+    <table class="table table-zebra table-sm w-full">
+      <thead>
+        <tr>
+          <th>Drug</th>
+          <th>Class</th>
+          <th>Protein Binding</th>
+          <th>Clinical Implication</th>
+        </tr>
+      </thead>
+      <tbody>
+        {highPbDrugs.map((drug: any) => (
+          <tr>
+            <td>
+              <a href={`${base}drugs/${drug.id}/`} class="link link-hover font-medium capitalize">
+                {drug.name}
+              </a>
+            </td>
+            <td class="text-xs text-base-content/70">{drug.drugClass}</td>
+            <td><span class="badge badge-warning badge-sm font-mono">{drug.proteinBinding}</span></td>
+            <td class="text-xs">Monitor free levels if hypoalbuminemic; monitor for displacement interactions</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="divider my-8"></div>
+  <div class="flex gap-4 justify-between text-sm">
+    <a href={`${base}schemas/06-adme/absorption/`} class="btn btn-outline btn-sm">← Absorption</a>
+    <a href={`${base}schemas/06-adme/cyp-metabolism/`} class="btn btn-primary btn-sm">CYP Metabolism →</a>
+  </div>
+</SchemaLayout>

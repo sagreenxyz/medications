@@ -1,0 +1,298 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+
+// Drugs with food-related interaction tags
+const grapefruitDrugs = (drugsData as any[]).filter(d =>
+  (d.interaction_tags || []).some((t: string) => t.toLowerCase().includes('grapefruit'))
+);
+const maoisDrugs = (drugsData as any[]).filter(d =>
+  d.drug_class && d.drug_class.toLowerCase().includes('maoi') ||
+  (d.interaction_tags || []).some((t: string) => t.toLowerCase().includes('maoi') || t.toLowerCase().includes('tyramine'))
+);
+const warfarinDrugs = (drugsData as any[]).filter(d =>
+  d.id === 'warfarin' || (d.interaction_tags || []).some((t: string) => t.toLowerCase().includes('vitamin-k'))
+);
+const alcoholDrugs = (drugsData as any[]).filter(d =>
+  (d.interaction_tags || []).some((t: string) => t.toLowerCase().includes('alcohol'))
+);
+
+// Key interactions table
+const foodDrugPairs = [
+  {
+    food: 'Grapefruit / Grapefruit Juice',
+    drugs: 'Simvastatin, lovastatin, atorvastatin, cyclosporine, tacrolimus, midazolam, triazolam, buspirone, felodipine, nifedipine, amiodarone, colchicine, sildenafil',
+    mechanism: 'Furanocoumarins (bergamottin, 6\',7\'-dihydroxybergamottin) in grapefruit are mechanism-based inhibitors of intestinal CYP3A4. Unlike other CYP3A4 inhibitors, grapefruit acts exclusively on intestinal (not hepatic) CYP3A4. Intestinal CYP3A4 normally degrades a large fraction of susceptible drugs during first-pass absorption; grapefruit inhibition increases bioavailability 2- to 15-fold depending on drug. A single 8 oz glass consumed up to 4 hours before dosing can inhibit intestinal CYP3A4 for up to 24 hours due to the irreversible mechanism-based nature of the interaction.',
+    severity: 'major',
+    clinicalNote: 'Instruct patients on affected drugs to avoid grapefruit and grapefruit juice entirely, not just at the time of dosing. Other citrus fruits (orange, lemon, lime, tangerine) do not contain furanocoumarins and are safe. Seville oranges (used in some marmalades) also contain furanocoumarins and should be avoided. Pomelo has similar but less potent CYP3A4 inhibitory activity.',
+  },
+  {
+    food: 'Tyramine-Rich Foods',
+    drugs: 'Phenelzine, tranylcypromine, selegiline (high dose), isocarboxazid; linezolid (weak MAOI)',
+    mechanism: 'Tyramine is a biogenic amine found in aged, fermented, and preserved foods (aged cheeses, cured meats, red wine, tap beer, fermented soy products, overripe/avocado). Normally, dietary tyramine is efficiently degraded by MAO-A in intestinal enterocytes and hepatocytes before reaching systemic circulation. MAOIs eliminate this first-pass degradation, allowing tyramine to enter the systemic circulation and displace norepinephrine from presynaptic storage vesicles, triggering massive sympathetic activation. The resulting "tyramine pressor response" — hypertensive crisis with systolic BP >180 mmHg, occipital headache, diaphoresis, chest pain, and potential hemorrhagic stroke — can occur within 20–60 minutes of eating tyramine-rich foods and can be fatal.',
+    severity: 'contraindicated',
+    clinicalNote: 'Provide a tyramine-restricted diet list to every patient beginning MAOI therapy. High-risk foods: aged cheeses (not fresh/cream cheese), cured/smoked meats and fish, sauerkraut, kimchi, miso, tempeh, tap beer, Chianti wine, concentrated yeast extracts (Marmite). Linezolid requires tyramine restriction for courses >2 weeks. Treatment of hypertensive crisis: phentolamine (IV) or labetalol; avoid pure β-blockers (unopposed α stimulation worsens crisis).',
+  },
+  {
+    food: 'Vitamin K–Rich Foods',
+    drugs: 'Warfarin',
+    mechanism: 'Warfarin inhibits vitamin K epoxide reductase (VKOR), preventing regeneration of active vitamin K and thereby reducing γ-carboxylation of clotting factors II, VII, IX, and X. Vitamin K1 (phylloquinone) from dietary sources — primarily green leafy vegetables (kale, spinach, collard greens, Swiss chard, Brussels sprouts), broccoli, and some vegetable oils — directly competes with this mechanism by providing substrate that partially overcomes VKOR inhibition. A high dietary vitamin K intake raises INR-lowering substrate and reduces the anticoagulant effect; a sudden reduction in intake (e.g., during illness, hospitalization) reduces the competing vitamin K and raises the INR into supratherapeutic range.',
+    severity: 'moderate',
+    clinicalNote: 'Emphasize to warfarin patients that CONSISTENCY of vitamin K intake is more important than restriction. A patient who eats moderate amounts of leafy greens daily will be stably anticoagulated at a predictable warfarin dose. The same patient who suddenly stops eating vegetables during illness will experience an INR spike. Patient education should address this dynamic explicitly. Provide a list of vitamin K content per serving of common foods.',
+  },
+  {
+    food: 'Dairy Products / Divalent Cations',
+    drugs: 'Tetracyclines (doxycycline, minocycline, tetracycline), fluoroquinolones (ciprofloxacin, levofloxacin)',
+    mechanism: 'Calcium (milk, yogurt, cheese), magnesium (antacids, supplements), iron (ferrous sulfate supplements, iron-fortified foods), aluminum (antacids), and zinc form insoluble chelate complexes with tetracycline and fluoroquinolone antibiotics in the GI tract, preventing absorption. For tetracycline (not doxycycline), calcium in dairy can reduce bioavailability by up to 65%; for ciprofloxacin, co-administration with calcium-fortified orange juice or antacids reduces bioavailability by 40–50%. Doxycycline is less affected by dairy than tetracycline because of its greater lipophilicity, but co-administration with high-calcium foods or antacids still reduces absorption meaningfully.',
+    severity: 'moderate',
+    clinicalNote: 'Instruct patients to take tetracyclines on an empty stomach (1 hour before or 2 hours after meals/dairy). Doxycycline may be taken with food to reduce GI irritation, but avoid calcium-rich food/dairy and antacids within 2 hours of dosing. Fluoroquinolones should be taken 2 hours before or 6 hours after antacids, calcium supplements, and dairy products. Separate from iron supplements by at least 2 hours.',
+  },
+  {
+    food: 'Alcohol + Metronidazole / Tinidazole',
+    drugs: 'Metronidazole, tinidazole',
+    mechanism: 'Metronidazole and tinidazole inhibit aldehyde dehydrogenase (ALDH), the enzyme responsible for converting acetaldehyde (the first metabolic product of ethanol oxidation) to acetate. This is the same mechanism exploited by disulfiram in alcohol use disorder treatment. When alcohol is consumed concurrently with metronidazole or tinidazole, acetaldehyde accumulates rapidly, producing the disulfiram-like reaction: intense facial flushing, throbbing headache, nausea, vomiting, diaphoresis, chest pain, and hypotension. The reaction can occur even with small amounts of alcohol, including alcohol-containing mouthwash, some cough syrups, and fermented foods.',
+    severity: 'major',
+    clinicalNote: 'Counsel patients to avoid ALL alcohol — including alcohol-containing mouthwashes, cough preparations, and desserts with alcohol content — during metronidazole or tinidazole therapy and for 48 hours after completing the course (72 hours for tinidazole). Written instructions reinforcing this prohibition reduce the incidence of disulfiram-like reactions significantly. For patients with alcohol use disorder who may not comply, consider alternative antibiotics when clinically appropriate.',
+  },
+  {
+    food: 'Alcohol + CNS Depressants',
+    drugs: 'Benzodiazepines, opioids, barbiturates, gabapentinoids, muscle relaxants, antihistamines (diphenhydramine), tricyclic antidepressants, antipsychotics',
+    mechanism: 'Ethanol is a CNS depressant acting primarily through GABA-A receptor potentiation and NMDA receptor inhibition — the same systems targeted by benzodiazepines and barbiturates. Co-administration with any CNS depressant produces additive or synergistic respiratory depression, impaired psychomotor function, excessive sedation, and increased risk of aspiration. The degree of respiratory depression is particularly dangerous with opioids, where the combination can produce apnea at doses of each agent that individually would be sub-lethal. Epidemiological data indicate that over 50% of fatal opioid overdoses involve co-ingestion of alcohol, benzodiazepines, or both.',
+    severity: 'major',
+    clinicalNote: 'Document alcohol use history explicitly in medication assessments. Counsel all patients prescribed CNS depressants (opioids, benzodiazepines, gabapentinoids, muscle relaxants) about the absolute requirement to avoid alcohol. For patients unable to abstain, harm reduction strategies include naloxone co-prescription and rescue training, single-unit dispensing, and avoidance of combination CNS depressant regimens.',
+  },
+  {
+    food: 'High-Fat Meals',
+    drugs: 'Abiraterone (empty stomach required — fat increases absorption 7-17×); saquinavir (fat increases absorption); lapatinib (high fat increases absorption 3×); velpatasvir (fat optimizes absorption); tacrolimus (consistent food state required)',
+    mechanism: 'Fat-soluble drug absorption is highly dependent on the presence of bile acids, which are secreted in response to a fatty meal and micellize lipophilic drugs in the small intestine. For highly lipophilic drugs, a high-fat meal can dramatically increase bioavailability — a double-edged phenomenon. For abiraterone, the label requires administration on an empty stomach because food-induced absorption variability is so extreme (7- to 17-fold increase with high-fat meal) that consistent efficacious dosing is impossible without fasting. Conversely, drugs like saquinavir and lapatinib require a meal for adequate bioavailability. Tacrolimus does not require food for absorption but requires a consistent food state at each dosing time to avoid variability in drug levels.',
+    severity: 'moderate',
+    clinicalNote: 'Verify specific food requirement for each medication: "with food," "without food," "empty stomach," and "consistent food state" are meaningfully different instructions. For abiraterone: strictly no food for 2 hours before or 1 hour after dose. For lapatinib: administer with food (1 hour before or after meal). Medication administration record should include food instructions for drugs where this significantly affects exposure.',
+  },
+];
+---
+<SchemaLayout
+  title="Food–Drug Interactions — Drug Interactions"
+  schema="drug-interactions"
+  description="Food-drug interactions: grapefruit/CYP3A4, tyramine/MAOIs, vitamin K/warfarin, dairy/tetracyclines, alcohol combinations, and fat-content absorption effects."
+>
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/09-drug-interactions/`} class="link link-hover">Drug Interactions</a></li>
+        <li>Food–Drug Interactions</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold mb-2">Food–Drug Interactions</h1>
+    <p class="text-base-content/70 text-lg">Dietary and beverage components that alter drug pharmacokinetics and pharmacodynamics</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>
+      Food-drug interactions encompass a broad spectrum of mechanisms through which dietary
+      components — specific nutrients, bioactive phytochemicals, fermentation products, and
+      alcohol — alter the pharmacokinetics or pharmacodynamics of administered medications.
+      These interactions are clinically underappreciated in part because the food component
+      is not a drug and therefore not systematically recorded in medication interaction
+      databases, and in part because patients do not conceptualize dietary choices as
+      pharmacologically relevant. The consequences range from clinically insignificant
+      alterations in drug exposure to life-threatening interactions — a hypertensive crisis
+      from tyramine in aged cheese consumed with a MAOI, profound hypotension from
+      grapefruit juice consumed before a calcium channel blocker, or fatal respiratory
+      depression from alcohol and an opioid. Nurses are the clinical professionals most
+      consistently positioned to deliver food-drug interaction education: at the bedside
+      during drug administration, at discharge counseling, and during medication
+      reconciliation at admission.
+    </p>
+    <p>
+      The grapefruit-CYP3A4 interaction is the most pharmacologically instructive food-drug
+      interaction because it demonstrates a mechanism not replicated by any other dietary
+      constituent: mechanism-based (irreversible) inhibition of intestinal CYP3A4 by
+      furanocoumarins — bergamottin and 6',7'-dihydroxybergamottin — contained uniquely
+      in grapefruit (and, to a lesser degree, Seville oranges and pomelo). Because the
+      inhibition is irreversible, a single glass of grapefruit juice can inhibit intestinal
+      CYP3A4 activity for up to 24 hours; recovery requires synthesis of new enzyme.
+      The interaction is pharmacologically selective: it affects drugs with high intestinal
+      first-pass metabolism via CYP3A4 (substrates with high intestinal extraction ratio)
+      but has no effect on drugs that are not CYP3A4 substrates or that undergo minimal
+      intestinal first-pass metabolism. Simvastatin and lovastatin are among the most
+      affected drugs, with AUC increases of up to 15-fold with large amounts of grapefruit
+      juice; cyclosporine, tacrolimus, and many calcium channel blockers are similarly
+      affected. For grapefruit-sensitive drugs, complete avoidance of grapefruit and
+      Seville orange products is the recommended management strategy — dose separation
+      is insufficient given the extended duration of inhibition.
+    </p>
+    <p>
+      Alcohol warrants consideration as both a pharmacodynamic interactant (additive CNS
+      depression with any CNS depressant drug class) and as a pharmacokinetic modifier.
+      Acute alcohol ingestion inhibits CYP2E1 and CYP3A4, transiently increasing levels of
+      drugs metabolized by these enzymes; chronic alcohol consumption upregulates CYP2E1
+      (increasing generation of hepatotoxic acetaminophen metabolites, explaining why
+      chronic alcoholics are at elevated risk of acetaminophen-induced liver injury even
+      at doses within the labeled maximum) and induces drug glucuronidation. Alcohol also
+      interacts pharmacodynamically with metronidazole and tinidazole via aldehyde
+      dehydrogenase inhibition (disulfiram-like reaction); with sulfonylurea hypoglycemics
+      (hypoglycemia, flushing); and with aspirin (synergistic GI bleeding). The clinical
+      complexity of alcohol-drug interactions reflects the dual role of alcohol as both
+      acute drug and chronic inducer, and the wide variability in drinking patterns and
+      CYP2E1 activity among patients. Accurate alcohol use history is a prerequisite for
+      predicting these interactions.
+    </p>
+    <p>
+      Patient education about food-drug interactions should be actionable and specific.
+      Generic warnings such as "take on an empty stomach" or "avoid grapefruit" are
+      insufficient without the clinical context that makes the instruction meaningful.
+      Written discharge instructions should specify which foods to avoid, why the avoidance
+      is necessary (in accessible language), what symptoms to report, and what to do if
+      an accidental exposure occurs. For tyramine and MAOIs, the instruction must include
+      a food list, restaurant cautions (e.g., aged cheese in cooked dishes, house wine),
+      and identification of non-obvious tyramine sources (concentrated yeast extracts,
+      certain soy sauces, draft beer). For warfarin and vitamin K, the instruction must
+      convey the concept of consistency — not restriction — to avoid destabilizing
+      anticoagulation through diet changes. For dairy and antibiotics, the instruction
+      should specify the two-hour separation rule with specific food examples. The seven
+      interactions profiled below collectively represent the most common and most dangerous
+      food-drug interaction categories encountered in clinical practice.
+    </p>
+  </div>
+
+  <!-- Interaction Cards -->
+  <h2 class="text-2xl font-serif font-bold mb-4">Key Food–Drug Interactions</h2>
+  <div class="space-y-6 mb-10">
+    {foodDrugPairs.map(pair => (
+      <div class={`card bg-base-100 shadow-sm border-l-4 ${pair.severity === 'contraindicated' ? 'border-error' : pair.severity === 'major' ? 'border-warning' : 'border-info'}`}>
+        <div class="card-body">
+          <div class="flex items-start justify-between gap-4 flex-wrap">
+            <h3 class="card-title text-xl">🍽️ {pair.food}</h3>
+            <span class={`badge ${pair.severity === 'contraindicated' ? 'badge-error' : pair.severity === 'major' ? 'badge-warning' : 'badge-info'}`}>
+              {pair.severity}
+            </span>
+          </div>
+          <div class="mt-2">
+            <p class="text-xs font-semibold text-base-content/60 uppercase mb-1">Affected Drugs</p>
+            <p class="text-sm italic">{pair.drugs}</p>
+          </div>
+          <div class="mt-3">
+            <p class="text-xs font-semibold text-base-content/60 uppercase mb-1">Mechanism</p>
+            <p class="text-sm">{pair.mechanism}</p>
+          </div>
+          <div class="alert alert-info py-2 mt-3">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-4 h-4">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <p class="text-xs"><strong>Patient Education / Nursing Action:</strong> {pair.clinicalNote}</p>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Quick Reference Table -->
+  <h2 class="text-2xl font-serif font-bold mb-4">Quick Reference Summary</h2>
+  <div class="overflow-x-auto mb-10">
+    <table class="table table-zebra w-full">
+      <thead>
+        <tr><th>Food / Beverage</th><th>Drug(s)</th><th>Effect</th><th>Action</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="font-medium">Grapefruit / Seville orange</td>
+          <td class="text-sm">Statins (simvastatin, lovastatin), cyclosporine, tacrolimus, midazolam, calcium channel blockers</td>
+          <td class="text-sm"><span class="badge badge-warning badge-sm">↑ Drug levels</span></td>
+          <td class="text-sm">Avoid entirely during therapy; dose separation is insufficient</td>
+        </tr>
+        <tr>
+          <td class="font-medium">Aged cheese, cured meats, draft beer (tyramine)</td>
+          <td class="text-sm">MAOIs (phenelzine, tranylcypromine, linezolid)</td>
+          <td class="text-sm"><span class="badge badge-error badge-sm">Hypertensive crisis</span></td>
+          <td class="text-sm">Strict tyramine-restricted diet; list all forbidden foods</td>
+        </tr>
+        <tr>
+          <td class="font-medium">Leafy greens, broccoli (Vitamin K)</td>
+          <td class="text-sm">Warfarin</td>
+          <td class="text-sm"><span class="badge badge-info badge-sm">↓ INR</span></td>
+          <td class="text-sm">Maintain consistent intake; do not restrict — avoid sudden changes</td>
+        </tr>
+        <tr>
+          <td class="font-medium">Dairy, antacids, iron supplements</td>
+          <td class="text-sm">Tetracyclines, fluoroquinolones</td>
+          <td class="text-sm"><span class="badge badge-warning badge-sm">↓ Absorption</span></td>
+          <td class="text-sm">Separate by ≥2 hours (tetracycline), ≥2 hours before/6 hours after (FQs)</td>
+        </tr>
+        <tr>
+          <td class="font-medium">Alcohol</td>
+          <td class="text-sm">Metronidazole, tinidazole, disulfiram</td>
+          <td class="text-sm"><span class="badge badge-error badge-sm">Disulfiram reaction</span></td>
+          <td class="text-sm">Avoid all alcohol during and 48–72 h after course; include mouthwash</td>
+        </tr>
+        <tr>
+          <td class="font-medium">Alcohol</td>
+          <td class="text-sm">Opioids, benzodiazepines, gabapentinoids, muscle relaxants</td>
+          <td class="text-sm"><span class="badge badge-error badge-sm">↑ CNS depression</span></td>
+          <td class="text-sm">Absolute prohibition; naloxone coprescription; overdose warning signs</td>
+        </tr>
+        <tr>
+          <td class="font-medium">High-fat meal</td>
+          <td class="text-sm">Abiraterone (↑ 7-17×), tacrolimus (variable), lopinavir/ritonavir (↑)</td>
+          <td class="text-sm"><span class="badge badge-warning badge-sm">Highly variable absorption</span></td>
+          <td class="text-sm">Follow drug-specific labeling; fasted state for abiraterone; consistent state for tacrolimus</td>
+        </tr>
+        <tr>
+          <td class="font-medium">Alcohol (chronic use)</td>
+          <td class="text-sm">Acetaminophen</td>
+          <td class="text-sm"><span class="badge badge-warning badge-sm">↑ Hepatotoxicity</span></td>
+          <td class="text-sm">Max acetaminophen 2 g/day in chronic alcohol users; avoid in acute heavy use</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Grapefruit Drug List from DB -->
+  {grapefruitDrugs.length > 0 && (
+    <>
+      <h2 class="text-2xl font-serif font-bold mb-3">Grapefruit-Sensitive Drugs in the Database</h2>
+      <div class="overflow-x-auto mb-6">
+        <table class="table table-zebra table-sm w-full">
+          <thead><tr><th>Drug</th><th>Drug Class</th></tr></thead>
+          <tbody>
+            {grapefruitDrugs.map((drug: any) => (
+              <tr>
+                <td><a href={`${base}drugs/${drug.id}/`} class="link link-hover">{drug.generic_name}</a></td>
+                <td class="text-sm">{drug.drug_class}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  )}
+
+  <!-- Alcohol interaction drugs from DB -->
+  {alcoholDrugs.length > 0 && (
+    <>
+      <h2 class="text-2xl font-serif font-bold mb-3">Drugs with Alcohol Interaction Tags</h2>
+      <div class="overflow-x-auto mb-6">
+        <table class="table table-zebra table-sm w-full">
+          <thead><tr><th>Drug</th><th>Drug Class</th><th>Interaction Type</th></tr></thead>
+          <tbody>
+            {alcoholDrugs.map((drug: any) => {
+              const alcoholTags = (drug.interaction_tags||[]).filter((t:string)=>t.toLowerCase().includes('alcohol'));
+              return (
+                <tr>
+                  <td><a href={`${base}drugs/${drug.id}/`} class="link link-hover">{drug.generic_name}</a></td>
+                  <td class="text-sm">{drug.drug_class}</td>
+                  <td>
+                    {alcoholTags.map((t: string) => (
+                      <span class="badge badge-outline badge-xs mr-1">{t}</span>
+                    ))}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </>
+  )}
+</SchemaLayout>

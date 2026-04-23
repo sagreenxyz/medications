@@ -1,0 +1,351 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+
+// Drug categories for PD additive toxicity clusters
+const serotoninDrugs = (drugsData as any[]).filter(d =>
+  (d.interaction_tags || []).some((t: string) =>
+    t.toLowerCase().includes('serotonin') || t.toLowerCase().includes('serotonergic') || t.toLowerCase().includes('maoi')
+  ) ||
+  (d.drug_interactions || []).some((i: any) =>
+    i.mechanism && i.mechanism.toLowerCase().includes('serotonin')
+  )
+);
+
+const qtDrugs = (drugsData as any[]).filter(d =>
+  (d.interaction_tags || []).some((t: string) => t.toLowerCase().includes('qt'))
+);
+
+const cnsDrugs = (drugsData as any[]).filter(d =>
+  (d.interaction_tags || []).some((t: string) =>
+    t.toLowerCase().includes('cns-depress') || t === 'CNS-depressant' || t === 'CNS-depression-additive'
+  )
+);
+
+const nephrotoxicDrugs = (drugsData as any[]).filter(d =>
+  (d.interaction_tags || []).some((t: string) =>
+    t.toLowerCase().includes('nephrotoxic')
+  )
+);
+
+const bleedingDrugs = (drugsData as any[]).filter(d =>
+  (d.interaction_tags || []).some((t: string) =>
+    t.toLowerCase().includes('bleeding') || t.toLowerCase().includes('antiplatelet') || t.toLowerCase().includes('anticoagulant')
+  ) ||
+  ['warfarin','heparin-unfractionated','enoxaparin','rivaroxaban','apixaban','dabigatran','clopidogrel','aspirin'].includes(d.id)
+).slice(0, 20);
+
+const hyperkalemiaDrugs = (drugsData as any[]).filter(d =>
+  (d.interaction_tags || []).some((t: string) => t.toLowerCase().includes('potassium-elevating'))
+);
+
+const myelosuppressionDrugs = (drugsData as any[]).filter(d =>
+  (d.interaction_tags || []).some((t: string) =>
+    t.toLowerCase().includes('myelosuppression') || t.toLowerCase().includes('bone-marrow')
+  )
+);
+
+// Serotonin syndrome risk pairs (curated)
+const serotoninPairs = [
+  { class1: 'MAOIs', class2: 'SSRIs/SNRIs', risk: 'CONTRAINDICATED', note: 'Causes potentially fatal serotonin syndrome. Minimum 14-day MAOI washout before starting SSRI; 5-week washout after fluoxetine.' },
+  { class1: 'MAOIs', class2: 'Tramadol', risk: 'CONTRAINDICATED', note: 'Tramadol has serotonin reuptake inhibition properties; combination is contraindicated.' },
+  { class1: 'MAOIs', class2: 'Meperidine', risk: 'CONTRAINDICATED', note: 'Classic and potentially fatal combination. Use morphine or fentanyl for analgesia in patients on MAOIs.' },
+  { class1: 'SSRIs/SNRIs', class2: 'Triptans', risk: 'Use with caution', note: 'Risk lower than MAOI combinations but serotonin syndrome has been reported; monitor for symptoms.' },
+  { class1: 'SSRIs/SNRIs', class2: 'Linezolid', risk: 'CONTRAINDICATED', note: 'Linezolid is a weak, reversible MAOI; co-administration with serotonergic drugs is contraindicated.' },
+  { class1: 'SSRIs/SNRIs', class2: 'Methylene blue (IV)', risk: 'CONTRAINDICATED', note: 'Methylene blue inhibits MAO-A; IV administration with SSRIs risks serotonin syndrome.' },
+  { class1: 'SSRIs', class2: 'St. John\'s Wort', risk: 'Major', note: 'Additive serotonin reuptake inhibition; serotonin syndrome reported.' },
+  { class1: 'SSRIs/TCAs', class2: 'Opioids (fentanyl, tramadol)', risk: 'Moderate', note: 'Fentanyl has weak serotonergic activity; tramadol is more significant. Monitor for agitation, tremor, clonus.' },
+];
+
+// QT prolongation risk pairs
+const qtPairs = [
+  { drug1: 'Amiodarone', drug2: 'Sotalol / Dofetilide', risk: 'CONTRAINDICATED', note: 'Additive QT prolongation; both are class III antiarrhythmics. High risk of torsades de pointes.' },
+  { drug1: 'Fluoroquinolones (moxifloxacin)', drug2: 'Antipsychotics (haloperidol, ziprasidone)', risk: 'Major', note: 'Additive QTc prolongation; risk elevated with hypokalemia, hypomagnesemia, or bradycardia.' },
+  { drug1: 'Azithromycin', drug2: 'Class Ia/III antiarrhythmics', risk: 'Major', note: 'Azithromycin prolongs QT via hERG K+ channel blockade; avoid with other QT-prolonging agents.' },
+  { drug1: 'Methadone (high dose)', drug2: 'Any QT-prolonging agent', risk: 'Major', note: 'Methadone prolongs QTc in a dose-dependent manner; particularly dangerous with ≥100 mg/day.' },
+  { drug1: 'Ondansetron (IV)', drug2: 'Antipsychotics', risk: 'Moderate', note: 'IV ondansetron at doses ≥32 mg is no longer recommended; 16 mg max per dose with ECG monitoring.' },
+];
+---
+<SchemaLayout
+  title="PD Additive Toxicity — Drug Interactions"
+  schema="drug-interactions"
+  description="Pharmacodynamic additive toxicity: serotonin syndrome, QT prolongation, CNS depression, nephrotoxicity, bleeding, hyperkalemia, and myelosuppression."
+>
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/09-drug-interactions/`} class="link link-hover">Drug Interactions</a></li>
+        <li>PD Additive Toxicity</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold mb-2">Pharmacodynamic Additive Toxicity</h1>
+    <p class="text-base-content/70 text-lg">Synergistic adverse effects at the receptor and effector level</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>
+      Pharmacodynamic drug interactions arise when two or more drugs produce effects at
+      the same or functionally linked receptor systems, resulting in a combined effect that
+      is greater than — or, in the case of antagonism, less than — the sum of the individual
+      contributions. Additive or synergistic PD toxicity occurs when two drugs amplify the
+      same adverse effect pathway: two serotonergic drugs both increasing synaptic serotonin,
+      two QT-prolonging drugs both blocking cardiac hERG potassium channels, or two
+      nephrotoxic agents both impairing renal tubular function. Unlike PK interactions,
+      PD interactions occur even when plasma concentrations of both drugs remain within
+      their individual therapeutic ranges — the combination itself creates the pathological
+      state. Recognition of PD additive toxicity requires pattern recognition of clinical
+      syndromes rather than drug level interpretation, placing the nurse — who observes
+      the patient continuously — in a uniquely important position to detect early
+      warning signs.
+    </p>
+    <p>
+      Serotonin syndrome is the prototypical and most instructive PD additive toxicity.
+      It results from excessive serotonergic neurotransmission, most commonly from the
+      combination of a monoamine oxidase inhibitor (MAOI) with a serotonin reuptake
+      inhibitor, but also from combinations of SSRIs with opioids (tramadol, fentanyl),
+      triptans, lithium, buspirone, dextromethorphan, linezolid, or methylene blue. The
+      clinical triad of serotonin syndrome — autonomic instability (diaphoresis, tachycardia,
+      hyperthermia, labile blood pressure), altered mental status (agitation, confusion,
+      anxiety), and neuromuscular abnormalities (clonus, hyperreflexia, myoclonus, tremor)
+      — must be distinguished from neuroleptic malignant syndrome (NMS), which has a
+      slower onset, involves dopamine blockade rather than serotonin excess, and features
+      lead-pipe rigidity rather than clonus. The Hunter Serotonin Toxicity Criteria provide
+      a validated bedside algorithm: the presence of clonus (spontaneous, inducible, or
+      ocular), agitation, diaphoresis, tremor, and hyperreflexia in the context of
+      serotonergic drug use establishes the diagnosis. Treatment involves immediate
+      discontinuation of all serotonergic agents, supportive care for autonomic instability,
+      benzodiazepines for neuromuscular agitation, and cyproheptadine (a serotonin antagonist)
+      in severe cases.
+    </p>
+    <p>
+      QT interval prolongation and the resulting arrhythmia torsades de pointes (TdP)
+      represent a second major category of PD additive toxicity with particularly
+      dangerous consequences: TdP can degenerate into ventricular fibrillation and sudden
+      cardiac death. The QT interval reflects ventricular repolarization, which is mediated
+      primarily by the hERG (IKr) potassium channel. The vast majority of drugs that
+      prolong the QT interval do so by blocking hERG; when two or more hERG-blocking
+      drugs are combined, the repolarization delay is additive. Risk is further amplified
+      by electrolyte abnormalities — hypokalemia and hypomagnesemia both reduce
+      repolarization reserve — by female sex, bradycardia, hypoalbuminemia, hepatic
+      impairment, and underlying cardiac disease. Key drug classes with significant QT
+      prolongation liability include class Ia and III antiarrhythmics (quinidine, procainamide,
+      sotalol, dofetilide, amiodarone), macrolide antibiotics (azithromycin, clarithromycin,
+      erythromycin), fluoroquinolones (moxifloxacin, ciprofloxacin to lesser degree),
+      antipsychotics (haloperidol, ziprasidone, thioridazine, droperidol), antiemetics
+      (ondansetron IV, domperidone), and antifungals (fluconazole). The CredibleMeds
+      (Arizona CERT) database provides continuously updated risk classification for
+      QT-prolonging drugs and should be consulted whenever a new drug is added to a
+      regimen containing a known QT-prolonging agent.
+    </p>
+    <p>
+      Additive CNS depression is a high-frequency, high-harm PD interaction that spans
+      multiple drug classes. Opioids, benzodiazepines, non-benzodiazepine sedative-hypnotics,
+      gabapentinoids (gabapentin, pregabalin), muscle relaxants (cyclobenzaprine, baclofen,
+      tizanidine), first-generation antihistamines, and alcohol all produce CNS depression
+      through distinct molecular mechanisms, yet their clinical effects are additive or
+      supra-additive when combined. The FDA's 2016 black box warning on concurrent
+      benzodiazepine-opioid use reflects the substantial mortality signal from this
+      combination; the warning was later extended to gabapentinoids in 2019 following
+      epidemiological evidence of increased overdose deaths when gabapentin or pregabalin
+      was prescribed alongside opioids. Nurses administering any combination of CNS
+      depressants must assess the full medication list — including prn medications, sleep
+      aids, and over-the-counter antihistamines — and monitor respiratory rate, level of
+      consciousness, and oxygen saturation at appropriate intervals. Naloxone should be
+      readily available for any patient receiving high-dose opioids in combination with
+      other CNS depressants.
+    </p>
+  </div>
+
+  <!-- Serotonin Syndrome -->
+  <h2 class="text-2xl font-serif font-bold mb-3">Serotonin Syndrome Risk Pairs</h2>
+  <div class="alert alert-error mb-4">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+    </svg>
+    <div>
+      <p class="font-semibold">Serotonin Syndrome Recognition Triad</p>
+      <p class="text-sm">
+        <strong>Autonomic instability</strong> (diaphoresis, tachycardia, hyperthermia) +
+        <strong>Altered mental status</strong> (agitation, confusion) +
+        <strong>Neuromuscular findings</strong> (clonus, hyperreflexia, myoclonus). Distinguish from NMS: clonus is serotonin, lead-pipe rigidity is dopaminergic.
+      </p>
+    </div>
+  </div>
+  <div class="overflow-x-auto mb-10">
+    <table class="table table-zebra w-full">
+      <thead>
+        <tr><th>Drug Class 1</th><th>Drug Class 2</th><th>Risk Level</th><th>Clinical Note</th></tr>
+      </thead>
+      <tbody>
+        {serotoninPairs.map(pair => (
+          <tr>
+            <td class="font-medium">{pair.class1}</td>
+            <td>{pair.class2}</td>
+            <td>
+              <span class={`badge badge-sm ${pair.risk === 'CONTRAINDICATED' ? 'badge-error' : pair.risk === 'Major' ? 'badge-warning' : 'badge-ghost'}`}>
+                {pair.risk}
+              </span>
+            </td>
+            <td class="text-sm max-w-sm">{pair.note}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- QT Prolongation -->
+  <h2 class="text-2xl font-serif font-bold mb-3">QT Prolongation Risk Pairs</h2>
+  <p class="text-sm text-base-content/70 mb-3">
+    Amplifying risk factors: hypokalemia, hypomagnesemia, bradycardia, female sex, hepatic impairment, baseline prolonged QTc (&gt;450 ms men / &gt;470 ms women).
+    Check QTc before and 2–4 hours after initiating known QT-prolonging agents.
+  </p>
+  <div class="overflow-x-auto mb-10">
+    <table class="table table-zebra w-full">
+      <thead>
+        <tr><th>Drug 1</th><th>Drug 2</th><th>Risk</th><th>Management</th></tr>
+      </thead>
+      <tbody>
+        {qtPairs.map(pair => (
+          <tr>
+            <td class="font-medium">{pair.drug1}</td>
+            <td>{pair.drug2}</td>
+            <td>
+              <span class={`badge badge-sm ${pair.risk === 'CONTRAINDICATED' ? 'badge-error' : 'badge-warning'}`}>
+                {pair.risk}
+              </span>
+            </td>
+            <td class="text-sm">{pair.note}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- QT Drugs from DB -->
+  {qtDrugs.length > 0 && (
+    <>
+      <h3 class="text-xl font-serif font-bold mb-3">QT-Prolonging Drugs in the Database</h3>
+      <div class="overflow-x-auto mb-10">
+        <table class="table table-zebra table-sm w-full">
+          <thead><tr><th>Drug</th><th>Drug Class</th></tr></thead>
+          <tbody>
+            {qtDrugs.map((drug: any) => (
+              <tr>
+                <td><a href={`${base}drugs/${drug.id}/`} class="link link-hover">{drug.generic_name}</a></td>
+                <td class="text-sm">{drug.drug_class}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  )}
+
+  <!-- Additional Additive Toxicity Categories -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+    <!-- Nephrotoxicity -->
+    <div class="card card-compact bg-base-100 border border-base-300">
+      <div class="card-body">
+        <h3 class="card-title text-lg">Additive Nephrotoxicity</h3>
+        <p class="text-sm text-base-content/70">
+          Aminoglycosides + vancomycin = AKI risk significantly elevated. NSAIDs + ACE inhibitors/ARBs = classic triad with dehydration (triple whammy).
+          Cisplatin + aminoglycosides are contraindicated combinations. Contrast + metformin requires temporary hold.
+        </p>
+        {nephrotoxicDrugs.length > 0 && (
+          <ul class="text-sm space-y-1 mt-2">
+            {nephrotoxicDrugs.slice(0,8).map((d: any) => (
+              <li><a href={`${base}drugs/${d.id}/`} class="link link-hover">{d.generic_name}</a> <span class="text-base-content/50">({d.drug_class})</span></li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+
+    <!-- Hyperkalemia -->
+    <div class="card card-compact bg-base-100 border border-base-300">
+      <div class="card-body">
+        <h3 class="card-title text-lg">Additive Hyperkalemia</h3>
+        <p class="text-sm text-base-content/70">
+          ACE inhibitors + potassium-sparing diuretics + NSAIDs: classic high-risk triad. Add K+ supplements and the risk is substantial.
+          TMP-SMX (trimethoprim) blocks renal K+ secretion like amiloride. Monitor K+ 1–2 weeks after adding any agent to this class.
+        </p>
+        {hyperkalemiaDrugs.length > 0 && (
+          <ul class="text-sm space-y-1 mt-2">
+            {hyperkalemiaDrugs.slice(0,8).map((d: any) => (
+              <li><a href={`${base}drugs/${d.id}/`} class="link link-hover">{d.generic_name}</a> <span class="text-base-content/50">({d.drug_class})</span></li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+
+    <!-- Bleeding Risk -->
+    <div class="card card-compact bg-base-100 border border-base-300">
+      <div class="card-body">
+        <h3 class="card-title text-lg">Additive Bleeding Risk</h3>
+        <p class="text-sm text-base-content/70">
+          Anticoagulants + antiplatelets + NSAIDs: major bleed risk. Warfarin + NSAIDs = GI bleeding. DOACs + dual antiplatelet therapy (triple therapy)
+          after ACS/PCI requires individualized risk-benefit assessment and proton pump inhibitor co-prescription.
+        </p>
+        {bleedingDrugs.length > 0 && (
+          <ul class="text-sm space-y-1 mt-2">
+            {bleedingDrugs.slice(0,8).map((d: any) => (
+              <li><a href={`${base}drugs/${d.id}/`} class="link link-hover">{d.generic_name}</a> <span class="text-base-content/50">({d.drug_class})</span></li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+
+    <!-- Myelosuppression -->
+    <div class="card card-compact bg-base-100 border border-base-300">
+      <div class="card-body">
+        <h3 class="card-title text-lg">Additive Myelosuppression</h3>
+        <p class="text-sm text-base-content/70">
+          Combining cytotoxic chemotherapy agents with other myelosuppressive drugs (clozapine, carbamazepine, TMP-SMX,
+          ganciclovir) amplifies bone marrow toxicity risk. Monitor CBC with differential; hold myelosuppressive
+          non-oncology drugs during chemotherapy nadir periods when possible.
+        </p>
+        {myelosuppressionDrugs.length > 0 && (
+          <ul class="text-sm space-y-1 mt-2">
+            {myelosuppressionDrugs.slice(0,8).map((d: any) => (
+              <li><a href={`${base}drugs/${d.id}/`} class="link link-hover">{d.generic_name}</a> <span class="text-base-content/50">({d.drug_class})</span></li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+  </div>
+
+  <!-- CNS Depression Drugs -->
+  {cnsDrugs.length > 0 && (
+    <>
+      <h2 class="text-2xl font-serif font-bold mb-3">CNS Depressant Combinations</h2>
+      <div class="alert alert-warning mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-5 w-5" fill="none" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+        <p class="text-sm">
+          <strong>FDA Black Box Warning:</strong> Concurrent use of opioids with benzodiazepines, gabapentinoids, or other CNS depressants
+          increases the risk of profound sedation, respiratory depression, coma, and death.
+          Reserve concurrent use for patients where alternatives are inadequate; limit doses and duration; monitor patients closely.
+        </p>
+      </div>
+      <div class="overflow-x-auto mb-10">
+        <table class="table table-zebra table-sm w-full">
+          <thead><tr><th>Drug</th><th>Drug Class</th></tr></thead>
+          <tbody>
+            {cnsDrugs.map((drug: any) => (
+              <tr>
+                <td><a href={`${base}drugs/${drug.id}/`} class="link link-hover">{drug.generic_name}</a></td>
+                <td class="text-sm">{drug.drug_class}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  )}
+</SchemaLayout>

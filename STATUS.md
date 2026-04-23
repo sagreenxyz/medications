@@ -3,13 +3,17 @@
 ## Last Session Summary
 - **Date:** 2026-04-23
 - **Work completed:**
-  - PHASE 1 COMPLETE: Added all 500 drugs to data/drugs.json (final batches: ID antibiotics, anti-TB, antivirals, antifungals, HIV ARVs, antiparasitic, oncology)
-  - PHASE 2 COMPLETE: Built core pages (index.astro with schema cards/drug-of-day/stats, drug-index.astro with A-Z nav, about.astro with prose, drugs/[slug].astro profile template generating 500 pages)
-  - PHASE 3a COMPLETE: Schema 1 - all 15 organ system sub-pages (cardiovascular, renal, respiratory, gastrointestinal, endocrine, reproductive, cns, pns-autonomic, musculoskeletal, hematology-oncology, immunology, infectious-disease, dermatology, ophthalmology-ent, toxicology)
-  - PHASE 3b PARTIAL: Schema 2 index.astro updated with drug counts; 11 sub-pages NOT yet created
-- **Build status:** 527 pages build successfully
-- **Current total:** 500 drugs in data/drugs.json
-- **Resume point next session:** Create Schema 2 sub-pages (11 files in src/pages/schemas/02-therapeutic-classes/): adrenergic.astro, cholinergic.astro, ion-channel.astro, enzyme-inhibitors.astro, receptor-antagonists.astro, transporter-inhibitors.astro, hormones-analogs.astro, biologics.astro, antimicrobials.astro, cytotoxics.astro, anticoagulants.astro. Then proceed to Schemas 3-9.
+  - PHASE 3b COMPLETE: Schema 2 - all 11 therapeutic class sub-pages created (adrenergic, cholinergic, ion-channel, enzyme-inhibitors, receptor-antagonists, transporter-inhibitors, hormones-analogs, biologics, antimicrobials, cytotoxics, anticoagulants)
+  - PHASE 3c COMPLETE: Schema 3 - Organ×Class matrix index page (15×11 table) + 67 intersection sub-pages via [intersection].astro
+  - PHASE 3f COMPLETE: Schema 6 - All 6 ADME sub-pages (index, absorption, distribution, cyp-metabolism, excretion, special-populations, drug-interactions-pk)
+  - PHASE 3i COMPLETE: Schema 9 - All 7 drug interaction sub-pages (index, cyp-inhibition, cyp-induction, transporter-interactions, pd-additive-toxicity, pd-antagonism, food-drug, protein-binding)
+  - Build: 716 pages building successfully
+- **Resume point next session:** 
+  - Schema 4: index.astro was NOT updated (still stub) - create [target].astro with getStaticPaths() for 25 target families AND update index.astro
+  - Schema 5: Both index.astro (stub) and [prototype].astro need to be created (238 prototype drugs in data)
+  - Schema 7: Both index.astro (stub) and [presentation].astro need to be created (40 presentation slugs)
+  - Schema 8: index.astro (stub), [cluster].astro (30 clusters), black-box-warnings.astro, beers-criteria.astro, therapeutic-drug-monitoring.astro all need to be created
+  - After all schemas complete: Phase 5 (Search/FilterPanel) and Phase 6 (QA)
 
 ## IMPORTANT PROTOCOL NOTES (from prior failures)
 - Always use `create` tool to write Python scripts to /tmp/, never embed Python in bash heredocs
@@ -17,38 +21,22 @@
 - Run `node -e "JSON.parse(...)" ` to validate JSON after any drug data changes
 - Verify git log after sub-agent work before calling report_progress
 
-## Phase 1 Drug Data Task Table — ALL COMPLETE
-- CV-01 through CV-17: All cardiovascular drugs ✅
-- REN-01, REN-02: All renal drugs ✅
-- RESP-01 through RESP-05: All respiratory drugs ✅
-- GI-01 through GI-04: All GI drugs ✅
-- ENDO-01 through ENDO-05: All endocrine drugs ✅
-- REPRO-01, REPRO-02: All reproductive/GU drugs ✅
-- CNS-01 through CNS-15: All CNS drugs ✅
-- ID-01 through ID-14: All infectious disease drugs ✅
-- HEMONC-01 through HEMONC-03: All hematology-oncology drugs ✅
-- IMMUNOL-01: All immunology drugs ✅
+## Phase 1 Drug Data Task Table — ALL COMPLETE ✅
 
-## Phase 2 Status — COMPLETE
-- Nav.astro ✅
-- index.astro ✅
-- drug-index.astro ✅
-- about.astro ✅
-- drugs/[slug].astro ✅
+## Phase 2 Status — COMPLETE ✅
 
 ## Phase 3 Schema Pages Status
 - Schema 1 (Organ Systems): index + 15 sub-pages ✅ COMPLETE
-- Schema 2 (Therapeutic Classes): index ✅, sub-pages ❌ NOT STARTED
-- Schema 3 (Matrix): index stub only ❌
-- Schema 4 (Mechanism-First): index stub only ❌
-- Schema 5 (Prototype+Class): index stub only ❌
-- Schema 6 (ADME): index stub only ❌
-- Schema 7 (Clinical Presentations): index stub only ❌
-- Schema 8 (Adverse Effects): index stub only ❌
-- Schema 9 (Drug Interactions): index stub only ❌
+- Schema 2 (Therapeutic Classes): index + 11 sub-pages ✅ COMPLETE
+- Schema 3 (Organ×Class Matrix): index + 67 intersection pages ✅ COMPLETE
+- Schema 4 (Mechanism-First): index ❌ STUB, [target].astro ❌ NOT CREATED
+- Schema 5 (Prototype+Class): index ❌ STUB, [prototype].astro ❌ NOT CREATED
+- Schema 6 (ADME): index + 6 sub-pages ✅ COMPLETE
+- Schema 7 (Clinical Presentations): index ❌ STUB, [presentation].astro ❌ NOT CREATED
+- Schema 8 (Adverse Effects): index ❌ STUB, [cluster].astro ❌ NOT CREATED, special pages ❌ NOT CREATED
+- Schema 9 (Drug Interactions): index + 7 sub-pages ✅ COMPLETE
 
-## Phase 4 Status
-- drugs/[slug].astro template complete ✅ (500 pages building)
+## Phase 4 Status — COMPLETE ✅ (drugs/[slug].astro - 500 pages)
 
 ## Phases 5-6
 - Not started

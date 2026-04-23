@@ -1,0 +1,70 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+const slug = 'biologics';
+const displayName = 'Biologics';
+
+const drugs = (drugsData as any[]).filter(
+  (d: any) => (d.therapeutic_classes || []).includes(slug)
+);
+const drugCount = drugs.length;
+---
+<SchemaLayout title="Biologics" schema="therapeutic-classes" description="Biologically-derived therapeutic agents including monoclonal antibodies, fusion proteins, cytokines, and cell-based therapies">
+
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/02-therapeutic-classes/`} class="link">Therapeutic Classes</a></li>
+        <li>{displayName}</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold text-base-content mb-2">{displayName}</h1>
+    <p class="text-base-content/70 text-lg">{drugCount} drug{drugCount !== 1 ? 's' : ''} in this class</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>Biologics—therapeutic agents derived from living organisms through biotechnology—represent the most significant paradigm shift in pharmacology since the advent of synthetic small molecules. Their development was catalyzed by recombinant DNA technology in the 1970s and 1980s, with the first recombinant protein therapeutic (recombinant human insulin, Humulin) approved in 1982. The subsequent development of hybridoma technology for monoclonal antibody production by Köhler and Milstein, and later the humanization of murine antibodies to reduce immunogenicity, opened the era of targeted biotherapy that now dominates oncology, rheumatology, gastroenterology, and dermatology. Biologics encompass monoclonal antibodies (identified by the suffix -mab), fusion proteins (etanercept, abatacept, aflibercept), cytokines and growth factors (filgrastim, epoetin alfa, interferon preparations), recombinant coagulation factors (factor VIII, factor IX, recombinant activated protein C), and antisense oligonucleotides (nusinersen, inclisiran); each category exploits distinct mechanisms to achieve target specificity exceeding that achievable by small molecules acting at shared structural domains.</p>
+    <p>The molecular mechanisms of biologics are defined by their target specificity rather than by shared pharmacological class effects. Monoclonal antibodies targeting TNF-alpha (infliximab, adalimumab, certolizumab, golimumab) bind and neutralize soluble and membrane-bound TNF-alpha, preventing its interaction with TNF receptors TNFR1 and TNFR2, thereby blocking downstream NF-kB activation and the transcription of pro-inflammatory cytokines, adhesion molecules, and matrix metalloproteinases; this mechanism accounts for therapeutic efficacy in rheumatoid arthritis, Crohn's disease, ulcerative colitis, psoriasis, and ankylosing spondylitis, as well as the class-wide risk of reactivating latent tuberculosis, other granulomatous infections, and fungal infections by disrupting TNF-mediated containment of intracellular pathogens. Anti-IL-6 receptor antibodies (tocilizumab, sarilumab) block the IL-6 signaling pathway crucial for acute-phase protein synthesis, B-cell differentiation, and osteoclast activation; anti-IL-17A (secukinumab, ixekizumab) and anti-IL-23 (guselkumab, risankizumab, ustekinumab) antibodies have transformed management of moderate-to-severe plaque psoriasis and psoriatic arthritis by targeting the Th17 pathway upstream of the epidermal hyperproliferation cascade. Anti-PD-1 (nivolumab, pembrolizumab) and anti-CTLA-4 (ipilimumab) checkpoint inhibitors restore immune surveillance of tumors by blocking inhibitory signals that cancer cells exploit to evade cytotoxic T-lymphocyte recognition, producing durable responses in melanoma, lung cancer, and many other malignancies at the cost of immune-related adverse events from unleashed autoreactive T cells.</p>
+    <p>Biologics have fundamentally distinct pharmacokinetic properties from small molecules, arising from their large molecular size (typically 15–150 kDa), protein structure, and target-mediated drug disposition. Because biologics are proteins, they cannot be administered orally—they are degraded by GI proteases—and must be delivered parenterally (IV infusion, subcutaneous injection). Distribution is largely confined to the plasma and interstitial fluid, with volumes of distribution close to plasma volume (3–5 L) for antibodies versus tens to hundreds of liters for small molecules. Elimination occurs through proteolytic catabolism throughout the body (FcRn recycling extends IgG antibody half-lives to 2–4 weeks) and through target-mediated drug disposition (TMDD), whereby binding to the drug's pharmacological target forms a complex that is internalized and degraded, creating non-linear pharmacokinetics at low drug concentrations relative to target concentration. The IgG Fc region's interaction with the neonatal Fc receptor (FcRn) is responsible for the exceptionally long half-lives of monoclonal antibodies (2–4 weeks), enabling subcutaneous dosing every 2–12 weeks that dramatically improves adherence compared to daily oral small molecules. Immunogenicity—the generation of anti-drug antibodies (ADAs)—is a unique pharmacokinetic challenge for biologics; ADAs can neutralize drug activity, accelerate clearance, cause infusion reactions, and are more common with chimeric (infliximab) than fully humanized (adalimumab) or fully human (golimumab) antibodies.</p>
+    <p>The adverse effect profile of biologics is dominated by immunological mechanisms rather than the off-target receptor effects of small molecules. Immunosuppressive biologics—anti-TNF agents, anti-IL-6, calcineurin inhibitors—create a state of pharmacological immunosuppression that increases the risk of serious bacterial infections (particularly skin and soft tissue infections, pneumonia), opportunistic infections (Pneumocystis pneumonia, cytomegalovirus reactivation), and reactivation of latent tuberculosis; all patients initiating TNF inhibitors must undergo tuberculin skin testing or interferon-gamma release assay and chest radiography before starting therapy, with isoniazid prophylaxis administered for at least 4 weeks before TNF inhibitor initiation if latent TB is detected. Checkpoint inhibitors (pembrolizumab, nivolumab, ipilimumab) produce immune-related adverse events (irAEs) reflecting autoimmune activation in any organ system: immune-related colitis (diarrhea, blood in stool), hepatitis (transaminase elevation), pneumonitis (cough, dyspnea, hypoxemia), endocrinopathies (thyroid dysfunction, hypophysitis, type 1 diabetes), and dermatitis; management requires grading by CTCAE severity, withholding or discontinuing the checkpoint inhibitor, and administering high-dose corticosteroids for grades 3–4 toxicity. Infusion reactions occur with all intravenous biologics and range from mild (flushing, urticaria, mild hypotension during infusion) to severe anaphylaxis; standard pre-medication with acetaminophen, antihistamine, and sometimes corticosteroids reduces risk, and nurses must have epinephrine immediately available during all biologic infusions.</p>
+    <p>The clinical deployment of biologics requires specialized nursing competencies in safe administration, patient education, and surveillance for a unique toxicity profile that differs fundamentally from small molecule pharmacotherapy. Before initiating any biologic, the nurse must verify completion of all age-appropriate vaccinations (live vaccines are contraindicated during therapy with most immunosuppressive biologics), review infection screening results, and confirm no active infection. Subcutaneous self-injection training is essential for agents such as adalimumab, etanercept, and secukinumab; injection technique, rotation of sites, storage requirements (refrigeration at 2–8°C for most, with room-temperature stability for 4 weeks for some formulations), and sharps disposal must be thoroughly reviewed. The long half-lives and infrequent dosing of biologics—every 2 weeks, monthly, or even quarterly for some agents—demand strategies to maintain adherence, as missing a dose can result in disease flare or loss of drug tolerance through ADA formation. The emergence of biosimilars—non-originator biologics demonstrating no clinically meaningful differences from the reference product—has increased access to biologic therapy but requires nurse-level understanding of naming conventions, interchangeability designations, and the distinction between substitution by formulary and therapeutic switching, as patient concerns about biosimilar equivalence are common and must be addressed with evidence-based counseling.</p>
+  </div>
+
+  {drugs.length === 0 && (
+    <div class="alert alert-info mb-6">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <span>No drugs are currently classified under this therapeutic class. Check back as more drug data is added.</span>
+    </div>
+  )}
+
+  {drugs.length > 0 && (
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      {drugs.map((drug: any) => (
+        <div class={`card card-compact bg-base-100 shadow border border-base-200 ${drug.ismp_high_alert ? 'border-l-4 border-l-error' : ''}`}>
+          <div class="card-body">
+            <div class="flex flex-wrap items-start gap-1 mb-1">
+              <h2 class="card-title text-base font-semibold capitalize mr-auto">
+                <a href={`${base}drugs/${drug.id}/`} class="hover:text-primary transition-colors">
+                  {drug.generic_name}
+                </a>
+              </h2>
+              {drug.prototype_for && <span class="badge badge-success badge-sm shrink-0">PROTOTYPE</span>}
+              {drug.ismp_high_alert && <span class="badge badge-error badge-sm shrink-0">HIGH ALERT</span>}
+              {drug.black_box_warnings && drug.black_box_warnings.length > 0 && <span class="badge badge-warning badge-sm shrink-0">BBW</span>}
+            </div>
+            <p class="text-xs text-base-content/60 mb-1">
+              <span class="font-medium">{drug.drug_class}</span>
+              {drug.subclass && <span> — {drug.subclass}</span>}
+            </p>
+            {drug.mechanism_summary && <p class="text-sm text-base-content/70 line-clamp-3">{drug.mechanism_summary}</p>}
+            <div class="card-actions justify-end mt-2">
+              <a href={`${base}drugs/${drug.id}/`} class="btn btn-xs btn-outline btn-primary">Profile</a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+</SchemaLayout>

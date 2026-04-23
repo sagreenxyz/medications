@@ -1,0 +1,225 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+
+// Build absorption table — use drugs with meaningful absorption info
+const absorptionDrugs = (drugsData as any[])
+  .filter((d) => d.pharmacokinetics?.absorption)
+  .map((d) => ({
+    id: d.id,
+    name: d.generic_name,
+    absorption: d.pharmacokinetics.absorption,
+    route: inferRoute(d.pharmacokinetics.absorption),
+    bioavailability: extractBioavailability(d.pharmacokinetics.absorption),
+    drugClass: d.drug_class,
+  }))
+  .sort((a, b) => a.name.localeCompare(b.name));
+
+function inferRoute(absorption: string): string {
+  const a = absorption.toLowerCase();
+  if (a.includes('inhaled') || a.includes('inhalation')) return 'Inhaled';
+  if (a.includes('sublingual') || a.includes('sl ')) return 'Sublingual';
+  if (a.includes('transdermal') || a.includes('patch') || a.includes('topical')) return 'Transdermal';
+  if (a.includes('iv only') || a.includes('not orally') || a.includes('intravenous only') || a.includes('parenteral only')) return 'IV only';
+  if (a.includes('subcutaneous') || a.includes('subcut') || a.includes('sq ') || a.includes('sc ')) return 'Subcutaneous';
+  if (a.includes('intramuscular') || a.includes(' im ') || a.includes('im;')) return 'IM/IV';
+  if (a.includes('oral') || a.includes('bioavailability') || a.includes('absorbed')) return 'Oral';
+  return 'Oral';
+}
+
+function extractBioavailability(absorption: string): string {
+  const m = absorption.match(/(\d{1,3}(?:–|-)\d{1,3}%|\d{1,3}%)/);
+  return m ? m[0] : '—';
+}
+
+// Group by route
+const routeGroups: Record<string, typeof absorptionDrugs> = {};
+for (const drug of absorptionDrugs) {
+  if (!routeGroups[drug.route]) routeGroups[drug.route] = [];
+  routeGroups[drug.route].push(drug);
+}
+const routeOrder = ['Oral', 'IV only', 'Inhaled', 'Sublingual', 'Transdermal', 'Subcutaneous', 'IM/IV'];
+
+// Extended-release drugs (cannot crush)
+const erDrugs = (drugsData as any[]).filter((d) => {
+  const a = (d.pharmacokinetics?.absorption || '').toLowerCase();
+  return a.includes('extended-release') || a.includes('extended release') || a.includes('xr') || a.includes('er formulation') || a.includes('controlled-release') || a.includes('sustained-release');
+});
+---
+<SchemaLayout
+  title="Absorption — ADME Schema"
+  schema="adme"
+  description="Bioavailability, first-pass effect, routes of administration, and factors affecting drug absorption."
+>
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/06-adme/`} class="link link-hover">ADME</a></li>
+        <li>Absorption</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold mb-2">Absorption</h1>
+    <p class="text-base-content/70 text-lg">Bioavailability, first-pass effect, and routes of administration</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>
+      Absorption is the process by which a drug moves from its site of administration into the
+      systemic circulation, and its quantitative expression — bioavailability — represents the
+      fraction of the administered dose that reaches the bloodstream in an active form. For an
+      intravenous drug, bioavailability is by definition 100%; for an orally administered drug,
+      bioavailability depends on the interplay of solubility, membrane permeability, stability
+      in the gastrointestinal lumen, and the metabolic activity of the gut wall and liver that
+      the drug must traverse before entering systemic circulation. The Biopharmaceutics
+      Classification System (BCS) categorizes drugs by solubility and permeability: Class I
+      agents (high solubility, high permeability) such as metoprolol and metronidazole are
+      reliably absorbed; Class II agents (low solubility, high permeability) such as
+      ibuprofen and phenytoin have dissolution-limited absorption that food-fat interactions
+      can meaningfully alter; Class III agents (high solubility, low permeability) such as
+      acyclovir and metformin are absorption-limited despite being freely soluble;
+      Class IV agents (low solubility, low permeability) such as amphotericin B have poor
+      oral absorption and typically require parenteral administration.
+    </p>
+    <p>
+      The first-pass effect — also called presystemic metabolism — is the phenomenon by which
+      orally absorbed drug is extracted and metabolized by the intestinal mucosa and liver
+      before entering the systemic circulation, substantially reducing bioavailability for
+      susceptible drugs. Nitroglycerin, a classic example, undergoes approximately 99%
+      first-pass extraction, making sublingual or transdermal administration essential for
+      therapeutic effect; this is why sublingual nitroglycerin produces effects within
+      1–3 minutes while oral nitroglycerin at equivalent doses fails entirely.
+      Morphine has approximately 20–30% oral bioavailability due to extensive hepatic
+      first-pass glucuronidation, requiring substantially higher oral doses than parenteral
+      doses to achieve equivalent analgesia — a ratio nurses must understand to prevent
+      errors during route transitions. Lidocaine, similarly, is administered intravenously
+      rather than orally for arrhythmia management precisely because hepatic extraction
+      removes over 70% of an oral dose before it can reach the myocardium. Drugs with
+      high first-pass extraction coefficients are particularly sensitive to hepatic blood
+      flow changes: conditions that reduce hepatic perfusion (cirrhosis, heart failure)
+      or drugs that inhibit intestinal CYP3A4 (grapefruit juice, ketoconazole) will
+      dramatically increase bioavailability and may precipitate toxicity at previously
+      well-tolerated doses.
+    </p>
+    <p>
+      Routes of administration represent pharmacological tools for circumventing or
+      exploiting absorption physiology. Intravenous administration delivers 100%
+      bioavailability with immediate onset but requires aseptic technique, carries
+      risks of phlebitis and extravasation, and cannot be undone once administered —
+      a critical safety consideration for high-alert medications such as insulin,
+      anticoagulants, and vasoactive drugs. Intramuscular administration provides
+      reliable absorption for drugs with poor oral bioavailability (haloperidol
+      decanoate, depot medroxyprogesterone) and those requiring sustained release
+      (long-acting injectable antipsychotics), but absorption rate varies with
+      muscle blood flow, injection volume, and formulation. Subcutaneous administration,
+      used for insulin, enoxaparin, and biologic agents, provides slower, more
+      consistent absorption than intramuscular injection but is unsuitable for
+      irritating or large-volume preparations. Transdermal delivery — used for
+      fentanyl, nitroglycerin, clonidine, testosterone, scopolamine, and nicotine —
+      exploits skin lipophilicity for sustained systemic delivery while bypassing
+      first-pass metabolism entirely; the nurse must understand that fever, diaphoresis,
+      and adiposity alter transdermal absorption rates in clinically meaningful ways.
+      Inhaled administration targets the pulmonary epithelium's large surface area and
+      thin diffusion barrier for either local effect (inhaled corticosteroids) or rapid
+      systemic absorption rivaling intravenous rates (inhaled fentanyl, anesthetic gases).
+    </p>
+    <p>
+      Numerous physiological and pharmaceutical factors modulate gastrointestinal drug
+      absorption in clinically important ways. Gastric pH influences the ionization state
+      of weakly acidic and basic drugs according to the Henderson-Hasselbalch equation;
+      proton pump inhibitor use raises gastric pH and reduces absorption of drugs requiring
+      acidic conditions for dissolution (ketoconazole, itraconazole, atazanavir), while
+      antacids complex with fluoroquinolones and tetracyclines, reducing their absorption
+      by 50–90% if administered simultaneously. Gastric emptying rate governs the delivery
+      of drug to the small intestine where the majority of absorption occurs; opioids,
+      anticholinergics, and conditions such as gastroparesis dramatically slow gastric
+      emptying and delay drug absorption onset, while metoclopramide accelerates it.
+      Food-drug interactions are clinically significant for numerous agents: high-fat meals
+      increase absorption of lipophilic drugs such as atazanavir, griseofulvin, and
+      isotretinoin; food decreases absorption of alendronate (requiring administration
+      30 minutes before eating) and some fluoroquinolones; and grapefruit juice
+      irreversibly inhibits intestinal CYP3A4 for up to 72 hours, dramatically increasing
+      bioavailability of affected substrates (simvastatin, cyclosporine, felodipine).
+      Critically, extended-release and enteric-coated formulations depend on intact
+      physical structure for controlled absorption; crushing, chewing, or splitting these
+      formulations destroys the release-controlling mechanism and may deliver the entire
+      dose as an immediate bolus — a patient safety issue of the highest priority requiring
+      nursing assessment of swallowing ability and appropriate formulation selection before
+      every administration.
+    </p>
+  </div>
+
+  <!-- Extended-release safety alert -->
+  <div class="alert alert-error mb-8">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+    <div>
+      <div class="font-bold">CRITICAL NURSING SAFETY: Extended-Release Formulations — Do Not Crush</div>
+      <div class="text-sm mt-1">
+        Extended-release (XR/ER/SR/CR/LA) tablets and capsules must never be crushed, chewed, or split unless
+        the manufacturer explicitly permits it. Destroying the release mechanism delivers the entire dose
+        as an immediate bolus, which can cause toxicity, overdose, or fatal outcomes for drugs such as
+        metoprolol XL, oxycodone ER, diltiazem CD, and nifedipine XL. Always verify crushability before
+        administration via the Nursing Drug Handbook or prescriber order for alternative formulation.
+      </div>
+    </div>
+  </div>
+
+  <!-- Drug absorption table by route -->
+  <h2 class="text-2xl font-serif font-bold mb-4">Drugs by Route & Bioavailability</h2>
+  <p class="text-base-content/70 mb-4 text-sm">
+    {absorptionDrugs.length} drugs with documented absorption data. Organized by primary route of administration.
+  </p>
+
+  {routeOrder.map((route) => routeGroups[route] && routeGroups[route].length > 0 && (
+    <div class="mb-8">
+      <h3 class="text-xl font-bold mb-3 font-serif">{route} Administration
+        <span class="badge badge-outline ml-2">{routeGroups[route].length} drugs</span>
+      </h3>
+      <div class="overflow-x-auto">
+        <table class="table table-zebra table-sm w-full">
+          <thead>
+            <tr>
+              <th>Drug</th>
+              <th>Class</th>
+              <th>Bioavailability</th>
+              <th>Absorption Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            {routeGroups[route].slice(0, 40).map((drug: any) => (
+              <tr>
+                <td>
+                  <a href={`${base}drugs/${drug.id}/`} class="link link-hover font-medium capitalize">
+                    {drug.name}
+                  </a>
+                </td>
+                <td class="text-xs text-base-content/70">{drug.drugClass}</td>
+                <td>
+                  {drug.bioavailability !== '—'
+                    ? <span class="badge badge-outline badge-sm font-mono">{drug.bioavailability}</span>
+                    : <span class="text-base-content/40">—</span>
+                  }
+                </td>
+                <td class="text-xs max-w-xs truncate" title={drug.absorption}>{drug.absorption}</td>
+              </tr>
+            ))}
+            {routeGroups[route].length > 40 && (
+              <tr>
+                <td colspan="4" class="text-center text-base-content/50 text-xs py-2">
+                  + {routeGroups[route].length - 40} additional {route.toLowerCase()} drugs
+                </td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  ))}
+
+  <div class="divider my-8"></div>
+  <div class="flex gap-4 justify-between text-sm">
+    <a href={`${base}schemas/06-adme/`} class="btn btn-outline btn-sm">← ADME Overview</a>
+    <a href={`${base}schemas/06-adme/distribution/`} class="btn btn-primary btn-sm">Distribution →</a>
+  </div>
+</SchemaLayout>
