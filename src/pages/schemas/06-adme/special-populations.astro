@@ -1,0 +1,306 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+
+// Beers Criteria drugs
+const beersDrugs = (drugsData as any[])
+  .filter(d => d.beers_criteria)
+  .sort((a, b) => a.generic_name.localeCompare(b.generic_name));
+
+// Pregnancy contraindicated
+const pregContraindicated = (drugsData as any[])
+  .filter(d => d.pregnancy_safety &&
+    (d.pregnancy_safety.toLowerCase().includes('contraindicated') ||
+     d.pregnancy_safety.toLowerCase().includes('avoid') ||
+     d.pregnancy_safety.toLowerCase().includes('category x') ||
+     d.pregnancy_safety.toLowerCase().includes('fetotox')))
+  .sort((a, b) => a.generic_name.localeCompare(b.generic_name));
+
+// Pregnancy use with caution
+const pregCaution = (drugsData as any[])
+  .filter(d => d.pregnancy_safety &&
+    (d.pregnancy_safety.toLowerCase().includes('caution') ||
+     d.pregnancy_safety.toLowerCase().includes('only if') ||
+     d.pregnancy_safety.toLowerCase().includes('benefit outweigh') ||
+     d.pregnancy_safety.toLowerCase().includes('trimester') ||
+     d.pregnancy_safety.toLowerCase().includes('risk')))
+  .sort((a, b) => a.generic_name.localeCompare(b.generic_name));
+
+// Lactation — avoid
+const lactAvoid = (drugsData as any[])
+  .filter(d => d.lactation_safety &&
+    (d.lactation_safety.toLowerCase().includes('avoid') ||
+     d.lactation_safety.toLowerCase().includes('contraindicated') ||
+     d.lactation_safety.toLowerCase().includes('discontinue')))
+  .sort((a, b) => a.generic_name.localeCompare(b.generic_name));
+
+// Renal dose adjustment in special populations
+const renalAdj = drugsData.filter((d: any) => d.renal_dose_adjustment).length;
+const hepaticAdj = drugsData.filter((d: any) => d.hepatic_dose_adjustment).length;
+---
+<SchemaLayout
+  title="Special Populations — ADME Schema"
+  schema="adme"
+  description="Pharmacokinetics in pediatrics, geriatrics, pregnancy, lactation, and obesity."
+>
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/06-adme/`} class="link link-hover">ADME</a></li>
+        <li>Special Populations</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold mb-2">Special Populations</h1>
+    <p class="text-base-content/70 text-lg">Pediatrics, geriatrics, pregnancy, lactation, and obesity</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>
+      Pediatric pharmacokinetics differs from adult pharmacokinetics not by degree but
+      by kind: the developing body undergoes dramatic ontogenic changes in drug absorption,
+      distribution, metabolism, and excretion that transform standard adult doses into
+      overdoses or sub-therapeutic exposures depending on the drug and the developmental
+      stage. Gastric acid production is minimal at birth, increasing adult pH sensitivity
+      for acid-labile drugs (ampicillin) while reducing bioavailability of acids requiring
+      low-pH dissolution; adult pH values are reached by approximately 3 years of age.
+      Body composition in neonates features proportionally higher total body water
+      (80% of body weight vs. 60% in adults) and lower fat, expanding the apparent
+      volume of distribution for hydrophilic drugs and requiring weight-based loading
+      doses higher per kg than adults for water-soluble agents such as aminoglycosides.
+      Plasma protein binding is reduced in neonates due to lower albumin concentrations
+      and the presence of fetal albumin with different binding characteristics, increasing
+      the free fraction and pharmacological activity of highly bound drugs like phenytoin
+      and bilirubin-displacing drugs. Most critically, CYP enzyme ontogeny proceeds in
+      a drug-specific pattern: CYP3A7 (fetal isoform) is highly expressed at birth and
+      declines; CYP2D6, CYP2C9, and CYP2C19 activity is very low in neonates and reaches
+      adult levels by 3–6 months; CYP3A4 and CYP1A2 mature more slowly, reaching adult
+      levels by 1–3 years. This explains the "gray baby syndrome" of chloramphenicol
+      toxicity in neonates (absent glucuronosyltransferase UGT1A1 activity), the
+      theophylline toxicity risk in premature neonates (immature CYP1A2), and why
+      codeine is contraindicated under age 12 (CYP2D6 maturation variability and
+      respiratory sensitivity).
+    </p>
+    <p>
+      Geriatric pharmacokinetics is characterized by progressive, multi-organ decline in
+      drug clearance capacity that — combined with increased prevalence of polypharmacy,
+      altered body composition, and heightened pharmacodynamic sensitivity — creates
+      profound drug safety risk in older adults. Hepatic blood flow decreases by
+      approximately 40% between ages 25 and 75, disproportionately reducing first-pass
+      extraction of high-extraction-ratio drugs (lidocaine, morphine, propranolol,
+      labetalol) and increasing their bioavailability after oral administration.
+      Glomerular filtration rate declines approximately 1 mL/min per year after age
+      40, reaching on average 60–70% of young-adult values by age 70, but this decline
+      is masked by the simultaneous decrease in muscle mass that reduces creatinine
+      production: a frail 80-year-old may have a serum creatinine of 0.8 mg/dL
+      (deceptively "normal") yet a CrCl of 25–30 mL/min — a discrepancy that leads
+      to dangerous drug accumulation when renally-cleared drugs are dosed based on
+      creatinine alone. The Beers Criteria, published by the American Geriatrics Society,
+      catalogs {beersDrugs.length} drugs in this database that should be avoided or used
+      with caution in adults 65 years and older, based on evidence of excessive toxicity,
+      inadequate efficacy, or superior alternatives; the student should treat Beers
+      Criteria status as a mandatory double-check trigger — the prescriber may have valid
+      reasons for the choice, but the nurse must verify the rationale and communicate
+      any concerns.
+    </p>
+    <p>
+      Pregnancy induces pharmacokinetic changes across all ADME domains that affect
+      drug concentrations and clinical outcomes throughout gestation. Gastric motility
+      decreases, delaying drug absorption and extending the time to peak concentration.
+      Plasma volume expands by approximately 50% in the second trimester, diluting
+      drug concentrations and potentially requiring dose increases for drugs dosed to
+      therapeutic plasma levels (levothyroxine, epilepsy medications, antiretrovirals).
+      Albumin synthesis is reduced while plasma volume expands, further decreasing protein
+      binding and increasing free drug fractions. Hepatic CYP3A4 and UGT1A1/1A4 activity
+      increases during pregnancy (increasing metabolism of many drugs), while CYP1A2
+      and CYP2C19 activity decreases (reducing metabolism and potentially causing
+      accumulation). GFR increases by 40–50% in pregnancy, enhancing renal drug
+      clearance — clinically significant for lithium (increased clearance may render
+      therapeutic doses sub-therapeutic), ampicillin, and digoxin. The fetal risk
+      dimension of drug therapy in pregnancy requires systematic assessment:
+      {pregContraindicated.length} drugs in this database are contraindicated or
+      to be avoided in pregnancy, and the nurse must verify pregnancy status before
+      administering teratogens such as warfarin, ACE inhibitors (after week 12),
+      ARBs, valproate, methotrexate, retinoids, and misoprostol.
+    </p>
+    <p>
+      Lactation pharmacology requires assessment of infant drug exposure through breast
+      milk, quantified by the milk-to-plasma (M:P) ratio and the relative infant dose
+      (RID — the weight-adjusted infant dose as a percentage of the maternal dose).
+      An RID below 10% is generally considered acceptable for most drugs; above 25%,
+      breastfeeding is typically contraindicated for that drug. Drugs that are highly
+      lipophilic, un-ionized at physiological pH, low-molecular-weight, and low-protein-
+      bound concentrate in breast milk; conversely, polar, ionized, high-molecular-weight
+      drugs (heparin, insulin, most biologic agents) do not transfer into milk in clinically
+      meaningful amounts. The LactMed database (NIH) provides current evidence-based
+      assessments of drug compatibility with breastfeeding. Key clinical scenarios include:
+      amiodarone (absolutely contraindicated — high lipophilicity, prolonged half-life,
+      iodine content, thyroid effects in infant); antineoplastic agents (all contraindicated);
+      lithium (substantial infant exposure, monitoring required if breastfeeding chosen);
+      SSRIs (most compatible, sertraline and paroxetine preferred); and antibiotics
+      (most compatible except tetracyclines, chloramphenicol, and fluoroquinolones,
+      which are avoided or used only when clearly necessary).
+    </p>
+    <p>
+      Obesity — defined as BMI ≥30 kg/m² and increasingly stratified as Class I (30–35),
+      Class II (35–40), and Class III (≥40 or "morbid obesity") — alters drug
+      pharmacokinetics primarily through changes in volume of distribution, altered
+      plasma protein binding, and changes in hepatic and renal clearance. Lipophilic
+      drugs (amiodarone, benzodiazepines, lipophilic beta-blockers, lipophilic
+      antibiotics) distribute extensively into adipose tissue, increasing Vd substantially
+      — requiring loading doses based on total body weight (TBW) for adequate initial
+      concentrations. Hydrophilic drugs (aminoglycosides, vancomycin, neuromuscular
+      blocking agents) distribute less into fat; dose calculation using TBW leads to
+      overdose while ideal body weight (IBW) leads to underdose — a dosing weight
+      called "adjusted body weight" (ABW = IBW + 0.4 × [TBW − IBW]) is commonly
+      used for aminoglycoside dosing in obese patients. Renal function is typically
+      enhanced in obesity (increased cardiac output, renal blood flow, and tubular
+      secretion), requiring higher doses of renally-cleared drugs to maintain
+      therapeutic concentrations. As weight loss occurs (bariatric surgery, GLP-1
+      agonist therapy), these pharmacokinetic changes partially reverse, potentially
+      rendering previously stable drug doses sub-therapeutic or excessive.
+    </p>
+  </div>
+
+  <!-- Stats bar -->
+  <div class="stats stats-horizontal shadow w-full mb-8 flex-wrap">
+    <div class="stat">
+      <div class="stat-title">Beers Criteria Drugs</div>
+      <div class="stat-value text-amber-600">{beersDrugs.length}</div>
+      <div class="stat-desc">potentially inappropriate in elderly</div>
+    </div>
+    <div class="stat">
+      <div class="stat-title">Pregnancy Avoid</div>
+      <div class="stat-value text-amber-600">{pregContraindicated.length}</div>
+      <div class="stat-desc">contraindicated or avoid</div>
+    </div>
+    <div class="stat">
+      <div class="stat-title">Lactation Avoid</div>
+      <div class="stat-value text-amber-600">{lactAvoid.length}</div>
+      <div class="stat-desc">avoid or discontinue breastfeeding</div>
+    </div>
+    <div class="stat">
+      <div class="stat-title">Renal Dose Adj.</div>
+      <div class="stat-value text-amber-600">{renalAdj}</div>
+      <div class="stat-desc">especially important in elderly</div>
+    </div>
+  </div>
+
+  <!-- Beers Criteria Table -->
+  <h2 class="text-2xl font-serif font-bold mb-3">
+    Beers Criteria Drugs
+    <span class="badge badge-warning ml-2">Avoid in Age ≥65</span>
+  </h2>
+  <p class="text-sm text-base-content/70 mb-4">
+    {beersDrugs.length} drugs from the 2023 American Geriatrics Society Beers Criteria.
+    These drugs should trigger mandatory assessment for appropriateness and safer alternatives in older adults.
+  </p>
+  <div class="overflow-x-auto mb-8">
+    <table class="table table-zebra table-pin-rows table-sm w-full">
+      <thead>
+        <tr>
+          <th>Drug</th>
+          <th>Class</th>
+          <th>ISMP High Alert</th>
+          <th>Pregnancy Safety</th>
+          <th>Renal Adj.</th>
+        </tr>
+      </thead>
+      <tbody>
+        {beersDrugs.map((d: any) => (
+          <tr>
+            <td>
+              <a href={`${base}drugs/${d.id}/`} class="link link-hover font-medium capitalize">
+                {d.generic_name}
+              </a>
+            </td>
+            <td class="text-xs text-base-content/70">{d.drug_class}</td>
+            <td>
+              {d.ismp_high_alert && <span class="badge badge-error badge-sm">HIGH ALERT</span>}
+            </td>
+            <td class="text-xs">{d.pregnancy_safety || '—'}</td>
+            <td>
+              {d.renal_dose_adjustment
+                ? <span class="badge badge-warning badge-sm">Yes</span>
+                : <span class="text-base-content/30 text-xs">—</span>
+              }
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Pregnancy table -->
+  <h2 class="text-2xl font-serif font-bold mb-3">
+    Drugs to Avoid in Pregnancy
+  </h2>
+  <div class="alert alert-error mb-4">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+    <div class="text-sm">
+      <strong>Nursing Action:</strong> Before administering any drug below to a patient of childbearing age,
+      verify pregnancy status if clinically uncertain. Counsel about contraception requirements when
+      initiating teratogenic therapies (methotrexate, isotretinoin, thalidomide, lenalidomide — all require REMS programs).
+    </div>
+  </div>
+  <div class="overflow-x-auto mb-8">
+    <table class="table table-zebra table-sm w-full">
+      <thead>
+        <tr>
+          <th>Drug</th>
+          <th>Class</th>
+          <th>Pregnancy Safety</th>
+          <th>Mechanism of Risk</th>
+        </tr>
+      </thead>
+      <tbody>
+        {pregContraindicated.slice(0, 60).map((d: any) => (
+          <tr>
+            <td>
+              <a href={`${base}drugs/${d.id}/`} class="link link-hover font-medium capitalize">
+                {d.generic_name}
+              </a>
+            </td>
+            <td class="text-xs text-base-content/70">{d.drug_class}</td>
+            <td><span class="badge badge-error badge-sm">{d.pregnancy_safety}</span></td>
+            <td class="text-xs">
+              {d.black_box_warnings?.some((w: string) => w.toLowerCase().includes('fetal') || w.toLowerCase().includes('embryo'))
+                ? <span class="badge badge-error badge-xs mr-1">BBW</span>
+                : null
+              }
+              {(d.adverse_effect_tags || []).filter((t: string) => t.toLowerCase().includes('terato') || t.toLowerCase().includes('fetal')).join(', ') || '—'}
+            </td>
+          </tr>
+        ))}
+        {pregContraindicated.length > 60 && (
+          <tr>
+            <td colspan="4" class="text-center text-base-content/50 text-xs py-2">
+              + {pregContraindicated.length - 60} additional drugs contraindicated in pregnancy
+            </td>
+          </tr>
+        )}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Lactation table -->
+  <h2 class="text-2xl font-serif font-bold mb-3">Drugs to Avoid During Lactation</h2>
+  <p class="text-sm text-base-content/70 mb-4">
+    {lactAvoid.length} drugs for which breastfeeding should be avoided or the drug discontinued.
+    Consult LactMed (NIH) for detailed infant exposure data and RID values.
+  </p>
+  <div class="flex flex-wrap gap-2 mb-10">
+    {lactAvoid.map((d: any) => (
+      <a href={`${base}drugs/${d.id}/`} class="badge badge-error link link-hover capitalize">
+        {d.generic_name}
+      </a>
+    ))}
+  </div>
+
+  <div class="divider my-8"></div>
+  <div class="flex gap-4 justify-between text-sm">
+    <a href={`${base}schemas/06-adme/excretion/`} class="btn btn-outline btn-sm">← Excretion</a>
+    <a href={`${base}schemas/06-adme/drug-interactions-pk/`} class="btn btn-primary btn-sm">PK Drug Interactions →</a>
+  </div>
+</SchemaLayout>

@@ -1,0 +1,296 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+
+// Drugs requiring renal dose adjustment
+const renalAdjDrugs = (drugsData as any[])
+  .filter(d => d.renal_dose_adjustment)
+  .map(d => ({
+    id: d.id,
+    name: d.generic_name,
+    drugClass: d.drug_class,
+    excretion: d.pharmacokinetics?.excretion || '—',
+    halfLife: d.pharmacokinetics?.half_life || '—',
+    ismpHighAlert: d.ismp_high_alert,
+  }))
+  .sort((a, b) => a.name.localeCompare(b.name));
+
+// Drugs NOT requiring renal dose adjustment (primarily hepatic)
+const hepaticPrimary = (drugsData as any[])
+  .filter(d => !d.renal_dose_adjustment && d.hepatic_dose_adjustment)
+  .map(d => ({
+    id: d.id,
+    name: d.generic_name,
+    drugClass: d.drug_class,
+    excretion: d.pharmacokinetics?.excretion || '—',
+  }))
+  .sort((a, b) => a.name.localeCompare(b.name));
+
+// TDM drugs
+const tdmDrugs = (drugsData as any[]).filter(d => d.tdm_required);
+
+// Dialyzable drugs (look for dialyz keywords in excretion)
+const dialyzable = (drugsData as any[]).filter(d => {
+  const ex = (d.pharmacokinetics?.excretion || '').toLowerCase();
+  return ex.includes('dialyz') || ex.includes('hemodialysis') || ex.includes('hd ');
+});
+
+// Non-dialyzable
+const nonDialyzable = (drugsData as any[]).filter(d => {
+  const ex = (d.pharmacokinetics?.excretion || '').toLowerCase();
+  return ex.includes('not dialyz') || ex.includes('non-dialyz') || ex.includes('not removed by');
+});
+
+// Renally cleared unchanged (no hepatic metabolism)
+const renalUnchanged = (drugsData as any[]).filter(d => {
+  const met = (d.pharmacokinetics?.metabolism || '').toLowerCase();
+  const ex = (d.pharmacokinetics?.excretion || '').toLowerCase();
+  return (met.includes('not hepatically') || met.includes('not metabolized') || met.includes('minimal hepatic') ||
+          met.includes('excreted unchanged') || ex.includes('excreted unchanged'));
+});
+---
+<SchemaLayout
+  title="Excretion — ADME Schema"
+  schema="adme"
+  description="Renal clearance, dose adjustment in CKD, hepatic/biliary excretion, and dialyzability."
+>
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/06-adme/`} class="link link-hover">ADME</a></li>
+        <li>Excretion</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold mb-2">Excretion</h1>
+    <p class="text-base-content/70 text-lg">Renal clearance, CKD dose adjustment, and dialyzability</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>
+      Drug excretion is the irreversible removal of drug and its metabolites from the body,
+      occurring predominantly through the kidneys and secondarily through biliary secretion
+      into the gastrointestinal tract. Renal excretion involves three distinct processes:
+      glomerular filtration, which passively filters unbound drug across the glomerular
+      basement membrane at a rate determined by the glomerular filtration rate (GFR) and
+      the free drug fraction; tubular secretion, an active transporter-mediated process
+      in the proximal tubule that can concentrate drugs in the tubular lumen far above
+      plasma concentrations, accounting for the rapid elimination of penicillins,
+      thiazides, loop diuretics, and metformin; and tubular reabsorption, which reclaims
+      lipophilic, non-ionized drug from the tubular lumen back into the bloodstream
+      according to concentration gradients. Urinary pH profoundly influences reabsorption
+      of ionizable drugs: acidification of urine traps basic drugs in their ionized,
+      membrane-impermeant form (exploited therapeutically to enhance amphetamine and
+      phencyclidine excretion in overdose), while alkalinization traps acidic drugs
+      such as salicylates and phenobarbital (used in alkaline diuresis for aspirin
+      toxicity). The clinical estimation of renal function for drug dosing purposes
+      uses the Cockcroft-Gault equation to estimate creatinine clearance (CrCl),
+      which most pharmacokinetic studies used to establish dose adjustment thresholds;
+      the CKD-EPI equation is superior for classifying CKD stage but CrCl remains
+      the standard for dose adjustment calculations.
+    </p>
+    <p>
+      Renal impairment reduces drug clearance in proportion to the kidney's contribution
+      to total body clearance, potentially leading to drug and metabolite accumulation,
+      toxicity, and adverse effects at doses that would be safe in renally intact patients.
+      The clinical severity of renal impairment for any drug depends on two factors: the
+      fraction of the drug eliminated unchanged by the kidney (fe), and the drug's
+      therapeutic index. Drugs eliminated primarily by the kidney with narrow therapeutic
+      indices — vancomycin, aminoglycosides, digoxin, lithium, metformin, and enoxaparin —
+      require the most careful dose adjustment in CKD and are associated with the greatest
+      risk of toxicity when impairment goes unrecognized. Of the {drugsData.length} drugs
+      in this reference database, {renalAdjDrugs.length} ({Math.round(renalAdjDrugs.length/drugsData.length*100)}%)
+      require renal dose adjustment. The mechanism of toxicity in renal impairment varies
+      by drug: metformin accumulation causes lactic acidosis; methotrexate accumulation
+      causes mucositis and myelosuppression; vancomycin accumulation causes nephrotoxicity
+      and ototoxicity; fluoroquinolones accumulate and lower the seizure threshold. The
+      nurse must confirm current renal function before administering renally-cleared drugs,
+      verify that the dose ordered accounts for the patient's CrCl, and monitor for early
+      signs of accumulation-related toxicity.
+    </p>
+    <p>
+      Biliary excretion and enterohepatic recirculation represent important but underappreciated
+      excretion pathways for selected drug classes. Drugs actively secreted into bile by
+      hepatic transporters (BCRP, MRP2, P-gp) are delivered to the small intestine where
+      they may be excreted in feces or, if deconjugated by gut bacteria, reabsorbed and
+      recycled through the portal circulation — a process called enterohepatic recirculation
+      that prolongs drug half-life and maintains plasma concentrations beyond what hepatic
+      metabolism alone would predict. Cholestyramine and activated charcoal can interrupt
+      enterohepatic recirculation by binding drug in the gut lumen before reabsorption,
+      accelerating elimination — a principle exploited in the management of leflunomide
+      toxicity (cholestyramine washout procedure) and some oral overdoses. Biliary
+      excretion is the dominant elimination route for certain lipophilic antibiotics
+      (ceftriaxone, rifampin, azithromycin), making them effective for biliary infections
+      but also responsible for concentration-dependent biliary sludging and
+      pseudolithiasis observed with high-dose ceftriaxone in neonates.
+    </p>
+    <p>
+      Dialyzability — the extent to which hemodialysis or peritoneal dialysis can remove
+      a drug — is clinically critical in two situations: (1) when a dialysis patient is
+      prescribed a regularly dosed drug and supplemental post-dialysis doses may be
+      required to maintain therapeutic concentrations, and (2) when a patient presents
+      with drug toxicity and dialysis is considered to accelerate drug removal. Three
+      pharmacokinetic properties determine dialyzability: low molecular weight (below
+      500–1000 Da), low plasma protein binding, and low volume of distribution
+      (indicating the drug resides predominantly in plasma rather than tissues).
+      Drugs meeting all three criteria — lithium, metformin, phenobarbital,
+      theophylline, salicylates, aminoglycosides, and valacyclovir — are effectively
+      removed by hemodialysis. Drugs with large volumes of distribution
+      (digoxin, amiodarone, tricyclic antidepressants), high protein binding
+      (warfarin, valproate, diazepam), or high molecular weight (vancomycin,
+      though high-flux dialyzers are more effective) are poorly removed by
+      conventional dialysis. In patients on hemodialysis receiving dialyzable
+      drugs, the nurse must verify whether a supplemental post-dialysis dose
+      is prescribed, as dialysis can reduce plasma concentrations below therapeutic
+      thresholds for antibiotics such as aminoglycosides and vancomycin.
+    </p>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats stats-horizontal shadow w-full mb-8 flex-wrap">
+    <div class="stat">
+      <div class="stat-title">Renal Dose Adjustment</div>
+      <div class="stat-value text-amber-600">{renalAdjDrugs.length}</div>
+      <div class="stat-desc">drugs require CKD adjustment</div>
+    </div>
+    <div class="stat">
+      <div class="stat-title">Renally Cleared Unchanged</div>
+      <div class="stat-value text-amber-600">{renalUnchanged.length}</div>
+      <div class="stat-desc">no hepatic metabolism</div>
+    </div>
+    <div class="stat">
+      <div class="stat-title">TDM Required</div>
+      <div class="stat-value text-amber-600">{tdmDrugs.length}</div>
+      <div class="stat-desc">therapeutic drug monitoring</div>
+    </div>
+  </div>
+
+  <!-- TDM Table -->
+  <h2 class="text-2xl font-serif font-bold mb-3">Therapeutic Drug Monitoring (TDM) — Renally Relevant</h2>
+  <p class="text-sm text-base-content/70 mb-4">
+    {tdmDrugs.length} drugs require plasma concentration monitoring. For renally-cleared TDM drugs,
+    CKD requires both dose adjustment AND more frequent TDM due to unpredictable accumulation.
+  </p>
+  <div class="overflow-x-auto mb-8">
+    <table class="table table-zebra table-sm w-full">
+      <thead>
+        <tr>
+          <th>Drug</th>
+          <th>Class</th>
+          <th>Renal Adj. Required</th>
+          <th>Excretion Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        {tdmDrugs.map((d: any) => (
+          <tr>
+            <td><a href={`${base}drugs/${d.id}/`} class="link link-hover font-medium capitalize">{d.generic_name}</a></td>
+            <td class="text-xs text-base-content/70">{d.drug_class}</td>
+            <td>
+              {d.renal_dose_adjustment
+                ? <span class="badge badge-error badge-sm">Yes</span>
+                : <span class="badge badge-ghost badge-sm">No</span>
+              }
+            </td>
+            <td class="text-xs max-w-xs truncate" title={d.pharmacokinetics?.excretion}>
+              {d.pharmacokinetics?.excretion || '—'}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Renally cleared unchanged -->
+  <h2 class="text-2xl font-serif font-bold mb-3">Drugs Excreted Renally Unchanged</h2>
+  <p class="text-sm text-base-content/70 mb-4">
+    These {renalUnchanged.length} drugs are not significantly metabolized hepatically and are
+    excreted primarily as unchanged drug in urine. They are most susceptible to accumulation in CKD.
+  </p>
+  <div class="flex flex-wrap gap-1 mb-8">
+    {renalUnchanged.map((d: any) => (
+      <a href={`${base}drugs/${d.id}/`} class={`badge badge-sm link link-hover capitalize ${d.ismp_high_alert ? 'badge-error' : d.renal_dose_adjustment ? 'badge-warning' : 'badge-outline'}`}>
+        {d.generic_name}
+      </a>
+    ))}
+  </div>
+
+  <!-- Full renal adjustment table -->
+  <h2 class="text-2xl font-serif font-bold mb-3">All Drugs Requiring Renal Dose Adjustment ({renalAdjDrugs.length})</h2>
+  <div class="alert alert-warning mb-4">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-5 w-5" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+    <div class="text-sm">
+      <strong>Nursing Priority:</strong> Before administering any drug flagged below, confirm current serum creatinine
+      or eGFR/CrCl is documented and the ordered dose accounts for renal function.
+      High-alert drugs (<span class="badge badge-error badge-xs">HA</span>) require extra verification.
+    </div>
+  </div>
+  <div class="overflow-x-auto mb-10">
+    <table class="table table-zebra table-pin-rows table-sm w-full">
+      <thead>
+        <tr>
+          <th>Drug</th>
+          <th>Class</th>
+          <th>High Alert</th>
+          <th>Half-Life</th>
+          <th>Excretion / Dose Adjustment Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        {renalAdjDrugs.map((drug) => (
+          <tr>
+            <td>
+              <a href={`${base}drugs/${drug.id}/`} class="link link-hover font-medium capitalize">
+                {drug.name}
+              </a>
+            </td>
+            <td class="text-xs text-base-content/70">{drug.drugClass}</td>
+            <td>
+              {drug.ismpHighAlert && <span class="badge badge-error badge-sm">HA</span>}
+            </td>
+            <td class="text-xs font-mono">{drug.halfLife}</td>
+            <td class="text-xs max-w-sm truncate" title={drug.excretion}>{drug.excretion}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Dialyzability -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+    <div class="card bg-base-100 shadow">
+      <div class="card-body">
+        <h3 class="card-title text-success">Dialyzable Drugs</h3>
+        <p class="text-xs text-base-content/70 mb-2">
+          {dialyzable.length} drugs removed by hemodialysis. Supplemental post-HD doses may be required.
+        </p>
+        <div class="flex flex-wrap gap-1">
+          {dialyzable.map((d: any) => (
+            <a href={`${base}drugs/${d.id}/`} class="badge badge-success badge-sm link link-hover capitalize">{d.generic_name}</a>
+          ))}
+        </div>
+      </div>
+    </div>
+    <div class="card bg-base-100 shadow">
+      <div class="card-body">
+        <h3 class="card-title text-error">Non-Dialyzable / Poor Removal</h3>
+        <p class="text-xs text-base-content/70 mb-2">
+          {nonDialyzable.length} drugs not effectively removed by dialysis (high Vd or protein binding).
+          Dialysis will NOT expedite drug removal in overdose.
+        </p>
+        <div class="flex flex-wrap gap-1">
+          {nonDialyzable.map((d: any) => (
+            <a href={`${base}drugs/${d.id}/`} class="badge badge-error badge-sm link link-hover capitalize">{d.generic_name}</a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider my-8"></div>
+  <div class="flex gap-4 justify-between text-sm">
+    <a href={`${base}schemas/06-adme/cyp-metabolism/`} class="btn btn-outline btn-sm">← CYP Metabolism</a>
+    <a href={`${base}schemas/06-adme/special-populations/`} class="btn btn-primary btn-sm">Special Populations →</a>
+  </div>
+</SchemaLayout>

@@ -1,0 +1,343 @@
+---
+import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const base = import.meta.env.BASE_URL;
+
+// All drugs with major interactions
+const majorInteractionDrugs = (drugsData as any[])
+  .filter(d => d.drug_interactions?.some((i: any) => i.severity === 'major'))
+  .map(d => ({
+    id: d.id,
+    name: d.generic_name,
+    drugClass: d.drug_class,
+    majorInteractions: (d.drug_interactions || []).filter((i: any) => i.severity === 'major'),
+  }))
+  .sort((a, b) => b.majorInteractions.length - a.majorInteractions.length);
+
+// Group interactions by mechanism type
+function classifyMechanism(mechanism: string): string {
+  const m = mechanism.toLowerCase();
+  if (m.includes('cyp') || m.includes('enzyme induction') || m.includes('enzyme inhibit') || m.includes('metabolism')) return 'CYP/Enzyme';
+  if (m.includes('transport') || m.includes('p-gp') || m.includes('p-glyco') || m.includes('oatp') || m.includes('renal secretion')) return 'Transporter';
+  if (m.includes('protein binding') || m.includes('displac')) return 'Protein Binding';
+  if (m.includes('absorption') || m.includes('chelat') || m.includes('complex') || m.includes('antacid') || m.includes('ph')) return 'Absorption';
+  if (m.includes('renal') || m.includes('clearance') || m.includes('excretion') || m.includes('tubular')) return 'Renal Clearance';
+  return 'Other PK';
+}
+
+interface InteractionEntry {
+  perpetrator: string;
+  perpetratorId: string;
+  victim: string;
+  victimId: string;
+  mechanism: string;
+  mechanismType: string;
+  perpetratorClass: string;
+}
+
+const pkInteractionPairs: InteractionEntry[] = [];
+for (const drug of majorInteractionDrugs) {
+  for (const inter of drug.majorInteractions) {
+    const mtype = classifyMechanism(inter.mechanism);
+    if (mtype !== 'Other PK') {
+      pkInteractionPairs.push({
+        perpetrator: drug.name,
+        perpetratorId: drug.id,
+        victim: inter.drug,
+        victimId: inter.drug.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+        mechanism: inter.mechanism,
+        mechanismType: mtype,
+        perpetratorClass: drug.drugClass,
+      });
+    }
+  }
+}
+
+// Group by mechanism type
+const mechanismGroups: Record<string, typeof pkInteractionPairs> = {};
+for (const pair of pkInteractionPairs) {
+  if (!mechanismGroups[pair.mechanismType]) mechanismGroups[pair.mechanismType] = [];
+  mechanismGroups[pair.mechanismType].push(pair);
+}
+
+const mechanismOrder = ['CYP/Enzyme', 'Transporter', 'Renal Clearance', 'Absorption', 'Protein Binding'];
+
+// High interaction burden drugs (>= 3 major interactions)
+const highBurden = majorInteractionDrugs.filter(d => d.majorInteractions.length >= 3);
+
+// Narrow therapeutic index drugs with interaction concerns
+const ntiInteracting = majorInteractionDrugs.filter(d =>
+  ['warfarin','phenytoin','digoxin','lithium','cyclosporine','tacrolimus',
+   'methotrexate','vancomycin','valproate','carbamazepine','theophylline',
+   'amiodarone','sirolimus','everolimus','clozapine'].includes(d.id)
+);
+---
+<SchemaLayout
+  title="PK Drug Interactions — ADME Schema"
+  schema="adme"
+  description="Pharmacokinetic drug interactions: CYP inhibition, induction, transporter effects, and clinical management."
+>
+  <div class="mb-6">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href={`${base}schemas/06-adme/`} class="link link-hover">ADME</a></li>
+        <li>PK Drug Interactions</li>
+      </ul>
+    </div>
+    <h1 class="text-4xl font-serif font-bold mb-2">Pharmacokinetic Drug Interactions</h1>
+    <p class="text-base-content/70 text-lg">Mechanisms, clinical significance, and management strategies</p>
+  </div>
+
+  <div class="prose max-w-none mb-10">
+    <p>
+      Drug-drug interactions (DDIs) mediated by pharmacokinetic mechanisms — as distinct from
+      pharmacodynamic mechanisms — alter the plasma concentration of one drug (the "victim"
+      or "object" drug) by interfering with its absorption, distribution, metabolism, or
+      excretion. Pharmacokinetic interactions are mechanistically predictable and systematically
+      classifiable, making them amenable to prevention through structured medication
+      reconciliation and vigilance for known high-risk combinations. They must be distinguished
+      from pharmacodynamic interactions, which involve additive, synergistic, or antagonistic
+      drug effects at the site of pharmacological action without changing plasma concentrations —
+      such as the additive CNS depression of opioids combined with benzodiazepines, or the
+      opposing bronchodilator/bronchoconstrictor effects of albuterol and non-selective
+      beta-blockers. Both types of interactions are clinically significant, but pharmacokinetic
+      interactions are uniquely amenable to plasma concentration monitoring as a management tool.
+      Clinical significance of pharmacokinetic interactions is rated by two dimensions: the
+      magnitude of the concentration change (expressed as the ratio of area under the curve
+      [AUC] with and without the perpetrator drug) and the therapeutic index of the victim
+      drug. A 3-fold increase in simvastatin AUC from CYP3A4 inhibition may be
+      well-tolerated given simvastatin's wide therapeutic index at low doses, but the same
+      relative change in cyclosporine or warfarin concentrations may be life-threatening —
+      this is why narrow therapeutic index drugs are subject to the most rigorous interaction
+      screening and monitoring requirements.
+    </p>
+    <p>
+      Pharmacokinetic interactions are classified by mechanism into five major categories,
+      each with distinct clinical time course, predictability, and management approach.
+      CYP enzyme inhibition interactions are the most numerous and clinically impactful:
+      they occur immediately upon co-administration (competitive inhibition) or after a
+      lag period (mechanism-based irreversible inhibition), increase victim drug
+      concentrations by reducing its hepatic and intestinal metabolism, and resolve within
+      days (competitive) to weeks (mechanism-based) of inhibitor discontinuation. Transporter
+      interactions involve P-glycoprotein, OATP (organic anion transporting polypeptide),
+      OCT (organic cation transporter), and other transporters that mediate drug absorption,
+      hepatic uptake and biliary secretion, and renal tubular secretion; the digoxin-amiodarone
+      interaction (P-gp inhibition reducing renal digoxin secretion, raising digoxin levels
+      by 70–100%) and the statin-cyclosporine interaction (OATP1B1 inhibition dramatically
+      increasing statin exposure) are prototypic examples. Renal clearance interactions occur
+      when one drug reduces the renal tubular secretion of another — the classic example being
+      probenecid blocking OAT-mediated secretion of penicillins, methotrexate, and cidofovir —
+      with probenecid's effect on methotrexate representing a potentially lethal interaction
+      requiring absolute avoidance. Absorption interactions include chelation (tetracyclines
+      and fluoroquinolones with divalent/trivalent cations), adsorption (activated charcoal,
+      cholestyramine), altered gastric pH (ketoconazole, atazanavir requiring acid for
+      dissolution — incompatible with PPIs), and altered gastrointestinal motility.
+      Protein binding displacement interactions, while historically overemphasized, are
+      rarely clinically significant in isolation because free drug is redistributed into
+      the expanded volume and cleared more rapidly — reaching a new steady state only
+      transiently higher than baseline.
+    </p>
+    <p>
+      Clinical management of pharmacokinetic interactions requires a systematic approach
+      applied at every medication reconciliation. First, identify victim drugs with
+      narrow therapeutic indices that are CYP substrates, P-gp substrates, or renally
+      cleared — warfarin, digoxin, tacrolimus, cyclosporine, lithium, phenytoin,
+      carbamazepine, valproate, methotrexate, and aminoglycosides constitute the highest
+      priority group. Second, screen all new prescriptions, over-the-counter medications,
+      and supplements (St. John's Wort is a powerful CYP3A4 and P-gp inducer with
+      documented fatal interactions with cyclosporine in transplant rejection) for known
+      perpetrator activity against CYP enzymes and transporters. Third, adjust monitoring
+      frequency and early laboratory assessment when interactions are identified or are
+      unavoidable: add INR within 3–5 days of any CYP2C9-affecting drug change in a
+      patient on warfarin; check tacrolimus trough level within 24–48 hours of starting
+      or stopping an azole antifungal; monitor lithium levels and electrolytes within
+      one week of starting an ACE inhibitor or thiazide. Fourth, counsel patients on
+      non-prescription interaction risks: grapefruit juice should be avoided throughout
+      statin, cyclosporine, and certain calcium channel blocker therapy;
+      St. John's Wort should be avoided in patients taking oral contraceptives, antivirals,
+      anticoagulants, or immunosuppressants. Of the {drugsData.length} drugs in this
+      database, {majorInteractionDrugs.length} have at least one documented major
+      pharmacokinetic or pharmacodynamic interaction — {highBurden.length} have three
+      or more, representing the highest-priority targets for interaction surveillance.
+    </p>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats stats-horizontal shadow w-full mb-8 flex-wrap">
+    <div class="stat">
+      <div class="stat-title">Drugs with Major Interactions</div>
+      <div class="stat-value text-amber-600">{majorInteractionDrugs.length}</div>
+      <div class="stat-desc">at least 1 major interaction</div>
+    </div>
+    <div class="stat">
+      <div class="stat-title">High Interaction Burden</div>
+      <div class="stat-value text-amber-600">{highBurden.length}</div>
+      <div class="stat-desc">≥3 major interactions</div>
+    </div>
+    <div class="stat">
+      <div class="stat-title">NTI Drugs with Interactions</div>
+      <div class="stat-value text-amber-600">{ntiInteracting.length}</div>
+      <div class="stat-desc">narrow TI — highest priority</div>
+    </div>
+  </div>
+
+  <!-- NTI drug interactions highlight -->
+  <h2 class="text-2xl font-serif font-bold mb-3">Narrow Therapeutic Index Drugs — Major Interactions</h2>
+  <div class="alert alert-error mb-4">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+    <div class="text-sm">
+      <strong>Highest Priority Interaction Monitoring:</strong> Any drug change in a patient receiving a narrow therapeutic
+      index drug requires immediate reassessment of dosing, clinical monitoring, and laboratory surveillance.
+      Never add, remove, or change doses of interacting drugs without notifying the prescriber.
+    </div>
+  </div>
+  <div class="overflow-x-auto mb-8">
+    <table class="table table-zebra table-sm w-full">
+      <thead>
+        <tr>
+          <th>NTI Drug</th>
+          <th>Major Interactions</th>
+          <th>Monitoring Trigger</th>
+        </tr>
+      </thead>
+      <tbody>
+        {ntiInteracting.map((d) => (
+          <tr>
+            <td>
+              <a href={`${base}drugs/${d.id}/`} class="link link-hover font-medium capitalize">
+                {d.name}
+              </a>
+              <span class="badge badge-error badge-xs ml-1">NTI</span>
+            </td>
+            <td class="text-xs">
+              {d.majorInteractions.slice(0, 3).map((i: any) => (
+                <div class="mb-1">
+                  <strong class="capitalize">{i.drug}</strong>: {i.mechanism}
+                </div>
+              ))}
+              {d.majorInteractions.length > 3 && (
+                <div class="text-base-content/50">+{d.majorInteractions.length - 3} more</div>
+              )}
+            </td>
+            <td class="text-xs">
+              {d.id === 'warfarin' ? 'Check INR within 3–5 days of any interacting drug change' :
+               d.id === 'digoxin' ? 'Check serum digoxin level; monitor HR, rhythm, and K+' :
+               d.id === 'lithium' ? 'Check serum lithium level and renal function' :
+               d.id === 'phenytoin' ? 'Check total and free phenytoin levels' :
+               d.id === 'cyclosporine' || d.id === 'tacrolimus' || d.id === 'sirolimus' ? 'Check trough level within 24–48 h' :
+               d.id === 'methotrexate' ? 'Check CBC, LFTs, creatinine before and during co-administration' :
+               d.id === 'valproate' ? 'Check valproate level; monitor for toxicity signs' :
+               d.id === 'carbamazepine' ? 'Check carbamazepine level; CBC; LFTs' :
+               d.id === 'theophylline' ? 'Check serum theophylline level; monitor HR, arrhythmias' :
+               d.id === 'amiodarone' ? 'Monitor INR (warfarin), digoxin level, thyroid function, QTc' :
+               'Monitor plasma levels and clinical response'
+              }
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Interactions by mechanism type -->
+  <h2 class="text-2xl font-serif font-bold mb-4">Major PK Interactions by Mechanism</h2>
+
+  {mechanismOrder.map((mechType) => mechanismGroups[mechType] && mechanismGroups[mechType].length > 0 && (
+    <div class="mb-8">
+      <h3 class="text-xl font-bold mb-3 font-serif">
+        {mechType} Interactions
+        <span class="badge badge-outline ml-2">{mechanismGroups[mechType].length} pairs</span>
+      </h3>
+      <div class="overflow-x-auto">
+        <table class="table table-zebra table-sm w-full">
+          <thead>
+            <tr>
+              <th>Drug (Object/Victim)</th>
+              <th>Class</th>
+              <th>Interacting Drug (Perpetrator)</th>
+              <th>Mechanism</th>
+            </tr>
+          </thead>
+          <tbody>
+            {mechanismGroups[mechType].slice(0, 30).map((pair: InteractionEntry) => (
+              <tr>
+                <td>
+                  <a href={`${base}drugs/${pair.perpetratorId}/`} class="link link-hover font-medium capitalize">
+                    {pair.perpetrator}
+                  </a>
+                </td>
+                <td class="text-xs text-base-content/70">{pair.perpetratorClass}</td>
+                <td class="text-xs capitalize">{pair.victim}</td>
+                <td class="text-xs max-w-xs">{pair.mechanism}</td>
+              </tr>
+            ))}
+            {mechanismGroups[mechType].length > 30 && (
+              <tr>
+                <td colspan="4" class="text-center text-base-content/50 text-xs py-2">
+                  + {mechanismGroups[mechType].length - 30} additional {mechType} interaction pairs
+                </td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  ))}
+
+  <!-- High interaction burden drugs -->
+  <h2 class="text-2xl font-serif font-bold mb-3">High Interaction Burden Drugs (≥3 Major Interactions)</h2>
+  <p class="text-sm text-base-content/70 mb-4">
+    These {highBurden.length} drugs require the most vigilant interaction screening.
+    Consider pharmacist review at every medication reconciliation for patients receiving these agents.
+  </p>
+  <div class="overflow-x-auto mb-10">
+    <table class="table table-zebra table-sm w-full">
+      <thead>
+        <tr>
+          <th>Drug</th>
+          <th>Class</th>
+          <th>Major Interaction Count</th>
+          <th>Key Interacting Drugs</th>
+        </tr>
+      </thead>
+      <tbody>
+        {highBurden.slice(0, 50).map((d) => (
+          <tr>
+            <td>
+              <a href={`${base}drugs/${d.id}/`} class="link link-hover font-medium capitalize">
+                {d.name}
+              </a>
+            </td>
+            <td class="text-xs text-base-content/70">{d.drugClass}</td>
+            <td>
+              <span class="badge badge-warning badge-sm">{d.majorInteractions.length} major</span>
+            </td>
+            <td class="text-xs">
+              {d.majorInteractions.slice(0, 3).map((i: any) => i.drug).join(', ')}
+              {d.majorInteractions.length > 3 ? `, +${d.majorInteractions.length - 3} more` : ''}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="alert alert-info mb-8">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+    <div>
+      <div class="font-bold">See Also: Schema 9 — Drug Interactions</div>
+      <div class="text-sm">
+        For comprehensive coverage of CYP inhibition/induction interactions, transporter interactions,
+        pharmacodynamic additive toxicity, food-drug interactions, and protein binding, visit
+        <a href={`${base}schemas/09-drug-interactions/`} class="link font-medium">Schema 9: Drug Interactions</a>.
+      </div>
+    </div>
+  </div>
+
+  <div class="divider my-8"></div>
+  <div class="flex gap-4 justify-between text-sm">
+    <a href={`${base}schemas/06-adme/special-populations/`} class="btn btn-outline btn-sm">← Special Populations</a>
+    <a href={`${base}schemas/06-adme/`} class="btn btn-primary btn-sm">ADME Overview →</a>
+  </div>
+</SchemaLayout>
