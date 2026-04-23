@@ -48458,7 +48458,7 @@
         "CNS-depressants"
       ]
     },
-    "ismp_high_alert": false,
+    "ismp_high_alert": true,
     "pregnancy_notes": "avoid unless benefit outweighs risk; neonatal opioid withdrawal",
     "lactation_notes": "use with caution",
     "route_of_administration": [
@@ -48609,7 +48609,7 @@
         "CNS-depressants"
       ]
     },
-    "ismp_high_alert": false,
+    "ismp_high_alert": true,
     "pregnancy_notes": "avoid unless benefit outweighs risk; neonatal opioid withdrawal",
     "lactation_notes": "use with caution",
     "route_of_administration": [
@@ -48742,7 +48742,7 @@
         "CNS-depressants"
       ]
     },
-    "ismp_high_alert": false,
+    "ismp_high_alert": true,
     "pregnancy_notes": "use only as needed intraoperatively; neonatal respiratory depression",
     "lactation_notes": "single dose unlikely to harm infant",
     "route_of_administration": [
@@ -48877,7 +48877,7 @@
         "CNS-depressants"
       ]
     },
-    "ismp_high_alert": false,
+    "ismp_high_alert": true,
     "pregnancy_notes": "avoid unless benefit outweighs risk",
     "lactation_notes": "avoid (risk of fatal morphine exposure in infant)",
     "route_of_administration": [
@@ -49041,7 +49041,7 @@
         "CYP2D6-substrate"
       ]
     },
-    "ismp_high_alert": false,
+    "ismp_high_alert": true,
     "pregnancy_notes": "avoid; neonatal opioid withdrawal and serotonin syndrome",
     "route_of_administration": [
       "oral",
@@ -49189,7 +49189,7 @@
         "CNS-depressants"
       ]
     },
-    "ismp_high_alert": false,
+    "ismp_high_alert": true,
     "pregnancy_notes": "avoid unless benefit outweighs risk",
     "route_of_administration": [
       "oral"
@@ -49346,7 +49346,7 @@
         "CNS-depressants"
       ]
     },
-    "ismp_high_alert": false,
+    "ismp_high_alert": true,
     "pregnancy_notes": "use in OUD \u2014 benefits outweigh risks; neonatal opioid withdrawal syndrome expected; monitor neonate",
     "lactation_notes": "use with caution; low milk transfer; monitor infant",
     "route_of_administration": [
@@ -51840,7 +51840,7 @@
         "CNS-depressants"
       ]
     },
-    "ismp_high_alert": false,
+    "ismp_high_alert": true,
     "pregnancy_notes": "use for procedures when benefit outweighs risk",
     "lactation_notes": "discard milk for 24 hours after single dose",
     "route_of_administration": [
@@ -51977,7 +51977,7 @@
         "CNS-depressants"
       ]
     },
-    "ismp_high_alert": false,
+    "ismp_high_alert": true,
     "pregnancy_notes": "use for procedures when benefit outweighs risk",
     "lactation_notes": "discard milk for 24 hours after single dose",
     "route_of_administration": [
@@ -52115,7 +52115,7 @@
         "neuromuscular-blockade"
       ]
     },
-    "ismp_high_alert": false,
+    "ismp_high_alert": true,
     "pregnancy_notes": "use only when benefit clearly outweighs risk",
     "lactation_notes": "single dose considered compatible",
     "route_of_administration": [
@@ -52250,7 +52250,7 @@
         "neuromuscular-blockade"
       ]
     },
-    "ismp_high_alert": false,
+    "ismp_high_alert": true,
     "pregnancy_notes": "use only when benefit clearly outweighs risk",
     "lactation_notes": "single dose considered compatible",
     "route_of_administration": [
@@ -52374,7 +52374,7 @@
         "neuromuscular-blockade"
       ]
     },
-    "ismp_high_alert": false,
+    "ismp_high_alert": true,
     "pregnancy_notes": "use only when benefit clearly outweighs risk",
     "lactation_notes": "single dose considered compatible",
     "route_of_administration": [
@@ -52493,7 +52493,7 @@
         "neuromuscular-blockade"
       ]
     },
-    "ismp_high_alert": false,
+    "ismp_high_alert": true,
     "pregnancy_notes": "use only when benefit clearly outweighs risk",
     "lactation_notes": "single dose considered compatible",
     "route_of_administration": [
