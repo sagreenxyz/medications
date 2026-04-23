@@ -35,6 +35,148 @@ const schemaMaps = [
   { key: 'interaction_cluster', label: 'Drug Interactions', base: 'schemas/09-drug-interactions' },
 ];
 
+// Valid page slugs for each schema — used to filter broken links
+const validOrganSystems = new Set(['cardiovascular','renal','respiratory','gastrointestinal','endocrine','reproductive','cns','pns-autonomic','musculoskeletal','hematology-oncology','immunology','infectious-disease','dermatology','ophthalmology-ent','toxicology']);
+const validTherapeuticClasses = new Set(['adrenergic','cholinergic','ion-channel','enzyme-inhibitors','receptor-antagonists','transporter-inhibitors','hormones-analogs','biologics','antimicrobials','cytotoxics','anticoagulants']);
+const validMechanismTargets = new Set(['gpcr-adrenergic','gpcr-cholinergic','gpcr-opioid','gpcr-histamine','gpcr-angiotensin','gpcr-dopamine','gpcr-serotonin','ligand-gated-channels','voltage-gated-sodium','voltage-gated-calcium','voltage-gated-potassium','nuclear-receptors','receptor-tyrosine-kinases','serine-threonine-kinases','enzyme-ace','enzyme-cox','enzyme-hmgcoa','enzyme-pde','enzyme-thymidylate','transporter-sert-dat-net','transporter-pgp','structural-tubulin','structural-dna']);
+const validPresentations = new Set(['hypertension','heart-failure','acute-coronary-syndrome','atrial-fibrillation','dyslipidemia','dvt-pe','shock','asthma','copd','pneumonia','tuberculosis','hiv','hyperglycemia-dka','hypothyroidism','hyperthyroidism','adrenal-insufficiency','acute-pain','chronic-pain','opioid-overdose','status-epilepticus','major-depression','anxiety','psychosis','bipolar-disorder','adhd','alzheimer-dementia','parkinsons-disease','migraine','insomnia','nausea-vomiting','gi-bleeding-pud','ibd','c-difficile','uti-pyelonephritis','sepsis','meningitis','fungal-infection','anemia','rheumatoid-arthritis','anaphylaxis']);
+const validAdverseClusters = new Set(['nephrotoxicity','hepatotoxicity','qt-prolongation','cardiotoxicity','myelosuppression','peripheral-neuropathy','cns-neurotoxicity','ototoxicity','pulmonary-toxicity','teratogenicity','hyperkalemia','hypokalemia','hyponatremia','hypoglycemia','hyperglycemia','osteoporosis','serotonin-syndrome','nms','anticholinergic-toxidrome','opioid-toxidrome','bleeding','thrombosis','anaphylaxis','sjs-ten','dress','infusion-reactions','extrapyramidal','weight-gain','hyperlipidemia','drug-induced-lupus']);
+const validInteractions = new Set(['cyp-inhibition','cyp-induction','transporter-interactions','pd-additive-toxicity','pd-antagonism','food-drug','protein-binding']);
+
+// Mechanism family → target page slug mapping (maps granular mechanism tags to broad target pages)
+const mechToTargetPage: Record<string, string> = {
+  // Adrenergic
+  'adrenergic-receptor-agonism': 'gpcr-adrenergic', 'alpha-adrenergic': 'gpcr-adrenergic',
+  'beta-adrenergic': 'gpcr-adrenergic', 'non-selective-beta-blockade': 'gpcr-adrenergic',
+  'beta1-selective-blockade': 'gpcr-adrenergic', 'beta1-blockade': 'gpcr-adrenergic',
+  'beta-blockade': 'gpcr-adrenergic', 'alpha1-blockade': 'gpcr-adrenergic',
+  'alpha2-agonism': 'gpcr-adrenergic', 'alpha1-agonism': 'gpcr-adrenergic',
+  'beta2-agonism': 'gpcr-adrenergic', 'beta1-agonism': 'gpcr-adrenergic',
+  'mixed-adrenergic-blockade': 'gpcr-adrenergic', 'vasopressin-receptor-agonism': 'gpcr-adrenergic',
+  // Cholinergic
+  'ache-inhibition': 'gpcr-cholinergic', 'muscarinic-antagonism': 'gpcr-cholinergic',
+  'muscarinic-agonism': 'gpcr-cholinergic', 'nicotinic-agonism': 'gpcr-cholinergic',
+  'nicotinic-antagonism': 'gpcr-cholinergic', 'muscarinic-antagonism-bronchodilation': 'gpcr-cholinergic',
+  'nmj-blockade': 'gpcr-cholinergic', 'ach-release-stimulation': 'gpcr-cholinergic',
+  // Opioid
+  'mu-opioid-agonism': 'gpcr-opioid', 'mu-opioid-antagonism': 'gpcr-opioid',
+  'mu-opioid-partial-agonism': 'gpcr-opioid', 'opioid-receptor-agonism': 'gpcr-opioid',
+  'kappa-opioid': 'gpcr-opioid', 'opioid-antagonism': 'gpcr-opioid',
+  // Histamine
+  'h1-antagonism': 'gpcr-histamine', 'h2-antagonism': 'gpcr-histamine',
+  'h1-blockade': 'gpcr-histamine', 'h2-blockade': 'gpcr-histamine',
+  // Angiotensin
+  'ace-inhibition': 'enzyme-ace', 'at1-blockade': 'gpcr-angiotensin',
+  'neprilysin-inhibition': 'enzyme-ace', 'renin-inhibition': 'gpcr-angiotensin',
+  // Dopamine
+  'd2-antagonism': 'gpcr-dopamine', 'd2-partial-agonism': 'gpcr-dopamine',
+  'dopamine-agonism': 'gpcr-dopamine', 'dopamine-antagonism': 'gpcr-dopamine',
+  'd2-blockade': 'gpcr-dopamine', 'dopamine-precursor': 'gpcr-dopamine',
+  'dopa-decarboxylase-inhibition': 'gpcr-dopamine', 'mao-b-inhibition': 'gpcr-dopamine',
+  'comt-inhibition': 'gpcr-dopamine',
+  // Serotonin
+  '5-ht-reuptake-inhibition': 'gpcr-serotonin', 'sert-inhibition': 'gpcr-serotonin',
+  '5-ht3-antagonism': 'gpcr-serotonin', '5-ht1a-partial-agonism': 'gpcr-serotonin',
+  '5-ht2a-antagonism': 'gpcr-serotonin', '5-ht-modulation': 'gpcr-serotonin',
+  '5-ht4-receptor-agonism': 'gpcr-serotonin', '5-ht1b-agonism': 'gpcr-serotonin',
+  '5-ht1d-agonism': 'gpcr-serotonin', '5ht1b-1d-agonism': 'gpcr-serotonin',
+  '5-ht1f-agonism': 'gpcr-serotonin',
+  // Ion channels
+  'gaba-a-modulation': 'ligand-gated-channels', 'gaba-a-receptor-agonism': 'ligand-gated-channels',
+  'nmda-antagonism': 'ligand-gated-channels', 'glycine-receptor-inhibition': 'ligand-gated-channels',
+  'nicotinic-receptor-modulation': 'ligand-gated-channels',
+  'na-channel-blockade': 'voltage-gated-sodium', 'sodium-channel-blockade': 'voltage-gated-sodium',
+  'voltage-gated-na-channel-blockade': 'voltage-gated-sodium',
+  'l-type-calcium-channel-blockade': 'voltage-gated-calcium', 'ca-channel-blockade': 'voltage-gated-calcium',
+  'calcium-channel-blockade': 'voltage-gated-calcium',
+  'k-channel-blockade': 'voltage-gated-potassium', 'herg-channel-blockade': 'voltage-gated-potassium',
+  'k-channel-opening': 'voltage-gated-potassium', 'katp-channel-opening': 'voltage-gated-potassium',
+  'av-node-slowing': 'voltage-gated-calcium',
+  // Nuclear receptors
+  'glucocorticoid-receptor-agonism': 'nuclear-receptors', 'mineralocorticoid-receptor-agonism': 'nuclear-receptors',
+  'androgen-receptor-antagonism': 'nuclear-receptors', 'estrogen-receptor-modulation': 'nuclear-receptors',
+  'thyroid-hormone-replacement': 'nuclear-receptors', 'ppar-agonism': 'nuclear-receptors',
+  'glucocorticoid-receptor': 'nuclear-receptors', 'mineralocorticoid-receptor-antagonism': 'nuclear-receptors',
+  'retinoid-receptor-agonism': 'nuclear-receptors',
+  // RTKs / kinases
+  'bcr-abl-inhibition': 'receptor-tyrosine-kinases', 'egfr-inhibition': 'receptor-tyrosine-kinases',
+  'vegfr-inhibition': 'receptor-tyrosine-kinases', 'rtk-inhibition': 'receptor-tyrosine-kinases',
+  'her2-inhibition': 'receptor-tyrosine-kinases', 'multikinase-inhibition': 'receptor-tyrosine-kinases',
+  'braf-inhibition': 'serine-threonine-kinases', 'mek-inhibition': 'serine-threonine-kinases',
+  'cdk4-6-inhibition': 'serine-threonine-kinases', 'mtor-inhibition': 'serine-threonine-kinases',
+  'jak-inhibition': 'serine-threonine-kinases', 'pi3k-inhibition': 'serine-threonine-kinases',
+  'btk-inhibition': 'serine-threonine-kinases', 'jak1-2-inhibition': 'serine-threonine-kinases',
+  // Enzymes
+  'hmg-coa-inhibition': 'enzyme-hmgcoa', 'hmgcoa-inhibition': 'enzyme-hmgcoa',
+  'cox-inhibition': 'enzyme-cox', 'cox-1-2-inhibition': 'enzyme-cox', 'cox-2-inhibition': 'enzyme-cox',
+  'pde5-inhibition': 'enzyme-pde', 'pde3-inhibition': 'enzyme-pde', 'pde4-inhibition': 'enzyme-pde',
+  'thymidylate-synthase-inhibition': 'enzyme-thymidylate', 'dna-polymerase-inhibition': 'enzyme-thymidylate',
+  // Transporters
+  'sert-inhibition': 'transporter-sert-dat-net', 'dat-inhibition': 'transporter-sert-dat-net',
+  'net-inhibition': 'transporter-sert-dat-net', 'serotonin-reuptake-inhibition': 'transporter-sert-dat-net',
+  'norepinephrine-reuptake-inhibition': 'transporter-sert-dat-net', 'dopamine-reuptake-inhibition': 'transporter-sert-dat-net',
+  'sglt2-inhibition': 'transporter-pgp', 'p-gp-inhibition': 'transporter-pgp',
+  'oatp-inhibition': 'transporter-pgp',
+  // Structural
+  'tubulin-polymerization-inhibition': 'structural-tubulin', 'tubulin-stabilization': 'structural-tubulin',
+  'microtubule-stabilization': 'structural-tubulin', 'microtubule-inhibition': 'structural-tubulin',
+  'topoisomerase-inhibition': 'structural-dna', 'dna-cross-linking': 'structural-dna',
+  'dna-alkylation': 'structural-dna', 'dna-intercalation': 'structural-dna',
+  'dna-strand-break': 'structural-dna',
+};
+
+// Map a mechanism_family value to a valid target page slug
+function mapMechToTarget(val: string): string | null {
+  const slug = val.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+  if (validMechanismTargets.has(slug)) return slug;
+  const mapped = mechToTargetPage[slug];
+  if (mapped) return mapped;
+  // Pattern-based fallbacks
+  if (/adren|catecholamine|sympath/.test(slug)) return 'gpcr-adrenergic';
+  if (/cholinerg|muscarin|nicotinic|acheinhibit/.test(slug)) return 'gpcr-cholinergic';
+  if (/opioid|morphin/.test(slug)) return 'gpcr-opioid';
+  if (/histamin|h1|h2/.test(slug)) return 'gpcr-histamine';
+  if (/angiotensin|at1|renin/.test(slug)) return 'gpcr-angiotensin';
+  if (/dopamin|d2|d1/.test(slug)) return 'gpcr-dopamine';
+  if (/serotonin|5ht|sert/.test(slug)) return 'gpcr-serotonin';
+  if (/gaba|benzo|nmda|ligand/.test(slug)) return 'ligand-gated-channels';
+  if (/sodium.channel|na.channel/.test(slug)) return 'voltage-gated-sodium';
+  if (/calcium.channel|ca.channel|l.type/.test(slug)) return 'voltage-gated-calcium';
+  if (/potassium.channel|k.channel|herg/.test(slug)) return 'voltage-gated-potassium';
+  if (/nuclear|glucocorticoid|mineralo|androgen|estrogen|thyroid|ppar/.test(slug)) return 'nuclear-receptors';
+  if (/rtk|egfr|her2|vegfr|bcr.abl|tyrosine.kinase/.test(slug)) return 'receptor-tyrosine-kinases';
+  if (/braf|mek|cdk|mtor|jak|pi3k|btk|serine|threonine|kinase/.test(slug)) return 'serine-threonine-kinases';
+  if (/ace|angiotensin.convert|neprilysin/.test(slug)) return 'enzyme-ace';
+  if (/cox|prostaglandin|nsaid/.test(slug)) return 'enzyme-cox';
+  if (/hmg|statin|cholesterol.synth/.test(slug)) return 'enzyme-hmgcoa';
+  if (/pde\d?/.test(slug)) return 'enzyme-pde';
+  if (/thymidylate|dna.polym|viral.polym/.test(slug)) return 'enzyme-thymidylate';
+  if (/sert|dat|net|reuptake/.test(slug)) return 'transporter-sert-dat-net';
+  if (/sglt|pgp|oatp|transport/.test(slug)) return 'transporter-pgp';
+  if (/tubulin|microtubule/.test(slug)) return 'structural-tubulin';
+  if (/dna|topoisom|alkylat|intercalat|cross.link/.test(slug)) return 'structural-dna';
+  return null;
+}
+
+// Validate and map schema membership values to page slugs
+function resolveSchemaLinks(key: string, values: string[]): Array<{slug: string, label: string}> {
+  return values.flatMap(v => {
+    const slug = v.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+    const label = v.replace(/-/g, ' ');
+    if (key === 'organ_system' && validOrganSystems.has(slug)) return [{ slug, label }];
+    if (key === 'therapeutic_class' && validTherapeuticClasses.has(slug)) return [{ slug, label }];
+    if (key === 'mechanism_family') {
+      const target = mapMechToTarget(v);
+      if (target) return [{ slug: target, label: v.replace(/-/g, ' ') }];
+    }
+    if (key === 'prototype_class') return [{ slug, label }]; // dynamic, always try
+    if (key === 'presentation_cluster' && validPresentations.has(slug)) return [{ slug, label }];
+    if (key === 'adverse_cluster' && validAdverseClusters.has(slug)) return [{ slug, label }];
+    if (key === 'interaction_cluster' && validInteractions.has(slug)) return [{ slug, label }];
+    return [];
+  }).filter((item, idx, arr) => arr.findIndex(x => x.slug === item.slug) === idx); // dedupe
+}
+
 const pkRows = [
   { label: 'Absorption', value: drug.pharmacokinetics?.absorption },
   { label: 'Distribution', value: drug.pharmacokinetics?.distribution },
@@ -292,19 +434,20 @@ const pkRows = [
             <h3 class="font-bold text-base mb-3">Schema Membership</h3>
             <div class="space-y-2">
               {schemaMaps.map(sm => {
-                const values = Array.isArray(drug.schema_memberships?.[sm.key])
+                const rawValues = Array.isArray(drug.schema_memberships?.[sm.key])
                   ? drug.schema_memberships[sm.key]
                   : drug.schema_memberships?.[sm.key]
                     ? [drug.schema_memberships[sm.key]]
                     : [];
-                if (values.length === 0) return null;
+                const links = resolveSchemaLinks(sm.key, rawValues);
+                if (links.length === 0) return null;
                 return (
                   <div>
                     <div class="text-xs font-semibold text-base-content/60 uppercase mb-1">{sm.label}</div>
                     <div class="flex flex-wrap gap-1">
-                      {values.map((v: string) => (
-                        <a href={`${base}${sm.base}/${v.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '')}`} class="badge badge-outline badge-sm hover:badge-primary capitalize">
-                          {v.replace(/-/g, ' ')}
+                      {links.map(({ slug, label }) => (
+                        <a href={`${base}${sm.base}/${slug}`} class="badge badge-outline badge-sm hover:badge-primary capitalize">
+                          {label}
                         </a>
                       ))}
                     </div>
