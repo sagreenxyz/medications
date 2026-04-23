@@ -1,7 +1,52 @@
 ---
 import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+const base = import.meta.env.BASE_URL;
+
+const classes = [
+  { slug: 'adrenergic', label: 'Adrenergic Agents', desc: 'Catecholamine agonists and antagonists acting at adrenoceptors' },
+  { slug: 'cholinergic', label: 'Cholinergic Agents', desc: 'Muscarinic and nicotinic receptor modulators' },
+  { slug: 'ion-channel', label: 'Ion Channel Modulators', desc: 'Blockers and openers of Na+, K+, Ca2+, and Cl- channels' },
+  { slug: 'enzyme-inhibitors', label: 'Enzyme Inhibitors', desc: 'Drugs targeting enzymes such as ACE, COX, HMG-CoA reductase' },
+  { slug: 'receptor-antagonists', label: 'Receptor Antagonists', desc: 'Competitive and non-competitive antagonists at diverse receptors' },
+  { slug: 'transporter-inhibitors', label: 'Transporter Inhibitors', desc: 'Inhibitors of reuptake and efflux transporters' },
+  { slug: 'hormones-analogs', label: 'Hormones and Analogs', desc: 'Endogenous hormone replacements, analogs, and modulators' },
+  { slug: 'biologics', label: 'Biologics', desc: 'Monoclonal antibodies, fusion proteins, and large-molecule therapeutics' },
+  { slug: 'antimicrobials', label: 'Antimicrobials', desc: 'Antibacterials, antivirals, antifungals, and antiparasitics' },
+  { slug: 'cytotoxics', label: 'Cytotoxics', desc: 'Chemotherapy agents that disrupt cell division or DNA integrity' },
+  { slug: 'anticoagulants', label: 'Anticoagulants', desc: 'Agents that inhibit coagulation cascade factors or platelet function' },
+];
+
+const counts = Object.fromEntries(
+  classes.map(c => [c.slug, drugsData.filter((d: any) => d.therapeutic_classes?.includes(c.slug)).length])
+);
 ---
 <SchemaLayout title="Therapeutic Classes" schema="therapeutic-classes">
-  <h1 class="text-3xl font-serif font-bold mb-4">Therapeutic Classes</h1>
-  <p>Content coming soon.</p>
+  <h1 class="text-3xl font-serif font-bold mb-6">Schema 2: Therapeutic Classes</h1>
+
+  <div class="prose max-w-none mb-8">
+    <p>
+      Organizing pharmacology by therapeutic class -- that is, by the molecular mechanism through which a drug exerts its primary effect -- provides the deepest framework for predicting drug behavior, anticipating adverse effects, and reasoning through unfamiliar agents. When a student understands that beta-blockers competitively antagonize catecholamines at beta-adrenoceptors, the clinical consequences of overdose, drug interactions, and contraindications in bronchospasm all follow logically from first principles. This schema groups the 500 reference drugs into eleven mechanistic families, each defined by the type of molecular target exploited: receptors, enzymes, ion channels, transporters, or structural macromolecules.
+    </p>
+    <p>
+      Receptor theory underpins much of modern pharmacology. An agonist binds to a receptor and activates it, mimicking the endogenous ligand; an antagonist occupies the same binding site without producing activation, competitively blocking the endogenous signal. Partial agonists produce submaximal activation regardless of dose, while inverse agonists suppress constitutive receptor activity below baseline. Understanding these distinctions allows the clinician to predict whether drug removal will produce rebound (receptor upregulation from chronic blockade), why some antagonists are safer than others in overdose, and how combination therapy at the same receptor can be rational or redundant. Enzyme inhibitors, transporter blockers, and ion channel modulators follow analogous principles rooted in their respective biochemical contexts.
+    </p>
+    <p>
+      Navigate to any of the eleven class pages below to explore mechanism, pharmacokinetic profiles shared across the class, adverse effect patterns, and individual drug entries. For cross-referencing by the organ system treated, see <a href={`${base}schemas/01-organ-systems/`} class="link link-primary">Schema 1: Organ Systems</a>. To explore how a single mechanism is deployed across multiple organ systems, consult <a href={`${base}schemas/03-organ-by-class/`} class="link link-primary">Schema 3: Organ x Class Matrix</a>.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    {classes.map(c => (
+      <a href={`${base}schemas/02-therapeutic-classes/${c.slug}/`} class="card card-compact bg-base-100 border border-base-300 hover:shadow-md transition-shadow">
+        <div class="card-body">
+          <h2 class="card-title text-base font-semibold">{c.label}</h2>
+          <p class="text-sm text-base-content/70">{c.desc}</p>
+          <div class="mt-2">
+            <span class="badge badge-outline">{counts[c.slug]} drugs</span>
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
 </SchemaLayout>
