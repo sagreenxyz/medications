@@ -1,7 +1,114 @@
 ---
 import SchemaLayout from '../../../layouts/SchemaLayout.astro';
+import drugsData from '../../../../data/drugs.json';
+
+const allDrugs = drugsData as any[];
+const base = import.meta.env.BASE_URL;
+
+const prototypes = allDrugs.filter(d => d.prototype_for === true);
+const variationCount = allDrugs.filter(d => d.prototype_drug).length;
+
+// Group prototypes by prototype_class
+const classMap: Record<string, any[]> = {};
+for (const d of prototypes) {
+  const cls = d.schema_memberships?.prototype_class || d.drug_class || 'Other';
+  if (!classMap[cls]) classMap[cls] = [];
+  classMap[cls].push(d);
+}
+const sortedClasses = Object.entries(classMap).sort((a, b) => a[0].localeCompare(b[0]));
+
+// Broad system groupings for navigation
+const systemGroups: Record<string, string[]> = {
+  'Cardiovascular': ['ACE inhibitors','ARBs','beta-blockers','Calcium channel blockers','Diuretics','Antiarrhythmics','Statins','Anticoagulants','Antiplatelets','Vasodilators','Cardiac glycosides','Fibrates','Thrombolytics'],
+  'CNS & Psychiatric': ['SSRIs','SNRIs','TCAs','MAOIs','Antipsychotics','Mood stabilizers','Benzodiazepines','Opioids','Anticonvulsants','ADHD agents','Alzheimer\'s disease drugs','Parkinson\'s drugs','Hypnotics'],
+  'Infectious Disease': ['Aminoglycosides','Carbapenems','Cephalosporins','Fluoroquinolones','Macrolides','Penicillins','Tetracyclines','Antifungals','Antivirals','Antimalarials','Antitubercular agents'],
+  'Endocrine & Metabolic': ['Insulins','Biguanides','Sulfonylureas','GLP-1 agonists','SGLT-2 inhibitors','Thyroid agents','Corticosteroids','Bisphosphonates'],
+  'Oncology & Immunology': ['Antimetabolites','Alkylating agents','Taxanes','Anthracyclines','Tyrosine kinase inhibitors','Checkpoint inhibitors','Monoclonal antibodies','Immunosuppressants'],
+  'GI & Respiratory': ['PPIs','H2 blockers','Antiemetics','Beta-2 agonists','Inhaled corticosteroids','Anticholinergics','Leukotriene modifiers'],
+};
 ---
-<SchemaLayout title="Prototype + Class" schema="prototype-class">
-  <h1 class="text-3xl font-serif font-bold mb-4">Prototype + Class</h1>
-  <p>Content coming soon.</p>
+<SchemaLayout title="Prototype + Class — PharmRef" schema="prototype-class">
+
+  <div class="prose max-w-none mb-8">
+    <h1 class="text-4xl font-serif font-bold mb-6">Schema 5: Prototype + Class</h1>
+
+    <p class="lead text-lg text-base-content/80 mb-4">
+      The prototype-and-class organizational schema exploits a fundamental insight from cognitive science: expert learners acquire knowledge of a complex domain by first mastering a central exemplar and then encoding variations as departures from that exemplar. In pharmacology, the prototype is the drug against which all others in a class are measured — the agent that best illustrates the class mechanism, whose pharmacokinetics define the class norm, and whose adverse effect profile establishes the class warning checklist. By mastering one prototype thoroughly, the student acquires predictive power over every drug in that class before reading a single word about the variations.
+    </p>
+
+    <p class="mb-4">
+      The clinical and examination utility of the prototype model is well documented. USMLE Step 1 questions routinely ask students to identify the prototype mechanism before applying it to a novel agent; NCLEX questions frequently describe a drug's class and ask whether a specific nursing intervention applies. When a student knows that morphine is the opioid prototype — that it acts at μ-receptors, causes respiratory depression and constipation, is renally excreted as an active glucuronide, and requires monitoring of sedation level and bowel function — they can answer questions about hydromorphone, oxycodone, and fentanyl with confidence even if those drugs were never explicitly taught. The prototype model converts encyclopedic memorization into structural knowledge.
+    </p>
+
+    <p class="mb-4">
+      Each prototype page on this site is organized into two parts. Part A provides a deep dive into the prototype itself: molecular mechanism and receptor biology, full ADME profile with clinical implications, therapeutic indications with pharmacological rationale, adverse effect profile with mechanistic explanation, and four structured nursing-practice paragraphs covering pre-administration assessment, administration technique, monitoring parameters with specific thresholds, and patient education. Part B catalogs all class variations, analyzing each along four axes — pharmacokinetic profile (duration, route, half-life), receptor or enzyme selectivity, indication breadth, and adverse effect differences — and specifying the clinical scenario in which the variation is preferred over the prototype.
+    </p>
+
+    <p class="mb-4">
+      This schema currently indexes <strong>{prototypes.length} prototype drugs</strong> representing <strong>{sortedClasses.length} pharmacological classes</strong>, with <strong>{variationCount} class variation drugs</strong> cataloged across those prototypes. Where a drug class has no prototype explicitly designated in the literature (for example, highly heterogeneous biologics), the agent with the broadest clinical evidence base and longest approval history has been designated as the reference compound. Students are encouraged to navigate from a prototype page to its corresponding Mechanism-First schema page (Schema 4), Organ Systems page (Schema 1), and Adverse Effects cluster (Schema 8) to build the full cross-schema understanding that distinguishes expert pharmacological reasoning from surface-level memorization.
+    </p>
+  </div>
+
+  <!-- Quick stats -->
+  <div class="stats stats-horizontal shadow mb-8 w-full">
+    <div class="stat">
+      <div class="stat-title">Prototype Drugs</div>
+      <div class="stat-value text-primary">{prototypes.length}</div>
+    </div>
+    <div class="stat">
+      <div class="stat-title">Drug Classes</div>
+      <div class="stat-value text-secondary">{sortedClasses.length}</div>
+    </div>
+    <div class="stat">
+      <div class="stat-title">Variation Drugs</div>
+      <div class="stat-value">{variationCount}</div>
+    </div>
+  </div>
+
+  <!-- Full alphabetical listing -->
+  <h2 class="text-2xl font-serif font-bold mb-4">All Prototype Classes (A–Z)</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-12">
+    {sortedClasses.map(([cls, drugs]) => (
+      <div class="card card-compact bg-base-100 shadow-sm hover:shadow-md transition-shadow">
+        <div class="card-body p-4">
+          <h3 class="font-bold text-sm text-base-content/70 uppercase tracking-wide mb-2">{cls}</h3>
+          <div class="space-y-1">
+            {drugs.map((d: any) => (
+              <a href={`${base}schemas/05-prototype-class/${d.id}`}
+                 class={`flex items-center gap-2 p-1 rounded hover:bg-base-200 transition-colors ${d.ismp_high_alert ? 'border-l-4 border-error pl-2' : ''}`}>
+                <span class="badge badge-success badge-xs">P</span>
+                <span class="text-sm capitalize">{d.generic_name}</span>
+                {d.ismp_high_alert && <span class="badge badge-error badge-xs ml-auto">HIGH ALERT</span>}
+                {d.beers_criteria && <span class="badge badge-warning badge-xs ml-auto">BEERS</span>}
+              </a>
+            ))}
+          </div>
+          {allDrugs.filter(v => drugs.some((p: any) => v.prototype_drug === p.id)).length > 0 && (
+            <p class="text-xs text-base-content/50 mt-2">
+              {allDrugs.filter(v => drugs.some((p: any) => v.prototype_drug === p.id)).length} variation drug(s)
+            </p>
+          )}
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- High-alert prototypes callout -->
+  <div class="alert alert-error mb-8 shadow">
+    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+    <div>
+      <h3 class="font-bold">ISMP High-Alert Prototypes</h3>
+      <p class="text-sm mb-2">The following prototype drugs carry ISMP high-alert designation. All drugs in their class variation lists should be treated with the same heightened vigilance.</p>
+      <div class="flex flex-wrap gap-2 mt-2">
+        {prototypes.filter((d: any) => d.ismp_high_alert).map((d: any) => (
+          <a href={`${base}schemas/05-prototype-class/${d.id}`}
+             class="badge badge-error capitalize hover:opacity-80 transition-opacity">
+            {d.generic_name}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+
 </SchemaLayout>
