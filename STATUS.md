@@ -3,124 +3,52 @@
 ## Last Session Summary
 - **Date:** 2026-04-23
 - **Work completed:**
-  - Added ID antibiotics (cephalosporins, carbapenems, glycopeptides, aminoglycosides, macrolides, tetracyclines, FQs, misc antibacterials) — 30 drugs (ID-04 through ID-11)
-  - Added anti-TB drugs (rifabutin, rifapentine, ethambutol, pyrazinamide, bedaquiline, delamanid, pretomanid, dapsone, clofazimine) — 9 drugs (ID-12)
-  - Added antivirals HSV/CMV (valacyclovir, famciclovir, ganciclovir, valganciclovir, foscarnet, letermovir) — 6 drugs (ID-13)
-  - Added influenza antivirals (zanamivir, peramivir, baloxavir) — 3 drugs (ID-14)
-  - Added antifungals (itraconazole, voriconazole, posaconazole, isavuconazole, caspofungin, micafungin, anidulafungin, amphotericin-b) — 8 drugs
-  - Added HIV antiretrovirals (efavirenz, emtricitabine, darunavir, maraviroc, dolutegravir, raltegravir, abacavir, atazanavir, tenofovir-DF) — 9 drugs
-  - Added antiparasitic drugs (chloroquine, hydroxychloroquine, ivermectin, albendazole, atovaquone-proguanil) — 5 drugs
-  - Added oncology drugs (cyclophosphamide, cisplatin, methotrexate-onc, doxorubicin, vincristine, paclitaxel, imatinib, pembrolizumab, rituximab, filgrastim, venetoclax, hydroxyurea, lenalidomide, bortezomib, epoetin-alfa) — 15 drugs
-- **Current total:** 500 drugs in data/drugs.json — **PHASE 1 COMPLETE**
-- **Resume point next session:** Begin Phase 2 — Core Pages and Navigation (Nav.astro, SearchOverlay.svelte, index.astro, drug-index.astro, about.astro)
+  - PHASE 1 COMPLETE: Added all 500 drugs to data/drugs.json (final batches: ID antibiotics, anti-TB, antivirals, antifungals, HIV ARVs, antiparasitic, oncology)
+  - PHASE 2 COMPLETE: Built core pages (index.astro with schema cards/drug-of-day/stats, drug-index.astro with A-Z nav, about.astro with prose, drugs/[slug].astro profile template generating 500 pages)
+  - PHASE 3a COMPLETE: Schema 1 - all 15 organ system sub-pages (cardiovascular, renal, respiratory, gastrointestinal, endocrine, reproductive, cns, pns-autonomic, musculoskeletal, hematology-oncology, immunology, infectious-disease, dermatology, ophthalmology-ent, toxicology)
+  - PHASE 3b PARTIAL: Schema 2 index.astro updated with drug counts; 11 sub-pages NOT yet created
+- **Build status:** 527 pages build successfully
+- **Current total:** 500 drugs in data/drugs.json
+- **Resume point next session:** Create Schema 2 sub-pages (11 files in src/pages/schemas/02-therapeutic-classes/): adrenergic.astro, cholinergic.astro, ion-channel.astro, enzyme-inhibitors.astro, receptor-antagonists.astro, transporter-inhibitors.astro, hormones-analogs.astro, biologics.astro, antimicrobials.astro, cytotoxics.astro, anticoagulants.astro. Then proceed to Schemas 3-9.
 
-## Phase 1 Drug Data Task Table
+## IMPORTANT PROTOCOL NOTES (from prior failures)
+- Always use `create` tool to write Python scripts to /tmp/, never embed Python in bash heredocs
+- Sub-agent commits are local-only - main agent must call report_progress after sub-agent completes
+- Run `node -e "JSON.parse(...)" ` to validate JSON after any drug data changes
+- Verify git log after sub-agent work before calling report_progress
 
-### Cardiovascular (target ≥60)
-- CV-01: ACE inhibitors (8 drugs) ✅ Complete
-- CV-02: ARBs + ARNI (9 drugs) ✅ Complete
-- CV-03: Beta-blockers (9 drugs) ✅ Complete
-- CV-04: CCBs (4 drugs) ✅ Complete
-- CV-05: Vasodilators + central agents (6 drugs) ✅ Complete
-- CV-06: Aldosterone antagonists + MRAs (3 drugs) ✅ Complete
-- CV-07: Loop + thiazide diuretics (8 drugs) ✅ Complete
-- CV-08: Potassium-sparing diuretics (3 drugs) ✅ Complete
-- CV-09: Digoxin + ivabradine (2 drugs) ✅ Complete
-- CV-10: Antiarrhythmics (8 drugs) ✅ Complete
-- CV-11: Vasopressors + inotropes (6 drugs) ✅ Complete
-- CV-12: Nitrates (3 drugs) ✅ Complete
-- CV-13: Statins (8 drugs) ✅ Complete
-- CV-14: Non-statin lipid agents (6 drugs) ✅ Complete
-- CV-15: Anticoagulants (8 drugs) ✅ Complete
-- CV-16: Antiplatelets (6 drugs) ✅ Complete
-- CV-17: Thrombolytics + reversal agents (6 drugs) ✅ Complete
+## Phase 1 Drug Data Task Table — ALL COMPLETE
+- CV-01 through CV-17: All cardiovascular drugs ✅
+- REN-01, REN-02: All renal drugs ✅
+- RESP-01 through RESP-05: All respiratory drugs ✅
+- GI-01 through GI-04: All GI drugs ✅
+- ENDO-01 through ENDO-05: All endocrine drugs ✅
+- REPRO-01, REPRO-02: All reproductive/GU drugs ✅
+- CNS-01 through CNS-15: All CNS drugs ✅
+- ID-01 through ID-14: All infectious disease drugs ✅
+- HEMONC-01 through HEMONC-03: All hematology-oncology drugs ✅
+- IMMUNOL-01: All immunology drugs ✅
 
-### Renal (target ≥10 beyond diuretics)
-- REN-01: Vasopressin receptor agents (3 drugs) ✅ Complete
-- REN-02: Renal supportive agents (7 drugs) ✅ Complete
+## Phase 2 Status — COMPLETE
+- Nav.astro ✅
+- index.astro ✅
+- drug-index.astro ✅
+- about.astro ✅
+- drugs/[slug].astro ✅
 
-### Respiratory (target ≥25)
-- RESP-01: SABA + LABA (6 drugs) ✅ Complete
-- RESP-02: Anticholinergics (5 drugs) ✅ Complete
-- RESP-03: Inhaled corticosteroids (6 drugs) ✅ Complete
-- RESP-04: Antileukotrienes + misc (4 drugs) ✅ Complete
-- RESP-05: Biologics + CFTR modulators (8 drugs) ✅ Complete
+## Phase 3 Schema Pages Status
+- Schema 1 (Organ Systems): index + 15 sub-pages ✅ COMPLETE
+- Schema 2 (Therapeutic Classes): index ✅, sub-pages ❌ NOT STARTED
+- Schema 3 (Matrix): index stub only ❌
+- Schema 4 (Mechanism-First): index stub only ❌
+- Schema 5 (Prototype+Class): index stub only ❌
+- Schema 6 (ADME): index stub only ❌
+- Schema 7 (Clinical Presentations): index stub only ❌
+- Schema 8 (Adverse Effects): index stub only ❌
+- Schema 9 (Drug Interactions): index stub only ❌
 
-### GI (target ≥25)
-- GI-01: PPIs + H2 blockers (8 drugs) ✅ Complete
-- GI-02: Motility + antiemetics (9 drugs) ✅ Complete
-- GI-03: Laxatives + GI misc (8 drugs) ✅ Complete
-- GI-04: IBD drugs + misc (7 drugs) ✅ Complete
+## Phase 4 Status
+- drugs/[slug].astro template complete ✅ (500 pages building)
 
-### Endocrine (target ≥40)
-- ENDO-01: Insulins (8 drugs) ✅ Complete
-- ENDO-02: Oral antidiabetics (10 drugs) ✅ Complete
-- ENDO-03: GLP-1 + SGLT2 (8 drugs) ✅ Complete
-- ENDO-04: Thyroid + adrenal (8 drugs) ✅ Complete
-- ENDO-05: Bone + pituitary (8 drugs) ✅ Complete
-
-### Reproductive/GU (target ≥20)
-- REPRO-01: Hormonal drugs (10 drugs) ✅ Complete
-- REPRO-02: GU drugs (8 drugs) ✅ Complete
-
-### CNS (target ≥70)
-- CNS-01: Anticonvulsants part 1 (8 drugs) ✅ Complete
-- CNS-02: Anticonvulsants part 2 (7 drugs) ✅ Complete
-- CNS-03: Benzodiazepines + sleep (9 drugs) ✅ Complete
-- CNS-04: SSRIs (6 drugs) ✅ Complete
-- CNS-05: SNRIs + misc antidepressants (4 drugs) ✅ Complete
-- CNS-06: Antidepressants batch 2 (8 drugs) ✅ Complete  [paroxetine, citalopram, fluvoxamine, desvenlafaxine, mirtazapine, trazodone, vilazodone, vortioxetine]
-- CNS-07: TCAs + MAOIs (8 drugs) ✅ Complete
-- CNS-08: Antipsychotics part 1 (5 drugs) ✅ Complete
-- CNS-09: Antipsychotics part 2 (9 drugs) ✅ Complete
-- CNS-10: Opioids part 1 (6 drugs) ✅ Complete
-- CNS-11: Opioids part 2 (8 drugs) ✅ Complete  [hydromorphone, oxycodone, remifentanil, codeine, tramadol, tapentadol, methadone, naltrexone]
-- CNS-12: Stimulants + ADHD (5 drugs) ✅ Complete  [amphetamine, lisdexamfetamine, atomoxetine, guanfacine-adhd, clonidine-adhd]
-- CNS-13: Alzheimer's drugs (3 drugs) ✅ Complete  [rivastigmine, galantamine, memantine]
-- CNS-14: Parkinson's drugs (8 drugs) ✅ Complete  [pramipexole, ropinirole, rotigotine, amantadine, rasagiline, entacapone, benztropine, riluzole]
-- CNS-15: Anesthetics + NMBAs (8 drugs) ✅ Complete  [propofol, ketamine, succinylcholine, rocuronium, vecuronium, cisatracurium, sugammadex, neostigmine]
-- CNS-16: Migraine agents (9 drugs) ✅ Complete  [rizatriptan, lasmiditan, rimegepant, ubrogepant, atogepant, erenumab, fremanezumab, galcanezumab, ergotamine]
-- CNS-17: NSAIDs (7 drugs) ✅ Complete  [ibuprofen, naproxen, ketorolac, celecoxib, indomethacin, diclofenac, meloxicam]
-
-### Infectious Disease (target ≥80)
-- ID-01: Beta-lactams part 1 (6 drugs: penicillin-g, amoxicillin, amoxicillin-clavulanate, piperacillin-tazobactam, cephalexin, ceftriaxone) ✅ Complete
-- ID-02: Beta-lactams part 2 (7 drugs: vancomycin, azithromycin, doxycycline, ciprofloxacin, clindamycin, metronidazole, tmp-smx) - Note: only some done
-- ID-03: Missing penicillins (5 drugs) ✅ Complete [penicillin-v, ampicillin, ampicillin-sulbactam, oxacillin, nafcillin]
-- ID-04: Missing cephalosporins (dicloxacillin, cefadroxil, cefazolin, cefaclor, cefuroxime, cefoxitin, cefotaxime, cefdinir, cefpodoxime, ceftazidime, ceftaroline, ceftazidime-avibactam, ceftolozane-tazobactam) ❌ Not started
-- ID-05: Carbapenems + aztreonam (imipenem-cilastatin, ertapenem, doripenem, aztreonam) ❌ Not started
-- ID-06: Glycopeptides (telavancin, oritavancin, dalbavancin) ❌ Not started
-- ID-07: Aminoglycosides (tobramycin, amikacin, streptomycin, plazomicin) ❌ Not started
-- ID-08: Macrolides + fidaxomicin (clarithromycin, erythromycin, fidaxomicin) ❌ Not started
-- ID-09: Tetracyclines (minocycline, tetracycline, tigecycline, eravacycline, omadacycline) ❌ Not started
-- ID-10: Fluoroquinolones (levofloxacin, moxifloxacin, delafloxacin) ❌ Not started
-- ID-11: Misc antibacterials (clindamycin, tinidazole, nitrofurantoin, tmp-smx, sulfadiazine, linezolid, tedizolid, chloramphenicol) ❌ Not started
-- ID-12: Anti-TB drugs (rifabutin, rifapentine, ethambutol, pyrazinamide, bedaquiline, delamanid, pretomanid, dapsone, clofazimine) ❌ Not started
-- ID-13: Antivirals HSV/CMV (valacyclovir, famciclovir, ganciclovir, valganciclovir, foscarnet, cidofovir, letermovir) ❌ Not started
-- ID-14: Antivirals influenza (zanamivir, peramivir, baloxavir) ❌ Not started
-
-### Hematology-Oncology (target ≥30)
-- HEMONC-01: Alkylating agents (8 drugs) ✅ Complete
-- HEMONC-02: Antimetabolites (8 drugs) ✅ Complete
-- HEMONC-03: More chemo (5 drugs) ✅ Complete
-- HEMONC-04: Many targeted therapies still missing ❌ Not started
-
-### Immunology (target ≥20)
-- IMMUNO-01: Transplant immunosuppressants (8 drugs) ✅ Complete
-- IMMUNO-02: Biologics (10 drugs) ✅ Complete
-
-## Current Phase
-**Phase 1 — Master Data (405/500 drugs)**
-
-Next session: Add ~95 more drugs:
-1. ID drugs (cephalosporins, carbapenems, glycopeptides, aminoglycosides, macrolides, tetracyclines, FQs, anti-TB, antivirals) — ~50 drugs
-2. Additional heme-onc targeted therapies — ~30 drugs
-3. Additional immunology/biologic drugs — ~15 drugs
-
-## Phase Completion Status
-- [x] Phase 0 — Scaffold
-- [ ] Phase 1 — Master Data (405/500 — 81% complete)
-- [ ] Phase 2 — Core Pages
-- [ ] Phase 3 — Schema Pages
-- [ ] Phase 4 — Drug Profile Pages
-- [ ] Phase 5 — Search and Filter
-- [ ] Phase 6 — QA and Finalization
+## Phases 5-6
+- Not started
